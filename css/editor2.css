@@ -67,12 +67,7 @@ h2 {
 	margin-bottom: 16px;
 	color: #191919;
   }
-h2.title span {
-	font-size: 16px;
-	font-weight: normal;
-	color: #666;
-	margin-left: 12px;
-  }
+
 
 h3 {
 	font-size: 24px;
@@ -109,6 +104,12 @@ li{
 	line-height: 150%;
 	color: #181818;
 }
+.sm-title {
+	font-size: 16px;
+	font-weight: normal;
+	color: #666;
+	
+  }
 .highlight {
 	color: #EB9164;
 	font-weight: bold;
@@ -124,6 +125,17 @@ li{
 	color: #625043;
 	
 }
+.text-primary {
+  color: #7B6453; /* 主要品牌色 */
+}
+
+.text-cta {
+  color: #EB9164; /* 次要色 */
+}
+
+.text-highlight {
+  color: #FF5722; /* 強調用色，例如警示或重點 */
+}
 
 .description-text span{
 	font-size: 16px;
@@ -131,12 +143,6 @@ li{
 	color: #666;
 }
 
-.hero-title span{
-	font-size: 16px;
-	font-weight: normal;
-	color: #666;
-	margin-bottom: 12px;
-}
 @media screen and (max-width: 768px){
 	.display-title{
 		font-size: 48px;
@@ -251,13 +257,6 @@ li{
 	margin-bottom: 16px;
 	line-height: 1.5;
 
-}
-
-.hero-title h2.title span {
-	font-size: 16px;
-	font-weight: normal;
-	color: #666;
-	margin-left: 12px;
 }
 
 .hero-grid {
@@ -1029,12 +1028,7 @@ color: #181818;
 	font-weight: bold;
   }
   
-.overview-left h2 span {
-	font-size: 16px;
-	font-weight: normal;
-	color: gray;
-	margin-left: 8px;
-  }
+
   
 .overview-left h3 {
 	font-size: 24px;
