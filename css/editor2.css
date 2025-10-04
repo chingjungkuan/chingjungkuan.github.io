@@ -54,40 +54,36 @@ font-style: normal;
   
 h1,h2,h3,h4,h5,h6,p{
 	margin: 0;
+	color: #191919;
 }
 h1 {
 	font-size: 36px;
 	font-weight: bold;
 	margin-bottom: 16px;
-	color: #191919;
   }
 h2 {
 	font-size: 28px;
 	font-weight: bold;
 	margin-bottom: 16px;
-	color: #191919;
   }
-
 
 h3 {
 	font-size: 24px;
 	font-weight: bold;
 	margin-bottom: 16px;
-	color: #191919;
   }
 h4 {
 	font-size: 20px;
 	font-weight: bold;
 	margin-bottom: 16px;
-	color: #191919;
   }
 h5{
 	font-size:16px;
-	color: #191919;
+	font-weight: bold;
 }
 h6{
 	font-size:14px;
-	color: #191919;
+	font-weight: bold;
 }
 ul{
 	margin: 0;
@@ -102,7 +98,7 @@ a{
 li{
 	font-size: 14px;
 	line-height: 150%;
-	color: #181818;
+	color: #191919;
 }
 .sm-title {
 	font-size: 16px;
@@ -117,7 +113,7 @@ li{
 .para{
 	font-size: 14px;
 	line-height: 150%;
-	color: #181818;
+	color: #191919;
 }
 .display-title{
 	font-family: "Rubik Dirt", sans-serif;
@@ -284,7 +280,7 @@ li{
 flex: 1;                /* 填滿剩下的寬度 */
 font-size: 14px;
 line-height: 1.5;
-color: #181818;
+color: #191919;
 order: 1;
 }
 .description-text h3 {
@@ -299,7 +295,7 @@ margin-bottom: 12px;
 .description-text p {
 font-size: 14px;
 line-height: 1.5;
-color: #181818;
+color: #191919;
 }
 
 @media screen and (max-width: 768px) {
@@ -822,7 +818,7 @@ color: #181818;
 		top: 0;
 		width: 100%;
 		min-height: 100vh; /* ✅ 保證包覆整個螢幕 */
-		background-color: #181818;
+		background-color: #191919;
 		z-index: 500;
 		flex-direction: column;
 		justify-content: center;
@@ -967,7 +963,7 @@ color: #181818;
 
 .box {
     background-color: #fff;
-    color: #181818;
+    color:#191919;
     font-size: 14px;
     line-height: 1.5;
 }
@@ -981,7 +977,7 @@ color: #181818;
 .box p {
     margin: 5px 0;
 	margin: 5px 0;
-	overflow-wrap: anywhere; /* 🔥推薦用這個 */
+	overflow-wrap: anywhere; /* 推薦用這個 */
 	word-break: break-word; /* 可以保留，也可刪 */
 	
 }
@@ -1011,7 +1007,7 @@ color: #181818;
 		/* white-space: nowrap; 防止換行 */
 }
 
-/* Overview 概述*/
+/* Overview */
 
 .overview {
 	display: grid;
@@ -1023,16 +1019,6 @@ color: #181818;
 	
   }
   
-.overview-left h2 {
-	font-size: 28px;
-	font-weight: bold;
-  }
-  
-
-  
-.overview-left h3 {
-	font-size: 24px;
-  }
   
 .overview-left p {
 	margin: 10px 0;
@@ -1055,76 +1041,13 @@ color: #181818;
 	  grid-template-columns: 1fr;
 	}
 	.overview-left h2 {
-		color: #181818;
+		color:#191919;
 		margin-bottom: 24px;
 		font-weight: bold;
 	  }
 
 
   }
-
-
-
-/* about-preview */
-@media screen and (max-width: 768px){
-	.about-preview{
-		margin-bottom: 48px;
-	}
-}
-.about-preview .title{
-	font-size: 32px;
-	color: #333;
-	margin-bottom: 24px;
-	margin-top: 40px;
-}
-
-
-@media screen and (max-width: 960px){
-	.about-preview .title{
-		margin-top: 0px;
-	}
-}
-.about-preview .subtitle{
-	font-size: 24px;
-	color: #185ADB;
-
-}
-.about-preview .para{
-	font-size: 14px;
-	line-height: 24px;
-	text-align: left;
-	color: #181818;
-	margin-bottom: 24px;
-}
-
-
-
-/* section-intro */
-.section-intro{
-	text-align: left;
-	margin-bottom: 40px;
-}
-.section-intro .title{
-	font-size: 48px;
-	color: #333;
-	margin-bottom: 24px;
-}
-@media screen and (max-width: 768px){
-	.section-intro .title{
-		font-size: 32px;
-	}
-}
-.section-intro .para{
-	text-align: left;
-	font-size: 14px;
-	line-height: 21px;
-	color: #333;
-	max-width: 480px;
-	margin: 0 0;
-}
-
-
-
 
 /* menu-list */
 .menu-list{
@@ -1208,17 +1131,16 @@ color: #181818;
 /* 資訊架構 */
 
 .layout-center{
-	max-width: 900px;
+	max-width: 640px;
 	width: 100%;
 	margin: 0 auto;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	gap: 12px;
-	margin-bottom: 24px;
 }
 .center-txt{
-	color: #181818;
+	
 	text-align: center;
 	font-size: 14px;
 	font-style: normal;
