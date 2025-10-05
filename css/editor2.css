@@ -26,7 +26,7 @@
 
 }
 html,body{
-	font-family: '微軟正黑體', arial;
+	font-family: 'Noto Sans TC', '微軟正黑體', 'PingFang TC', Arial, sans-serif;
 	
 }
 /* 連動的 google font */
@@ -52,38 +52,38 @@ font-style: normal;
 }
    
   
-h1,h2,h3,h4,h5,h6,p{
+h1,h2,h3,h4,h5,h6{
+	font-weight: bold;
 	margin: 0;
 	color: #191919;
 }
 h1 {
 	font-size: 36px;
-	font-weight: bold;
-	margin-bottom: 16px;
   }
 h2 {
 	font-size: 28px;
-	font-weight: bold;
-	margin-bottom: 16px;
-  }
+}
 
 h3 {
 	font-size: 24px;
-	font-weight: bold;
-	margin-bottom: 16px;
-  }
+	line-height: 1.2;
+}
+
 h4 {
 	font-size: 20px;
-	font-weight: bold;
-	margin-bottom: 16px;
-  }
+}
+
 h5{
 	font-size:16px;
-	font-weight: bold;
 }
+
 h6{
 	font-size:14px;
-	font-weight: bold;
+}
+
+p{
+	margin: 0;
+	color: #191919;
 }
 ul{
 	margin: 0;
@@ -101,7 +101,7 @@ li{
 	color: #191919;
 }
 .sm-title {
-	font-size: 16px;
+	font-size: 14px;
 	font-weight: normal;
 	color: #666;
 	
@@ -110,10 +110,13 @@ li{
 	color: #EB9164;
 	font-weight: bold;
 }
+.para-16{
+	font-size: 16px;
+	line-height: 150%;
+}
 .para{
 	font-size: 14px;
 	line-height: 150%;
-	color: #191919;
 }
 .display-title{
 	font-family: "Rubik Dirt", sans-serif;
@@ -131,12 +134,6 @@ li{
 
 .text-highlight {
   color: #FF5722; /* 強調用色，例如警示或重點 */
-}
-
-.description-text span{
-	font-size: 16px;
-	font-weight: normal;
-	color: #666;
 }
 
 @media screen and (max-width: 768px){
@@ -238,22 +235,13 @@ li{
 }
 
 .hero-title{
+	display: flex;
+	gap: 16px;
+	flex-direction:column;
 	order: 2;
 	flex: 1;
 }
   
-.hero-title h2.title {
-	font-size: 28px;
-	font-weight: bold;
-	margin-bottom: 24px;
-}
-.hero-title h3.title {
-	font-size: 24px;
-	font-weight: bold;
-	margin-bottom: 16px;
-	line-height: 1.5;
-
-}
 
 .hero-grid {
 	display: grid;
@@ -268,34 +256,30 @@ li{
 }
 .hero-flex.m-2col {
 	display: flex;
+	align-items: center;
 	flex-direction: row;
 	gap: 24px;
-	align-items: flex-start;
 	flex-wrap: nowrap; /* 不要換行 */
 }
 
 
 
 .description-text {
-flex: 1;                /* 填滿剩下的寬度 */
-font-size: 14px;
-line-height: 1.5;
-color: #191919;
-order: 1;
+	display: grid;
+	gap: 16px;
+	flex: 1;                /* 填滿剩下的寬度 */
+	order: 1;
 }
-.description-text h3 {
-font-size: 24px;
-margin-bottom: 12px;
-}
+
 .description-text .highlight {
 	font-size: 24px;
 	color: #EB9164;
 	font-weight: bold;
 }
 .description-text p {
-font-size: 14px;
-line-height: 1.5;
-color: #191919;
+
+	line-height: 1.5;
+
 }
 
 @media screen and (max-width: 768px) {
@@ -407,17 +391,15 @@ color: #191919;
 .three-column-grid .item {
 	display: flex;
   	flex-direction: column;
-  	gap: 12px; /* 這行就是讓 h4 和 p 中間有 12px */
+  	gap: 12px;
   }
 .icon-text-wrapper {
 	display: flex;
-	/* align-items: flex-start; */
 	align-items: center;
 	gap: 8px;
   }
 
 .icon {
-	
 	width: 48px;
 	height: 48px;
 	margin-right: 8px;
@@ -426,12 +408,17 @@ color: #191919;
 	justify-content: center;  /* 水平置中 */
 	align-items: center;      /* 垂直置中 */
   }
-  .icon img {
+.icon img {
 	width: 100%;
 	height: 100%;
 	object-fit: contain;
   }
-  
+
+.text{
+	display: grid;
+	gap: 8px;
+}
+
   /* 手機版（小於等於768px時） */
 @media (max-width: 768px) {
 	.three-column-grid {
@@ -651,7 +638,7 @@ color: #191919;
 .hero-container {
 	max-width: 1152px;
 	margin: 0 auto;
-	padding: 100px 16px 0px 16px;
+	padding: 80px 16px 0px 16px;
 	display: grid;
 	gap: 24px;
 }
@@ -675,7 +662,7 @@ color: #191919;
 .top-container{
 	max-width: 1152px;
 	margin: 0 auto;
-	padding: 100px 16px 0 16px;
+	padding: 80px 16px 0 16px;
 	display: grid;
 	gap: 24px;
 }
@@ -817,7 +804,7 @@ color: #191919;
 		left: 0;
 		top: 0;
 		width: 100%;
-		min-height: 100vh; /* ✅ 保證包覆整個螢幕 */
+		min-height: 100vh; /* 保證包覆整個螢幕 */
 		background-color: #191919;
 		z-index: 500;
 		flex-direction: column;
@@ -882,12 +869,12 @@ color: #191919;
 		height: 200px;
 	}
 }
-/* 測試丁選導覽列 */
+/* 釘選導覽列 */
 .sub-nav {
 	
 	display: none; /* 預設不出現 */
 	position: fixed;
-	top: 200px;
+	top: 120px;
 	width: auto;
 	height: auto;
 	background: white;
@@ -904,43 +891,37 @@ color: #191919;
 	gap: 24px;
 	list-style: none;
 	margin: 0;
-	padding: 12px;
+	padding: 8px;
 
 }
 
 .sub-nav li a {
 	text-decoration: none;
-	color: #333;
+	color: #191919;
 	font-weight: bold;
 	font-size: 12px;
 }
 
-.page-content {
-	padding: 40px 16px;
-}
 .sub-nav li a.active {
-	color: #007bff; /* 例：高亮藍色 */
-	border-bottom: 2px solid #007bff; /* 或加底線強調 */
+	color: #007bff; 
+	border-bottom: 2px solid #007bff;
 }
 .sub-nav.active {
 	display: block; /* 出現 */
 }
 @media (max-width: 768px) {
-	.sub-nav {
-	  display: none;
-	}
+  .sub-nav,
+  .sub-nav.active {
+    display: none;
+  }
 }
 
 
 /* 設計流程 */
 #flow{
 	display: flex;
-	/* display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-	gap: 32px; */
 }
 #flow h2 {
-	font-size: 28px;
 	width: 60px;
 }
 .step {
@@ -969,14 +950,11 @@ color: #191919;
 }
 
 .box h3 {
-    margin: 0 0 10px 0;
-    font-size: 16px;
-    font-weight: bold;
+    margin: 0 0 8px 0;
 }
 
 .box p {
-    margin: 5px 0;
-	margin: 5px 0;
+	margin: 2px 0;
 	overflow-wrap: anywhere; /* 推薦用這個 */
 	word-break: break-word; /* 可以保留，也可刪 */
 	
@@ -990,7 +968,7 @@ color: #191919;
 	}
 .scroll-container .title{
 		font-size: 24px;
-		color: #333;
+		color: #191919;
 		margin-bottom: 24px;
 		margin-top: 40px;
 		padding: 10px;
@@ -1019,18 +997,19 @@ color: #191919;
 	
   }
   
-  
-.overview-left p {
-	margin: 10px 0;
-  }
-  
 .team-info {
+	display: grid;
+	gap: 8px;
 	background: #f4f4f4;
-	border-radius: 12px;
-	padding: 12px;
+	border-radius: 4px;
+	padding: 16px;
 	border-left: 4px solid #ccc;
   }
-  
+.overview-left {
+	display: grid;
+	gap: 16px;
+
+}  
 .overview-right {
 	font-size: 16px;
 	line-height: 1.6;
@@ -1163,9 +1142,6 @@ color: #191919;
 	order:3;
 }
 
-
-
-
 /* footer */
 
 .footer {
@@ -1247,7 +1223,8 @@ color: #191919;
 
 
 /* -------------------------- *\
-	Utility
+	Utility .lg-hidden: legacy utility for RWD toggle (not in current use) 
+
 \* -------------------------- */
 .lg-hidden{
 	display: none;
