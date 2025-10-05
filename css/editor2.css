@@ -27,8 +27,8 @@
 }
 html,body{
 	font-family: 'Noto Sans TC', '微軟正黑體', 'PingFang TC', Arial, sans-serif;
-	
 }
+
 /* 連動的 google font */
 .anton-regular {
 	font-family: "Anton", sans-serif;
@@ -36,9 +36,9 @@ html,body{
 	font-style: normal;
   }
 .cal-sans-regular {
-font-family: "Cal Sans", sans-serif;
-font-weight: 400;
-font-style: normal;
+	font-family: "Cal Sans", sans-serif;
+	font-weight: 400;
+	font-style: normal;
 }
 .archivo-black-regular {
 	font-family: "Archivo Black", sans-serif;
@@ -46,12 +46,11 @@ font-style: normal;
 	font-style: normal;
   }
 .rubik-dirt-regular {
-font-family: "Rubik Dirt", system-ui;
-font-weight: 400;
-font-style: normal;
+	font-family: "Rubik Dirt", system-ui;
+	font-weight: 400;
+	font-style: normal;
 }
-   
-  
+     
 h1,h2,h3,h4,h5,h6{
 	font-weight: bold;
 	margin: 0;
@@ -110,6 +109,9 @@ li{
 	color: #EB9164;
 	font-weight: bold;
 }
+.white{
+	color:#fff;
+}
 .para-16{
 	font-size: 16px;
 	line-height: 150%;
@@ -153,10 +155,6 @@ li{
 	max-width: 1152px;
 	width: 100%;
 	margin: 0 auto;
-	/*border: 1px solid #000;*/
-	/* padding-top: 100px; */
-	/* padding-left: 16px;
-	padding-right: 16px; */
 	
 }
 .row{
@@ -182,57 +180,6 @@ li{
 	clear: both;
 }
 
-.col-lg-6,.col-lg-4,.col-lg-3,.col-lg-12,
-.col-md-6,.col-md-4,.col-md-3,.col-md-12,
-.col-sm-6,.col-sm-4,.col-sm-3,.col-sm-12{
-	/*border: 1px solid red;*/
-	float: left;
-	padding-left: 16px;
-	padding-right: 16px;
-}
-.col-lg-3{
-	width: 25%;
-}
-.col-lg-4{
-	width: 33.3333333%;
-}
-.col-lg-6{
-	width: 50%;
-}
-.col-lg-8{
-	width: 66.6666667%;
-}
-.col-lg-12{
-	width: 100%;
-}
-@media screen and (max-width: 768px){
-	.col-md-3{
-		width: 25%;
-	}
-	.col-md-4{
-		width: 33.3333333%;
-	}
-	.col-md-6{
-		width: 50%;
-	}
-	.col-md-12{
-		width: 100%;
-	}
-}
-@media screen and (max-width: 540px){
-	.col-sm-3{
-		width: 25%;
-	}
-	.col-sm-4{
-		width: 33.3333333%;
-	}
-	.col-sm-6{
-		width: 50%;
-	}
-	.col-sm-12{
-		width: 100%;
-	}
-}
 
 .hero-title{
 	display: flex;
@@ -262,8 +209,6 @@ li{
 	flex-wrap: nowrap; /* 不要換行 */
 }
 
-
-
 .description-text {
 	display: grid;
 	gap: 16px;
@@ -271,16 +216,6 @@ li{
 	order: 1;
 }
 
-.description-text .highlight {
-	font-size: 24px;
-	color: #EB9164;
-	font-weight: bold;
-}
-.description-text p {
-
-	line-height: 1.5;
-
-}
 
 @media screen and (max-width: 768px) {
 	.hero-grid.m-2col {
@@ -350,7 +285,7 @@ li{
   }
 
 }
-/* 全部文字的 */
+/* grid 電腦2欄 */
 .two-column-grid {
 	display: grid;
 	grid-template-columns: repeat(2, 1fr); /* 一列2個 */
@@ -358,29 +293,27 @@ li{
 	row-gap: 24px;    /* 垂直間距 */
   }
   
-  .two-column-grid .item {
+.two-column-grid .item {
 	background: #f9f9f9;
 	padding: 24px;
 	border-radius: 4px;
 	display: flex;
   	flex-direction: column;
-  	gap: 12px; /* 這行就是讓 h3 和 p 中間有 12px */
+  	gap: 12px;
   }
   
-  /* 手機版（小於等於768px時） */
-  @media (max-width: 768px) {
+@media (max-width: 768px) {
 	.two-column-grid {
 	  grid-template-columns: 1fr; /* 手機版變成一列1個 */
 	  column-gap: 0; /* 手機版就不需要左右間距 */
 	}
 
 	.two-column-grid .item {
-	
 		padding: 16px;
-	
-	  }
+	}
   }
-/* grid 一列三個 */
+
+/* grid 電腦3欄 */
 .three-column-grid {
 	display: grid;
 	grid-template-columns: repeat(3, 1fr); /* 一列3個 */
@@ -427,13 +360,9 @@ li{
 	}
 
 	.three-column-grid .item {
-	
 		padding: 16px;
-	
 	  }
   }  
-  
-
 
 /* -------------------------- *\
 	Component
