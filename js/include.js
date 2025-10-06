@@ -1,19 +1,26 @@
 // /js/include.js
-(async function () {
-  const base = "/"; // 你的網站在根目錄，直接用絕對路徑
+(async () => {
+  // 找出所有 data-include 區塊
+  const targets = document.querySelectorAll('[data-include]');
 
-  const resolve = (path) => (path.startsWith("/") ? path : base + path);
-
-  const targets = document.querySelectorAll("[data-include]");
+  // 逐一載入對應的 HTML 片段
   for (const el of targets) {
-    const url = resolve(el.getAttribute("data-include"));
+    const src = el.getAttribute('data-include') || '';
+    const url = src.startsWith('/') ? src : '/' + src;
+
     try {
-      const res = await fetch(url, { cache: "no-cache" });
-      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+      const res = await fetch(url, { cache: 'no-cache' });
+      if (!res.ok) throw new Error(`HTTP ${res.status} ${url}`);
+
       const html = await res.text();
-      el.outerHTML = html; // 以片段（含<header>/<footer>）覆蓋占位
-    } catch (e) {
-      console.error("Include failed:", url, e);
+      el.outerHTML = html; // 取代掉占位元素
+    } catch (err) {
+      console.error('[include] failed:', url, err);
     }
   }
+
+  // 片段插入完成後：更新年份
+  document.querySelectorAll('.year').forEach(el => {
+    el.textContent = new Date().getFullYear();
+  });
 })();
