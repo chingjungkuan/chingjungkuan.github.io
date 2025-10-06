@@ -25,30 +25,8 @@
 <body>
 	<div class="wrapper">
 		<!-- Start header -->
-		<header class="header">
-			<div class="navbar">
-				<div class="container">
-					<a href="https://chingjungkuan.github.io/" class="brand">
-						<h1>Lucy Kuan</h1>
-					</a>
-					<ul id="popup-menu" class="nav">
-						<li class="nav-item"><a href="https://chingjungkuan.github.io/#about" class="nav-link">ABOUT</a></li>
-						<li class="nav-item"><a href="https://chingjungkuan.github.io/#skills" class="nav-link">SKILL</a></li>
-						<li class="nav-item"><a href="https://chingjungkuan.github.io/#ui-design" class="nav-link">UI DESIGN</a></li>
-						<li class="nav-item"><a href="https://chingjungkuan.github.io/#contact" class="nav-link">CONTACT</a></li>
-						<a href="#!" class="close-btn">
-							<span></span>
-							<span></span>
-						</a>
-					</ul>
-					<a href="#popup-menu" class="menu-toggle">
-						<span></span>
-						<span></span>
-						<span></span>
-					</a>
-				</div>
-			</div>
-		</header>
+		<!-- 共用區塊占位（載入後會被 <header>/<footer> 取代） -->
+  			<div id="site-header" data-include="/components/header.html"></div>
 		<!-- End header -->
 
 		<!-- Start main -->
@@ -368,6 +346,8 @@
 
     	<!-- End footer -->
 	</div>
+	<!-- Start JS -->
+	<script defer src="/js/include.js"></script>
+	<!-- End JS -->
 </body>
 </html>
-
