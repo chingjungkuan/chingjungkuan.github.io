@@ -1,10 +1,5 @@
 @charset "utf-8";
-/*
- * Page name homepage
- * Copyright 2025
- * Author Lucy
- * Licensed
- */
+
 /* -------------------------- *\
 	Content
 \* -------------------------- */
@@ -24,7 +19,7 @@
 	position: relative;
 }
 html,body{
-	font-family: '微軟正黑體', arial;
+	font-family: 'Noto Sans TC', '微軟正黑體', 'PingFang TC', Arial, sans-serif;
 }
 h1,h2,h3,h4,h5,h6{
 	margin: 0;
@@ -44,7 +39,6 @@ h5{
 }
 h6{
 	font-size:14px;
-	
 }
 ul{
 	margin: 0;
@@ -416,7 +410,6 @@ a{
   }
 @media screen and (max-width: 768px) {
 
-
 	.navbar .nav {
 		position: fixed;
 		left: 0;
@@ -538,13 +531,13 @@ a{
 /* Graphic Design 標籤（藍色，靠右） */
 .tag-design {
 	z-index: 200;
-    background-color: #0033cc;
+    background-color: #333;
     bottom: 25%;
     right: 28%;
 }
 .tag-design::after {
     border-width: 6px 0 6px 6px;
-    border-color: transparent transparent transparent #0033cc;
+    border-color: transparent transparent transparent #333;
     top: 50%;
     left: -6px;
     transform: translateY(-50%) rotate(180deg);
@@ -563,8 +556,6 @@ a{
 	position: absolute;
 	top: 0;
 	left: 0;
-	/* width: 100%;
-	height: 100%; */
 	transform: scale(1.2);
 	filter: blur(50px);
 	background: linear-gradient(270deg, #DBE7FE20 , #F7FAFF60 );
@@ -572,11 +563,10 @@ a{
 	animation: animateGlow 10s ease infinite;
 	border-radius: 50%;
 	z-index: 1;
-	/* position: relative; */
   	width: 40vw;         /* 自動縮放，最大寬度為視窗 40% */
   	max-width: 320px;    /* 避免太大 */
   	aspect-ratio: 1 / 1; /* 讓高度等比例 */
- 	 margin: 0 auto;
+ 	margin: 0 auto;
   }
   
 .jumbotron .logo-image {
