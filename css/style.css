@@ -49,14 +49,21 @@ a{
 	text-decoration: none;
 	color: #191919;
 }
+p{
+	line-height: 1.5 ;
+	margin: 0;
+}
 .highlight {
 	color: #EB9164;
 	font-weight: bold;
   }
 .para {
  color: #191919;
- line-height: 1.5 ;
- font-size:14px;
+
+ font-size: 14px;
+}
+.text-primary-blue{
+	color: #0040BD;
 }
 /* -------------------------- *\
 	Layout
@@ -66,6 +73,9 @@ a{
 	max-width: 1152px;
 	width: 100%;
 	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+	gap: 24px;
 	padding-left: 16px;
 	padding-right: 16px;
 }
@@ -498,7 +508,7 @@ a{
     border-style: solid;
 }
 
-/* UIUX 標籤（粉色，靠左） */
+/* graphic 靠左標籤 */
 .tag-uiux {
 	z-index: 200;
     background-color: #e6007e;
@@ -513,7 +523,7 @@ a{
     transform: translateY(-50%) rotate(180deg);
 }
 
-/* Creativity 標籤（橘色，靠左） */
+/* Creativity 靠左標籤 */
 .tag-creativity {
 	z-index: 200;
     background-color: #f89b29;
@@ -528,7 +538,7 @@ a{
     transform: translateY(-50%) rotate(180deg);
 }
 
-/* Graphic Design 標籤（藍色，靠右） */
+/* UIUX 靠右標籤 */
 .tag-design {
 	z-index: 200;
     background-color: #333;
@@ -611,46 +621,46 @@ a{
     position: relative;
   }
 
-  .jumbotron .logo-wrapper .logo-glow {
-    z-index: 1;
-    transform: scale(1.05);
-    filter: blur(12px);
-    background: linear-gradient(270deg, #ff790c60 , #f7d51367 );
-    background-size: 200% 200%;
-    animation: animateGlow 10s ease infinite;
-    border-radius: 50%;
-    position: absolute;  /* 還是需要絕對定位讓它在圖片下方 */
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) scale(1.05); /* 中心對齊 + scale */
-  }
+.jumbotron .logo-wrapper .logo-glow {
+	z-index: 1;
+	transform: scale(1.05);
+	filter: blur(12px);
+	background: linear-gradient(270deg, #ff790c60 , #f7d51367 );
+	background-size: 200% 200%;
+	animation: animateGlow 10s ease infinite;
+	border-radius: 50%;
+	position: absolute;  /* 還是需要絕對定位讓它在圖片下方 */
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%) scale(1.05); /* 中心對齊 + scale */
+}
 
-  .jumbotron .logo-wrapper .logo-image {
-    z-index: 2;
-    background-position: center;
-    background-size: contain;
-    background-repeat: no-repeat;
-  }
+.jumbotron .logo-wrapper .logo-image {
+	z-index: 2;
+	background-position: center;
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+}
 
+/* tag-藍色 */
+.jumbotron .tag-design {
+	z-index: 200;
+	bottom: 25%;
+	right: 3%;
+}
+/* 粉色 */
+.tag-uiux {
+	z-index: 200;
+	top: 12%;
+	left: 1%;
+}
+.tag-creativity {
+	z-index: 200;
+	bottom: 10%;
+	left: 3%;
+}
 
-	/* tag-藍色 */
-	.jumbotron .tag-design {
-		z-index: 200;
-		bottom: 25%;
-		right: 3%;
-	}
-	/* 粉色 */
-	.tag-uiux {
-		z-index: 200;
-		top: 12%;
-		left: 1%;
-	}
-	.tag-creativity {
-		z-index: 200;
-		bottom: 10%;
-		left: 3%;
-	}
-} 
 
 
 /* about-preview */
@@ -660,53 +670,32 @@ a{
 		margin-bottom: 48px;
 	}
 }
-.about-preview .title{
-	font-weight: bold;
-	font-size: 36px;
-	color: #191919;
-	margin-bottom: 12px;
+.title-group {
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
 }
 
 
 @media screen and (max-width: 960px){
-	.about-preview .title{
+	.title-group .title{
 		margin-top: 0px;
 	}
 }
-.about-preview .subtitle{
-	margin-bottom: 24px;
-	color: #185ADB;
 
-}
-.about-preview .para{
-	font-size: 14px;
-	line-height: 24px;
-	text-align: left;
-	margin-bottom: 24px;
-}
+
 
 /* section-intro */
 
-/* .section-intro .title{
-	font-size: 28px;
-	color: #191919;
-	font-weight: bold;
-} */
 @media screen and (max-width: 768px){
-	.section-intro .title{
-		font-size: 32px;
-	}
+
 	.section-intro{
+		display: flex;
+		flex-direction: column;
+		gap: 24px;
 		text-align: left;
 		margin-bottom: 12px;
 }
-}
-.section-intro .para{
-	text-align: left;
-	font-size: 14px;
-	line-height: 21px;
-	max-width: 480px;
-	margin: 0 0;
 }
 
 /* skill-item */
@@ -725,29 +714,17 @@ a{
 .skill-item .preview{
 	padding-top: 16px;
 }
-.skill-item .title{
-	font-size: 24px;
-	color: #191919;
-	margin-bottom: 8px;
-	white-space: nowrap;
-	overflow: hidden;
-	text-overflow: ellipsis;
-}
-.skill-item .subtitle{
-	font-size: 16px;
-	color: #0040BD;
-	margin-bottom: 16px;
-}
-.skill-item .para{
-	font-size: 16px;
-	line-height: 24px;
-	margin-bottom: 24px;
-	text-align: left;
-	height: 72px;
-	overflow: hidden;
-}
 
-
+.title-txt{
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
+}
+.skill-item{
+	display: flex;
+	flex-direction: column;
+	gap: 24px;
+}
 /* menu-list */
 .menu-list{
 	margin-bottom: 64px;
@@ -934,13 +911,7 @@ a{
 	}
 }
 
-.ui-design-preview .title{
-	margin-top: 0px;
-	margin-bottom: 12px;
-	font-weight: 700;
-	font-size: 24px;
-	color: #0040BD;
-}
+
 @media screen and (max-width: 960px){
 	.ui-design-preview .title{
 		margin-top: 0px;
@@ -950,17 +921,9 @@ a{
 	margin-top: 0px;
 }
 
-.ui-design-preview .para{
-	max-width: 800px;
-	font-size: 14px;
-	line-height: 150%;
-	text-align: left;
-	color: #191919;
-	margin-bottom: 24px;
-}
 
 
-/* 測試卡片3欄位 */
+/* 卡片3欄位 */
   .wrap{
     max-width: 1200px;
     margin: 0 auto;
@@ -985,10 +948,11 @@ a{
     min-width: 280px;                 /* 避免太窄 */
     display: flex;
     flex-direction: column;
+	gap: 12px;
     box-shadow: 0 2px 8px rgba(0,0,0,.04);
   }
 
-  .tag-outline{
+.tag-outline{
     display: inline-block;
 	align-self: flex-start; /* 關鍵：依文字寬度 */
 	width: auto;
@@ -1001,14 +965,6 @@ a{
     color: #666;
     margin-bottom: 8px;
   }
-
-
-
-  .subtitle{
-    margin: 0 0 12px 0;
-  }
-
-
 
   .spacer{
     flex: 1;   /* 推開按鈕，讓卡片底部對齊 */
