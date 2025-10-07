@@ -5,8 +5,9 @@
     <link href="../images/favicon.ico" rel="shortcut icon"/>
     <title>Editor2 線上編輯器｜關靖蓉 Portfolio</title>
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <link rel="stylesheet" href="../css/normalize.css">
-    <link rel="stylesheet" href="../css/editor2.css">
+    <link rel="stylesheet" href="/css/normalize.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/editor2.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Anton&family=Paytone+One&family=Rowdies:wght@300;400;700&family=Rubik+Dirt&family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
@@ -14,31 +15,8 @@
 </head>
 <body>
     <div class="wrapper">
-        <!-- Start header -->
-		<header class="header">
-			<div class="navbar">
-				<div class="container">
-					<a href="https://chingjungkuan.github.io" class="brand">
-						<h1>Editor2 點點印線上編輯器 UIUX Portfolio</h1>
-					</a>
-					<ul id="popup-menu" class="nav">
-						<li class="nav-item"><a href="https://chingjungkuan.github.io/#about" class="nav-link">ABOUT</a></li>
-						<li class="nav-item"><a href="https://chingjungkuan.github.io/#skills" class="nav-link">SKILL</a></li>
-						<li class="nav-item"><a href="https://chingjungkuan.github.io/#ui-design" class="nav-link">UI DESIGN</a></li>
-						<li class="nav-item"><a href="https://chingjungkuan.github.io/#contact" class="nav-link">CONTACT</a></li>
-						<a href="#!" class="close-btn">
-							<span></span>
-							<span></span>
-						</a>
-					</ul>
-					<a href="#popup-menu" class="menu-toggle">
-						<span></span>
-						<span></span>
-						<span></span>
-					</a>
-				</div>
-			</div>
-		</header>
+    <!-- Start header -->
+      <div id="site-header" data-include="/components/header.html"></div>
 		<!-- End header -->
     <!-- 浮動釘選導覽列 -->
     <nav id="sub-nav" class="sub-nav">
@@ -59,7 +37,7 @@
 			    <!-- End banner -->
           <!-- Start Design Impact -->
                 
-          <div id="impact" class="hero-container">
+          <div id="impact" class="top-container">
 
           <div  class="layout-center display-title">Design Impact </div> 
 
@@ -137,34 +115,34 @@
           <!-- End Design Impact--> 
 
           <!-- Start Overview -->
-            <div id="overview" class="hero hero-bg-white">
-              <div class="hero-container">
-                <div class="overview">
-                  <div class="overview-left">
-                    <h2 class="title">概述 <span class="sm-title">Overview</span></h2>
-                    <h3 class="title text-primary">Editor2 - 相片書線上編輯器</h3>
-                    <h5 class="title">#B2C #SaaS #POD（客製化印刷服務）#RWD Website</h5>
-                    <p class="para">
-                      產品服務｜點點印推出的線上編輯器，會員用戶可透過此平台製作各式產品，例如相片書、卡片、邀請卡、婚禮書約與精裝寫真本等，讓使用者能輕鬆完成編輯，並一鍵下單印製專屬作品。
-                    </p>
-                    <div class="team-info">
-                      <p class="para"><strong>Team |</strong> TinTint 點點印<br>
-                      <strong>Role |</strong> UIUX Designer<br>
-                      <strong>Collaborators |</strong> UIUX Designer(1)・PM(1)・FE(1)・BE(1)・CS(3)
-                      </p>
-                    </div>
-                  </div>
-                  <div class="overview-right">
-                    <p class="para">
-                      因應編輯器需全面更新至<strong>新版設計風格系統</strong>，我們將此專案視為契機，<strong>重新檢視舊版在操作不便與視覺過時上的問題</strong>。
-                    </p>
-                    <p class="para">
-                    作為此專案的 UI UX 設計師，我透過<strong>使用者訪談、競品分析與CS團隊提供的用戶回饋</strong>，建立 Personas 與 User Story Map，<strong>釐清核心需求與痛點</strong>。根據研究結果，<strong>重整資訊架構與操作流程，並制定新版 Wireframe、UI Flow 與設計系統</strong>。最後透過原型測試與易用性驗證，確保新版設計不僅解決舊有問題，也讓整體介面更直覺、現代化。
+            
+            <div id="overview" class="top-container">
+              <div class="overview">
+                <div class="overview-left">
+                  <h2 class="title">概述 <span class="sm-title">Overview</span></h2>
+                  <h3 class="title text-primary">Editor2 - 相片書線上編輯器</h3>
+                  <h5 class="title">#B2C #SaaS #POD（客製化印刷服務）#RWD Website</h5>
+                  <p class="para">
+                    產品服務｜點點印推出的線上編輯器，會員用戶可透過此平台製作各式產品，例如相片書、卡片、邀請卡、婚禮書約與精裝寫真本等，讓使用者能輕鬆完成編輯，並一鍵下單印製專屬作品。
+                  </p>
+                  <div class="team-info">
+                    <p class="para"><strong>Team |</strong> TinTint 點點印<br>
+                    <strong>Role |</strong> UIUX Designer<br>
+                    <strong>Collaborators |</strong> UIUX Designer(1)・PM(1)・FE(1)・BE(1)・CS(3)
                     </p>
                   </div>
                 </div>
+                <div class="overview-right">
+                  <p class="para">
+                    因應編輯器需全面更新至<strong>新版設計風格系統</strong>，我們將此專案視為契機，<strong>重新檢視舊版在操作不便與視覺過時上的問題</strong>。
+                  </p>
+                  <p class="para">
+                  作為此專案的 UI UX 設計師，我透過<strong>使用者訪談、競品分析與CS團隊提供的用戶回饋</strong>，建立 Personas 與 User Story Map，<strong>釐清核心需求與痛點</strong>。根據研究結果，<strong>重整資訊架構與操作流程，並制定新版 Wireframe、UI Flow 與設計系統</strong>。最後透過原型測試與易用性驗證，確保新版設計不僅解決舊有問題，也讓整體介面更直覺、現代化。
+                  </p>
+                </div>
               </div>
             </div>
+            
             
           <!-- End Overview -->
             <!-- 開始設計流程 -->
@@ -234,7 +212,7 @@
             <!-- 設計流程結束 -->
 
             <!-- img2-txt1 痛點與觀察 -->
-            <div id="pain-point" class="img-txt hero-container hero-grid d-2col-1col">
+            <div id="pain-point" class="img-txt top-container hero-grid d-2col-1col">
               <div class="image-block lightbox-trigger" style="background-image: url('../images/editor2/img_pain-point.jpg');"></div>
  
               <div class="hero-title">
@@ -253,14 +231,14 @@
 
           </div>        
           <!-- End img2-txt1 -->    
-          <div class="hero-container">
+          <div class="top-container">
             <p class="para" >
               我們發現使用者在操作過程中常遇到三大問題：<strong>難以快速找到所需資訊、學習成本高、操作流程不直覺</strong>。為了釐清根源，我們結合 Personas、Empathy Map 與 User Story Map，具體描繪出不同角色在編輯過程中的需求與行為痛點，並透過<strong>用戶訪談與實際操作觀察驗證假設</strong>，例如「照片上傳流程過於繁瑣」與「功能按鈕分散導致視線頻繁切換」。</p>
           </div>        
 
           <!-- Start txt1-img2 解決方案 -->
 
-            <div  id="solution" class="hero-container hero-grid m-1col-2col">
+            <div  id="solution" class="top-container hero-grid m-1col-2col">
                     
                 <div class="hero-title">
                 <h2 class="title">設計優化重點 <span class="sm-title">Solution</span></h2>
@@ -280,7 +258,7 @@
           <!-- End txt1-img2 解決方案 -->
             
             <!-- Start 資訊架構 -->
-            <div id="ia" class="hero-container">
+            <div id="ia" class="top-container">
                 <div class="layout-center">
                     <h2 class="title">資訊架構 <span class="sm-title">Define</span></h2>
                     <p class="center-txt"> 在視覺設計前，先盤點並統整功能規格，解決不一致處並建立資訊架構，協助團隊快速理解產品結構。透過 UI Flow 視覺化頁面路徑，確保體驗一致與流程順暢。</p>
@@ -293,7 +271,7 @@
 
             <!-- Start txt1-img2 User flow -->
 
-            <div class="hero-container hero-grid m-1col-2col">
+            <div class="top-container hero-grid m-1col-2col">
                     
                 <div class="hero-title">
                 <h2 class="title">User Flow <span class="sm-title">Ideate</span></h2>
@@ -307,7 +285,7 @@
             </div>
             <!-- End txt1-img2 user flow -->            
             <!-- Start img2-txt1 Wireframe-->
-            <div  class="img-txt hero-container hero-grid d-2col-1col">
+            <div  class="img-txt top-container hero-grid d-2col-1col">
                 <div class="image-block lightbox-trigger" style="background-image: url('../images/editor2/img_wireframe.jpg');"></div>
    
                 <div class="hero-title">
@@ -321,7 +299,7 @@
             <!-- End img2-txt1 Wireframe -->
 
             <!-- Start UI Design 目前ui-design僅用於當標籤沒有css -->
-            <div  id="ui-design"   class=" hero-container">
+            <div  id="ui-design"   class="top-container">
               <div class="layout-center display-title">UI Design </div>  
             <div class="container">
               <!-- Start txt1-img2 User flow -->
@@ -650,7 +628,7 @@
       <!-- End ui design section -->
         
       <!-- Start Style-guide -->
-          <div id="style-guide" class="hero-container">
+          <div id="style-guide" class="top-container">
             <div  class="layout-center display-title">Style Guide </div> 
             
             <div class="container two-column-grid">
@@ -771,27 +749,12 @@
   <!-- End main -->
 
   <!-- Start footer -->
-      <footer class="footer">
-        <div class="footer-hero">
-          <div class="mask-dark"></div>
-          <div class="container">
-            <a href="/" class="footer-brand" aria-label="Back to homepage"></a>
-            <nav class="footer-nav">
-              <a href="/myportfolio#about" class="footer-link">ABOUT</a>
-              <a href="/myportfolio#ui-design" class="footer-link">UI DESIGN</a>
-              <a href="/myportfolio#contact" class="footer-link">CONTACT</a>
-            </nav>
-          </div>
-        </div>
-        <div class="footer-copyright">
-          <p class="white">© Copyright 2025 All rights reserved</p>
-        </div>
-      </footer>
-
+    <div id="site-footer" data-include="/components/footer.html"></div>
   <!-- End footer -->
     </div>
 
-    <!-- Start java -->
+  <!-- Start java -->
+    <script defer src="/js/include.js"></script>
     <script>
       // 點擊 lightbox 圖片放大
     
