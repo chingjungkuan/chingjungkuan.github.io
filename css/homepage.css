@@ -345,7 +345,23 @@ p{
 		display: block;
 	}
 }
+/* 通用標籤樣式 */
+.tag {
+    position: absolute;
+    padding: 8px 12px;
+    font-size: 14px;
+    font-weight: bold;
+    color: white;
+    border-radius: 4px;
+}
 
+.tag::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-style: solid;
+}
 
 /* jumbotron */
 .jumbotron{
@@ -373,7 +389,7 @@ p{
     position: relative;
     display: flex;
     justify-content: right;
-    align-items: right;
+    align-items: baseline;
 }
 
 .character {
@@ -381,33 +397,14 @@ p{
     max-width: 300px;
 }
 
-
-/* 通用標籤樣式 */
-.tag {
-    position: absolute;
-    padding: 8px 12px;
-    font-size: 14px;
-    font-weight: bold;
-    color: white;
-    border-radius: 5px;
-}
-
-.tag::after {
-    content: "";
-    position: absolute;
-    width: 0;
-    height: 0;
-    border-style: solid;
-}
-
 /* graphic 靠左標籤 */
-.tag-uiux {
+.tag-graphic {
 	z-index: 200;
     background-color: #e6007e;
-    top: 20%;
-    left: 24%;
+	top: 32%;
+	left: 1%;
 }
-.tag-uiux::after {
+.tag-graphic::after {
     border-width: 6px 6px 6px 0;
     border-color: transparent #e6007e transparent transparent;
     top: 50%;
@@ -419,8 +416,8 @@ p{
 .tag-creativity {
 	z-index: 200;
     background-color: #f89b29;
-    bottom: 30%;
-    left: 30%;
+	bottom: 30%;
+	left: 10%;
 }
 .tag-creativity::after {
     border-width: 6px 6px 6px 0;
@@ -431,28 +428,28 @@ p{
 }
 
 /* UIUX 靠右標籤 */
-.tag-design {
+.tag-uiux {
 	z-index: 200;
     background-color: #333;
-    bottom: 25%;
-    right: 28%;
+    bottom: 60%;
+	right: 0%;
 }
-.tag-design::after {
-    border-width: 6px 0 6px 6px;
+.tag-uiux::after {
+    border-width: 8px 0 8px 8px;
     border-color: transparent transparent transparent #333;
     top: 50%;
-    left: -6px;
+    left: -8px;
     transform: translateY(-50%) rotate(180deg);
 }
   
-
-
 .jumbotron .logo-wrapper {
-	position: relative;
-	width: 320px;
-	height: 320px;
-	margin: 0 auto;
-  }
+  position: relative;
+  width: calc(320px + 160px); /* 比插圖多出80px邊距 */
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
   
 .jumbotron .logo-glow {
 	position: absolute;
@@ -472,14 +469,26 @@ p{
   }
   
 .jumbotron .logo-image {
-	width: 100%;
-	height: 100%;
-	background-position: center;
-	background-size: contain;
-	background-repeat: no-repeat;
-	position: relative;
-	z-index: 2;
+  width: 320px;
+  height: 320px;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: relative;
+  z-index: 2;
 }
+
+@media (max-width: 768px) {
+  .jumbotron .logo-wrapper {
+    width: 360px;
+    height: 360px;
+  }
+  .jumbotron .logo-image {
+    width: 240px;
+    height: 240px;
+  }
+}
+
 
 /* 發光動畫 */
 @keyframes animateGlow {
@@ -534,25 +543,6 @@ p{
 	background-repeat: no-repeat;
 }
 }
-
-/* tag-藍色 */
-.jumbotron .tag-design {
-	z-index: 200;
-	bottom: 25%;
-	right: 3%;
-}
-/* 粉色 */
-.tag-uiux {
-	z-index: 200;
-	top: 12%;
-	left: 1%;
-}
-.tag-creativity {
-	z-index: 200;
-	bottom: 10%;
-	left: 3%;
-}
-
 
 
 /* about-preview */
@@ -861,6 +851,8 @@ p{
   .spacer{
     flex: 1;   /* 推開按鈕，讓卡片底部對齊 */
   }
+
+
 
   /* 簡單 RWD：小於 900px 改為兩欄，小於 640px 一欄 */
   @media (max-width: 900px){
