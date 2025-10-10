@@ -1,8 +1,5 @@
 @charset "utf-8";
 
-/* -------------------------- *\
-	Content
-\* -------------------------- */
 /**
  * Content ............ You are reading it!
  * Globel ............ Set common styles
@@ -14,10 +11,6 @@
 /* -------------------------- *\
 	Globel
 \* -------------------------- */
-
-html,body{
-	font-family: 'Noto Sans TC', '微軟正黑體', 'PingFang TC', Arial, sans-serif;
-}
 
 /* 連動的 google font */
 .anton-regular {
