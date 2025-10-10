@@ -224,7 +224,7 @@
 /* 通用標籤樣式 */
 .tag {
     position: absolute;
-    padding: 8px 12px;
+    padding: 8px 8px;
     font-size: 14px;
     font-weight: bold;
     color: white;
@@ -239,25 +239,13 @@
     border-style: solid;
 }
 
-/* jumbotron */
+/* Hero Section */
 .jumbotron{
 	padding-top: 80px;
 	padding-bottom: 80px;
 	/* background-image: url('../images/bg/hero_banner.png'); */
 	background-size: cover;
 	background-attachment: fixed;
-}
-@media screen and (max-width: 768px){
-	.jumbotron{
-		max-height: 320px;
-		padding-top: 80px;
-		padding-bottom: 80px;
-	}
-}
-
-
-.left, .right {
-    flex: 1;
 }
 
 .center {
@@ -266,11 +254,6 @@
     display: flex;
     justify-content: right;
     align-items: baseline;
-}
-
-.character {
-    width: 100%;
-    max-width: 300px;
 }
 
 /* graphic 靠左標籤 */
@@ -354,6 +337,20 @@
   z-index: 2;
 }
 
+@media screen and (max-width: 768px){
+	.tag{
+		font-size: 12px;
+	}
+	.jumbotron{
+		max-height: 320px;
+		padding-top: 80px;
+		padding-bottom: 80px;
+	}
+	.tag-graphic {
+		top: 12%;
+		left: 1%;
+	}
+}
 
 
 /* 發光動畫 */
@@ -401,8 +398,7 @@
 }
 
 .jumbotron .logo-wrapper .logo-image {
-	width: 160px;
-	height: 160px;
+	height: 200px;
 	z-index: 2;
 	background-position: center;
 	background-size: contain;
@@ -421,13 +417,8 @@
 
 /* Skill Section */
 @media screen and (max-width: 768px){
-	.skill-item{
-		margin-bottom: 48px;
-	}
-	/* 屬性選擇器 */
-	[class^="col-"]:last-child .skill-item{
-		margin-bottom: 0;
-	}
+
+
 
 }
 .skill-item .preview{
