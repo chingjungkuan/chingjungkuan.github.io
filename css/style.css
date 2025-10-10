@@ -322,7 +322,6 @@ p{
 .footer .mask-dark {
   position: absolute;
   inset: 0;
-  background-color:#185ADB;
   z-index: 0;
 }
 
@@ -353,27 +352,16 @@ p{
 }
 
 .footer-link {
-  color: #fefefe;
-  text-decoration: none;
-  padding: 8px 12px;
-  transition: color 0.3s;
+	font-size: 14px;
+	color: #fefefe;
+	text-decoration: none;
+	padding: 8px 12px;
+	transition: color 0.3s;
 }
 
 .footer-link:hover {
   color: #0040BD;
 }
-
-@media screen and (max-width: 540px) {
-  .footer-brand {
-    width: 200px;
-    
-  }
-
-  .footer-link {
-    padding: 8px;
-  }
-}
-
 .footer-copyright {
   background-color: rgba(0, 0, 0, 0.8);
   color: #fff;
@@ -383,3 +371,13 @@ p{
   line-height: 14px;
 }
 
+@media screen and (max-width: 576px) {
+  .footer-link {
+    padding: 8px;
+  }
+  .footer-nav {
+
+	gap: 8px;
+
+	}
+}
