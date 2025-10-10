@@ -46,29 +46,7 @@ h1,h2,h3,h4,h5,h6{
 	margin: 0;
 	color: #191919;
 }
-h1 {
-	font-size: 36px;
-  }
-h2 {
-	font-size: 28px;
-}
 
-h3 {
-	font-size: 24px;
-	line-height: 1.2;
-}
-
-h4 {
-	font-size: 20px;
-}
-
-h5{
-	font-size:16px;
-}
-
-h6{
-	font-size:14px;
-}
 
 p{
 	margin: 0;
@@ -461,7 +439,7 @@ li{
 }
 @media screen and (max-width: 768px){
 	.hero-container{
-		padding: 60px 16px 0px 16px;
+		padding: 60px 16px;
 		
 	}
 	.container{
