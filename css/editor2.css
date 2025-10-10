@@ -72,7 +72,7 @@ h6{
 
 p{
 	margin: 0;
-	color: #191919;
+	color: #414141;
 }
 ul{
 	margin: 0;
@@ -125,7 +125,7 @@ li{
 }
 
 .text-highlight {
-  color: #FF5722; /* 強調用色，例如警示或重點 */
+  color: #FF5722; /* 強調用色*/
 }
 
 @media screen and (max-width: 768px){
@@ -147,27 +147,10 @@ li{
 	margin: 0 auto;
 	
 }
-.row{
-	/*border: 1px solid blue;*/
-	margin-left: -16px;
-	margin-right: -16px;
-	margin-bottom: 36px;
+.d-vertical{
 	display: flex;
-	
-}
-.row-bottom{
-	/*border: 1px solid blue;*/
-	margin-left: -16px;
-	margin-right: -16px;
-	margin-bottom: 36px;
-	display: flex;
-    align-items: flex-end;
-	
-}
-.row:after{
-	content: '';
-	display: block;
-	clear: both;
+	flex-direction: column;
+	gap: 24px;
 }
 
 .hero-title{
@@ -260,16 +243,15 @@ li{
 	gap: 24px;
   }
 
-/* 手機版：切換成一欄 */
 @media screen and (max-width: 768px) {
 .hero-grid.m-1col {
-    grid-template-columns: 1fr; /* 手機版一欄 */
+    grid-template-columns: 1fr; 
   }
 .hero-grid.m-1col-2col {
-    grid-template-columns: 1fr; /* 手機版一欄 */
+    grid-template-columns: 1fr;
   }
 .hero-grid.d-2col-1col {
-    grid-template-columns: 1fr; /* 手機版一欄 */
+    grid-template-columns: 1fr;
   }
 
 }
@@ -343,7 +325,7 @@ li{
   /* 手機版（小於等於768px時） */
 @media (max-width: 768px) {
 	.three-column-grid {
-	  grid-template-columns: 1fr; /* 手機版變成一列1個 */
+	  grid-template-columns: 1fr;
 	  column-gap: 0; /* 手機版就不需要左右間距 */
 	}
 
@@ -395,8 +377,7 @@ li{
 	background-size: contain;
 	background-position: left;
 	background-repeat: no-repeat;
-
-	height: 200px; /* 自訂想要的高 */
+	height: 200px;
 	width: auto;
 	max-width: 120px;
 	aspect-ratio: 4 / 3;
@@ -414,15 +395,7 @@ li{
 	  content: url('../images/bg/banner-mobile.jpg');
 	}
   }
-/* mask-dark */
-.mask-dark{
-	background-color: rgb(149, 120, 83);
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    width: 100%;
-    height: 100%;
-}
+
 /* banner */
 .hero-banner {
 	width: 100%;
@@ -516,7 +489,7 @@ li{
 		padding: 0px;
 	}
 	.top-container{
-		padding: 60px 0 0 0;
+		padding: 60px 16px 0 16px;
 	}
 	
 }
