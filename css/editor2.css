@@ -105,6 +105,9 @@ li{
 	}
 
 }
+.t-center{
+	text-align: center;
+}
 
 /* -------------------------- *\
 	Layout
@@ -473,9 +476,6 @@ li{
 	gap: 24px;
 }
 @media screen and (max-width: 768px){
-	.notop-container{
-		padding: 0px;
-	}
 	.top-container{
 		padding: 60px 16px 0 16px;
 	}
