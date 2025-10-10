@@ -138,6 +138,23 @@ li{
 	order: 2;
 	flex: 1;
 }
+.layout-center{
+	max-width: 640px;
+	width: 100%;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 12px;
+}
+.center-txt{
+	
+	text-align: center;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 150%;
+	text-transform: capitalize;
+}
 
 .hero-grid {
 	display: grid;
@@ -472,40 +489,6 @@ li{
 	
 }
 
-
-.left, .right {
-    flex: 1;
-}
-
-.center {
-    flex: 1;
-    position: relative;
-    display: flex;
-    justify-content: right;
-    align-items: right;
-}
-
-.character {
-    width: 100%;
-    max-width: 300px;
-}
-
-
-.jumbotron .logo-image{
-	width: 320px;
-	height: 320px;
-	/*border: 1px solid #000;*/
-	background-position: center;
-	background-size: contain;
-	background-repeat: no-repeat;
-	margin: 0 auto;
-}
-@media screen and (max-width: 768px){
-	.jumbotron .logo-image{
-		width: 200px;
-		height: 200px;
-	}
-}
 /* 釘選導覽列 */
 .sub-nav {
 	
@@ -570,7 +553,7 @@ li{
 .step p{
 	font-size: 12px;
 }
-/* 加入某個google font */
+
 .number {
 	font-family: "Rubik Dirt", sans-serif;
 	line-height: 100%;
@@ -656,73 +639,10 @@ li{
 	.overview {
 	  grid-template-columns: 1fr;
 	}
-	.overview-left h2 {
-		color:#191919;
-		margin-bottom: 24px;
-		font-weight: bold;
-	  }
 
 
   }
 
-/* menu-list */
-.menu-list{
-	margin-bottom: 64px;
-}
-.menu-list:last-child{
-	margin-bottom: 0;
-}
-.menu-list .title-bar{
-	/*border: 1px solid #000;*/
-	margin-bottom: 24px;
-}
-.menu-list .title-bar:after{
-	content: '';
-	display: block;
-	clear: both;
-}
-.menu-list .title-bar .title{
-	font-size: 24px;
-	line-height: 40px;
-	color: #185ADB;
-	float: left;
-	padding-left: 16px;
-}
-.menu-list .title-bar .title:before{
-	content: '';
-	display: inline-block;
-	width: 4px;
-	height: 24px;
-	background-color: #185ADB;
-	position: absolute;
-	top: 50%;
-	left: 0;
-	transform: translate(0,-50%);
-}
-.menu-list .title-bar .btn{
-	float: right;
-	padding-top: 8px;
-	padding-bottom: 8px;
-}
-@media screen and (max-width: 768px){
-	.menu-list .list-item{
-		margin-bottom: 48px;
-	}
-}
-.menu-list .list-item .image-container:before{
-	padding-top: 100%;
-}
-.menu-list .list-item .title{
-	font-size: 18px;
-	color: #191919;
-	line-height: 24px;
-	margin-bottom: 8px;
-	margin-top: 16px;
-}
-.menu-list .list-item .subtitle{
-	font-size: 16px;
-	color: #185ADB;
-}
 
 
 /* Layout img-txt */
@@ -744,26 +664,6 @@ li{
 	}
 }
 
-/* 資訊架構 */
-
-.layout-center{
-	max-width: 640px;
-	width: 100%;
-	margin: 0 auto;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	gap: 12px;
-}
-.center-txt{
-	
-	text-align: center;
-	font-size: 14px;
-	font-style: normal;
-	font-weight: 400;
-	line-height: 180%; /* 43.2px */
-	text-transform: capitalize;
-}
 
 
 /* 基本資料 */
@@ -775,20 +675,4 @@ li{
 }
 #section-step01 .hero-grid {
 	order:3;
-}
-
-/* -------------------------- *\
-	Utility .lg-hidden: legacy utility for RWD toggle (not in current use) 
-
-\* -------------------------- */
-.lg-hidden{
-	display: none;
-}
-@media screen and (max-width: 768px){
-	.lg-hidden{
-		display: block;
-	}
-	.lg-display{
-		display: none;
-	}
 }
