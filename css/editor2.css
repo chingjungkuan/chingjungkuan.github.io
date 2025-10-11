@@ -31,38 +31,20 @@ p{
 	color: #414141;
 }
 ul{
-	margin: 0;
-	padding: 0;
+	line-height: 1.5;
 	list-style: disc;        /* 顯示圓點 */
 	padding-left: 1.5em;     /* 加一些內縮，讓圓點出現 */
 }
 a{
 	text-decoration: none;
-	color: #191919;
+	color: #414141;
 }
 li{
 	font-size: 14px;
 	line-height: 150%;
-	color: #191919;
+	color: #414141;
 }
-.sm-title {
-	font-size: 14px;
-	font-weight: normal;
-	color: #666;
-	
-  }
 
-.text-white{
-	color:#fff;
-}
-.para-16{
-	font-size: 16px;
-	line-height: 150%;
-}
-.para{
-	font-size: 14px;
-	line-height: 150%;
-}
 .display-title{
 	font-family: "Rubik Dirt", sans-serif;
 	font-size: 64px;
@@ -85,7 +67,7 @@ li{
 /* 暫時把container定義為沒有padding的，且他沒有gap */
 
 .container{
-	max-width: 1152px;
+	max-width: 1184px;
 	width: 100%;
 	margin: 0 auto;
 	
@@ -412,7 +394,7 @@ li{
 
 /* 上下皆有 padding 的容器 */
 .hero-container {
-	max-width: 1152px;
+	max-width: 1184px;
 	margin: 0 auto;
 	padding: 80px 16px 80px 16px;
 	display: grid;
@@ -429,7 +411,7 @@ li{
 }
 /* 沒有top的container 且用grid */
 .notop-container {
-	max-width: 1152px;
+	max-width: 1184px;
 	margin: 0 auto;
 	padding: 0 16px;
 	display: grid;
@@ -437,7 +419,7 @@ li{
 }
 /* 上面有 padding 的 container */
 .top-container{
-	max-width: 1152px;
+	max-width: 1184px;
 	margin: 0 auto;
 	padding: 80px 16px 0 16px;
 	display: grid;
@@ -523,7 +505,7 @@ li{
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 	gap: 24px;
-	max-width: 1152px;
+	max-width:1184px;
 	margin: 0 auto;
 	align-items: end;
 	
