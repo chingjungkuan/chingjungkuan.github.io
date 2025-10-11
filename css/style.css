@@ -23,6 +23,7 @@ html,body{
 }
 h1,h2,h3,h4,h5,h6{
 	margin: 0;
+	font-weight: bold;
 	color: #191919;
 }
 h1{
@@ -56,14 +57,34 @@ p{
 	line-height: 1.5 ;
 	margin: 0;
 }
+.sm-title {
+	font-size: 14px;
+	font-weight: normal;
+	color: #666;
+}
+.text-primary {
+  color: #7B6453; /* 主要品牌色 */
+}
+.text-cta {
+  color: #EB9164; /* 次要色 */
+}
+
+.text-highlight {
+  color: #FF5722; /* 強調用色*/
+}
 .highlight {
 	color: #EB9164;
 	font-weight: bold;
-  }
-.para {
- color: #414141;
-
- font-size: 14px;
+}
+.para-16{
+	color: #414141;
+	font-size: 16px;
+	line-height: 150%;
+}
+.para{
+	color: #414141;
+	font-size: 14px;
+	line-height: 150%;
 }
 .text-primary-blue{
 	color: #0040BD;
@@ -396,4 +417,51 @@ p{
 	gap: 8px;
 
 	}
+}
+
+/* 釘選導覽列 */
+.sub-nav {
+	
+	display: none; /* 預設不出現 */
+	position: fixed;
+	top: 120px;
+	width: auto;
+	height: auto;
+	background: white;
+	z-index: 999;
+	border-radius: 0 4px 4px 0;
+	box-shadow: 0 4px 12px rgba(115, 115, 115, 0.1);
+  }
+  
+.sub-nav ul {
+	display: flex;
+	flex-direction: column;
+	align-content: flex-start;
+	justify-content: center;
+	gap: 24px;
+	list-style: none;
+	margin: 0;
+	padding: 8px;
+
+}
+
+.sub-nav li a {
+	text-decoration: none;
+	color: #191919;
+	font-weight: bold;
+	font-size: 12px;
+}
+
+.sub-nav li a.active {
+	color: #007bff; 
+	border-bottom: 2px solid #007bff;
+}
+.sub-nav.active {
+	display: block; /* 出現 */
+}
+@media (max-width: 768px) {
+  .sub-nav,
+  .sub-nav.active {
+    display: none;
+  }
 }
