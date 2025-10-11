@@ -3,41 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <link href="../images/favicon.ico" rel="shortcut icon"/>
-    <title>Single｜關靖蓉 Portfolio</title>
+    <title>Single 線上編輯器｜關靖蓉 Portfolio</title>
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <link rel="stylesheet" href="../css/normalize.css">
-    <link rel="stylesheet" href="../css/single.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/single.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Paytone+One&family=Rowdies:wght@300;400;700&family=Rubik+Dirt&display=swap" rel="stylesheet">    
+	  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Paytone+One&family=Rowdies:wght@300;400;700&family=Rubik+Dirt&family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="wrapper">
-        <!-- Start header -->
-		<header class="header">
-			<div class="navbar">
-				<div class="container">
-					<a href="https://chingjungkuan.github.io" class="brand">
-						<h1>Single 點點印線上編輯器 Portfolio</h1>
-					</a>
-					<ul id="popup-menu" class="nav">
-						<li class="nav-item"><a href="https://chingjungkuan.github.io/#about" class="nav-link">ABOUT</a></li>
-						<li class="nav-item"><a href="https://chingjungkuan.github.io/#skills" class="nav-link">SKILL</a></li>
-						<li class="nav-item"><a href="https://chingjungkuan.github.io/#ui-design" class="nav-link">UI DESIGN</a></li>
-						<li class="nav-item"><a href="https://chingjungkuan.github.io/#contact" class="nav-link">CONTACT</a></li>
-						<a href="#!" class="close-btn">
-							<span></span>
-							<span></span>
-						</a>
-					</ul>
-					<a href="#popup-menu" class="menu-toggle">
-						<span></span>
-						<span></span>
-						<span></span>
-					</a>
-				</div>
-			</div>
-		</header>
+    <!-- Start header -->
+      <div id="site-header" data-include="/components/header.html"></div>
 		<!-- End header -->
     <!-- 浮動釘選導覽列 -->
     <nav id="sub-nav" class="sub-nav">
@@ -49,14 +27,10 @@
         <li><a href="#takeaway">Takeaway</a></li>
       </ul>
     </nav>
-
-
-
     <!-- Start main -->
         <section class="main">
           <!-- Start banner -->
             <section class="hero-banner"></section>
-			  
 			    <!-- End banner -->
           <!-- Start Design Impact -->
                 
@@ -118,13 +92,12 @@
           <!-- End Design Impact--> 
 
           <!-- Start Overview -->
-            <div id="overview" class="hero hero-bg-white">
-              <div class="hero-container">
+            <div id="overview" class="top-container">
                 <div class="overview">
                   <div class="overview-left">
                     <h2 class="title">概述 <span>Overview</span></h2>
                     <h3 class="title primarycolor-title">Single  -  輕量作品編輯器</h3>
-                    <h5 class="title">#B2C  #SaaS  #POD（客製化印刷服務） #RWD  Website</h5>
+                    <h5 class="title">#B2C  #SaaS  #POD（客製化印刷服務） #RWD Website</h5>
                     <p class="para">
                       產品服務｜快速製作的產品類型（如卡片、木框畫...）會使用 Single 編輯器；若有進階需求，使用者也能從 Single 進入 Editor2。
                     </p>
@@ -145,17 +118,17 @@
                     </p>
                   </div>
                 </div>
-              </div>
+              
             </div>
             
           <!-- End Overview -->
             <!-- 開始設計流程 -->
-            <div id="flow" class="hero-container fade-in scroll-container">
+            <div id="flow" class="scroll-container fade-in">
                 <h2>設計<br>流程</h2>
                 <div class="step">
                     <div class="number">1</div>
                     <div class="box">
-                        <h3>Empathize</h3>
+                      <h5 class="text-primary">Empathize</h5>
                         <p>✦ Empathy Map</p>
                         <p>✦ Personas</p>
                         <p>✦ User Story Maps</p>
@@ -166,7 +139,7 @@
                 <div class="step">
                     <div class="number">2</div>
                     <div class="box">
-                        <h3>Define</h3>
+                      <h5 class="text-primary">Define</h5>
                         <p>✦ Value Proposition</p>
                         <p>✦ Information Architecture</p>
                     </div>
@@ -174,7 +147,7 @@
                 <div class="step">
                     <div class="number">3</div>
                     <div class="box">
-                        <h3>Ideate</h3>
+                        <h5 class="text-primary">Ideate</h5>
                         <p>✦ Story Board</p>
                         <p>✦ User Flow</p>
                     </div>
@@ -182,7 +155,7 @@
                 <div class="step">
                     <div class="number">4</div>
                     <div class="box">
-                        <h3>Wireframe</h3>
+                        <h5 class="text-primary">Wireframe</h5>
                         <p>✦ Wireframe</p>
                         <p>✦ Lo-Fi Prototype</p>
                         <p>✦ Usability Test</p>
@@ -191,7 +164,7 @@
                 <div class="step">
                     <div class="number">5</div>
                     <div class="box">
-                        <h3>UI Design</h3>
+                        <h5 class="text-primary">UI Design</h5>
                         <p>✦ Visual Design System</p>
                         <p>✦ UI Kit</p>
                     </div>
@@ -199,14 +172,14 @@
                 <div class="step">
                     <div class="number">6</div>
                     <div class="box">
-                        <h3>Prototype</h3>
+                        <h5 class="text-primary">Prototype</h5>
                         <p>✦ Mockup</p>
                     </div>
                 </div>
                 <div class="step">
                     <div class="number">7</div>
                     <div class="box">
-                        <h3>Test</h3>
+                        <h5 class="text-primary">Test</h5>
                         <p>✦ Usability Test</p>
                         <p>✦ QA</p>
                     </div>
@@ -215,25 +188,22 @@
             <!-- 設計流程結束 -->
 
             <!-- img2-txt1 痛點與觀察 -->
-            <div id="pain-point" class="img-txt hero-container hero-grid d-2col-1col">
+            <div id="pain-point" class="img-txt top-container hero-grid d-2col-1col">
               <div class="image-block lightbox-trigger" style="background-image: url('../images/single/img_pain-point.jpg');"></div>
 
               <div class="hero-title">
-                <h2 class="title">痛點與觀察 <span>Pain Point & Task</span></h2>
+                <h2 class="title">痛點與觀察 <span class="sm-title">Pain Point & Task</span></h2>
                 <h3 class="title">舊版的問題</h3>
                 <p class="para">
                   🔺過度依賴上下滾動<br>
                   需頻繁滑動才能切換功能，讓使用者難以快速找到所需選項，降低操作效率。<br>
-                 🔺編輯區與選項分離<br>
-                  預覽畫面與操作選項分離，使用者需來回滾動確認效果，操作不夠直覺。<br>
-                 🔺關聯操作分散各處<br>
-                 像「新增」、「選物件」、「加雕刻」在上方，照片池與新增按鈕卻藏在下方，導致操作流程斷裂、學習成本高。<br>
-                 🔺預覽體驗不穩定<br>
+                  🔺關聯操作分散各處<br>像「新增」、「選物件」、「加雕刻」在上方，照片池與新增按鈕卻藏在下方，導致操作流程斷裂、學習成本高。<br>
+                  🔺預覽體驗不穩定<br>
                   滾動切換功能時，作品位置容易偏移和抖動，干擾細節調整與即時預覽。<br>
-                 🔺行動裝置操作負擔大<br>
+                  🔺行動裝置操作負擔大<br>
                   手機螢幕小，加上需要多次點擊與滑動，增加操作難度。<br>
-                 🔺資訊層級不清<br>
-                 樣式、顏色、雕刻等選項未明確區分，容易讓使用者搞不清楚目前編輯狀態。
+                  🔺資訊層級不清<br>
+                  樣式、顏色、雕刻等選項未明確區分，容易讓使用者搞不清楚目前編輯狀態。
                 </p>
               </div>
 
@@ -242,18 +212,20 @@
 
           <!-- Start txt1-img2 設計優化重點 -->
 
-            <div  id="solution" class="hero-container hero-grid m-1col-2col">
+            <div  id="solution" class="top-container hero-grid m-1col-2col">
                     
                 <div class="hero-title">
-                  <h2 class="title">設計優化重點 <span>Solution</span></h2>
+                  <h2 class="title">設計優化重點 <span class="sm-title">Solution</span></h2>
 
+                  <p class="para">為了解決上述問題，我重新規劃了操作流程與介面結構，讓整體體驗更清晰舒適</p>
                   <ul class="para">
-                  為了解決上述問題，我重新規劃了操作流程與介面結構，讓整體體驗更清晰舒適：<br>
                   <li>統一操作區塊位置：將照片池固定於左側，並整合編輯工具列，減少視線與操作的跳轉。</li>
                   <li> 優化照片新增流程：使用者可直接於編輯區上傳與替換照片，流程更簡潔。</li>
                   <li>重整按鈕與工具排列邏輯：依使用場景分類，提升操作直覺性。</li>
                   <li>提升視覺一致性與精緻度：使用低飽和色系、加強層次感（圓角、陰影等），打造更現代的介面風格。</li>
                   <li>調整字體與元件間距：改善閱讀與點擊體驗，提升整體易用性。</li>
+                  </ul>
+
                   
                   </ul>
                 </div>
@@ -263,10 +235,10 @@
           <!-- End txt1-img2 設計優化重點 -->
             
             <!-- Start 資訊架構 -->
-            <div id="ia" class="hero-container">
+            <div id="ia" class="top-container">
                 <div class="layout-center">
-                    <h2 class="title">資訊架構 IA <span>Define</span></h2>
-                    <div class="center-txt">先盤點現有功能，統整規格並解決不一致之處，建立規格文件與資訊架構。同時讓團隊成員快速理解產品結構，加速開發決策。</div>
+                    <h2 class="title">資訊架構 <span class="sm-title">Define</span></h2>
+                    <p class="para t-center">先盤點現有功能，統整規格並解決不一致之處，建立規格文件與資訊架構。同時讓團隊成員快速理解產品結構，加速開發決策。</p>
                 </div>
 
                 <div  class="notop-container">
@@ -276,10 +248,10 @@
 
             <!-- Start txt1-img2 User flow -->
 
-            <div class="hero-container hero-grid m-1col-2col">
+            <div class="top-container hero-grid m-1col-2col">
                     
                 <div class="hero-title">
-                <h2 class="title">User Flow <span>Ideate</span></h2>
+                <h2 class="title">User Flow <span class="sm-title">Ideate</span></h2>
                 <h3 class="title">精簡流程並重新梳理編輯體驗</h3>
                 <p class="para">
                   當專案目標明確後，我從使用者角度出發，盤點現有編輯流程中的操作痛點與介面問題，列出需要優化的功能項目，例如：將「儲存」與「進階編輯」收合至 Header 精簡操作視覺，或重新評估「變換產品」功能在 Single 編輯器中的優先順序，以聚焦使用者最常進行的核心操作。<br><br>
@@ -291,7 +263,7 @@
             <!-- End txt1-img2 user flow -->   
 
             <!-- Start img2-txt1 Wireframe-->
-            <div  class="img-txt hero-container hero-grid d-2col-1col">
+            <div  class="img-txt top-container hero-grid d-2col-1col">
                 <div class="image-block lightbox-trigger" style="background-image: url('../images/single/img_wireframe.jpg');"></div>
    
                 <div class="hero-title">
@@ -304,20 +276,12 @@
             </div>        
             <!-- End img2-txt1 Wireframe-->
 
-            <!-- Start UI Design 目前ui-design僅用於當標籤沒有css -->
-            <div  id="ui-design"   class=" hero-container">
-              <div class="layout-center display-title">UI Design </div>  
-            <div class="container">
-              <!-- Start txt1-img2 User flow -->
-              <div class="container">
-                  <div  class="layout-center">
-                          
-                    <div class="hero-title">
-                    <h2 class="title center-txt">新版｜視覺風格簡約清楚且統一</h2>
-                    
-                    </div>
-                  </div>
-                  <!-- End txt1-img2 user flow -->
+            <!-- Start UI Design -->
+            <div  id="ui-design" class="container">
+               
+              <div class="top-container">
+                <div class="layout-center display-title">UI Design </div> 
+                <h2 class="title t-center">新版｜視覺風格簡約清楚且統一</h2>
                   <div class="container two-column-grid">
 
                     <div class="item">
@@ -362,10 +326,10 @@
                           <li>[新版] 固定底部導覽列的形式，使用者可以輕鬆用拇指點擊選項，符合行動裝置的使用習慣。</li>
                         </ul>
                     </div>
+                </div>
+              </div>
 
-                  </div>
-
-              </div>   
+              
         
 
           <!-- Start txt1-img2 強化響應式-->
@@ -374,7 +338,7 @@
                     
             <div class="hero-title">
               <h2 class="title">作品編輯區</h2>
-              <span>-整體</span>
+              <span class="sm-title">-整體</span>
               <h3 class="title">強化響應式：固定高度範圍</h3>
               <ul class="para">
                 <li>明確定義不同段點區間裝置的畫面呈現</li>
@@ -395,7 +359,7 @@
           <div class="image-block lightbox-trigger" style="background-image: url('../images/single/img_image-pool.jpg');"></div>
 
           <div class="hero-title">
-              <span>-照片池</span>
+              <span class="sm-title">-照片池</span>
               <h3 class="title">將上傳照片區從底部移至左側，強化編輯流程與空間配置</h3>
               <div class="para">
                 設計策略：依據產品特性調整空間規劃。<br><br>
@@ -415,7 +379,7 @@
         <div  id="" class="top-container hero-grid m-1col-2col">
                   
           <div class="description-text">
-          <span>-導覽列</span>
+          <span class="sm-title">-導覽列</span>
           <h3 class="title">Header 結構調整：聚焦編輯任務，簡化導覽選項</h3>
           <div class="container hero-grid ">
           <p class="para">
@@ -445,7 +409,7 @@
           <div class="image-block lightbox-trigger" style="background-image: url('../images/single/img_change-product01.jpg');"></div>
 
           <div class="hero-title">
-              <span>-變換產品</span>
+              <span class="sm-title">-變換產品</span>
               <h3 class="title">變換產品：聚焦同系列，降低誤用風險</h3>
               <div class="para">
                 原本的版本提供完整產品列表，展開讓使用者自由滑動切換。但實際觀察發現大多數使用者傾向在同系列產品內進行變換，較少出現跨品類（如木框畫換成相片筆記本）的情境。<br><br>
@@ -473,7 +437,7 @@
         <div  id="" class="top-container hero-grid m-1col-2col">
                   
           <div class="description-text">
-          <span>-Tooltips 教學</span>
+          <span class="sm-title">-Tooltips 教學</span>
           <h3 class="title">增加友善的教學 Tooltips：即時引導、降低學習門檻</h3>
           <div class="container hero-grid ">
           <p class="para">
@@ -492,7 +456,7 @@
           <div class="image-block lightbox-trigger" style="background-image: url('../images/single/img_toolbar.jpg');"></div>
 
           <div class="hero-title">
-              <span>－功能 Bar</span>
+              <span class="sm-title">－功能 Bar</span>
               <h3 class="title">介面工具列優化：提升操作效率，統一互動邏輯</h3>
               <div class="para">
                     <b>頁面功能 Bar 優化：強化使用體驗</b><br>
@@ -534,11 +498,10 @@
         <!-- End ui design section -->
         
         <!-- Start Style-guide -->
-          <div id="style-guide" class="hero-container">
-                  <div  class="layout-center display-title">Style Guide </div> 
-            
-                  <div class="container two-column-grid">
-
+          <div id="style-guide" class="container">
+            <div class="top-container">
+              <div  class="t-center display-title">Style Guide </div>
+                <div class="container two-column-grid">
                     <div class="item">
                     <h4 class="title">📌 視覺層次更清晰，資訊組織更有條理</h4>
                     
@@ -598,32 +561,33 @@
                     
                     </div>
                   </div>
+            </div>
+                  
+            <!-- only img -->
+            <div  class="top-container">
+              <img src="../images/editor2/img_styleguide-color.webp" alt="Banner" class="box-img lightbox-trigger">
+            </div>
+            <div  class="top-container">
+              <img src="../images/editor2/img_styleguide-typography.webp" alt="Banner" class="box-img lightbox-trigger">
+            </div>
+            <div class="top-container layout-center">
+              <h2 class="title">UI Kit</h2>
+              <h3 class="title">  清晰的視覺元素，明確定義每個設計元件</h3>
+              <div class="center-txt">先將各類可能會發生的情境列出，並設計不同情境下的元件樣式。</div>
+            </div>
+            <div  class="top-container">
+              <img src="../images/editor2/img_styleguide-input.webp" alt="input" class="box-img lightbox-trigger">
+            </div>
+            <div  class="top-container">
+              <img src="../images/editor2/img_styleguide-btn.webp" alt="Button" class="box-img lightbox-trigger">
+            </div>
+            <div  class="top-container">
+              <img src="../images/single/img_style-dropdown.jpg" alt="Calendar" class="box-img lightbox-trigger">
+            </div>
 
-                  <!-- only img -->
-                  <div  class="top-container">
-                    <img src="../images/editor2/img_styleguide-color.webp" alt="Banner" class="box-img lightbox-trigger">
-                  </div>
-                  <div  class="top-container">
-                    <img src="../images/editor2/img_styleguide-typography.webp" alt="Banner" class="box-img lightbox-trigger">
-                  </div>
-                  <div class="hero-container layout-center">
-                    <h2 class="title">UI Kit</h2>
-                    <h3 class="title">  清晰的視覺元素，明確定義每個設計元件</h3>
-                    <div class="center-txt">先將各類可能會發生的情境列出，並設計不同情境下的元件樣式。</div>
-                  </div>
-                  <div  class="top-container">
-                    <img src="../images/editor2/img_styleguide-input.webp" alt="input" class="box-img lightbox-trigger">
-                  </div>
-                  <div  class="top-container">
-                    <img src="../images/editor2/img_styleguide-btn.webp" alt="Button" class="box-img lightbox-trigger">
-                  </div>
-                  <div  class="top-container">
-                    <img src="../images/single/img_style-dropdown.jpg" alt="Calendar" class="box-img lightbox-trigger">
-                  </div>
-
-                  <div  class="top-container">
-                    <img src="../images/editor2/img_style-taost.jpg" alt="Banner" class="box-img lightbox-trigger">
-                  </div>
+            <div  class="top-container">
+              <img src="../images/editor2/img_style-taost.jpg" alt="Banner" class="box-img lightbox-trigger">
+            </div>
 
 
           </div>
@@ -667,28 +631,13 @@
   <!-- End main -->
 
 
-    <!-- Start footer -->
-      <footer class="footer">
-        <div class="footer-hero">
-          <div class="mask-dark"></div>
-          <div class="container">
-            <a href="/" class="footer-brand" aria-label="Back to homepage"></a>
-            <nav class="footer-nav">
-              <a href="/myportfolio#about" class="footer-link">ABOUT</a>
-              <a href="/myportfolio#ui-design" class="footer-link">UI DESIGN</a>
-              <a href="/myportfolio#contact" class="footer-link">CONTACT</a>
-            </nav>
-          </div>
-        </div>
-        <div class="footer-copyright">
-          <p>© Copyright 2025 All rights reserved</p>
-        </div>
-      </footer>
-
-    <!-- End footer -->
+  <!-- Start footer -->
+    <div id="site-footer" data-include="/components/footer.html"></div>
+  <!-- End footer -->
     </div>
 
     <!-- Start java -->
+    <script defer src="/js/include.js"></script>
     <script>
       // 點擊 lightbox 圖片放大
     
