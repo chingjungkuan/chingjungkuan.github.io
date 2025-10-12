@@ -194,17 +194,12 @@
               <div class="hero-title">
                 <h2 class="title">痛點與觀察 <span class="sm-title">Pain Point & Task</span></h2>
                 <h3 class="title">舊版的問題</h3>
-                <p class="para">
-                  🔺過度依賴上下滾動<br>
-                  需頻繁滑動才能切換功能，讓使用者難以快速找到所需選項，降低操作效率。<br>
-                  🔺關聯操作分散各處<br>像「新增」、「選物件」、「加雕刻」在上方，照片池與新增按鈕卻藏在下方，導致操作流程斷裂、學習成本高。<br>
-                  🔺預覽體驗不穩定<br>
-                  滾動切換功能時，作品位置容易偏移和抖動，干擾細節調整與即時預覽。<br>
-                  🔺行動裝置操作負擔大<br>
-                  手機螢幕小，加上需要多次點擊與滑動，增加操作難度。<br>
-                  🔺資訊層級不清<br>
-                  樣式、顏色、雕刻等選項未明確區分，容易讓使用者搞不清楚目前編輯狀態。
-                </p>
+                <div class="flex-v-8">
+                  <p class="para"><b>🔺操作效率受限於螢幕與滾動</b><br>在行動裝置上，因螢幕較小且介面需頻繁上下滑動，使用者難以快速切換功能，增加點擊次數與操作負擔。</p>
+                  <p class="para"><b>🔺關聯操作分散各處</b><br>像「新增」、「選物件」、「加雕刻」在上方，照片池與新增按鈕卻藏在下方，導致操作流程斷裂、學習成本高。</p>
+                  <p class="para"><b>🔺預覽體驗不穩定</b><br>滾動切換功能時，作品位置容易偏移和抖動，干擾細節調整與即時預覽。</p>
+                  <p class="para"><b>🔺資訊層級不清</b><br>樣式、顏色、雕刻等選項未明確區分，容易讓使用者搞不清楚目前編輯狀態。</p>
+                </div>
               </div>
 
             </div>        
@@ -217,10 +212,10 @@
                 <div class="hero-title">
                   <h2 class="title">設計優化重點 <span class="sm-title">Solution</span></h2>
 
-                  <p class="para">為了解決上述問題，我重新規劃了操作流程與介面結構，讓整體體驗更清晰舒適</p>
+                  <p class="para">為解決上述問題，我重新規劃操作流程與介面，讓體驗更清晰流暢。</p>
                   <ul class="para">
                   <li>統一操作區塊位置：將照片池固定於左側，並整合編輯工具列，減少視線與操作的跳轉。</li>
-                  <li> 優化照片新增流程：使用者可直接於編輯區上傳與替換照片，流程更簡潔。</li>
+                  <li>優化照片新增流程：使用者可直接於編輯區上傳與替換照片，流程更簡潔。</li>
                   <li>重整按鈕與工具排列邏輯：依使用場景分類，提升操作直覺性。</li>
                   <li>提升視覺一致性與精緻度：使用低飽和色系、加強層次感（圓角、陰影等），打造更現代的介面風格。</li>
                   <li>調整字體與元件間距：改善閱讀與點擊體驗，提升整體易用性。</li>
@@ -254,8 +249,7 @@
                 <h2 class="title">User Flow <span class="sm-title">Ideate</span></h2>
                 <h3 class="title">精簡流程並重新梳理編輯體驗</h3>
                 <p class="para">
-                  當專案目標明確後，我從使用者角度出發，盤點現有編輯流程中的操作痛點與介面問題，列出需要優化的功能項目，例如：將「儲存」與「進階編輯」收合至 Header 精簡操作視覺，或重新評估「變換產品」功能在 Single 編輯器中的優先順序，以聚焦使用者最常進行的核心操作。<br><br>
-                  針對這些調整，逐步重構主要操作流程，並延伸繪製各功能的使用路徑圖，協助團隊更清楚掌握全貌。每個版本都會與團隊夥伴反覆討論，根據回饋持續優化，最終收斂出貼近實際使用情境且技術可行的設計方案。
+                   當專案目標明確後，我從使用者角度出發，盤點現有編輯流程中的操作痛點與介面問題，列出需要優化的功能項目，例如：將「儲存」與「進階編輯」收合至 Header 精簡操作視覺，或重新評估「變換產品」功能在 Single 編輯器中的優先順序，以聚焦使用者最常進行的核心操作。
                 </p>
                 </div>
                 <div class="image-block" style="background-image: url('../images/single/img_user-flow.jpg');"></div>
@@ -270,7 +264,8 @@
                     <h2 class="title">Wireframe</h2>
                     <h3 class="title">從操作流程到線框圖，逐步落實設計邏輯</h3>
                     <p class="para">
-                    針對功能調整，我先重構主要操作流程，並繪製各功能的使用路徑圖，協助團隊掌握整體邏輯。每一版本都與團隊反覆討論、修正，逐步收斂成符合使用情境與技術可行的設計方案。完成資訊架構後，我會先在平板上進行簡單構圖，再用 Figma 繪製無色彩干擾的線框圖，針對流程調整較多的功能項目，確認並聚焦元件佈局與資訊層級。確認初步方向後，再製作精緻版本供團隊確認後才進入視覺設計階段。
+                      針對功能調整，我先重構主要操作流程並繪製使用路徑圖，協助團隊掌握整體邏輯。透過多次討論與修正，逐步收斂為符合情境與技術可行的方案。<br><br>
+                      完成資訊架構後，我先於平板快速構圖，再以 Figma 製作線框圖，聚焦元件佈局與資訊層級，確認方向後再進入視覺設計階段。
                     </p>
                 </div>
             </div>        
@@ -285,42 +280,42 @@
                   <div class="container two-column-grid">
 
                     <div class="item">
-                      <h4 class="title">📌界面層次更清晰</h4>
+                      <h4 class="title">界面層次更清晰</h4>
                         <ul class="para">
-                          <li>[舊版] 選單、按鈕、編輯區域的界線不夠明確，使用者可能需要花時間理解操作區域與編輯內容的關係。</li>
-                          <li>[新版] 固定的編輯區塊、統一的按鈕樣式，讓功能層級更清晰，操作更直覺。</li>
+                          <li>[舊版] 選單、按鈕與編輯區塊界線不明，使用者需花時間理解操作與內容間關係。</li>
+                          <li>[新版] 固定編輯區並統一按鈕樣式，層級更清晰，操作更直覺。</li>
                         </ul>
                     </div>
                     <div class="item">
-                      <h4 class="title">📌更專注的編輯區域</h4>
+                      <h4 class="title">更專注的編輯區域</h4>
                         <ul class="para">
-                          <li>[舊版] 由於編輯內容隨滾動變動，使用者難以長時間專注於作品本身。</li>
-                          <li>[新版] 透過固定編輯範圍，使用者的視線能夠集中在作品上，不會因滾動而影響專注度。</li>
+                          <li>[舊版] 編輯內容會隨滾動變動，使用者難以長時間專注於作品。</li>
+                          <li>[新版] 固定編輯範圍後，使用者視線更集中，不再因滾動而分心。</li>
                         </ul>
                     </div>
                     <div class="item">
-                      <h4 class="title">📌操作區塊的視覺統一性</h4>
+                      <h4 class="title">操作區塊的視覺統一性</h4>
                         <ul class="para">
                           <li>[舊版] 不同的選項區塊間的間距、圖示大小不一致，導致視覺層級不夠統一。</li>
                           <li>[新版] 選項區塊的樣式更加一致，提升整體美感與操作流暢度。</li>
                         </ul>
                     </div>
                     <div class="item">
-                      <h4 class="title">📌更突出的按鈕與操作指引</h4>
+                      <h4 class="title">更突出的按鈕與操作指引</h4>
                         <ul class="para">
-                          <li>[舊版] 某些按鈕較小，或是沒有明顯的標示，使用者可能需要額外花時間尋找功能。</li>
-                          <li>[新版] 透過調整按鈕樣式與收折次要功能，讓使用者更容易聚焦當下操作，例如更清楚地引導他們完成「預覽」與完稿流程。</li>
+                          <li>[舊版] 按鈕過小、標示不明，使用者需花時間尋找功能。</li>
+                          <li>[新版] 調整按鈕樣式並收折次要功能讓操作更聚焦，清楚引導使用者完成「預覽」與完稿流程。</li>
                         </ul>
                     </div>
                     <div class="item">
-                      <h4 class="title">📌配色與視覺焦點更均衡</h4>
+                      <h4 class="title">配色與視覺焦點更均衡</h4>
                         <ul class="para">
                           <li>[舊版] 顏色對比度較低，某些選單可能容易被忽略。</li>
                           <li>[新版] 透過更具對比度的配色，將區塊明顯區分，讓用戶明確知道有三個區塊分別可做哪些操作。</li>
                         </ul>
                     </div>
                     <div class="item">
-                      <h4 class="title">📌更符合行動裝置使用習慣</h4>
+                      <h4 class="title">更符合行動裝置使用習慣</h4>
                         <ul class="para">
                           <li>[舊版] 按鈕與選單可能因滾動而偏離操作範圍，導致使用體驗下降。</li>
                           <li>[新版] 固定底部導覽列的形式，使用者可以輕鬆用拇指點擊選項，符合行動裝置的使用習慣。</li>
@@ -329,12 +324,9 @@
                 </div>
               </div>
 
-              
-        
-
           <!-- Start txt1-img2 強化響應式-->
 
-          <div  id="" class="top-container hero-grid m-1col-2col">
+          <div class="top-container hero-grid m-1col-2col">
                     
             <div class="hero-title">
               <h2 class="title">作品編輯區</h2>
@@ -355,20 +347,17 @@
           </div>
           <!-- End 底部兩張圖 -->
           <!-- Satrt img2-txt1 照片池-->
-          <div  class="img-txt top-container hero-grid d-2col-1col">
+          <div class="img-txt top-container hero-grid d-2col-1col">
           <div class="image-block lightbox-trigger" style="background-image: url('../images/single/img_image-pool.jpg');"></div>
 
           <div class="hero-title">
               <span class="sm-title">-照片池</span>
-              <h3 class="title">將上傳照片區從底部移至左側，強化編輯流程與空間配置</h3>
-              <div class="para">
-                設計策略：依據產品特性調整空間規劃。<br><br>
-                針對卡片、木框畫、海報等編輯步驟簡單、圖片張數少（通常都不超過 5 張）的產品，我們設計了輕量化的 Single 編輯器，用於支援快速完成創作的使用情境，與功能更完整的 Editor2 作出區隔。
-                因此在空間配置上，我們做出以下調整：<br>
-                將上傳照片區從底部移至左側側欄，利用較小區塊呈現，避免干擾主要編輯區操作。<br>
-                中央區域專注於編輯畫面預覽與內容調整，強化視覺焦點與操作效率。<br>
-                右側配置為外觀樣式與設定選項，確保樣式變化與編輯區能同時對照，縮短來回切換時間。<br>
-              </div>
+              <h3 class="title">將上傳照片區移至左側，優化編輯流程與畫面重心</h3>
+              <p class="para-16">▍依產品特性調整介面結構與操作體驗</p>
+              <p class="para">
+                針對卡片、木框畫、海報等可快速完成的產品，設計輕量化的 Single 編輯器，支援少步驟、直覺化的編輯流程，並與 Editor2 的進階編輯功能區隔。 <br>
+                新版將上傳照片區移至左側側欄以減少干擾，中央聚焦編輯與預覽，右側整合樣式與設定，讓操作更順暢、畫面更平衡。
+              </p>
               </div>
           </div>
           <!-- End img2-txt1 照片池-->   
@@ -376,33 +365,30 @@
           
         <!-- Start txt1-img2 導覽列-->
 
-        <div  id="" class="top-container hero-grid m-1col-2col">
+        <div class="top-container hero-grid m-1col-2col">
                   
           <div class="description-text">
           <span class="sm-title">-導覽列</span>
-          <h3 class="title">Header 結構調整：聚焦編輯任務，簡化導覽選項</h3>
+          <h3 class="title">Header 結構調整 ： 聚焦編輯任務，簡化導覽選項</h3>
           <div class="container hero-grid ">
           <p class="para">
-            原本的編輯畫面直接沿用官網 Header，但其內容包含行銷活動與非編輯相關資訊，容易造成使用者分心、影響編輯流程的專注度。<br>
-            呼應 Single 編輯器的設計目標 —— 支援快速編輯與下單，我們希望使用者能順暢完成從編輯 → 預覽 → 購買的流程，不被其他資訊干擾。<br>
-            此外，若使用者點擊 Header 嘗試返回官網，系統會先透過Modal 確認用戶是否離開當前編輯畫面，避免誤操作導致資料遺失。            
+          <b>[舊版]</b><br>編輯畫面沿用官網 Header，因包含行銷與非編輯資訊，容易分散使用者注意力。
           </p>
-          
-          <div class="team-info">
-            👉 具體做法<br>
-            <ul>
-              這次調整將 Header 聚焦於「編輯任務」本身：
-              <li>移除與編輯無關的選項，或改為收折呈現。</li>
-              <li>編輯狀態下，以「預覽」為主要按鈕。</li>
-              <li>進入預覽後，以「完稿並購買」為主要 CTA。</li>
-            </ul>
+          <p class="para">
+          <b>[新版]</b><br>依據 Single 編輯器 的定位重新設計導覽結構，聚焦在編輯、預覽與購買等主要操作，讓使用流程更集中。同時新增離開提示 Modal，當使用者點擊返回官網時，系統會先確認操作，避免誤離開導致資料遺失，確保編輯過程不中斷。
+          </p>          
 
-          </div>
         </div>
 
           </div>
           <div class="image-block lightbox-trigger" style="background-image: url('../images/single/img_header.jpg');"></div>
         </div>
+        <!-- Start 變換產品_底部兩張圖 -->
+        <div class="top-container hero-grid m-1col">
+          <div class="image-block lightbox-trigger" style="background-image: url('../images/single/img_change-product02.jpg');"></div>
+          <div class="image-block lightbox-trigger" style="background-image: url('../images/single/img_change-product03.jpg');"></div>
+        </div>
+        <!-- End 變換產品_底部兩張圖 -->
         <!-- End txt1-img2 導覽列-->
         <!-- Satrt img2-txt1 變換產品-->
         <div  class="img-txt top-container hero-grid d-2col-1col">
@@ -411,20 +397,11 @@
           <div class="hero-title">
               <span class="sm-title">-變換產品</span>
               <h3 class="title">變換產品：聚焦同系列，降低誤用風險</h3>
-              <div class="para">
-                原本的版本提供完整產品列表，展開讓使用者自由滑動切換。但實際觀察發現大多數使用者傾向在同系列產品內進行變換，較少出現跨品類（如木框畫換成相片筆記本）的情境。<br><br>
-                因此，我們調整為：
-                <ul>
-                  <li>僅提供「同系列產品」的變換選項，降低誤用率，也讓選項更聚焦。</li>
-                  <li>將變換流程設計得不那麼輕易觸發，避免干擾一般用戶的編輯流程。</li>
-                  <li>保留變換產品的彈性，讓有需要的使用者仍可快速沿用照片內容，套用至相似產品中，提升轉換的便利性。</li>
-                  <li>兼顧功能的可用性與界面的簡潔性，也避免讓不必要的選擇成為操作上的干擾。</li>
-                
-                </ul>
-                
+              <p class="para">原本提供完整產品列表供自由切換，但觀察到多數使用者僅在同系列間變換，較少進行跨品類操作（如木框畫換成相片筆記本），且「變換產品」屬於附加、非高頻功能。</p>
+              <p class="para">因此新版僅保留並收合「同系列產品」選項，讓介面更聚焦、降低誤用，同時保留照片套用至相似產品的彈性。</p> 
               </div>
               </div>
-        </div>
+        
           <!-- Start 變換產品_底部兩張圖 -->
           <div class="top-container hero-grid m-1col">
             <div class="image-block lightbox-trigger" style="background-image: url('../images/single/img_change-product02.jpg');"></div>
@@ -441,8 +418,8 @@
           <h3 class="title">增加友善的教學 Tooltips：即時引導、降低學習門檻</h3>
           <div class="container hero-grid ">
           <p class="para">
-            針對特定產品的部分功能（如海報 與 木框畫 的「新增雕刻」），我們加入情境式 Tooltips，在使用者初次進入編輯器適時提示，協助理解操作方式，降低學習門檻。
-            此機制保留彈性，未來新增功能也能沿用，不影響版面配置，提升功能可見性與使用率。           
+            針對特定產品的部分功能（如 <b>海報</b> 與 <b>木框畫</b> 的「新增雕刻」），我們加入情境式 Tooltips，在使用者初次進入編輯器適時提示，協助理解操作方式，降低學習門檻。<br><br>
+            此機制保留彈性，未來新增功能也能沿用，不影響版面配置，<strong>提升功能可見性與使用率</strong>。
           </p>
           
         </div>
@@ -458,29 +435,32 @@
           <div class="hero-title">
               <span class="sm-title">－功能 Bar</span>
               <h3 class="title">介面工具列優化：提升操作效率，統一互動邏輯</h3>
-              <div class="para">
-                    <b>頁面功能 Bar 優化：強化使用體驗</b><br>
-                    <ul>
-                    <li>將功能列移至編輯區上方，操作更直覺。</li>
-                    <li>優化體驗，減少滑動與視線移動。</li>
-                    <li>功能分區明確，有助快速完成編輯。</li>
-                    </ul><br>
-                    
-                    <b>樣式與操作一致化：文字與照片工具列同步更新</b><br>
-                    <ul>
-                    <li>統一文字與照片工具列樣式，符合新版設計系統。</li>
-                    <li>文字 Modal 支援字體、字級、顏色與對齊設定。</li>
-                    <li>無需回外層調整，Modal 內即可完整編輯。</li>
-                    </ul><br>                    
-
-                    <b>功能命名與行為邏輯統一</b>
-                    <ul>
-                      <li>維持一致命名與開啟邏輯，降低使用者認知負擔。將原有不同名稱的設定按鈕（如「編輯作品」、「基本內容」…）統一為「作品資訊」。</li>
-                      <li>作品資訊 Modal 中統一可編輯項目為：作品名稱與作品說明。</li>
-                    </ul>
+              <div class="flex-v-8">
+                <p class="para-16">▍頁面功能 Bar 優化：強化使用體驗</p>
+                <ul class="para">
+                  <li>將功能列移至編輯區上方，操作更直覺。</li>
+                  <li>優化體驗，減少滑動與視線移動。</li>
+                  <li>功能分區明確，有助快速完成編輯。</li>
+                </ul>
+              </div>
+              <div class="flex-v-8">
+                <p class="para-16">▍樣式與操作一致化：文字與照片工具列同步更新</p>
+                <ul class="para">
+                  <li>統一文字與照片工具列樣式，符合新版設計系統。</li>
+                  <li>文字 Modal 支援字體、字級、顏色與對齊設定。</li>
+                  <li>無需回外層調整，Modal 內即可完整編輯。</li>
+                </ul>
+              </div>
+              <div class="flex-v-8">
+                <p class="para-16">▍功能命名與行為邏輯統一</p>
+                <ul class="para">
+                  <li>維持一致命名與開啟邏輯，降低使用者認知負擔。將原有不同名稱的設定按鈕（如「編輯作品」、「基本內容」…）統一為「作品資訊」。</li>
+                  <li>作品資訊 Modal 中統一可編輯項目為：作品名稱與作品說明。</li>
+                </ul>
+              </div>              
                     
                 
-              </div>
+              
               </div>
           </div>
           <!-- Start 頁面功能 Bar 優化_底部兩張圖 -->
@@ -490,7 +470,7 @@
           </div>
         <!-- End 頁面功能 Bar 優化_底部兩張圖 -->
         <!-- End img2-txt1 頁面功能 Bar 優化-->  
-
+        </div>
         <!-- End 編輯內容 -->
         </div>
         <!-- End ui design container -->
@@ -505,17 +485,18 @@
                     <div class="item">
                     <h4 class="title">📌 視覺層次更清晰，資訊組織更有條理</h4>
                     
-                    <ul class="para" >
-                      [1.0]
-                      <li>介面元素較密集，顏色較重，資訊層次不夠明顯，且視線需要來回移動，增加認知負擔。</li>
-                    </ul>
-                    <ul class="para">
-                      [2.0] 採用更明確的「分區」設計。
+                    <p class="para" >
+                      [舊版]<br>
+                      介面元素較密集，顏色較重，資訊層次不夠明顯，且視線需要來回移動，增加認知負擔。
+                    </p>
+                    <p class="para">[新版] 採用更明確的「分區」設計。</p>
+                      <ul class="para">
                       <li>左側邊欄：照片池管理功能統一集中，操作邏輯更直觀。</li>
                       <li>主要編輯區：留白更多，內容層級更清楚，讓使用者可以專注於編輯工作。</li>
                       <li>工具欄區塊分明：上方選單與左側功能區塊排列更一致，減少雜亂感。</li>
                       <li>外觀樣式區：根據不同產品對應可編輯項目，用戶能快速辨識並選擇合適的樣式。</li>
-                    </ul>                     
+                    </ul>
+                                   
 
                     </div>
                     <div class="item">
