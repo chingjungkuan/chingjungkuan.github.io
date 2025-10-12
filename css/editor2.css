@@ -94,13 +94,6 @@ li{
 	align-items: center;
 	gap: 12px;
 }
-.center-txt{
-	text-align: center;
-	font-style: normal;
-	font-weight: 400;
-	line-height: 150%;
-	text-transform: capitalize;
-}
 
 .hero-grid {
 	display: grid;
