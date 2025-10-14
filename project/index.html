@@ -6,38 +6,16 @@
     <title>作品列表｜關靖蓉 Portfolio</title>
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <link rel="stylesheet" href="../css/normalize.css">
-    <link rel="stylesheet" href="../css/project.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/project.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Paytone+One&family=Rowdies:wght@300;400;700&family=Rubik+Dirt&display=swap" rel="stylesheet">    
+	  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Paytone+One&family=Rowdies:wght@300;400;700&family=Rubik+Dirt&family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="wrapper">
-        <!-- Start header -->
-		<header class="header">
-			<div class="navbar">
-				<div class="container">
-					<a href="https://chingjungkuan.github.io" class="brand">
-						<h1>點點印 作品列表 UIUX Portfolio</h1>
-					</a>
-					<ul id="popup-menu" class="nav">
-						<li class="nav-item"><a href="https://chingjungkuan.github.io/#about" class="nav-link">ABOUT</a></li>
-						<li class="nav-item"><a href="https://chingjungkuan.github.io/#skills" class="nav-link">SKILL</a></li>
-						<li class="nav-item"><a href="https://chingjungkuan.github.io/#ui-design" class="nav-link">UI DESIGN</a></li>
-						<li class="nav-item"><a href="https://chingjungkuan.github.io/#contact" class="nav-link">CONTACT</a></li>
-						<a href="#!" class="close-btn">
-							<span></span>
-							<span></span>
-						</a>
-					</ul>
-					<a href="#popup-menu" class="menu-toggle">
-						<span></span>
-						<span></span>
-						<span></span>
-					</a>
-				</div>
-			</div>
-		</header>
+    <!-- Start header -->
+      <div id="site-header" data-include="/components/header.html"></div>
 		<!-- End header -->
     <!-- 浮動釘選導覽列 -->
     <nav id="sub-nav" class="sub-nav">
@@ -60,7 +38,7 @@
 			    <!-- End banner -->
           <!-- Start Design Impact -->
                 
-          <div id="impact" class="hero-container">
+          <div id="impact" class="top-container">
 
           <div  class="layout-center display-title">Design Impact </div> 
 
@@ -110,37 +88,37 @@
           <!-- End Design Impact--> 
 
           <!-- Start Overview -->
-            <div id="overview" class="hero hero-bg-white">
-              <div class="hero-container">
-                <div class="overview">
-                  <div class="overview-left">
-                    <h2 class="title">概述 <span>Overview</span></h2>
-                    <h3 class="title primarycolor-title">點點印｜作品列表</h3>
-                    <h5 class="title">#B2C #RWD #Redesign</h5>
-                    <p class="para">
-                      用戶
-                      <b>管理作品</b>的核心區域，依照不同創作階段（如編輯中、已完稿、已出版...等）分類顯示作品列表。使用者可透過主動操作（如篩選作品類型、查看作品狀態）快速定位目標作品，並根據當前狀態執行最適行動（如繼續編輯、加入購物車、作品欣賞等）。
-                    </p>
-                    <div class="team-info">
-                      <p class="para"><strong>Team |</strong> TinTint 點點印</p>
-                      <p class="para"><strong>Role |</strong> UIUX Designer</p>
-                      <p class="para"><strong>Collaborators |</strong> UIUX Designer(1)、PM(1)、FE(1)、BE(1)、CS(3)</p>
-                    </div>
-                  </div>
-                  <div class="overview-right">
-                    <p class="para">
-                    <b>[調整背景]</b><br>
-                    為統一整體網站的設計風格，並簡化舊版中不必要的頁面和資訊，先針對
-                    <b>整體資訊架構進行盤點與梳理</b>，移除重複或多餘內容，
-                    <b>聚焦呈現使用者真正需要的資訊</b>。
-                    </p><br>
-                    <p class="para">
-                      在整理過程中發現「作品列表」的操作流程不夠直覺，使用者常需多層點擊才能完成任務。經與團隊夥伴討論後，決定重新設計該區塊，同時
-                      <b>全面對齊設計系統 2.0 的樣式與規範</b>，提升整體體驗一致性與操作效率。
-                    </p>
+            <div id="overview" class="top-container">
+              
+              <div class="overview">
+                <div class="overview-left">
+                  <h2 class="title">概述 <span class="sm-title">Overview</span></h2>
+                  <h3 class="title text-primary">點點印｜作品列表</h3>
+                  <h5 class="title">#B2C #RWD #Redesign</h5>
+                  <p class="para">
+                    用戶
+                    <b>管理作品</b>的核心區域，依照不同創作階段（如編輯中、已完稿、已出版...等）分類顯示作品列表。使用者可透過主動操作（如篩選作品類型、查看作品狀態）快速定位目標作品，並根據當前狀態執行最適行動（如繼續編輯、加入購物車、作品欣賞等）。
+                  </p>
+                  <div class="team-info">
+                    <p class="para"><strong>Team |</strong> TinTint 點點印</p>
+                    <p class="para"><strong>Role |</strong> UIUX Designer</p>
+                    <p class="para"><strong>Collaborators |</strong> UIUX Designer(1)、PM(1)、FE(1)、BE(1)、CS(3)</p>
                   </div>
                 </div>
+                <div class="overview-right">
+                  <p class="para">
+                  <b>[調整背景]</b><br>
+                  為統一整體網站的設計風格，並簡化舊版中不必要的頁面和資訊，先針對
+                  <b>整體資訊架構進行盤點與梳理</b>，移除重複或多餘內容，
+                  <b>聚焦呈現使用者真正需要的資訊</b>。
+                  </p><br>
+                  <p class="para">
+                    在整理過程中發現「作品列表」的操作流程不夠直覺，使用者常需多層點擊才能完成任務。經與團隊夥伴討論後，決定重新設計該區塊，同時
+                    <b>全面對齊設計系統 2.0 的樣式與規範</b>，提升整體體驗一致性與操作效率。
+                  </p>
+                </div>
               </div>
+              
             </div>
             
           <!-- End Overview -->
@@ -576,28 +554,13 @@
   <!-- End main -->
 
 
-    <!-- Start footer -->
-      <footer class="footer">
-        <div class="footer-hero">
-          <div class="mask-dark"></div>
-          <div class="container">
-            <a href="/" class="footer-brand" aria-label="Back to homepage"></a>
-            <nav class="footer-nav">
-              <a href="/myportfolio#about" class="footer-link">ABOUT</a>
-              <a href="/myportfolio#ui-design" class="footer-link">UI DESIGN</a>
-              <a href="/myportfolio#contact" class="footer-link">CONTACT</a>
-            </nav>
-          </div>
-        </div>
-        <div class="footer-copyright">
-          <p>© Copyright 2025 All rights reserved</p>
-        </div>
-      </footer>
-
-    <!-- End footer -->
+  <!-- Start footer -->
+    <div id="site-footer" data-include="/components/footer.html"></div>
+  <!-- End footer -->
     </div>
 
     <!-- Start java -->
+    <script defer src="/js/include.js"></script>
     <script>
       // 點擊 lightbox 圖片放大
     
