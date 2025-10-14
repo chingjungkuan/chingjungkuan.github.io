@@ -65,12 +65,49 @@ li{
 \* -------------------------- */
 /* grid system */
 /* 暫時把container定義為沒有padding的，且他沒有gap */
-
+/* 上下皆有 padding 的容器 */
+.hero-container {
+	max-width: 1184px;
+	margin: 0 auto;
+	padding: 80px 16px 80px 16px;
+	display: grid;
+	gap: 24px;
+}
+@media screen and (max-width: 768px){
+	.hero-container{
+		padding: 60px 16px;
+		
+	}
+	.container{
+		padding-top: 0px;
+	}
+}
+/* 沒有top的container 且用grid */
+.notop-container {
+	max-width: 1184px;
+	margin: 0 auto;
+	padding: 0 16px;
+	display: grid;
+	gap: 24px;
+}
+/* 上面有 padding 的 container */
+.top-container{
+	max-width: 1184px;
+	margin: 0 auto;
+	padding: 80px 16px 0 16px;
+	display: grid;
+	gap: 24px;
+}
+@media screen and (max-width: 768px){
+	.top-container{
+		padding: 60px 16px 0 16px;
+	}
+	
+}
 .container{
 	max-width: 1184px;
 	width: 100%;
 	margin: 0 auto;
-	
 }
 .d-vertical{
 	display: flex;
@@ -358,77 +395,9 @@ li{
 
 	}
   }
-/* lightbox  */
-
-.lightbox {
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	background: rgba(0, 0, 0, 0.8);
-	display: none;
-	align-items: center;
-	justify-content: center;
-	z-index: 999;
-  }
-  
-  .lightbox.active {
-	display: flex;
-  }
-  
-  .lightbox img {
-	max-width: 90%;
-	max-height: 90%;
-	border-radius: 10px;
-	box-shadow: 0 0 20px rgba(255,255,255,0.3);
-	transition: transform 0.3s ease;
-  } 
-
-/* 上下皆有 padding 的容器 */
-.hero-container {
-	max-width: 1184px;
-	margin: 0 auto;
-	padding: 80px 16px 80px 16px;
-	display: grid;
-	gap: 24px;
-}
-@media screen and (max-width: 768px){
-	.hero-container{
-		padding: 60px 16px;
-		
-	}
-	.container{
-		padding-top: 0px;
-	}
-}
-/* 沒有top的container 且用grid */
-.notop-container {
-	max-width: 1184px;
-	margin: 0 auto;
-	padding: 0 16px;
-	display: grid;
-	gap: 24px;
-}
-/* 上面有 padding 的 container */
-.top-container{
-	max-width: 1184px;
-	margin: 0 auto;
-	padding: 80px 16px 0 16px;
-	display: grid;
-	gap: 24px;
-}
-@media screen and (max-width: 768px){
-	.top-container{
-		padding: 60px 16px 0 16px;
-	}
-	
-}
 
 /* 設計流程 */
-#flow{
-	display: flex;
-}
+
 #flow h2 {
 	width: 60px;
 }
@@ -522,8 +491,6 @@ li{
 	  grid-template-columns: 1fr;
 	}
 }
-
-
 
 /* Layout img-txt */
 .img-txt .hero-title{
