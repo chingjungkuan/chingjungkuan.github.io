@@ -15,27 +15,7 @@
 	Globel
 \* -------------------------- */
 
-/* 連動的 google font */
-.anton-regular {
-	font-family: "Anton", sans-serif;
-	font-weight: 400;
-	font-style: normal;
-  }
-.cal-sans-regular {
-font-family: "Cal Sans", sans-serif;
-font-weight: 400;
-font-style: normal;
-}
-.archivo-black-regular {
-	font-family: "Archivo Black", sans-serif;
-	font-weight: 400;
-	font-style: normal;
-  }
-.rubik-dirt-regular {
-font-family: "Rubik Dirt", system-ui;
-font-weight: 400;
-font-style: normal;
-}
+
    
 ul{
 	margin: 0;
@@ -43,46 +23,14 @@ ul{
 	list-style: disc;        /* 顯示圓點 */
 	padding-left: 1.5em;     /* 加一些內縮，讓圓點出現 */
 }
-a{
-	text-decoration: none;
-	color: #191919;
-}
-li{
-	font-size: 14px;
-	line-height: 150%;
-	color: #191919;
-}
-.highlight {
-	color: #EB9164;
-	font-weight: bold;
-}
-.para{
-	font-size: 14px;
-	line-height: 150%;
-	color: #191919;
-}
+
 .display-title{
 	font-family: "Rubik Dirt", sans-serif;
 	font-size: 64px;
 	color: #625043;
 	
 }
-.primarycolor-title{
-	color: #7B6453;
-	
-}
-.description-text span{
-	font-size: 16px;
-	font-weight: normal;
-	color: #666;
-}
 
-.hero-title span{
-	font-size: 16px;
-	font-weight: normal;
-	color: #666;
-	margin-bottom: 12px;
-}
 @media screen and (max-width: 768px){
 	.display-title{
 		font-size: 48px;
@@ -95,54 +43,12 @@ li{
 \* -------------------------- */
 /* grid system */
 /* 暫時把container定義為沒有padding的，且他沒有gap */
-/* 上下皆有 padding 的容器 */
-.hero-container {
-	max-width: 1184px;
-	margin: 0 auto;
-	padding: 80px 16px 80px 16px;
-	display: grid;
-	gap: 24px;
-}
-@media screen and (max-width: 768px){
-	.hero-container{
-		padding: 60px 16px;
-		
-	}
-	.container{
-		padding-top: 0px;
-	}
-}
-/* 沒有top的container 且用grid */
-.notop-container {
-	max-width: 1184px;
-	margin: 0 auto;
-	padding: 0 16px;
-	display: grid;
-	gap: 24px;
-}
-/* 上面有 padding 的 container */
-.top-container{
-	max-width: 1184px;
-	margin: 0 auto;
-	padding: 80px 16px 0 16px;
-	display: grid;
-	gap: 24px;
-}
-@media screen and (max-width: 768px){
-	.top-container{
-		padding: 60px 16px 0 16px;
-	}
-	
-}
+
 .container{
 	max-width: 1184px;
 	width: 100%;
 	margin: 0 auto;
-}
-.d-vertical{
-	display: flex;
-	flex-direction: column;
-	gap: 24px;
+	
 }
 
 .hero-title{
@@ -152,6 +58,7 @@ li{
 	order: 2;
 	flex: 1;
 }
+
 
 .hero-grid {
 	display: grid;
@@ -172,6 +79,22 @@ li{
 	flex-wrap: nowrap; /* 不要換行 */
 }
 
+.description-text {
+	display: grid;
+	gap: 16px;
+	flex: 1;/* 填滿剩下的寬度 */
+	order: 1;
+}
+
+.layout-center{
+	max-width: 640px;
+	width: 100%;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 12px;
+}
 
 @media screen and (max-width: 768px) {
 	.hero-grid.m-2col {
@@ -228,7 +151,7 @@ li{
 	gap: 24px;
   }
 
-/* 手機版：切換成一欄 */
+
 @media screen and (max-width: 768px) {
 .hero-grid.m-1col {
     grid-template-columns: 1fr;
@@ -237,7 +160,7 @@ li{
     grid-template-columns: 1fr;
   }
 .hero-grid.d-2col-1col {
-    grid-template-columns: 1fr; 
+    grid-template-columns: 1fr;
   }
 
 }
@@ -249,17 +172,23 @@ li{
 	row-gap: 24px;    /* 垂直間距 */
   }
   
-  .two-column-grid .item {
+.two-column-grid .item {
 	background: #f9f9f9;
 	padding: 24px;
-	border-radius: 4px;
+	border-radius: 8px;
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
+}
+
+.two-column-grid .item-nobg {
+
 	display: flex;
   	flex-direction: column;
   	gap: 12px;
-  }
-  
+}
   /* 手機版（小於等於768px時） */
-  @media (max-width: 768px) {
+@media (max-width: 768px) {
 	.two-column-grid {
 	  grid-template-columns: 1fr;
 	  column-gap: 0; /* 手機版就不需要左右間距 */
@@ -274,7 +203,7 @@ li{
 	display: grid;
 	grid-template-columns: repeat(3, 1fr); /* 一列3個 */
 	column-gap: 24px; /* 水平間距 */
-	row-gap: 48px;    /* 垂直間距 */
+	row-gap: 24px;    /* 垂直間距 */
   }
   
 .three-column-grid .item {
@@ -310,8 +239,47 @@ li{
 	  grid-template-columns: 1fr; /* 手機版變成一列1個 */
 	  column-gap: 0; /* 手機版就不需要左右間距 */
 	}
-  }  
 
+  }  
+/* 上下皆有 padding 的容器 */
+.hero-container {
+	max-width: 1184px;
+	margin: 0 auto;
+	padding: 80px 16px 80px 16px;
+	display: grid;
+	gap: 24px;
+}
+@media screen and (max-width: 768px){
+	.hero-container{
+		padding: 60px 16px;
+		
+	}
+	.container{
+		padding-top: 0px;
+	}
+}
+/* 沒有上下padding 的container 且用grid */
+.notop-container {
+	max-width: 1184px;
+	margin: 0 auto;
+	padding: 0 16px;
+	display: grid;
+	gap: 24px;
+}
+/* 上面有 padding 的 container */
+.top-container{
+	max-width: 1184px;
+	margin: 0 auto;
+	padding: 80px 16px 0 16px;
+	display: grid;
+	gap: 24px;
+}
+@media screen and (max-width: 768px){
+	.top-container{
+		padding: 60px 16px 0 16px;
+	}
+	
+}  
 /* -------------------------- *\
 	Component
 \* -------------------------- */
@@ -489,50 +457,25 @@ li{
 	align-items: end;
 	
   }
-  
-.overview-left h2 {
-	font-size: 28px;
-	font-weight: bold;
-  }
-  
-.overview-left h2 span {
-	font-size: 16px;
-	font-weight: normal;
-	color: gray;
-	margin-left: 8px;
-  }
-  
-.overview-left h3 {
-	font-size: 24px;
-  }
-  
-.overview-left p {
-	margin: 10px 0;
-  }
-  
+
 .team-info {
-	line-height: 150%;
+	display: grid;
+	gap: 8px;
 	background: #f4f4f4;
 	border-radius: 4px;
-	padding: 12px;
+	padding: 16px;
 	border-left: 4px solid #ccc;
-  }
-  
-.overview-right {
-	font-size: 16px;
-	line-height: 1.6;
-  }
+}
+.overview-left {
+	display: grid;
+	gap: 16px;
+}    
+
   
 @media screen and (max-width: 768px) {
 	.overview {
 	  grid-template-columns: 1fr;
 	}
-	.overview-left h2 {
-		color: #191919;
-		margin-bottom: 24px;
-		font-weight: bold;
-	  }
-
 
   }
 
@@ -554,14 +497,7 @@ li{
 		font-size: 32px;
 	}
 }
-.section-intro .para{
-	text-align: left;
-	font-size: 14px;
-	line-height: 21px;
-	color: #333;
-	max-width: 480px;
-	margin: 0 0;
-}
+
 
 /* Layout img-txt */
 .img-txt .hero-title{
@@ -582,26 +518,7 @@ li{
 	}
 }
 
-/* 資訊架構 */
 
-.layout-center{
-	max-width: 900px;
-	width: 100%;
-	margin: 0 auto;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	gap: 12px;
-}
-.center-txt{
-	color: #191919;
-	text-align: center;
-	font-size: 14px;
-	font-style: normal;
-	font-weight: 400;
-	line-height: 180%; /* 43.2px */
-	text-transform: capitalize;
-}
 
 /* 基本資料 */
 #section-step01 .hero-title{
