@@ -36,7 +36,7 @@ ul{
 /* -------------------------- *\
 	Layout
 \* -------------------------- */
-/* grid system */
+
 /* 暫時把container定義為沒有padding的，且他沒有gap */
 
 .container{
@@ -466,8 +466,7 @@ ul{
 	max-width: 1184px;
 	margin: 0 auto;
 	align-items: end;
-	
-  }
+}
 
 .team-info {
 	display: grid;
@@ -486,9 +485,7 @@ ul{
 	.overview {
 	  grid-template-columns: 1fr;
 	}
-
-
-  }
+}
 
 
 /* section-intro */
