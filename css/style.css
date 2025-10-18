@@ -65,6 +65,8 @@ p{
 }
 li{
 	font-size: 14px;
+	line-height: 150%;
+	color: #414141;
 }
 .sm-title {
 	font-size: 14px;
@@ -115,6 +117,29 @@ li{
 .t-center{
 	text-align: center;
 }
+/* 連動的 google font */
+.anton-regular {
+	font-family: "Anton", sans-serif;
+	font-weight: 400;
+	font-style: normal;
+  }
+.cal-sans-regular {
+	font-family: "Cal Sans", sans-serif;
+	font-weight: 400;
+	font-style: normal;
+}
+.archivo-black-regular {
+	font-family: "Archivo Black", sans-serif;
+	font-weight: 400;
+	font-style: normal;
+  }
+.rubik-dirt-regular {
+	font-family: "Rubik Dirt", system-ui;
+	font-weight: 400;
+	font-style: normal;
+}
+
+
 /* -------------------------- *\
 	Layout
 \* -------------------------- */
