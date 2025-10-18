@@ -3,41 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <link href="../images/favicon.ico" rel="shortcut icon"/>
-    <title>探索好作品｜關靖蓉 Portfolio</title>
+    <title>探索好作品 - 點點印｜關靖蓉 Portfolio</title>
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <link rel="stylesheet" href="../css/normalize.css">
-    <link rel="stylesheet" href="../css/explore.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/explore.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Paytone+One&family=Rowdies:wght@300;400;700&family=Rubik+Dirt&display=swap" rel="stylesheet">    
+	  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Paytone+One&family=Rowdies:wght@300;400;700&family=Rubik+Dirt&family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="wrapper">
-        <!-- Start header -->
-		<header class="header">
-			<div class="navbar">
-				<div class="container">
-					<a href="https://chingjungkuan.github.io" class="brand">
-						<h1>點點印探索好作品 UIUX Portfolio</h1>
-					</a>
-					<ul id="popup-menu" class="nav">
-						<li class="nav-item"><a href="https://chingjungkuan.github.io/#about" class="nav-link">ABOUT</a></li>
-						<li class="nav-item"><a href="https://chingjungkuan.github.io/#skills" class="nav-link">SKILL</a></li>
-						<li class="nav-item"><a href="https://chingjungkuan.github.io/#ui-design" class="nav-link">UI DESIGN</a></li>
-						<li class="nav-item"><a href="https://chingjungkuan.github.io/#contact" class="nav-link">CONTACT</a></li>
-						<a href="#!" class="close-btn">
-							<span></span>
-							<span></span>
-						</a>
-					</ul>
-					<a href="#popup-menu" class="menu-toggle">
-						<span></span>
-						<span></span>
-						<span></span>
-					</a>
-				</div>
-			</div>
-		</header>
+    <!-- Start header -->
+      <div id="site-header" data-include="/components/header.html"></div>
 		<!-- End header -->
     <!-- 浮動釘選導覽列 -->
     <nav id="sub-nav" class="sub-nav">
@@ -60,9 +38,9 @@
 			    <!-- End banner -->
           <!-- Start Design Impact -->
                 
-          <div id="impact" class="hero-container">
+          <div id="impact" class="top-container">
 
-          <div  class="layout-center display-title">Design Impact </div> 
+          <div class="layout-center display-title">Design Impact </div> 
 
           <div class="three-column-grid">
 
@@ -107,8 +85,7 @@
           <!-- End Design Impact--> 
 
           <!-- Start Overview -->
-            <div id="overview" class="hero hero-bg-white">
-              <div class="hero-container">
+            <div id="overview" class="top-container">
                 <div class="overview">
                   <div class="overview-left">
                     <h2 class="title">概述 <span class="sm-title">Overview</span></h2>
@@ -130,77 +107,90 @@
                     </p>
                   </div>
                 </div>
-              </div>
+              
             </div>
             
           <!-- End Overview -->
-            <!-- 開始設計流程 -->
-            <div id="flow" class="hero-container fade-in scroll-container">
+          <!-- 開始設計流程 -->
+            <div id="flow" class="top-container scroll-container">
                 <h2>設計<br>流程</h2>
                 <div class="step">
-                    <div class="number">1</div>
-                    <div class="box">
-                        <h3>Empathize</h3>
-                        <p>✦ Empathy Map</p>
-                        <p>✦ Personas</p>
-                        <p>✦ User Story Maps</p>
-                        <p>✦ Interview Method</p>
-                        <p>✦ Competitive Audit</p>
-                    </div>
+                  <div class="number">1</div>
+                  <div class="bg-white flex-v-8">
+                      <h5 class="text-primary">Empathize</h5>
+                      <div class="flex-v-4">                        <p>✦ Empathy Map</p>
+                        <p class="para">✦ Personas</p>
+                        <p class="para">✦ User Story Maps</p>
+                        <p class="para">✦ Interview Method</p>
+                        <p class="para">✦ Competitive Audit</p>
+                      </div>
+                  </div>
                 </div>
                 <div class="step">
-                    <div class="number">2</div>
-                    <div class="box">
-                        <h3>Define</h3>
-                        <p>✦ Value Proposition</p>
-                        <p>✦ Information Architecture</p>
-                    </div>
+                  <div class="number">2</div>
+                  <div class="bg-white flex-v-8">
+                      <h5 class="text-primary">Define</h5>
+                      <div class="flex-v-4"> 
+                        <p class="para">✦ Value Proposition</p>
+                        <p class="para">✦ Information Architecture</p>
+                      </div>
+                  </div>
                 </div>
                 <div class="step">
-                    <div class="number">3</div>
-                    <div class="box">
-                        <h3>Ideate</h3>
-                        <p>✦ Story Board</p>
-                        <p>✦ User Flow</p>
-                    </div>
+                  <div class="number">3</div>
+                  <div class="bg-white flex-v-8">
+                      <h5 class="text-primary">Ideate</h5>
+                      <div class="flex-v-4"> 
+                        <p class="para">✦ Story Board</p>
+                        <p class="para">✦ User Flow</p>
+                      </div>
+                  </div>
+                </div>                                
+                <div class="step">
+                  <div class="number">4</div>
+                  <div class="bg-white flex-v-8">
+                      <h5 class="text-primary">Wireframe</h5>
+                      <div class="flex-v-4"> 
+                        <p class="para">✦ Wireframe</p>
+                        <p class="para">✦ Lo-Fi Prototype</p>
+                        <p class="para">✦ Usability Test</p>
+                      </div>
+                  </div>
                 </div>
                 <div class="step">
-                    <div class="number">4</div>
-                    <div class="box">
-                        <h3>Wireframe</h3>
-                        <p>✦ Wireframe</p>
-                        <p>✦ Lo-Fi Prototype</p>
-                        <p>✦ Usability Test</p>
-                    </div>
+                  <div class="number">5</div>
+                  <div class="bg-white flex-v-8">
+                      <h5 class="text-primary">UI Design</h5>
+                      <div class="flex-v-4"> 
+                        <p class="para">✦ Visual Design System</p>
+                        <p class="para">✦ UI Kit</p> 
+                      </div>
+                  </div>
                 </div>
                 <div class="step">
-                    <div class="number">5</div>
-                    <div class="box">
-                        <h3>UI Design</h3>
-                        <p>✦ Visual Design System</p>
-                        <p>✦ UI Kit</p>
-                    </div>
+                  <div class="number">6</div>
+                  <div class="bg-white flex-v-8">
+                      <h5 class="text-primary">Prototype</h5>
+                      <div class="flex-v-4"> 
+                        <p class="para">✦ Mockup</p>
+                      </div>
+                  </div>
                 </div>
                 <div class="step">
-                    <div class="number">6</div>
-                    <div class="box">
-                        <h3>Prototype</h3>
-                        <p>✦ Mockup</p>
-                    </div>
-                </div>
-                <div class="step">
-                    <div class="number">7</div>
-                    <div class="box">
-                        <h3>Test</h3>
-                        <p>✦ Usability Test</p>
-                        <p>✦ QA</p>
-                    </div>
-                </div>
+                  <div class="number">7</div>
+                  <div class="bg-white flex-v-8">
+                      <h5 class="text-primary">Prototype</h5>
+                      <div class="flex-v-4"> 
+                        <p class="para">✦ Usability Test</p>
+                        <p class="para">✦ QA</p>
+                      </div>
+                  </div>
+                </div>                
             </div>
             <!-- 設計流程結束 -->
 
             <!-- img2-txt1 痛點與觀察 -->
-            <div id="pain-point" class="hero-container">
+            <div id="pain-point" class="top-container">
  
               <div class="hero-title">
                 <h2 class="title">痛點與觀察 <span class="sm-title">Pain Point & Task</span></h2>
@@ -245,19 +235,19 @@
 
           <!-- Start txt1-img2 設計優化重點 -->
 
-            <div  id="solution" class="hero-container hero-grid m-1col-2col">
+            <div id="solution" class="top-container hero-grid m-1col-2col">
                     
                 <div class="hero-title">
-                <h2 class="title">設計優化重點 <span class="sm-title">Solution</span></h2>
+                  <h2 class="title">設計優化重點 <span class="sm-title">Solution</span></h2>
 
-                <ul class="para">
-                  <li>瀏覽作品從「另開新分頁」改為「 Modal 顯示」，減少中斷，讓體驗更連續。</li>
-                  <li>重新設計篩選與主題分類的層級結構，幫助有具體需求的使用者更快找到目標作品。</li>
-                  <li>作品卡片新增瀏覽數這類的互動數據，提升探索動機與參與感。</li>
-                  <li>改用分批載入作品列表，減少初始讀取量，提升效能並讓瀏覽更流暢。</li>
-                  <li>加入官方精選作品，為缺乏靈感的使用者提供創作方向與啟發。</li>
-                </ul><br>
-                <p>延伸閱讀｜作品欣賞 Modal 專案</p>
+                  <ul class="para">
+                    <li>瀏覽作品從「另開新分頁」改為「 Modal 顯示」，減少中斷，讓體驗更連續。</li>
+                    <li>重新設計篩選與主題分類的層級結構，幫助有具體需求的使用者更快找到目標作品。</li>
+                    <li>作品卡片新增瀏覽數這類的互動數據，提升探索動機與參與感。</li>
+                    <li>改用分批載入作品列表，減少初始讀取量，提升效能並讓瀏覽更流暢。</li>
+                    <li>加入官方精選作品，為缺乏靈感的使用者提供創作方向與啟發。</li>
+                  </ul>
+                  <p class="para">延伸閱讀｜<a href="https://chingjungkuan.github.io/project" target="_blank" class="text-primary">作品欣賞 Modal</a></p>
                 </div>
                 <div class="image-block lightbox-trigger" style="background-image: url('https://cdn.jsdelivr.net/gh/chingjungkuan/myportfolio/images/project/img_solution.jpg');"></div>
             </div>
@@ -269,7 +259,7 @@
             
             <!-- Start 資訊架構 -->
 
-            <div id="ia" class="img-txt hero-container hero-grid d-2col-1col">
+            <div id="ia" class="img-txt top-container hero-grid d-2col-1col">
                 <div class="image-block lightbox-trigger" style="background-image: url('https://cdn.jsdelivr.net/gh/chingjungkuan/myportfolio/images/project/img_wireframe.jpg');"></div>
    
                 <div class="hero-title">
@@ -284,7 +274,7 @@
             <!-- End 資訊架構 -->
             <!-- Start txt1-img2 User flow -->
 
-            <div class="hero-container hero-grid m-1col-2col">
+            <div class="top-container hero-grid m-1col-2col">
                     
                 <div class="hero-title">
                 <h2 class="title">User Flow <span class="sm-title">Ideate</span></h2>
@@ -299,7 +289,7 @@
             <!-- End txt1-img2 user flow -->   
 
             <!-- Start img2-txt1 Wireframe-->
-            <div  class="img-txt hero-container hero-grid d-2col-1col">
+            <div  class="img-txt top-container hero-grid d-2col-1col">
                 <div class="image-block lightbox-trigger" style="background-image: url('https://cdn.jsdelivr.net/gh/chingjungkuan/myportfolio/images/project/img_wireframe.jpg');"></div>
    
                 <div class="hero-title">
@@ -314,247 +304,247 @@
             <!-- End img2-txt1 Wireframe-->
 
             <!-- Start UI Design 目前ui-design僅用於當標籤沒有css -->
-            <div  id="ui-design"   class=" hero-container">
-              <div class="layout-center display-title">UI Design </div>  
-            <div class="container">
-              <!-- Start txt1-img2 User flow -->
+            <div id="ui-design" class="container">
+                
               <div class="container">
-                  <div  class="notop-container hero-grid m-1col-2col">
+                <!-- Start txt1-img2 User flow -->
+                <div class="top-container">
+                  <div class="layout-center display-title">UI Design </div>
+                    <div  class="notop-container hero-grid m-1col-2col">
+                            
+                      <div class="hero-title">
+                        <h2 class="title">統一<span class="text-primary">新版</span>設計風格 </h2>
+                        
+                        <ul class="para">
+                          <li><b>符合新版品牌風格與氛圍</b><br>新版介面採用<strong>柔和配色與簡約排版</strong>，傳遞溫暖、小清新的品牌氣質，營造舒適親和的氛圍。</li><br>
+                          <li><b>清晰層級設計</b><br>從資訊分層到視覺配置，將內容劃分為「<strong>推薦</strong>」與「<strong>主題探索</strong>」兩大區塊，並以卡片式設計與明確標題，<strong>讓結構直觀且易於理解</strong>。</li><br>
+                          <li><b>細節亮點設計</b><br>在精選標題加入 ✨ 圖示，強化「精選」的特別感，並透過<strong>細節提升瀏覽體驗</strong>。</li><br>
                           
-                    <div class="hero-title">
-                    <h2 class="title">統一<span class="text-primary">新版</span>設計風格 </h2>
-                    
-                    <ul class="para">
-                      <li><b>符合新版品牌風格與氛圍</b><br>新版介面採用<strong>柔和配色與簡約排版</strong>，傳遞溫暖、小清新的品牌氣質，營造舒適親和的氛圍。</li><br>
-                      <li><b>清晰層級設計</b><br>從資訊分層到視覺配置，將內容劃分為「<strong>推薦</strong>」與「<strong>主題探索</strong>」兩大區塊，並以卡片式設計與明確標題，<strong>讓結構直觀且易於理解</strong>。</li><br>
-                      <li><b>細節亮點設計</b><br>在精選標題加入 ✨ 圖示，強化「精選」的特別感，並透過<strong>細節提升瀏覽體驗</strong>。</li><br>
-                      
-                      
-                    </ul>
+                          
+                        </ul>
+                      </div>
+                      <div class="image-block lightbox-trigger" style="background-image: url('https://cdn.jsdelivr.net/gh/chingjungkuan/myportfolio/images/project/img_ui-design01.jpg');"></div>
                     </div>
-                    <div class="image-block lightbox-trigger" style="background-image: url('https://cdn.jsdelivr.net/gh/chingjungkuan/myportfolio/images/project/img_ui-design01.jpg');"></div>
-                  </div>
-                  <!-- End txt1-img2 user flow -->
-                   
+                    <!-- End txt1-img2 user flow -->
+                </div>   
 
-              </div>   
+            <!-- Satrt img2-txt1 精選定位更清晰-->
+            <div class="img-txt top-container hero-grid d-2col-1col">
+            <div class="image-block lightbox-trigger" style="background-image: url('https://cdn.jsdelivr.net/gh/chingjungkuan/myportfolio/images/project/img_main-info.jpg');"></div>
 
-          <!-- Satrt img2-txt1 精選定位更清晰-->
-          <div  class="img-txt top-container hero-grid d-2col-1col">
-          <div class="image-block lightbox-trigger" style="background-image: url('https://cdn.jsdelivr.net/gh/chingjungkuan/myportfolio/images/project/img_main-info.jpg');"></div>
-
-          <div class="description-text">
-              
-              <h3 class="title">精選定位更清晰</h3>
-              <div class="container hero-grid ">
-              <p class="para">
-                <b>[Before]</b><br>
-                資訊密集，缺乏重點強調，區塊層級不易辨識。<br><br>
-
-                <b>[After]</b><br>
-                以「探索好作品」+「點點印 精選」明確定位，先透過精選輪播吸引視線，再引導至主題分類，層級清晰、探索更直覺。
-              </p>
-            
-              <div class="team-info">
-                <b>👉 具體做法</b><br>
-              <ul>
-                <li><b>強化導向感</b>：標題與副標凸顯頁面定位。</li>
-                <li><b>集中注意力</b>：精選輪播吸引視線，帶動瀏覽節奏。</li>
-                <li><b>提升結構感</b>：形成由上而下的清楚層級。</li>
-              </ul>
-
-              </div>
-              </div>
-          </div>
-        </div>
-        <!-- End img2-txt1 -->           
-
-          <!-- Start txt1-img2 主題篩選更直覺-->
-
-          <div class="top-container hero-grid m-1col-2col">
-                    
             <div class="description-text">
-            <h3 class="title">主題篩選更直覺</h3>
-            <div class="container hero-grid ">
-              <p class="para">
-              <b>[Before]</b><br>
-              左側長清單繁雜，上方主題按鈕狀態不明確，分類層級混亂，使用者難以上手。<br><br>
+                
+                <h3 class="title">精選定位更清晰</h3>
+                <div class="container hero-grid ">
+                <p class="para">
+                  <b>[Before]</b><br>
+                  資訊密集，缺乏重點強調，區塊層級不易辨識。<br><br>
 
-              <b>[After]</b><br>
-              改為「今天想看什麼主題」的口語化呈現，並以水平 icon 按鈕設計；同時結合「篩選」按鈕，點擊後展開 Drawer，提供主題＋產品的多條件篩選，讓操作更輕量直觀。
-              </p>
+                  <b>[After]</b><br>
+                  以「探索好作品」+「點點印 精選」明確定位，先透過精選輪播吸引視線，再引導至主題分類，層級清晰、探索更直覺。
+                </p>
               
-              <div class="team-info">
-                <b>👉 具體做法</b><br>
+                <div class="team-info">
+                  <b>👉 具體做法</b>
                 <ul>
-                  <li>提升辨識度：水平排列的 icon 按鈕更直觀。</li>
-                  <li>降低操作成本：將「全部」與各分類並列，減少學習負擔。</li>
-                  <li>增強探索效率：簡化層級，快速切換與瀏覽。</li>
+                  <li><b>強化導向感</b>：標題與副標凸顯頁面定位。</li>
+                  <li><b>集中注意力</b>：精選輪播吸引視線，帶動瀏覽節奏。</li>
+                  <li><b>提升結構感</b>：形成由上而下的清楚層級。</li>
                 </ul>
 
+                </div>
+                </div>
+            </div>
+          </div>
+          <!-- End img2-txt1 -->           
+
+            <!-- Start txt1-img2 主題篩選更直覺-->
+
+            <div class="top-container hero-grid m-1col-2col">
+                      
+              <div class="description-text">
+              <h3 class="title">主題篩選更直覺</h3>
+              <div class="container hero-grid ">
+                <p class="para">
+                <b>[Before]</b><br>
+                左側長清單繁雜，上方主題按鈕狀態不明確，分類層級混亂，使用者難以上手。<br><br>
+
+                <b>[After]</b><br>
+                改為「今天想看什麼主題」的口語化呈現，並以水平 icon 按鈕設計；同時結合「篩選」按鈕，點擊後展開 Drawer，提供主題＋產品的多條件篩選，讓操作更輕量直觀。
+                </p>
+                
+                <div class="team-info">
+                  <b>👉 具體做法</b>
+                  <ul>
+                    <li>提升辨識度：水平排列的 icon 按鈕更直觀。</li>
+                    <li>降低操作成本：將「全部」與各分類並列，減少學習負擔。</li>
+                    <li>增強探索效率：簡化層級，快速切換與瀏覽。</li>
+                  </ul>
+
+                </div>
+              </div>
+
+              </div>
+              <div class="image-block lightbox-trigger" style="background-image: url('https://cdn.jsdelivr.net/gh/chingjungkuan/myportfolio/images/project/img_cta.jpg');"></div>
+            </div>
+            <div  class="notop-container">
+                      <img src="../images/editor2/img_ui-design03.jpg" alt="Banner" class="box-img lightbox-trigger">
+            </div>
+            <!-- End txt1-img2 主題篩選更直覺-->
+            
+            <!-- Satrt img2-txt1 作品卡片資訊更豐富-->
+            <div  class="img-txt top-container hero-grid d-2col-1col">
+              <div class="image-block lightbox-trigger" style="background-image: url('https://cdn.jsdelivr.net/gh/chingjungkuan/myportfolio/images/project/img_more-menu.jpg');"></div>
+
+              <div class="description-text">
+                <h3 class="title">作品卡片資訊更豐富</h3>
+                <div class="container hero-grid ">
+                  <p class="para">
+                  <b>[Before]</b><br>
+                  卡片僅有縮圖與標題，缺乏作者與互動數據，使用者判斷依據不足。<br><br>
+
+                  <b>[After]</b><br>
+                  新增「觀看數」icon 與數字，補充更多資訊，讓卡片結構更完整，瀏覽判斷更有依據。<br>
+                  </p>
+                  
+                  <div class="team-info">
+                    <b>👉 具體做法</b>
+                    <ul>
+                      <li>提升探索動機：觀看數作為熱門指標，增加使用者點擊意願。</li>
+                      <li>增強資訊完整性：卡片包含標題、作者與互動數據。</li>
+                      <li>改善一致性：各卡片資訊呈現統一，降低理解成本。</li>
+                    </ul>
+
+                  </div>
+                </div>
+
               </div>
             </div>
+          <!-- End img2-txt1 作品卡片資訊更豐富--> 
+          <!-- Start txt1-img2 互動與操作體驗提升-->
 
-            </div>
-            <div class="image-block lightbox-trigger" style="background-image: url('https://cdn.jsdelivr.net/gh/chingjungkuan/myportfolio/images/project/img_cta.jpg');"></div>
+          <div  class="top-container hero-grid m-1col-2col">
+              <div class="description-text">
+                <h3 class="title">互動與操作體驗提升</h3>
+                <div class="container hero-grid ">
+                  <p class="para">
+                  <b>[Before]</b><br>
+                  分頁設計需透過 Page Control 逐頁切換，導致探索中斷；一次載入過多資料也造成初始載入緩慢，瀏覽卡頓。<br><br>
+
+                  <b>[After]</b><br>
+                  內容達到區塊上限時改為顯示「載入更多」的按鈕設計，讓探索流暢不中斷，並透過分批載入縮短初始時間、降低伺服器與前端負擔。<br>
+                  精選作品以輪播方式呈現，減少佔用空間，卻能展示更多內容。
+                  </p>
+                  
+                  <div class="team-info">
+                    <b>👉 具體做法</b>
+                    <ul>
+                      <li>保持流暢性：使用者連續瀏覽不中斷。</li>
+                      <li>優化效能：分批載入避免前端卡頓，縮短初始時間。</li>
+                      <li>提升展示效率：精選作品輪播呈現更多內容，節省版面。</li>
+                    </ul>
+
+                  </div>
+                </div>
+
+              </div>
+              <div class="image-block lightbox-trigger" style="background-image: url('https://cdn.jsdelivr.net/gh/chingjungkuan/myportfolio/images/project/img_legibility.jpg');"></div>
           </div>
-          <div  class="notop-container">
-                    <img src="../images/editor2/img_ui-design03.jpg" alt="Banner" class="box-img lightbox-trigger">
-          </div>
-          <!-- End txt1-img2 主題篩選更直覺-->
-           
-          <!-- Satrt img2-txt1 作品卡片資訊更豐富-->
+          <!-- End txt1-img2 互動與操作體驗提升-->
+          <!-- Satrt img2-txt1 情境導向的多樣化預設-->
           <div  class="img-txt top-container hero-grid d-2col-1col">
-            <div class="image-block lightbox-trigger" style="background-image: url('https://cdn.jsdelivr.net/gh/chingjungkuan/myportfolio/images/project/img_more-menu.jpg');"></div>
+              <div class="image-block lightbox-trigger" style="background-image: url('https://cdn.jsdelivr.net/gh/chingjungkuan/myportfolio/images/project/img_more-menu.jpg');"></div>
 
-            <div class="description-text">
-              <h3 class="title">作品卡片資訊更豐富</h3>
-              <div class="container hero-grid ">
-                <p class="para">
-                <b>[Before]</b><br>
-                卡片僅有縮圖與標題，缺乏作者與互動數據，使用者判斷依據不足。<br><br>
+              <div class="description-text">
+                <h3 class="title">情境導向的多樣化預設</h3>
+                <div class="container hero-grid ">
+                  <p class="para">
+                  <b>[Before]</b><br>
+                  舊版主題與產品的篩選較為分散，使用者需自行組合條件，容易增加思考成本。<br><br>
 
-                <b>[After]</b><br>
-                新增「觀看數」icon 與數字，補充更多資訊，讓卡片結構更完整，瀏覽判斷更有依據。<br>
-                </p>
-                
-                <div class="team-info">
-                  <b>👉 具體做法</b><br>
-                  <ul>
-                    <li>提升探索動機：觀看數作為熱門指標，增加使用者點擊意願。</li>
-                    <li>增強資訊完整性：卡片包含標題、作者與互動數據。</li>
-                    <li>改善一致性：各卡片資訊呈現統一，降低理解成本。</li>
-                  </ul>
+                  <b>[After]</b><br>
+                  依主題自動帶入最相關的產品（如旅遊→寫真本、婚禮→映畫本），讓使用者更快看到符合情境的作品範例。<br>
+                  </p>
+                  
+                  <div class="team-info">
+                    <b>👉 具體做法</b>
+                    <ul>
+                      <li>降低思考成本：自動帶出最適合的產品類型。</li>
+                      <li>增強探索啟發：主題對應產品，更容易獲得靈感。</li>
+                      <li>提升導向性：提供個人化、情境化的入口。</li>
+                    </ul>
 
+                  </div>
                 </div>
-              </div>
 
-            </div>
+              </div>
           </div>
-        <!-- End img2-txt1 作品卡片資訊更豐富--> 
-        <!-- Start txt1-img2 互動與操作體驗提升-->
+          <!-- End img2-txt1 情境導向的多樣化預設--> 
+          <!-- Start txt1-img2 視覺層級與排版優化-->
 
-        <div  class="top-container hero-grid m-1col-2col">
-            <div class="description-text">
-              <h3 class="title">互動與操作體驗提升</h3>
-              <div class="container hero-grid ">
-                <p class="para">
-                <b>[Before]</b><br>
-                分頁設計需透過 Page Control 逐頁切換，導致探索中斷；一次載入過多資料也造成初始載入緩慢，瀏覽卡頓。<br><br>
+          <div class="top-container hero-grid m-1col-2col">
+              <div class="description-text">
+                <h3 class="title">視覺層級與排版優化</h3>
+                <div class="container hero-grid ">
+                  <p class="para">
+                  <b>[Before]</b><br>
+                  分區與層級不明顯，icon 樣式偏灰，互動感不足；卡片排列間距不一致，整體視覺顯得凌亂。<br><br>
 
-                <b>[After]</b><br>
-                內容達到區塊上限時改為顯示「載入更多」的按鈕設計，讓探索流暢不中斷，並透過分批載入縮短初始時間、降低伺服器與前端負擔。<br>
-                精選作品以輪播方式呈現，減少佔用空間，卻能展示更多內容。
-                </p>
-                
-                <div class="team-info">
-                  <b>👉 具體做法</b><br>
-                  <ul>
-                    <li>保持流暢性：使用者連續瀏覽不中斷。</li>
-                    <li>優化效能：分批載入避免前端卡頓，縮短初始時間。</li>
-                    <li>提升展示效率：精選作品輪播呈現更多內容，節省版面。</li>
-                  </ul>
+                  <b>[After]</b><br>
+                  分區標題清楚，留白適切；icon 與文字狀態一致，互動感明確；卡片間距整齊，排版更乾淨。
+                  </p>
+                  
+                  <div class="team-info">
+                    <b>👉 具體做法</b><br>
+                    <ul>
+                      <li>提升辨識度：區塊標題與留白讓層級更清楚。</li>
+                      <li>強化互動性：icon 狀態清晰，點擊更直觀。</li>
+                      <li>增進整體觀感：統一的排列與間距帶來乾淨專業的版面。</li>
+                    </ul>
 
+                  </div>
                 </div>
+
               </div>
-
-            </div>
-            <div class="image-block lightbox-trigger" style="background-image: url('https://cdn.jsdelivr.net/gh/chingjungkuan/myportfolio/images/project/img_legibility.jpg');"></div>
-        </div>
-        <!-- End txt1-img2 互動與操作體驗提升-->
-        <!-- Satrt img2-txt1 情境導向的多樣化預設-->
-        <div  class="img-txt top-container hero-grid d-2col-1col">
-            <div class="image-block lightbox-trigger" style="background-image: url('https://cdn.jsdelivr.net/gh/chingjungkuan/myportfolio/images/project/img_more-menu.jpg');"></div>
-
-            <div class="description-text">
-              <h3 class="title">情境導向的多樣化預設</h3>
-              <div class="container hero-grid ">
-                <p class="para">
-                <b>[Before]</b><br>
-                舊版主題與產品的篩選較為分散，使用者需自行組合條件，容易增加思考成本。<br><br>
-
-                <b>[After]</b><br>
-                依主題自動帶入最相關的產品（如旅遊→寫真本、婚禮→映畫本），讓使用者更快看到符合情境的作品範例。<br>
-                </p>
-                
-                <div class="team-info">
-                  <b>👉 具體做法</b><br>
-                  <ul>
-                    <li>降低思考成本：自動帶出最適合的產品類型。</li>
-                    <li>增強探索啟發：主題對應產品，更容易獲得靈感。</li>
-                    <li>提升導向性：提供個人化、情境化的入口。</li>
-                  </ul>
-
-                </div>
-              </div>
-
-            </div>
-        </div>
-        <!-- End img2-txt1 情境導向的多樣化預設--> 
-        <!-- Start txt1-img2 視覺層級與排版優化-->
-
-        <div class="top-container hero-grid m-1col-2col">
-            <div class="description-text">
-              <h3 class="title">視覺層級與排版優化</h3>
-              <div class="container hero-grid ">
-                <p class="para">
-                <b>[Before]</b><br>
-                分區與層級不明顯，icon 樣式偏灰，互動感不足；卡片排列間距不一致，整體視覺顯得凌亂。<br><br>
-
-                <b>[After]</b><br>
-                分區標題清楚，留白適切；icon 與文字狀態一致，互動感明確；卡片間距整齊，排版更乾淨。
-                </p>
-                
-                <div class="team-info">
-                  <b>👉 具體做法</b><br>
-                  <ul>
-                    <li>提升辨識度：區塊標題與留白讓層級更清楚。</li>
-                    <li>強化互動性：icon 狀態清晰，點擊更直觀。</li>
-                    <li>增進整體觀感：統一的排列與間距帶來乾淨專業的版面。</li>
-                  </ul>
-
-                </div>
-              </div>
-
-            </div>
-            <div class="image-block lightbox-trigger" style="background-image: url('https://cdn.jsdelivr.net/gh/chingjungkuan/myportfolio/images/project/img_legibility.jpg');"></div>
-        </div>
-        <!-- End txt1-img2 視覺層級與排版優化-->
+              <div class="image-block lightbox-trigger" style="background-image: url('https://cdn.jsdelivr.net/gh/chingjungkuan/myportfolio/images/project/img_legibility.jpg');"></div>
+          </div>
+          <!-- End txt1-img2 視覺層級與排版優化-->
 
 
-          <!-- End 編輯內容 -->
-        </div>
+            <!-- End 編輯內容 -->
+          </div>
         <!-- End ui design container -->
       </div>
         <!-- End ui design section -->
         
         <!-- Start Style-guide -->
-          <div id="style-guide" class="hero-container">
-                  <div  class="layout-center display-title">Style Guide </div> 
-                  <div class="card-container">
-                    <div class="card">
-                      <h4>區塊間距與空間感提升</h4>
-                      <p class="para">  <b>[Before]</b><br>
-                      區塊間距過小，內容顯得緊湊，降低閱讀的舒適度與辨識度。<br>
-                      <b>[After]</b> <br>
-                      透過重新定義標題層級與留白，讓排版更清晰，同時整合篩選內容於同一區塊，強化資訊結構與閱讀體驗。</p>
-                    </div>
-                    <div class="card">
-                      <h4>統一圓角、留白與陰影，強化介面質感</h4>
-                      <p class="para"><b>[Before]</b> <br>
-                        卡片與版面分隔生硬，缺乏柔和層次；icon 按鈕缺乏一致規範，狀態不明顯，使用者不易辨識可點擊性。<br>
-                        <b>[After]</b> <br>
-                        統一按鈕與 icon 規範，並導入圓角、留白與陰影設計，營造現代化且友善的風格，提升空間感與聚焦度。</p>
-                    </div>
-                    <div class="card">
-                      <h4>視覺層次更清晰，資訊組織條理化</h4>
-                      <p class="para"> <b>[Before]</b> <br>
-                        作品卡片比例偏小，排版顯得擁擠，重點難以凸顯。<br>
-                        <b>[After]</b><br>
-                        調整卡片比例與排版規則，使區塊更一致，資訊層級更清晰易讀。</p>
-                    </div>
-                  </div>
-            
+          <div id="style-guide" class="container">
+            <div class="top-container">
+              <div  class="layout-center display-title">Style Guide </div> 
+              <div class="three-column-grid">
+                <div class="item">
+                  <h4>區塊間距與空間感提升</h4>
+                  <p class="para">  <b>[Before]</b><br>
+                  區塊間距過小，內容顯得緊湊，降低閱讀的舒適度與辨識度。<br>
+                  <b>[After]</b> <br>
+                  透過重新定義標題層級與留白，讓排版更清晰，同時整合篩選內容於同一區塊，強化資訊結構與閱讀體驗。</p>
+                </div>
+                <div class="item">
+                  <h4>統一圓角、留白與陰影，強化介面質感</h4>
+                  <p class="para"><b>[Before]</b> <br>
+                    卡片與版面分隔生硬，缺乏柔和層次；icon 按鈕缺乏一致規範，狀態不明顯，使用者不易辨識可點擊性。<br>
+                    <b>[After]</b> <br>
+                    統一按鈕與 icon 規範，並導入圓角、留白與陰影設計，營造現代化且友善的風格，提升空間感與聚焦度。</p>
+                </div>
+                <div class="item">
+                  <h4>視覺層次更清晰，資訊組織條理化</h4>
+                  <p class="para"> <b>[Before]</b> <br>
+                    作品卡片比例偏小，排版顯得擁擠，重點難以凸顯。<br>
+                    <b>[After]</b><br>
+                    調整卡片比例與排版規則，使區塊更一致，資訊層級更清晰易讀。</p>
+                </div>
+              </div>
+            </div>
 
                   <!-- only img -->
                   <div  class="top-container">
@@ -563,7 +553,7 @@
                   <div  class="top-container">
                     <img src="../images/editor2/img_styleguide-typography.webp" alt="Banner" class="box-img lightbox-trigger">
                   </div>
-                  <div class="hero-container layout-center">
+                  <div class="top-container layout-center">
                     <h2 class="title">UI Kit</h2>
                     
                    
@@ -583,13 +573,13 @@
     <!-- End Style Guide -->
     <!-- Start Takeaway -->
       
-      <div id="takeaway" class="hero-container">
+      <div id="takeaway" class="top-container">
 
           <div class="layout-center">
-              <div  class="layout-center display-title">Takeaways</div> 
-              <div class="center-txt">
+              <div  class="t-center display-title">Takeaways</div> 
+              <p class="t-center">
                 整體以<strong>使用者瀏覽行為為核心</strong>，透過資訊分組、視覺層級與細節優化，打造直覺、流暢且易理解的作品欣賞體驗，同時確保設計可落地於團隊實作。
-              </div>
+              </p>
           </div>
 
         <div class="two-column-grid">
@@ -616,8 +606,8 @@
       <div class="hero-container">
         <div class="layout-center">
           <div class="btn-group-center">
-            <a href="#ui-design" target="_blank" class="btn btn-primary btn-lg">作品欣賞頁面</a>
-            <a href="mailto:rf61128@gmail.com" class="btn btn-secondary btn-lg">作品集專案列表</a>
+            <a href="https://chingjungkuan.github.io/project" target="_blank" class="btn btn-primary btn-lg">作品欣賞頁面</a>
+            <a href="https://chingjungkuan.github.io/#ui-design" class="btn btn-secondary btn-lg">作品集專案列表</a>
           </div>
         </div>
       </div>          
@@ -631,29 +621,13 @@
   </section>
   <!-- End main -->
 
-
-    <!-- Start footer -->
-      <footer class="footer">
-        <div class="footer-hero">
-          <div class="mask-dark"></div>
-          <div class="container">
-            <a href="/" class="footer-brand" aria-label="Back to homepage"></a>
-            <nav class="footer-nav">
-              <a href="/myportfolio#about" class="footer-link">ABOUT</a>
-              <a href="/myportfolio#ui-design" class="footer-link">UI DESIGN</a>
-              <a href="/myportfolio#contact" class="footer-link">CONTACT</a>
-            </nav>
-          </div>
-        </div>
-        <div class="footer-copyright">
-          <p>© Copyright 2025 All rights reserved</p>
-        </div>
-      </footer>
-
-    <!-- End footer -->
+  <!-- Start footer -->
+    <div id="site-footer" data-include="/components/footer.html"></div>
+  <!-- End footer -->
     </div>
 
     <!-- Start java -->
+    <script defer src="/js/include.js"></script>
     <script>
       // 點擊 lightbox 圖片放大
     
