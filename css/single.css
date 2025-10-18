@@ -11,29 +11,6 @@
 /* -------------------------- *\
 	Globel
 \* -------------------------- */
-	
-
-/* 連動的 google font */
-.anton-regular {
-	font-family: "Anton", sans-serif;
-	font-weight: 400;
-	font-style: normal;
-  }
-.cal-sans-regular {
-	font-family: "Cal Sans", sans-serif;
-	font-weight: 400;
-	font-style: normal;
-}
-.archivo-black-regular {
-	font-family: "Archivo Black", sans-serif;
-	font-weight: 400;
-	font-style: normal;
-  }
-.rubik-dirt-regular {
-	font-family: "Rubik Dirt", system-ui;
-	font-weight: 400;
-	font-style: normal;
-}
    
 ul{
 	line-height: 1.5;
@@ -46,10 +23,6 @@ ul{
 	font-family: "Rubik Dirt", sans-serif;
 	font-size: 64px;
 	color: #625043;
-	
-}
-.primarycolor-title{
-	color: #7B6453;
 	
 }
 
@@ -225,13 +198,13 @@ ul{
 	display: grid;
 	grid-template-columns: repeat(3, 1fr); /* 一列3個 */
 	column-gap: 24px; /* 水平間距 */
-	row-gap: 48px;    /* 垂直間距 */
+	row-gap: 24px;    /* 垂直間距 */
   }
   
 .three-column-grid .item {
 	display: flex;
   	flex-direction: column;
-  	gap: 12px; /* 這行就是讓 h4 和 p 中間有 12px */
+  	gap: 12px; 
   }
 .icon-text-wrapper {
 	display: flex;
@@ -249,11 +222,11 @@ ul{
 	justify-content: center;  /* 水平置中 */
 	align-items: center;      /* 垂直置中 */
   }
-  .icon img {
+.icon img {
 	width: 100%;
 	height: 100%;
 	object-fit: contain;
-  }
+}
   
   /* 手機版（小於等於768px時） */
 @media (max-width: 768px) {
@@ -262,13 +235,46 @@ ul{
 	  column-gap: 0; /* 手機版就不需要左右間距 */
 	}
 
-	.three-column-grid .item {
-	
-		padding: 16px;
-	
-	  }
   }  
-  
+/* 上下皆有 padding 的容器 */
+.hero-container {
+	max-width: 1184px;
+	margin: 0 auto;
+	padding: 80px 16px 80px 16px;
+	display: grid;
+	gap: 24px;
+}
+@media screen and (max-width: 768px){
+	.hero-container{
+		padding: 60px 16px;
+		
+	}
+	.container{
+		padding-top: 0px;
+	}
+}
+/* 沒有上下padding 的container 且用grid */
+.notop-container {
+	max-width: 1184px;
+	margin: 0 auto;
+	padding: 0 16px;
+	display: grid;
+	gap: 24px;
+}
+/* 上面有 padding 的 container */
+.top-container{
+	max-width: 1184px;
+	margin: 0 auto;
+	padding: 80px 16px 0 16px;
+	display: grid;
+	gap: 24px;
+}
+@media screen and (max-width: 768px){
+	.top-container{
+		padding: 60px 16px 0 16px;
+	}
+	
+}  
 
 
 /* -------------------------- *\
@@ -395,47 +401,6 @@ ul{
 	box-shadow: 0 0 20px rgba(255,255,255,0.3);
 	transition: transform 0.3s ease;
   } 
-
-
-/* 上下皆有 padding 的容器 */
-.hero-container {
-	max-width: 1184px;
-	margin: 0 auto;
-	padding: 80px 16px 80px 16px;
-	display: grid;
-	gap: 24px;
-}
-@media screen and (max-width: 768px){
-	.hero-container{
-		padding: 60px 16px;
-		
-	}
-	.container{
-		padding-top: 0px;
-	}
-}
-/* 沒有上下padding 的container 且用grid */
-.notop-container {
-	max-width: 1184px;
-	margin: 0 auto;
-	padding: 0 16px;
-	display: grid;
-	gap: 24px;
-}
-/* 上面有 padding 的 container */
-.top-container{
-	max-width: 1184px;
-	margin: 0 auto;
-	padding: 80px 16px 0 16px;
-	display: grid;
-	gap: 24px;
-}
-@media screen and (max-width: 768px){
-	.top-container{
-		padding: 60px 16px 0 16px;
-	}
-	
-}
 
 
 /* 設計流程 */
