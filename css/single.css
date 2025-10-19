@@ -37,15 +37,34 @@ ul{
 	Layout
 \* -------------------------- */
 
-/* 暫時把container定義為沒有padding的，且他沒有gap */
-
+/* 沒有padding的，且他沒有gap */
 .container{
 	max-width: 1184px;
 	width: 100%;
 	margin: 0 auto;
 	
 }
-
+/* 沒有上下padding 的container 且用grid */
+.notop-container {
+	max-width: 1184px;
+	margin: 0 auto;
+	padding: 0 16px;
+	display: grid;
+	gap: 24px;
+}
+/* 上面有 padding 的 container */
+.top-container{
+	max-width: 1184px;
+	margin: 0 auto;
+	padding: 80px 16px 0 16px;
+	display: grid;
+	gap: 24px;
+}
+@media screen and (max-width: 768px){
+	.top-container{
+		padding: 60px 16px 0 16px;
+	}	
+} 
 .hero-title{
 	display: flex;
 	gap: 16px;
@@ -53,8 +72,6 @@ ul{
 	order: 2;
 	flex: 1;
 }
-
-
 .hero-grid {
 	display: grid;
 	gap: 24px;
@@ -253,28 +270,7 @@ ul{
 		padding-top: 0px;
 	}
 }
-/* 沒有上下padding 的container 且用grid */
-.notop-container {
-	max-width: 1184px;
-	margin: 0 auto;
-	padding: 0 16px;
-	display: grid;
-	gap: 24px;
-}
-/* 上面有 padding 的 container */
-.top-container{
-	max-width: 1184px;
-	margin: 0 auto;
-	padding: 80px 16px 0 16px;
-	display: grid;
-	gap: 24px;
-}
-@media screen and (max-width: 768px){
-	.top-container{
-		padding: 60px 16px 0 16px;
-	}
-	
-}  
+ 
 
 
 /* -------------------------- *\
@@ -338,15 +334,7 @@ ul{
 	  content: url('../images/single/img_banner-mobile.jpg');
 	}
   }
-/* mask-dark */
-.mask-dark{
-	background-color: rgb(149, 120, 83);
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    width: 100%;
-    height: 100%;
-}
+
 /* banner */
 .hero-banner {
 	width: 100%;
@@ -366,7 +354,6 @@ ul{
 	}
   } 
 
-
 @media (max-width: 768px) {
 	.hero-banner {
 	  height: 480px;
@@ -375,33 +362,6 @@ ul{
 
 	}
   }
-/* lightbox  */
-
-.lightbox {
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	background: rgba(0, 0, 0, 0.8);
-	display: none;
-	align-items: center;
-	justify-content: center;
-	z-index: 999;
-  }
-  
-  .lightbox.active {
-	display: flex;
-  }
-  
-  .lightbox img {
-	max-width: 90%;
-	max-height: 90%;
-	border-radius: 10px;
-	box-shadow: 0 0 20px rgba(255,255,255,0.3);
-	transition: transform 0.3s ease;
-  } 
-
 
 /* 設計流程 */
 
@@ -422,37 +382,17 @@ ul{
     color: #E4DEDA;
     margin-bottom: -16px;
 }
-
-.box {
-    background-color: #fff;
-}
-
-.box h5 {
-    margin: 0 0 8px 0;
-}
-
-.box p {
-    margin: 2px 0;
-	overflow-wrap: anywhere; /* 推薦用這個 */	
-}
 	
 .scroll-container {
 	max-width: 1184px;
 	display: flex;
 	gap: 16px;
 	margin: 0 auto;
-	padding: 80px 0 16px 16px;
 	overflow-x: auto;  /* 超出時水平滾動 */
 }
-.scroll-container .title{
-		font-size: 24px;
-		margin-bottom: 24px;
-		margin-top: 40px;
-		padding: 10px;
-}
+
 @media screen and (max-width: 768px){
 	.scroll-container{
-			margin-bottom: 48px;
 			max-width: 100%;
 		}
 	}
@@ -486,94 +426,6 @@ ul{
 	  grid-template-columns: 1fr;
 	}
 }
-
-
-/* section-intro */
-.section-intro{
-	text-align: left;
-	margin-bottom: 40px;
-}
-.section-intro .title{
-	font-size: 48px;
-	color: #191919;
-	margin-bottom: 24px;
-}
-@media screen and (max-width: 768px){
-	.section-intro .title{
-		font-size: 32px;
-	}
-}
-.section-intro .para{
-	text-align: left;
-	font-size: 14px;
-	line-height: 21px;
-	color: #191919;
-	max-width: 480px;
-	margin: 0 0;
-}
-
-
-
-
-/* menu-list */
-.menu-list{
-	margin-bottom: 64px;
-}
-.menu-list:last-child{
-	margin-bottom: 0;
-}
-.menu-list .title-bar{
-	/*border: 1px solid #000;*/
-	margin-bottom: 24px;
-}
-.menu-list .title-bar:after{
-	content: '';
-	display: block;
-	clear: both;
-}
-.menu-list .title-bar .title{
-	font-size: 24px;
-	line-height: 40px;
-	color: #185ADB;
-	float: left;
-	padding-left: 16px;
-}
-.menu-list .title-bar .title:before{
-	content: '';
-	display: inline-block;
-	width: 4px;
-	height: 24px;
-	background-color: #185ADB;
-	position: absolute;
-	top: 50%;
-	left: 0;
-	transform: translate(0,-50%);
-}
-.menu-list .title-bar .btn{
-	float: right;
-	padding-top: 8px;
-	padding-bottom: 8px;
-}
-@media screen and (max-width: 768px){
-	.menu-list .list-item{
-		margin-bottom: 48px;
-	}
-}
-.menu-list .list-item .image-container:before{
-	padding-top: 100%;
-}
-.menu-list .list-item .title{
-	font-size: 18px;
-	color: #191919;
-	line-height: 24px;
-	margin-bottom: 8px;
-	margin-top: 16px;
-}
-.menu-list .list-item .subtitle{
-	font-size: 16px;
-	color: #185ADB;
-}
-
 
 /* Layout img-txt */
 .img-txt .hero-title{
