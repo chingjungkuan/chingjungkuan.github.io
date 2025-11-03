@@ -1,22 +1,16 @@
 @charset "utf-8";
 
-/**
- * Content ............ You are reading it!
- * Globel ............ Set common styles
- * Layout ............ Set grid styles
- * Component ............ Set component styles
- * Utility ............ Set some tools style
- */
-
 /* -------------------------- *\
 	Globel
 \* -------------------------- */
-   
 ul{
 	line-height: 1.5;
 	list-style: disc;        /* 顯示圓點 */
-	padding-left: 1.5em;     /* 加一些內縮，讓圓點出現 */
+	padding-left: 1.2em;     /* 加一些內縮，讓圓點出現 */
 	color: #414141;
+}
+ul li::marker {
+  font-size: 0.9em; /* 調整圓點大小 */
 }
 
 .display-title{
