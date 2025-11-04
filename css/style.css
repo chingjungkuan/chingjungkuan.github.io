@@ -1,6 +1,17 @@
 @charset "utf-8";
 
 /* -------------------------- *\
+	Content
+\* -------------------------- */
+/**
+ * Content ............ Navbar Footer Button Globel
+ * Globel ............ Set common styles
+ * Layout ............ Set grid styles
+ * Component ............ Set component styles
+ * Utility ............ Set some tools style
+ */
+
+/* -------------------------- *\
 	Globel
 \* -------------------------- */
 *{
@@ -52,6 +63,7 @@ p{
 	line-height: 1.5 ;
 	margin: 0;
 }
+
 li{
 	font-size: 14px;
 	line-height: 150%;
@@ -533,4 +545,3 @@ li{
     display: none;
   }
 }
-
