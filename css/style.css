@@ -1,17 +1,6 @@
 @charset "utf-8";
 
 /* -------------------------- *\
-	Content
-\* -------------------------- */
-/**
- * Content ............ Navbar Footer Button Globel
- * Globel ............ Set common styles
- * Layout ............ Set grid styles
- * Component ............ Set component styles
- * Utility ............ Set some tools style
- */
-
-/* -------------------------- *\
 	Globel
 \* -------------------------- */
 *{
@@ -242,7 +231,7 @@ li{
 }
 .btn-group-center{
 	display: flex;
-    gap: 12px;
+    gap: 16px;
 	text-align: left;
 }
 
@@ -544,3 +533,4 @@ li{
     display: none;
   }
 }
+
