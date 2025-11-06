@@ -1,11 +1,5 @@
 @charset "utf-8";
 
-/*
- * Content ............ You are reading it!
- * Globel ............ Set common styles
- * Layout ............ Set grid styles
- * Component ............ Set component styles
- */
 
 /* -------------------------- *\
 	Globel 共用 (style.css 就不會寫到這)
@@ -245,13 +239,13 @@
 /* graphic 靠左標籤 */
 .tag-graphic {
 	z-index: 200;
-    background-color: #e6007e;
+    background-color: #CF5C36;
 	top: 32%;
 	left: 1%;
 }
 .tag-graphic::after {
     border-width: 6px 6px 6px 0;
-    border-color: transparent #e6007e transparent transparent;
+    border-color: transparent #CF5C36 transparent transparent;
     top: 50%;
     right: -6px;
     transform: translateY(-50%) rotate(180deg);
@@ -260,13 +254,13 @@
 /* Creativity 靠左標籤 */
 .tag-creativity {
 	z-index: 200;
-    background-color: #f89b29;
+    background-color: #CCA43B;
 	bottom: 30%;
 	left: 10%;
 }
 .tag-creativity::after {
     border-width: 6px 6px 6px 0;
-    border-color: transparent #f89b29 transparent transparent;
+    border-color: transparent #CCA43B transparent transparent;
     top: 50%;
     right: -6px;
     transform: translateY(-50%) rotate(180deg);
@@ -275,13 +269,13 @@
 /* UIUX 靠右標籤 */
 .tag-uiux {
 	z-index: 200;
-    background-color: #333;
+    background-color: #252627;
     bottom: 60%;
 	right: 0%;
 }
 .tag-uiux::after {
     border-width: 8px 0 8px 8px;
-    border-color: transparent transparent transparent #333;
+    border-color: transparent transparent transparent #252627;
     top: 50%;
     left: -8px;
     transform: translateY(-50%) rotate(180deg);
