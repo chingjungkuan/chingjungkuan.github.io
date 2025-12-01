@@ -28,6 +28,8 @@
       </ul>
     </nav>
 
+
+
     <!-- Start main -->
         <section class="main">
           <!-- Start banner -->
@@ -391,27 +393,32 @@
               </div>
             <!-- End txt1-img2 功能以圖示呈現，更易識別-->
             
-            <!-- Satrt img2-txt1 作品卡片資訊更豐富-->
+            <!-- Satrt img2-txt1 依使用情境，改以 Modal 瀏覽作品-->
             <div  class="img-txt top-container hero-grid d-2col-1col">
               <div class="image-block lightbox-trigger" style="background-image: url('/images/explore/img_作品卡片資訊.jpg');"></div>
 
               <div class="description-text">
-                <h3 class="title">作品卡片資訊更豐富</h3>
+                <h3 class="title">依使用情境，改以 Modal 瀏覽作品</h3>
                 <div class="container hero-grid ">
                   <p class="para">
                   <b>[Before]</b><br>
-                  卡片僅有縮圖與標題，缺乏作者與互動數據，使用者判斷依據不足。<br><br>
+                  點擊作品後會另開新分頁或跳轉至作品頁面，導致多數用戶的瀏覽流程被打斷，尤其在探索頁返回時需重新定位位置，影響體驗連貫性。<br><br>
 
                   <b>[After]</b><br>
-                  新增「觀看數」icon 與數字，補充更多資訊，讓卡片結構更完整，瀏覽判斷更有依據。<br>
+                  使用者多從首頁或探索頁進入作品，若跳轉頁面易中斷瀏覽。改以 Modal 呈現，讓使用者快速瀏覽與返回。<br>
+                  使用 Modal 的優勢：
+                  <ul>
+                    <li>保留原頁瀏覽狀態，避免重新定位</li>
+                    <li>提升瀏覽連貫性，減少認知負擔</li>
+                    <li>快速關閉即可返回原處，操作更直覺</li>
+
+                  </ul>
                   </p>
                   
                   <div class="team-info">
                     <b>👉 具體做法</b>
                     <ul>
-                      <li>提升探索動機：觀看數作為熱門指標，增加使用者點擊意願。</li>
-                      <li>增強資訊完整性：卡片包含標題、作者與互動數據。</li>
-                      <li>改善一致性：各卡片資訊呈現統一，降低理解成本。</li>
+                      <li>網站主要採用 Modal 開啟作品詳情，同時保留獨立頁面選項（滿足分享或深度瀏覽需求），兼顧流暢體驗與使用彈性。</li>
                     </ul>
 
                   </div>
@@ -419,28 +426,25 @@
 
               </div>
             </div>
-          <!-- End img2-txt1 作品卡片資訊更豐富--> 
-          <!-- Start txt1-img2 互動與操作體驗提升-->
+          <!-- End img2-txt1 依使用情境，改以 Modal 瀏覽作品--> 
+          <!-- Start txt1-img2 空間感優化，讓畫面更易讀-->
 
           <div  class="top-container hero-grid m-1col-2col">
               <div class="description-text">
-                <h3 class="title">互動與操作體驗提升</h3>
+                <h3 class="title">空間感優化，讓畫面更易讀</h3>
                 <div class="container hero-grid ">
                   <p class="para">
                   <b>[Before]</b><br>
-                  分頁設計需透過 Page Control 逐頁切換，導致探索中斷；一次載入過多資料也造成初始載入緩慢，瀏覽卡頓。<br><br>
+                  關聯性強的內容距離過遠，區塊分隔不明確，造成視覺混亂。<br><br>
 
                   <b>[After]</b><br>
-                  內容達到區塊上限時改為顯示「載入更多」的按鈕設計，讓探索流暢不中斷，並透過分批載入縮短初始時間、降低伺服器與前端負擔。<br>
-                  精選作品以輪播方式呈現，減少佔用空間，卻能展示更多內容。
+                  將內容重組為三大區塊：「作品欣賞」、「作品資訊與操作」、「相關作品推薦」，結構更清晰，降低視覺雜亂感，引導使用者流暢探索。
                   </p>
                   
                   <div class="team-info">
                     <b>👉 具體做法</b>
                     <ul>
-                      <li>保持流暢性：使用者連續瀏覽不中斷。</li>
-                      <li>優化效能：分批載入避免前端卡頓，縮短初始時間。</li>
-                      <li>提升展示效率：精選作品輪播呈現更多內容，節省版面。</li>
+                      <li>增加適度留白並強化區塊分隔，透過調整資訊關聯性與間距提升視覺易讀性。</li>
                     </ul>
 
                   </div>
@@ -449,66 +453,7 @@
               </div>
               <div class="image-block lightbox-trigger" style="background-image: url('/images/explore/img_互動與操作體驗提升.jpg');"></div>
           </div>
-          <!-- End txt1-img2 互動與操作體驗提升-->
-          <!-- Satrt img2-txt1 情境導向的多樣化預設-->
-          <div  class="img-txt top-container hero-grid d-2col-1col">
-              <div class="image-block lightbox-trigger" style="background-image: url('/images/explore/img_情境導向的多樣化預設.jpg');"></div>
-
-              <div class="description-text">
-                <h3 class="title">情境導向的多樣化預設</h3>
-                <div class="container hero-grid ">
-                  <p class="para">
-                  <b>[Before]</b><br>
-                  舊版主題與產品的篩選較為分散，使用者需自行組合條件，容易增加思考成本。<br><br>
-
-                  <b>[After]</b><br>
-                  依主題自動帶入最相關的產品（如旅遊→寫真本、婚禮→映畫本），讓使用者更快看到符合情境的作品範例。<br>
-                  </p>
-                  
-                  <div class="team-info">
-                    <b>👉 具體做法</b>
-                    <ul>
-                      <li>降低思考成本：自動帶出最適合的產品類型。</li>
-                      <li>增強探索啟發：主題對應產品，更容易獲得靈感。</li>
-                      <li>提升導向性：提供個人化、情境化的入口。</li>
-                    </ul>
-
-                  </div>
-                </div>
-
-              </div>
-          </div>
-          <!-- End img2-txt1 情境導向的多樣化預設--> 
-          <!-- Start txt1-img2 視覺層級與排版優化-->
-
-          <div class="top-container hero-grid m-1col-2col">
-              <div class="description-text">
-                <h3 class="title">視覺層級與排版優化</h3>
-                <div class="container hero-grid ">
-                  <p class="para">
-                  <b>[Before]</b><br>
-                  分區與層級不明顯，icon 樣式偏灰，互動感不足；卡片排列間距不一致，整體視覺顯得凌亂。<br><br>
-
-                  <b>[After]</b><br>
-                  分區標題清楚，留白適切；icon 與文字狀態一致，互動感明確；卡片間距整齊，排版更乾淨。
-                  </p>
-                  
-                  <div class="team-info">
-                    <b>👉 具體做法</b>
-                    <ul>
-                      <li>提升辨識度：區塊標題與留白讓層級更清楚。</li>
-                      <li>強化互動性：icon 狀態清晰，點擊更直觀。</li>
-                      <li>增進整體觀感：統一的排列與間距帶來乾淨專業的版面。</li>
-                    </ul>
-
-                  </div>
-                </div>
-
-              </div>
-              <div class="image-block lightbox-trigger" style="background-image: url('/images/explore/img_視覺層級與排版優化.jpg');"></div>
-          </div>
-          <!-- End txt1-img2 視覺層級與排版優化-->
-
+          <!-- End txt1-img2 空間感優化，讓畫面更易讀-->
 
             <!-- End 編輯內容 -->
           </div>
@@ -524,33 +469,33 @@
                 <div class="item">
                   <h4>區塊間距與空間感提升</h4>
                   <p class="para">  <b>[Before]</b><br>
-                  區塊間距過小，內容顯得緊湊，降低閱讀的舒適度與辨識度。<br>
+                  區塊間距不足，內容過於緊湊，降低閱讀舒適度。<br>
                   <b>[After]</b> <br>
-                  透過重新定義標題層級與留白，讓排版更清晰，同時整合篩選內容於同一區塊，強化資訊結構與閱讀體驗。</p>
+                  重新定義標題層級與留白比例，提升排版呼吸感。同時<strong>整合操作相關功能</strong>至同一區塊，優化瀏覽動線與資訊架構。</p>
                 </div>
                 <div class="item">
                   <h4>統一圓角、留白與陰影，強化介面質感</h4>
                   <p class="para"><b>[Before]</b> <br>
-                    卡片與版面分隔生硬，缺乏柔和層次；icon 按鈕缺乏一致規範，狀態不明顯，使用者不易辨識可點擊性。<br>
+                    版面分隔生硬、缺乏層次，與品牌期望傳遞的溫潤調性不符。<br>
                     <b>[After]</b> <br>
-                    統一按鈕與 icon 規範，並導入圓角、留白與陰影設計，營造現代化且友善的風格，提升空間感與聚焦度。</p>
+                    採用圓角、留白與陰影設計語言，打造現代且親和的視覺風格，提升空間層次感與視覺聚焦度。</p>
                 </div>
                 <div class="item">
-                  <h4>視覺層次更清晰，資訊組織條理化</h4>
+                  <h4>視覺層次更清晰，資訊組織更有條理</h4>
                   <p class="para"> <b>[Before]</b> <br>
-                    作品卡片比例偏小，排版顯得擁擠，重點難以凸顯。<br>
+                    元素密集、配色偏重，缺乏明確的視覺引導，使用者需反覆搜尋資訊，增加認知負擔。<br>
                     <b>[After]</b><br>
-                    調整卡片比例與排版規則，使區塊更一致，資訊層級更清晰易讀。</p>
+                    強化卡片與背景對比，運用色彩引導關鍵操作，讓資訊層級一目了然，提升閱讀效率。</p>
                 </div>
               </div>
             </div>
 
                   <!-- only img -->
                   <div  class="top-container">
-                    <img src="../images/editor2/img_styleguide-color.webp" alt="Banner" class="box-img lightbox-trigger">
+                    <img src="../images/common/img_color.jpg" alt="Banner" class="box-img lightbox-trigger">
                   </div>
                   <div  class="top-container">
-                    <img src="../images/editor2/img_styleguide-typography.webp" alt="Banner" class="box-img lightbox-trigger">
+                    <img src="../images/common/img_typography.jpg" alt="Banner" class="box-img lightbox-trigger">
                   </div>
                   <div class="top-container layout-center">
                     <h2 class="title">UI Kit</h2>
@@ -559,13 +504,13 @@
                   </div>
 
                   <div  class="notop-container">
-                    <img src="../images/editor2/img_styleguide-btn.webp" alt="Button" class="box-img lightbox-trigger">
+                    <img src="../images/common/img_button.jpg" alt="Button" class="box-img lightbox-trigger">
                   </div>
                   <div  class="top-container">
-                    <img src="../images/editor2/img_style-taost.jpg" alt="Banner" class="box-img lightbox-trigger">
+                    <img src="../images/common/img_taost.jpg" alt="Banner" class="box-img lightbox-trigger">
                   </div>
                   <div  class="top-container">
-                    <img src="../images/editor2/img_badge-tag.jpg" alt="Banner" class="box-img lightbox-trigger">
+                    <img src="../images/common/img_badge-tag.jpg" alt="Banner" class="box-img lightbox-trigger">
                   </div>
 
           </div>
