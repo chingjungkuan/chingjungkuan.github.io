@@ -557,3 +557,15 @@ li{
     display: none;
   }
 }
+/* 初始狀態：元素不可見且稍稍向下移動 */
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(80px); /* 向下移動80px */
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out; /* 定義動畫效果和時間 */
+}
+
+/* 最終狀態：元素可見且回到原始位置 */
+.animate-on-scroll.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
