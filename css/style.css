@@ -278,189 +278,156 @@ li{
 }
 
 /* navbar */
-:root {
-    --header-height: 64px;
-    --max-width: 1200px;
-    --padding-desktop: 24px;
-    --padding-mobile: 16px;
-    --color-primary: #fff;
-    --color-bg-navbar: rgba(0, 0, 0, 0.5);
-    --color-bg-mobile-menu: #181818;
-    --transition-speed: 0.3s;
-}
-
-/* SEO 可訪問性 專用的視覺隱藏類別 */
-.visually-hidden {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    white-space: nowrap;
-    border: 0;
-}
-
-/* 行動版選單開啟時，禁止頁面滾動 */
-.no-scroll {
-    overflow: hidden;
-}
-
 .navbar {
-    height: var(--header-height);
-    width: 100%;
-    background-color: var(--color-bg-navbar);
-    position: fixed;
-    z-index: 500;
-    top: 0;
-    left: 0;
-    border-radius: 0 0 16px 16px; 
-}
+	height: 64px;
+	width: 100%;
+	background-color: rgba(0, 0, 0, 0.5);
+	position: fixed;
+	z-index: 500;
+	top: 0;
+	left: 0;
+	border-radius: 0 0 16px 16px; 
+  }
+  
+  /* 這裡是核心：控制內容不會貼邊 */
+  .navbar .container {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 0 24px; /* 這行最重要：保證左右 padding 不貼邊 */
+	display: grid;
+	grid-template-columns: auto 1fr auto;
+	align-items: center;
+  }
+  
 
-/* 內容容器 (Flexbox Layout) */
-.navbar-content-wrapper {
-    max-width: var(--max-width);
-    margin: 0 auto;
-    padding: 0 var(--padding-desktop); 
-    height: 100%;
-    display: flex;
-    justify-content: space-between; 
-    align-items: center;
-}
-
-/* Logo */
 .navbar .brand {
-    height: var(--header-height);
-    display: flex;
-    align-items: center;
-}
-
-.navbar .brand img {
-    height: 100%;
-    max-height: 36px;
-    width: auto;
-    object-fit: contain;
+	width: 120px;
+	height: 64px;
+	background-image: url('../images/common/w_logo_name.svg');
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+	text-indent: 100%;
+	overflow: hidden;
+	white-space: nowrap;
 }
 
 .navbar .nav {
-    display: flex;
-    list-style: none;
-    padding: 0;
-    margin: 0;
+	display: flex;
+	justify-self: end; 
+}
+
+.navbar .nav .nav-item {
+	list-style: none;
 }
 
 .navbar .nav .nav-link {
-    display: block;
-    color: var(--color-primary);
-    line-height: 1; 
-    padding: 20px 16px;
-    transition: color var(--transition-speed);
+	display: block;
+	color: #fff;
+	line-height: 24px;
+	padding: 20px 16px;
+	transition: color 0.3s;
 }
+
 .navbar .nav .nav-link:hover {
-    color: #fefefe;
+	color: #fefefe;
 }
 
-/* 確保桌面版關閉按鈕隱藏 */
-.navbar .close-btn {
-    display: none; 
-}
-
-/* 切換按鈕 (漢堡選單) */
 .navbar .menu-toggle {
-    width: 48px;
-    height: 48px;
-    position: relative;
-    border: none;
-    background: none;
-    cursor: pointer;
-    padding: 0;
-    display: none; /* 預設在桌面隱藏 */
+	width: 48px;
+	height: 48px;
+	position: relative;
+	display: none;
+	justify-self: end;
 }
 
 .navbar .menu-toggle span {
-    display: block;
-    width: 32px;
-    height: 2px;
-    background-color: var(--color-primary);
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    transition: all var(--transition-speed);
+	display: block;
+	width: 32px;
+	height: 2px;
+	background-color: #fff;
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
 }
 
-.navbar .menu-toggle span:nth-child(1) { top: 10px; }
-.navbar .menu-toggle span:nth-child(2) { top: 50%; transform: translate(-50%, -50%); }
-.navbar .menu-toggle span:nth-child(3) { bottom: 10px; }
+.navbar .menu-toggle span:nth-child(1) {
+	top: 12px;
+}
 
+.navbar .menu-toggle span:nth-child(2) {
+	top: 22px;
+}
+
+.navbar .menu-toggle span:nth-child(3) {
+	top: 32px;
+}
+
+.navbar .close-btn {
+	display: none;
+	width: 48px;
+	height: 48px;
+	position: absolute;
+	right: 16px;
+	top: 8px;
+}
+
+.navbar .close-btn span {
+	width: 40px;
+	height: 2px;
+	background-color: #fff;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+}
+
+.navbar .close-btn span:nth-child(1) {
+	transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.navbar .close-btn span:nth-child(2) {
+	transform: translate(-50%, -50%) rotate(-45deg);
+}
 
 @media screen and (max-width: 992px) {
-    .navbar-content-wrapper {
-        padding: 0 var(--padding-mobile);
-    }
-}
-
+	.navbar .container {
+	  padding: 0 16px;
+	}
+  }
 @media screen and (max-width: 768px) {
-    
-    .navbar .menu-toggle {
-        display: block; /* 漢堡選單顯示 */
-    }
 
-    /* 行動版導航選單樣式 */
-    .navbar .nav {
-        position: fixed;
-        left: 0;
-        top: 0;
-        width: 100%;
-        min-height: 100vh;
-        background-color: var(--color-bg-mobile-menu);
-        z-index: 500;
-        flex-direction: column;
-        justify-content: center;
-        
-        /* 預設從右側隱藏 */
-        opacity: 0;
-        visibility: hidden;
-        transform: translateX(100%); 
-        transition: all var(--transition-speed) ease-in-out;
-    }
+	.navbar .nav {
+		position: fixed;
+		left: 0;
+		top: 0;
+		width: 100%;
+		min-height: 100vh; /* 保證包覆整個螢幕 */
+		background-color: #181818;
+		z-index: 500;
+		flex-direction: column;
+		justify-content: center;
+		opacity: 0;
+		visibility: hidden;
+		transition: all 0.3s ease-in-out;
+	}
 
-    /* JS 控制的開關 Class：選單開啟狀態 */
-    .navbar .nav.is-open {
-        opacity: 1;
-        visibility: visible;
-        transform: translateX(0); /* 滑入顯示 */
-    }
-    
-    .navbar .nav .nav-link {
-        text-align: center;
-        padding: 16px;
-        font-size: 1.5rem;
-    }
+	#popup-menu:target {
+		opacity: 1;
+		visibility: visible;
+	}
 
-    .navbar .close-btn {
-        display: block; 
-        position: absolute;
-        right: var(--padding-mobile); 
-        top: 32px; 
-    }
+	.navbar .nav .nav-link {
+		text-align: center;
+		padding: 16px;
+	}
 
-    /* 關閉按鈕圖標的樣式 */
-    .navbar .close-btn span {
-        width: 32px;
-        height: 2px;
-        background-color: var(--color-primary);
-        position: absolute;
-        top: 50%;
-        left: 50%;
-    }
+	.navbar .menu-toggle {
+		display: block;
+	}
 
-    .navbar .close-btn span:nth-child(1) {
-        transform: translate(-50%, -50%) rotate(45deg);
-    }
-    .navbar .close-btn span:nth-child(2) {
-        transform: translate(-50%, -50%) rotate(-45deg);
-    }
+	.navbar .close-btn {
+		display: block;
+	}
 }
 
 /* footer */
