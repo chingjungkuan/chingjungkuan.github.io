@@ -322,35 +322,6 @@ ul li::marker {
 	display: block;
 }
 
-/* banner */
-.hero-banner {
-	width: 100%;
-	height: 640px;
-	background-image: url('../images/explore/img_banner-desktop.webp');
-	background-size: cover;
-	background-position: center;
-	background-repeat: no-repeat;
-	border-radius: 0 0 80px 80px;
-  }
-  
-@media (max-width: 992px) {
-	.hero-banner {
-	  height: 640px;
-	  background-image: url('../images/explore/img_banner-pad.jpg');
-	  border-radius: 0 0 40px 40px;
-	}
-  } 
-
-
-@media (max-width: 768px) {
-	.hero-banner {
-	  height: 480px;
-	  background-image: url('../images/explore/img_banner-mobile.jpg');
-	  border-radius: 0 0 20px 20px;
-
-	}
-  }
-
 /* 設計流程 */
 
 .step {
@@ -435,18 +406,6 @@ ul li::marker {
 	.img-txt .image-block{
 		order:2;
 	}
-}
-
-
-/* 基本資料 */
-#section-step01 .hero-title{
-	order:1;
-}
-#section-step01 .hero-flex {
-	order:2;
-}
-#section-step01 .hero-grid {
-	order:3;
 }
 
 /* 測試 lazy loading */
