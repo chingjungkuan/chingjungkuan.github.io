@@ -32,7 +32,13 @@
     <!-- Start main -->
         <section class="main">
           <!-- Start banner -->
-            <section class="hero-banner"></section>
+           <section class="hero-banner-wrapper">
+              <picture>
+                  <source srcset="../images/editor2/img_banner-mobile.jpg" media="(max-width: 768px)">
+                  <source srcset="../images/editor2/img_banner-pad.jpg" media="(max-width: 992px)">
+                  <img class="hero-banner-img" src="../images/editor2/img_banner-desktop.jpg" alt="Editor2 線上編輯器橫幅截圖" loading="eager">
+              </picture>
+            </section>
 			    <!-- End banner -->
           <!-- Start Design Impact -->
                 
@@ -143,7 +149,7 @@
             </div>
           <!-- End Overview -->
             <!-- 開始設計流程 -->
-            <div id="flow" class="top-container fade-in scroll-container">
+            <div id="flow" class="top-container fade-in scroll-container ">
                 <h2>設計<br>流程</h2>
                 <div class="step">
                   <div class="number">1</div>
@@ -222,9 +228,8 @@
             <!-- 設計流程結束 -->
 
             <!-- img2-txt1 痛點與觀察 -->
-            <div id="pain-point" class="img-txt top-container hero-grid d-2col-1col">
-              <div class="image-block lightbox-trigger" style="background-image: url('../images/editor2/img_pain-point.jpg');"></div>
- 
+            <div id="pain-point" class="img-txt top-container hero-grid d-2col-1col ">
+              <img class="image-block lightbox-trigger" src="../images/editor2/img_pain-point.jpg" alt="痛點分析圖片描述" loading="lazy"> 
               <div class="hero-title">
                 <h2 class="title">痛點與觀察 <span class="sm-title">Pain Point & Task</span></h2>
                 <h3 class="title">舊版編輯器的問題</h3>
@@ -263,7 +268,7 @@
                 <p class="para">這些設計有效降低了使用者的認知負擔，提升操作流暢度，讓編輯流程更直覺，也讓新手使用者能更快上手。</p>
 
                 </div>
-                <div class="image-block" style="background-image: url('../images/editor2/img_solution.jpg');"></div>
+                <img class="image-block lightbox-trigger" src="../images/editor2/img_solution.jpg" alt="設計解決方案截圖" loading="lazy">
             </div>
           <!-- End txt1-img2 解決方案 -->
             
@@ -275,7 +280,7 @@
                 </div>
 
                 <div class="bottom">
-                    <div class="image-block" style="background-image: url('../images/editor2/img_ia.jpg');"></div>
+                  <img class="image-block lightbox-trigger" src="../images/editor2/img_ia.jpg" alt="資訊架構圖" loading="lazy">
                 </div>
             </div>
 
@@ -291,13 +296,12 @@
                 同時依不同產品功能與需求持續微調流程節點，確保設計符合實際情境並提前排除潛在問題。
                 </p>
                 </div>
-                <div class="image-block" style="background-image: url('../images/editor2/img_user-flow.jpg');"></div>
+                <img class="image-block" src="../images/editor2/img_user-flow.jpg" alt="使用者流程圖" loading="lazy">
             </div>
             <!-- End txt1-img2 user flow -->            
             <!-- Start img2-txt1 Wireframe-->
             <div  class="img-txt top-container hero-grid d-2col-1col">
-                <div class="image-block lightbox-trigger" style="background-image: url('../images/editor2/img_wireframe.jpg');"></div>
-   
+              <img class="image-block lightbox-trigger" src="../images/editor2/img_wireframe.jpg" alt="低擬真線框稿截圖"loading="lazy">   
                 <div class="hero-title">
                     <h2 class="title">Wireframe</h2>
                     <h3 class="title">從草圖到線框：建立清晰介面架構</h3>
@@ -309,7 +313,7 @@
             <!-- End img2-txt1 Wireframe -->
 
             <!-- Start UI Design 目前ui-design僅用於當標籤沒有css -->
-            <div  id="ui-design"   class="d-vertical">
+            <div  id="ui-design" class="d-vertical top-container">
               <div class="layout-center display-title">UI Design </div>  
             <div class="container">
               <!-- Start txt1-img2 User flow -->
@@ -326,7 +330,7 @@
                       <li><strong>一致性與層次</strong><br>重新規劃標題、選單與圖像區塊的設計，讓資訊層級更分明，整體風格保持一致，提升介面的專業感與易用性。</li>
                     </ul>
                     </div>
-                    <div class="image-block lightbox-trigger" style="background-image: url('../images/editor2/img_ui-design01.jpg');"></div>
+                    <img class="image-block lightbox-trigger" src="../images/editor2/img_ui-design01.jpg" alt="UI 設計截圖 01" loading="lazy">
                   </div>
                   <!-- End txt1-img2 user flow -->
 
@@ -334,24 +338,23 @@
                   <!-- only img 簡化編輯流程 -->
                   <div class="top-container">
                     <h2 class="t-center">簡化編輯流程 將<span class="highlight">上傳照片</span>整合進去編輯內容區</h2>
-                      <div class="layout-center image-block lightbox-trigger" style="background-image: url('../images/editor2/img_simplify-the-process.jpg');"></div>
-                  </div>
-                  <div  class="notop-container">
-                    <img src="../images/editor2/img_ui-design03.jpg" alt="Banner" class="box-img lightbox-trigger">
-                  </div>
-              </div>   
+                    <img class="layout-center image-block lightbox-trigger" src="../images/editor2/img_simplify-the-process.jpg" alt="簡化編輯流程圖" loading="lazy">                  </div>
+                    <div  class="notop-container">
+                      <img src="../images/editor2/img_ui-design03.jpg" alt="Banner" class="lightbox-trigger">
+                    </div>
+                  </div>   
 
             <!-- Start 基本資料 01 -->
             <div id="section-step01" class="hero hero-bg-white">
                 <div class="top-container">
                   <!-- 標題區塊 -->
-                  <div class="hero-title">
+                  <div class="sec-title">
                     <h2 class="title">基本資料 <span class="sm-title">Step 01</span></h2>
                   </div>
               
                   <!-- 中間：圖片 + 描述 -->
                   <div class="hero-flex m-2col">
-                    <div class="image-manual" style="background-image: url('../images/editor2/img_step1.jpg');"></div> 
+                    <img class="image-manual" src="../images/editor2/img_step1.jpg" alt="設計步驟 1 - 圖標" loading="lazy">
                     <!-- manual表示比較彈性 -->
                     <div class="description-text">
                       
@@ -365,8 +368,8 @@
               
                   <!-- 底部兩張圖 -->
                   <div class="hero-grid m-1col">
-                    <div class="image-block lightbox-trigger" style="background-image: url('../images/editor2/img_step1-old.jpg');"></div>
-                    <div class="image-block lightbox-trigger" style="background-image: url('../images/editor2/img_step1-new.jpg');"></div>
+                    <img class="image-block lightbox-trigger" src="../images/editor2/img_step1-old.jpg" alt="設計步驟 1 - 舊版截圖" loading="lazy">
+                    <img class="image-block lightbox-trigger" src="../images/editor2/img_step1-new.jpg" alt="設計步驟 1 - 新版截圖" loading="lazy">
                   </div>
                 </div>
               </div>
@@ -380,7 +383,7 @@
                 <p class="para-16">▍輸入已知資訊，系統自動匯入</p>
                 <p class="para">引導使用者先輸入已知的內容，系統會自動將資訊匯入，讓使用者在進入編輯畫面時，<b>無需逐一點擊輸入框新增或更新資訊</b>，大幅提升操作效率。</p>
               </div>
-              <div class="image-block" style="background-image: url('../images/editor2/img_ui-design-step1-2.jpg');"></div>
+              <img class="image-block" src="../images/editor2/img_ui-design-step1-2.jpg" alt="UI 設計步驟 1-2 截圖" loading="lazy">
             </div>
             <!-- End txt1-img2 基本資料02-->  
             <!-- End基本資料 -->
@@ -389,13 +392,13 @@
             <div id="section-step01" class="hero hero-bg-white">
               <div class="top-container">
                 <!-- 標題區塊 -->
-                <div class="hero-title">
+                <div class="sec-title">
                   <h2 class="title">套用主題 <span class="sm-title">Step 02</span></h2>
                 </div>
             
                 <!-- 中間：圖片 + 描述 -->
                 <div class="hero-flex m-2col">
-                  <div class="image-manual" style="background-image: url('../images/editor2/img_step2.jpg');"></div> 
+                  <img class="image-manual" src="../images/editor2/img_step2.jpg" alt="設計步驟 2 - 圖標" loading="lazy"> 
                   <!-- manual表示比較彈性 -->
                   <div class="description-text">
                     <h3>優化畫面引導，<span class="highlight">聚焦選擇主題</span>並正確套用</h3>
@@ -406,16 +409,15 @@
             
                 <!-- 底部兩張圖 -->
                 <div class="hero-grid m-1col">
-                  <div class="image-block lightbox-trigger" style="background-image: url('../images/editor2/img_theme-old.jpg');"></div>
-                  <div class="image-block lightbox-trigger" style="background-image: url('../images/editor2/img_theme-new.jpg');"></div>
+                  <img class="image-block lightbox-trigger" src="../images/editor2/img_theme-old.jpg" alt="舊版主題設定介面截圖" loading="lazy">
+                  <img class="image-block lightbox-trigger" src="../images/editor2/img_theme-new.jpg" alt="新版主題設定介面截圖" loading="lazy">
                 </div>
               </div>
             </div>
 
                 <!-- Satrt img2-txt1 套用主題02-->
                 <div  class="img-txt top-container hero-grid d-2col-1col">
-                  <div class="image-block lightbox-trigger" style="background-image: url('../images/editor2/img_theme-confirmed.jpg');"></div>
-    
+                  <img class="image-block lightbox-trigger" src="../images/editor2/img_theme-confirmed.jpg" alt="主題確認頁面截圖" loading="lazy">    
                   <div class="hero-title">
                       <span class="sm-title">套用主題</span>
                       <h3 class="title"><span class="highlight">主題變更確認機制</span>，避免誤套錯誤版型</h3>
@@ -434,13 +436,13 @@
           <div id="section-step01" class="hero hero-bg-white">
             <div class="top-container">
               <!-- 標題區塊 -->
-              <div class="hero-title">
+              <div class="sec-title">
                 <h2 class="title">編輯內容 <span class="sm-title">Step 03</span></h2>
               </div>
           
               <!-- 中間：圖片 + 描述 -->
               <div class="hero-flex m-2col">
-                <div class="image-manual" style="background-image: url('../images/editor2/img_step3.jpg');"></div> 
+                <img class="image-manual" src="../images/editor2/img_step3.jpg" alt="設計步驟 3 - 圖標" loading="lazy"> 
                 <!-- manual表示比較彈性 -->
                 <div class="description-text">
                   <h3>打造現代化介面：提升可讀性、視覺層次與操作直覺性</h3>
@@ -457,7 +459,7 @@
           
             </div>
             <div  class="notop-container">
-              <img src="../images/editor2/img_ui-design-step3.jpg" alt="Banner" class="box-img">
+              <img src="../images/editor2/img_ui-design-step3.jpg" alt="Banner" class="lightbox-trigger">
             </div>
           </div>
 
@@ -488,14 +490,14 @@
           </div>
           <!-- container結束 -->
             </div>
-            <div class="image-block" style="background-image: url('../images/editor2/img_ui-design-step3-2.jpg');"></div>
+            <img class="image-block" src="../images/editor2/img_ui-design-step3-2.jpg" alt="UI 設計步驟 3-2 截圖" loading="lazy">
           </div>
           <!-- End txt1-img2 -->
           
           
           <!-- Satrt img2-txt1 -->
           <div  class="img-txt top-container hero-grid d-2col-1col">
-            <div class="image-block lightbox-trigger" style="background-image: url('../images/editor2/img_coach-mark.jpg');"></div>
+            <img class="image-block lightbox-trigger" src="../images/editor2/img_coach-mark.jpg" alt="新手引導標記 Coach Mark 截圖" loading="lazy">
 
             <div class="hero-title">
                 <span class="sm-title">編輯內容</span>
@@ -523,12 +525,12 @@
                 針對操作較複雜的功能，透過 Tooltip 提供用途與操作方式的提示，並附上「知道了」按鈕，方便使用者自行關閉。
               </p>
             </div>
-            <div class="image-block" style="background-image: url('../images/editor2/img_page-tooltips.jpg');"></div>
+            <img class="image-block" src="../images/editor2/img_page-tooltips.jpg" alt="頁面提示 Tooltips 截圖" loading="lazy">
           </div>
 
           <div class="top-container hero-grid m-1col">
-            <div class="image-block" style="background-image: url('../images/editor2/img_tooltips01.jpg');"></div>
-            <div class="image-block" style="background-image: url('../images/editor2/img_tooltips02.jpg');"></div>
+            <img class="image-block" src="../images/editor2/img_tooltips01.jpg" alt="Tooltips 設計圖 01" loading="lazy">
+            <img class="image-block" src="../images/editor2/img_tooltips02.jpg" alt="Tooltips 設計圖 02" loading="lazy">
           </div>
           <!-- End txt1-img2 tooltips -->
            <!-- Start 文字框 -->
@@ -544,20 +546,20 @@
                 新增雙擊文字框的進階編輯 Modal，使用者可於同一視窗調整文字、顏色、對齊與字型等設定，補足原需分步操作的限制，提升操作效率與彈性。
               </p>            
             </div>
-            <div class="image-block" style="background-image: url('../images/editor2/img_toolbar-modal.jpg');"></div>
+            <img class="image-block" src="../images/editor2/img_toolbar-modal.jpg" alt="工具欄模組視窗截圖" loading="lazy">
           </div>
           <!-- end 文字框-->
           <!-- start 上傳照片 -->
           <div id="section-step01" class="hero hero-bg-white">
             <div class="top-container">
               <!-- 標題區塊 -->
-              <div class="hero-title">
+              <div class="sec-title">
                 <h2 class="title">上傳照片 <span class="sm-title">Step 03</span></h2>
               </div>
           
               <!-- 中間：圖片 + 描述 -->
               <div class="hero-flex m-2col">
-                <div class="image-manual" style="background-image: url('../images/editor2/img_step3.jpg');"></div> 
+                <img class="image-manual" src="../images/editor2/img_step3.jpg" alt="設計步驟 3 - 圖標" loading="lazy"> 
                 <!-- manual表示比較彈性 -->
                 <div class="description-text">
                   <h3>上傳照片功能<span class="highlight">整合至編輯內容畫面</span></h3>
@@ -591,13 +593,13 @@
                 <b>[After]</b><br>改為<b>可收合的左側欄</b>，避免遮擋並可依需求調整空間，小螢幕操作更靈活、視線更集中。
               </p>              
             </div>
-            <div class="image-block" style="background-image: url('../images/editor2/img_upload-img02.jpg');"></div>
+            <img class="image-block" src="../images/editor2/img_upload-img02.jpg" alt="圖片上傳介面 02 截圖" loading="lazy">
           </div>
           <!-- End txt1-img2 -->
 
           <!-- Satrt img2-txt1 -->
           <div  class="img-txt top-container hero-grid d-2col-1col">
-          <div class="image-block lightbox-trigger" style="background-image: url('../images/editor2/img_rwd.jpg');"></div>
+          <img class="image-block lightbox-trigger" src="../images/editor2/img_rwd.jpg" alt="響應式設計 RWD 截圖" loading="lazy">
 
           <div class="hero-title">
               <span class="sm-title">整體</span>
@@ -628,7 +630,7 @@
               </p>
 
             </div>
-            <div class="image-block lightbox-trigger" style="background-image: url('../images/editor2/img_all-usage.jpg');"></div>
+            <img class="image-block lightbox-trigger" src="../images/editor2/img_all-usage.jpg" alt="所有使用情境圖" loading="lazy">
           </div>
         <!-- End txt1-img2 提升操作直覺性 最後一段 -->
         <!-- End 編輯內容 -->
@@ -687,10 +689,10 @@
 
                   <!-- only img -->
                   <div  class="notop-container">
-                    <img src="../images/common/img_color.jpg" alt="Banner" class="box-img lightbox-trigger">
+                    <img src="../images/common/img_color.jpg" alt="Banner" class="lightbox-trigger">
                   </div>
                   <div  class="d-vertical">
-                    <img src="../images/common/img_typography.jpg" alt="Banner" class="box-img lightbox-trigger">
+                    <img src="../images/common/img_typography.jpg" alt="Banner" class="lightbox-trigger">
                   </div>
                   <div class="top-container layout-center">
                     <h2 class="title">UI Kit</h2>
@@ -698,22 +700,22 @@
                     <p class="t-center para">先將各類可能會發生的情境列出，並設計不同情境下的元件樣式。</p>
                   </div>
                   <div  class="d-vertical">
-                    <img src="../images/common/img_input.jpg" alt="input" class="box-img lightbox-trigger">
+                    <img src="../images/common/img_input.jpg" alt="input" class="lightbox-trigger">
                   </div>
                   <div  class="d-vertical">
-                    <img src="../images/common/img_button.jpg" alt="Button" class="box-img lightbox-trigger">
+                    <img src="../images/common/img_button.jpg" alt="Button" class="lightbox-trigger">
                   </div>
                   <div  class="d-vertical">
-                    <img src="../images/common/img_calendar-dropdown-checkbox-radio.jpg" alt="Calendar" class="box-img lightbox-trigger">
+                    <img src="../images/common/img_calendar-dropdown-checkbox-radio.jpg" alt="Calendar" class="lightbox-trigger">
                   </div>
                   <div  class="d-vertical">
-                    <img src="../images/common/img_tab-switch-pagination.jpg" alt="Tab" class="box-img lightbox-trigger">
+                    <img src="../images/common/img_tab-switch-pagination.jpg" alt="Tab" class="lightbox-trigger">
                   </div>
                   <div  class="d-vertical">
-                    <img src="../images/common/img_taost.jpg" alt="Toast" class="box-img lightbox-trigger">
+                    <img src="../images/common/img_taost.jpg" alt="Toast" class="lightbox-trigger">
                   </div>
                   <div  class="d-vertical">
-                    <img src="../images/common/img_badge-tag.jpg" alt="Badge" class="box-img lightbox-trigger">
+                    <img src="../images/common/img_badge-tag.jpg" alt="Badge" class="lightbox-trigger">
                   </div>
 
           </div>
@@ -773,34 +775,64 @@
     <script defer src="/js/include.js"></script>
     <script>
       // 點擊 lightbox 圖片放大
-    
-    document.querySelectorAll('.lightbox-trigger').forEach(el => {
-      el.addEventListener('click', function () {
-        const lightbox = document.getElementById('lightbox');
-        const lightboxImg = document.getElementById('lightbox-img');
-
-        // 情境一：<img src="...">
-        if (this.tagName.toLowerCase() === 'img') {
-          lightboxImg.src = this.src;
-        }
-        // 情境二：background-image style
-        else {
-          const style = window.getComputedStyle(this);
-          const bgImage = style.backgroundImage;
-          const match = bgImage.match(/url\(["']?(.*?)["']?\)/);
-          if (match && match[1]) {
-            lightboxImg.src = match[1];
-          }
-        }
-
-        lightbox.classList.add('active');
+      document.querySelectorAll('.lightbox-trigger').forEach(el => {
+          el.addEventListener('click', function () {
+              const lightbox = document.getElementById('lightbox');
+              const lightboxImg = document.getElementById('lightbox-img');
+              
+              // 假設 .lightbox-trigger 就在 <img> 標籤上
+              if (this.tagName.toLowerCase() === 'img') {
+                  lightboxImg.src = this.src;
+                  lightbox.classList.add('active');
+              } 
+              
+              // 如果 Lightbox 元素不存在，避免報錯
+              if (lightbox) {
+                  lightbox.classList.add('active');
+              }
+          });
       });
-    });
 
-    function closeLightbox() {
-      document.getElementById('lightbox').classList.remove('active');
-    }
+      /**
+       * 關閉 Lightbox 函數
+       */
+      function closeLightbox() {
+          const lightbox = document.getElementById('lightbox');
+          if (lightbox) {
+              lightbox.classList.remove('active');
+          }
+      }
 
+      // 實作關閉機制
+      document.addEventListener('DOMContentLoaded', () => {
+          const lightbox = document.getElementById('lightbox');
+          
+          if (lightbox) {
+              // 1. 點擊 Lightbox 區域本身時關閉 (點擊半透明背景)
+              lightbox.addEventListener('click', function (e) {
+                  // 檢查點擊的目標是否就是 Lightbox 容器本身
+                  if (e.target === lightbox) {
+                      closeLightbox();
+                  }
+              });
+
+              // 2. 按下 ESC 鍵時關閉
+              document.addEventListener('keydown', function (e) {
+                  if (e.key === 'Escape' && lightbox.classList.contains('active')) {
+                      closeLightbox();
+                  }
+              });
+              
+              // 3. 點擊 "關閉按鈕" (假設你的關閉按鈕 class/id 是 .lightbox-close 或類似)
+              // 💡 建議：確保你的 HTML 中有個按鈕調用 closeLightbox() 
+              /*
+              const closeBtn = document.querySelector('.lightbox-close'); 
+              if (closeBtn) {
+                  closeBtn.addEventListener('click', closeLightbox);
+              }
+              */
+          }
+      });
 
     
       // 取得 sub-nav 和對應的內容區塊
