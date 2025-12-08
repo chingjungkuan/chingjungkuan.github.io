@@ -127,14 +127,6 @@ ul li::marker {
 		grid-template-columns: 1fr;
 	  }
 	
-	  .image-manual {
-		background-position: center;
-		width: auto;             /* 寬度由圖片決定 */
-		max-width: 120px;        /* 限制最大寬度避免太大 */
-		aspect-ratio: 4 / 3;     /* 或用固定高度也行 */
-		flex-shrink: 0;          /* 不允許壓縮 */
-		border-radius: 12px;
-	  }
 	.description-text,
   	.image-block {
 		order: unset;
@@ -269,52 +261,17 @@ ul li::marker {
 /* -------------------------- *\
 	Component
 \* -------------------------- */
-
-
-/* image container */
-.image-container{
-    border-radius: 20px;
-	width: 100%;
-	/*border: 1px solid #000;*/
+/* image container - 專案頁面圖片 */
+.image-block { 
+    flex: 1;
+    width: 100%;
+    display: block;     
+    aspect-ratio: 3 / 2; 
+    object-fit: cover; 
+    object-position: center;  
+    order: 2;
 }
-.image-container:before{
-	content: '';
-	display: block;
-	width: 100%;
-	padding-top: 75%;
-}
-.image-container .image{
-	position: absolute;
-	left: 0;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-position: center;
-}
-.image-block {
-	order: 1; /* 預設電腦版圖在左邊 */
-  	flex: 1;
-	background-size: cover;
-	background-position: center;
-	background-repeat: no-repeat;
-	width: 100%;
-	aspect-ratio: 3 / 2; 
-	order: 2;
-  }
 
-.image-manual {
-	background-size: contain;
-	background-position: left;
-	background-repeat: no-repeat;
-	height: 200px; /* 可自訂高 */
-	width: auto;
-	max-width: 120px;
-	aspect-ratio: 4 / 3;
-	flex-shrink: 0;
-	border-radius: 12px;
-  }
 /* 填滿容器的圖片 */
   .box-img{
 	width: 100%;
@@ -406,13 +363,4 @@ ul li::marker {
 	.img-txt .image-block{
 		order:2;
 	}
-}
-
-/* 測試 lazy loading */
-.lazy-bg {
-  opacity: 0;
-}
-
-.lazy-bg.loaded {
-  opacity: 1;
 }
