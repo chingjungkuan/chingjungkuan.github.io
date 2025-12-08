@@ -201,8 +201,9 @@ li{
 	border-radius: 10px;
 	box-shadow: 0 0 20px rgba(255,255,255,0.3);
 	transition: transform 0.3s ease;
-  } 
-/* btn */
+  }
+
+/* Button */
 .btn{
 	display: inline-block;
 	align-self: flex-start;
@@ -216,7 +217,7 @@ li{
 	border-radius: 4px;
 	transition: all 0.3s;
 }
-/* 主要的按鈕 */
+/* Default 按鈕 */
 .btn.btn-primary{
 	background-color: #185ADB;
 	border: 1px solid #185ADB;
@@ -277,7 +278,7 @@ li{
 	}
 }
 
-/* navbar */
+/* 導覽列 */
 .navbar {
 	height: 64px;
 	width: 100%;
@@ -607,3 +608,32 @@ li{
     height: auto;    
     object-fit: contain; 
 }
+
+/* 滾動置頂按鈕 */
+#scrollToTopBtn {
+    position: fixed; 
+    bottom: 20px; 
+    right: 24px; 
+    display: none;
+    z-index: 99;
+    border: none;
+    outline: none;
+    background-color: #191919;
+    color: white;
+    cursor: pointer;
+    padding: 12px 16px;
+    border-radius: 8px; 
+    font-size: 20px;
+    opacity: 0.8;
+    transition: opacity 0.3s;
+}
+
+#scrollToTopBtn:hover {
+    opacity: 1;
+}
+@media screen and (max-width: 768px) {
+#scrollToTopBtn {
+	    bottom: 20px; 
+    	right: 12px;
+	}
+  }
