@@ -212,6 +212,7 @@ li{
 	width: auto;
 	vertical-align: top;
 	font-size: 16px;
+	font-weight: 700;
 	line-height: 24px;
 	padding: 8px 16px;
 	border: 1px solid #fff;
@@ -639,3 +640,4 @@ li{
     	right: 12px;
 	}
   }
+
