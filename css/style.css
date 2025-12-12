@@ -23,18 +23,21 @@ h3{	font-size:24px;	line-height: 1.4;}
 h4{	font-size:20px; line-height: 1.4;}
 h5{	font-size:16px;	line-height: 1.4;}
 h6{	font-size:14px;	line-height: 1.4;}
-ul{	margin: 0;	padding: 0;	font-size: 14px;	list-style: none;}
-a{	text-decoration: none;	color: #414141;}
-p{
-	line-height: 1.5 ;
-	margin: 0;
-}
-
-li{
-	font-size: 14px;
-	line-height: 150%;
+ul{
+	margin: 0;	padding: 0;	font-size: 14px;
+	line-height: 1.5;
+	list-style: disc;        /* 顯示圓點 */
+	padding-left: 1.2em;     /* 加一些內縮，讓圓點出現 */
 	color: #414141;
 }
+ul li::marker {
+	font-size: 0.8em; /* 調整圓點大小 */
+}
+
+a{	text-decoration: none;	color: #414141;}
+p{	line-height: 1.5 ;	margin: 0;}
+li{	font-size: 14px; line-height: 150%;	color: #414141;}
+
 .sm-title {
 	font-size: 14px;
 	font-weight: normal;
@@ -674,9 +677,7 @@ img {
 \* -------------------------- */
 
 /* 設計流程區塊 */
-#flow h2 {
-    width: 60px;
-}
+#flow h2 {  width: 60px;}
 .step {
     text-align: left;
     flex: 1;
