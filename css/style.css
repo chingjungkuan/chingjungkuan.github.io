@@ -626,7 +626,12 @@ li{
         border-radius: 0 0 40px 40px;
     }
 }
-/* 圖片相關 */
+/* Image 圖片相關 */
+img {
+    display: block;
+    width: 100%;
+}
+
 #lightbox-img {
     /* 確保圖片不超過 Lightbox 容器的最大尺寸 */
     max-width: 90vw; /* 螢幕寬度的 90% */
