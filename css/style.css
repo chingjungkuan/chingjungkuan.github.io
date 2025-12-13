@@ -79,7 +79,6 @@ li{	font-size: 14px; line-height: 150%;	color: #414141;}
     color: #625043;
 }
 
-/* Tablet & up（≥768px） */
 @media (min-width: 768px) {
     .display-title {
         font-size: 64px;
@@ -242,11 +241,11 @@ li{	font-size: 14px; line-height: 150%;	color: #414141;}
     flex-direction: row;
     gap: 24px;
     align-items: center;
-    flex-wrap: wrap;
+
 }
 
 /* ==========================
-   Hero layout（手機）
+   Hero layout
 ========================== */
 
 .hero-grid {
@@ -262,7 +261,7 @@ li{	font-size: 14px; line-height: 150%;	color: #414141;}
 }
 
 /* ==========================
-   Grid columns（手機預設）
+   Grid columns
 ========================== */
 
 .hero-grid.m-1col,
@@ -271,9 +270,6 @@ li{	font-size: 14px; line-height: 150%;	color: #414141;}
     grid-template-columns: 1fr;
 }
 
-/* ==========================
-   平板以上 Grid（≥768px）
-========================== */
 @media (min-width: 768px) {
 
     .hero-grid.m-1col {
