@@ -5,7 +5,7 @@
 
 .hero-grid.d-5col-7col {
 	display: grid;
-	grid-template-columns: 1fr; /* 手機版單欄 */
+	grid-template-columns: 1fr;
 	gap: 24px;
 }
 
@@ -69,7 +69,7 @@
 	區塊
 \* -------------------------- */
 /* --------------------------
-   Hero Section (mobile-first)
+   Hero Section
 -------------------------- */
 .jumbotron {
 	padding-top: 80px;
@@ -165,7 +165,7 @@
 
 /* logo image */
 .jumbotron .logo-wrapper .logo-image {
-	height: 200px; /* mobile 高度 */
+	height: 200px;
 	width: auto;
 	object-fit: contain;
 	object-position: center;
@@ -178,7 +178,6 @@
 		font-size: 14px;
 	}
 
-	/* graphic 標籤 (左上) */
 	.tag-graphic {
 		top: 32%;
 		left: 1%;
@@ -229,7 +228,6 @@
 	gap: 12px;
 }
 
-/* 手機版預設樣式 */
 .skill-item {
 	display: flex;
 	flex-direction: row;
@@ -266,6 +264,10 @@
 		flex-direction: row; 
 		gap: 24px; 
 	}
+	.skill-item .image4-3 {
+		width: 100%;
+
+	}
 }
 
 
@@ -276,8 +278,7 @@
     margin: 0 auto;
 }
 
-/* 所有的卡片容器 */
-.cards{
+.ui-txt-card{
     display: flex;
     gap: 24px;
     flex-wrap: wrap;
@@ -333,22 +334,20 @@
     .card{ 
         /* 33.333% 減去 2/3 的間距 (24px * 2 / 3 = 16px) */
         flex: 1 1 calc(33.333% - 16px); 
-        min-width: 280px; /* 增加最小寬度限制，避免卡片太窄 */
+        min-width: 280px;
     }
 }
-
-
 /* Contact Section */
 
 .contact-container{
     display: flex;
-    flex-direction: column; /* 手機預設為垂直堆疊 */
-    gap: 12px; /* 手機的間距 */
+    flex-direction: column;
+    gap: 12px;
 }
 
 .contact-info{
     display: flex;
-    flex-direction: column; /* 手機預設為垂直堆疊 */
+    flex-direction: column; 
     align-items: baseline; /* 手機靠左對齊 */
     width: 100%;
     gap: 12px;
@@ -357,12 +356,12 @@
 .info-item {
     display: flex;
     align-items: flex-start; /* 手機頂部對齊 */
-    gap: 8px; /* 手機的 item 間距 */
+    gap: 8px;
 }
 
 @media screen and (min-width: 768px) {
     .contact-container{
-        flex-direction: row; /* 平板開始恢復水平排列 */
+        flex-direction: row;
         gap: 24px;
     }
 
