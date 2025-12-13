@@ -32,13 +32,13 @@
     <!-- Start main -->
         <section class="main">
           <!-- Start banner -->
-           <section class="hero-banner-wrapper">
-              <picture>
-                  <source srcset="../images/editor2/img_banner-mobile.jpg" media="(max-width: 768px)">
-                  <source srcset="../images/editor2/img_banner-pad.jpg" media="(max-width: 992px)">
-                  <img class="hero-banner-img" src="../images/editor2/img_banner-desktop.jpg" alt="Editor2 線上編輯器橫幅截圖" loading="eager">
-              </picture>
-            </section>
+          <section class="hero-banner-wrapper">
+            <picture>
+                <source srcset="../images/editor2/img_banner-desktop.jpg" media="(min-width: 992px)">
+                <source srcset="../images/editor2/img_banner-pad.jpg" media="(min-width: 768px)">
+                <img class="hero-banner-img" src="../images/editor2/img_banner-mobile.jpg" alt="Editor2 線上編輯器作品集 banner圖片" loading="eager">
+            </picture>
+          </section>
 			    <!-- End banner -->
           <!-- Start Design Impact -->
                 
@@ -230,7 +230,7 @@
             <!-- img2-txt1 痛點與觀察 -->
             <div id="pain-point" class="img-txt top-container hero-grid d-2col-1col ">
               <img class="image-block lightbox-trigger" src="../images/editor2/img_pain-point.jpg" alt="痛點分析圖片描述" loading="lazy"> 
-              <div class="hero-title">
+              <div class="description-text">
                 <h2 class="title">痛點與觀察 <span class="sm-title">Pain Point & Task</span></h2>
                 <h3 class="title">舊版編輯器的問題</h3>
                 <ul class="para">
@@ -255,7 +255,7 @@
 
             <div  id="solution" class="top-container hero-grid m-1col-2col">
                     
-                <div class="hero-title">
+                <div class="description-text">
                 <h2 class="title">設計優化重點 <span class="sm-title">Solution</span></h2>
                 <p class="para">為了解決上述問題，我重新規劃了操作流程與介面結構，讓整體體驗更直覺清晰：</p>
                 <ul class="para">
@@ -288,7 +288,7 @@
 
             <div class="top-container hero-grid m-1col-2col">
                     
-                <div class="hero-title">
+                <div class="description-text">
                 <h2 class="title">User Flow <span class="sm-title">Ideate</span></h2>
                 <h3 class="title">以流程優化為核心，提升編輯效率與使用體驗</h3>
                 <p class="para">
@@ -302,7 +302,7 @@
             <!-- Start img2-txt1 Wireframe-->
             <div  class="img-txt top-container hero-grid d-2col-1col">
               <img class="image-block lightbox-trigger" src="../images/editor2/img_wireframe.jpg" alt="低擬真線框稿截圖"loading="lazy">   
-                <div class="hero-title">
+                <div class="description-text">
                     <h2 class="title">Wireframe</h2>
                     <h3 class="title">從草圖到線框：建立清晰介面架構</h3>
                     <p  class="para">
@@ -313,14 +313,14 @@
             <!-- End img2-txt1 Wireframe -->
 
             <!-- Start UI Design -->
-            <div  id="ui-design" class="d-vertical container">
+            <div  id="ui-design" class="flex-v-24 container">
               <div class="top-container t-center display-title">UI Design </div>  
             <div class="container">
               <!-- Start txt1-img2 User flow -->
               <div class="container">
                   <div  class="notop-container hero-grid m-1col">
                           
-                    <div class="hero-title">
+                    <div class="description-text">
                     <h2 class="title">設計風格進化 <span class="sm-title">Ideate</span></h2>
                     
                     <ul class="para">
@@ -418,7 +418,7 @@
                 <!-- Satrt img2-txt1 套用主題02-->
                 <div  class="img-txt top-container hero-grid d-2col-1col">
                   <img class="image-block lightbox-trigger" src="../images/editor2/img_theme-confirmed.jpg" alt="主題確認頁面截圖" loading="lazy">    
-                  <div class="hero-title">
+                  <div class="description-text">
                       <span class="sm-title">套用主題</span>
                       <h3 class="title"><span class="highlight">主題變更確認機制</span>，避免誤套錯誤版型</h3>
                       <p class="para-16">▍降低版型變更風險</p>
@@ -499,7 +499,7 @@
           <div  class="img-txt top-container hero-grid d-2col-1col">
             <img class="image-block lightbox-trigger" src="../images/editor2/img_coach-mark.jpg" alt="新手引導標記 Coach Mark 截圖" loading="lazy">
 
-            <div class="hero-title">
+            <div class="description-text">
                 <span class="sm-title">編輯內容</span>
                 <h3 class="title">教學/新功能推播 <span class="highlight">Coach Mark</span></h3>
                 <p class="para-16">▍新功能與重點功能提示</p>
@@ -601,7 +601,7 @@
           <div  class="img-txt top-container hero-grid d-2col-1col">
           <img class="image-block lightbox-trigger" src="../images/editor2/img_rwd.jpg" alt="響應式設計 RWD 截圖" loading="lazy">
 
-          <div class="hero-title">
+          <div class="description-text">
               <span class="sm-title">整體</span>
               <h3 class="title">全面優化響應式編輯體驗</h3>
               <p class="para-16">▍跨裝置的響應式優化</p>
@@ -644,7 +644,7 @@
             <div  class="layout-center display-title">Style Guide </div> 
             
             <div class="container two-column-grid">
-              <div class="item">
+              <div class="item item-bg-grey">
                 <h4 class="title">📌視覺層次清晰，資訊更有條理</h4>
                 <p class="para"><span class="para-16">[Before]</span><br>
                   介面元素較密集，顏色較重，資訊層次不夠明顯，且視線需要來回移動，增加認知負擔。
@@ -658,7 +658,7 @@
                   </ul>
                 
               </div>
-              <div class="item">
+              <div class="item item-bg-grey">
                 <h4 class="title">📌色彩與對比更簡潔，符合現代設計趨勢</h4>
                 <p class="para"><span class="para-16">[Before]</span><br>
                   採用深灰與橘色的深色背景，並透過漸層營造立體感，但強烈的色彩對比容易造成視覺疲勞，同時功能區塊之間的區隔不夠明顯。
@@ -667,7 +667,7 @@
                   改用更柔和、現代的配色（淺米色＋細緻灰＋低飽和橘色），整體視覺更溫暖親和，符合當代 UI 設計趨勢。背景顏色變淺，使內容與圖片更突出，避免背景喧賓奪主。對比度經過優化，畫面更柔和卻仍保持清晰可讀性。
                 </p>
               </div>
-              <div class="item">
+              <div class="item item-bg-grey">
                 <h4 class="title">📌圓角與留白強化層次，細節更具質感</h4>
                 <p class="para"><span class="para-16">[Before]</span><br>
                   版面呈現早期網頁設計風格，以銳利邊角與硬性分隔為主，缺乏柔和的視覺層次。
@@ -676,7 +676,7 @@
                   元件與區塊改用圓角設計，介面更親和現代。適度留白提升呼吸感，減少壓迫並突顯主要內容；搭配細緻陰影與分層，清楚區隔照片編輯區與工具欄，強化視覺層次。
                 </p>
               </div>
-              <div class="item">
+              <div class="item item-bg-grey">
                 <h4 class="title">📌字級與排版更精緻，提升可讀性</h4>
                 <p class="para"><span class="para-16">[Before]</span><br>
                   按鈕與文字區塊稍顯擁擠，字體大小與間距略小，導致可讀性較差。
@@ -691,7 +691,7 @@
                   <div  class="notop-container">
                     <img src="../images/common/img_color.jpg" alt="Banner" class="lightbox-trigger">
                   </div>
-                  <div  class="d-vertical">
+                  <div  class="flex-v-24">
                     <img src="../images/common/img_typography.jpg" alt="Banner" class="lightbox-trigger">
                   </div>
                   <div class="top-container layout-center">
@@ -699,23 +699,23 @@
                     <h3 class="title">清晰的視覺元素，明確定義設計元件</h3>
                     <p class="t-center para">先將各類可能會發生的情境列出，並設計不同情境下的元件樣式。</p>
                   </div>
-                  <div  class="d-vertical">
+                  <div  class="flex-v-24">
                     <img src="../images/common/img_input-textfield.jpg" alt="Text Field 設計元件" class="lightbox-trigger">
                     <img src="../images/common/img_input-textarea.jpg" alt="Textarea 設計元件" class="lightbox-trigger">
                   </div>
-                  <div  class="d-vertical">
+                  <div  class="flex-v-24">
                     <img src="../images/common/img_button.jpg" alt="Button 設計元件" class="lightbox-trigger">
                   </div>
-                  <div  class="d-vertical">
+                  <div  class="flex-v-24">
                     <img src="../images/common/img_select-checkbox-radio.jpg" alt="Select 相關元件" class="lightbox-trigger">
                   </div>
-                  <div  class="d-vertical">
+                  <div  class="flex-v-24">
                     <img src="../images/common/img_tab-switch-pagination.jpg" alt="Tab 設計元件" class="lightbox-trigger">
                   </div>
-                  <div  class="d-vertical">
+                  <div  class="flex-v-24">
                     <img src="../images/common/img_taost.jpg" alt="Toast 設計元件" class="lightbox-trigger">
                   </div>
-                  <div  class="d-vertical">
+                  <div  class="flex-v-24">
                     <img src="../images/common/img_badge.jpg" alt="Badge(tag&pill)設計元件" class="lightbox-trigger">
                   </div>
 
@@ -733,19 +733,19 @@
 
         <div class="two-column-grid">
 
-          <div class="item">
+          <div class="item item-bg-grey">
             <h4 class="title">透過精準提問，挖掘用戶的真實需求與痛點</h4>
             <p class="para">與使用者訪談時，我學到關鍵不僅在詢問需求，而是透過開放式提問挖掘真實痛點。像部分用戶覺得介面「不好用」，實際原因是照片管理分散，需頻繁切換視窗。</p>
           </div>
-          <div class="item">
+          <div class="item item-bg-grey">
             <h4 class="title">如何建立清晰的資訊架構，讓內容有層次且易讀</h4>
             <p class="para">在優化介面過程中，我體會到資訊架構對使用行為的影響。新版統一照片管理區域位置，減少視線移動，並透過色彩與間距強調主要功能，讓操作更順暢直覺。</p>
           </div>
-          <div class="item">
+          <div class="item item-bg-grey">
             <h4 class="title">反思使用者操作行為，分析背後的設計問題</h4>
             <p class="para">除了操作不順外，我也思考使用者為何會誤操作或忽略步驟。像舊版按鈕間距過小導致誤點，問題不在用戶而是設計需優化，讓我更關注降低認知負擔與提升操作直覺性。</p>
           </div>
-          <div class="item">
+          <div class="item item-bg-grey">
           <h4 class="title">跨部門溝通與協作，提升效率並精準傳達設計思維</h4>
           <p class="para">與開發與產品團隊合作時，我學會以明確邏輯表達設計需求，確保開發能準確實作。以「拖拉照片排序」為例，我運用流程圖與互動示意協助團隊快速對齊，降低溝通與修改成本。</p>
           </div>
