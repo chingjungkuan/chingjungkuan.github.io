@@ -250,7 +250,7 @@ li{	font-size: 14px; line-height: 150%;	color: #414141;}
 
 .hero-grid {
     display: grid;
-    gap: 24px;
+    gap: 16px;
     align-items: center;
 }
 
@@ -271,6 +271,12 @@ li{	font-size: 14px; line-height: 150%;	color: #414141;}
 }
 
 @media (min-width: 768px) {
+	.hero-grid {
+		gap: 24px;
+	}
+	.hero-flex {
+        flex-direction: row;
+    }
 
     .hero-grid.m-1col {
         grid-template-columns: 1fr 1fr;
@@ -284,9 +290,7 @@ li{	font-size: 14px; line-height: 150%;	color: #414141;}
         grid-template-columns: 2fr 1fr;
     }
 
-    .hero-flex{
-        flex-direction: row;
-    }
+
 }
 
 /* ==========================
