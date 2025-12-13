@@ -386,13 +386,12 @@ li{	font-size: 14px; line-height: 150%;	color: #414141;}
 }
 
 .image4-3 {
-    width: 100%;
     aspect-ratio: 4 / 3;
     object-fit: cover;
     border-radius: 20px;
 }
 /* 填滿容器的圖片 */
-  .box-img{
+.box-img{
 	width: 100%;
 	height: auto;
 	display: block;
