@@ -33,13 +33,13 @@
     <!-- Start main -->
         <section class="main">
           <!-- Start banner -->
-           <section class="hero-banner-wrapper">
-              <picture>
-                  <source srcset="../images/explore/img_banner-mobile.jpg" media="(max-width: 768px)">
-                  <source srcset="../images/explore/img_banner-pad.jpg" media="(max-width: 992px)">
-                  <img class="hero-banner-img" src="../images/explore/img_banner-desktop.webp" alt="Editor2 線上編輯器橫幅截圖" loading="eager">
-              </picture>
-            </section>
+          <section class="hero-banner-wrapper">
+            <picture>
+              <source srcset="../images/explore/img_banner-desktop.webp" media="(min-width: 992px)">
+              <source srcset="../images/explore/img_banner-pad.jpg"  media="(min-width: 768px)">
+              <img class="hero-banner-img" src="../images/explore/img_banner-mobile.jpg" alt="探索好作品作品集 banner 圖片" loading="eager">
+            </picture>
+          </section>
 			  
 			    <!-- End banner -->
           <!-- Start Design Impact -->
@@ -56,7 +56,7 @@
                     <path d="M48 24.002C48 30.3671 45.4714 36.4716 40.9706 40.9725C36.4697 45.4734 30.3652 48.002 24 48.002C17.6348 48.002 11.5303 45.4734 7.02944 40.9725C2.52856 36.4716 0 30.3671 0 24.002C0 17.6368 2.52856 11.5323 7.02944 7.03139C11.5303 2.53052 17.6348 0.00195313 24 0.00195312C30.3652 0.00195313 36.4697 2.53052 40.9706 7.03139C45.4714 11.5323 48 17.6368 48 24.002V24.002ZM36.09 14.912C35.8757 14.6984 35.6206 14.5303 35.3398 14.4176C35.059 14.3049 34.7584 14.25 34.456 14.2562C34.1535 14.2624 33.8554 14.3294 33.5795 14.4535C33.3035 14.5775 33.0554 14.7559 32.85 14.978L22.431 28.253L16.152 21.971C15.7255 21.5735 15.1613 21.3571 14.5784 21.3674C13.9955 21.3777 13.4394 21.6138 13.0271 22.0261C12.6149 22.4383 12.3788 22.9945 12.3685 23.5774C12.3582 24.1603 12.5746 24.7244 12.972 25.151L20.91 33.092C21.1238 33.3054 21.3785 33.4736 21.6588 33.5865C21.939 33.6994 22.2391 33.7547 22.5412 33.7491C22.8433 33.7435 23.1412 33.6771 23.4171 33.5539C23.693 33.4307 23.9412 33.2532 24.147 33.032L36.123 18.062C36.5313 17.6374 36.7568 17.0698 36.7512 16.4808C36.7456 15.8919 36.5093 15.3286 36.093 14.912H36.09Z" fill="#E4DEDA"/>
                   </svg>
               </div>
-              <div class="text item">
+              <div class="text">
                 <h4 class="title">清晰的資訊架構</h4>
                 <p class="para">透過<strong>重新分層</strong>，將頁面劃分為「精選作品」與「主題探索」兩大區塊，並搭配卡片式設計，讓使用者更直覺理解內容結構。</p>
               </div>
@@ -67,7 +67,7 @@
                     <path d="M48 24.002C48 30.3671 45.4714 36.4716 40.9706 40.9725C36.4697 45.4734 30.3652 48.002 24 48.002C17.6348 48.002 11.5303 45.4734 7.02944 40.9725C2.52856 36.4716 0 30.3671 0 24.002C0 17.6368 2.52856 11.5323 7.02944 7.03139C11.5303 2.53052 17.6348 0.00195313 24 0.00195312C30.3652 0.00195313 36.4697 2.53052 40.9706 7.03139C45.4714 11.5323 48 17.6368 48 24.002V24.002ZM36.09 14.912C35.8757 14.6984 35.6206 14.5303 35.3398 14.4176C35.059 14.3049 34.7584 14.25 34.456 14.2562C34.1535 14.2624 33.8554 14.3294 33.5795 14.4535C33.3035 14.5775 33.0554 14.7559 32.85 14.978L22.431 28.253L16.152 21.971C15.7255 21.5735 15.1613 21.3571 14.5784 21.3674C13.9955 21.3777 13.4394 21.6138 13.0271 22.0261C12.6149 22.4383 12.3788 22.9945 12.3685 23.5774C12.3582 24.1603 12.5746 24.7244 12.972 25.151L20.91 33.092C21.1238 33.3054 21.3785 33.4736 21.6588 33.5865C21.939 33.6994 22.2391 33.7547 22.5412 33.7491C22.8433 33.7435 23.1412 33.6771 23.4171 33.5539C23.693 33.4307 23.9412 33.2532 24.147 33.032L36.123 18.062C36.5313 17.6374 36.7568 17.0698 36.7512 16.4808C36.7456 15.8919 36.5093 15.3286 36.093 14.912H36.09Z" fill="#E4DEDA"/>
                   </svg>
               </div>
-              <div class="text item">
+              <div class="text">
                 <h4 class="title">不中斷的探索體驗</h4>
                 <p class="para">改用 Modal 瀏覽，頁面返回時的<strong>重複操作減少</strong>，觀察 GA 後台發現使用者平均停留時間增加 30%。</p>
               </div>
@@ -78,7 +78,7 @@
                     <path d="M48 24.002C48 30.3671 45.4714 36.4716 40.9706 40.9725C36.4697 45.4734 30.3652 48.002 24 48.002C17.6348 48.002 11.5303 45.4734 7.02944 40.9725C2.52856 36.4716 0 30.3671 0 24.002C0 17.6368 2.52856 11.5323 7.02944 7.03139C11.5303 2.53052 17.6348 0.00195313 24 0.00195312C30.3652 0.00195313 36.4697 2.53052 40.9706 7.03139C45.4714 11.5323 48 17.6368 48 24.002V24.002ZM36.09 14.912C35.8757 14.6984 35.6206 14.5303 35.3398 14.4176C35.059 14.3049 34.7584 14.25 34.456 14.2562C34.1535 14.2624 33.8554 14.3294 33.5795 14.4535C33.3035 14.5775 33.0554 14.7559 32.85 14.978L22.431 28.253L16.152 21.971C15.7255 21.5735 15.1613 21.3571 14.5784 21.3674C13.9955 21.3777 13.4394 21.6138 13.0271 22.0261C12.6149 22.4383 12.3788 22.9945 12.3685 23.5774C12.3582 24.1603 12.5746 24.7244 12.972 25.151L20.91 33.092C21.1238 33.3054 21.3785 33.4736 21.6588 33.5865C21.939 33.6994 22.2391 33.7547 22.5412 33.7491C22.8433 33.7435 23.1412 33.6771 23.4171 33.5539C23.693 33.4307 23.9412 33.2532 24.147 33.032L36.123 18.062C36.5313 17.6374 36.7568 17.0698 36.7512 16.4808C36.7456 15.8919 36.5093 15.3286 36.093 14.912H36.09Z" fill="#E4DEDA"/>
                   </svg>
               </div>
-              <div class="text item">
+              <div class="text">
                 <h4 class="title">更具啟發性的內容呈現</h4>
                 <p class="para">卡片新增瀏覽數據，並針對不同主題預設合適的產品（如婚禮 → 映畫本），<strong>提升探索動機</strong>，為缺乏靈感的使用者提供明確方向。</p>
               </div>
@@ -199,32 +199,32 @@
             <!-- img2-txt1 痛點與觀察 -->
             <div id="pain-point" class="top-container">
  
-              <div class="hero-title">
+              <div class="description-text">
                 <h2 class="title">痛點與觀察 <span class="sm-title">Pain Point & Task</span></h2>
                   <div class="container two-column-grid">
 
-                    <div class="item">
+                    <div class="item item-bg-grey">
                     <h4 class="title">🗯️ 分類與篩選結構易混淆</h4>
                     <ul class="para">
                       <li>左側篩選清單項目過多且層級不清，使用者容易忽略或不知如何開始；篩選後的狀態也不明顯，缺少高亮或快速清除等即時回饋。</li>
                       <li>主題 Icon 按鈕偏灰，缺乏吸引力與選中狀態，降低互動與辨識度。</li>
                     </ul>
                     </div>
-                    <div class="item">
+                    <div class="item item-bg-grey">
                     <h4 class="title">🗯️ 導覽語意不明確與資訊不足</h4>
                     <ul class="para">
                       <li>每張卡片只看到縮圖和作品標題，沒有額外的敘述引導或互動，導致使用者難以判斷是否想點進去。</li>
                       <li>頁面標題「大家的點點印作品」過於籠統，對第一次進來的使用者沒有強烈指引。</li>
                     </ul>
                     </div>
-                    <div class="item">
+                    <div class="item item-bg-grey">
                     <h4 class="title">🗯️ 流程與版面影響探索</h4>
                     <ul class="para">
                     <li>作點擊作品卡片後會跳轉至作品欣賞頁，返回列表時需自行尋找原本位置，導致瀏覽流程被中斷。</li>
                     <li>卡片間距不一致，作品圖片偏小，版面顯得擁擠，降低瀏覽舒適度。</li>
                     </ul>
                     </div>
-                    <div class="item">
+                    <div class="item item-bg-grey">
                     <h4 class="title">🗯️ 排序與分頁的探索效率低</h4>
                     <ul class="para">
                       <li>「熱門 / 最新」混在在側邊導覽列，且看後台實際使用此功能佔少數。</li>
@@ -244,7 +244,7 @@
 
             <div id="solution" class="top-container hero-grid m-1col-2col">
                     
-                <div class="hero-title">
+                <div class="description-text">
                   <h2 class="title">設計優化重點 <span class="sm-title">Solution</span></h2>
 
                   <ul class="para">
@@ -273,7 +273,7 @@
             <div id="ia" class="img-txt top-container hero-grid d-2col-1col">
                 <img class="image-block lightbox-trigger" src="/images/explore/img_ia.jpg" alt="資訊架構 IA 圖" loading="lazy">
    
-                <div class="hero-title">
+                <div class="description-text">
                     <h2 class="title">資訊架構<span class="sm-title">Define</span></h2>
                     <h3 class="title">重構資訊架構，建立清晰的探索層級</h3>
                     <ul class="para">
@@ -287,7 +287,7 @@
 
             <div class="top-container hero-grid m-1col-2col">
                     
-                <div class="hero-title">
+                <div class="description-text">
                 <h2 class="title">User Flow <span class="sm-title">Ideate</span></h2>
                 <h3 class="title">視覺化流程，釐清痛點並重構架構</h3>
                 <p class="para">
@@ -303,7 +303,7 @@
             <div  class="img-txt top-container hero-grid d-2col-1col">
               
             <img class="image-block lightbox-trigger" src="/images/explore/img_wireframe.jpg" alt="低擬真線框稿截圖" loading="lazy">   
-                <div class="hero-title">
+                <div class="description-text">
                     <h2 class="title">Wireframe+Lo-fi Prototype</h2>
                     <h3 class="title">以低擬真原型快速驗證，化繁為簡，確保探索流程更直覺</h3>
                     <p class="para">
@@ -323,7 +323,7 @@
                   <div class="layout-center display-title">UI Design </div>
                     <div  class="notop-container hero-grid m-1col-2col">
                             
-                      <div class="hero-title">
+                      <div class="description-text">
                         <h2 class="title">統一<span class="text-primary">新版</span>設計風格 </h2>
                         
                         <ul class="para">
@@ -536,21 +536,21 @@
             <div class="top-container">
               <div  class="layout-center display-title">Style Guide </div> 
               <div class="three-column-grid">
-                <div class="item">
+                <div class="item item-bg-grey">
                   <h4>區塊間距與空間感提升</h4>
                   <p class="para">  <b>[Before]</b><br>
                   區塊間距過小，內容顯得緊湊，降低閱讀的舒適度與辨識度。<br>
                   <b>[After]</b> <br>
                   透過重新定義標題層級與留白，讓排版更清晰，同時整合篩選內容於同一區塊，強化資訊結構與閱讀體驗。</p>
                 </div>
-                <div class="item">
+                <div class="item item-bg-grey">
                   <h4>統一圓角、留白與陰影，強化介面質感</h4>
                   <p class="para"><b>[Before]</b> <br>
                     卡片與版面分隔生硬，缺乏柔和層次；icon 按鈕缺乏一致規範，狀態不明顯，使用者不易辨識可點擊性。<br>
                     <b>[After]</b> <br>
                     統一按鈕與 icon 規範，並導入圓角、留白與陰影設計，營造現代化且友善的風格，提升空間感與聚焦度。</p>
                 </div>
-                <div class="item">
+                <div class="item item-bg-grey">
                   <h4>視覺層次更清晰，資訊組織條理化</h4>
                   <p class="para"> <b>[Before]</b> <br>
                     作品卡片比例偏小，排版顯得擁擠，重點難以凸顯。<br>
@@ -598,19 +598,19 @@
 
         <div class="two-column-grid">
 
-          <div class="item">
+          <div class="item item-bg-grey">
           <h4 class="title">💡 以使用情境為核心思考</h4>
           <p class="para">透過觀察使用者在「探索作品」的瀏覽行為，我理解到設計不只是呈現資訊，而是要維持流暢、不中斷的體驗，Modal 的引入就是基於這個思考。</p>
           </div>
-          <div class="item">
+          <div class="item item-bg-grey">
           <h4 class="title">💡 資訊層級與分組的重要性</h4>
           <p class="para">整理作品資訊的歸納分組，讓我更清楚視覺層級如何影響使用者理解，也培養我用簡單設計語言引導注意力的能力。</p>
           </div>
-          <div class="item">
+          <div class="item item-bg-grey">
           <h4 class="title">💡 細節決定使用感受</h4>
           <p class="para">從字體大小、顏色到圖示呈現，每個小調整都能降低使用者認知負擔，讓我體會到「細節優化」對整體體驗的重要性。</p>
           </div>
-          <div class="item">
+          <div class="item item-bg-grey">
           <h4 class="title">💡 設計需兼顧團隊與可實作性</h4>
           <p class="para">在規劃資訊架構與 Modal 流程時，我學會如何將抽象想法整理成可落地的規格文件，讓團隊能快速理解與實作，強化了自身跨角色協作的能力。</p>
           </div>
