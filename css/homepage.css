@@ -2,179 +2,49 @@
 /* -------------------------- *\
 	Layout
 \* -------------------------- */
-/* grid system */
 
-/* 不用推上下padding的容器 */
-.container{
-	max-width: 1152px;
-	width: 100%;
-	margin: 0 auto;
-	padding: 0px 16px;
-}
-/* 上下需推 padding 的容器 */
-.hero-container{
-	max-width: 1152px;
-	width: 100%;
-	margin: 0 auto;
-	padding: 80px 16px;
-}
-/* 排列方式 */
-.d-horizontal{
-	display: flex;
-	flex-direction: row;
-	gap: 24px;
-	align-items: center;
-	flex-wrap: wrap;
-	
-}
-.d-vertical{
-	display: flex;
-	flex-direction: column;
-	gap: 24px;
-}
-.vertical-48{
-	display: flex;
-	flex-direction: column;
-	gap:48px
-}
-
-.hero-grid {
+.hero-grid.d-5col-7col {
 	display: grid;
-	gap: 24px;
-	align-items: center;
-}
-
-.hero-flex{
-	display: flex;
-	flex-direction: row;
+	grid-template-columns: 1fr; /* 手機版單欄 */
 	gap: 24px;
 }
-.hero-flex.m-2col {
-	display: flex;
-	align-items: center;
-	flex-direction: row;
-	gap: 24px;
-	flex-wrap: nowrap; /* 不要換行 */
-}
 
-.description-text {
-	display: flex;
-	flex-direction: column;
-	gap: 16px;
-}
-
-
-@media screen and (max-width: 768px) {
-	.container {
-		padding: 0px 16px;
-	  }
-	.hero-container{
-		padding: 60px 16px;
-	  }
-	.hero-grid.m-2col {
-		grid-template-columns: 1fr;
-	  }
-	.description-text,
-  	.image-block {
-		order: unset;
-		}
-	.hero-grid {
-		flex-direction: column; /* 改為直向排列 */
-		}
-	.image-block {
-		order: 2; /* 圖片放下面 */
-		}
-	.hero-title {
-		order: 1; /* 文字放上面 */
+@media screen and (min-width: 768px) {
+	.hero-grid.d-5col-7col {
+		grid-template-columns: 5fr 7fr;
 	}
-
-  	.hero-grid {
-		flex-direction: column; /* 改為直向排列 */
-		}
-	.image-block {
-		order: 2; /* 圖片放下面 */
-		}
-	.hero-title {
-		order: 1; /* 文字放上面 */
-  	}
-
-	  
 }
-.hero-grid.m-1col {
-  display: grid;
-  grid-template-columns: 1fr 1fr; /* 電腦版兩欄 */
-  gap: 24px;
-}
-.d-2col-1col {
-	display: grid;
-	grid-template-columns: 2fr 1fr; /* 電腦版文左2右1 */
-	gap: 24px;
-  }
-.hero-grid.d-5col-7col {
-	display: grid;
-	grid-template-columns: 5fr 7fr; /* 電腦版左5右7 */
-	gap: 24px;
-  }
 
-/* 手機版：切換成一欄 */
-@media screen and (max-width: 768px) {
-.hero-grid.m-1col {
-    grid-template-columns: 1fr;
-  }
-.d-2col-1col {
-    grid-template-columns: 1fr;
-	gap:8px;
-  }
-.hero-grid.d-5col-7col {
-    grid-template-columns: 1fr;
-  }
-
-}
 /* -------------------------- *\
 	Component
 \* -------------------------- */
-
-
 /* image container */
-/* 寬高比例4:3*/
-
-.image4-3 {
-    width: 100%;
-    display: block;
-    aspect-ratio: 4 / 3; 
-    object-fit: cover; /* 讓圖片填滿空間並裁切多餘部分 */
-    border-radius: 20px; 
-}
 
 .image-skill-logo {
-    /* 保持寬度和高度限制 */
-    width: 100%;
-    height: 48px; 
+    width: 240px;
+    height: auto; 
     display: block; 
     object-fit: contain;
 	object-position: left; 
 }
-.image-manual {
+
+.img-contact {
     object-fit: contain; 
-    object-position: left;     
-    height: 80px;
-    width: auto; 
-    max-width: 80px;
-    aspect-ratio: 4 / 3; 
+    object-position: center;     
+    width: auto;
+    max-width: 120px;
     flex-shrink: 0;
     border-radius: 12px;
-    display: block; /* 或 inline-block */
+    display: block;
 }
 
-@media screen and (max-width: 768px) {
-    .image-manual {
-        object-position: center; 
-        width: auto;
-        max-width: 120px;
-        aspect-ratio: 4 / 3;
+@media screen and (min-width: 768px) {
+    .img-contact {
+        object-position: left; 
+        height: 80px;
+        width: auto; 
         flex-shrink: 0;
-        border-radius: 12px;
-        height: auto; /* 讓高度隨著寬度比例自動調整 */
+        border-radius: 0;
     }
 }
 
@@ -195,12 +65,15 @@
     height: 0;
     border-style: solid;
 }
-
-/* Hero Section */
-.jumbotron{
+/* -------------------------- *\
+	區塊
+\* -------------------------- */
+/* --------------------------
+   Hero Section (mobile-first)
+-------------------------- */
+.jumbotron {
 	padding-top: 80px;
 	padding-bottom: 80px;
-	/* background-image: url('../images/bg/hero_banner.png'); */
 	background-size: cover;
 	background-attachment: fixed;
 }
@@ -213,155 +86,134 @@
     align-items: baseline;
 }
 
-/* graphic 靠左標籤 */
+/* Mobile：標籤大小、位置 */
+.tag {
+	font-size: 12px;
+}
+
+/* graphic 標籤 (左上) */
 .tag-graphic {
 	z-index: 200;
-    background-color: #CF5C36;
-	top: 32%;
+	background-color: #CF5C36;
+	top: 12%;
 	left: 1%;
 }
 .tag-graphic::after {
-    border-width: 6px 6px 6px 0;
-    border-color: transparent #CF5C36 transparent transparent;
-    top: 50%;
-    right: -6px;
-    transform: translateY(-50%) rotate(180deg);
+	border-width: 6px 6px 6px 0;
+	border-color: transparent #CF5C36 transparent transparent;
+	top: 50%;
+	right: -6px;
+	transform: translateY(-50%) rotate(180deg);
 }
 
-/* Creativity 靠左標籤 */
+/* Creativity 標籤 (左下) */
 .tag-creativity {
 	z-index: 200;
-    background-color: #CCA43B;
+	background-color: #CCA43B;
 	bottom: 30%;
 	left: 10%;
 }
 .tag-creativity::after {
-    border-width: 6px 6px 6px 0;
-    border-color: transparent #CCA43B transparent transparent;
-    top: 50%;
-    right: -6px;
-    transform: translateY(-50%) rotate(180deg);
+	border-width: 6px 6px 6px 0;
+	border-color: transparent #CCA43B transparent transparent;
+	top: 50%;
+	right: -6px;
+	transform: translateY(-50%) rotate(180deg);
 }
 
-/* UIUX 靠右標籤 */
+/* UIUX 標籤 (右上) */
 .tag-uiux {
 	z-index: 200;
-    background-color: #252627;
-    bottom: 60%;
+	background-color: #252627;
+	bottom: 60%;
 	right: 0%;
 }
 .tag-uiux::after {
-    border-width: 6px 0 6px 6px;
-    border-color: transparent transparent transparent #252627;
-    top: 50%;
-    left: -5px;
-    transform: translateY(-50%) rotate(180deg);
+	border-width: 6px 0 6px 6px;
+	border-color: transparent transparent transparent #252627;
+	top: 50%;
+	left: -5px;
+	transform: translateY(-50%) rotate(180deg);
 }
-  
+
+/* logo wrapper */
 .jumbotron .logo-wrapper {
-  position: relative;
-  width: calc(320px + 160px); /* 比插圖多出80px邊距 */
-  margin: 0 auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 340px;
+	height: 160px;
+	margin: 0 auto;
 }
-  
-.jumbotron .logo-glow {
+
+/* glow */
+.jumbotron .logo-wrapper .logo-glow {
 	position: absolute;
-	top: 0;
-	left: 0;
-	transform: scale(1.2);
-	filter: blur(50px);
-	background: linear-gradient(270deg, #DBE7FE20 , #F7FAFF60 );
-	background-size: 150% 150%;
-	animation: animateGlow 10s ease infinite;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%) scale(1.05);
+	height: 160px;
+	width: 160px; /* mobile 簡單固定大小 */
 	border-radius: 50%;
 	z-index: 1;
-  	width: 40vw;         /* 自動縮放，最大寬度為視窗 40% */
-  	max-width: 320px;    /* 避免太大 */
-  	aspect-ratio: 1 / 1; /* 讓高度等比例 */
- 	margin: 0 auto;
-  }
-  
-.jumbotron .logo-image {
-  width: 320px;
-  height: 320px;
-  object-fit: contain;
-  object-position: center; 
-  display: block; 
-  position: relative;
-  z-index: 2;
-}
-
-@media screen and (max-width: 768px){
-	.tag{
-		font-size: 12px;
-	}
-	.jumbotron{
-		max-height: 320px;
-		padding-top: 80px;
-		padding-bottom: 80px;
-	}
-	.tag-graphic {
-		top: 12%;
-		left: 1%;
-	}
-}
-
-
-/* 發光動畫 */
-@keyframes animateGlow {
-	0% {
-	  background-position: 0% 50%;
-	}
-	50% {
-	  background-position: 100% 50%;
-	}
-	100% {
-	  background-position: 0% 50%;
-	}
-}
-
-@media screen and (max-width: 768px) {
-
-.jumbotron .logo-wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 340px;
-	height: 160px;
-    position: relative;
-}
-
-.jumbotron .logo-wrapper .logo-glow{
-    
-    height: 160px;
-    position: relative;
-}
-
-.jumbotron .logo-wrapper .logo-glow {
-	z-index: 1;
-	transform: scale(1.05);
 	filter: blur(12px);
 	background: linear-gradient(270deg, #fff6ee60 , #f7d51367 );
 	background-size: 200% 200%;
 	animation: animateGlow 10s ease infinite;
-	border-radius: 50%;
-	position: absolute;  /* 還是需要絕對定位讓它在圖片下方 */
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%) scale(1.05); /* 中心對齊 + scale */
 }
 
+/* logo image */
 .jumbotron .logo-wrapper .logo-image {
-    height: 200px; /* 保持這個覆蓋的高度值 */
-    z-index: 2;
-    object-fit: contain;
-    object-position: center;
-    display: block;
+	height: 200px; /* mobile 高度 */
+	width: auto;
+	object-fit: contain;
+	object-position: center;
+	z-index: 2;
+	display: block;
 }
+
+@media screen and (min-width: 768px){
+	.tag {
+		font-size: 14px;
+	}
+
+	/* graphic 標籤 (左上) */
+	.tag-graphic {
+		top: 32%;
+		left: 1%;
+	}
+
+	.jumbotron .logo-wrapper {
+		width: calc(320px + 160px); /* 比插圖多出80px邊距 */
+		height: auto;
+	}
+
+	.jumbotron .logo-wrapper .logo-glow {
+		top: 0;
+		left: 0;
+		transform: scale(1.2);
+		height: auto;
+		width: 40vw;
+		max-width: 320px;
+		aspect-ratio: 1 / 1;
+		filter: blur(50px);
+		background: linear-gradient(270deg, #DBE7FE20 , #F7FAFF60 );
+	}
+
+	.jumbotron .logo-wrapper .logo-image {
+		width: 320px;
+		height: 320px;
+	}
 }
+
+/* 發光動畫 */
+@keyframes animateGlow {
+	0% { background-position: 0% 50%; }
+	50% { background-position: 100% 50%; }
+	100% { background-position: 0% 50%; }
+}
+
 
 /* About Section */
 
@@ -376,79 +228,82 @@
 	flex-direction: column;
 	gap: 12px;
 }
-/* Skill Section */
-.skill-item{
+
+/* 手機版預設樣式 */
+.skill-item {
 	display: flex;
-	flex-direction: column;
-	gap: 24px;
-	flex: 1;
+	flex-direction: row;
+	gap: 16px; 
+	align-items: flex-start;
+	flex-wrap: nowrap; 
 }
-/* ... (保留桌面版樣式，將 .skill-item 設為 flex-direction: column) ... */
 
+.skill-item .title-txt {
+	flex: 1; 
+}
 
-@media screen and (max-width: 767px) {
-    .cards {
-        flex-direction: column; 
-        gap: 32px; 
-    }
+.skill-item .image4-3 {
+	width: 30%;
+	flex-shrink: 0; 
+	object-fit: contain; 
+	object-position: right; 
+}
 
-    .skill-item {
-        flex-direction: row; /* 關鍵：從 column 改為 row */
-        gap: 16px; 
-        align-items: flex-start;
-        flex-wrap: nowrap; 
-    }
-    
-    /* 3. 文字區塊：佔據 70% 寬度 (flex: 1 讓它填滿剩餘空間) */
-    .skill-item .title-txt {
-        flex: 1; 
-        /* max-width: 70%;  如果 flex: 1 的效果不好，再使用 max-width 限制 */
-    }
+.cards {
+	display: flex;
+	flex-direction: column; 
+	gap: 32px; 
+}
 
-    /* 4. 圖片區塊：直接控制 <img> 元素，佔據 30% 寬度 */
-    .skill-item .image4-3 {
-        width: 30%; /* 直接對 <img> 元素設定寬度 */
-        flex-shrink: 0; 
-        object-fit: contain; 
-        object-position: right; 
-    }
+@media screen and (min-width: 768px) {
+	.skill-item {
+		flex-direction: column;
+		gap: 24px;
+		align-items: stretch;
+	}
+
+	.cards {
+		flex-direction: row; 
+		gap: 24px; 
+	}
 }
 
 
 /* UI Design Section */
-/* 卡片3欄位 */
+
 .wrap{
-	max-width: 1152px;
-	margin: 0 auto;
+    max-width: 100%;
+    margin: 0 auto;
 }
 
-/* 三欄容器 */
+/* 所有的卡片容器 */
 .cards{
-	display: flex;
-	gap: 24px;              /* 欄間距 */
-	flex-wrap: wrap;        /* 窄螢幕自動換行 */
-	align-items: stretch;   /* 讓高度一致 */
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+    align-items: stretch;   /* 讓高度一致 */
 }
 
-/* 卡片 */
 .card{
-	background: var(--bg);
-	border: 1px solid #efefef;
-	border-radius: 12px;
-	padding: 28px;
-	flex: 1 1 calc(33.333% - 16px);  /* 3 欄 */
-	min-width: 280px;                 /* 避免太窄 */
-	display: flex;
-	flex-direction: column;
-	gap: 12px;
-	box-shadow: 0 2px 8px rgba(0,0,0,.04);
+    box-sizing: border-box;
+    padding: 24px;
+    background: var(--bg);
+    border: 1px solid #efefef;
+    border-radius: 12px;
+    padding: 24px;
+    flex: 1 1 100%; 
+    min-width: 0; /* 確保在小螢幕上可以收縮 */
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,.04);
 }
 
 .tag-outline{
     display: inline-block;
-	align-self: flex-start; /* 關鍵：依文字寬度 */
-	width: auto;
-	border: 1px solid #666;
+    align-self: flex-start;
+    width: auto;
+    border: 1px solid #666;
     font-size: 12px;
     line-height: 1;
     padding: 4px 8px;
@@ -456,52 +311,69 @@
     background: #F8F8F8;
     color: #666;
     margin-bottom: 8px;
-  }
+}
 
 .spacer{
-	flex: 1;   /* 推開按鈕，讓卡片底部對齊 */
+    flex: 1;   /* 推開按鈕，讓卡片底部對齊 */
 }
-  
-@media (max-width: 992px){
-    .card{ flex-basis: calc(50% - 12px); } /* 小於 900px 改為兩欄，小於 640px 一欄 */
-  }
-@media (max-width: 640px){
-    .card{ flex-basis: 100%; }
-  }
 
-  /* Contact Section */
+@media screen and (min-width: 768px){
+    /* 讓卡片變為 2 欄 */
+    .card{ 
+        /* 50% 減去一半的間距 (24px/2 = 12px) */
+        flex: 1 1 calc(50% - 12px); 
+    }
+}
+
+@media screen and (min-width: 992px){
+    .wrap{
+        max-width: 1172px;
+    }
+    /* 讓卡片變為 3 欄 */
+    .card{ 
+        /* 33.333% 減去 2/3 的間距 (24px * 2 / 3 = 16px) */
+        flex: 1 1 calc(33.333% - 16px); 
+        min-width: 280px; /* 增加最小寬度限制，避免卡片太窄 */
+    }
+}
+
+
+/* Contact Section */
+
 .contact-container{
-	display: flex;
-	flex-direction: row;
-	gap: 24px;
+    display: flex;
+    flex-direction: column; /* 手機預設為垂直堆疊 */
+    gap: 12px; /* 手機的間距 */
 }
 
 .contact-info{
-	display: flex;
-	flex-direction: row;
-	align-items: center;
-	gap: 12px;
+    display: flex;
+    flex-direction: column; /* 手機預設為垂直堆疊 */
+    align-items: baseline; /* 手機靠左對齊 */
+    width: 100%;
+    gap: 12px;
 }
+
 .info-item {
-	display: flex;
-	align-items: center; /* 垂直置中對齊 */
-	gap: 16px;
+    display: flex;
+    align-items: flex-start; /* 手機頂部對齊 */
+    gap: 8px; /* 手機的 item 間距 */
 }
 
-@media screen and (max-width: 768px) {
-	.contact-info{
-		flex-direction: column;
-		align-items: baseline;
-		width: 100%;
-	}  
+@media screen and (min-width: 768px) {
+    .contact-container{
+        flex-direction: row; /* 平板開始恢復水平排列 */
+        gap: 24px;
+    }
 
-	.info-item {
-		align-items: flex-start;
-		gap: 8px;
-	}
+    .contact-info{
+        flex-direction: row; /* 資訊項目水平排列 */
+        align-items: center; /* 垂直置中對齊 */
+        gap: 12px;
+    }  
 
-	.contact-container{
-		flex-direction: column;
-		gap: 12px;
-	}
+    .info-item {
+        align-items: center; /* 垂直置中對齊 */
+        gap: 16px;
+    }
 }
