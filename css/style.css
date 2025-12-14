@@ -224,7 +224,7 @@ li{	font-size: 14px; line-height: 150%;	color: #414141;}
     flex-direction: column;
     gap: 16px;
     flex: 1;
-    order: 1;
+    /* order: 1; */
 }
 
 /* ==========================
