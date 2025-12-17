@@ -335,13 +335,60 @@
                   <!-- End txt1-img2 user flow -->
 
 
-                  <!-- only img 簡化編輯流程 -->
-                  <div class="top-container">
-                    <h2 class="t-center">簡化編輯流程 將<span class="highlight">上傳照片</span>整合進去編輯內容區</h2>
-                    <img class="layout-center image-block lightbox-trigger" src="../images/editor2/img_simplify-the-process.jpg" alt="簡化編輯流程圖" loading="lazy">                  </div>
-                    <div  class="notop-container">
-                      <img src="../images/editor2/img_ui-design03.jpg" alt="Banner" class="lightbox-trigger">
-                    </div>
+                  <!-- start 簡化編輯流程區塊 -->
+                  <div class="top-container flex-v-24">
+                  <h2 class="t-center">簡化編輯流程 將<span class="highlight">上傳照片</span>整合進去編輯內容區</h2>
+                    <section class="flex-v-8">
+                      <div class="editor2-flow-section">
+                        <h4 class="editor2-title editor2-gray">Before</h4>
+                        <div class="editor2-stepper">
+                          <div class="editor2-step-item">
+                            <span class="editor2-badge">Step 1</span>
+                            <p class="editor2-label">基本資訊</p>
+                          </div>
+                          <div class="editor2-step-item">
+                            <span class="editor2-badge">Step 2</span>
+                            <p class="editor2-label">新增相片</p>
+                          </div>
+                          <div class="editor2-step-item">
+                            <span class="editor2-badge">Step 3</span>
+                            <p class="editor2-label">套用主題</p>
+                          </div>
+                          <div class="editor2-step-item">
+                            <span class="editor2-badge">Step 4</span>
+                            <p class="editor2-label">開始編輯</p>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="editor2-arrow-divider">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                          <path d="M12 5v14M19 12l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                      </div>
+
+                      <div class="editor2-flow-section">
+                        <h4 class="editor2-title editor2-green">After</h4>
+                        <div class="editor2-stepper editor2-after-style">
+                          <div class="editor2-step-item">
+                            <span class="editor2-badge">Step 1</span>
+                            <p class="editor2-label">基本資訊</p>
+                          </div>
+                          <div class="editor2-step-item">
+                            <span class="editor2-badge">Step 2</span>
+                            <p class="editor2-label">套用主題</p>
+                          </div>
+                          <div class="editor2-step-item">
+                            <span class="editor2-badge">Step 3</span>
+                            <div class="editor2-content">
+                              <p class="editor2-label">開始編輯 + 上傳照片</p>
+                              <p class="editor2-subtext">在編輯畫面可直接上傳照片</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </section>
+
                   </div>   
 
             <!-- Start 基本資料 01 -->
@@ -352,10 +399,32 @@
                     <h2 class="title">基本資料 <span class="sm-title">Step 01</span></h2>
                   </div>
               
-                  <!-- 中間：圖片 + 描述 -->
-                  <div class="hero-flex m-2col">
-                    <img class="image-manual" src="../images/editor2/img_step1.jpg" alt="設計步驟 1 - 圖標" loading="lazy">
-                    <!-- manual表示比較彈性 -->
+                  <!-- 中間：步驟流程 + 描述 -->
+                  <div class="d-horizontal">
+                    <div class="editor2-v-step">
+                      <div class="editor2-v-container editor2-v-active-1">
+                        <div class="editor2-v-row" data-step="1">
+                          <div class="editor2-v-stepper-bg">
+                            <div class="editor2-v-number">1</div>
+                          </div>
+                          <div class="editor2-v-text">基本資訊</div>
+                        </div>
+
+                        <div class="editor2-v-row" data-step="2">
+                          <div class="editor2-v-stepper-bg">
+                            <div class="editor2-v-number">2</div>
+                          </div>
+                          <div class="editor2-v-text">套用主題</div>
+                        </div>
+
+                        <div class="editor2-v-row" data-step="3">
+                          <div class="editor2-v-stepper-bg">
+                            <div class="editor2-v-number">3</div>
+                          </div>
+                          <div class="editor2-v-text">編輯內容</div>
+                        </div>
+                      </div>
+                    </div>
                     <div class="description-text">
                       
                       <h3><span class="highlight">關聯性較高</span>的內容列在一起</h3>
@@ -397,9 +466,31 @@
                 </div>
             
                 <!-- 中間：圖片 + 描述 -->
-                <div class="hero-flex m-2col">
-                  <img class="image-manual" src="../images/editor2/img_step2.jpg" alt="設計步驟 2 - 圖標" loading="lazy"> 
-                  <!-- manual表示比較彈性 -->
+                <div class="d-horizontal">
+                  <div class="editor2-v-step">
+                    <div class="editor2-v-container editor2-v-active-2">
+                      <div class="editor2-v-row" data-step="1">
+                        <div class="editor2-v-stepper-bg">
+                          <div class="editor2-v-number">1</div>
+                        </div>
+                        <div class="editor2-v-text">基本資訊</div>
+                      </div>
+
+                      <div class="editor2-v-row" data-step="2">
+                        <div class="editor2-v-stepper-bg">
+                          <div class="editor2-v-number">2</div>
+                        </div>
+                        <div class="editor2-v-text">套用主題</div>
+                      </div>
+
+                      <div class="editor2-v-row" data-step="3">
+                        <div class="editor2-v-stepper-bg">
+                          <div class="editor2-v-number">3</div>
+                        </div>
+                        <div class="editor2-v-text">編輯內容</div>
+                      </div>
+                    </div>
+                  </div>
                   <div class="description-text">
                     <h3>優化畫面引導，<span class="highlight">聚焦選擇主題</span>並正確套用</h3>
                     <p class="para-16">▍簡化頁面內容，凸顯主次層級</p>
@@ -441,9 +532,31 @@
               </div>
           
               <!-- 中間：圖片 + 描述 -->
-              <div class="hero-flex m-2col">
-                <img class="image-manual" src="../images/editor2/img_step3.jpg" alt="設計步驟 3 - 圖標" loading="lazy"> 
-                <!-- manual表示比較彈性 -->
+              <div class="d-horizontal">
+                <div class="editor2-v-step">
+                  <div class="editor2-v-container editor2-v-active-3">
+                    <div class="editor2-v-row" data-step="1">
+                      <div class="editor2-v-stepper-bg">
+                        <div class="editor2-v-number">1</div>
+                      </div>
+                      <div class="editor2-v-text">基本資訊</div>
+                    </div>
+
+                    <div class="editor2-v-row" data-step="2">
+                      <div class="editor2-v-stepper-bg">
+                        <div class="editor2-v-number">2</div>
+                      </div>
+                      <div class="editor2-v-text">套用主題</div>
+                    </div>
+
+                    <div class="editor2-v-row" data-step="3">
+                      <div class="editor2-v-stepper-bg">
+                        <div class="editor2-v-number">3</div>
+                      </div>
+                      <div class="editor2-v-text">編輯內容</div>
+                    </div>
+                  </div>
+                </div>
                 <div class="description-text">
                   <h3>打造現代化介面：提升可讀性、視覺層次與操作直覺性</h3>
                   <ul class="para">
@@ -558,9 +671,31 @@
               </div>
           
               <!-- 中間：圖片 + 描述 -->
-              <div class="hero-flex m-2col">
-                <img class="image-manual lightbox-trigger" src="../images/editor2/img_step3.jpg" alt="設計步驟 3 - 圖標" loading="lazy"> 
-                <!-- manual表示比較彈性 -->
+              <div class="d-horizontal">
+                <div class="editor2-v-step">
+                  <div class="editor2-v-container editor2-v-active-3">
+                    <div class="editor2-v-row" data-step="1">
+                      <div class="editor2-v-stepper-bg">
+                        <div class="editor2-v-number">1</div>
+                      </div>
+                      <div class="editor2-v-text">基本資訊</div>
+                    </div>
+
+                    <div class="editor2-v-row" data-step="2">
+                      <div class="editor2-v-stepper-bg">
+                        <div class="editor2-v-number">2</div>
+                      </div>
+                      <div class="editor2-v-text">套用主題</div>
+                    </div>
+
+                    <div class="editor2-v-row" data-step="3">
+                      <div class="editor2-v-stepper-bg">
+                        <div class="editor2-v-number">3</div>
+                      </div>
+                      <div class="editor2-v-text">編輯內容</div>
+                    </div>
+                  </div>
+                </div>
                 <div class="description-text">
                   <h3>上傳照片功能<span class="highlight">整合至編輯內容畫面</span></h3>
                   <p class="para"><span class="para-16">▍固定位置，降低搜尋成本</span><br>
