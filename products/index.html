@@ -672,6 +672,21 @@
         });
       });
     </script>
+	<script>
+		const slider = document.getElementById('comparison-slider');
+		const afterImg = document.getElementById('after-img');
+		const sliderBtn = document.getElementById('slider-btn');
+		
+		slider.addEventListener('input', (e) => {
+		  const value = e.target.value;
+		  
+		  // 更新圖片裁切寬度
+		  afterImg.style.width = `${value}%`;
+		  
+		  // 更新中間圓形按鈕的位置
+		  sliderBtn.style.left = `${value}%`;
+		});
+	</script>
   <!-- End java -->
     
 </body>
