@@ -1,3 +1,4 @@
+
 @charset "utf-8";
 
 /* -------------------------- *\
@@ -8,8 +9,227 @@
 /* -------------------------- *\
 	Layout
 \* -------------------------- */
+/* 容器基本設定 */
+.comparison-container {
+  position: relative;
+  width: 100%;
+  max-width: 800px; /* 可根據你的作品寬度調整 */
+  aspect-ratio: 3 / 2; /* 保持比例，避免跳動 */
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
 
+.img-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.img-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* 確保圖片填滿且不變形 */
+  display: block;
+}
+
+/* 前層 (After) 初始寬度設為 50% */
+.after {
+  width: 50%;
+  z-index: 2;
+  overflow: hidden;
+  border-right: 2px solid white; /* 中間的分隔線 */
+}
+
+/* 隱形滑桿，覆蓋在最上層 */
+.slider {
+  position: absolute;
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0);
+  outline: none;
+  margin: 0;
+  transition: all 0.2s;
+  z-index: 10;
+  cursor: ew-resize;
+}
+
+/* 滑桿控制點 (樣式可依品牌色修改) */
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 4px;
+  height: 100vh;
+  background: white;
+  cursor: ew-resize;
+}
+
+/* 中間圓型按鈕標示 (美化用) */
+.slider-button {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: white;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  z-index: 5;
+  pointer-events: none; /* 讓滑鼠穿透到 slider 本體 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slider-button::before {
+  content: '↔';
+  color: #333;
+  font-weight: bold;
+}
+
+/* Tab內容選項（概述區塊）樣式 */
+
+/* 容器樣式 */
+.project-sections-container {
+  width: 100%;
+  background: #F1EEEC;
+  border-color: #E4DEDA;
+  padding: 24px;
+  border-radius: 12px;
+}
+
+/* --- 桌機版 Tab 樣式 --- */
+.desktop-tab-labels {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.tab-btn {
+  padding: 4px 8px;
+  border: 1px solid #DDD;
+  background: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+  color: #212121;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.tab-btn:hover {
+  background-color: #f9f7f2;
+}
+
+.tab-btn.active {
+  background-color: #7d6e5a;
+  color: #ffffff;
+  border-color: #7d6e5a;
+  font-weight: bold;
+}
+
+/* --- 手機版 Dropdown 樣式 --- */
+.mobile-selector-wrapper {
+  display: none; /* 預設隱藏 */
+  margin-bottom: 20px;
+}
+
+.tab-dropdown {
+  width: 100%;
+  padding: 12px 24px 12px 16px;
+  border: 1px solid #DDD;
+  border-radius: 4px;
+  font-size: 16px;
+  background-color: #fff;
+  cursor: pointer;
+  /* --- 關鍵修改：自定義箭頭 --- */
+  -webkit-appearance: none; /* 移除 Chrome/Safari 預設箭頭 */
+  -moz-appearance: none;    /* 移除 Firefox 預設箭頭 */
+  appearance: none;         /* 移除標準預設箭頭 */
+
+  /* 使用 SVG 作為背景箭頭，這樣可以自由控制位置 */
+  background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22%23666%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpolyline%20points%3D%226%209%2012%2015%2018%209%22%3E%3C%2Fpolyline%3E%3C%2Fsvg%3E");
+  background-repeat: no-repeat;
+  background-position: right 16px center; 
+  background-size: 16px; /* 箭頭的大小 */
+}
+
+/* 針對 IE 的相容性處理 */
+.tab-dropdown::-ms-expand {
+  display: none;
+}
+
+
+/* --- 內容區塊動畫 --- */
+.tab-panel {
+  display: none;
+  animation: slideUp 0.4s ease forwards;
+  line-height: 1.8;
+}
+
+.tab-panel.active {
+  display: block;
+}
+
+.tab-panel p {
+  margin: 4px 0;
+  color: #444;
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* --- RWD 響應式切換 --- */
+@media (max-width: 768px) {
+  .desktop-tab-labels {
+    display: none; /* 手機隱藏標籤 */
+  }
+  .mobile-selector-wrapper {
+    display: block; /* 手機顯示下拉選單 */
+  }
+  .project-sections-container {
+    padding: 20px;
+  }
+}
 
 /* -------------------------- *\
 	Component
 \* -------------------------- */
+/* Tab 切換的圖片展示容器 */
+.tab-image-view {
+  width: 100%;
+  background: #fff; /* 讓圖片在白底呈現較乾淨 */
+  border-radius: 8px;
+  margin-bottom: 20px;
+  overflow: hidden;
+  border: 1px solid #E4DEDA;
+}
+
+.image-panel {
+  display: none;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.image-panel.active {
+  display: block;
+}
+
+.image-panel img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+}
+
+/* 簡單的淡入效果 */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
