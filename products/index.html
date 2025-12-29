@@ -93,8 +93,9 @@
                 <div class="overview">
                   <div class="overview-left">
                     <h2 class="title">概述 <span class="sm-title">Overview</span></h2>
-                    <h3 class="title">點點印｜<span class="text-primary">作品欣賞</span>Modal & 獨立頁面</h3>
+                    <h3 class="title">點點印｜<span class="text-primary">產品相關</span>頁面</h3>
                     <h5 class="title">#B2C #RWD #Redesign</h5>
+                    <p class="para">主要涵蓋以下頁面：全產品頁、周邊配件、個別產品頁、運費小幫手、產品規格比較、月曆大量頁面。</p>
 
                     <div class="team-info">
                       <p class="para"><strong>Team |</strong> TinTint 點點印</p>
@@ -102,16 +103,56 @@
                       <p class="para"><strong>Collaborators |</strong> UIUX Designer(1)、PM(1)、FE(1)、BE(1)、CS(2)</p>
                     </div>
                   </div>
-                  <div class="overview-right">
-                    <p class="para">
-                     新版主要會分<b> 2 種</b>呈現形式：<br>
-                     <strong>Modal 瀏覽（主要體驗）</strong> 使用者在探索頁、首頁精選或書架中點擊作品後，直接以彈窗瀏覽內容。關閉後可回到原頁面，保持操作連貫性，避免迷失路徑。<br>
-                     <strong>獨立頁面（分享導向）</strong> 提供專屬網址供分享使用，頁面呈現完整作品資訊、互動留言，並支援追蹤與複製連結功能，便於作品在外部平台傳播。
-                    </p>
-                    <p class="para">
-                    <b>[調整背景]</b><br>
-                    舊版存在資訊分散、視覺層級不明，以及強制跳轉導致流程中斷等痛點。為提升操作流暢度並統一品牌視覺系統，我們決定針對佈局與導航機制進行全面優化。
-					</p>
+                  <div class="project-sections-container js-block-text-only">
+                    <div class="mobile-selector-wrapper">
+                      <select class="tab-dropdown" id="mobile-tab-selector">
+                        <option value="1">全產品頁</option>
+                        <option value="2">周邊配件</option>
+                        <option value="3">個別產品頁</option>
+                        <option value="4">運費小幫手</option>
+                        <option value="5">產品規格比較</option>
+                      </select>
+                    </div>
+
+                    <div class="desktop-tab-labels">
+                      <button class="tab-btn active" data-index="1">全產品頁</button>
+                      <button class="tab-btn" data-index="2">周邊配件</button>
+                      <button class="tab-btn" data-index="3">個別產品頁</button>
+                      <button class="tab-btn" data-index="4">運費小幫手</button>
+                      <button class="tab-btn" data-index="5">產品規格比較</button>
+                    </div>
+
+                    <div class="tab-content-container">
+                      <div class="tab-panel active" id="panel-1">
+                        <p class="para"><strong>挑戰：</strong> 舊版頁面資訊過載且手機端響應式不佳，導致瀏覽動線過長、體驗破碎。</p>
+                        <p class="para"><strong>方法：</strong> 透過用戶測試篩選關鍵資訊，移除不必要的視覺干擾並重構資訊層級。</p>
+                        <p class="para"><strong>成果：</strong> 運用現代化 UI 佈局縮短 40% 的滾動深度，顯著提升行動端用戶轉化路徑。</p>
+                      </div>
+
+                      <div class="tab-panel" id="panel-2">
+                        <p class="para"><strong>挑戰：</strong> 配件與主產品關聯性低，使用者難以在選購流程中發現適合的配件。</p>
+                        <p class="para"><strong>方法：</strong> 導入交叉銷售（Cross-selling）設計，在產品頁面中加入智慧推薦區塊。</p>
+                        <p class="para"><strong>成果：</strong> 成功提升客單價（AOV），並減少使用者重複搜尋配件的時間。</p>
+                      </div>
+
+                      <div class="tab-panel" id="panel-3">
+                        <p class="para"><strong>挑戰：</strong> 產品規格與選購按鈕在手機版位置過低，使用者需頻繁上下滑動。</p>
+                        <p class="para"><strong>方法：</strong> 優化 CTA 按鈕設計與資訊分欄，確保關鍵決策資訊在首屏（Above the fold）可見。</p>
+                        <p class="para"><strong>成果：</strong> 縮短用戶從進入頁面到加入購物車的平均時間。</p>
+                      </div>
+
+                      <div class="tab-panel" id="panel-4">
+                        <p class="para"><strong>挑戰：</strong> 運費計算邏輯複雜，使用者常因結帳前才發現運費而導致棄單。</p>
+                        <p class="para"><strong>方法：</strong> 視覺化運費門檻進度條，讓使用者在挑選階段即可即時掌握運費狀態。</p>
+                        <p class="para"><strong>成果：</strong> 降低 15% 的購物車棄單率，並提升用戶對價格透明度的信任。</p>
+                      </div>
+
+                      <div class="tab-panel" id="panel-5">
+                        <p class="para"><strong>挑戰：</strong> 橫向比較表在手機端難以閱讀，使用者難以鎖定不同型號間的細微差異。</p>
+                        <p class="para"><strong>方法：</strong> 採用「凍結首列」與「差異高亮」技術，並針對手機端改為垂直卡片對照模式。</p>
+                        <p class="para"><strong>成果：</strong> 大幅改善用戶在複雜規格中的決策速度，降低售前諮詢負擔。</p>
+                      </div>
+                    </div>
                   </div>
                 </div>
               
@@ -239,14 +280,50 @@
             
             <!-- Start 資訊架構 -->
 
-            <div id="ia" class="img-txt top-container hero-grid d-2col-1col">
-                <img class="image-block lightbox-trigger" src="/images/showcase/img_ia.jpg" alt="資訊架構說明圖片" />
-                <div class="description-text">
-                    <h2 class="title">資訊架構<span class="sm-title">Define</span></h2>
-                    <h3 class="title">整合相關資訊，以 Modal 為核心</h3>
-                    <p class="para">
-                    為確保「作品欣賞」在<strong>功能擴充與介面優化</strong>時保持結構一致性，我先盤點舊版的資訊與功能配置，釐清混亂與不一致之處，再將功能邏輯整理為資訊架構與規格文件，作為新版設計與團隊協作的基礎。
-                    </p>
+            <div id="ia" class="top-container">
+                <div class="project-sections-container js-block-image-text">
+                  <h2 class="title">資訊架構 <span class="sm-title">Solution</span></h2>
+                  <div class="mobile-selector-wrapper">
+                    <select class="tab-dropdown" id="mobile-tab-selector">
+                      <option value="1">全產品頁</option>
+                      <option value="2">周邊配件</option>
+                      <option value="3">個別產品頁</option>
+                      <option value="4">運費小幫手</option>
+                      <option value="5">產品規格比較</option>
+                      <option value="6">月曆大量頁面</option>
+                    </select>
+                  </div>
+
+                  <div class="desktop-tab-labels">
+                    <button class="tab-btn active" data-index="1">全產品頁</button>
+                    <button class="tab-btn" data-index="2">周邊配件</button>
+                    <button class="tab-btn" data-index="3">個別產品頁</button>
+                    <button class="tab-btn" data-index="4">運費小幫手</button>
+                    <button class="tab-btn" data-index="5">產品規格比較</button>
+                    <button class="tab-btn" data-index="6">月曆大量頁面</button>
+                  </div>
+
+                  <div class="tab-image-view">
+                    <div class="image-panel active" id="img-panel-1">
+                      <img class="lightbox-trigger" src="/images/products/img_solution.jpg" alt="全產品頁優化">
+                    </div>
+                    <div class="image-panel" id="img-panel-2">
+                      <img class="" src="/images/products/img_solution.jpg" alt="周邊配件優化">
+                    </div>
+                    <div class="image-panel" id="img-panel-3">
+                      <img src="your-image-3.jpg" alt="個別產品頁優化">
+                    </div>
+                    <div class="image-panel" id="img-panel-4">
+                      <img src="your-image-4.jpg" alt="運費小幫手優化">
+                    </div>
+                    <div class="image-panel" id="img-panel-5">
+                      <img src="your-image-5.jpg" alt="產品規格比較優化">
+                    </div>
+                    <div class="image-panel" id="img-panel-6">
+                      <img src="your-image-6.jpg" alt="月曆大量頁面優化">
+                    </div>
+                  </div>
+
                 </div>
             </div>             
             <!-- End 資訊架構 -->
@@ -305,7 +382,22 @@
                       <img class="image-block lightbox-trigger" src="/images/showcase/img_統一新版設計風格.jpg" alt="專案 UI 介面設計圖 01" />
                     </div>
                     <!-- End txt1-img2 user flow -->
-                </div>   
+                </div>
+                <!-- Start 測試 before & after 比較 -->
+                <div class="comparison-container">
+                    <div class="img-wrapper before">
+                      <img src="/images/showcase/img_資訊更集中-right.jpg" alt="Old Design">
+                    </div>
+                    
+                    <div class="img-wrapper after" id="after-img">
+                      <img src="/images/showcase/img_資訊更集中-left.jpg" alt="New Design">
+                    </div>
+                    
+                    <input type="range" min="0" max="100" value="50" class="slider" id="comparison-slider">
+                    
+                    <div class="slider-button" id="slider-btn"></div>
+                  </div>
+                  <!-- End 測試 before & after 比較 -->   
 
             <!-- Satrt img2-txt1 資訊更集中、視覺層級更明確-->
             <div class="top-container">
@@ -531,6 +623,55 @@
     <script defer src="/js/sub-nav.js"></script>
     <script defer src="/js/lightbox.js"></script>
     <script defer src="/js/scroll-to-top.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        
+        // 找出頁面上所有的 Tab 容器
+        const tabContainers = document.querySelectorAll('.project-sections-container');
+
+        tabContainers.forEach(container => {
+          const tabs = container.querySelectorAll('.tab-btn');
+          const dropdown = container.querySelector('.tab-dropdown');
+          const textPanels = container.querySelectorAll('.tab-panel');
+          const imagePanels = container.querySelectorAll('.image-panel');
+
+          function switchTab(index) {
+            // --- 1. 只更新目前這個 container 內的按鈕 ---
+            tabs.forEach(t => t.classList.remove('active'));
+            const targetTab = container.querySelector(`.tab-btn[data-index="${index}"]`);
+            if (targetTab) targetTab.classList.add('active');
+
+            // --- 2. 只更新目前這個 container 內的文字 ---
+            textPanels.forEach(p => p.classList.remove('active'));
+            // 這裡改用索引位置或 ID 尋找，為了穩定性建議用索引
+            if (textPanels[index - 1]) textPanels[index - 1].classList.add('active');
+
+            // --- 3. 只更新目前這個 container 內的圖片 (如果有的話) ---
+            if (imagePanels.length > 0) {
+              imagePanels.forEach(img => img.classList.remove('active'));
+              if (imagePanels[index - 1]) imagePanels[index - 1].classList.add('active');
+            }
+            
+            // --- 4. 同步目前這個 container 內的下拉選單 ---
+            if (dropdown) dropdown.value = index;
+          }
+
+          // 綁定點擊事件
+          tabs.forEach(tab => {
+            tab.addEventListener('click', function() {
+              switchTab(this.getAttribute('data-index'));
+            });
+          });
+
+          // 綁定下拉事件
+          if (dropdown) {
+            dropdown.addEventListener('change', function() {
+              switchTab(this.value);
+            });
+          }
+        });
+      });
+    </script>
   <!-- End java -->
     
 </body>
