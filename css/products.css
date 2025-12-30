@@ -107,12 +107,12 @@
 .desktop-tab-labels {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px;
+  gap: 4px;
   margin-bottom: 16px;
 }
 
 .tab-btn {
-  padding: 4px 8px;
+  padding: 8px 12px;
   border: 1px solid #DDD;
   background: #fff;
   border-radius: 4px;
