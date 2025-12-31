@@ -102,7 +102,7 @@
                       <p class="para"><strong>Collaborators |</strong> UIUX Designer(1)、PM(1)、FE(1)、BE(1)、CS(1)</p>
                     </div>
                   </div>
-                  <div class="project-sections-container js-block-text-only">
+                  <div class="project-sections-container flex-v-8 js-block-text-only">
                     <div class="mobile-selector-wrapper">
                       <select class="tab-dropdown" id="mobile-tab-selector">
                         <option value="1">全產品頁</option>
@@ -238,68 +238,147 @@
                   </div>
                 </div>                
             </div>
-            <!-- 設計流程結束 -->
+            <!-- 設計流程結束 -->          
 
-            <!-- img2-txt1 痛點與觀察 -->
-            <div id="pain-point" class="top-container">
- 
-              <div class="description-text">
-                <h2 class="title">痛點與觀察 <span class="sm-title">Pain Point & Task</span></h2>
-                  <div class="container two-column-grid">
+            <!-- Start txt7-img5 痛點與觀察 -->
+            <div id="solution" class="top-container">
+              <div class="project-sections-container hero-grid d-7col-5col ">
+                  <div class="description-text js-block-image-text">
+                    <h2 class="title">痛點與觀察 <span class="sm-title">Pain Point & Task</span></h2>
 
-                    <div class="item item-bg-grey">
-                    <h4 class="title">留言區過度佔位</h4>
-                    <p class="para">
-                      留言在<b>舊版中直接展開</b>，壓縮作品展示空間，影響視覺焦點。
-                    </p>
+                    <div class="mobile-selector-wrapper">
+                      <select class="tab-dropdown" id="mobile-tab-selector">
+                        <option value="1">全產品頁</option>
+                        <option value="2">周邊配件</option>
+                        <option value="3">個別產品頁</option>
+                        <option value="4">運費小幫手</option>
+                        <option value="5">產品規格比較</option>
+                        <option value="6">月曆大量頁面</option>
+                      </select>
                     </div>
-                    <div class="item item-bg-grey">
-                    <h4 class="title">體驗中斷</h4>
-                    <p class="para">
-                      舊版瀏覽一律需跳轉新頁，使用者容易迷失或中斷流程，缺乏連續流暢的體驗。
-                    </p>
+
+                    <div class="desktop-tab-labels">
+                      <button class="tab-btn active" data-index="1">全產品頁</button>
+                      <button class="tab-btn" data-index="2">周邊配件</button>
+                      <button class="tab-btn" data-index="3">個別產品頁</button>
+                      <button class="tab-btn" data-index="4">運費小幫手</button>
+                      <button class="tab-btn" data-index="5">產品規格比較</button>
+                      <button class="tab-btn" data-index="6">月曆大量頁面</button>
                     </div>
-                    <div class="item item-bg-grey">
-                    <h4 class="title">行動呼籲不明顯</h4>
-                    <p class="para">
-                    「我也想做一樣的產品」等按鈕樣式不突出、位置不明顯，<b>降低互動轉換效果</b>。且按鈕文字過長，與網站文案風格不一致，影響辨識與點擊意願。
-                    </p>
+
+                    <div class="tab-content-container">
+
+                      <div class="tab-panel active">
+                        <div class="info-group">
+                          <ul>
+                            <li><strong>導覽層級雜亂</strong>：頂部全條列清單導致視覺過載，且缺乏側邊快速索引，大幅增加使用者翻找底層品項的搜尋成本。</li>
+                            <li><strong>佈局單一重複</strong>：各區塊採用高度一致的「左圖右文」排版，容易造成視覺慣性與疲勞，進而忽略不同產品間的關鍵差異。</li>
+                            <li><strong>行動端動線過長</strong>：未針對手機螢幕優化的長圖文結構，導致垂直滑動距離過長，容易讓用戶在瀏覽過程中失去耐心。</li>
+                            <li><strong>決策資訊分散</strong>：核心規格與售價散落在細碎文字中，缺乏結構化的對比邏輯，用戶難以在第一時間掌握同系列產品的區隔。</li>
+                          </ul>
+
+                        </div>
+                      </div>
+                      <div class="tab-panel">
+                        <div class="info-group">
+                          <ul>
+                            <li><strong>資訊權重失衡</strong>：核心規格與售價混雜在瑣碎的文字段落中，缺乏視覺重點與區塊化歸納，導致用戶難以快速判斷適配性與價格。</li>
+                            <li><strong>行動端轉換力弱</strong>：規格切換採用條列式呈現導致頁面過長，且導購按鈕（CTA）視覺權重不足，大幅增加了行動端用戶的決策成本。</li>
+                            <li><strong>導購邏輯斷層</strong>：版面過度強調裝飾圖案而非關鍵規格，且加購專區僅採單純陳列，缺乏與主產品的關聯性引導，降低了加購誘因。</li>
+                            <li><strong>內容瀏覽效率低</strong>：特色描述缺乏結構化提煉，感性文案與理性數據脫鉤，難以符合用戶快速掃描的閱讀習慣，導致產品價值被忽略。</li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="tab-panel">
+                        <div class="info-group">
+                          <ul>
+                            <li><strong>首屏資訊缺位</strong>：關鍵規格與出貨時效未標註於第一屏，用戶需費力滑動翻找基本參數，導致決策路徑斷裂。</li>
+                            <li><strong>動線破碎且缺乏索引</strong>：長圖文排版導致頁面過長，且底部主題篩選位置過低，缺乏有效的索引引導來提升跳轉效率。</li>
+                            <li><strong>行動端體驗受限</strong>：圖文版型僵化且缺乏常駐的行動引導（Sticky CTA），在手機端容易造成閱讀不適並增加流失率。</li>
+                            <li><strong>資訊分類模糊</strong>：理性數據（尺寸、材質）與感性訴求（情境圖）交叉散落，缺乏區塊化設計，造成用戶視覺焦點跳躍。</li>
+
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="tab-panel">
+                        <div class="info-group">
+                          <ul>
+                            <li><strong>橫向對照極其困難</strong>：採用長比例的橫向滾動表格，當產品品項過多時，使用者在滑動過程中容易遺失對照基準，難以在首尾產品間進行快速比較。</li>
+                            <li><strong>資訊冗餘且掃描效率低</strong>：大量重複的數據（如「7 個製作天」）未經歸納，導致表格資訊密度過高，增加使用者擷取關鍵差異的認知負擔。</li>
+                            <li><strong>視覺輔助效果微弱</strong>：材質與紙質的示意縮圖尺寸過小且細節模糊，在比較過程中無法提供實質的感官參考，導致規格區分度不足。</li>
+                            <li><strong>行動端適配性極差</strong>：傳統表格結構在手機端會產生嚴重的水平操作問題，用戶必須反覆左右滑動才能看完單一產品資訊，導致決策過程極度破碎。</li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="tab-panel">
+                        <div class="info-group">
+                          <ul>
+                            <li><strong></strong>資訊對照效率低</strong>：採用靜態橫向表格呈現價格，當產品品項與分頁數較多時，使用者難以跨區塊快速比對不同系列（如「文庫本」與「大文庫本」）的價格差異。</li>
+                            <li><strong>行動端閱讀體驗差</strong>：橫向表格在手機小螢幕上會導致資訊被裁切，用戶必須頻繁左右滑動才能看清完整內容，極大化了查詢的負擔。</li>
+                            <li><strong>導購動線斷裂</strong>：具體的價格數據（如 NT$ 549）與「開始製作」按鈕在視覺上距離過遠，缺乏連動感，導致使用者在確認價格後無法直覺地進入下一步。</li>
+                            <li><strong>頁面空間利用率不足</strong>：缺乏資訊收合與篩選機制，所有規格直接羅列，導致頁面垂直長度過長，使用者在滑動過程中容易產生視覺疲勞並失去耐心。</li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="tab-panel">
+                        <div class="info-group">
+                          <ul>
+                            <li><strong>導覽動線疲勞</strong>：頁面極長且缺乏快速跳轉機制，用戶需大量滑動翻找目標系列，導致搜尋成本過高並產生瀏覽倦怠。</li>
+                            <li><strong>視覺資訊雜亂</strong>：版型重複且圖文堆疊緊湊，導致視覺焦點分散，產品特色難以在快速掃描中脫穎而出。</li>
+                            <li><strong>資訊架構鬆散</strong>：內容僅採堆疊式陳列而未經權重層級整理，造成版面空間利用率低，大幅拉長了不必要的距離。</li>
+                            <li><strong>決策路徑破碎</strong>：規格與價格資訊位置分散，且缺乏結構化的對照機制，增加產品比較的難度與決策成本。</li>
+                            <li><strong>導購誘因薄弱</strong>：行動按鈕 對比度不足且位置靠後，在長距離滾動中極易被忽視，不利於行動轉換。</li>
+                          </ul>
+                        </div>
+                      </div>
                     </div>
-                    <div class="item item-bg-grey">
-                    <h4 class="title">關聯資訊分散</h4>
-                    <p class="para">
-                      作品名稱、作者、瀏覽數等<b>資訊零散分布且缺乏層級</b>，中間穿插相似產品推薦，使用者<b>難以快速掌握重點</b>，增加理解成本。
-                    </p>
-                    </div>                    
+
+                  </div>
+                  <div class="tab-image-view">
+                    <div class="image-panel active" id="img-panel-1">
+                      <img class="lightbox-trigger" src="/images/editor2/img_ia.jpg" alt="全產品頁優化">
+                    </div>
+                    <div class="image-panel" id="img-panel-2">
+                      <img class="" src="/images/products/img_solution.jpg" alt="周邊配件優化">
+                    </div>
+                    <div class="image-panel" id="img-panel-3">
+                      <img src="your-image-3.jpg" alt="個別產品頁優化">
+                    </div>
+                    <div class="image-panel" id="img-panel-4">
+                      <img src="your-image-4.jpg" alt="運費小幫手優化">
+                    </div>
+                    <div class="image-panel" id="img-panel-5">
+                      <img src="your-image-5.jpg" alt="產品規格比較優化">
+                    </div>
+                    <div class="image-panel" id="img-panel-6">
+                      <img src="your-image-6.jpg" alt="月曆大量頁面優化">
+                    </div>
                   </div>
               </div>
-
-            </div>        
-            <!-- End img2-txt1 痛點觀察 -->          
-
-          <!-- Start txt1-img2 設計優化重點 -->
-            <div id="solution" class="top-container hero-grid m-1col-2col">
-                <div class="description-text">
-                  <h2 class="title">設計優化重點 <span class="sm-title">Solution</span></h2>
-                  <p class="para">新版「作品欣賞」主要採用 <b>Modal</b> 呈現，保留原頁狀態避免瀏覽中斷。</p>
-                  <ul class="para">
-                    <li>介面採左右分欄：左側專注作品展示並支援全螢幕，右側整合標題、作者與互動資訊，透過字體層級、顏色與留白突顯重點。</li>
-                    <li>互動功能改為圖示搭配數字，降低閱讀負擔；行動按鈕更顯眼以強化互動；頁面下方推薦作品呈現更一致，便於延伸探索。</li>
-                    <li><b>行動按鈕</b>更顯眼明確，以強化互動。</li>
-                    <li>頁面下方推薦作品呈現更一致，便於延伸探索。</li>
-
-                  </ul>
-                </div>
-                <img class="image-block lightbox-trigger" src="/images/showcase/img_solution.jpg" alt="解決方案主要視覺設計圖" />
             </div>
-           
-          <!-- End txt1-img2 設計優化重點 -->
-
+            <!-- End txt7-img5 痛點與觀察 -->
+            <!-- Start img2-txt1 整體設計優化重點-->
+            <div  class="img-txt top-container hero-grid d-2col-1col">
+              <img class="image-block lightbox-trigger" src="/images/showcase/img_wireframe.jpg" alt="專案線框稿 (Wireframe) 設計圖" />   
+                <div class="description-text">
+                    <h2 class="title">整體設計優化重點 <span class="sm-title">Solution</span></h2>
+                    <h3 class="title">目標：重構導航體系與決策效率</h3>
+                    <p class="para">
+                      針對點點印多元產品線，調整相關頁面時，也致力於統一資訊架構並優化行動端體驗，核心聚焦於：
+                      <ul>
+                        <li>極速決策：導入「規格摘要」與「定價連動」機制，消除尺寸與印製量間的資訊斷層。</li>
+                        <li>高效導航：透過側邊索引與模組化佈局，縮減 60% 垂直滾動深度，加速產品鎖定。</li>
+                        <li>系統一致：建立原子化 UI 元件庫，確保全站頁面視覺與互動的一致性，強化品牌信賴。</li>
+                      </ul>
+                    </p>
+                </div>
+            </div>        
+            <!-- End img2-txt1 整體設計優化重點-->
             
             <!-- Start 資訊架構 -->
 
             <div id="ia" class="top-container">
-                <div class="project-sections-container js-block-image-text">
+                <div class="project-sections-container flex-v-24 js-block-image-text">
                   <h2 class="title">資訊架構 <span class="sm-title">Solution</span></h2>
                   <div class="mobile-selector-wrapper">
                     <select class="tab-dropdown" id="mobile-tab-selector">
@@ -344,39 +423,9 @@
 
                 </div>
             </div>             
-            <!-- End 資訊架構 -->
-            <!-- Start txt1-img2 User flow -->
+            <!-- End 資訊架構 --> 
 
-            <div class="top-container hero-grid m-1col-2col">
-                    
-                <div class="description-text">
-                <h2 class="title">User Flow <span class="sm-title">Ideate</span></h2>
-                <h3 class="title">讓流程問題具象化的第一步</h3>
-                <p class="para">
-                  經用戶行為分析，我們發現作品頁面存在資訊分散、版位低效和缺乏導航記憶的流程痛點。<br><br>
-                  為此，我們採用 Modal 彈出視窗重構流程：此機制將所有關聯資訊整合至單一視窗，並能確保用戶在關閉後準確返回原始列表位置，從根本上解決流程中斷問題，顯著提升操作連貫性與效率。
-                </p>
-                </div>
-                <img class="image-block" src="/images/showcase/img_user-flow.jpg" alt="專案使用者流程圖 (User Flow)" />
-            </div>
-            <!-- End txt1-img2 user flow -->   
 
-            <!-- Start img2-txt1 Wireframe-->
-            <div  class="img-txt top-container hero-grid d-2col-1col">
-              <img class="image-block lightbox-trigger" src="/images/showcase/img_wireframe.jpg" alt="專案線框稿 (Wireframe) 設計圖" />   
-                <div class="description-text">
-                    <h2 class="title">Wireframe+Lo-fi Prototype</h2>
-                    <h3 class="title">佈局驗證：打造用戶<span class="text-cta">順手的操作</span></h3>
-                    <p class="para">
-                      在設計初期，我們基於資訊高關聯性原則，提出了兩種版型佈局進行使用者測試與評估：<br>
-                      1. 版本一｜<b>垂直堆疊</b>：保持作品區塊的大佔比，下方依序置入關聯資訊與推薦區塊。但測試結果顯示，用戶因視覺空間利用率低和需過度滾動才能看到資訊而產生瀏覽惰性。<br>
-                      2. 版本二｜<b>左右切分</b>：採用優化視覺平衡的左右分欄佈局，並保留作品放大彈性。
-
-                    </p>
-                    <p class="para">版本二因其高效利用螢幕空間，並能同時呈現作品與高關聯資訊，<b>獲得多數測試者「容易上手」的正向反饋</b>，成為最終採用的方案。</p>
-                </div>
-            </div>        
-            <!-- End img2-txt1 Wireframe-->
 
             <!-- Start UI Design 目前ui-design僅用於當標籤沒有css -->
             <div id="ui-design" class="container">
@@ -401,7 +450,11 @@
                     </div>
                     <!-- End txt1-img2 user flow -->
                 </div>
-                <!-- Start 測試 before & after 比較 -->
+           
+           
+            <!-- Satrt img2-txt1 依使用情境，改以 Modal 瀏覽作品-->
+            <div  class="img-txt top-container hero-grid d-2col-1col">
+              <!-- Start 測試 before & after 比較 -->
                 <div class="comparison-container">
                     <div class="img-wrapper before">
                       <img src="/images/showcase/img_資訊更集中-right.jpg" alt="Old Design">
@@ -414,46 +467,8 @@
                     <input type="range" min="0" max="100" value="50" class="slider" id="comparison-slider">
                     
                     <div class="slider-button" id="slider-btn"></div>
-                  </div>
-                  <!-- End 測試 before & after 比較 -->   
-
-            <!-- Satrt img2-txt1 資訊更集中、視覺層級更明確-->
-            <div class="top-container">
-              <div class=" hero-grid m-1col-2col align-end-items">
-                <div class="description-text">                
-                  <h3 class="title">資訊更集中、視覺層級更明確</h3>
-                  <div class="container hero-grid ">
-                  <p class="para">
-                    <b>[Before]</b><br>
-                    資訊密集缺乏重點強調，區塊分散難以快速掌握核心內容。<br><br>
-
-                    <b>[After]</b><br>
-                    將資訊分層級呈現，不常用功能（如留言）採收折設計，點擊後才展開。重整視覺層級後，用戶能更快執行操作並聚焦重點。
-                  </p>
-                  </div>
                 </div>
-                <div class="team-info">
-                  <b>👉 具體做法</b>
-                  <ul>
-                    <li><b>左右分欄設計</b>：左側專注作品展示並提供全螢幕瀏覽；右側整合標題、作者、瀏覽數等核心資訊。</li>
-                    <li><b>字體層級區分</b>：透過字體大小與粗細突顯資訊重要性。</li>
-                    <li><b>留言區收折</b>：避免占據版面，將視覺焦點聚焦於作品本身。</li>
-                  </ul>
-
-                </div>              
-              </div>
-              <div  class="notop-container">
-                  <div class="hero-grid m-1col">
-                    <img class="image-block lightbox-trigger" src="/images/showcase/img_資訊更集中-left.jpg" alt="主題篩選功能介面設計圖 (左側)" />
-                    <img class="image-block lightbox-trigger" src="/images/showcase/img_資訊更集中-right.jpg" alt="主題篩選功能介面設計圖 (右側)" />
-                  </div> 
-              </div>
-            </div>            
-            <!-- End img2-txt1 資訊更集中、視覺層級更明確-->           
-           
-            <!-- Satrt img2-txt1 依使用情境，改以 Modal 瀏覽作品-->
-            <div  class="img-txt top-container hero-grid d-2col-1col">
-              <img class="image-block lightbox-trigger" src="/images/showcase/img_依使用情境改以Modal瀏覽作品.jpg" alt="作品卡片資訊介面設計圖" />
+              <!-- End 測試 before & after 比較 -->  
               <div class="description-text">
                 <h3 class="title">依使用情境，改以 Modal 瀏覽作品</h3>
                 <div class="flex-v-8">
