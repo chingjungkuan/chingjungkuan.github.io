@@ -28,7 +28,7 @@
 .comparison-container {
   position: relative;
   width: 100%;
-  max-width: 800px; /* 可根據你的作品寬度調整 */
+  max-width: 800px;
   aspect-ratio: 3 / 2; /* 保持比例，避免跳動 */
   overflow: hidden;
   border-radius: 8px;
@@ -55,7 +55,7 @@
   width: 50%;
   z-index: 2;
   overflow: hidden;
-  border-right: 2px solid white; /* 中間的分隔線 */
+  border-right: 4px solid #ccc; /* 中間的分隔線 */
 }
 
 /* 隱形滑桿，覆蓋在最上層 */
@@ -73,11 +73,11 @@
   cursor: ew-resize;
 }
 
-/* 滑桿控制點 (樣式可依品牌色修改) */
+/* 滑桿控制點 */
 .slider::-webkit-slider-thumb {
   -webkit-appearance: none;
   appearance: none;
-  width: 4px;
+  width: 1px;
   height: 100vh;
   background: white;
   cursor: ew-resize;
