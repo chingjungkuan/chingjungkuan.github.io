@@ -180,14 +180,25 @@
 
 
 /* --- 內容區塊動畫 --- */
+.tab-content-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  width: 100%;
+}
 .tab-panel {
-  display: none;
-  animation: slideUp 0.4s ease forwards;
-  line-height: 1.8;
+  grid-area: 1 / 1; /* 關鍵：所有面板都佔用第一行第一列 */
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none; /* 防止點擊到隱藏的內容 */
+  transition: opacity 0.3s ease;
 }
 
 .tab-panel.active {
-  display: block;
+  visibility: visible;
+  opacity: 1;
+  pointer-events: auto;
+  position: relative; /* 確保它能撐開父容器高度 */
 }
 
 .tab-panel p {
