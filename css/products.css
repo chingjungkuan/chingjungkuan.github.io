@@ -258,3 +258,84 @@
   from { opacity: 0; }
   to { opacity: 1; }
 }
+/* -------------------------- *\
+  手風琴 Accordion
+
+/* --- 手風琴容器樣式 --- */
+.accordion-group {
+    border-top: 1px solid #eee;
+}
+
+.accordion-item {
+    border-bottom: 1px solid #eee;
+}
+
+.accordion-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    padding: 20px 0;
+}
+
+
+/* --- 核心：絕對對稱扁平箭頭 --- */
+.arrow-icon {
+    position: relative;
+    width: 20px;
+    height: 10px;
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.arrow-icon::before,
+.arrow-icon::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: 10px; /* 線段長度 */
+    height: 1.5px; /* 線條粗細 */
+    background-color: #999;
+    border-radius: 1px;
+}
+
+.arrow-icon::before {
+    left: 1px;
+    transform: rotate(20deg); /* 角度越小越扁平 */
+    transform-origin: right center; /* 鎖定右端為中心，解決歪斜問題 */
+}
+
+.arrow-icon::after {
+    right: 1px;
+    transform: rotate(-20deg); /* 負角度達成絕對對稱 */
+    transform-origin: left center; /* 鎖定左端為中心 */
+}
+
+/* 展開狀態：箭頭 180 度翻轉 */
+.accordion-item.active .arrow-icon {
+    transform: rotate(180deg);
+}
+
+/* --- 核心：極速流暢 Grid 動畫 --- */
+.accordion-content {
+    display: grid;
+    grid-template-rows: 0fr; /* 初始收合狀態 */
+    transition: grid-template-rows 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    overflow: hidden;
+}
+
+.accordion-item.active .accordion-content {
+    grid-template-rows: 1fr; /* 自動撐開至實際內容高度 */
+}
+
+.accordion-inner {
+    min-height: 0; /* 修正瀏覽器 Grid 渲染 Bug */
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s, visibility 0.3s;
+}
+
+.accordion-item.active .accordion-inner {
+    visibility: visible;
+    opacity: 1;
+    padding-bottom: 24px; /* 展開後的內容下間距 */
+}
