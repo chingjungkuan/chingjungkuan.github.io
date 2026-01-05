@@ -232,7 +232,6 @@
   width: 100%;
   background: #fff; /* 讓圖片在白底呈現較乾淨 */
   border-radius: 8px;
-  margin-bottom: 20px;
   overflow: hidden;
   border: 1px solid #E4DEDA;
 }
@@ -278,8 +277,7 @@
     padding: 20px 0;
 }
 
-
-/* --- 核心：絕對對稱扁平箭頭 --- */
+/* --- 展開收合扁平箭頭 --- */
 .arrow-icon {
     position: relative;
     width: 20px;
@@ -300,13 +298,13 @@
 
 .arrow-icon::before {
     left: 1px;
-    transform: rotate(20deg); /* 角度越小越扁平 */
+    transform: rotate(30deg); /* 角度越小越扁平 */
     transform-origin: right center; /* 鎖定右端為中心，解決歪斜問題 */
 }
 
 .arrow-icon::after {
     right: 1px;
-    transform: rotate(-20deg); /* 負角度達成絕對對稱 */
+    transform: rotate(-30deg); /* 負角度達成絕對對稱 */
     transform-origin: left center; /* 鎖定左端為中心 */
 }
 
