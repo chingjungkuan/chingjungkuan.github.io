@@ -70,7 +70,7 @@
 /* 塗鴉線條本體 */
 .doodle-svg path {
     fill: none;
-    stroke: #0055FF;
+    stroke: #FC0;
     stroke-width: 5;
     stroke-linecap: round;
     stroke-dasharray: 1000;
