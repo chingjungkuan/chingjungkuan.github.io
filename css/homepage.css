@@ -47,24 +47,42 @@
         border-radius: 0;
     }
 }
-
-/* 通用標籤樣式 */
-.tag {
-    position: absolute;
-    padding: 8px 8px;
-    font-size: 14px;
-    font-weight: bold;
-    color: white;
-    border-radius: 4px;
+/* 文字與 SVG 的容器 */
+.highlight-container {
+    position: relative;
+    display: inline-block;
 }
 
-.tag::after {
-    content: "";
+/* SVG 定位：放在文字下方 */
+.doodle-svg {
     position: absolute;
-    width: 0;
-    height: 0;
-    border-style: solid;
+    bottom: -6px; /* 線條上下位置調整 */
+    left: 0;
+    width: 100%;
+    height: 15px;
+    overflow: visible;
+    pointer-events: none; /* 防止干擾文字點擊 */
 }
+
+/* 區塊向下滾動出現的塗鴉線條本體 */
+.doodle-svg path {
+    fill: none;
+    stroke: #0055FF; /* 改為你喜歡的顏色 */
+    stroke-width: 5;
+    stroke-linecap: round; /* 圓頭筆觸 */
+    
+    /* 動畫核心邏輯：利用 dashoffset 隱藏線條 */
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+    /*畫出來時 1s (慢一點有質感)，收回去時 0.3s (快一點，讓下次觸發時已經重置好) */
+	transition: stroke-dashoffset 1s ease-in-out;
+}
+
+/* 滾動觸發後的狀態：JS 會幫 .animate-trigger 加上 .is-active */
+.animate-trigger.is-active .doodle-svg path {
+    stroke-dashoffset: 0;
+}
+
 /* -------------------------- *\
 	區塊
 \* -------------------------- */
@@ -87,9 +105,57 @@
 }
 
 /* Mobile：標籤大小、位置 */
-.tag {
-	font-size: 12px;
+
+
+/* 彈跳動畫 */
+@keyframes popIn {
+  0% {
+    opacity: 0;
+    transform: scale(0) rotate(-10deg);
+  }
+  70% {
+    transform: scale(1.1) rotate(2deg);
+  }
+  /* 100% 保持預設，或者顯式寫出 scale(1) */
+  100% {
+    opacity: 1;
+    transform: scale(1) rotate(0deg);
+  }
 }
+/* 通用標籤樣式 */
+.tag {
+	position: absolute;
+    padding: 8px 8px;
+    font-size: 12px;
+    font-weight: bold;
+    color: white;
+    border-radius: 4px;
+    opacity: 0;
+    z-index: 200;
+    
+    /* 動畫設定 */
+    animation: popIn 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+    /* 核心修改：將 transition 放在這裡，hover 才會順滑 */
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.tag::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-style: solid;
+}
+.tag:hover {
+	opacity: 1 !important; /* 確保懸停時不會變透明 */
+    filter: brightness(1.1);
+    /* 使用 translate 稍微往上飄，並加上 scale */
+    transform: scale(1.1) translateY(-5px) !important;
+}
+/* 設定延遲，讓標籤一個接一個出現 */
+.tag-graphic { animation-delay: 0.5s; transform-origin: right bottom;}
+.tag-creativity { animation-delay: 0.7s; transform-origin: right top;}
+.tag-uiux { animation-delay: 0.9s; transform-origin: left bottom;}
 
 /* graphic 標籤 (左上) */
 .tag-graphic {
