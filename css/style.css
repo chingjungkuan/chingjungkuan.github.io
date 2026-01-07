@@ -150,6 +150,12 @@ li{	font-size: 14px; line-height: 150%;	color: #414141;}
 	font-weight: 400;
 	font-style: normal;
 }
+.poetsen-one-regular {
+  font-family: "Poetsen One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
 
 
 /* -------------------------- *\
@@ -249,6 +255,7 @@ li{	font-size: 14px; line-height: 150%;	color: #414141;}
     flex-direction: row;
     gap: 24px;
     align-items: center;
+    flex-wrap: wrap;
 
 }
 
