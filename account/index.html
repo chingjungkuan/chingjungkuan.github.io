@@ -81,9 +81,6 @@
                 <p class="para">主要 CTA 採用品牌強調色增加辨識度，圖示化設計降低理解成本。整合相關操作於同一區域，減少視線移動距離，有效提升收藏、分享等關鍵行為的轉換率。</p>
               </div>
             </div>
-
-
-
           </div>
           </div>
           <!-- End Design Impact--> 
@@ -93,7 +90,7 @@
                 <div class="overview">
                   <div class="overview-left">
                     <h2 class="title">概述 <span class="sm-title">Overview</span></h2>
-                    <h3 class="title">點點印｜<span class="text-primary">作品欣賞</span>Modal & 獨立頁面</h3>
+                    <h3 class="title">點點印｜<span class="text-primary">登入註冊+帳號設定</span>頁面</h3>
                     <h5 class="title">#B2C #RWD #Redesign</h5>
 
                     <div class="team-info">
@@ -102,16 +99,38 @@
                       <p class="para"><strong>Collaborators |</strong> UIUX Designer(1)、PM(1)、FE(1)、BE(1)、CS(2)</p>
                     </div>
                   </div>
-                  <div class="overview-right">
-                    <p class="para">
-                     新版主要會分<b> 2 種</b>呈現形式：<br>
-                     <strong>Modal 瀏覽（主要體驗）</strong> 使用者在探索頁、首頁精選或書架中點擊作品後，直接以彈窗瀏覽內容。關閉後可回到原頁面，保持操作連貫性，避免迷失路徑。<br>
-                     <strong>獨立頁面（分享導向）</strong> 提供專屬網址供分享使用，頁面呈現完整作品資訊、互動留言，並支援追蹤與複製連結功能，便於作品在外部平台傳播。
-                    </p>
-                    <p class="para">
-                    <b>[調整背景]</b><br>
-                    舊版存在資訊分散、視覺層級不明，以及強制跳轉導致流程中斷等痛點。為提升操作流暢度並統一品牌視覺系統，我們決定針對佈局與導航機制進行全面優化。
-					</p>
+
+                  <div class="project-sections-container flex-v-8 js-block-text-only">
+                    <div class="mobile-selector-wrapper">
+                      <select class="tab-dropdown" id="mobile-tab-selector">
+                        <option value="1">登入註冊</option>
+                        <option value="2">帳號設定</option>
+                      </select>
+                    </div>
+
+                    <div class="desktop-tab-labels">
+                      <button class="tab-btn active" data-index="1">登入註冊</button>
+                      <button class="tab-btn" data-index="2">帳號設定</button>
+                    </div>
+
+                    <div class="tab-content-container">
+                      <div class="tab-panel active" id="panel-1">
+                        <ul>
+                          <li class="para"><strong>挑戰：</strong> 舊版資訊過載且手機版型不佳，導致滑動距離過長，用戶瀏覽時容易失去耐心。</li>
+                          <li class="para"><strong>方法：</strong> 導入直覺側邊導航並重構產品層級，透過簡約視覺減少雜亂資訊的干擾。</li>
+                          <li class="para"><strong>成果：</strong> 採用現代化佈局優化空間利用率，縮短用戶尋找產品的猶豫時間，並顯著提升手機與電腦端的購買動線效率。</li>
+                        </ul>
+                      </div>
+
+                      <div class="tab-panel" id="panel-2">
+                        <ul>
+                          <li class="para"><strong>挑戰：</strong> 舊版配件頁資訊權重失衡且規格零散，導致行動端決策混亂、購買轉換效率低。</li>
+                          <li class="para"><strong>方法：</strong> 重構模組化架構並強化規格適配引導，建立一致化元件與動態定價，優化導購體驗。</li>
+                          <li class="para"><strong>成果：</strong> 縮減 60% 滾動頁面長度並讓規格即時對應，大幅降低用戶決策成本與棄單率。</li>
+                        </ul>
+                      </div>
+
+                    </div>
                   </div>
                 </div>
               
@@ -560,6 +579,7 @@
     <script defer src="/js/sub-nav.js"></script>
     <script defer src="/js/lightbox.js"></script>
     <script defer src="/js/scroll-to-top.js"></script>
+    <script defer src="/js/tab-content.js"></script>
     <script defer src="/js/modal.js"></script>
 
   <!-- End java -->
