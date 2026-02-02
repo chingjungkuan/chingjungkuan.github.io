@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <link rel="stylesheet" href="../css/normalize.css">
     <link rel="stylesheet" href="/css/style.css">
-    <link rel="stylesheet" href="/css/showcase.css">
+    <link rel="stylesheet" href="/css/account.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Paytone+One&family=Rowdies:wght@300;400;700&family=Rubik+Dirt&family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
@@ -116,17 +116,17 @@
                     <div class="tab-content-container">
                       <div class="tab-panel active" id="panel-1">
                         <ul>
-                          <li class="para"><strong>挑戰：</strong> 舊版資訊過載且手機版型不佳，導致滑動距離過長，用戶瀏覽時容易失去耐心。</li>
-                          <li class="para"><strong>方法：</strong> 導入直覺側邊導航並重構產品層級，透過簡約視覺減少雜亂資訊的干擾。</li>
-                          <li class="para"><strong>成果：</strong> 採用現代化佈局優化空間利用率，縮短用戶尋找產品的猶豫時間，並顯著提升手機與電腦端的購買動線效率。</li>
+                          <li class="para"><strong>背景：</strong> 針對平台入口體驗進行重構，目標在提升註冊轉換率並優化帳號數據品質，為產品長遠營運打下穩定基礎。</li>
+                          <li class="para"><strong>痛點：</strong> 舊版介面促銷雜訊過多，且「驗證入口隱蔽」造成嚴重的流程斷層；缺乏防護機制導致無效帳號氾濫，大幅增加營運與客服成本。</li>
+                          <li class="para"><strong>優化：</strong> 導入卡片式現代視覺以強化資訊層次；實施「分層驗證」策略，在保持註冊流暢的同時確保數據安全；並整合雙軌驗證與 reCAPTCHA 防禦體系。</li>
                         </ul>
                       </div>
 
                       <div class="tab-panel" id="panel-2">
                         <ul>
-                          <li class="para"><strong>挑戰：</strong> 舊版配件頁資訊權重失衡且規格零散，導致行動端決策混亂、購買轉換效率低。</li>
-                          <li class="para"><strong>方法：</strong> 重構模組化架構並強化規格適配引導，建立一致化元件與動態定價，優化導購體驗。</li>
-                          <li class="para"><strong>成果：</strong> 縮減 60% 滾動頁面長度並讓規格即時對應，大幅降低用戶決策成本與棄單率。</li>
+                          <li class="para"><strong>背景：</strong> 針對邏輯冗餘的帳號系統進行深度重構，旨在提升資訊管理的直覺性，並強化用戶主動驗證與帳號綁定的意願。</li>
+                          <li class="para"><strong>痛點：</strong> 資訊架構層級重疊且驗證入口隱蔽，導致用戶認知負荷過重並產生大量無效帳號；介面存在色彩語意錯誤與組件運用不一等問題，造成嚴重的視覺動線破碎與操作焦慮。</li>
+                          <li class="para"><strong>優化：</strong> 扁平化導航路徑並採 Tab 與左右分欄 的適配性佈局以平衡資訊密度；同步建立標準化組件規範與 Announce Bar 主動引導機制，確保操作反饋的一致性與核心功能的可達性。</li>
                         </ul>
                       </div>
 
@@ -214,44 +214,78 @@
                   </div>
                 </div>                
             </div>
-            <!-- 設計流程結束 -->
+          <!-- 設計流程結束 -->
+          <!-- Start txt7-img5 痛點與觀察 -->
+          <div id="solution" class="top-container">
+            <div class="project-sections-container hero-grid d-7col-5col ">
+                <div class="description-text js-block-image-text">
+                  <h2 class="title">舊版痛點與觀察 <span class="sm-title">Pain Point & Task</span></h2>
 
-            <!-- img2-txt1 痛點與觀察 -->
-            <div id="pain-point" class="top-container">
- 
-              <div class="description-text">
-                <h2 class="title">痛點與觀察 <span class="sm-title">Pain Point & Task</span></h2>
-                  <div class="container two-column-grid">
-
-                    <div class="item item-bg-grey">
-                    <h4 class="title">留言區過度佔位</h4>
-                    <p class="para">
-                      留言在<b>舊版中直接展開</b>，壓縮作品展示空間，影響視覺焦點。
-                    </p>
-                    </div>
-                    <div class="item item-bg-grey">
-                    <h4 class="title">體驗中斷</h4>
-                    <p class="para">
-                      舊版瀏覽一律需跳轉新頁，使用者容易迷失或中斷流程，缺乏連續流暢的體驗。
-                    </p>
-                    </div>
-                    <div class="item item-bg-grey">
-                    <h4 class="title">行動呼籲不明顯</h4>
-                    <p class="para">
-                    「我也想做一樣的產品」等按鈕樣式不突出、位置不明顯，<b>降低互動轉換效果</b>。且按鈕文字過長，與網站文案風格不一致，影響辨識與點擊意願。
-                    </p>
-                    </div>
-                    <div class="item item-bg-grey">
-                    <h4 class="title">關聯資訊分散</h4>
-                    <p class="para">
-                      作品名稱、作者、瀏覽數等<b>資訊零散分布且缺乏層級</b>，中間穿插相似產品推薦，使用者<b>難以快速掌握重點</b>，增加理解成本。
-                    </p>
-                    </div>                    
+                  <div class="mobile-selector-wrapper">
+                    <select class="tab-dropdown" id="mobile-tab-selector">
+                      <option value="1">全產品頁</option>
+                      <option value="2">周邊配件</option>
+                    </select>
                   </div>
-              </div>
 
-            </div>        
-            <!-- End img2-txt1 痛點觀察 -->          
+                  <div class="desktop-tab-labels">
+                    <button class="tab-btn active" data-index="1">全產品頁</button>
+                    <button class="tab-btn" data-index="2">周邊配件</button>
+                  </div>
+
+                  <div class="tab-content-container">
+
+                    <div class="tab-panel active">
+                      <div class="info-group">
+                        <ul>
+                          <li><strong>營運數據與安全威脅</strong>：驗證機制薄弱導致無效帳號氾濫與數據失真，增加物流客服成本；且因缺乏 reCAPTCHA 與足夠驗證強度，面臨自動化攻擊與活動公平性受損的風險。</li>
+                          <li><strong>視覺導航與品牌失焦</strong>：促銷雜訊干擾註冊主路徑；搭配過時沉重的配色與不明確的資訊層次，易造成用戶視覺疲勞並中斷流程。</li>
+                          <li><strong>核心驗證流程斷層</strong>：驗證入口隱蔽且缺乏主動狀態提示，導致用戶習慣性忽略關鍵驗證步驟，成為無效帳號的主要來源。</li>
+                          <li><strong>高摩擦的交互細節</strong>：驗證碼樣式誤導、缺乏密碼顯示功能及按鈕間距過窄，顯著提升了操作錯誤率與誤觸風險。</li>
+                          <li><strong>支援指引機制匱乏</strong>：註冊卡關時缺乏 FAQ 或即時協助導引，導致用戶因挫折感而直接流失。</li>
+                        </ul>
+
+                      </div>
+                    </div>
+                    <div class="tab-panel">
+                      <div class="info-group">
+                        <ul>
+                          <li><strong>架構冗餘與路徑斷層</strong>：驗證功能遭孤立於底層且缺乏導引，導致大量帳號未驗證，增加營運風險；架構層級重疊則造成資訊分類混淆，提升定位功能的難度。</li>
+                          <li><strong>綁定引導與動線破碎</strong>：第三方綁定視覺權重不明且狀態辨識度低；搭配支離破碎的版面配置，大幅拉高了用戶的頁面學習成本。</li>
+                          <li><strong>設計語意與規範缺失</strong>：色彩語意誤用（如成功狀態顯示危險色）引發用戶焦慮；組件規則不一則導致介面語意模糊，削弱了品牌專業感。</li>
+                          <li><strong>交互機制與引導不足</strong>：表單缺乏 Placeholder 與密碼顯示等現代標準功能，導致輸入效率低下且容易出錯。</li>
+                        </ul>
+                      </div>
+                    </div>
+
+
+                  </div>
+
+                </div>
+                <div class="tab-image-view">
+                  <div class="image-panel active" id="img-panel-1">
+                    <img class="lightbox-trigger" src="/images/products/img_全產品頁_old.jpg" alt="全產品頁優化">
+                  </div>
+                  <div class="image-panel" id="img-panel-2">
+                    <img class="lightbox-trigger" src="/images/products/img_周邊配件頁_old.jpg" alt="周邊配件優化">
+                  </div>
+                  <div class="image-panel" id="img-panel-3">
+                    <img class="lightbox-trigger" src="/images/products/img_個別產品頁_old.jpg" alt="個別產品頁優化">
+                  </div>
+                  <div class="image-panel" id="img-panel-4">
+                    <img class="lightbox-trigger" src="/images/products/img_產品規格比較_old.jpg" alt="產品規格比較優化">
+                  </div>
+                  <div class="image-panel" id="img-panel-5">
+                    <img class="lightbox-trigger" src="/images/products/img_售價表_old.jpg" alt="售價表優化">
+                  </div>
+                  <div class="image-panel" id="img-panel-6">
+                    <img class="lightbox-trigger" src="/images/products/img_月曆系列_old.jpg" alt="月曆系列頁面優化">
+                  </div>
+                </div>
+            </div>
+          </div>
+          <!-- End txt7-img5 痛點與觀察 -->
+            
 
           <!-- Start txt1-img2 設計優化重點 -->
             <div id="solution" class="top-container hero-grid m-1col-2col">
