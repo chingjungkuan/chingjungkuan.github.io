@@ -312,14 +312,33 @@
             
             <!-- Start 資訊架構 -->
 
-            <div id="ia" class="img-txt top-container hero-grid d-2col-1col">
-                <img class="image-block lightbox-trigger" src="/images/showcase/img_ia.jpg" alt="資訊架構說明圖片" />
-                <div class="description-text">
-                    <h2 class="title">資訊架構<span class="sm-title">Define</span></h2>
-                    <h3 class="title">整合相關資訊，以 Modal 為核心</h3>
-                    <p class="para">
-                    為確保「作品欣賞」在<strong>功能擴充與介面優化</strong>時保持結構一致性，我先盤點舊版的資訊與功能配置，釐清混亂與不一致之處，再將功能邏輯整理為資訊架構與規格文件，作為新版設計與團隊協作的基礎。
-                    </p>
+            <div id="ia" class="top-container">
+                <div class="project-sections-container flex-v-24 js-block-image-text">
+                  <h2 class="title">資訊架構 <span class="sm-title">Solution</span></h2>
+                  <div class="mobile-selector-wrapper">
+                    <select class="tab-dropdown" id="mobile-tab-selector">
+                      <option value="1">登入註冊</option>
+                      <option value="2">帳號設定</option>
+
+                    </select>
+                  </div>
+
+                  <div class="desktop-tab-labels">
+                    <button class="tab-btn active" data-index="1">登入註冊</button>
+                    <button class="tab-btn" data-index="2">帳號設定</button>
+
+                  </div>
+
+                  <div class="tab-image-view">
+                    <div class="image-panel active" id="img-panel-1">
+                      <img class="lightbox-trigger" src="/images/products/img_ia_全產品系列頁.jpg" alt="全產品頁優化">
+                    </div>
+                    <div class="image-panel" id="img-panel-2">
+                      <img class="" src="/images/products/img_ia_周邊配件.jpg" alt="周邊配件資訊架構圖">
+                    </div>
+
+                  </div>
+
                 </div>
             </div>             
             <!-- End 資訊架構 -->
@@ -620,3 +639,4 @@
     
 </body>
 </html>
+
