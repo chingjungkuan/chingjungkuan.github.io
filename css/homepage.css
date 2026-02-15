@@ -1,7 +1,7 @@
 @charset "utf-8";
 
 /* ==========================================================================
-   1. Layout (佈局容器)
+Layout (佈局容器)
    ========================================================================== */
 .hero-grid.d-5col-7col {
     display: grid;
@@ -21,7 +21,7 @@
 }
 
 /* ==========================================================================
-   2. Component (通用組件與塗鴉線條)
+Component (通用組件與塗鴉線條)
    ========================================================================== */
 .image-skill-logo {
     width: 240px;
@@ -82,6 +82,41 @@
 /* 滾動觸發後的狀態 */
 .animate-trigger.is-active .doodle-svg path {
     stroke-dashoffset: 0;
+}
+/* 工作技能摘要打勾列 */
+.checklist-container {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 24px;
+}
+
+.check-item {
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+    font-weight: 500;
+    color: #333;
+    line-height: 1.5;
+}
+
+.check-icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    flex-shrink: 0;
+}
+
+@media (min-width: 768px) {
+    .checklist-container {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 16px;
+    }
+
+    .check-item {
+        font-size: 14px;
+    }
 }
 
 /* ==========================================================================
