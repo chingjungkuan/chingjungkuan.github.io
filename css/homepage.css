@@ -23,13 +23,6 @@ Layout (佈局容器)
 /* ==========================================================================
 Component (通用組件與塗鴉線條)
    ========================================================================== */
-.image-skill-logo {
-    width: 240px;
-    height: auto; 
-    display: block; 
-    object-fit: contain;
-    object-position: left; 
-}
 
 .img-contact {
     object-fit: contain; 
@@ -286,39 +279,163 @@ Component (通用組件與塗鴉線條)
     gap: 12px;
 }
 
-.skill-item {
+.skill-section {
+    background-color: #FAFAFA;
+    padding: 80px 20px;
+}
+
+.skill-container {
+    max-width: 1200px;
+    margin: 0 auto;
     display: flex;
-    flex-direction: row;
-    gap: 16px; 
-    align-items: flex-start;
-    flex-wrap: nowrap; 
-}
-@media screen and (min-width: 768px) {
-    .skill-item {
-        flex-direction: column;
-        gap: 24px;
-        align-items: stretch;
-    }
+    flex-direction: column; /* 手機版：上下排列 */
+    align-items: flex-start; /* 【絕對關鍵】：這行讓 sticky 能運作 */
 }
 
-.skill-item .image4-3 {
-    width: 30%;
-    flex-shrink: 0; 
-    object-fit: contain; 
-    object-position: right;
-    border-radius: 0px;
-}
-@media screen and (min-width: 768px) {
-    .skill-item .image4-3 { width: 100%; }
+/* --- 2. 標題與圖示區塊 --- */
+.skill-header {
+    width: 100%;
+    margin-bottom: 40px; /* 手機版標題和卡片的間距 */
 }
 
-.cards {
+.skill-title {
+    font-size: 36px;
+    font-weight: 900;
+    margin-bottom: 24px;
+    color: #333;
+    letter-spacing: 0.05em;
+}
+
+.skill-icons {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.skill-icons img {
+    width: 48px;
+    height: 48px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+/* --- 3. 滾動卡片群組與特效核心 --- */
+.skill-cards-wrapper {
+    width: 100%;
     display: flex;
     flex-direction: column; 
-    gap: 32px; 
 }
-@media screen and (min-width: 768px) {
-    .cards { flex-direction: row; gap: 24px; }
+
+.skill-card {
+    background-color: #fff;
+    border: 1px solid #E2E8F0;
+    border-radius: 24px;
+    padding: 40px;
+    box-shadow: 0 -15px 40px rgba(0,0,0,0.08); 
+    display: flex; 
+    flex-direction: column; 
+    gap: 32px;
+    
+    /* 黏性定位 */
+    position: -webkit-sticky;
+    position: sticky;
+    
+    /* JS 動畫準備：從正上方縮小 */
+    transform-origin: top center;
+    will-change: transform, filter; 
+}
+
+/* 手機版堆疊位置 */
+.card-1 { 
+    top: 80px; 
+    z-index: 1; 
+}
+.card-2 { 
+    top: 120px; 
+    z-index: 2; 
+    margin-top: 5vh; /* 製造滾動軌道 */
+}
+.card-3 { 
+    top: 160px; 
+    z-index: 3; 
+    margin-top: 5vh; /* 製造滾動軌道 */
+}
+
+/* --- 4. 卡片內部排版 --- */
+.card-title {
+    font-size: 28px;
+    font-weight: bold;
+    margin: 0 0 20px 0;
+    color: #1A1A1A;
+}
+
+.card-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.card-list li {
+    font-size: 14px;
+    color: #4A4A4A;
+    display: flex;
+    align-items: center;
+}
+
+.card-list li::before {
+    content: "•";
+    color: #333;
+    margin-right: 10px;
+    font-size: 20px;
+}
+
+.card-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+@media (min-width: 768px) {
+    .skill-container {
+        flex-direction: row;
+        gap: 24px;
+    }
+
+    .skill-header {
+        flex: 1;
+        position: -webkit-sticky;
+        position: sticky; 
+        top: 120px; /* 標題黏住的位置 */
+        margin-bottom: 0; 
+    }
+    
+    .skill-cards-wrapper {
+        flex: 2; 
+    }
+    
+    .skill-card {
+        flex-direction: row; /* 卡片內部改為水平：左字右圖 */
+        align-items: center; 
+        justify-content: space-between; 
+    }
+    
+    .card-content { flex: 1; }
+    .card-image { flex: 1; max-width: 350px; }
+
+    .card-1 { 
+        top: 120px; 
+    }
+    .card-2 { 
+        top: 180px; 
+        margin-top: 5vh; 
+    }
+    .card-3 { 
+        top: 240px; 
+        margin-top: 5vh; 
+    }
 }
 
 /* ==========================================================================
