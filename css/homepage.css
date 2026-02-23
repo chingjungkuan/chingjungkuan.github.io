@@ -285,8 +285,9 @@ Component (通用組件與塗鴉線條)
 }
 
 .skill-container {
-    max-width: 1200px;
+    max-width: 1176px;
     margin: 0 auto;
+    padding: 60px 16px;
     display: flex;
     flex-direction: column; /* 手機版：上下排列 */
     align-items: flex-start; /* 【絕對關鍵】：這行讓 sticky 能運作 */
@@ -299,11 +300,10 @@ Component (通用組件與塗鴉線條)
 }
 
 .skill-title {
-    font-size: 36px;
-    font-weight: 900;
+    font-size: 28px;
+    font-weight: bold;
     margin-bottom: 24px;
     color: #333;
-    letter-spacing: 0.05em;
 }
 
 .skill-icons {
@@ -330,11 +330,11 @@ Component (通用組件與塗鴉線條)
     background-color: #fff;
     border: 1px solid #E2E8F0;
     border-radius: 24px;
-    padding: 40px;
+    padding: 24px;
     box-shadow: 0 -15px 40px rgba(0,0,0,0.08); 
     display: flex; 
     flex-direction: column; 
-    gap: 32px;
+    gap: 16px;
     
     /* 黏性定位 */
     position: -webkit-sticky;
@@ -363,9 +363,8 @@ Component (通用組件與塗鴉線條)
 
 /* --- 4. 卡片內部排版 --- */
 .card-title {
-    font-size: 28px;
-    font-weight: bold;
-    margin: 0 0 20px 0;
+    font-size: 24px;
+    margin: 0 0 16px 0;
     color: #1A1A1A;
 }
 
@@ -388,7 +387,6 @@ Component (通用組件與塗鴉線條)
 .card-list li::before {
     content: "•";
     color: #333;
-    margin-right: 10px;
     font-size: 20px;
 }
 
@@ -417,13 +415,16 @@ Component (通用組件與塗鴉線條)
     }
     
     .skill-card {
-        flex-direction: row; /* 卡片內部改為水平：左字右圖 */
+        flex-direction: row;
         align-items: center; 
-        justify-content: space-between; 
+        justify-content: space-between;
+        padding: 40px;
+        gap: 32px;
+
     }
     
     .card-content { flex: 1; }
-    .card-image { flex: 1; max-width: 350px; }
+    .card-image { flex: 1; max-width: 360px; }
 
     .card-1 { 
         top: 120px; 
