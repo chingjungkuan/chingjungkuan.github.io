@@ -323,7 +323,7 @@ Component (通用組件與塗鴉線條)
 .skill-cards-wrapper {
     width: 100%;
     display: flex;
-    flex-direction: column; 
+    flex-direction: column;
 }
 
 .skill-card {
@@ -353,12 +353,12 @@ Component (通用組件與塗鴉線條)
 .card-2 { 
     top: 120px; 
     z-index: 2; 
-    margin-top: 5vh; /* 製造滾動軌道 */
+    /* margin-top: 5vh; 製造滾動軌道 */
 }
 .card-3 { 
     top: 160px; 
     z-index: 3; 
-    margin-top: 5vh; /* 製造滾動軌道 */
+    /* margin-top: 5vh; 製造滾動軌道 */
 }
 
 /* --- 4. 卡片內部排版 --- */
@@ -438,7 +438,25 @@ Component (通用組件與塗鴉線條)
         margin-top: 5vh; 
     }
 }
+@media (min-width: 992px) {
+    .skill-container { flex-direction: row; gap: 40px; }
+    .skill-header { flex: 1; position: -webkit-sticky; position: sticky; top: 120px; margin-bottom: 0; }
+    .skill-cards-wrapper { flex: 2; }
+    
+    .skill-card { flex-direction: row; align-items: center; justify-content: space-between; }
+    .card-content { flex: 1; }
+    .card-image { flex: 1; max-width: 320px; }
 
+    /* 【關鍵修正】：全部清空！只留 top 停靠位置 */
+    .card-1 { top: 120px; }
+    .card-2 { top: 160px; }
+    .card-3 { top: 200px; }
+}
+
+@media (min-width: 1200px) {
+    .skill-container { gap: 60px; }
+    .card-image { max-width: 350px; }
+}
 /* ==========================================================================
    5. UI Design Section
    ========================================================================== */
