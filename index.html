@@ -28,15 +28,15 @@
 <body>
 	<div class="wrapper">
 		<!-- Start header -->
-		<!-- 共用區塊占位（載入後會被 <header>/<footer> 取代） -->
   			<div id="site-header" data-include="/components/header.html"></div>
 		<!-- End header -->
+	</div>
 
 		<!-- Start main -->
-		<section class="main">
+		<main class="main">
 			
 			<!-- Start jumbotron -->
-			<div class="jumbotron">
+			<section class="jumbotron">
 				<div class="hero-bg-blue noise-bg"></div>
 
                 <div class="container">
@@ -53,11 +53,11 @@
                     </div>
                     
                 </div>
-			</div>
+			</section>
 			<!-- End jumbotron -->
 
 			<!-- Start about -->
-			<div id="about" class="hero-container hero-grid d-5col-7col animate-on-scroll">
+			<section id="about" class="hero-container hero-grid d-5col-7col animate-on-scroll">
 					
 				<div class="description-text">
 					<div class="title-group">
@@ -79,126 +79,118 @@
 				</div>
 				<div class="description-text">
 					
-						<p class="title-group para">
-						大學時參加 UI/UX 工作坊後，我開始關注產品背後的設計邏輯與使用者體驗，並持續觀察設計如何影響行為與決策。
-						</p>
-						<p class="title-group para">
-						現任 TinTint 點點印 UI/UX 設計師，擅長從用戶回饋中找出結構問題，提出具邏輯的優化方案，曾針對不同使用情境重構 Single、Editor2 編輯器與官網多個核心頁面，優化整體品牌介面體驗。我習慣從資訊架構出發，盤點功能、釐清邏輯，並與團隊協作推進設計落地。未來希望挑戰更多產品類型，打造兼具邏輯與美感的使用體驗。
-						</p>
-						<div class="checklist-container">
-							<div class="check-item">
-								<svg class="check-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-									<circle cx="12" cy="12" r="10" fill="#FC0"/> <path d="M8 12L11 15L16 9" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-								</svg>
-								獨立建構系統化 Design System
-							</div>
-							<div class="check-item">
-								<svg class="check-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-									<circle cx="12" cy="12" r="10" fill="#FC0"/>
-									<path d="M8 12L11 15L16 9" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-								</svg>
-								定義 Token 規範，對齊工程開發
-							</div>
-							<div class="check-item">
-								<svg class="check-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-									<circle cx="12" cy="12" r="10" fill="#FC0"/>
-									<path d="M8 12L11 15L16 9" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-								</svg>
-								具備產品策略與邏輯設計思考
-							</div>
+					<p class="title-group para">
+					大學時參加 UI/UX 工作坊後，我開始關注產品背後的設計邏輯與使用者體驗，並持續觀察設計如何影響行為與決策。
+					</p>
+					<p class="title-group para">
+					現任 TinTint 點點印 UI/UX 設計師，擅長從用戶回饋中找出結構問題，提出具邏輯的優化方案，曾針對不同使用情境重構 Single、Editor2 編輯器與官網多個核心頁面，優化整體品牌介面體驗。我習慣從資訊架構出發，盤點功能、釐清邏輯，並與團隊協作推進設計落地。未來希望挑戰更多產品類型，打造兼具邏輯與美感的使用體驗。
+					</p>
+					<div class="checklist-container">
+						<div class="check-item">
+							<svg class="check-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<circle cx="12" cy="12" r="10" fill="#FC0"/> <path d="M8 12L11 15L16 9" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+							</svg>
+							獨立建構系統化 Design System
 						</div>
-    				</div>							
-					
-				</div>
-					
-			</div>
-			<!-- End about -->
-
-
-			<!-- Start SKILL -->
-			
-			<div id="skills" class="hero-bg-grey">
-				<section id="skill" class="skill-section">
-					<div class="skill-container">
-						
-						<div class="skill-header">
-							<h2 class="skill-title">SKILL</h2>
-							<div class="skill-icons">
-								<img src="../images/homepage/ic_figma.svg" alt="Figma">
-								<img src="../images/homepage/ic_illustrator.svg" alt="Illustrator">
-								<img src="../images/homepage/ic_wordpress.svg" alt="WordPress">
-								<img src="../images/homepage/ic_photoshop.svg" alt="Photoshop">
-								<img src="../images/homepage/ic_ae.svg" alt="After Effects">
-							</div>
+						<div class="check-item">
+							<svg class="check-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<circle cx="12" cy="12" r="10" fill="#FC0"/>
+								<path d="M8 12L11 15L16 9" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+							</svg>
+							定義 Token 規範，對齊工程開發
 						</div>
-
-						<div class="skill-cards-wrapper">
-							
-							<div class="skill-card card-1">
-								<div class="card-content">
-									<h3 class="card-title">UI Design</h3>
-									<ul class="card-list">
-										<li>Responsive Design</li>
-										<li>Design System</li>
-										<li>Visual Design</li>
-										<li>Interaction Design</li>
-										<li>Iconography</li>
-										<li>Typography</li>
-										<li>Prototyping</li>
-										<li>Color Theory</li>
-									</ul>
-								</div>
-								<div class="card-image"><img src="../images/homepage/img_skill-ui.png" alt="UI Design"></div>
-							</div>
-
-							<div class="skill-card card-2">
-								<div class="card-content">
-									<h3 class="card-title">UX Design</h3>
-									<ul class="card-list">
-										<li>User Research</li>
-										<li>Information Architecture</li>
-										<li>Usability Testing</li>
-										<li>Persona</li>
-										<li>Competitor Analysis</li>
-										<li>Journey Mapping</li>
-										<li>Accessibility Design</li>
-										<li>Content Strategy</li>
-										
-									</ul>
-								</div>
-								<div class="card-image"><img src="../images/homepage/img_skill-ux.png" alt="UX Design"></div>
-							</div>
-
-							<div class="skill-card card-3">
-								<div class="card-content">
-									<h3 class="card-title">Graphic Design</h3>
-									<ul class="card-list">
-										<li>Logo Design</li>
-										<li>Branding & Visual Identity</li>
-										<li>Marketing Collateral Design</li>
-										<li>Social Media Graphics</li>
-										<li>Illustration</li>
-										<li>Infographic Design</li>
-									</ul>
-								</div>
-								<div class="card-image"><img src="../images/homepage/img_skill-graphic.png" alt="Front-End"></div>
-							</div>
-
+						<div class="check-item">
+							<svg class="check-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<circle cx="12" cy="12" r="10" fill="#FC0"/>
+								<path d="M8 12L11 15L16 9" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+							</svg>
+							具備產品策略與邏輯設計思考
 						</div>
 					</div>
-				</section>
+				</div>							
+					
+			</section>
+			<!-- End about -->
+			<!-- Start Skill -->
+			<section id="skills" class="hero-bg-grey">
+				<div class="skill-container">
+					
+					<div class="skill-header">
+						<h2 class="skill-title">SKILL</h2>
+						<div class="skill-icons">
+							<img src="../images/homepage/ic_figma.svg" alt="Figma">
+							<img src="../images/homepage/ic_illustrator.svg" alt="Illustrator">
+							<img src="../images/homepage/ic_wordpress.svg" alt="WordPress">
+							<img src="../images/homepage/ic_photoshop.svg" alt="Photoshop">
+							<img src="../images/homepage/ic_ae.svg" alt="After Effects">
+						</div>
+					</div>
 
-			</div>
+					<div class="skill-cards-wrapper">
+						
+						<div class="skill-card card-1">
+							<div class="card-content">
+								<h3 class="card-title">UI Design</h3>
+								<ul class="card-list">
+									<li>Responsive Design</li>
+									<li>Design System</li>
+									<li>Visual Design</li>
+									<li>Interaction Design</li>
+									<li>Iconography</li>
+									<li>Typography</li>
+									<li>Prototyping</li>
+									<li>Color Theory</li>
+								</ul>
+							</div>
+							<div class="card-image"><img src="../images/homepage/img_skill-ui.png" alt="UI Design"></div>
+						</div>
+
+						<div class="skill-card card-2">
+							<div class="card-content">
+								<h3 class="card-title">UX Design</h3>
+								<ul class="card-list">
+									<li>User Research</li>
+									<li>Information Architecture</li>
+									<li>Usability Testing</li>
+									<li>Persona</li>
+									<li>Competitor Analysis</li>
+									<li>Journey Mapping</li>
+									<li>Accessibility Design</li>
+									<li>Content Strategy</li>
+									
+								</ul>
+							</div>
+							<div class="card-image"><img src="../images/homepage/img_skill-ux.png" alt="UX Design"></div>
+						</div>
+
+						<div class="skill-card card-3">
+							<div class="card-content">
+								<h3 class="card-title">Graphic Design</h3>
+								<ul class="card-list">
+									<li>Logo Design</li>
+									<li>Branding & Visual Identity</li>
+									<li>Marketing Collateral Design</li>
+									<li>Social Media Graphics</li>
+									<li>Illustration</li>
+									<li>Infographic Design</li>
+								</ul>
+							</div>
+							<div class="card-image"><img src="../images/homepage/img_skill-graphic.png" alt="Front-End"></div>
+						</div>
+
+					</div>
+				</div>
+			</section>
+
 			<!-- End skills -->
 
 			<!-- Start portfolio -->
-			<div id="ui-design" class="hero-container flex-v-24">
-				
-					
+			<section id="ui-design" class="hero-container flex-v-24">
+	
 				<h2 class="title animate-on-scroll animate-trigger">
 					<span class="highlight-container">UI DESIGN PROJECT
-						<svg class="doodle-svg" viewBox="0 0 200 20" preserveAspectRatio="none"><path d="M5,16 Q50,2 100,14 T195,12" />
-						</svg></span>
+						<svg class="doodle-svg" viewBox="0 0 200 20" preserveAspectRatio="none"><path d="M5,16 Q50,2 100,14 T195,12" /></svg>
+					</span>
 				</h2>
 				<div class="flex-v-48">
 					<div class="hero-grid d-2col-1col animate-on-scroll">
@@ -294,18 +286,13 @@
 						</article>
 					</section>
 				</div>
-
-					
-
-					
-				</div>
-			</div>
+	
+			</section>
 			<!-- End portfolio -->
 
 			<!-- Start contact -->
-			<div id="contact" class="hero-bg-grey">
-				<div class="hero-container contact-container animate-on-scroll">
-											
+			<section id="contact" class="hero-bg-grey">
+				<div class="hero-container contact-container animate-on-scroll">						
 					<div class="d-horizontal">
 						<img class="img-contact" src="images/homepage/img_contactme.png" alt="聯絡我圖示" loading="lazy"> 
 						<h2 class="title animate-trigger">
@@ -317,26 +304,23 @@
 						<p class="para">想了解更多作品內容，歡迎隨時聯絡我！<br><b>Email |   </b>rf61128@gmail.com</p>
 						<div class="button"><a href="mailto:rf61128@gmail.com" class="btn btn-primary">與我聯繫</a></div>		
 					</div>
-					
-				</div>		
-					
-			</div>
-		
+				</div>
+			</section>
 			<!-- End contact -->
 
-		</section>
+		</main>
 		<!-- End main -->
 
 		<!-- Start footer -->
   			<div id="site-footer" data-include="/components/footer.html"></div>
     	<!-- End footer -->
-	</div>
-	<!-- Start JS -->
-	<script src="/js/include.js"></script>
-	<script src="/js/scroll-animate.js"></script>
-	<script src="/js/doodle-title-line.js"></script>
-	<script src="/js/stacked-cards.js"></script>
+	
+		<!-- Start JS -->
+		<script src="/js/include.js"></script>
+		<script src="/js/scroll-animate.js"></script>
+		<script src="/js/doodle-title-line.js"></script>
+		<script src="/js/stacked-cards.js"></script>
 
-	<!-- End JS -->
+		<!-- End JS -->
 </body>
 </html>
