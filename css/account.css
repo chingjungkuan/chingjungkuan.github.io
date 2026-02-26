@@ -4,13 +4,10 @@
 	Global
 \* -------------------------- */
 
-.txt-nowrap{
-    white-space: nowrap;
-}
 :root {
     --brand-red: #ff4d00;
     --brand-peach: #fceae0;
-    --border-black: #000;
+    --border-black: #121212;
     --bg-grey: #DFE2E4; 
 }
 
@@ -30,6 +27,76 @@
     }
     .display-title {
         font-size: 64px;
+    }
+}
+/* ==========================================================================
+   Section Title & Subtitle (區塊標題與副標題)
+   ========================================================================== */
+
+/* --- 黑底大標題 --- */
+.sec-title-container {
+    width: 100%;
+    background-color: #121212;
+    color: #fff;
+    text-align: center;
+    padding: 24px 20px; /* 上下留白，讓字有呼吸空間 */
+}
+
+.sec-title-container h2 {
+    margin: 0;
+    font-size: 32px; /* 手機版預設字級 */
+    font-weight: 900;
+    letter-spacing: 0.05em;
+}
+
+/* --- 白底副標題 --- */
+.sec-subtitle-container {
+    width: 100%;
+    background-color: #fff;
+    color: var(--border-black); /* 沿用妳的黑色變數 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px; /* 橘點與文字的間距 */
+    padding: 16px 20px;
+    border-bottom: 1px solid var(--border-black); /* 底部加上細黑線切分區塊 */
+}
+
+.sec-subtitle-container h3 {
+    margin: 0;
+    font-size: 24px; /* 手機版預設字級 */
+    font-weight: 700;
+}
+
+/* 如果妳之前的 CSS 裡沒有這段，請保留；如果已經有了，這段可以刪除 */
+.sec-subtitle-container .orange-dot {
+    width: 12px;
+    height: 12px;
+    background-color: var(--brand-red);
+    border-radius: 50%;
+}
+@media (min-width: 768px) {
+    
+    .sec-title-container {
+        padding: 12px;
+    }
+
+    .sec-title-container h2 {
+        font-size: 48px;
+        color: white;
+    }
+
+    .sec-subtitle-container {
+        padding: 12px; 
+    }
+
+    .sec-subtitle-container h3 {
+        font-size: 36px;
+    }
+    
+    .sec-subtitle-container .orange-dot {
+        width: 16px;
+        height: 16px; 
     }
 }
 /* -------------------------- *\
@@ -64,113 +131,11 @@
         padding: 60px 16px;
     }
 }
-.comparison-container {
-  position: relative;
-  width: 100%;
-  max-width: 800px;
-  aspect-ratio: 3 / 2;
-  overflow: hidden;
-  border-radius: 8px;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-}
-
-.img-wrapper {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-
-.img-wrapper img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover; /* 確保圖片填滿且不變形 */
-  display: block;
-}
-
-/* 前層 (After) 初始寬度設為 50% */
-.after {
-  width: 50%;
-  z-index: 2;
-  overflow: hidden;
-  border-right: 4px solid #ccc; /* 中間的分隔線 */
-}
-
-.section-header {
-  display: flex;
-  align-items: center; 
-  gap: 12px; 
-  width: 100%;
-}
-
-.title-line {
-  flex-grow: 1;        /* 自動填滿剩餘寬度 */
-  height: 5px;         /* 對齊 SVG 的 viewBox 高度 */
-  display: flex;
-  align-items: center;
-}
-
-.title-line svg {
-  width: 100%;
-  height: 5px;
-}
-
 
 /* -------------------------- *\
 	Component
 \* -------------------------- */
-/* 隱形滑桿，覆蓋在最上層 */
-.slider {
-  position: absolute;
-  -webkit-appearance: none;
-  appearance: none;
-  width: 100%;
-  height: 100%;
-  background: rgba(255, 255, 255, 0);
-  outline: none;
-  margin: 0;
-  transition: all 0.2s;
-  z-index: 10;
-  cursor: ew-resize;
-}
 
-/* 滑桿控制點 */
-.slider::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  appearance: none;
-  width: 1px;
-  height: 100vh;
-  background: white;
-  cursor: ew-resize;
-}
-
-/* 中間圓型按鈕標示 (美化用) */
-.slider-button {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background: white;
-  box-shadow: 0 0 10px rgba(0,0,0,0.3);
-  z-index: 5;
-  pointer-events: none; /* 讓滑鼠穿透到 slider 本體 */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.slider-button::before {
-  content: '↔';
-  color: #333;
-  font-weight: bold;
-}
-
-/* -------------------------- *\
-  手風琴 Accordion
 
 /* --- 手風琴容器樣式 --- */
 .accordion-group {
