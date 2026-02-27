@@ -1,19 +1,50 @@
-
 @charset "utf-8";
-/* -------------------------- *\
-	Global
-\* -------------------------- */
+
+/* ==========================================================================
+   1. Global Settings & Variables
+   ========================================================================== */
 
 :root {
     --brand-red: #ff4d00;
     --brand-peach: #fceae0;
     --border-black: #121212;
-    --bg-grey: #DFE2E4; 
+    --bg-grey: #DFE2E4;
+    --text-main: #333333;
+    --text-muted: #888888;
+    --transition-smooth: 0.35s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.header-banner h1 {
-    font-size: 16px;
+/* ==========================================================================
+   2. Layout & Containers
+   ========================================================================== */
+
+.border-container {
+    margin: 0 auto;
+    padding: 40px 0;
+    display: grid;
+    gap: 24px;
+    border-bottom: 1px solid var(--border-black);
 }
+
+.d-7col-5col {
+    grid-template-columns: 1fr;
+}
+
+@media (min-width: 768px) {
+    .border-container {
+        padding: 60px 16px;
+    }
+    .overview {
+        grid-template-columns: 5fr 7fr;
+    }
+    .d-7col-5col {
+        grid-template-columns: 7fr 5fr;
+    }
+}
+
+/* ==========================================================================
+   3. Typography & Section Headers
+   ========================================================================== */
 
 .display-title {
     font-family: "Rubik Dirt", sans-serif;
@@ -21,130 +52,55 @@
     color: var(--border-black);
 }
 
-@media (min-width: 768px) {
-    .header-banner h1 {
-        font-size: 36px;
-    }
-    .display-title {
-        font-size: 64px;
-    }
-}
-/* ==========================================================================
-   Section Title & Subtitle (區塊標題與副標題)
-   ========================================================================== */
-
 /* --- 黑底大標題 --- */
 .sec-title-container {
     width: 100%;
-    background-color: #121212;
-    color: #fff;
+    background-color: var(--border-black);
     text-align: center;
-    padding: 24px 20px; /* 上下留白，讓字有呼吸空間 */
+    padding: 8px 16px;
 }
 
 .sec-title-container h2 {
     margin: 0;
-    font-size: 32px; /* 手機版預設字級 */
+    font-size: 32px;
     font-weight: 900;
-    letter-spacing: 0.05em;
+    color: white;
 }
 
 /* --- 白底副標題 --- */
 .sec-subtitle-container {
     width: 100%;
     background-color: #fff;
-    color: var(--border-black); /* 沿用妳的黑色變數 */
+    color: var(--border-black);
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 12px; /* 橘點與文字的間距 */
+    gap: 12px;
     padding: 16px 20px;
-    border-bottom: 1px solid var(--border-black); /* 底部加上細黑線切分區塊 */
+    border-top: 1px solid var(--border-black);
+    border-bottom: 1px solid var(--border-black);
 }
 
 .sec-subtitle-container h3 {
     margin: 0;
-    font-size: 24px; /* 手機版預設字級 */
+    font-size: 24px;
     font-weight: 700;
 }
 
-/* 如果妳之前的 CSS 裡沒有這段，請保留；如果已經有了，這段可以刪除 */
-.sec-subtitle-container .orange-dot {
-    width: 12px;
-    height: 12px;
-    background-color: var(--brand-red);
-    border-radius: 50%;
-}
 @media (min-width: 768px) {
-    
-    .sec-title-container {
-        padding: 12px;
-    }
-
-    .sec-title-container h2 {
-        font-size: 48px;
-        color: white;
-    }
-
-    .sec-subtitle-container {
-        padding: 12px; 
-    }
-
-    .sec-subtitle-container h3 {
-        font-size: 36px;
-    }
-    
-    .sec-subtitle-container .orange-dot {
-        width: 16px;
-        height: 16px; 
-    }
-}
-/* -------------------------- *\
-	Layout
-\* -------------------------- */
-/* 痛點區塊 電腦版特規 */
-
-.d-7col-5col {
-    grid-template-columns: 1fr;
-}
-@media (min-width: 768px) {
-    .overview {
-        grid-template-columns: 5fr 7fr;
-    }
-    .d-7col-5col {
-    grid-template-columns: 7fr 5fr;
-}
+    .display-title { font-size: 64px; }
+    .sec-title-container { padding: 12px; }
+    .sec-title-container h2 { font-size: 48px; }
+    .sec-subtitle-container { padding: 12px; }
+    .sec-subtitle-container h3 { font-size: 36px; }
 }
 
-/* 容器基本設定 */
-.border-container{
-    margin: 0 auto;
-    padding: 40px 16px;
-    display: grid;
-    gap: 24px;
-    border-bottom: 1px solid var(--border-black);
+/* ==========================================================================
+   4. Component: Accordion (手風琴)
+   ========================================================================== */
 
-}
-
-@media (min-width: 768px){
-    .border-container{
-        padding: 60px 16px;
-    }
-}
-
-/* -------------------------- *\
-	Component
-\* -------------------------- */
-
-
-/* --- 手風琴容器樣式 --- */
-.accordion-group {
-    border-top: 1px solid #eee;
-}
-
-.accordion-item {
-    border-bottom: 1px solid #eee;
-}
+.accordion-group { border-top: 1px solid #eee; }
+.accordion-item { border-bottom: 1px solid #eee; }
 
 .accordion-header {
     display: flex;
@@ -154,12 +110,12 @@
     padding: 20px 0;
 }
 
-/* --- 展開收合扁平箭頭 --- */
+/* 箭頭動畫樣式 */
 .arrow-icon {
     position: relative;
     width: 20px;
     height: 10px;
-    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: transform var(--transition-smooth);
 }
 
 .arrow-icon::before,
@@ -167,43 +123,29 @@
     content: "";
     position: absolute;
     top: 50%;
-    width: 10px; /* 線段長度 */
-    height: 1.5px; /* 線條粗細 */
+    width: 10px;
+    height: 1.5px;
     background-color: #999;
     border-radius: 1px;
 }
 
-.arrow-icon::before {
-    left: 1px;
-    transform: rotate(30deg);
-    transform-origin: right center; /* 鎖定右端為中心，解決歪斜問題 */
-}
+.arrow-icon::before { left: 1px; transform: rotate(30deg); transform-origin: right center; }
+.arrow-icon::after { right: 1px; transform: rotate(-30deg); transform-origin: left center; }
 
-.arrow-icon::after {
-    right: 1px;
-    transform: rotate(-30deg);
-    transform-origin: left center; /* 鎖定左端為中心 */
-}
+.accordion-item.active .arrow-icon { transform: rotate(180deg); }
 
-/* 展開狀態：箭頭 180 度翻轉 */
-.accordion-item.active .arrow-icon {
-    transform: rotate(180deg);
-}
-
-/* --- 核心：極速流暢 Grid 動畫 --- */
+/* Grid 展開動畫核心 */
 .accordion-content {
     display: grid;
-    grid-template-rows: 0fr; /* 初始收合狀態 */
-    transition: grid-template-rows 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    grid-template-rows: 0fr;
+    transition: grid-template-rows var(--transition-smooth);
     overflow: hidden;
 }
 
-.accordion-item.active .accordion-content {
-    grid-template-rows: 1fr; /* 自動撐開至實際內容高度 */
-}
+.accordion-item.active .accordion-content { grid-template-rows: 1fr; }
 
 .accordion-inner {
-    min-height: 0; /* 修正瀏覽器 Grid 渲染 Bug */
+    min-height: 0;
     visibility: hidden;
     opacity: 0;
     transition: opacity 0.3s, visibility 0.3s;
@@ -212,140 +154,79 @@
 .accordion-item.active .accordion-inner {
     visibility: visible;
     opacity: 1;
-    padding-bottom: 24px; /* 展開後的內容下間距 */
+    padding-bottom: 24px;
 }
-/* 簡化編輯流程 區塊 */
 
-.editor2-title {
-  text-align: left;
-  font-size: 24px;
-  margin-bottom: 8px;
-}
+/* ==========================================================================
+   5. Component: 流程步驟
+   ========================================================================== */
+
+.editor2-title { font-size: 24px; margin-bottom: 8px; text-align: left; }
 .editor2-title.editor2-gray { color: #444; }
 .editor2-title.editor2-green { color: #2d6a4f; }
 
 .editor2-stepper {
-  display: flex;
-  flex-direction: column; /* 垂直排列 */
-  align-items: flex-start;
-  padding-left: 40px;
-  position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 40px;
+    position: relative;
 }
 
 /* 垂直連接線 */
 .editor2-stepper::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 20px;
-  width: 2px;
-  background-color: #e0e0e0;
-  z-index: 1;
+    content: "";
+    position: absolute;
+    top: 0; bottom: 0; left: 20px;
+    width: 2px;
+    background-color: #e0e0e0;
+    z-index: 1;
 }
 
-.editor2-after-style::before {
-  background-color: #d8f3dc;
-}
+.editor2-after-style::before { background-color: #d8f3dc; }
 
 .editor2-step-item {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 16px;
-  margin-bottom: 16px;
-  text-align: left;
-  position: relative;
-  z-index: 2;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 16px;
+    position: relative;
+    z-index: 2;
 }
 
 .editor2-badge {
-  background-color: #e0e0e0;
-  color: #666;
-  padding: 4px 16px;
-  border-radius: 20px;
-  font-size: 14px;
-  font-weight: bold;
+    background-color: #e0e0e0;
+    color: #666;
+    padding: 4px 16px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: bold;
 }
 
-.editor2-after-style .editor2-badge {
-  background-color: #d8f3dc;
-  color: #2d6a4f;
-}
-
-.editor2-label {
-  font-weight: bold;
-  color: #333;
-  margin: 0;
-  white-space: nowrap;
-}
-
-.editor2-subtext {
-  font-size: 12px;
-  color: #888;
-  margin-top: 4px;
-}
-
-.editor2-arrow-divider {
-  display: flex;
-  justify-content: center;
-  color: #2d6a4f;
-
-}
+.editor2-after-style .editor2-badge { background-color: #d8f3dc; color: #2d6a4f; }
+.editor2-label { font-weight: bold; color: #333; white-space: nowrap; }
+.editor2-subtext { font-size: 12px; color: var(--text-muted); margin-top: 4px; }
 
 @media (min-width: 640px) {
-  .editor2-stepper {
-    flex-direction: row; /* 水平排列 */
-    justify-content: space-between;
-    align-items: flex-start; /* 確保頂部對齊，線條才不會跑掉 */
-    padding-left: 0;
-  }
-
-  /* 橫向連接線 */
-  .editor2-stepper::before {
-    top: 12px;
-    left: 0;
-    right: 0;
-    width: 100%;
-    height: 2px;
-  }
-
-  .editor2-after-style::before {
-    height: 3px;
-  }
-
-  .editor2-step-item {
-    flex: 1;
-    flex-direction: column; /* 垂直顯示文字與 Badge */
-    align-items: center;
-    margin-bottom: 0;
-    text-align: center;
-    gap: 0;
-  }
-
-  .editor2-badge {
-    margin-bottom: 8px;
-  }
-
-  .editor2-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
+    .editor2-stepper { flex-direction: row; justify-content: space-between; padding-left: 0; }
+    .editor2-stepper::before { top: 12px; left: 0; right: 0; width: 100%; height: 2px; }
+    .editor2-after-style::before { height: 3px; }
+    .editor2-step-item { flex: 1; flex-direction: column; text-align: center; margin-bottom: 0; gap: 0; }
+    .editor2-badge { margin-bottom: 8px; }
 }
 
-.hero-banner-container {
-    width: 100%;
-    margin-top: 64px;
+/* ==========================================================================
+   6. Component: Hero Portfolio Banner
+   ========================================================================== */
+
+.hero-banner-container { 
+    width: 100%; 
+    margin-top: 64px; 
     overflow: hidden; 
 }
 
-.portfolio-wrapper {
-    width: 100%;
-    margin: 0 auto;
-}
-
-/* --- 1. Header 三段式佈局 --- */
+/* --- Header 三段式佈局 --- */
 .header-banner {
     display: flex;
     width: 100%;
@@ -353,53 +234,18 @@
     border-bottom: 1px solid var(--border-black);
 }
 
-.header-item {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: 900;
-}
+/* 處理標題字體 */
+.header-banner h1 { font-size: 16px; margin: 0; }
 
-/* 左側：橘紅底白字 */
-.header-red {
-    background-color: var(--brand-red);
-    color: #fff;
-    font-size: 16px;
-    flex: 0 0 120px; 
-}
+.header-item { display: flex; align-items: center; justify-content: center; font-weight: 900; }
+.header-red { background-color: var(--brand-red); color: #fff; flex: 0 0 120px; }
+.header-center-dark { background-color: #000; flex: 1; }
+.header-center-dark h2 { font-size: 16px; font-weight: 700; color: #fff; letter-spacing: 0.05em; margin: 0; }
+.header-right-light { background-color: #fff; flex: 0 0 120px; gap: 8px; border-left: 1px solid var(--border-black); }
 
-/* 中間：黑底白字 */
-.header-center-dark {
-    background-color: #000; 
-    flex: 1; 
-}
+.orange-dot { width: 8px; height: 8px; background-color: var(--brand-red); border-radius: 50%; }
 
-.header-center-dark h2 {
-    margin: 0;
-    font-size: 16px; 
-    font-weight: 700;
-    color: #fff;
-    letter-spacing: 0.05em;
-}
-
-/* 右側：白底黑字 */
-.header-right-light {
-    background-color: #fff;
-    color: #000; 
-    font-size: 16px;
-    flex: 0 0 120px; 
-    gap: 8px;
-    border-left: 1px solid var(--border-black); 
-}
-
-.orange-dot {
-    width: 8px;
-    height: 8px;
-    background-color: var(--brand-red);
-    border-radius: 50%;
-}
-
-/* --- 2. 副標題佈局 --- */
+/* --- 2. 副標題佈局 (剛剛遺漏的部分) --- */
 .subtitle-bar {
     width: 100%;
     background-color: #fff;
@@ -414,79 +260,29 @@
     color: var(--border-black);
 }
 
-/* --- 3. Banner 雙欄圖片佈局核心 --- */
-.banner-layout {
-    display: flex;
-    flex-direction: column; 
-    width: 100%;
-}
-
-.column {
-    width: 100%;
-    height: 350px; 
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0; 
-    overflow: hidden; 
-}
+/* --- 3. Banner 雙欄圖片佈局 --- */
+.banner-layout { display: flex; flex-direction: column; width: 100%; }
+.column { width: 100%; height: 350px; overflow: hidden; }
+.column img { width: 100%; height: 100%; object-fit: cover; }
 
 .bg-peach { background-color: var(--brand-peach); }
 .bg-grey { background-color: var(--bg-grey); border-top: 1px solid var(--border-black); }
 
-.column img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; 
-}
+/* --- RWD 設定 --- */
 @media (min-width: 768px) {
-    /* Header 還原高度並放大字體 */
-    .header-banner {
-        height: 70px;
-    }
+    .header-banner { height: 56px; }
+    .header-banner h1 { font-size: 36px; } /* 恢復大螢幕字體 */
     
-    .header-red,
-    .header-right-light {
-        font-size: 24px;
-        flex: 0 0 180px;
-    }
+    .header-red, .header-right-light { font-size: 24px; flex: 0 0 180px; }
+    .header-center-dark h2 { font-size: 24px; }
     
-    .header-center-dark h2 {
-        font-size: 24px; 
-    }
+    .subtitle-bar h1 { font-size: 48px; } /* 恢復大螢幕標題 */
     
-    .orange-dot {
-        width: 12px;
-        height: 12px;
-    }
+    .orange-dot { width: 12px; height: 12px; }
+    .banner-layout { flex-direction: row; align-items: stretch; }
+    .column { flex: 1; height: 450px; }
+    .bg-grey { border-top: none; border-left: 1px solid var(--border-black); }
+}
 
-    /* 主標題放大 */
-    .subtitle-bar h1 {
-        font-size: 48px;
-    }
-
-    .banner-layout {
-        flex-direction: row;
-        align-items: stretch; /* 確保左右等高 */
-    }
-    
-    .column {
-        flex: 1; 
-        height: 450px; 
-    }
-    
-    .bg-grey {
-        border-top: none; 
-        border-left: 1px solid var(--border-black); 
-    }
-}
-@media (min-width: 1440px) {
-    .column {
-        height: 640px; 
-    }
-}
-@media (min-width: 1920px) {
-    .column {
-        height: 720px; 
-    }
-}
+@media (min-width: 1440px) { .column { height: 480px; } }
+@media (min-width: 1920px) { .column { height: 640px; } }
