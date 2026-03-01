@@ -391,6 +391,8 @@ li{	font-size: 14px; line-height: 150%;	color: #414141;}
     object-fit: cover;
     object-position: center;
     order: 2;
+    transition: opacity 0.3s ease-in-out;
+    opacity: 1;
 }
 
 .image-manual {
