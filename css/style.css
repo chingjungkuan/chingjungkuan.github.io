@@ -938,7 +938,7 @@ img {
   background: #fff;
   border-radius: 4px;
   cursor: pointer;
-  color: #212121;
+  color: #191919;
   font-size: 14px;
   transition: all 0.3s ease;
 }
@@ -959,16 +959,21 @@ img {
   display: none; /* 預設隱藏 */
 
 }
-
+.mobile-selector-wrapper a, 
+.mobile-selector-wrapper select {
+    color: #191919;
+    text-decoration: none;
+    outline: none;
+}
 .tab-dropdown {
   width: 100%;
   padding: 12px 24px 12px 16px;
   border: 1px solid #DDD;
   border-radius: 4px;
   font-size: 16px;
+  color: #191919 !important;
   background-color: #fff;
   cursor: pointer;
-  /* --- 關鍵修改：自定義箭頭 --- */
   -webkit-appearance: none; /* 移除 Chrome/Safari 預設箭頭 */
   -moz-appearance: none;    /* 移除 Firefox 預設箭頭 */
   appearance: none;         /* 移除標準預設箭頭 */
