@@ -13,7 +13,15 @@
     --text-muted: #888888;
     --transition-smooth: 0.35s cubic-bezier(0.4, 0, 0.2, 1);
 }
-
+.btn.btn-secondary{
+    background-color: white;
+	border: 1px solid var(--brand-red);
+	color: var(--brand-red);
+}
+.btn.btn-secondary:hover{
+	background-color: var(--brand-red);
+	color: #fff;
+}
 /* ==========================================================================
    2. Layout & Containers
    ========================================================================== */
