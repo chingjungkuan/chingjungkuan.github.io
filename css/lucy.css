@@ -1,0 +1,274 @@
+@charset "utf-8";
+
+/* -------------------------- *\
+	Global Overrides for LUCY
+\* -------------------------- */
+.text-primary {
+  color: #191919;
+}
+.text-cta, .highlight {
+  color: #C4F000;
+}
+.text-highlight {
+  color: #FF734C; /* Error / highlight */
+}
+.hero-bg-white {
+  background-color: #F2EDE4; /* Light BG from style guide */
+}
+
+/* -------------------------- *\
+	Global
+\* -------------------------- */
+.section-header {
+  display: flex;
+  align-items: center; 
+  gap: 12px; 
+  width: 100%;
+}
+
+.title-line {
+  flex-grow: 1;        /* 自動填滿剩餘寬度 */
+  height: 5px;         /* 對齊 SVG 的 viewBox 高度 */
+  display: flex;
+  align-items: center;
+}
+
+.title-line svg {
+  width: 100%;
+  height: 5px;
+}
+.txt-nowrap{
+    white-space: nowrap;
+}
+
+/* -------------------------- *\
+	Layout
+\* -------------------------- */
+.lucy-stepper-container {
+  max-width: 900px;
+  margin: 16px auto;
+  padding: 0 16px;
+}
+
+/* -------------------------- *\
+	Component
+\* -------------------------- */
+/* 簡化編輯流程 區塊 */
+
+.lucy-title {
+  text-align: left;
+  font-size: 24px;
+  margin-bottom: 8px;
+}
+.lucy-title.lucy-gray { color: #444; }
+.lucy-title.lucy-green { color: #2d6a4f; }
+
+.lucy-stepper {
+  display: flex;
+  flex-direction: column; /* 垂直排列 */
+  align-items: flex-start;
+  padding-left: 40px;
+  position: relative;
+}
+
+/* 垂直連接線 */
+.lucy-stepper::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 20px;
+  width: 2px;
+  background-color: #e0e0e0;
+  z-index: 1;
+}
+
+.lucy-after-style::before {
+  background-color: #d8f3dc;
+}
+
+.lucy-step-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 16px;
+  text-align: left;
+  position: relative;
+  z-index: 2;
+}
+
+.lucy-badge {
+  background-color: #e0e0e0;
+  color: #666;
+  padding: 4px 16px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.lucy-after-style .lucy-badge {
+  background-color: #d8f3dc;
+  color: #2d6a4f;
+}
+
+.lucy-label {
+  font-weight: bold;
+  color: #333;
+  margin: 0;
+  white-space: nowrap;
+}
+
+.lucy-subtext {
+  font-size: 12px;
+  color: #888;
+  margin-top: 4px;
+}
+
+.lucy-arrow-divider {
+  display: flex;
+  justify-content: center;
+  color: #2d6a4f;
+
+}
+
+@media (min-width: 640px) {
+  .lucy-stepper {
+    flex-direction: row; /* 水平排列 */
+    justify-content: space-between;
+    align-items: flex-start; /* 確保頂部對齊，線條才不會跑掉 */
+    padding-left: 0;
+  }
+
+  /* 橫向連接線 */
+  .lucy-stepper::before {
+    top: 12px;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 2px;
+  }
+
+  .lucy-after-style::before {
+    height: 3px;
+  }
+
+  .lucy-step-item {
+    flex: 1;
+    flex-direction: column; /* 垂直顯示文字與 Badge */
+    align-items: center;
+    margin-bottom: 0;
+    text-align: center;
+    gap: 0;
+  }
+
+  .lucy-badge {
+    margin-bottom: 8px;
+  }
+
+  .lucy-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* UI Design 圖說區塊 垂直步驟流程 */
+
+.lucy-v-container {
+  display: inline-flex;
+  flex-direction: column;
+}
+
+.lucy-v-row {
+  display: flex;
+  align-items: center; 
+  gap: 12px;
+}
+
+/* 左側棕色橢圓背景 */
+.lucy-v-stepper-bg {
+  background-color: #f3f0ee;
+  width: 48px; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 0;
+}
+
+/* 處理橢圓的最上方與最下方圓角 */
+.lucy-v-row[data-step="1"] .lucy-v-stepper-bg {
+  border-radius: 40px 40px 0 0;
+  padding-top: 8px;
+}
+.lucy-v-row[data-step="3"] .lucy-v-stepper-bg {
+  border-radius: 0 0 40px 40px;
+  padding-bottom: 8px;
+}
+
+/* 數字樣式：預留透明邊框防止 Active 時撐開高度 */
+.lucy-v-number {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  font-weight: bold;
+  color: #b5ada5;
+  border-radius: 50%;
+  border: 4px solid transparent; /* 預留空間防止偏移 */
+  box-sizing: border-box;
+}
+
+/* 文字樣式 */
+.lucy-v-text {
+  font-size: 18px;
+  font-weight: bold;
+  color: #b5ada5;
+  white-space: nowrap;
+}
+
+/* --- 各步驟 Active 狀態處理 --- */
+
+/* Step 1 Active */
+.lucy-v-active-1 .lucy-v-row[data-step="1"] .lucy-v-number {
+  background-color: #ffffff;
+  color: #625043;
+  border-color: #d4cdc6;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+.lucy-v-active-1 .lucy-v-row[data-step="1"] .lucy-v-text {
+  color: #625043;
+}
+
+/* Step 2 Active */
+.lucy-v-active-2 .lucy-v-row[data-step="2"] .lucy-v-number {
+  background-color: #ffffff;
+  color: #625043;
+  border-color: #d4cdc6;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+.lucy-v-active-2 .lucy-v-row[data-step="2"] .lucy-v-text {
+  color: #625043;
+}
+
+/* Step 3 Active */
+.lucy-v-active-3 .lucy-v-row[data-step="3"] .lucy-v-number {
+  background-color: #ffffff;
+  color: #625043;
+  border-color: #d4cdc6;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+.lucy-v-active-3 .lucy-v-row[data-step="3"] .lucy-v-text {
+  color: #625043;
+}
+
+@media (min-width: 768px) {
+  .lucy-v-row {
+    gap: 12px;
+  }
+  .lucy-v-text {
+    font-size: 16px;
+  }
+}
