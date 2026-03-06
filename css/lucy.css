@@ -7,13 +7,11 @@
   color: #191919;
 }
 .text-cta, .highlight {
-  color: #C4F000;
+  color: #00BF8A;
 }
-.text-highlight {
-  color: #FF734C; /* Error / highlight */
-}
-.hero-bg-white {
-  background-color: #F2EDE4; /* Light BG from style guide */
+.display-title {
+
+    color: #191919;
 }
 
 /* -------------------------- *\
