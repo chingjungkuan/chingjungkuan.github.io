@@ -81,8 +81,9 @@
             let active = false;
 
             targets.forEach(section => {
-                const top = section.offsetTop;
-                const bottom = top + section.offsetHeight;
+                const rect = section.getBoundingClientRect();
+                const top = rect.top + window.scrollY;
+                const bottom = top + rect.height;
 
                 // 判斷視窗中心點是否落在此區塊範圍內
                 if (viewportMiddle >= top && viewportMiddle < bottom) {
