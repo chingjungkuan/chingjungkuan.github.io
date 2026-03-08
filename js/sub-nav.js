@@ -1,14 +1,29 @@
 // sub-nav.js - 處理側邊導航的滾動高亮和浮動功能
 
-(function() {
+(function () {
     // 取得 sub-nav 和對應的內容區塊
     const subNav = document.getElementById('sub-nav');
     const designProcess = document.getElementById('overview');
-    
+
     // 檢查關鍵元素是否存在，確保程式碼只在有 sub-nav 的頁面執行
     if (!subNav || !designProcess) {
         // 如果找不到其中任一元素，則停止執行後續程式碼
-        return; 
+        return;
+    }
+
+    // 動態插入手機版懸浮按鈕
+    if (!subNav.querySelector('.sub-nav-toggle')) {
+        const toggleBtn = document.createElement('button');
+        toggleBtn.className = 'sub-nav-toggle';
+        toggleBtn.setAttribute('aria-label', 'Toggle Navigation');
+        // 點與線條分離的列表 icon (較細的線、較小的點)
+        toggleBtn.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 16 16"><circle cx="2.5" cy="4" r="1.2"/><circle cx="2.5" cy="8" r="1.2"/><circle cx="2.5" cy="12" r="1.2"/><path fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" d="M6 4h7.5 M6 8h7.5 M6 12h7.5"/></svg>`;
+        subNav.appendChild(toggleBtn);
+
+        // 點擊事件
+        toggleBtn.addEventListener('click', () => {
+            subNav.classList.toggle('expanded');
+        });
     }
 
     const links = document.querySelectorAll('.sub-nav a');
@@ -25,20 +40,23 @@
     links.forEach(link => {
         link.addEventListener('click', function (e) {
             e.preventDefault();
-            
+
             // 移除所有連結的 active 狀態
             links.forEach(l => l.classList.remove('active'));
             // 將 active 狀態加到當前點擊的連結
             this.classList.add('active');
 
+            // 收合手機版選單
+            subNav.classList.remove('expanded');
+
             // 滾動到第一個目標區塊
             const firstId = this.getAttribute('href').replace('#', '').split(',')[0].trim();
             const firstTarget = document.getElementById(firstId);
-            
+
             if (firstTarget) {
                 window.scrollTo({
                     // 減去 80px 作為 Header 或 Navigation 的高度偏移
-                    top: firstTarget.offsetTop - 80, 
+                    top: firstTarget.offsetTop - 80,
                     behavior: 'smooth'
                 });
             }
@@ -47,7 +65,7 @@
 
     // 當頁面滾動時
     window.addEventListener('scroll', () => {
-        
+
         // 讓 sub-nav 浮動 (當設計流程區塊滾動到視窗頂部時)
         const designProcessTop = designProcess.getBoundingClientRect().top;
         subNav.classList.toggle('active', designProcessTop <= 0);
@@ -57,7 +75,7 @@
         const viewportMiddle = scrollY + window.innerHeight / 2;
 
         let found = false;
-        
+
         // 遍歷所有區塊來判斷哪個連結應該被高亮
         sections.forEach(({ link, targets }) => {
             let active = false;
