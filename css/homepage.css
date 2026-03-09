@@ -8,16 +8,22 @@ Layout (佈局容器)
     grid-template-columns: 1fr;
     gap: 24px;
 }
+
 @media screen and (min-width: 768px) {
-    .hero-grid.d-5col-7col { grid-template-columns: 5fr 7fr; }
+    .hero-grid.d-5col-7col {
+        grid-template-columns: 5fr 7fr;
+    }
 }
 
 .wrap {
     max-width: 100%;
     margin: 0 auto;
 }
+
 @media screen and (min-width: 992px) {
-    .wrap { max-width: 1172px; }
+    .wrap {
+        max-width: 1172px;
+    }
 }
 
 /* ==========================================================================
@@ -25,19 +31,20 @@ Component (通用組件與塗鴉線條)
    ========================================================================== */
 
 .img-contact {
-    object-fit: contain; 
-    object-position: center;     
+    object-fit: contain;
+    object-position: center;
     width: auto;
     max-width: 120px;
     flex-shrink: 0;
     border-radius: 12px;
     display: block;
 }
+
 @media screen and (min-width: 768px) {
     .img-contact {
-        object-position: left; 
+        object-position: left;
         height: 80px;
-        width: auto; 
+        width: auto;
         flex-shrink: 0;
         border-radius: 0;
     }
@@ -76,6 +83,7 @@ Component (通用組件與塗鴉線條)
 .animate-trigger.is-active .doodle-svg path {
     stroke-dashoffset: 0;
 }
+
 /* 工作技能摘要打勾列 */
 .checklist-container {
     display: flex;
@@ -126,7 +134,8 @@ Component (通用組件與塗鴉線條)
     flex: 1;
     position: relative;
     display: flex;
-    justify-content: flex-end; /* 修正 right 為標準語法 flex-end */
+    justify-content: flex-end;
+    /* 修正 right 為標準語法 flex-end */
     align-items: baseline;
 }
 
@@ -144,8 +153,11 @@ Component (通用組件與塗鴉線條)
     animation: popIn 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
     transition: transform 0.3s ease, filter 0.3s ease;
 }
+
 @media screen and (min-width: 768px) {
-    .tag { font-size: 20px; }
+    .tag {
+        font-size: 20px;
+    }
 }
 
 .tag::after {
@@ -170,9 +182,14 @@ Component (通用組件與塗鴉線條)
     animation-delay: 0.5s;
     transform-origin: right bottom;
 }
+
 @media screen and (min-width: 768px) {
-    .tag-graphic { top: 14%; left: -1%; }
+    .tag-graphic {
+        top: 14%;
+        left: -1%;
+    }
 }
+
 .tag-graphic::after {
     border-width: 6px 6px 6px 0;
     border-color: transparent #CF5C36 transparent transparent;
@@ -188,6 +205,7 @@ Component (通用組件與塗鴉線條)
     animation-delay: 0.7s;
     transform-origin: right top;
 }
+
 .tag-creativity::after {
     border-width: 6px 6px 6px 0;
     border-color: transparent #CCA43B transparent transparent;
@@ -203,6 +221,7 @@ Component (通用組件與塗鴉線條)
     animation-delay: 0.9s;
     transform-origin: left bottom;
 }
+
 .tag-uiux::after {
     border-width: 6px 0 6px 6px;
     border-color: transparent transparent transparent #252627;
@@ -221,8 +240,12 @@ Component (通用組件與塗鴉線條)
     height: 160px;
     margin: 0 auto;
 }
+
 @media screen and (min-width: 768px) {
-    .jumbotron .logo-wrapper { width: 480px; height: auto; }
+    .jumbotron .logo-wrapper {
+        width: 480px;
+        height: auto;
+    }
 }
 
 .jumbotron .logo-wrapper .logo-glow {
@@ -235,20 +258,22 @@ Component (通用組件與塗鴉線條)
     border-radius: 50%;
     z-index: 1;
     filter: blur(12px);
-    background: linear-gradient(270deg, #fff6ee60 , #f7d51367 );
+    background: linear-gradient(270deg, #fff6ee60, #f7d51367);
     background-size: 200% 200%;
     animation: animateGlow 10s ease infinite;
 }
+
 @media screen and (min-width: 768px) {
     .jumbotron .logo-wrapper .logo-glow {
-        top: 0; left: 0;
+        top: 0;
+        left: 0;
         transform: scale(1.2);
         height: auto;
         width: 40vw;
         max-width: 320px;
         aspect-ratio: 1 / 1;
         filter: blur(50px);
-        background: linear-gradient(270deg, #DBE7FE20 , #F7FAFF60 );
+        background: linear-gradient(270deg, #DBE7FE20, #F7FAFF60);
     }
 }
 
@@ -260,8 +285,12 @@ Component (通用組件與塗鴉線條)
     z-index: 2;
     display: block;
 }
+
 @media screen and (min-width: 768px) {
-    .jumbotron .logo-wrapper .logo-image { width: 320px; height: 320px; }
+    .jumbotron .logo-wrapper .logo-image {
+        width: 320px;
+        height: 320px;
+    }
 }
 
 /* ==========================================================================
@@ -289,14 +318,17 @@ Component (通用組件與塗鴉線條)
     margin: 0 auto;
     padding: 60px 16px;
     display: flex;
-    flex-direction: column; /* 手機版：上下排列 */
-    align-items: flex-start; /* 【絕對關鍵】：這行讓 sticky 能運作 */
+    flex-direction: column;
+    /* 手機版：上下排列 */
+    align-items: flex-start;
+    /* 【絕對關鍵】：這行讓 sticky 能運作 */
 }
 
 /* --- 2. 標題與圖示區塊 --- */
 .skill-header {
     width: 100%;
-    margin-bottom: 40px; /* 手機版標題和卡片的間距 */
+    margin-bottom: 40px;
+    /* 手機版標題和卡片的間距 */
 }
 
 .skill-title {
@@ -316,7 +348,7 @@ Component (通用組件與塗鴉線條)
     width: 48px;
     height: 48px;
     border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
 }
 
 /* --- 3. 滾動卡片群組與特效核心 --- */
@@ -331,33 +363,35 @@ Component (通用組件與塗鴉線條)
     border: 1px solid #E2E8F0;
     border-radius: 24px;
     padding: 24px;
-    box-shadow: 0 -15px 40px rgba(0,0,0,0.08); 
-    display: flex; 
-    flex-direction: column; 
+    box-shadow: 0 -15px 40px rgba(0, 0, 0, 0.08);
+    display: flex;
+    flex-direction: column;
     gap: 16px;
-    
+
     /* 黏性定位 */
     position: -webkit-sticky;
     position: sticky;
-    
+
     /* JS 動畫準備：從正上方縮小 */
     transform-origin: top center;
-    will-change: transform, filter; 
+    will-change: transform, filter;
 }
 
 /* 手機版堆疊位置 */
-.card-1 { 
-    top: 80px; 
-    z-index: 1; 
+.card-1 {
+    top: 80px;
+    z-index: 1;
 }
-.card-2 { 
-    top: 120px; 
-    z-index: 2; 
+
+.card-2 {
+    top: 120px;
+    z-index: 2;
     /* margin-top: 5vh; 製造滾動軌道 */
 }
-.card-3 { 
-    top: 160px; 
-    z-index: 3; 
+
+.card-3 {
+    top: 160px;
+    z-index: 3;
     /* margin-top: 5vh; 製造滾動軌道 */
 }
 
@@ -405,58 +439,106 @@ Component (通用組件與塗鴉線條)
     .skill-header {
         flex: 1;
         position: -webkit-sticky;
-        position: sticky; 
-        top: 120px; /* 標題黏住的位置 */
-        margin-bottom: 0; 
+        position: sticky;
+        top: 120px;
+        /* 標題黏住的位置 */
+        margin-bottom: 0;
     }
-    
+
     .skill-cards-wrapper {
-        flex: 2; 
+        flex: 2;
     }
-    
+
     .skill-card {
         flex-direction: row;
-        align-items: center; 
+        align-items: center;
         justify-content: space-between;
         padding: 40px;
         gap: 32px;
 
     }
-    
-    .card-content { flex: 1; }
-    .card-image { flex: 1; max-width: 360px; }
 
-    .card-1 { 
-        top: 120px; 
+    .card-content {
+        flex: 1;
     }
-    .card-2 { 
-        top: 180px; 
-        margin-top: 5vh; 
+
+    .card-image {
+        flex: 1;
+        max-width: 360px;
     }
-    .card-3 { 
-        top: 240px; 
-        margin-top: 5vh; 
+
+    .card-1 {
+        top: 120px;
+    }
+
+    .card-2 {
+        top: 180px;
+        margin-top: 5vh;
+    }
+
+    .card-3 {
+        top: 240px;
+        margin-top: 5vh;
     }
 }
+
 @media (min-width: 992px) {
-    .skill-container { flex-direction: row; gap: 40px; }
-    .skill-header { flex: 1; position: -webkit-sticky; position: sticky; top: 120px; margin-bottom: 0; }
-    .skill-cards-wrapper { flex: 2; }
-    
-    .skill-card { flex-direction: row; align-items: center; justify-content: space-between; }
-    .card-content { flex: 1; }
-    .card-image { flex: 1; max-width: 320px; }
+    .skill-container {
+        flex-direction: row;
+        gap: 40px;
+    }
+
+    .skill-header {
+        flex: 1;
+        position: -webkit-sticky;
+        position: sticky;
+        top: 120px;
+        margin-bottom: 0;
+    }
+
+    .skill-cards-wrapper {
+        flex: 2;
+    }
+
+    .skill-card {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .card-content {
+        flex: 1;
+    }
+
+    .card-image {
+        flex: 1;
+        max-width: 320px;
+    }
 
     /* 【關鍵修正】：全部清空！只留 top 停靠位置 */
-    .card-1 { top: 120px; }
-    .card-2 { top: 160px; }
-    .card-3 { top: 200px; }
+    .card-1 {
+        top: 120px;
+    }
+
+    .card-2 {
+        top: 160px;
+    }
+
+    .card-3 {
+        top: 200px;
+    }
 }
 
 @media (min-width: 1200px) {
-    .skill-container { gap: 60px; }
-    .card-image { max-width: 350px; }
+    .skill-container {
+        gap: 60px;
+    }
+
+    .card-image {
+        max-width: 350px;
+    }
 }
+
 /* ==========================================================================
    5. UI Design Section
    ========================================================================== */
@@ -473,18 +555,25 @@ Component (通用組件與塗鴉線條)
     background: var(--bg);
     border: 1px solid #efefef;
     border-radius: 12px;
-    flex: 1 1 100%; 
+    flex: 1 1 100%;
     min-width: 0;
     display: flex;
     flex-direction: column;
     gap: 12px;
-    box-shadow: 0 2px 8px rgba(0,0,0,.04);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, .04);
 }
+
 @media screen and (min-width: 768px) {
-    .card { flex: 1 1 calc(50% - 12px); }
+    .card {
+        flex: 1 1 calc(50% - 12px);
+    }
 }
+
 @media screen and (min-width: 992px) {
-    .card { flex: 1 1 calc(33.333% - 16px); min-width: 280px; }
+    .card {
+        flex: 1 1 calc(33.333% - 16px);
+        min-width: 280px;
+    }
 }
 
 .tag-outline {
@@ -512,20 +601,50 @@ Component (通用組件與塗鴉線條)
     display: flex;
     flex-direction: column;
     gap: 12px;
-}
-@media screen and (min-width: 768px) {
-    .contact-container { flex-direction: row; gap: 24px; }
+    align-items: flex-start;
 }
 
-.contact-info {
+@media screen and (min-width: 768px) {
+    .contact-container {
+        flex-direction: row;
+        align-items: center;
+        gap: 24px;
+    }
+}
+
+/* 左群組：圖片 + 標题 */
+.contact-col-img-title {
     display: flex;
-    flex-direction: column; 
-    align-items: baseline;
-    width: 100%;
+    align-items: center;
+    gap: 16px;
+    flex-shrink: 0;
+}
+
+/* 右群組：文字 + 按鈕 —— mobile 上印排成一行 */
+.contact-col-txt-btn {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
     gap: 12px;
 }
-@media screen and (min-width: 768px) {
-    .contact-info { flex-direction: row; align-items: center; gap: 12px; }
+
+/* 手機版：文字佔滿剩餘寬度，按鈕按內容 */
+@media screen and (max-width: 767px) {
+    .contact-col-txt-btn {
+        width: 100%;
+    }
+
+    .contact-col-txt-btn .para {
+        flex: 1;
+    }
+}
+
+.contact-col-txt-btn .para {
+    margin: 0;
+}
+
+.contact-col-txt-btn .btn {
+    flex-shrink: 0;
 }
 
 .info-item {
@@ -533,21 +652,43 @@ Component (通用組件與塗鴉線條)
     align-items: flex-start;
     gap: 8px;
 }
+
 @media screen and (min-width: 768px) {
-    .info-item { align-items: center; gap: 16px; }
+    .info-item {
+        align-items: center;
+        gap: 16px;
+    }
 }
 
 /* ==========================================================================
    7. Animations (Keyframes)
    ========================================================================== */
 @keyframes popIn {
-    0% { opacity: 0; transform: scale(0) rotate(-10deg); }
-    70% { transform: scale(1.1) rotate(2deg); }
-    100% { opacity: 1; transform: scale(1) rotate(0deg); }
+    0% {
+        opacity: 0;
+        transform: scale(0) rotate(-10deg);
+    }
+
+    70% {
+        transform: scale(1.1) rotate(2deg);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1) rotate(0deg);
+    }
 }
 
 @keyframes animateGlow {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
 }
