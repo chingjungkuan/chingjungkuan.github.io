@@ -319,9 +319,8 @@ Component (通用組件與塗鴉線條)
     padding: 60px 16px;
     display: flex;
     flex-direction: column;
-    /* 手機版：上下排列 */
     align-items: flex-start;
-    /* 【絕對關鍵】：這行讓 sticky 能運作 */
+    /* 這行讓 sticky 能運作 */
 }
 
 /* --- 2. 標題與圖示區塊 --- */
@@ -386,13 +385,11 @@ Component (通用組件與塗鴉線條)
 .card-2 {
     top: 120px;
     z-index: 2;
-    /* margin-top: 5vh; 製造滾動軌道 */
 }
 
 .card-3 {
     top: 160px;
     z-index: 3;
-    /* margin-top: 5vh; 製造滾動軌道 */
 }
 
 /* --- 4. 卡片內部排版 --- */
@@ -411,17 +408,12 @@ Component (通用組件與塗鴉線條)
     gap: 4px;
 }
 
-.card-list li {
-    font-size: 14px;
-    color: #4A4A4A;
-    display: flex;
-    align-items: center;
-}
+
 
 .card-list li::before {
     content: "•";
     color: #333;
-    font-size: 20px;
+    margin-right: 8px;
 }
 
 .card-image img {
