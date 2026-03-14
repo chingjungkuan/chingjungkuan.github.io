@@ -21,12 +21,7 @@ body {
     -moz-osx-font-smoothing: grayscale;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h1,h2,h3,h4,h5,h6 {
     margin: 0;
     line-height: 1.4;
     font-weight: bold;
@@ -64,8 +59,7 @@ ul {
     line-height: 1.5;
     list-style: disc;
     /* 顯示圓點 */
-    padding-left: 1.2em;
-    /* 加一些內縮，讓圓點出現 */
+    padding-left: 1.2em; /* 加一些內縮，讓圓點出現 */
     color: #414141;
 }
 
@@ -104,8 +98,7 @@ p {
 }
 
 .text-highlight {
-    color: #FF5722;
-    /* 強調用色*/
+    color: #FF5722;/* 強調用色*/
 }
 
 .highlight {
@@ -126,7 +119,9 @@ p {
     font-size: 14px;
     line-height: 150%;
 }
-
+.text-mute{
+    color: #666;
+}
 .text-primary-blue {
     color: #0040BD;
 }
@@ -192,36 +187,32 @@ p {
 .t-center {
     text-align: center;
 }
-
-/* 連動的 google font */
-.anton-regular {
-    font-family: "Anton", sans-serif;
-    font-weight: 400;
-    font-style: normal;
+/* 有垂直裝飾線條的標題區塊通用 */
+.content-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
 }
 
-.cal-sans-regular {
-    font-family: "Cal Sans", sans-serif;
-    font-weight: 400;
-    font-style: normal;
+/* 垂直裝飾條 */
+.vertical-decorator {
+    display: inline-block;
+    width: 6px;
+    height: 20px;
+    background-color: #5d4a44;
+    border-radius: 2px;
+    flex-shrink: 0; /* 防止在寬度不足時被擠壓 */
 }
 
-.archivo-black-regular {
-    font-family: "Archivo Black", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-}
-
-.rubik-dirt-regular {
-    font-family: "Rubik Dirt", system-ui;
-    font-weight: 400;
-    font-style: normal;
-}
-
-.poetsen-one-regular {
-    font-family: "Poetsen One", sans-serif;
-    font-weight: 400;
-    font-style: normal;
+/* 底部有線的標題文字 */
+.bordered-title {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  border-bottom: 1px solid #ddd; 
+  padding-bottom: 4px; 
+  display: block; 
+  width: 100%;
 }
 
 /* -------------------------- *\
