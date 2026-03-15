@@ -330,8 +330,6 @@
 
                   <!-- start 簡化編輯流程區塊 -->
                   <div class="top-container flex-v-24">
-                  <img src="../images/editor2/img_ui-design02.jpg" alt="Select 相關元件" class="lightbox-trigger">
-
                   <h2 class="t-center">簡化編輯流程｜將<span class="highlight">上傳照片</span>功能整併於編輯內容區</h2>
                     <section class="flex-v-8">
                       <div class="editor2-flow-section">
@@ -383,6 +381,8 @@
                         </div>
                       </div>
                     </section>
+                    <img src="../images/editor2/img_ui-design02.jpg" alt="Select 相關元件" class="lightbox-trigger">
+
 
                   </div>   
 
@@ -607,46 +607,55 @@
           
           
           <!-- Satrt img2-txt1 -->
-          <div  class="img-txt top-container hero-grid d-2col-1col">
-            <img class="image-block lightbox-trigger" src="../images/editor2/img_coach-mark.jpg" alt="新手引導標記 Coach Mark 截圖" loading="lazy">
+            <div class="img-txt hero-container hero-grid d-2col-1col">
+              <img class="image-block lightbox-trigger">   
+                  <div class="description-text ">
+                    <h2 class="section-header">情境式操作引導</h2>
+                    <div class="accordion-group">
+                        <div class="accordion-item active" data-img="/images/editor2/img_coach-mark.jpg">
+                          <div class="accordion-header">
+                            <h5>▍Coach Mark —— 新功能的主動導覽</h5>
+                            <div class="arrow-icon"></div>
+                          </div>
+                          <div class="accordion-content">
+                            <div class="accordion-inner">
+                              <p class="para">使用者進入編輯畫面時，即可看到圖文並茂的教學提示，協助快速理解新功能或關鍵操作。提示內容會依產品性質動態調整，提供最相關的引導資訊。</p>
+                            </div>
+                          </div>
+                        </div>
 
-            <div class="description-text">
-                <span class="sm-title">編輯內容</span>
-                <h3 class="title">教學/新功能推播 <span class="highlight">Coach Mark</span></h3>
-                <p class="para-16">▍新功能與重點功能提示</p>
-                <p class="para">
-                  使用者進入編輯畫面時，即可看到<b>圖文並茂的教學提示</b>，協助快速理解新功能或關鍵操作。
-                  提示內容會<b>依產品性質動態調整</b>，提供最相關的引導資訊。
-                </p>
+                        <div class="accordion-item" data-img="/images/editor2/img_persistent-toast.jpg">
+                          <div class="accordion-header">
+                            <h5>▍Persistent Toast —— 任務過程的常駐提示</h5>
+                            <div class="arrow-icon"></div>
+                          </div>
+                          <div class="accordion-content">
+                            <div class="accordion-inner">
+                              <p class="para">在需要額外輔助說明的頁面，右下角會出現提示框於畫面最上層，提醒使用者關鍵操作或注意事項，並可在閱讀後自由關閉。</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="accordion-item" data-img="/images/editor2/img_tooltips.jpg">
+                            <div class="accordion-header">
+                                <h5>▍Interactive Tooltips—— 區塊性的即時指引</h5>
+                                <div class="arrow-icon"></div>
+                            </div>
+                            <div class="accordion-content">
+                            <div class="accordion-inner">
+                              <p class="para">針對操作較複雜的功能，透過 Tooltip 提供用途與操作方式的提示，並附上「知道了」按鈕，方便使用者自行關閉。</p>
+                            </div>
+                          </div>
+
+                        </div>
+
+                    </div>
+
                 </div>
-          
-          </div>
-          <!-- End img2-txt1 -->
-          <!-- Start txt1-img2 tooltips -->
-
-          <div class="top-container hero-grid m-1col-2col">
-                    
-            <div class="description-text">
-            <span class="sm-title">編輯內容</span>
-            <h3 class="title">增加友善的<span class="highlight"> Persistent Toast & Tooltips</span></h3>
-              <p class="para"><span class="para-16">▍頁面提示框（Persistent Toast）</span><br>
-                在需要額外輔助說明的頁面，右下角會出現提示框於畫面最上層，提醒使用者關鍵操作或注意事項，並可在閱讀後自由關閉。
-              </p>
-              <p class="para"><span class="para-16">▍功能按鈕引導（Tooltips）</span><br>
-                針對操作較複雜的功能，透過 Tooltip 提供用途與操作方式的提示，並附上「知道了」按鈕，方便使用者自行關閉。
-              </p>
             </div>
-            <img class="image-block" src="../images/editor2/img_page-tooltips.jpg" alt="頁面提示 Tooltips 截圖" loading="lazy">
-          </div>
+          <!-- End img2-txt1 -->
 
-          <div class="top-container hero-grid m-1col">
-            <img class="image-block lightbox-trigger" src="../images/editor2/img_tooltips01.jpg" alt="Tooltips 設計圖 01" loading="lazy">
-            <img class="image-block lightbox-trigger" src="../images/editor2/img_tooltips02.jpg" alt="Tooltips 設計圖 02" loading="lazy">
-          </div>
-          <!-- End txt1-img2 tooltips -->
-           <!-- Start 文字框 -->
-          <div class="top-container hero-grid m-1col-2col">
-                    
+           <!-- Start toolbar & modal -->
+          <div class="top-container hero-grid m-1col-2col">  
             <div class="description-text">
             <span class="sm-title">編輯內容</span>
             <h3 class="title">重整<span class="highlight"> Toolbar & Modal 元件</span></h3>
@@ -952,6 +961,7 @@
     <script defer src="/js/sub-nav.js"></script>
     <script defer src="/js/lightbox.js"></script>
     <script defer src="/js/scroll-to-top.js"></script>
+    <script defer src="/js/accordion.js"></script>
   <!-- End java -->
     
 </body>
