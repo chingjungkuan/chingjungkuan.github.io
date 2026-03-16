@@ -226,7 +226,7 @@
             <!-- 設計流程結束 -->
 
             <!-- img2-txt1 痛點與觀察 -->
-            <div id="pain-point" class="img-txt top-container hero-grid d-2col-1col ">
+            <div id="pain-point" class="img-txt top-container hero-grid d-2col-1col">
               <img class="image-block lightbox-trigger" src="../images/editor2/img_pain-point.jpg" alt="痛點分析圖片描述" loading="lazy"> 
               <div class="description-text">
                 <h2 class="title">痛點與觀察 <span class="sm-title">Pain Point & Task</span></h2>
@@ -246,10 +246,8 @@
             <p class="para" >
               我們發現使用者在操作過程中常遇到三大問題：<strong>難以快速找到所需資訊、學習成本高、操作流程不直覺</strong>。為了釐清根源，我們結合 Personas、Empathy Map 與 User Story Map，具體描繪出不同角色在編輯過程中的需求與行為痛點，並透過<strong>用戶訪談與實際操作觀察驗證假設</strong>，例如「照片上傳流程過於繁瑣」與「功能按鈕分散導致視線頻繁切換」。</p>
           </div>        
-
           <!-- Start txt1-img2 解決方案 -->
-
-            <div  id="solution" class="top-container hero-grid m-1col-2col">
+            <div id="solution" class="top-container hero-grid m-1col-2col">
                     
                 <div class="description-text">
                 <h2 class="title">設計優化重點 <span class="sm-title">Solution</span></h2>
@@ -604,13 +602,11 @@
             <img class="image-block" src="../images/editor2/img_ui-design-step3-2.jpg" alt="UI 設計步驟 3-2 截圖" loading="lazy">
           </div>
           <!-- End txt1-img2 -->
-          
-          
           <!-- Satrt img2-txt1 -->
             <div class="img-txt hero-container hero-grid d-2col-1col">
               <img class="image-block lightbox-trigger">   
                   <div class="description-text ">
-                    <h2 class="section-header">情境式操作引導</h2>
+                    <h3>情境式操作引導</h3>
                     <div class="accordion-group">
                         <div class="accordion-item active" data-img="/images/editor2/img_coach-mark.jpg">
                           <div class="accordion-header">
@@ -654,21 +650,40 @@
             </div>
           <!-- End img2-txt1 -->
 
-           <!-- Start toolbar & modal -->
-          <div class="top-container hero-grid m-1col-2col">  
-            <div class="description-text">
-            <span class="sm-title">編輯內容</span>
-            <h3 class="title">重整<span class="highlight"> Toolbar & Modal 元件</span></h3>
-              <p class="para"><span class="para-16">▍一致化視覺風格</span><br>
-                統一文字框、QR Code、相片框等各類 Toolbar 與 Modal 元件，建立一致的視覺語言，強化介面整體性。
-              </p>
-              <p class="para"><span class="para-16">▍優化操作邏輯</span><br>
-                新增雙擊文字框的進階編輯 Modal，使用者可於同一視窗調整文字、顏色、對齊與字型等設定，補足原需分步操作的限制，提升操作效率與彈性。
-              </p>            
-            </div>
-            <img class="image-block lightbox-trigger" src="../images/editor2/img_toolbar-modal.jpg" alt="工具欄模組視窗截圖" loading="lazy">
+          <!-- Start toolbar & modal -->
+          <div class="top-container hero-grid m-1col-2col">
+            <img class="image-block lightbox-trigger">   
+                <div class="description-text">
+                  <h3>重整 toolbar 和 Modal 元件</h3>
+                  <div class="accordion-group">
+                      <div class="accordion-item active" data-img="/images/editor2/img_coach-mark.jpg">
+                        <div class="accordion-header">
+                          <h5>▍統一現代視覺風格</h5>
+                          <div class="arrow-icon"></div>
+                        </div>
+                        <div class="accordion-content">
+                          <div class="accordion-inner">
+                            <p class="para">統一文字框、QR Code、相片框等各類 Toolbar 與 Modal 元件，建立一致的視覺語言，強化介面整體性。</p>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="accordion-item" data-img="/images/editor2/img_persistent-toast.jpg">
+                        <div class="accordion-header">
+                          <h5>▍新增雙擊文字框的進階編輯 Modal</h5>
+                          <div class="arrow-icon"></div>
+                        </div>
+                        <div class="accordion-content">
+                          <div class="accordion-inner">
+                            <p class="para">使用者可於同一視窗調整文字、顏色、對齊與字型等設定，補足原需分步操作的限制，提升操作效率與彈性。</p>
+                          </div>
+                        </div>
+                      </div>
+                  </div>
+
+              </div>
           </div>
-          <!-- end 文字框-->
+          <!-- End txt1-img2 -->
           <!-- start 上傳照片 -->
           <div id="section-step01" class="hero hero-bg-white">
             <div class="top-container">
@@ -721,60 +736,104 @@
             </div>
           </div>
           <!-- End 上傳照片 -->
+          <!-- Satrt img2-txt1 -->
           <div class="top-container hero-grid m-1col-2col">
-                    
-            <div class="description-text">
-            <span class="sm-title">編輯內容</span>
-            <h3 class="title">照片池提高<span class="highlight">排版彈性與可擴充性</span></h3>
-              <p class="para"><span class="para-16">▍更多操作空間</span><br>
-                <b>[Before]</b><br>照片池位於底部，空間受限且僅能瀏覽與單張刪除，易干擾編輯畫面。<br>
-                <b>[After]</b><br>照片池移至左側欄，操作更集中，新增排序、篩選與多選刪除功能，管理更高效且具擴充彈性。
-              </p>
-              <p class="para"><span class="para-16">▍彈性收合設計</span><br>
-                <b>[Before]</b><br>底部照片池遮擋編輯區，操作不便。<br>
-                <b>[After]</b><br>改為<b>可收合的左側欄</b>，避免遮擋並可依需求調整空間，小螢幕操作更靈活、視線更集中。
-              </p>              
-            </div>
-            <img class="image-block" src="../images/editor2/img_upload-img02.jpg" alt="圖片上傳介面 02 截圖" loading="lazy">
+            <img class="image-block lightbox-trigger">   
+                <div class="description-text">
+                  <h3>照片池提高<span class="highlight">排版彈性與可擴充性</span></h3>
+                  <div class="accordion-group">
+                      <div class="accordion-item active" data-img="/images/editor2/img_coach-mark.jpg">
+                        <div class="accordion-header">
+                          <h5>▍照片池更多操作空間</h5>
+                          <div class="arrow-icon"></div>
+                        </div>
+                        <div class="accordion-content">
+                          <div class="accordion-inner">
+                            <ul class="para">
+                              <li>調整前：照片池位於底部，空間受限且僅能瀏覽與單張刪除，易干擾編輯畫面。</li>
+                              <li>調整後：照片池移至左側欄，操作更集中，新增排序、篩選與多選刪除功能，管理更高效且具擴充彈性。</li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="accordion-item" data-img="/images/editor2/img_persistent-toast.jpg">
+                        <div class="accordion-header">
+                          <h5>▍側邊欄彈性收合設計</h5>
+                          <div class="arrow-icon"></div>
+                        </div>
+                        <div class="accordion-content">
+                          <div class="accordion-inner">
+                            <ul class="para">
+                              <li>調整前：底部照片池遮擋編輯區，操作不便。</li>
+                              <li>調整後：改為可收合的左側欄，避免遮擋並可依需求調整空間，小螢幕操作更靈活、視線更集中。</li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                  </div>
+
+              </div>
           </div>
           <!-- End txt1-img2 -->
-
           <!-- Satrt img2-txt1 -->
-          <div  class="img-txt top-container hero-grid d-2col-1col">
-          <img class="image-block lightbox-trigger" src="../images/editor2/img_rwd.jpg" alt="響應式設計 RWD 截圖" loading="lazy">
+            <div class="img-txt hero-container hero-grid d-2col-1col">
+              <img class="image-block lightbox-trigger">   
+                  <div class="description-text ">
+                    <h3>提升行動裝置操作直覺性與流暢度</h3>
+                    <div class="accordion-group">
+                        <div class="accordion-item active" data-img="/images/editor2/img_coach-mark.jpg">
+                          <div class="accordion-header">
+                            <h5>▍跨裝置響應式介面優化</h5>
+                            <div class="arrow-icon"></div>
+                          </div>
+                          <div class="accordion-content">
+                            <div class="accordion-inner">
+                              <ul class="para">
+                                <li>重新設計跨裝置介面架構，解決手機與平板上按鈕大小不一、介面擁擠的問題。</li>
+                                <li>改善前： 手機與平板介面擁擠、操作混亂，使用者容易誤觸且需頻繁縮放，導致整體體驗不佳。</li>
+                                <li>改善後： 調整按鈕大小與間距，新增平板中斷點與手勢支援，操作更為直覺流暢。</li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
 
-          <div class="description-text">
-              <span class="sm-title">整體</span>
-              <h3 class="title">全面優化響應式編輯體驗</h3>
-              <p class="para-16">▍跨裝置的響應式優化</p>
-              <p class="para">
-                <b>[Before]</b><br>手機與平板上按鈕大小不一、介面擁擠、操作混亂，使用者易誤觸並需頻繁縮放，體驗不佳。<br>
-                <b>[After]</b><br>重新設計跨裝置介面，調整按鈕與間距、優化分組，新增平板斷點與手勢支援，操作更直覺流暢。
-              </p>
-              </div>
+                        <div class="accordion-item" data-img="/images/editor2/img_persistent-toast.jpg">
+                          <div class="accordion-header">
+                            <h5>▍功能分組邏輯重整</h5>
+                            <div class="arrow-icon"></div>
+                          </div>
+                          <div class="accordion-content">
+                            <div class="accordion-inner">
+                              <ul class="para">
+                                <li>以使用者實際編輯情境為核心重新分群功能，提升手機版介面的操作邏輯。</li>
+                                <li>改善前：功能排列未經情境化分組，使用者在小螢幕上尋找功能較為費時，不符合行動裝置習慣。</li>
+                                <li>改善後：重整畫面分組，將內容操作與視圖工具邏輯化，讓編輯流程更直覺，大幅降低認知負擔。</li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="accordion-item" data-img="/images/editor2/img_tooltips.jpg">
+                            <div class="accordion-header">
+                                <h5>▍觸控與操作空間優化</h5>
+                                <div class="arrow-icon"></div>
+                            </div>
+                            <div class="accordion-content">
+                            <div class="accordion-inner">
+                              <ul class="para">
+                                <li>優化操作區塊的元件尺寸與間距，並新增照片篩選等功能以提升操作順手度。</li>
+                                <li>改善前： 操作空間擁擠，按鈕因過小或過密而產生「難點」問題，導致觸控反應不靈敏且易出錯。</li>
+                                <li>改善後： 調整元件比例與熱區間距，新增照片篩選功能讓操作更精準，提升整體觸控的滑順感。</li>
+                              </ul>
+                            </div>
+                          </div>
 
-        
-        </div>
-        <!-- End img2-txt1 -->           
+                        </div>
 
-        <!-- Start txt1-img2 提升操作直覺性 最後一段 -->
-          <div class="top-container hero-grid m-1col-2col">
-                    
-            <div class="description-text">
-            <span class="sm-title">整體</span>
-            <h3 class="title">提升操作直覺性</h3>
-            
-              <p class="para"><span class="para-16">▍優化功能分組邏輯</span><br>
-                以使用者實際編輯情境為核心<b>重新分群功能</b>，重整畫面讓操作更直覺，手機版介面也更符合使用習慣。
-              </p>
-              <p class="para"><span class="para-16">▍操作區尺寸優化，提升觸控體驗</span><br>
-                原本操作空間擁擠、按鈕難點。優化後調整元件大小與間距，新增照片與篩選等操作更順手，觸控體驗更流暢。
-              </p>
+                    </div>
 
+                </div>
             </div>
-            <img class="image-block lightbox-trigger" src="../images/editor2/img_提升操作直覺性.jpg" alt="提升操作直覺性的說明圖" loading="lazy">
-          </div>
-        <!-- End txt1-img2 提升操作直覺性 最後一段 -->
         <!-- End 編輯內容 -->
         </div>
       </div>
