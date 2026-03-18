@@ -1,0 +1,64 @@
+/* -------------------------- *\
+	Component
+\* -------------------------- */
+/* ==========================================================================
+   Component: Accordion (手風琴)
+   ========================================================================== */
+
+.accordion-group { border-top: 1px solid #eee; }
+.accordion-item { border-bottom: 1px solid #eee; }
+
+.accordion-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    padding: 20px 0;
+}
+
+/* 箭頭動畫樣式 */
+.arrow-icon {
+    position: relative;
+    width: 20px;
+    height: 10px;
+    transition: transform var(--transition-smooth);
+}
+
+.arrow-icon::before,
+.arrow-icon::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: 10px;
+    height: 1.5px;
+    background-color: #999;
+    border-radius: 1px;
+}
+
+.arrow-icon::before { left: 1px; transform: rotate(30deg); transform-origin: right center; }
+.arrow-icon::after { right: 1px; transform: rotate(-30deg); transform-origin: left center; }
+
+.accordion-item.active .arrow-icon { transform: rotate(180deg); }
+
+/* Grid 展開動畫核心 */
+.accordion-content {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows var(--transition-smooth);
+    overflow: hidden;
+}
+
+.accordion-item.active .accordion-content { grid-template-rows: 1fr; }
+
+.accordion-inner {
+    min-height: 0;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s, visibility 0.3s;
+}
+
+.accordion-item.active .accordion-inner {
+    visibility: visible;
+    opacity: 1;
+    padding-bottom: 24px;
+}
