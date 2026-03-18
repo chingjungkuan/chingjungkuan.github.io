@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="../css/normalize.css">
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/project.css">
+    <link rel="stylesheet" href="/css/accordion.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 </head>
@@ -43,16 +44,14 @@
           <!-- Start Design Impact -->
                 
           <div id="impact" class="top-container">
-
-          <div  class="layout-center display-title">Design Impact </div> 
-
+          <div class="layout-center display-title">Design Impact </div> 
           <div class="three-column-grid">
-
-            <div class="icon-text-wrapper">
+            <div class="flex-v-8">
               <div class="icon">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none">
-                    <path d="M48 24.002C48 30.3671 45.4714 36.4716 40.9706 40.9725C36.4697 45.4734 30.3652 48.002 24 48.002C17.6348 48.002 11.5303 45.4734 7.02944 40.9725C2.52856 36.4716 0 30.3671 0 24.002C0 17.6368 2.52856 11.5323 7.02944 7.03139C11.5303 2.53052 17.6348 0.00195313 24 0.00195312C30.3652 0.00195313 36.4697 2.53052 40.9706 7.03139C45.4714 11.5323 48 17.6368 48 24.002V24.002ZM36.09 14.912C35.8757 14.6984 35.6206 14.5303 35.3398 14.4176C35.059 14.3049 34.7584 14.25 34.456 14.2562C34.1535 14.2624 33.8554 14.3294 33.5795 14.4535C33.3035 14.5775 33.0554 14.7559 32.85 14.978L22.431 28.253L16.152 21.971C15.7255 21.5735 15.1613 21.3571 14.5784 21.3674C13.9955 21.3777 13.4394 21.6138 13.0271 22.0261C12.6149 22.4383 12.3788 22.9945 12.3685 23.5774C12.3582 24.1603 12.5746 24.7244 12.972 25.151L20.91 33.092C21.1238 33.3054 21.3785 33.4736 21.6588 33.5865C21.939 33.6994 22.2391 33.7547 22.5412 33.7491C22.8433 33.7435 23.1412 33.6771 23.4171 33.5539C23.693 33.4307 23.9412 33.2532 24.147 33.032L36.123 18.062C36.5313 17.6374 36.7568 17.0698 36.7512 16.4808C36.7456 15.8919 36.5093 15.3286 36.093 14.912H36.09Z" fill="#E4DEDA"/>
-                  </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none">
+                  <path d="M42 12L31.414 22.586C31.0389 22.9609 30.5303 23.1716 30 23.1716C29.4697 23.1716 28.9611 22.9609 28.586 22.586L25.414 19.414C25.0389 19.0391 24.5303 18.8284 24 18.8284C23.4697 18.8284 22.9611 19.0391 22.586 19.414L14 28" stroke="#7B6453" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M6 6V35.6C6 37.84 6 38.96 6.436 39.816C6.81949 40.5686 7.43139 41.1805 8.184 41.564C9.04 42 10.16 42 12.4 42H42" stroke="#7B6453" stroke-width="4" stroke-linecap="round"/>
+                </svg>
               </div>
               <div class="text">
                 <h4 class="title">主要操作 CTA 點擊率提升</h4>
@@ -60,11 +59,15 @@
                   <b>關鍵行動按鈕</b>直接置於作品卡片上，使用者能更快識別並執行操作，有效降低思考與點擊成本，進而<b>提升 CTA 點擊率達 45%</b>。</p>
               </div>
             </div>
-            <div class="icon-text-wrapper">
+            <div class="flex-v-8">
               <div class="icon">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none">
-                    <path d="M48 24.002C48 30.3671 45.4714 36.4716 40.9706 40.9725C36.4697 45.4734 30.3652 48.002 24 48.002C17.6348 48.002 11.5303 45.4734 7.02944 40.9725C2.52856 36.4716 0 30.3671 0 24.002C0 17.6368 2.52856 11.5323 7.02944 7.03139C11.5303 2.53052 17.6348 0.00195313 24 0.00195312C30.3652 0.00195313 36.4697 2.53052 40.9706 7.03139C45.4714 11.5323 48 17.6368 48 24.002V24.002ZM36.09 14.912C35.8757 14.6984 35.6206 14.5303 35.3398 14.4176C35.059 14.3049 34.7584 14.25 34.456 14.2562C34.1535 14.2624 33.8554 14.3294 33.5795 14.4535C33.3035 14.5775 33.0554 14.7559 32.85 14.978L22.431 28.253L16.152 21.971C15.7255 21.5735 15.1613 21.3571 14.5784 21.3674C13.9955 21.3777 13.4394 21.6138 13.0271 22.0261C12.6149 22.4383 12.3788 22.9945 12.3685 23.5774C12.3582 24.1603 12.5746 24.7244 12.972 25.151L20.91 33.092C21.1238 33.3054 21.3785 33.4736 21.6588 33.5865C21.939 33.6994 22.2391 33.7547 22.5412 33.7491C22.8433 33.7435 23.1412 33.6771 23.4171 33.5539C23.693 33.4307 23.9412 33.2532 24.147 33.032L36.123 18.062C36.5313 17.6374 36.7568 17.0698 36.7512 16.4808C36.7456 15.8919 36.5093 15.3286 36.093 14.912H36.09Z" fill="#E4DEDA"/>
-                  </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none">
+                  <path d="M24 4C24 4 14 14 14 28V36H34V28C34 14 24 4 24 4Z" stroke="#7B6453" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M14 30L6 40H14" stroke="#7B6453" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M34 30L42 40H34" stroke="#7B6453" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M20 36V42M28 36V42" stroke="#7B6453" stroke-width="4" stroke-linecap="round"/>
+                  <circle cx="24" cy="20" r="3" stroke="#7B6453" stroke-width="4"/>
+                </svg>
               </div>
               <div class="text">
                 <h4 class="title">簡化步驟和資訊，操作效率提升</h4>
@@ -72,11 +75,13 @@
                   <b>用戶回饋與行為數據顯示</b>，操作步驟減少後，使用流程更為直覺，<b>轉換率提升了 15%，用戶平均完成時間也縮短了 30%</b>。</p>
               </div>
             </div>
-            <div class="icon-text-wrapper">
+            <div class="flex-v-8">
               <div class="icon">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none">
-                    <path d="M48 24.002C48 30.3671 45.4714 36.4716 40.9706 40.9725C36.4697 45.4734 30.3652 48.002 24 48.002C17.6348 48.002 11.5303 45.4734 7.02944 40.9725C2.52856 36.4716 0 30.3671 0 24.002C0 17.6368 2.52856 11.5323 7.02944 7.03139C11.5303 2.53052 17.6348 0.00195313 24 0.00195312C30.3652 0.00195313 36.4697 2.53052 40.9706 7.03139C45.4714 11.5323 48 17.6368 48 24.002V24.002ZM36.09 14.912C35.8757 14.6984 35.6206 14.5303 35.3398 14.4176C35.059 14.3049 34.7584 14.25 34.456 14.2562C34.1535 14.2624 33.8554 14.3294 33.5795 14.4535C33.3035 14.5775 33.0554 14.7559 32.85 14.978L22.431 28.253L16.152 21.971C15.7255 21.5735 15.1613 21.3571 14.5784 21.3674C13.9955 21.3777 13.4394 21.6138 13.0271 22.0261C12.6149 22.4383 12.3788 22.9945 12.3685 23.5774C12.3582 24.1603 12.5746 24.7244 12.972 25.151L20.91 33.092C21.1238 33.3054 21.3785 33.4736 21.6588 33.5865C21.939 33.6994 22.2391 33.7547 22.5412 33.7491C22.8433 33.7435 23.1412 33.6771 23.4171 33.5539C23.693 33.4307 23.9412 33.2532 24.147 33.032L36.123 18.062C36.5313 17.6374 36.7568 17.0698 36.7512 16.4808C36.7456 15.8919 36.5093 15.3286 36.093 14.912H36.09Z" fill="#E4DEDA"/>
-                  </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none">
+                  <path d="M8 12L22 26L30 18L40 28" stroke="#7B6453" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M30 28H40V18" stroke="#7B6453" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M6 42H42" stroke="#7B6453" stroke-width="4" stroke-linecap="round"/>
+                </svg>
               </div>
               <div class="text">
                 <h4 class="title">客服相關問題回報量下降</h4>
@@ -84,16 +89,12 @@
                   <b>詢問明顯減少</b>。</p>
               </div>
             </div>
-
-
-
           </div>
           </div>
           <!-- End Design Impact--> 
 
           <!-- Start Overview -->
-            <div id="overview" class="top-container">
-              
+            <div id="overview" class="top-container">             
               <div class="overview">
                 <div class="overview-left">
                   <h2 class="title">概述 <span class="sm-title">Overview</span></h2>
@@ -211,17 +212,21 @@
               <div class="description-text">
                 <h2 class="title">痛點與觀察 <span class="sm-title">Pain Point & Task</span></h2>
                   <div class="container two-column-grid">
-
                     <div class="item item-bg-grey">
-                    <h4 class="title">🗯️ 資訊層級混亂，重點不易辨識</h4>
+                    <div class="content-header">
+                        <span class="vertical-decorator"></span>
+                        <h4>資訊層級混亂，重點不易辨識</h4>
+                    </div>
                     <ul class="para">
-                      <li>資訊列表的文字<b>缺乏層級差異</b>，所有資訊呈現方式相似，難以一眼抓到關鍵內容。</li>
-                      <li>顯示過多「次要資訊（如圖片數量、檔案大小）」，反而分散注意力，使用者
-                        <b>需額外花時間篩選重要資訊</b>。</li>
+                      <li>資訊列表的文字<b>缺乏層級差異</b>，所有資訊呈現方式相似，難以快速抓到關鍵。</li>
+                      <li>顯示過多「次要資訊（如圖片數量、檔案大小）」，反而分散注意力，使用者<b>需額外花時間篩選重要資訊</b>。</li>
                     </ul>
                     </div>
                     <div class="item item-bg-grey">
-                    <h4 class="title">🗯️ 操作路徑繁瑣，效率低落</h4>
+                    <div class="content-header">
+                        <span class="vertical-decorator"></span>
+                        <h4>操作路徑繁瑣，效率低落</h4>
+                    </div>
                     <ul class="para">
                       <li><b>缺乏明確的「主要動作（如「繼續編輯」）」指引</b>，使用者需進入詳細頁才能操作，流程冗長。</li>
                       <li>操作選項如「複製」、「刪除」
@@ -229,16 +234,22 @@
                     </ul>
                     </div>
                     <div class="item item-bg-grey">
-                    <h4 class="title">🗯️ 介面佈局擁擠，視覺負擔大</h4>
+                    <div class="content-header">
+                        <span class="vertical-decorator"></span>
+                        <h4>介面佈局擁擠，視覺負擔大</h4>
+                    </div>
                     <ul class="para">
                     <li>作品卡片圖片比例過大且垂直排列導致資訊密集，<b>空間使用不佳</b>。</li>
                     <li>卡片切割區塊過多、<b>缺乏留白與視覺節奏</b>，使使用者在瀏覽時感到壓迫與混亂。</li>
                     </ul>
                     </div>
                     <div class="item item-bg-grey">
-                      <h4 class="title">🗯️ 行動指引不清，主次不分明</h4>
+                      <div class="content-header">
+                        <span class="vertical-decorator"></span>
+                        <h4>行動指引不清，主次不分明</h4>
+                      </div>
                       <ul>
-                        <li>「繼續編輯」、「作品欣賞」等<b>行動按鈕樣式不夠明顯 </b>，容易與周圍資訊混淆。</li>
+                        <li>「繼續編輯」、「作品欣賞」等<b>行動按鈕樣式不夠明顯 </b>，易與周圍資訊混淆。</li>
                         <li>行動區缺乏層次感與視覺突出效果，<b>重要操作按鈕位置偏下且需捲動</b>，易被忽略。</li>
                       </ul>
                     </div>
@@ -250,20 +261,60 @@
           <!-- End img2-txt1 -->          
 
           <!-- Start txt1-img2 設計優化重點 -->
-
-            <div  id="solution" class="top-container hero-grid m-1col-2col">
-                    
+          <div id="solution" class="top-container hero-grid m-1col-2col">
+            <img class="image-block lightbox-trigger">   
                 <div class="description-text">
-                <h2 class="title">設計優化重點 <span class="sm-title">Solution</span></h2>
+                  <h2 class="title">設計優化重點 <span class="sm-title">Solution</span></h2>
+                  <p class="para">雖無大規模調研，仍透過數據、客服回饋與競品分析，歸納出操作痛點與共通模式。據此重塑資訊架構與動線，聚焦提升操作效率與資訊清晰度，優化整體體驗。</p>
+                  <div class="accordion-group">
+                      <div class="accordion-item active" data-img="/images/project/img_solution01.jpg">
+                        <div class="accordion-header">
+                          <h5>▍資訊層級清晰</h5>
+                          <div class="arrow-icon"></div>
+                        </div>
+                        <div class="accordion-content">
+                          <div class="accordion-inner">
+                            <p class="para">明確標示作品狀態與主要操作，減少使用者思考負擔。</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="accordion-item" data-img="/images/project/img_solution02.jpg">
+                        <div class="accordion-header">
+                          <h5>▍操作動線精簡</h5>
+                          <div class="arrow-icon"></div>
+                        </div>
+                        <div class="accordion-content">
+                          <div class="accordion-inner">
+                            <p class="para">將核心按鈕前置至卡片，避免多層操作，提升效率。</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="accordion-item" data-img="/images/project/img_solution03.jpg">
+                        <div class="accordion-header">
+                          <h5>▍視覺與排版一致</h5>
+                          <div class="arrow-icon"></div>
+                        </div>
+                        <div class="accordion-content">
+                          <div class="accordion-inner">
+                            <p class="para">優化對比與留白、統一文字對齊與間距，讓畫面更整潔易讀。</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="accordion-item" data-img="/images/project/img_solution04.jpg">
+                        <div class="accordion-header">
+                          <h5>▍介面更易上手</h5>
+                          <div class="arrow-icon"></div>
+                        </div>
+                        <div class="accordion-content">
+                          <div class="accordion-inner">
+                            <p class="para">移除不必要資訊與干擾元素，降低學習門檻。</p>
+                          </div>
+                        </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
 
-                <p class="para">
-                  雖然本次專案未進行大規模問卷與訪談，我們仍透過<b>使用數據、客服回饋及競品觀察</b>，歸納出使用者在作品操作流程中常遇到的問題，並以此作為設計優化的切入點。<br>
-                  為進一步釐清方向，我分析多個業界競品的作品管理介面，<b>整理其操作邏輯與版面結構的優劣</b>，歸納出共通的使用行為與設計模式。<br><br>
-
-                  根據這些洞察，重新規劃資訊架構與操作動線，聚焦提升使用效率與資訊清晰度，優化整體體驗。
-                </div>
-                <img class="image-block lightbox-trigger" src="https://cdn.jsdelivr.net/gh/chingjungkuan/myportfolio/images/project/img_solution.jpg" alt="專案解決方案示意圖" />
-            </div>
           <!-- End txt1-img2 設計優化重點 -->
             
             <!-- Start 資訊架構 -->
@@ -461,34 +512,75 @@
           <div id="style-guide" class="container">
             <div class="top-container">
               <div  class="layout-center display-title">Style Guide </div> 
-              <div class="two-column-grid">
+              <div class="container two-column-grid">
+                <div class="item item-bg-grey">
+                  <div class="content-header">
+                      <span class="vertical-decorator"></span>
+                      <h4>視覺層次清晰，資訊更有條理</h4>
+                  </div>
+                  <div class="two-column-grid">
+                    <div>
+                      <p class="bordered-title text-mute">Before</p>
+                      <p class="para text-mute">元素密集且顏色偏重，缺乏層級引導，使用者視線需來回瀏覽，增加負擔。</p> 
+                    </div>
+                    <div>
+                      <p class="bordered-title">After</p>
+                      <p class="para">提升卡片與背景的對比度，並運用醒目色引導使用者聚焦操作行為，使畫面閱讀更輕鬆直覺。</p>
 
-                    <div class="item">
-                    <h4 class="title">📌視覺層次更清晰，資訊組織更有條理</h4>
-                    <p class="para">
-                    <b>[Before]</b> 元素密集且顏色偏重，缺乏層級引導，使用者視線需來回瀏覽，增加負擔。<br><br>
-                    <b>[After]</b> 提升卡片與背景的對比度，並運用醒目色引導使用者聚焦操作行為，使畫面閱讀更輕鬆直覺。</p>
-                    </div>
-                    <div class="item">
-                    <h4 class="title">📌 色彩與對比更簡潔，符合現代設計趨勢</h4>
-                    <p class="para">
-                    <b>[Before]</b> 桃紅與深灰的強烈對比讓視覺較為尖銳，區塊分隔不明確，卡片切割過細，降低整體閱讀性。<br><br>
-                    <b>[After]</b> 採用柔和、低飽和的配色（細緻灰＋蜜桃橘），營造溫潤親和的視覺氛圍。同時強化區塊結構，更符合現代設計。
-                    </p>
-                    </div>
-                    <div class="item">
-                    <h4 class="title">📌 字體設計與排版更精緻，提升可讀性</h4>
-                    <p class="para">
-                    <b>[Before]</b> 文字與按鈕區塊略顯擁擠，字級與間距偏小，降低閱讀舒適度。<br><br>
-                    <b>[After]</b> 透過更清晰的標題層級、適當的字距與留白，提升整體排版節奏；同時將關聯內容歸納在同一視覺區塊，強化資訊結構與視線引導。</p>
-                    </div>
-                    <div class="item">
-                    <h4 class="title">📌 圓角、留白與陰影，強化介面質感與親和力</h4>
-                    <p class="para">
-                    <b>[Before]</b> 版面風格偏早期網頁設計，邊角銳利、分隔生硬，缺乏視覺層次與柔和感。<br><br>
-                    <b>[After]</b> 透過圓角應用於按鈕、卡片與選單，營造更友善且現代化的風格；搭配適度留白與陰影，提升界面呼吸感與整體質感，使用者更易聚焦於主要內容。</p>
                     </div>
                   </div>
+                </div>
+                <div class="item item-bg-grey">
+                  <div class="content-header">
+                      <span class="vertical-decorator"></span>
+                      <h4>色彩與對比更簡潔，符合現代設計趨勢</h4>
+                  </div>
+                  <div class="two-column-grid">
+                    <div>
+                      <p class="bordered-title text-mute">Before</p>
+                      <p class="para text-mute">桃紅與深灰的強烈對比讓視覺較為尖銳，區塊分隔不明確，卡片切割過細，降低整體閱讀性。</p> 
+                    </div>
+                    <div>
+                      <p class="bordered-title">After</p>
+                      <p class="para">採用柔和、低飽和的配色（細緻灰＋蜜桃橘），營造溫潤親和的視覺氛圍。同時強化區塊結構，更符合現代設計。</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="item item-bg-grey">
+                  <div class="content-header">
+                      <span class="vertical-decorator"></span>
+                      <h4>字體設計與排版更精緻，提升可讀性</h4>
+                  </div>
+                  <div class="two-column-grid">
+                    <div>
+                      <p class="bordered-title text-mute">Before</p>
+                      <p class="para text-mute">文字與按鈕區塊略顯擁擠，字級與間距偏小，降低閱讀舒適度。</p> 
+                    </div>
+                    <div>
+                      <p class="bordered-title">After</p>
+                      <p class="para">透過更清晰的標題層級、適當的字距與留白，提升整體排版節奏；同時將關聯內容歸納在同一視覺區塊，強化資訊結構與視線引導。</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="item item-bg-grey">
+                  <div class="content-header">
+                      <span class="vertical-decorator"></span>
+                      <h4>強化介面質感與親和力</h4>
+                  </div>
+                  <div class="two-column-grid">
+                    <div>
+                      <p class="bordered-title text-mute">Before</p>
+                      <p class="para text-mute">版面風格偏早期網頁設計，邊角銳利、分隔生硬，缺乏視覺層次與柔和感。</p> 
+                    </div>
+                    <div>
+                      <p class="bordered-title">After</p>
+                      <p class="para">透過圓角應用於按鈕、卡片與選單，營造更友善且現代化的風格；搭配適度留白與陰影，提升界面呼吸感與整體質感，使用者更易聚焦於主要內容。</p>
+ 
+                    </div>
+                  </div>
+                </div>
+
+              </div>
             </div>
             
                   
@@ -576,13 +668,13 @@
     <div id="site-footer" data-include="/components/footer.html"></div>
   <!-- End footer -->
     </div>
-
-    <!-- Start java -->
+  <!-- Start java -->
     <script defer src="/js/include.js"></script>
     <script defer src="/js/sub-nav.js"></script>
     <script defer src="/js/lightbox.js"></script>
     <script defer src="/js/scroll-to-top.js"></script>
-    <!-- End java -->
+    <script defer src="/js/accordion.js"></script>
+  <!-- End java -->
     
 </body>
 </html>
