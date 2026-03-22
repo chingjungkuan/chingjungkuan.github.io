@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <link href="../images/favicon.ico" rel="shortcut icon"/>
+    <title>作品欣賞 - 點點印｜關靖蓉 Portfolio</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/showcase.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+</head>
+<body>
+
+        <!-- Start header -->
+        <div id="site-header" data-include="/components/header.html"></div>
+	    <!-- End header -->
+    <!-- 浮動釘選導覽列 -->
+    <nav id="sub-nav" class="sub-nav">
+      <ul>
+        <li><a href="#impact,overview,flow,pain-point,solution">前情提要</a></li>
+        <li><a href="#ia">資訊架構</a></li>
+        <li><a href="#ui-design,section-step01">UI Design</a></li>
+        <li><a href="#style-guide">Style Guide</a></li>
+        <li><a href="#takeaway">Takeaway</a></li>
+      </ul>
+    </nav>
+
+    <!-- Start main -->
+    <section class="main">
+        <!-- Start banner -->
+          <section class="hero-banner-wrapper">
+              <picture>
+                  <source srcset="../images/showcase/img_banner-desktop.jpg" media="(min-width: 992px)">
+                  <source srcset="../images/showcase/img_banner-pad.jpg" media="(min-width: 768px)">
+                  <img class="hero-banner-img" src="../images/showcase/img_banner-mobile.jpg" alt="作品欣賞 banner 圖片" loading="eager">    
+              </picture>
+          </section>
+		<!-- End banner -->
+        <!-- only img -->
+        <div  class="top-container">
+          <img src="../images/common/img_color.jpg" alt="" class="box-img lightbox-trigger">
+        </div>
+        <div  class="top-container">
+          <img src="../images/common/img_typography.jpg" alt="" class="box-img lightbox-trigger">
+        </div>
+        <div  class="notop-container">
+          <img src="../images/common/img_button.jpg" alt="" class="box-img lightbox-trigger">
+        </div>
+        <div  class="top-container">
+          <img src="../images/common/img_taost.jpg" alt="" class="box-img lightbox-trigger">
+        </div>
+        <div  class="hero-container">
+          <img src="../images/common/img_badge.jpg" alt="" class="box-img lightbox-trigger">
+        </div>
+
+    </section>
+  <!-- End main -->
+
+  <!-- Start footer -->
+    <div id="site-footer" data-include="/components/footer.html"></div>
+  <!-- End footer -->
+    </div>
+
+  <!-- Start java -->
+    <script defer src="/js/include.js"></script>
+    <script defer src="/js/sub-nav.js"></script>
+    <script defer src="/js/lightbox.js"></script>
+    <script defer src="/js/scroll-to-top.js"></script>
+  <!-- End java -->
+    
+</body>
+</html>
