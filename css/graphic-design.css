@@ -1,0 +1,52 @@
+@charset "utf-8";
+
+/* ==========================================================================
+   1. Global Settings & Variables
+   ========================================================================== */
+
+:root {
+    --brand-tasktw: #8250FF;
+    --brand-iw: #009688;
+    --brand-jobar: #FF7D5B;
+    --border-black: #121212;
+    --text-main: #333333;
+    --text-muted: #888888;
+}
+.purple-dot { width: 8px; height: 8px; background-color: var(--brand-tasktw); border-radius: 50%; }
+.green-dot { width: 8px; height: 8px; background-color: var(--brand-iw); border-radius: 50%; }
+.orange-dot { width: 8px; height: 8px; background-color: var(--brand-jobar); border-radius: 50%; }
+
+/* --- 黑底大標題 --- */
+.sec-title-container {
+    width: 100%;
+    background-color: var(--border-black);
+    text-align: center;
+    padding: 8px 16px;
+}
+
+.sec-title-container h2 {
+    margin: 0;
+    font-size: 32px;
+    font-weight: 900;
+    color: white;
+}
+
+/* --- 白底副標題 --- */
+.sec-subtitle-container {
+    width: 100%;
+    background-color: #fff;
+    color: var(--border-black);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 16px 20px;
+    border-top: 1px solid var(--border-black);
+    border-bottom: 1px solid var(--border-black);
+}
+
+.sec-subtitle-container h3 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: 700;
+}
