@@ -104,7 +104,7 @@
 }
 
 /* ==========================================================================
-   4. Component: Accordion (手風琴)
+   4. Component: Accordion
    ========================================================================== */
 
 .accordion-group { border-top: 1px solid #eee; }
@@ -253,7 +253,7 @@
 
 .orange-dot { width: 8px; height: 8px; background-color: var(--brand-red); border-radius: 50%; }
 
-/* --- 2. 副標題佈局 (剛剛遺漏的部分) --- */
+/* --- 2. 副標題佈局 --- */
 .subtitle-bar {
     width: 100%;
     background-color: #fff;
@@ -276,7 +276,6 @@
 .bg-peach { background-color: var(--brand-peach); }
 .bg-grey { background-color: var(--bg-grey); border-top: 1px solid var(--border-black); }
 
-/* --- RWD 設定 --- */
 @media (min-width: 768px) {
     .header-banner { height: 56px; }
     .header-banner h1 { font-size: 36px; } /* 恢復大螢幕字體 */
