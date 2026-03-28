@@ -311,25 +311,22 @@
                   </div>
               </div>
           </div>
-
           <!-- End txt1-img2 設計優化重點 -->
             
             <!-- Start 資訊架構 -->
             <div id="ia" class="top-container">
-                <div class="layout-center">
-                    <h2 class="title">資訊架構 <span class="sm-title">Define</span></h2>
-                    <p class="t-center para">為了讓產品在擴充功能或優化介面時具備一致且清晰的結構，<b>先對盤點現有功能</b>，釐清現行設計中可能存在的混亂或規格不一致問題。接著將<b>功能邏輯整理為資訊架構與規格文件</b>，幫助團隊更快理解整體產品脈絡與使用者操作邏輯。</p>
-                </div>
-
-                <div  class="notop-container">
-                  <img src="https://cdn.jsdelivr.net/gh/chingjungkuan/myportfolio/images/project/img_ia.jpg" alt="資訊架構圖" class="box-img lightbox-trigger">
-                </div>
+              <div class="layout-center">
+                  <h2 class="title">資訊架構 <span class="sm-title">Define</span></h2>
+                  <p class="t-center para">為了讓產品在擴充功能或優化介面時具備一致且清晰的結構，<b>先對盤點現有功能</b>，釐清現行設計中可能存在的混亂或規格不一致問題。接著將<b>功能邏輯整理為資訊架構與規格文件</b>，幫助團隊更快理解整體產品脈絡與使用者操作邏輯。</p>
+              </div>
+              <div  class="notop-container">
+                <img src="https://cdn.jsdelivr.net/gh/chingjungkuan/myportfolio/images/project/img_ia.jpg" alt="資訊架構圖" class="box-img lightbox-trigger">
+              </div>
             </div>
 
             <!-- Start txt1-img2 User flow -->
-
-            <div class="top-container hero-grid m-1col-2col">
-                    
+            <div class="top-container flex-v-24">
+              <div class="hero-grid m-1col-2col">
                 <div class="description-text">
                 <h2 class="title">User Flow <span class="sm-title">Ideate</span></h2>
                 <h3 class="title">讓流程問題具象化的第一步</h3>
@@ -337,45 +334,80 @@
                  我先繪製了 UI Flow，將頁面路徑與層級視覺化，協助團隊辨識舊版的痛點，例如操作層級過深、「繼續編輯」需多次點擊才能到達對應頁面，以及按鈕主次層級不明確。藉由這些洞察，我們優化了介面結構與資訊架構，使層級更清晰、流程更直覺。
                 </p>
                 </div>
-                <img class="image-block" src="https://cdn.jsdelivr.net/gh/chingjungkuan/myportfolio/images/project/img_user-flow.jpg" alt="專案使用者流程圖" />
+                <img class="image-block" src="/images/project/img_user-flow.jpg" alt="我的作品列表使用者流程圖" />
+              </div>
+              <img src="../images/project/img_ui-flow.jpg" alt="點擊作品卡片流程圖" class="box-img lightbox-trigger">
             </div>
+
+
             <!-- End txt1-img2 user flow -->   
 
             <!-- Start img2-txt1 Wireframe-->
             <div  class="top-container img-txt hero-grid d-2col-1col">
-              <img class="image-block lightbox-trigger" src="https://cdn.jsdelivr.net/gh/chingjungkuan/myportfolio/images/project/img_wireframe.jpg" alt="專案線框稿 (Wireframe) 示意圖" />
+              <img class="image-block lightbox-trigger" src="/images/project/img_wireframe.jpg" alt="Wireframe 示意圖" />
    
                 <div class="description-text">
-                    <h2 class="title">Wireframe+Lo-fi Prototype</h2>
-                    <h3 class="title">簡化開發流程 驗證操作假設</h3>
-                    <p class="para">
-                    在設計初期，我們以低擬真原型快速建立可互動的 Wireframe，便於團隊溝通元件配置與操作邏輯，同時初步驗證流程是否簡化、能否降低使用者思考成本。<br><br>
-                    這次優化聚焦於移除不必要資訊，僅在需要時透過「詳細資訊 Modal」顯示內容，使介面更簡潔、重點更聚焦。
-                    </p>
-                </div>
+                  <h2 class="title">Wireframe</h2>
+                  <h3 class="title">建立設計共識，優化用戶認知成本</h3>
+                  <p class="para">藉由低擬真原型與團隊快速溝通配置邏輯，驗證操作假說。本次優化核心在於「資訊去蕪存菁」，將非必要干擾收納至次層級，確保介面簡潔且重點清晰。</p>
+                  <div class="accordion-group">
+                      <div class="accordion-item active" data-img="/images/project/img_wireframe.jpg">
+                        <div class="accordion-header">
+                          <h5>▍整合附加功能，減少視覺噪音</h5>
+                          <div class="arrow-icon"></div>
+                        </div>
+                        <div class="accordion-content">
+                          <div class="accordion-inner">
+                            <p class="para">將次要的操作按鈕（如：詳細資訊、複製、刪除等）收納至作品卡片的 「More」選單。透過功能收疊，保持列表介面清爽，讓使用者專注於核心任務。</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="accordion-item" data-img="/images/project/img_wireframe.jpg">
+                        <div class="accordion-header">
+                          <h5>▍過濾冗餘資訊，聚焦核心需求</h5>
+                          <div class="arrow-icon"></div>
+                        </div>
+                        <div class="accordion-content">
+                          <div class="accordion-inner">
+                            <p class="para">移除對一般使用者非必要的後台數據，僅保留關鍵資訊。若需查看細節，則引導至 「詳細資訊 Modal」 呈現，有效降低首屏的認知負擔與視覺壓力。</p>
+                          </div>
+                        </div>
+                      </div>
+
+                  </div>
+              </div>
             </div>        
             <!-- End img2-txt1 Wireframe-->
 
             <!-- Start UI Design 目前ui-design僅用於當標籤沒有css -->
-            <div  id="ui-design"  class="container">
+            <div id="ui-design"  class="container">
   
               <!-- Start txt1-img2 User flow -->
               <div class="top-container">
                 <div class="layout-center display-title">UI Design </div>
-                  <div  class="hero-grid m-1col-2col">
-                          
+                  <div  class="hero-grid m-1col-2col">    
                     <div class="description-text">
-                    <h2 class="title">統一新版設計風格 </h2>
-                    
-                    <ul class="para">
-                      <li><b>風格更貼近品牌個性</b><br>新版介面採用<b>柔和配色</b>與<b>簡約排版</b>，傳遞<b>溫暖、小清新</b>的品牌氣質，營造親和、舒適的使用氛圍。</li><br>
-                      <li><b>分層概念</b><br>使用了卡片式設計，將內容明確區分（如左側側邊欄、作品列表區），讓使用者直覺理解資訊架構。</li><br>
-                      <li><b>簡化視覺</b><br><b>採用柔和配色與低對比，減少過度裝飾</b>，依內容需求排版，營造舒適且聚焦的閱讀體驗。</li><br>
-                      <li><b>一致性與突出層次</b><br>標題、選單、圖像區塊明確，資訊層次感提升讓介面更直覺易懂。</li>
-                      
-                    </ul>
+                      <h2 class="title">統一新版設計風格 </h2>
+                      <ul class="para">
+                        <li><b>風格更貼近品牌個性</b><br>新版介面採用<b>柔和配色</b>與<b>簡約排版</b>，傳遞<b>溫暖、小清新</b>的品牌氣質，營造親和、舒適的使用氛圍。</li><br>
+                        <li><b>分層概念</b><br>使用了卡片式設計，將內容明確區分（如左側側邊欄、作品列表區），讓使用者直覺理解資訊架構。</li><br>
+                        <li><b>簡化視覺</b><br><b>採用柔和配色與低對比，減少過度裝飾</b>，依內容需求排版，營造舒適且聚焦的閱讀體驗。</li><br>
+                        <li><b>一致性與突出層次</b><br>標題、選單、圖像區塊明確，資訊層次感提升讓介面更直覺易懂。</li>
+                        
+                      </ul>
                     </div>
-                    <img class="image-block lightbox-trigger" src="https://cdn.jsdelivr.net/gh/chingjungkuan/myportfolio/images/project/img_ui-design01.jpg" alt="專案 UI 介面設計圖 01"/>
+                    <div class="comparison-container">
+                      <div class="img-wrapper before">
+                        <img src="/images/project/img_ui-design-old.jpg" alt="Old Design">
+                      </div>
+                      <div class="img-wrapper after">
+                        <img src="/images/project/img_ui-design-new.jpg" alt="New Design">
+                      </div>
+                      <input type="range" min="0" max="100" value="50" class="slider">
+                      
+                      <div class="slider-button"></div>
+                    </div>
+
                   </div>
                   <!-- End txt1-img2 user flow -->
 
@@ -471,36 +503,46 @@
             </div>
           </div>
         <!-- End img2-txt1 --> 
-        <!-- Start txt1-img2 空間與對齊優化，讓畫面更易讀-->
+          <!-- Start txt1-img2 空間感優化，讓畫面更易讀 -->
+          <div class="top-container hero-grid m-1col-2col">
+            <img class="image-block lightbox-trigger">   
+                <div class="description-text">
+                  <h2 class="title">空間感優化，讓畫面更易讀</h2>
+                  <div class="accordion-group">
+                      <div class="accordion-item active" data-img="/images/project/img_legibility01.jpg">
+                        <div class="accordion-header">
+                          <h5>▍視覺節奏與留白優化</h5>
+                          <div class="arrow-icon"></div>
+                        </div>
+                        <div class="accordion-content">
+                          <div class="accordion-inner">
+                            <ul class="para">
+                              <li>核心洞察：原版資訊過於擁擠，缺乏適當留白，導致使用者閱讀壓力較大且難以掃描。</li>
+                              <li>優化方案：透過調整區塊間距（如不同產品類型的分隔）與統一排版節奏，即使在品項眾多時，畫面仍能維持清晰結構，有效降低視覺疲勞並提升資訊掃描效率。明確標示作品狀態與主要操作，減少使用者思考負擔。</li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="accordion-item" data-img="/images/project/img_legibility02.jpg">
+                        <div class="accordion-header">
+                          <h5>▍操作效能與批次流暢度</h5>
+                          <div class="arrow-icon"></div>
+                        </div>
+                        <div class="accordion-content">
+                          <div class="accordion-inner">
+                            <ul class="para">
+                              <li>核心洞察： 原有的大量操作邏輯不明確，影響使用者管理作品的效率。</li>
+                              <li>優化方案： 重新規劃「大量選取」按鈕的權重與位置，提供更直覺的批次操作入口。透過一致的介面邏輯，提升加入購物車與作品整理的整體效率。</li>
 
-        <div class="top-container hero-grid m-1col-2col">
-            <div class="description-text">
-              <h3 class="title">空間感優化，讓畫面更易讀</h3>
-              <div class="container hero-grid ">
-                <p class="para">
-                <b>[Before]</b><br>
-                資訊擠在一起，<b>沒有適當的留白</b>，導致閱讀壓力較大。
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
 
-                <b>[After]</b><br>
-                每個作品卡片的資訊排列整齊，<b>不同產品類型的區塊間距適當</b>，讓整體畫面更乾淨易讀。
-                </p>
-                
-                <div class="team-info">
-                  <b>具體做法</b>
-                  <ul>
-                    <li>增加適度的留白並確保不同資訊區塊有明顯分隔。</li>
-                    <li>讓卡片的文字和圖片內容均衡分布，瀏覽時更直覺。</li>
-                  </ul>
-
-                </div>
+                  </div>
               </div>
-
-            </div>
-            <img class="image-block lightbox-trigger" src="https://cdn.jsdelivr.net/gh/chingjungkuan/myportfolio/images/project/img_legibility.jpg" alt="易讀性 (Legibility) 設計調整示意圖"/>
-        </div>
-        <!-- End txt1-img2 空間感優化，讓畫面更易讀-->
-
-        
+          </div>
+          <!-- End txt1-img2 設計優化重點 -->
         <!-- End ui design container -->
       </div>
         <!-- End ui design section -->
@@ -667,6 +709,7 @@
     <script defer src="/js/lightbox.js"></script>
     <script defer src="/js/scroll-to-top.js"></script>
     <script defer src="/js/accordion.js"></script>
+    <script defer src="/js/img-comparison-slider.js"></script>
   <!-- End java -->
     
 </body>
