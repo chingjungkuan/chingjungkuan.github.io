@@ -651,7 +651,190 @@ Component (通用組件與塗鴉線條)
         gap: 16px;
     }
 }
+/* FAQ對話框 */
+/* --- 手機版預設樣式 --- */
+#faq-chatbot {
+    font-family: 'Lato', 'Noto Sans TC', sans-serif;
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    z-index: 9999;
+}
 
+#chat-mask {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 9998;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+#chat-mask.active {
+    display: block;
+    opacity: 1;
+}
+
+#chat-window {
+    position: fixed;
+    bottom: 100px;
+    left: 20px;
+    right: 20px;
+    height: 70vh;
+    background: #ffffff;
+    border-radius: 12px;
+    border: 1px solid #CFDDFA;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    z-index: 9999;
+    transition: all 0.3s ease;
+}
+
+.chat-hidden {
+    display: none !important;
+}
+
+.chat-header {
+    background: #185ADB;
+    color: #fff;
+    padding: 16px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.chat-header h5 {
+    color: #fff;
+    margin: 0;
+
+}
+
+.chat-close {
+    cursor: pointer;
+    font-size: 24px;
+    line-height: 1;
+}
+
+.chat-body {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+    background-color: #F9F9F9;
+    display: flex;
+    flex-direction: column;
+}
+
+/* --- 訊息包裹容器與頭像樣式 --- */
+.msg-wrapper.bot-wrapper {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 8px;
+    align-self: flex-start;
+}
+
+/* 頭像容器 */
+.msg-wrapper.bot-wrapper .avatar {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 8px; /* 頭像與氣泡的間距 */
+    flex-shrink: 0; /* 防止圖片被擠壓 */
+    background-color: #eee; /* placeholder 背景 */
+}
+
+.msg-wrapper.bot-wrapper .avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* 訊息氣泡基礎樣式 */
+.msg {
+    padding: 10px 14px;
+    border-radius: 8px;
+    font-size: 14px;
+    line-height: 1.5;
+    max-width: 80%; /* 限制氣泡最大寬度，避免頭像和文字擠在一起 */
+}
+
+/* 用戶訊息保持原樣 */
+.user-msg {
+    background: #CFDDFA;
+    color: #0A2458;
+    align-self: flex-end;
+    border-bottom-right-radius: 2px; /* 尖角在右下 */
+    margin-bottom: 8px;
+}
+
+/* 機器人氣泡樣式 */
+.msg-wrapper.bot-wrapper .bot-msg {
+    background: #fff;
+    color: #414141;
+    border: 1px solid #EFEFEF;
+    border-bottom-left-radius: 2px;
+}
+
+.option-container {
+    margin: 8px 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+/* 強制覆蓋按鈕樣式 */
+#faq-chatbot .btn.btn-secondary {
+    border: 1px solid #185ADB;
+    color: #185ADB;
+    background: #fff;
+    padding: 6px 12px;
+    font-size: 13px;
+    border-radius: 20px;
+    white-space: nowrap;
+}
+
+#faq-chatbot .btn.btn-secondary:hover {
+    background: #185ADB;
+    color: #fff;
+}
+
+/* 觸發圓鈕 */
+#chat-trigger {
+    width: 56px;
+    height: 56px;
+    background: #185ADB;
+    border-radius: 50%;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(24, 90, 219, 0.2);
+    font-size: 24px;
+}
+
+@media (min-width: 768px) {
+    #chat-mask.active {
+        display: none !important;
+    }
+
+    /* 視窗回到右下角固定寬度 */
+    #chat-window {
+        position: absolute;
+        bottom: 72px;
+        left: auto;
+        right: 0;
+        width: 320px;
+        height: 480px;
+    }
+}
 /* ==========================================================================
    7. Animations (Keyframes)
    ========================================================================== */
