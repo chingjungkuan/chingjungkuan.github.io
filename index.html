@@ -329,7 +329,36 @@
 
 	</main>
 	<!-- End main -->
+	<!-- FAQ 機器人組件 -->
+	<div id="faq-chatbot">
+		<div id="chat-mask" onclick="toggleChat()"></div>
 
+		<div id="chat-window" class="chat-hidden">
+			<div class="chat-header">
+				<h5>快速認識我</h5>
+				<span class="chat-close" onclick="toggleChat()">×</span>
+			</div>
+			<div class="chat-body" id="chat-content">
+				<div class="msg-wrapper bot-wrapper">
+					<div class="avatar">
+						<img src="../images/homepage/img_avatar.jpg" alt="Lucy">
+					</div>
+					<div class="msg bot-msg">Hi，我是 <b>Lucy Kuan</b>，想快速了解哪部分呢？</div>
+				</div>
+				
+				<div class="option-container" id="main-options">
+					<button class="btn btn-secondary btn-sm" onclick="handleSelect('design')">🧠 設計思考</button>
+					<button class="btn btn-secondary btn-sm" onclick="handleSelect('team')">🤝 團隊溝通</button>
+					<button class="btn btn-secondary btn-sm" onclick="handleSelect('setback')">🔥 挫折應變</button>
+					<button class="btn btn-secondary btn-sm" onclick="handleSelect('ai_comp')">🤖 AI 競爭力</button>
+				</div>
+			</div>
+		</div>
+
+		<div id="chat-trigger" onclick="toggleChat()">
+			💬
+		</div>
+	</div>
 	<!-- Start footer -->
 	<div id="site-footer" data-include="/components/footer.html"></div>
 	<!-- End footer -->
@@ -339,6 +368,7 @@
 	<script src="/js/scroll-animate.js"></script>
 	<script src="/js/doodle-title-line.js"></script>
 	<script src="/js/stacked-cards.js"></script>
+	<script src="/js/faq.js"></script>
 
 	<!-- End JS -->
 </body>
