@@ -17,7 +17,12 @@ body {
     -moz-osx-font-smoothing: grayscale;
 }
 
-h1,h2,h3,h4,h5,h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     margin: 0;
     line-height: 1.4;
     font-weight: bold;
@@ -62,11 +67,13 @@ ul li::marker {
     font-size: 0.8em;
     /* 調整圓點大小 */
 }
+
 li {
     font-size: 14px;
     line-height: 150%;
     color: #414141;
 }
+
 a {
     text-decoration: none;
     color: #414141;
@@ -93,7 +100,8 @@ p {
 }
 
 .text-highlight {
-    color: #FF5722;/* 強調用色*/
+    color: #FF5722;
+    /* 強調用色*/
 }
 
 .highlight {
@@ -114,9 +122,11 @@ p {
     font-size: 14px;
     line-height: 150%;
 }
-.text-mute{
+
+.text-mute {
     color: #666;
 }
+
 .text-primary-blue {
     color: #0040BD;
 }
@@ -182,6 +192,7 @@ p {
 .t-center {
     text-align: center;
 }
+
 /* 有垂直裝飾線條的標題區塊通用 */
 .content-header {
     display: flex;
@@ -196,18 +207,19 @@ p {
     height: 20px;
     background-color: #5d4a44;
     border-radius: 2px;
-    flex-shrink: 0; /* 防止在寬度不足時被擠壓 */
+    flex-shrink: 0;
+    /* 防止在寬度不足時被擠壓 */
 }
 
 /* 底部有線的標題文字 */
 .bordered-title {
-  font-size: 16px;
-  font-weight: 700;
-  margin-bottom: 8px;
-  border-bottom: 1px solid #ddd; 
-  padding-bottom: 4px; 
-  display: block; 
-  width: 100%;
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 8px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 4px;
+    display: block;
+    width: 100%;
 }
 
 /* -------------------------- *\
@@ -1022,8 +1034,48 @@ p {
     }
 
     .sub-nav-toggle {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        width: 100%;
+        height: auto;
+        background: transparent;
+        color: #191919;
+        border: none;
+        box-shadow: none;
+        padding: 16px;
+        margin-top: 4px;
+        cursor: pointer;
+        transition: all 0.3s;
+    }
+
+    .sub-nav-toggle svg {
         display: none;
-        /* Hide toggle on desktop */
+    }
+
+    .sub-nav-toggle::after {
+        content: "";
+        display: inline-block;
+        width: 6px;
+        height: 6px;
+        border-top: 2px solid currentColor;
+        border-right: 2px solid currentColor;
+        transform: rotate(225deg);
+        transition: transform 0.3s;
+    }
+
+    .sub-nav.expanded ul {
+        display: none !important;
+    }
+
+    .sub-nav.expanded .sub-nav-toggle {
+        transform: none;
+        background: transparent;
+        justify-content: center;
+    }
+
+    .sub-nav.expanded .sub-nav-toggle::after {
+        transform: rotate(45deg);
     }
 
     .sub-nav ul {
