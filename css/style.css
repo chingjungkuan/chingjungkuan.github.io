@@ -292,7 +292,9 @@ p {
     /* order: 1; */
 }
 
-.description-text li {
+.description-text li,
+.project-sections-container li,
+.modal-content li {
     margin-left: 16px;
 }
 
@@ -1333,7 +1335,7 @@ img {
     background-color: #fff;
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    gap: 8px;
     padding: 30px;
     border-radius: 12px;
     width: 90%;
