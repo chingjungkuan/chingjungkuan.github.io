@@ -597,6 +597,7 @@ p {
 .btn.btn-secondary {
     border: 1px solid #185ADB;
     color: #185ADB;
+    background-color: #fff;
 }
 
 .btn.btn-secondary:hover {
