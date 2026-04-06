@@ -89,7 +89,7 @@
 .img-wrapper img {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* 確保圖片填滿且不變形 */
+  object-fit: cover;
   display: block;
 }
 
@@ -242,7 +242,6 @@
     /* 水平排列 */
     justify-content: space-between;
     align-items: flex-start;
-    /* 確保頂部對齊，線條才不會跑掉 */
     padding-left: 0;
   }
 
