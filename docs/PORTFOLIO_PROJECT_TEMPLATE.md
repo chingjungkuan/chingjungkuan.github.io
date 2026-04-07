@@ -100,24 +100,26 @@
 
 ---
 
-## 5. 製作新頁面與專屬 CSS 的提示 (AI 指令範例)
+## 5. 根據 Figma 製作新頁面的提示 (AI 指令範例)
 
-當你需要建立新的專案頁面，且該專案有自己特殊的樣式設計時，請將本文件 (`TEMPLATE.md`)、`STYLE_GUIDE.md` 以及新文案一併提供給 AI，並使用以下指令：
+當你完成 Figma 設計稿，需要請 AI 轉換為程式碼時，請將本文件 (`TEMPLATE.md`)、`STYLE_GUIDE.md` 以及 Figma 連結（或設計稿截圖）提供給 AI，並使用以下指令：
 
-> 「請參考附上的 `PORTFOLIO_PROJECT_TEMPLATE.md` (HTML 結構) 與 `STYLE_GUIDE.md` (樣式系統)，幫我製作 [專案名稱] 的專案頁面 HTML，以及該專案專屬的特規 CSS 檔案（命名為 `[project-name].css`）。
+> 「請讀取我提供的 Figma 設計稿，並嚴格遵循附上的 `PORTFOLIO_PROJECT_TEMPLATE.md` (HTML 結構) 與 `STYLE_GUIDE.md` (樣式系統)，幫我製作 [專案名稱] 的專案頁面 HTML，以及該專案專屬的特規 CSS 檔案 (`[project-name].css`)。
+> 
+> **【核心原則：Figma 決定內容視覺，MD 規範決定代碼骨架】**
 > 
 > **【HTML 產出要求】**
-> 1. 完整保留 DOM 骨架，嚴格遵守 2.1 到 2.5 的模組化區塊規範，只替換文字與圖片路徑。
-> 2. 請根據區塊留白需求，正確使用 `.hero-container`, `.top-container`, `.notop-container` 作為外層容器。
-> 3. 佈局請優先使用 `.hero-grid` 網格與 `.flex-v-xx` 間距類別。
-> 4. 確保所有區塊圖片加上 `.lightbox-trigger`。
-> 5. 依照『腳本引入規範』，將沒用到的 JS 標籤刪除。
+> 1. **結構映射**：請分析 Figma 中的區塊，將其精準映射到 2.1 到 2.7 的既有模組（如：看到首屏 Banner 就必須用 `<picture>` 結構；看到切換頁籤就必須用 `.project-sections-container`）。
+> 2. **容器判斷**：請根據 Figma 設計稿中的區塊留白，正確使用 `.hero-container`, `.top-container`, `.notop-container` 作為外層容器。
+> 3. **網格與間距**：佈局請優先使用 `.hero-grid` 或 `.two-column-grid`。Figma 中的物件間距，請就近轉換為對應的 `.flex-v-xx` 類別，絕對禁止在 HTML 寫 inline-style。
+> 4. **互動元件**：請自行判斷 Figma 中哪些是需要放大的圖片（加上 `.lightbox-trigger`）或彈窗按鈕（加上 `.modal-trigger`）。
+> 5. **按需加載**：依照『腳本引入規範』，將沒用到的 JS 標籤從 HTML 底部刪除。
 > 
 > **【CSS 產出要求】**
-> 1. **禁止重複造輪子**：絕對不要寫入全域樣式（如 `body`, `h1~h6`, `.container`, `.flex-v-xx`, `.btn` 等），這些已存在於主 `style.css`。
-> 2. **設計系統連貫**：若需設定文字或背景色，請優先使用 `STYLE_GUIDE.md` 內的變數或共用 Class（如 `.text-primary`）。
+> 1. **禁止重複造輪子**：絕對不要覆寫全域樣式（如 `body`, `h1~h6`, `.container`, `.flex-v-xx`, `.btn` 等），這些已存在於主 `style.css`。
+> 2. **對齊設計系統**：Figma 中的顏色與字級，請優先使用 `STYLE_GUIDE.md` 內的變數或共用 Class（如 `.text-primary`）來實現。
 > 3. **行動優先 (Mobile-first)**：撰寫特規樣式時，預設為手機版，並統一使用 `@media (min-width: 768px)` 處理桌機版斷點。
-> 4. **避免污染全域**：專案特有的樣式，請加上專案前綴（如 `.pj-[name]-custom-card`），確保不會影響其他頁面。
+> 4. **特規隔離**：若 Figma 中出現現有 MD 規範無法涵蓋的特殊 UI，請寫在專案專屬 CSS 中，並加上專案前綴（如 `.pj-[name]-custom-card`），確保不污染全域。
 > 
-> 文案與特殊需求請參考以下內容：
-> [貼上你的文案內容與該專案特殊的排版需求]」
+> Figma 連結 / 截圖 / 補充說明如下：
+> [貼上連結或說明]」
