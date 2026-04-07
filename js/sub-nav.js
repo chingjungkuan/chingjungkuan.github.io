@@ -1,13 +1,15 @@
 // sub-nav.js - 處理側邊導航的滾動高亮和浮動功能
 
 (function () {
-    // 取得 sub-nav 和對應的內容區塊
+    // 取得 sub-nav
     const subNav = document.getElementById('sub-nav');
-    const designProcess = document.getElementById('overview');
+    // 動態取得 main 裡的第一個區塊（通常為 banner）
+    const mainElement = document.querySelector('.main');
+    const firstBlock = mainElement ? mainElement.firstElementChild : null;
 
     // 檢查關鍵元素是否存在，確保程式碼只在有 sub-nav 的頁面執行
-    if (!subNav || !designProcess) {
-        // 如果找不到其中任一元素，則停止執行後續程式碼
+    if (!subNav) {
+        // 如果找不到 sub-nav，則停止執行後續程式碼
         return;
     }
 
@@ -66,9 +68,12 @@
     // 當頁面滾動時
     window.addEventListener('scroll', () => {
 
-        // 讓 sub-nav 浮動 (當設計流程區塊滾動到視窗頂部時)
-        const designProcessTop = designProcess.getBoundingClientRect().top;
-        subNav.classList.toggle('active', designProcessTop <= 0);
+        // 讓 sub-nav 浮動 (當首區塊滾動離開視窗時)
+        if (firstBlock) {
+            const firstBlockBottom = firstBlock.getBoundingClientRect().bottom;
+            // 考慮 header 的高度，當 banner 底部超過 80px 時視為離開
+            subNav.classList.toggle('active', firstBlockBottom <= 80);
+        }
 
         const scrollY = window.scrollY;
         // 判斷當前視窗中心點的位置
