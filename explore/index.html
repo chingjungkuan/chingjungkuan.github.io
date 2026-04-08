@@ -21,13 +21,12 @@
       <ul>
         <li><a href="#impact,overview,flow,pain-point,solution">前情提要</a></li>
         <li><a href="#ia">資訊架構</a></li>
+        <li><a href="#ideate">Ideate</a></li>
         <li><a href="#ui-design,section-step01">UI Design</a></li>
         <li><a href="#style-guide">Style Guide</a></li>
         <li><a href="#takeaway">Takeaway</a></li>
       </ul>
     </nav>
-
-
 
     <!-- Start main -->
         <section class="main">
@@ -96,20 +95,18 @@
                     <h2 class="title">概述 <span class="sm-title">Overview</span></h2>
                     <h3 class="title">點點印｜<span class="text-primary">探索好作品</span></h3>
                     <h5 class="title">#B2C #RWD #Redesign</h5>
-                    <p class="para">
-                     探索好作品 頁面是展示點點印用戶透過線上編輯器創作的相片書與設計作品的展示空間。不僅精選了多樣化的優質範例，幫助沒有靈感的使用者獲得啟發，也提供了主題與產品類型的篩選功能，讓使用者能依照需求快速找到對應的內容，進一步激發創作靈感。
-                    </p>
                     <div class="team-info">
                       <p class="para"><strong>Team |</strong> TinTint 點點印</p>
                       <p class="para"><strong>Role |</strong> UIUX Designer</p>
                       <p class="para"><strong>Collaborators |</strong> UIUX Designer(1)、PM(1)、FE(1)、BE(1)、CS(2)</p>
                     </div>
                   </div>
-                  <div class="overview-right">
-                    <p class="para">
-                    <b>[調整背景]</b><br>
-                      舊版頁面存在<b>分類重疊、資訊不足與瀏覽中斷</b>等問題，導致使用者難以快速找到想看的內容，也降低了探索與獲得靈感的效率。因此需要透過資訊架構與互動設計的調整，改善整體體驗。
-                    </p>
+                  <div class="flex-v-16 para">
+                    <div class="flex-v-4">
+                      <b>[調整背景]</b>
+                      <p>舊版頁面存在<b>分類重疊、資訊不足與瀏覽中斷</b>等問題，導致使用者難以快速找到想看的內容，也降低了探索與獲得靈感的效率。因此需要透過資訊架構與互動設計的調整，改善整體體驗。</p>
+                    </div>
+                    <p>探索好作品 頁面是展示點點印用戶透過線上編輯器創作的相片書與設計作品的展示空間。不僅精選了多樣化的優質範例，幫助沒有靈感的使用者獲得啟發，也提供了主題與產品類型的篩選功能，讓使用者能依照需求快速找到對應的內容，進一步激發創作靈感。</p>
                   </div>
                 </div>
               
@@ -203,28 +200,28 @@
                   <div class="container two-column-grid">
 
                     <div class="item item-bg-grey">
-                    <h4 class="title">🗯️ 分類與篩選結構易混淆</h4>
+                    <h4 class="title">▍分類與篩選結構易混淆</h4>
                     <ul class="para">
                       <li>左側篩選清單項目過多且層級不清，使用者容易忽略或不知如何開始；篩選後的狀態也不明顯，缺少高亮或快速清除等即時回饋。</li>
                       <li>主題 Icon 按鈕偏灰，缺乏吸引力與選中狀態，降低互動與辨識度。</li>
                     </ul>
                     </div>
                     <div class="item item-bg-grey">
-                    <h4 class="title">🗯️ 導覽語意不明確與資訊不足</h4>
+                    <h4 class="title">▍導覽語意不明確與資訊不足</h4>
                     <ul class="para">
                       <li>每張卡片只看到縮圖和作品標題，沒有額外的敘述引導或互動，導致使用者難以判斷是否想點進去。</li>
                       <li>頁面標題「大家的點點印作品」過於籠統，對第一次進來的使用者沒有強烈指引。</li>
                     </ul>
                     </div>
                     <div class="item item-bg-grey">
-                    <h4 class="title">🗯️ 流程與版面影響探索</h4>
+                    <h4 class="title">▍流程與版面影響探索</h4>
                     <ul class="para">
                     <li>作點擊作品卡片後會跳轉至作品欣賞頁，返回列表時需自行尋找原本位置，導致瀏覽流程被中斷。</li>
                     <li>卡片間距不一致，作品圖片偏小，版面顯得擁擠，降低瀏覽舒適度。</li>
                     </ul>
                     </div>
                     <div class="item item-bg-grey">
-                    <h4 class="title">🗯️ 排序與分頁的探索效率低</h4>
+                    <h4 class="title">▍排序與分頁的探索效率低</h4>
                     <ul class="para">
                       <li>「熱門 / 最新」混在在側邊導覽列，且看後台實際使用此功能佔少數。</li>
                       <li>分頁需要手動點擊跳轉下一個分頁，探索的流暢度不如同頁面載入。</li>
@@ -273,19 +270,18 @@
                 <img class="image-block lightbox-trigger" src="/images/explore/img_ia.jpg" alt="資訊架構 IA 圖" loading="lazy">
    
                 <div class="description-text">
-                    <h2 class="title">資訊架構<span class="sm-title">Define</span></h2>
-                    <h3 class="title">重構資訊架構，建立清晰的探索層級</h3>
+                    <h2 class="title">資訊架構<span class="sm-title">  Define</span></h2>
+                    <h3 class="title">重整架構，建立清晰的探索層級</h3>
                     <ul class="para">
-                    <li>頂部以「探索好作品」+ 副標「點點印 精選」明確告訴使用者這裡是「推薦作品」的區塊，比原本模糊的「大家的作品」更有指引性。</li>
-                    <li>先呈現「精選作品」輪播，再往下才是主題分類探索，層級清楚。</li>
+                    <li>頂部<b>以「探索好作品」+ 副標「點點印 精選」</b>明確告訴使用者這裡是「推薦作品」的區塊，比原本模糊的「大家的作品」更有指引性。</li>
+                    <li>先呈現<b>「精選作品」輪播</b>，再往下才是主題分類探索，層級清楚。</li>
                     </ul>
                 </div>
             </div>             
             <!-- End 資訊架構 -->
+            <div id="ideate">
             <!-- Start txt1-img2 User flow -->
-
-            <div class="top-container hero-grid m-1col-2col">
-                    
+            <div class="top-container hero-grid m-1col-2col"> 
                 <div class="description-text">
                 <h2 class="title">User Flow <span class="sm-title">Ideate</span></h2>
                 <h3 class="title">視覺化流程，釐清痛點並重構架構</h3>
@@ -306,21 +302,19 @@
                     <h2 class="title">Wireframe+Lo-fi Prototype</h2>
                     <h3 class="title">以低擬真原型快速驗證，化繁為簡，確保探索流程更直覺</h3>
                     <p class="para">
-                      我們觀察到使用者在「篩選時常出現遲疑」，顯示操作流程不夠直觀。因此以低擬真原型快速建立 Wireframe，協助團隊對齊元件配置並驗證能否降低思考負擔。
+                      我們觀察到使用者在<b>「篩選時常出現遲疑」</b>，顯示操作流程不夠直觀。因此以低擬真原型快速建立 Wireframe，協助團隊對齊元件配置並驗證能否降低思考負擔。
                       優化後將功能依層級清楚區分，並<strong>僅在需要時透過 Modal 呈現細節</strong>，使介面更簡潔且瀏覽不中斷。
                     </p>
                 </div>
             </div>        
             <!-- End img2-txt1 Wireframe-->
-
-            <!-- Start UI Design 目前ui-design僅用於當標籤沒有css -->
-            <div id="ui-design" class="container">
-                
-              <div class="container">
+            </div>
+            <!-- Start UI Design -->
+            <div id="ui-design">
                 <!-- Start txt1-img2 User flow -->
                 <div class="top-container">
                   <div class="layout-center display-title">UI Design </div>
-                    <div  class="notop-container hero-grid m-1col-2col">
+                    <div class="hero-grid m-1col-2col">
                             
                       <div class="description-text">
                         <h2 class="title">統一<span class="text-primary">新版</span>設計風格 </h2>
@@ -329,163 +323,132 @@
                           <li><b>符合新版品牌風格與氛圍</b><br>新版介面採用<strong>柔和配色與簡約排版</strong>，傳遞溫暖、小清新的品牌氣質，營造舒適親和的氛圍。</li><br>
                           <li><b>清晰層級設計</b><br>從資訊分層到視覺配置，將內容劃分為「<strong>推薦</strong>」與「<strong>主題探索</strong>」兩大區塊，並以卡片式設計與明確標題，<strong>讓結構直觀且易於理解</strong>。</li><br>
                           <li><b>細節亮點設計</b><br>在精選標題加入 ✨ 圖示，強化「精選」的特別感，並透過<strong>細節提升瀏覽體驗</strong>。</li><br>
-                          
-                          
                         </ul>
                       </div>
                       <img class="image-block lightbox-trigger" src="/images/explore/img_ui-design01.jpg" alt="UI 設計截圖 01" loading="lazy">
                     </div>
-                    <!-- End txt1-img2 user flow -->
-                </div>   
+                </div>
+                <!-- End txt1-img2 user flow -->   
 
             <!-- Satrt img2-txt1 精選定位更清晰-->
             <div class="img-txt top-container hero-grid d-2col-1col">
               <img class="image-block lightbox-trigger" src="/images/explore/img_精準定位更清晰.jpg" alt="精準定位更清晰截圖" loading="lazy">
-              <div class="description-text">
-                
+              <div class="description-text">   
                 <h3 class="title">個別區塊定位更清晰</h3>
                 <div class="container hero-grid ">
-                <p class="para">
-                  <b>[Before]</b><br>
-                  資訊密集，缺乏重點強調，區塊層級不易辨識。<br><br>
-
-                  <b>[After]</b><br>
-                  以「探索好作品」+「點點印 精選」明確定位，先透過精選輪播吸引視線，再引導至主題分類，層級清晰、探索更直覺。
-                </p>
-              
-                <div class="team-info">
-                  <b>👉 具體做法</b>
-                <ul>
-                  <li><b>強化導向感</b>：標題與副標凸顯頁面定位。</li>
-                  <li><b>集中注意力</b>：精選輪播吸引視線，帶動瀏覽節奏。</li>
-                  <li><b>提升結構感</b>：形成由上而下的清楚層級。</li>
-                </ul>
-
-                </div>
+                  <div class="flex-v-16">
+                    <div class="flex-v-4 para">
+                      <b class="para-16">[Before]</b>
+                      <p>資訊密集，缺乏重點強調，區塊層級不易辨識。</p>
+                    </div>
+                    <div class="flex-v-4 para">
+                      <b class="para-16">[After]</b>
+                      <ul>
+                        <li><b>強化導向感</b>：標題與副標凸顯頁面定位。</li>
+                        <li><b>集中注意力</b>：精選輪播吸引視線，帶動瀏覽節奏。</li>
+                        <li><b>提升結構感</b>：形成由上而下的清楚層級。</li>
+                      </ul>
+                    </div>
+                  </div>
                 </div>
               </div>
-          </div>
-          <!-- End img2-txt1 -->           
+            </div>
+            <!-- End img2-txt1 -->           
 
             <!-- Start txt1-img2 主題篩選更直覺-->
-
-            <div class="top-container hero-grid m-1col-2col">
-                      
-              <div class="description-text">
-              <h3 class="title">主題篩選更直覺</h3>
-              <div class="container hero-grid ">
-                <p class="para">
-                <b>[Before]</b><br>
-                左側長清單繁雜，上方主題按鈕狀態不明確，分類層級混亂，使用者難以上手。<br><br>
-
-                <b>[After]</b><br>
-                改為「今天想看什麼主題」的口語化呈現，並以水平 icon 按鈕設計；同時結合「篩選」按鈕，點擊後展開 Drawer，提供主題＋產品的多條件篩選，讓操作更輕量直觀。
-                </p>
-                
-                <div class="team-info">
-                  <b>👉 具體做法</b>
-                  <ul>
-                    <li>提升辨識度：水平排列的 icon 按鈕更直觀。</li>
-                    <li>降低操作成本：將「全部」與各分類並列，減少學習負擔。</li>
-                    <li>增強探索效率：簡化層級，快速切換與瀏覽。</li>
-                  </ul>
-
+            <div class="flex-v-24">
+              <div class="top-container hero-grid m-1col-2col">
+              <div class="description-text">   
+                <h3 class="title">主題篩選更直覺</h3>
+                <div class="flex-v-16">
+                  <div class="flex-v-4 para">
+                    <b class="para-16">[Before]</b>
+                    <p>左側長清單繁雜，上方主題按鈕狀態不明確，分類層級混亂，使用者難以上手。</p>
+                  </div>
+                  <div class="flex-v-4 para">
+                    <b class="para-16">[After]</b>
+                    <ul>
+                      <li><b>直觀分類入口</b>：改用口語化引導與水平 icon 按鈕，將「全部」與分類並列以降低學習成本，提升視覺辨識度。</li>
+                      <li><b>輕量篩選機制</b>：透過篩選按鈕展開 Drawer 進行「主題＋產品」多條件組合，簡化層級並加速操作流程，讓探索更流暢。</li>
+                    </ul>
+                  </div>
                 </div>
+                <button class="btn btn-secondary btn-sm modal-trigger " data-title="▍大家的作品 舊版畫面" data-desc="強制的頁面跳轉造成中斷感：用戶在產品頁按下按鈕後需切換至全新頁面，破壞了從瀏覽到創作的心理連續性。; 冗餘的側邊導覽干擾視線：左側導覽列顯示全站產品選項，導致與核心任務無關的資訊過多。; 視覺結構破碎且失焦：導覽列與主操作區將畫面切分為多個零碎區塊，使得用戶難以快速找到關鍵輸入位置。; 核心任務受資訊過載影響：輸入框旁混雜了規格選擇、價格與物流資訊，增加了理解負擔，使用戶無法專注於單一的創建任務。" data-img="/images/project/img_create_old.jpg">查看舊版</button>
               </div>
-
+                <img class="image-block lightbox-trigger" src="/images/explore/img_主題篩選01.jpg" alt="主題篩選介面 01 截圖" loading="lazy">
               </div>
-              <img class="image-block lightbox-trigger" src="/images/explore/img_主題篩選01.jpg" alt="主題篩選介面 01 截圖" loading="lazy">
-            </div>
-            <div  class="notop-container">
+              <div  class="notop-container">
                 <div class="hero-grid m-1col">
                   <img class="image-block lightbox-trigger" src="/images/explore/img_主題篩選left.jpg" alt="主題篩選左側介面截圖" loading="lazy">
                   <img class="image-block lightbox-trigger" src="/images/explore/img_主題篩選right.jpg" alt="主題篩選右側介面截圖" loading="lazy">
                 </div> 
               </div>
+            </div>
             <!-- End txt1-img2 主題篩選更直覺-->
             
             <!-- Satrt img2-txt1 作品卡片資訊更豐富-->
             <div  class="img-txt top-container hero-grid d-2col-1col">
-              <img class="image-block lightbox-trigger" src="/images/explore/img_作品卡片資訊.jpg" alt="作品卡片資訊截圖" loading="lazy">
+              <img class="image-block lightbox-trigger" src="/images/explore/img_project-card.jpg" alt="作品卡片資訊截圖" loading="lazy">
 
               <div class="description-text">
                 <h3 class="title">作品卡片資訊更豐富</h3>
-                <div class="container hero-grid ">
-                  <p class="para">
-                  <b>[Before]</b><br>
-                  卡片僅有縮圖與標題，缺乏作者與互動數據，使用者判斷依據不足。<br><br>
+                <div class="flex-v-16 para">
+                  <div class="flex-v-4">
+                    <b class="para-16">[Before]</b>
+                    <p>卡片僅有縮圖與標題，缺乏作者與互動數據，使用者判斷依據不足。</p>
+                  </div>
+                  <div class="flex-v-4">
+                    <b class="para-16">[After]新增「觀看數」icon 與數字</b>
 
-                  <b>[After]</b><br>
-                  新增「觀看數」icon 與數字，補充更多資訊，讓卡片結構更完整，瀏覽判斷更有依據。<br>
-                  </p>
-                  
-                  <div class="team-info">
-                    <b>👉 具體做法</b>
                     <ul>
-                      <li>提升探索動機：觀看數作為熱門指標，增加使用者點擊意願。</li>
-                      <li>增強資訊完整性：卡片包含標題、作者與互動數據。</li>
-                      <li>改善一致性：各卡片資訊呈現統一，降低理解成本。</li>
+                      <li><b>提升動機</b>：觀看數作為熱門指標，增加使用者點擊意願。</li>
+                      <li><b>增強資訊完整性</b>：卡片包含標題、作者與互動數據。</li>
+                      <li><b>改善一致性</b>：各卡片資訊呈現統一，降低理解成本。</li>
                     </ul>
-
                   </div>
                 </div>
-
               </div>
-            </div>
-          <!-- End img2-txt1 作品卡片資訊更豐富--> 
-          <!-- Start txt1-img2 互動與操作體驗提升-->
 
-          <div  class="top-container hero-grid m-1col-2col">
+            </div>
+            <!-- End img2-txt1 作品卡片資訊更豐富--> 
+            <!-- Start txt1-img2 互動與操作體驗提升-->
+            <div  class="top-container hero-grid m-1col-2col">
               <div class="description-text">
                 <h3 class="title">互動與操作體驗提升</h3>
-                <div class="container hero-grid ">
-                  <p class="para">
-                  <b>[Before]</b><br>
-                  分頁設計需透過 Page Control 逐頁切換，導致探索中斷；一次載入過多資料也造成初始載入緩慢，瀏覽卡頓。<br><br>
-
-                  <b>[After]</b><br>
-                  內容達到區塊上限時改為顯示「載入更多」的按鈕設計，讓探索流暢不中斷，並透過分批載入縮短初始時間、降低伺服器與前端負擔。<br>
-                  精選作品以輪播方式呈現，減少佔用空間，卻能展示更多內容。
-                  </p>
-                  
-                  <div class="team-info">
-                    <b>👉 具體做法</b>
+                <div class="flex-v-16 para">
+                  <div class="flex-v-4">
+                    <b class="para-16">[Before]</b>
+                    <p>分頁設計需透過 <b>Page Control</b> 逐頁切換，導致探索中斷；一次載入過多資料也造成初始載入緩慢，瀏覽卡頓。</p>
+                  </div>
+                  <div class="flex-v-4">
+                    <b class="para-16">[After]</b>
                     <ul>
-                      <li>保持流暢性：使用者連續瀏覽不中斷。</li>
-                      <li>優化效能：分批載入避免前端卡頓，縮短初始時間。</li>
-                      <li>提升展示效率：精選作品輪播呈現更多內容，節省版面。</li>
+                      <li><b>載入更多機制</b>：改採「載入更多」按鈕與分批載入設計，確保用戶探索過程流暢不中斷，同時有效縮短初始載入時間，減輕前端與伺服器負擔。</li>
+                      <li><b>高效輪播展示</b>：將精選作品重組為輪播形式，在不佔用額外版面的前提下，極大化內容展示空間與效率。</li>
                     </ul>
-
                   </div>
                 </div>
-
               </div>
               <img class="image-block lightbox-trigger" src="/images/explore/img_互動與操作體驗提升.jpg" alt="互動與操作體驗提升截圖" loading="lazy">
-          </div>
-          <!-- End txt1-img2 互動與操作體驗提升-->
+            </div>
+            <!-- End txt1-img2 互動與操作體驗提升-->
           <!-- Satrt img2-txt1 情境導向的多樣化預設-->
           <div  class="img-txt top-container hero-grid d-2col-1col">
-              <img class="image-block lightbox-trigger" src="/images/explore/img_情境導向的多樣化預設.jpg" alt="情境導向的多樣化預設截圖" loading="lazy">
-
+              <img class="image-block lightbox-trigger" src="/images/explore/img_sort.jpg" alt="推薦作品的情境導向的多樣化畫面" loading="lazy">
               <div class="description-text">
                 <h3 class="title">情境導向的多樣化預設</h3>
-                <div class="container hero-grid ">
-                  <p class="para">
-                  <b>[Before]</b><br>
-                  舊版主題與產品的篩選較為分散，使用者需自行組合條件，容易增加思考成本。<br><br>
-
-                  <b>[After]</b><br>
-                  依主題自動帶入最相關的產品（如旅遊→寫真本、婚禮→映畫本），讓使用者更快看到符合情境的作品範例。<br>
-                  </p>
-                  
-                  <div class="team-info">
-                    <b>👉 具體做法</b>
+                <div class="flex-v-16 para">
+                  <div class="flex-v-4"> 
+                    <b class="para-16">[Before]</b>
+                    <p>舊版主題與產品的篩選較為分散，使用者需自行組合條件，容易增加思考成本。</p>
+                  </div>
+                  <div class="flex-v-4"> 
+                    <b class="para-16">[After]</b>
                     <ul>
-                      <li>降低思考成本：自動帶出最適合的產品類型。</li>
-                      <li>增強探索啟發：主題對應產品，更容易獲得靈感。</li>
-                      <li>提升導向性：提供個人化、情境化的入口。</li>
+                      <li><b>降低思考成本</b>：依主題<b>自動帶入最相關的產品</b>（如旅遊→寫真本、婚禮→映畫本），讓使用者更快看到符合情境的作品範例。</li>
+                      <li><b>增強探索啟發</b>：主題對應產品，更容易獲得靈感。</li>
+                      <li><b>提升導向性</b>：提供個人化、情境化的入口。</li>
                     </ul>
-
                   </div>
                 </div>
 
@@ -493,32 +456,28 @@
           </div>
           <!-- End img2-txt1 情境導向的多樣化預設--> 
           <!-- Start txt1-img2 視覺層級與排版優化-->
-
           <div class="top-container hero-grid m-1col-2col">
-              <div class="description-text">
-                <h3 class="title">視覺層級與排版優化</h3>
-                <div class="container hero-grid ">
-                  <p class="para">
-                  <b>[Before]</b><br>
-                  分區與層級不明顯，icon 樣式偏灰，互動感不足；卡片排列間距不一致，整體視覺顯得凌亂。<br><br>
-
-                  <b>[After]</b><br>
-                  分區標題清楚，留白適切；icon 與文字狀態一致，互動感明確；卡片間距整齊，排版更乾淨。
-                  </p>
-                  
-                  <div class="team-info">
-                    <b>👉 具體做法</b>
+            <div class="description-text">
+              <h3 class="title">視覺層級與排版優化</h3>
+              <div class="flex-v-16 para">
+                <div class="flex-v-4">
+                    <b class="para-16">[Before]</b>
                     <ul>
-                      <li>提升辨識度：區塊標題與留白讓層級更清楚。</li>
-                      <li>強化互動性：icon 狀態清晰，點擊更直觀。</li>
-                      <li>增進整體觀感：統一的排列與間距帶來乾淨專業的版面。</li>
+                      <li>分區與層級不明顯，icon 樣式偏灰，互動感不足</li>
+                      <li>卡片排列間距不一致，整體視覺顯得凌亂</li>
                     </ul>
-
-                  </div>
                 </div>
-
+                <div class="flex-v-4">
+                  <b class="para-16">[After]</b>
+                  <ul>
+                    <li><b>清晰視覺層級</b>：藉由明確標題與留白設計，優化資訊架構並大幅提升辨識度。</li>
+                    <li><b>直覺互動回饋</b>：統一 icon 與文字狀態，確保操作反饋一致，強化使用者的互動體驗。</li>
+                    <li><b>精緻整潔排版</b>：透過統一的卡片間距與對齊規範，打造乾淨且具專業感的整體佈局。</li>
+                  </ul>
+                </div>
               </div>
-              <img class="image-block lightbox-trigger" src="/images/explore/img_視覺層級與排版優化.jpg" alt="視覺層級與排版優化截圖" loading="lazy">
+            </div>
+            <img class="image-block lightbox-trigger" src="/images/explore/img_layout.jpg" alt="視覺層級與排版優化比較圖" loading="lazy">
               
           </div>
           <!-- End txt1-img2 視覺層級與排版優化-->
@@ -628,7 +587,15 @@
       </div>
       <!-- 置頂滾動按鈕 -->
       <button id="scrollToTopBtn" title="回到頂部">⬆</button>     
-
+      <!-- Modal 元件 -->
+      <div id="commonModal" class="modal">
+        <div class="modal-content">
+          <span class="close-btn">&times;</span>
+          <h2 id="modalTitle">標題預設值</h2>
+          <p id="modalDesc">描述文字預設值</p>
+          <img id="modalImg" src="" alt="圖片" style="width:100%">
+        </div>
+      </div>
 
     </div>
   </section>
@@ -638,14 +605,12 @@
     <div id="site-footer" data-include="/components/footer.html"></div>
   <!-- End footer -->
     </div>
-
     <!-- Start java -->
     <script defer src="/js/include.js"></script>
     <script defer src="/js/sub-nav.js"></script>
     <script defer src="/js/lightbox.js"></script>
     <script defer src="/js/scroll-to-top.js"></script>
+    <script defer src="/js/modal.js"></script>
   <!-- End java -->
-    
-    
 </body>
 </html>
