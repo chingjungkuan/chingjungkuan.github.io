@@ -17,12 +17,7 @@ body {
     -moz-osx-font-smoothing: grayscale;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h1,h2,h3,h4,h5,h6 {
     margin: 0;
     line-height: 1.4;
     font-weight: bold;
@@ -59,13 +54,11 @@ ul {
     font-size: 14px;
     line-height: 1.5;
     list-style: disc;
-    /* 顯示圓點 */
     color: #414141;
 }
 
 ul li::marker {
     font-size: 0.8em;
-    /* 調整圓點大小 */
 }
 
 li {
@@ -92,7 +85,6 @@ p {
 
 .text-primary {
     color: #7B6453;
-    /* tt 主要品牌色 */
 }
 
 .text-cta {
@@ -101,7 +93,6 @@ p {
 
 .text-highlight {
     color: #FF5722;
-    /* 強調用色*/
 }
 
 .highlight {
@@ -265,7 +256,6 @@ p {
         padding: 80px 16px 0 16px;
     }
 }
-
 /* ==========================
    Layout Center 置中容器
 ========================== */
@@ -283,7 +273,51 @@ p {
 .align-end-items {
     align-items: end !important;
 }
+/* ==========================
+   滿版線條區塊（Takeaway、UI Design）
+========================== */
+/* 黑底大標題 */
+.sec-title-container {
+    width: 100%;
+    background-color: var(--border-black);
+    text-align: center;
+    padding: 8px 16px;
+}
 
+.sec-title-container h2 {
+    margin: 0;
+    font-size: 32px;
+    font-weight: 900;
+    color: white;
+}
+
+/* --- 白底副標題 --- */
+.sec-subtitle-container {
+    width: 100%;
+    background-color: #fff;
+    color: var(--border-black);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 16px 20px;
+    border-top: 1px solid var(--border-black);
+    border-bottom: 1px solid var(--border-black);
+}
+
+.sec-subtitle-container h3 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+@media (min-width: 768px) {
+    .display-title { font-size: 64px; }
+    .sec-title-container { padding: 12px; }
+    .sec-title-container h2 { font-size: 48px; }
+    .sec-subtitle-container { padding: 12px; }
+    .sec-subtitle-container h3 { font-size: 36px; }
+}
 /* ==========================
    專案用文字區塊
 ========================== */
@@ -1365,7 +1399,6 @@ img {
     from {
         opacity: 0;
     }
-
     to {
         opacity: 1;
     }
@@ -1464,7 +1497,7 @@ img {
 
 .team-info {
     display: grid;
-    gap: 8px;
+    gap: 4px;
     background: #f4f4f4;
     border-radius: 4px;
     padding: 16px;
