@@ -12,9 +12,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 </head>
 <body>
-    <div class="wrapper">
     <!-- Start header -->
-      <div id="site-header" data-include="/components/header.html"></div>
+    <div id="site-header" data-include="/components/header.html"></div>
 		<!-- End header -->
     <!-- 浮動釘選導覽列 -->
     <nav id="sub-nav" class="sub-nav">
@@ -26,9 +25,8 @@
         <li><a href="#takeaway">Takeaway</a></li>
       </ul>
     </nav>
-
     <!-- Start main -->
-        <section class="main">
+      <main class="main">
           <!-- Start banner -->
           <section class="hero-banner-wrapper">
               <picture>
@@ -37,301 +35,163 @@
                   <img class="hero-banner-img" src="../images/products/img_banner-mobile.jpg" alt="作品欣賞 banner 圖片" loading="eager">    
               </picture>
           </section>
-			  
 			    <!-- End banner --> 
-
           <!-- Start Overview -->
-            <div id="overview" class="top-container">
-                <div class="overview">
-                  <div class="overview-left">
-                    <h2 class="title">概述 <span class="sm-title">Overview</span></h2>
-                    <h3 class="title">點點印｜<span class="text-primary">產品相關</span> 頁面</h3>
-                    <h5 class="title">#B2C #RWD #Redesign</h5>
+          <div id="overview" class="top-container">
+              <div class="overview">
+                <div class="overview-left">
+                  <h2 class="title">概述 <span class="sm-title">Overview</span></h2>
+                  <h3 class="title">點點印｜<span class="text-primary">產品相關</span> 頁面</h3>
+                  <h5 class="title">#B2C #RWD #Redesign</h5>
 
-                    <div class="team-info">
-                      <p class="para"><strong>Team |</strong> TinTint 點點印</p>
-                      <p class="para"><strong>Role |</strong> UIUX Designer</p>
-                      <p class="para"><strong>Collaborators |</strong> UIUX Designer(1)、PM(1)、FE(1)、BE(1)、CS(1)</p>
-                    </div>
-                  </div>
-                  <div class="project-sections-container flex-v-8 js-block-text-only">
-                    <div class="mobile-selector-wrapper">
-                      <select class="tab-dropdown" id="mobile-tab-selector">
-                        <option value="1">全產品頁</option>
-                        <option value="2">周邊配件頁</option>
-                        <option value="3">個別產品頁</option>
-                        <option value="4">產品規格比較</option>
-                        <option value="5">售價表</option>
-                        <option value="6">月曆系列頁</option>
-                      </select>
-                    </div>
-
-                    <div class="desktop-tab-labels">
-                      <button class="tab-btn active" data-index="1">全產品頁</button>
-                      <button class="tab-btn" data-index="2">周邊配件頁</button>
-                      <button class="tab-btn" data-index="3">個別產品頁</button>
-                      <button class="tab-btn" data-index="4">產品規格比較</button>
-                      <button class="tab-btn" data-index="5">售價表</button>
-                      <button class="tab-btn" data-index="6">月曆系列頁</button>
-                    </div>
-
-                    <div class="tab-content-container">
-                      <div class="tab-panel active" id="panel-1">
-                        <ul>
-                          <li class="para"><strong>挑戰：</strong> 舊版資訊過載且手機版型不佳，導致滑動距離過長，用戶瀏覽時容易失去耐心。</li>
-                          <li class="para"><strong>方法：</strong> 導入直覺側邊導航並重構產品層級，透過簡約視覺減少雜亂資訊的干擾。</li>
-                          <li class="para"><strong>成果：</strong> 採用現代化佈局優化空間利用率，縮短用戶尋找產品的猶豫時間，並顯著提升手機與電腦端的購買動線效率。</li>
-                        </ul>
-                      </div>
-
-                      <div class="tab-panel" id="panel-2">
-                        <ul>
-                          <li class="para"><strong>挑戰：</strong> 舊版配件頁資訊權重失衡且規格零散，導致行動端決策混亂、購買轉換效率低。</li>
-                          <li class="para"><strong>方法：</strong> 重構模組化架構並強化規格適配引導，建立一致化元件與動態定價，優化導購體驗。</li>
-                          <li class="para"><strong>成果：</strong> 縮減 60% 滾動頁面長度並讓規格即時對應，大幅降低用戶決策成本與棄單率。</li>
-                        </ul>
-                      </div>
-
-                      <div class="tab-panel" id="panel-3">
-                        <ul>
-                          <li class="para"><strong>挑戰：</strong> 首區塊關聯資訊零散分佈，且圖文佈局圖片規則不一導致瀏覽動線過長、決策資訊斷裂。</li>
-                          <li class="para"><strong>方法：</strong> 導入模組化並重構過長的區塊（如：主題區塊索引），透過區塊化佈局將資訊系統性歸納。</li>
-                          <li class="para"><strong>成果：</strong> 透過資訊的重整，加速用戶對產品規格的理解與決策效率，並有效強化點擊製作的意願。</li>
-                        </ul>
-                      </div>
-
-                      <div class="tab-panel" id="panel-4">
-                        <ul>
-                          <li class="para"><strong>挑戰：</strong> 舊版採用傳統靜態表格，除用色過時外，整體資訊密度過大且缺乏層級，導致用戶難以在混雜的內容中快速擷取關鍵差異。</li>
-                          <li class="para"><strong>方法：</strong> 以「比較行為」為核心重構頁面，簡化冗餘資訊並調整規格，僅針對同質性產品進行比較。</li>
-                          <li class="para"><strong>成果：</strong> 透過資訊層級的視覺簡化，顯著提升用戶跨產品對照的效率，並以現代化的佈局降低決策時的認知負擔。</li>
-                        </ul>
-                      </div>
-
-                      <div class="tab-panel" id="panel-5">
-                        <ul>
-                          <li class="para"><strong>挑戰：</strong> 舊版表格資訊太密且缺乏重點，用戶很難從一整片數字中快速找到想看的產品與對應價格。</li>
-                          <li class="para"><strong>方法：</strong> 跳脫傳統表格，改用按鈕選單與摺疊收合設計，並搭配側邊索引分類，將龐雜的價格資訊轉為分層呈現。</li>
-                          <li class="para"><strong>成果：</strong> 減少六成以上關於價格的客服詢問，讓用戶能直覺地自主對照售價，進而提升下單轉換率。</li>
-                        </ul>
-                      </div>
-                      <div class="tab-panel" id="panel-6">
-                        <ul>
-                          <li class="para"><strong>挑戰：</strong> 舊版月曆頁面資訊過載且缺乏層級，導致用戶無法有效瀏覽與比較不同款式的產品差異。</li>
-                          <li class="para"><strong>方法：</strong> 重構資訊架構並優化卡片版型，針對行動端可視範圍進行優化，將次要資訊收合以提升瀏覽效率。</li>
-                          <li class="para"><strong>成果：</strong> 透過資訊層級重整與視覺優化，讓用戶能迅速對照規格差異並提升空間利用率，進而加速從瀏覽到訂購的轉換效率。</li>  
-                        </ul>
-                      </div>
-                    </div>
+                  <div class="team-info">
+                    <p class="para"><strong>Team |</strong> TinTint 點點印</p>
+                    <p class="para"><strong>Role |</strong> UIUX Designer</p>
+                    <p class="para"><strong>Collaborators |</strong> UIUX Designer(1)、PM(1)、FE(1)、BE(1)、CS(1)</p>
                   </div>
                 </div>
-              
-            </div>
-            
-          <!-- End Overview -->
-          <!-- 開始設計流程 -->
-            <div id="flow" class="top-container scroll-container">
-                <h2>設計<br>流程</h2>
-                <div class="step">
-                  <div class="number">1</div>
-                  <div class="bg-white flex-v-8">
-                      <h5 class="text-primary">Empathize</h5>
-                      <div class="flex-v-4">
-                        <p class="para">✦ Review Analytics</p>
-                        <p class="para">✦ Competitive Audit</p>
-                      </div>
+                <div class="project-sections-container flex-v-8 js-block-text-only">
+                  <div class="mobile-selector-wrapper">
+                    <select class="tab-dropdown" id="mobile-tab-selector">
+                      <option value="1">全產品頁</option>
+                      <option value="2">周邊配件頁</option>
+                      <option value="3">個別產品頁</option>
+                      <option value="4">產品規格比較</option>
+                      <option value="5">售價表</option>
+                      <option value="6">月曆系列頁</option>
+                    </select>
                   </div>
-                </div>
-                <div class="step">
-                  <div class="number">2</div>
-                  <div class="bg-white flex-v-8">
-                      <h5 class="text-primary">Define</h5>
-                      <div class="flex-v-4"> 
-                        <p class="para">✦ User Story Maps</p>
-                        <p class="para">✦ Information Architecture</p>
-                      </div>
+
+                  <div class="desktop-tab-labels">
+                    <button class="tab-btn active" data-index="1">全產品頁</button>
+                    <button class="tab-btn" data-index="2">周邊配件頁</button>
+                    <button class="tab-btn" data-index="3">個別產品頁</button>
+                    <button class="tab-btn" data-index="4">產品規格比較</button>
+                    <button class="tab-btn" data-index="5">售價表</button>
+                    <button class="tab-btn" data-index="6">月曆系列頁</button>
                   </div>
-                </div>
-                <div class="step">
-                  <div class="number">3</div>
-                  <div class="bg-white flex-v-8">
-                      <h5 class="text-primary">Ideate</h5>
-                      <div class="flex-v-4"> 
-                        <p class="para">✦ User Flow</p>
-                      </div>
-                  </div>
-                </div>                                
 
-                <div class="step">
-                  <div class="number">4</div>
-                  <div class="bg-white flex-v-8">
-                      <h5 class="text-primary">UI Design</h5>
-                      <div class="flex-v-4"> 
-                        <p class="para">✦ Visual Design System</p> 
-                      </div>
-                  </div>
-                </div>
-                <div class="step">
-                  <div class="number">5</div>
-                  <div class="bg-white flex-v-8">
-                      <h5 class="text-primary">Prototype</h5>
-                      <div class="flex-v-4"> 
-                        <p class="para">✦ Mockup</p>
-                      </div>
-                  </div>
-                </div>
-                <div class="step">
-                  <div class="number">6</div>
-                  <div class="bg-white flex-v-8">
-                      <h5 class="text-primary">Test</h5>
-                      <div class="flex-v-4"> 
-                        <p class="para">✦ Comparative Testing</p>
-                      </div>
-                  </div>
-                </div>                
-            </div>
-            <!-- 設計流程結束 -->          
-
-            <!-- Start txt7-img5 痛點與觀察 -->
-            <div id="solution" class="top-container">
-              <div class="project-sections-container hero-grid d-7col-5col ">
-                  <div class="description-text js-block-image-text">
-                    <h2 class="title">舊版痛點與觀察 <span class="sm-title">Pain Point & Task</span></h2>
-
-                    <div class="mobile-selector-wrapper">
-                      <select class="tab-dropdown" id="mobile-tab-selector">
-                        <option value="1">全產品頁</option>
-                        <option value="2">周邊配件</option>
-                        <option value="3">個別產品頁</option>
-                        <option value="4">產品規格比較</option>
-                        <option value="5">售價表</option>
-                        <option value="6">月曆系列頁</option>
-                      </select>
-                    </div>
-
-                    <div class="desktop-tab-labels">
-                      <button class="tab-btn active" data-index="1">全產品頁</button>
-                      <button class="tab-btn" data-index="2">周邊配件</button>
-                      <button class="tab-btn" data-index="3">個別產品頁</button>
-                      <button class="tab-btn" data-index="4">產品規格比較</button>
-                      <button class="tab-btn" data-index="5">售價表</button>
-                      <button class="tab-btn" data-index="6">月曆系列頁</button>
-                    </div>
-
-                    <div class="tab-content-container">
-
-                      <div class="tab-panel active">
-                        <div class="info-group">
-                          <ul>
-                            <li><strong>導覽層級雜亂</strong>：頂部全條列清單導致視覺過載，且缺乏側邊快速索引，大幅增加使用者翻找底層品項的搜尋成本。</li>
-                            <li><strong>佈局單一重複</strong>：各區塊採用高度一致的「左圖右文」排版，容易造成視覺慣性與疲勞，進而忽略不同產品間的關鍵差異。</li>
-                            <li><strong>行動端動線過長</strong>：未針對手機螢幕優化的長圖文結構，導致垂直滑動距離過長，容易讓用戶在瀏覽過程中失去耐心。</li>
-                            <li><strong>決策資訊分散</strong>：核心規格與售價散落在細碎文字中，缺乏結構化的對比邏輯，用戶難以在第一時間掌握同系列產品的區隔。</li>
-                          </ul>
-
-                        </div>
-                      </div>
-                      <div class="tab-panel">
-                        <div class="info-group">
-                          <ul>
-                            <li><strong>資訊權重失衡</strong>：核心規格與售價混雜在瑣碎的文字段落中，缺乏視覺重點與區塊化歸納，導致用戶難以快速判斷適配性與價格。</li>
-                            <li><strong>行動端轉換力弱</strong>：規格切換採用條列式呈現導致頁面過長，且導購按鈕（CTA）視覺權重不足，大幅增加了行動端用戶的決策成本。</li>
-                            <li><strong>導購邏輯斷層</strong>：版面過度強調裝飾圖案而非關鍵規格，且加購專區僅採單純陳列，缺乏與主產品的關聯性引導，降低了加購誘因。</li>
-                            <li><strong>內容瀏覽效率低</strong>：特色描述缺乏結構化提煉，感性文案與理性數據脫鉤，難以符合用戶快速掃描的閱讀習慣，導致產品價值被忽略。</li>
-                          </ul>
-                        </div>
-                      </div>
-                      <div class="tab-panel">
-                        <div class="info-group">
-                          <ul>
-                            <li><strong>首屏資訊缺位</strong>：關鍵規格與出貨時效未標註於第一屏，用戶需費力滑動翻找基本參數，導致決策路徑斷裂。</li>
-                            <li><strong>動線破碎且缺乏索引</strong>：長圖文排版導致頁面過長，且底部主題篩選位置過低，缺乏有效的索引引導來提升跳轉效率。</li>
-                            <li><strong>行動端體驗受限</strong>：圖文版型僵化且缺乏常駐的行動引導（Sticky CTA），在手機端容易造成閱讀不適並增加流失率。</li>
-                            <li><strong>資訊分類模糊</strong>：理性數據（尺寸、材質）與感性訴求（情境圖）交叉散落，缺乏區塊化設計，造成用戶視覺焦點跳躍。</li>
-
-                          </ul>
-                        </div>
-                      </div>
-                      <div class="tab-panel">
-                        <div class="info-group">
-                          <ul>
-                            <li><strong>橫向對照極其困難</strong>：採用長比例的橫向滾動表格，當產品品項過多時，使用者在滑動過程中容易遺失對照基準，難以在首尾產品間進行快速比較。</li>
-                            <li><strong>資訊冗餘且掃描效率低</strong>：大量重複的數據（如「7 個製作天」）未經歸納，導致表格資訊密度過高，增加使用者擷取關鍵差異的認知負擔。</li>
-                            <li><strong>視覺輔助效果微弱</strong>：材質與紙質的示意縮圖尺寸過小且細節模糊，在比較過程中無法提供實質的感官參考，導致規格區分度不足。</li>
-                            <li><strong>行動端適配性極差</strong>：傳統表格結構在手機端會產生嚴重的水平操作問題，用戶必須反覆左右滑動才能看完單一產品資訊，導致決策過程極度破碎。</li>
-                          </ul>
-                        </div>
-                      </div>
-                      <div class="tab-panel">
-                        <div class="info-group">
-                          <ul>
-                            <li><strong>資訊對照效率低</strong>：採用靜態橫向表格呈現價格，當產品品項與分頁數較多時，使用者難以跨區塊快速比對不同系列（如「文庫本」與「大文庫本」）的價格差異。</li>
-                            <li><strong>行動端閱讀體驗差</strong>：橫向表格在手機小螢幕上會導致資訊被裁切，用戶必須頻繁左右滑動才能看清完整內容，極大化了查詢的負擔。</li>
-                            <li><strong>導購動線斷裂</strong>：具體的價格數據（如 NT$ 549）與「開始製作」按鈕在視覺上距離過遠，缺乏連動感，導致使用者在確認價格後無法直覺地進入下一步。</li>
-                            <li><strong>頁面空間利用率不足</strong>：缺乏資訊收合與篩選機制，所有規格直接羅列，導致頁面垂直長度過長，使用者在滑動過程中容易產生視覺疲勞並失去耐心。</li>
-                          </ul>
-                        </div>
-                      </div>
-                      <div class="tab-panel">
-                        <div class="info-group">
-                          <ul>
-                            <li><strong>導覽動線疲勞</strong>：頁面極長且缺乏快速跳轉機制，用戶需大量滑動翻找目標系列，導致搜尋成本過高並產生瀏覽倦怠。</li>
-                            <li><strong>視覺資訊雜亂</strong>：版型重複且圖文堆疊緊湊，導致視覺焦點分散，產品特色難以在快速掃描中脫穎而出。</li>
-                            <li><strong>資訊架構鬆散</strong>：內容僅採堆疊式陳列而未經權重層級整理，造成版面空間利用率低，大幅拉長了不必要的距離。</li>
-                            <li><strong>決策路徑破碎</strong>：規格與價格資訊位置分散，且缺乏結構化的對照機制，增加產品比較的難度與決策成本。</li>
-                            <li><strong>導購誘因薄弱</strong>：行動按鈕對比度不足且位置靠後，在長距離滾動中極易被忽視，不利於轉換。</li>
-                          </ul>
-                        </div>
-                      </div>
-                    </div>
-
-                  </div>
-                  <div class="tab-image-view">
-                    <div class="image-panel active" id="img-panel-1">
-                      <img class="lightbox-trigger" src="/images/products/img_全產品頁_old.jpg" alt="全產品頁優化">
-                    </div>
-                    <div class="image-panel" id="img-panel-2">
-                      <img class="lightbox-trigger" src="/images/products/img_周邊配件頁_old.jpg" alt="周邊配件優化">
-                    </div>
-                    <div class="image-panel" id="img-panel-3">
-                      <img class="lightbox-trigger" src="/images/products/img_個別產品頁_old.jpg" alt="個別產品頁優化">
-                    </div>
-                    <div class="image-panel" id="img-panel-4">
-                      <img class="lightbox-trigger" src="/images/products/img_產品規格比較_old.jpg" alt="產品規格比較優化">
-                    </div>
-                    <div class="image-panel" id="img-panel-5">
-                      <img class="lightbox-trigger" src="/images/products/img_售價表_old.jpg" alt="售價表優化">
-                    </div>
-                    <div class="image-panel" id="img-panel-6">
-                      <img class="lightbox-trigger" src="/images/products/img_月曆系列_old.jpg" alt="月曆系列頁面優化">
-                    </div>
-                  </div>
-              </div>
-            </div>
-            <!-- End txt7-img5 痛點與觀察 -->
-            <!-- Start img2-txt1 整體設計優化重點-->
-            <div  class="img-txt top-container hero-grid d-2col-1col">
-              <img class="image-block lightbox-trigger" src="/images/products/img_solution.jpg" alt="整體設計優化重點圖" />   
-                <div class="description-text">
-                    <h2 class="title">整體設計優化重點 <span class="sm-title">Solution</span></h2>
-                    <h3 class="title">目標：重構導航體系與決策效率</h3>
-                    <p class="para">
-                      針對點點印多元產品線，調整相關頁面時也致力於<strong>統一資訊架構並優化行動端體驗</strong>，核心聚焦於：
+                  <div class="tab-content-container">
+                    <div class="tab-panel active" id="panel-1">
                       <ul>
-                        <li><strong>極速決策</strong>：導入「規格摘要」與「定價連動」機制，消除尺寸與印製量間的資訊斷層。</li>
-                        <li><strong>高效導航</strong>：透過側邊索引與模組化佈局，縮減 60% 垂直滾動深度，加速產品鎖定。</li>
-                        <li><strong>系統一致</strong>：建立原子化 UI 元件庫，確保全站頁面視覺與互動的一致性，強化品牌信賴。</li>
+                        <li class="para"><strong>挑戰：</strong> 舊版資訊過載且手機版型不佳，導致滑動距離過長，用戶瀏覽時容易失去耐心。</li>
+                        <li class="para"><strong>方法：</strong> 導入直覺側邊導航並重構產品層級，透過簡約視覺減少雜亂資訊的干擾。</li>
+                        <li class="para"><strong>成果：</strong> 採用現代化佈局優化空間利用率，縮短用戶尋找產品的猶豫時間，並顯著提升手機與電腦端的購買動線效率。</li>
                       </ul>
-                    </p>
-                </div>
-            </div>        
-            <!-- End img2-txt1 整體設計優化重點-->
-            
-            <!-- Start 資訊架構 -->
+                    </div>
 
-            <div id="ia" class="top-container">
-                <div class="project-sections-container flex-v-24 js-block-image-text">
-                  <h2 class="title">資訊架構 <span class="sm-title">Solution</span></h2>
+                    <div class="tab-panel" id="panel-2">
+                      <ul>
+                        <li class="para"><strong>挑戰：</strong> 舊版配件頁資訊權重失衡且規格零散，導致行動端決策混亂、購買轉換效率低。</li>
+                        <li class="para"><strong>方法：</strong> 重構模組化架構並強化規格適配引導，建立一致化元件與動態定價，優化導購體驗。</li>
+                        <li class="para"><strong>成果：</strong> 縮減 60% 滾動頁面長度並讓規格即時對應，大幅降低用戶決策成本與棄單率。</li>
+                      </ul>
+                    </div>
+
+                    <div class="tab-panel" id="panel-3">
+                      <ul>
+                        <li class="para"><strong>挑戰：</strong> 首區塊關聯資訊零散分佈，且圖文佈局圖片規則不一導致瀏覽動線過長、決策資訊斷裂。</li>
+                        <li class="para"><strong>方法：</strong> 導入模組化並重構過長的區塊（如：主題區塊索引），透過區塊化佈局將資訊系統性歸納。</li>
+                        <li class="para"><strong>成果：</strong> 透過資訊的重整，加速用戶對產品規格的理解與決策效率，並有效強化點擊製作的意願。</li>
+                      </ul>
+                    </div>
+
+                    <div class="tab-panel" id="panel-4">
+                      <ul>
+                        <li class="para"><strong>挑戰：</strong> 舊版採用傳統靜態表格，除用色過時外，整體資訊密度過大且缺乏層級，導致用戶難以在混雜的內容中快速擷取關鍵差異。</li>
+                        <li class="para"><strong>方法：</strong> 以「比較行為」為核心重構頁面，簡化冗餘資訊並調整規格，僅針對同質性產品進行比較。</li>
+                        <li class="para"><strong>成果：</strong> 透過資訊層級的視覺簡化，顯著提升用戶跨產品對照的效率，並以現代化的佈局降低決策時的認知負擔。</li>
+                      </ul>
+                    </div>
+
+                    <div class="tab-panel" id="panel-5">
+                      <ul>
+                        <li class="para"><strong>挑戰：</strong> 舊版表格資訊太密且缺乏重點，用戶很難從一整片數字中快速找到想看的產品與對應價格。</li>
+                        <li class="para"><strong>方法：</strong> 跳脫傳統表格，改用按鈕選單與摺疊收合設計，並搭配側邊索引分類，將龐雜的價格資訊轉為分層呈現。</li>
+                        <li class="para"><strong>成果：</strong> 減少六成以上關於價格的客服詢問，讓用戶能直覺地自主對照售價，進而提升下單轉換率。</li>
+                      </ul>
+                    </div>
+                    <div class="tab-panel" id="panel-6">
+                      <ul>
+                        <li class="para"><strong>挑戰：</strong> 舊版月曆頁面資訊過載且缺乏層級，導致用戶無法有效瀏覽與比較不同款式的產品差異。</li>
+                        <li class="para"><strong>方法：</strong> 重構資訊架構並優化卡片版型，針對行動端可視範圍進行優化，將次要資訊收合以提升瀏覽效率。</li>
+                        <li class="para"><strong>成果：</strong> 透過資訊層級重整與視覺優化，讓用戶能迅速對照規格差異並提升空間利用率，進而加速從瀏覽到訂購的轉換效率。</li>  
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            
+          </div>
+          <!-- End Overview -->
+          <!-- Start 設計流程 -->
+          <div id="flow" class="top-container scroll-container">
+              <h2>設計<br>流程</h2>
+              <div class="step">
+                <div class="number">1</div>
+                <div class="bg-white flex-v-8">
+                    <h5 class="text-primary">Empathize</h5>
+                    <div class="flex-v-4">
+                      <p class="para">✦ Review Analytics</p>
+                      <p class="para">✦ Competitive Audit</p>
+                    </div>
+                </div>
+              </div>
+              <div class="step">
+                <div class="number">2</div>
+                <div class="bg-white flex-v-8">
+                    <h5 class="text-primary">Define</h5>
+                    <div class="flex-v-4"> 
+                      <p class="para">✦ User Story Maps</p>
+                      <p class="para">✦ Information Architecture</p>
+                    </div>
+                </div>
+              </div>
+              <div class="step">
+                <div class="number">3</div>
+                <div class="bg-white flex-v-8">
+                    <h5 class="text-primary">Ideate</h5>
+                    <div class="flex-v-4"> 
+                      <p class="para">✦ User Flow</p>
+                    </div>
+                </div>
+              </div>                                
+
+              <div class="step">
+                <div class="number">4</div>
+                <div class="bg-white flex-v-8">
+                    <h5 class="text-primary">UI Design</h5>
+                    <div class="flex-v-4"> 
+                      <p class="para">✦ Visual Design System</p> 
+                    </div>
+                </div>
+              </div>
+              <div class="step">
+                <div class="number">5</div>
+                <div class="bg-white flex-v-8">
+                    <h5 class="text-primary">Prototype</h5>
+                    <div class="flex-v-4"> 
+                      <p class="para">✦ Mockup</p>
+                    </div>
+                </div>
+              </div>
+              <div class="step">
+                <div class="number">6</div>
+                <div class="bg-white flex-v-8">
+                    <h5 class="text-primary">Test</h5>
+                    <div class="flex-v-4"> 
+                      <p class="para">✦ Comparative Testing</p>
+                    </div>
+                </div>
+              </div>                
+          </div>
+          <!-- End 設計流程 -->          
+          <!-- Start txt7-img5 痛點與觀察 -->
+          <div id="pain-point" class="top-container">
+            <div class="project-sections-container hero-grid d-7col-5col ">
+                <div class="description-text js-block-image-text">
+                  <h2 class="title">舊版痛點與觀察 <span class="sm-title">Pain Point & Task</span></h2>
+
                   <div class="mobile-selector-wrapper">
                     <select class="tab-dropdown" id="mobile-tab-selector">
                       <option value="1">全產品頁</option>
@@ -339,7 +199,7 @@
                       <option value="3">個別產品頁</option>
                       <option value="4">產品規格比較</option>
                       <option value="5">售價表</option>
-                      <option value="6">月曆大量頁面</option>
+                      <option value="6">月曆系列頁</option>
                     </select>
                   </div>
 
@@ -349,486 +209,616 @@
                     <button class="tab-btn" data-index="3">個別產品頁</button>
                     <button class="tab-btn" data-index="4">產品規格比較</button>
                     <button class="tab-btn" data-index="5">售價表</button>
-                    <button class="tab-btn" data-index="6">月曆大量頁面</button>
+                    <button class="tab-btn" data-index="6">月曆系列頁</button>
                   </div>
 
-                  <div class="tab-image-view">
-                    <div class="image-panel active" id="img-panel-1">
-                      <img class="lightbox-trigger" src="/images/products/img_ia_全產品系列頁.jpg" alt="全產品頁優化">
-                    </div>
-                    <div class="image-panel" id="img-panel-2">
-                      <img class="" src="/images/products/img_ia_周邊配件.jpg" alt="周邊配件資訊架構圖">
-                    </div>
-                    <div class="image-panel" id="img-panel-3">
-                      <img src="/images/products/img_ia_個別產品頁.jpg" alt="個別產品頁資訊架構圖">
-                    </div>
-                    <div class="image-panel" id="img-panel-4">
-                      <img src="/images/products/img_ia_產品規格比較.jpg" alt="產品規格比較資訊架構圖">
-                    </div>
-                    <div class="image-panel" id="img-panel-5">
-                      <img src="/images/products/img_ia_售價表.jpg" alt="售價表資訊資訊架構圖">
-                    </div>
-                    <div class="image-panel" id="img-panel-6">
-                      <img src="/images/products/img_ia_月曆系列頁.jpg" alt="月曆系列頁面資訊架構圖">
-                    </div>
-                  </div>
+                  <div class="tab-content-container">
 
-                </div>
-            </div>             
-            <!-- End 資訊架構 --> 
+                    <div class="tab-panel active">
+                      <div class="info-group">
+                        <ul>
+                          <li><strong>導覽層級雜亂</strong>：頂部全條列清單導致視覺過載，且缺乏側邊快速索引，大幅增加使用者翻找底層品項的搜尋成本。</li>
+                          <li><strong>佈局單一重複</strong>：各區塊採用高度一致的「左圖右文」排版，容易造成視覺慣性與疲勞，進而忽略不同產品間的關鍵差異。</li>
+                          <li><strong>行動端動線過長</strong>：未針對手機螢幕優化的長圖文結構，導致垂直滑動距離過長，容易讓用戶在瀏覽過程中失去耐心。</li>
+                          <li><strong>決策資訊分散</strong>：核心規格與售價散落在細碎文字中，缺乏結構化的對比邏輯，用戶難以在第一時間掌握同系列產品的區隔。</li>
+                        </ul>
 
-
-
-            <!-- Start UI Design -->
-            <div id="ui-design" class="container">
-                
-              <div class="container">
-                <!-- Start txt1-img2 User flow -->
-                <div class="top-container">
-                  <div class="layout-center display-title">UI Design </div>
-                    <div  class="notop-container hero-grid m-1col-2col">
-                            
-                      <div class="description-text">
-                        <h2 class="title">統一<span class="text-primary">新版</span>設計風格 </h2>
-                        
-                        <ul class="para">
-                          <li><b>風格更貼近品牌個性</b><br>新版介面採用<strong>柔和配色與簡約排版</strong>，傳遞溫暖、小清新的品牌氣質，營造舒適親和的氛圍。</li><br>
-                          <li><b>分層概念</b><br>使用了卡片式設計，將內容明確區分（如左側側邊欄、作品列表區），讓使用者直覺理解資訊架構。</li><br>
-                          <li><b>簡化視覺</b><br>採用<strong>柔和配色</strong>與<strong>低對比</strong>，<strong>減少過度裝飾</strong>，依內容需求排版，營造舒適且聚焦的閱讀體驗。</li><br>
-                          <li><b>一致性與突出層次</b><br>文字資訊、操作功能描述、圖像區塊明確，資訊層次感提升讓介面更直覺易懂。</li>                          
+                      </div>
+                    </div>
+                    <div class="tab-panel">
+                      <div class="info-group">
+                        <ul>
+                          <li><strong>資訊權重失衡</strong>：核心規格與售價混雜在瑣碎的文字段落中，缺乏視覺重點與區塊化歸納，導致用戶難以快速判斷適配性與價格。</li>
+                          <li><strong>行動端轉換力弱</strong>：規格切換採用條列式呈現導致頁面過長，且導購按鈕（CTA）視覺權重不足，大幅增加了行動端用戶的決策成本。</li>
+                          <li><strong>導購邏輯斷層</strong>：版面過度強調裝飾圖案而非關鍵規格，且加購專區僅採單純陳列，缺乏與主產品的關聯性引導，降低了加購誘因。</li>
+                          <li><strong>內容瀏覽效率低</strong>：特色描述缺乏結構化提煉，感性文案與理性數據脫鉤，難以符合用戶快速掃描的閱讀習慣，導致產品價值被忽略。</li>
                         </ul>
                       </div>
-                      <img class="image-block lightbox-trigger" src="/images/products/img_ui_統一新版設計.jpg" alt="專案 UI 介面設計圖 01" />
                     </div>
-                    <!-- End txt1-img2 user flow -->
-                </div>
-           
-           
-            <!-- Satrt img2-txt1 全產品頁-->
-            <div  class="img-txt top-container hero-grid d-2col-1col">
-              <div class="comparison-container">
-                <div class="img-wrapper before">
-                  <img src="/images/products/img_ui_全產品頁_old.jpg" alt="Old Design">
-                </div>
-                <div class="img-wrapper after">
-                  <img src="/images/products/img_ui_全產品頁_new.jpg" alt="New Design">
-                </div>
-                <input type="range" min="0" max="100" value="50" class="slider">
-                
-                <div class="slider-button"></div>
-              </div>
-              <div class="description-text ">
-                  <h2 class="section-header">▍全產品頁</h2>
-                  <div class="accordion-group">
-                      <div class="accordion-item active">
-                          <div class="accordion-header">
-                              <h5>導入側邊導航索引，提升檢索效率</h5>
-                              <div class="arrow-icon"></div>
-                          </div>
-                          <div class="accordion-content">
-                              <div class="accordion-inner">
-                                  <p class="para">新增左側常駐分類導覽（如：相片書、月曆系列、周邊），讓用戶能一鍵精準跳轉至目標品類，大幅縮短搜尋路徑。</p>
-                              </div>
-                          </div>
-                      </div>
+                    <div class="tab-panel">
+                      <div class="info-group">
+                        <ul>
+                          <li><strong>首屏資訊缺位</strong>：關鍵規格與出貨時效未標註於第一屏，用戶需費力滑動翻找基本參數，導致決策路徑斷裂。</li>
+                          <li><strong>動線破碎且缺乏索引</strong>：長圖文排版導致頁面過長，且底部主題篩選位置過低，缺乏有效的索引引導來提升跳轉效率。</li>
+                          <li><strong>行動端體驗受限</strong>：圖文版型僵化且缺乏常駐的行動引導（Sticky CTA），在手機端容易造成閱讀不適並增加流失率。</li>
+                          <li><strong>資訊分類模糊</strong>：理性數據（尺寸、材質）與感性訴求（情境圖）交叉散落，缺乏區塊化設計，造成用戶視覺焦點跳躍。</li>
 
-                      <div class="accordion-item">
-                          <div class="accordion-header">
-                              <h5>重構卡片式佈局，降低認知負荷</h5>
-                              <div class="arrow-icon"></div>
-                          </div>
-                          <div class="accordion-content">
-                              <div class="accordion-inner">
-                                  <p class="para">改用結構清晰的卡片式設計，並增加留白，讓產品主圖更為突出，方便用戶快速掃描並辨識產品特色。</p>
-                              </div>
-                          </div>
+                        </ul>
                       </div>
-
-                      <div class="accordion-item">
-                          <div class="accordion-header">
-                              <h5>強化關鍵決策資訊，加速下單流程</h5>
-                              <div class="arrow-icon"></div>
-                          </div>
-                          <div class="accordion-content">
-                              <div class="accordion-inner">
-                                  <p class="para">在頁面頂部顯眼處標示「預計出貨日」與「運費查詢」入口。解決了舊版決策資訊分散的問題，讓有時間壓力的訂製用戶（如送禮需求）在瀏覽初期就能掌握核心時效，有效降低購買前的猶豫期。</p>
-                              </div>
-                          </div>
+                    </div>
+                    <div class="tab-panel">
+                      <div class="info-group">
+                        <ul>
+                          <li><strong>橫向對照極其困難</strong>：採用長比例的橫向滾動表格，當產品品項過多時，使用者在滑動過程中容易遺失對照基準，難以在首尾產品間進行快速比較。</li>
+                          <li><strong>資訊冗餘且掃描效率低</strong>：大量重複的數據（如「7 個製作天」）未經歸納，導致表格資訊密度過高，增加使用者擷取關鍵差異的認知負擔。</li>
+                          <li><strong>視覺輔助效果微弱</strong>：材質與紙質的示意縮圖尺寸過小且細節模糊，在比較過程中無法提供實質的感官參考，導致規格區分度不足。</li>
+                          <li><strong>行動端適配性極差</strong>：傳統表格結構在手機端會產生嚴重的水平操作問題，用戶必須反覆左右滑動才能看完單一產品資訊，導致決策過程極度破碎。</li>
+                        </ul>
                       </div>
-                      <div class="accordion-item">
-                          <div class="accordion-header">
-                              <h5>優化行動端動線，大幅縮減滾動深度</h5>
-                              <div class="arrow-icon"></div>
-                          </div>
-                          <div class="accordion-content">
-                              <div class="accordion-inner">
-                                  <p class="para">透過分類收合與分頁切換機制，將原本無止盡的垂直頁面轉化為模組化空間，顯著提升了跨裝置的瀏覽流暢度。</p>
-                              </div>
-                          </div>
+                    </div>
+                    <div class="tab-panel">
+                      <div class="info-group">
+                        <ul>
+                          <li><strong>資訊對照效率低</strong>：採用靜態橫向表格呈現價格，當產品品項與分頁數較多時，使用者難以跨區塊快速比對不同系列（如「文庫本」與「大文庫本」）的價格差異。</li>
+                          <li><strong>行動端閱讀體驗差</strong>：橫向表格在手機小螢幕上會導致資訊被裁切，用戶必須頻繁左右滑動才能看清完整內容，極大化了查詢的負擔。</li>
+                          <li><strong>導購動線斷裂</strong>：具體的價格數據（如 NT$ 549）與「開始製作」按鈕在視覺上距離過遠，缺乏連動感，導致使用者在確認價格後無法直覺地進入下一步。</li>
+                          <li><strong>頁面空間利用率不足</strong>：缺乏資訊收合與篩選機制，所有規格直接羅列，導致頁面垂直長度過長，使用者在滑動過程中容易產生視覺疲勞並失去耐心。</li>
+                        </ul>
                       </div>
+                    </div>
+                    <div class="tab-panel">
+                      <div class="info-group">
+                        <ul>
+                          <li><strong>導覽動線疲勞</strong>：頁面極長且缺乏快速跳轉機制，用戶需大量滑動翻找目標系列，導致搜尋成本過高並產生瀏覽倦怠。</li>
+                          <li><strong>視覺資訊雜亂</strong>：版型重複且圖文堆疊緊湊，導致視覺焦點分散，產品特色難以在快速掃描中脫穎而出。</li>
+                          <li><strong>資訊架構鬆散</strong>：內容僅採堆疊式陳列而未經權重層級整理，造成版面空間利用率低，大幅拉長了不必要的距離。</li>
+                          <li><strong>決策路徑破碎</strong>：規格與價格資訊位置分散，且缺乏結構化的對照機制，增加產品比較的難度與決策成本。</li>
+                          <li><strong>導購誘因薄弱</strong>：行動按鈕對比度不足且位置靠後，在長距離滾動中極易被忽視，不利於轉換。</li>
+                        </ul>
+                      </div>
+                    </div>
                   </div>
-                  <a href="https://www.tintint.com/product" target="_blank" class="btn btn-secondary btn-sm">全產品頁</a>
+
+                </div>
+                <div class="tab-image-view">
+                  <div class="image-panel active" id="img-panel-1">
+                    <img class="lightbox-trigger" src="/images/products/img_全產品頁_old.jpg" alt="全產品頁優化">
+                  </div>
+                  <div class="image-panel" id="img-panel-2">
+                    <img class="lightbox-trigger" src="/images/products/img_周邊配件頁_old.jpg" alt="周邊配件優化">
+                  </div>
+                  <div class="image-panel" id="img-panel-3">
+                    <img class="lightbox-trigger" src="/images/products/img_個別產品頁_old.jpg" alt="個別產品頁優化">
+                  </div>
+                  <div class="image-panel" id="img-panel-4">
+                    <img class="lightbox-trigger" src="/images/products/img_產品規格比較_old.jpg" alt="產品規格比較優化">
+                  </div>
+                  <div class="image-panel" id="img-panel-5">
+                    <img class="lightbox-trigger" src="/images/products/img_售價表_old.jpg" alt="售價表優化">
+                  </div>
+                  <div class="image-panel" id="img-panel-6">
+                    <img class="lightbox-trigger" src="/images/products/img_月曆系列_old.jpg" alt="月曆系列頁面優化">
+                  </div>
+                </div>
+            </div>
+          </div>
+          <!-- End txt7-img5 痛點與觀察 -->
+          <!-- Start img2-txt1 整體設計優化重點-->
+          <div id="solution" class="img-txt top-container hero-grid d-2col-1col">
+            <img class="image-block lightbox-trigger" src="/images/products/img_solution.jpg" alt="整體設計優化重點圖" />   
+              <div class="description-text">
+                  <h2 class="title">整體設計優化重點 <span class="sm-title">Solution</span></h2>
+                  <h3 class="title">目標：重構導航體系與決策效率</h3>
+                  <p class="para">
+                    針對點點印多元產品線，調整相關頁面時也致力於<strong>統一資訊架構並優化行動端體驗</strong>，核心聚焦於：
+                    <ul>
+                      <li><strong>極速決策</strong>：導入「規格摘要」與「定價連動」機制，消除尺寸與印製量間的資訊斷層。</li>
+                      <li><strong>高效導航</strong>：透過側邊索引與模組化佈局，縮減 60% 垂直滾動深度，加速產品鎖定。</li>
+                      <li><strong>系統一致</strong>：建立原子化 UI 元件庫，確保全站頁面視覺與互動的一致性，強化品牌信賴。</li>
+                    </ul>
+                  </p>
+              </div>
+          </div>        
+          <!-- End img2-txt1 整體設計優化重點-->
+          <!-- Start 資訊架構 -->
+          <div id="ia" class="hero-container">
+              <div class="project-sections-container flex-v-24 js-block-image-text">
+                <h2 class="title">資訊架構 <span class="sm-title">Solution</span></h2>
+                <div class="mobile-selector-wrapper">
+                  <select class="tab-dropdown" id="mobile-tab-selector">
+                    <option value="1">全產品頁</option>
+                    <option value="2">周邊配件</option>
+                    <option value="3">個別產品頁</option>
+                    <option value="4">產品規格比較</option>
+                    <option value="5">售價表</option>
+                    <option value="6">月曆大量頁面</option>
+                  </select>
+                </div>
+
+                <div class="desktop-tab-labels">
+                  <button class="tab-btn active" data-index="1">全產品頁</button>
+                  <button class="tab-btn" data-index="2">周邊配件</button>
+                  <button class="tab-btn" data-index="3">個別產品頁</button>
+                  <button class="tab-btn" data-index="4">產品規格比較</button>
+                  <button class="tab-btn" data-index="5">售價表</button>
+                  <button class="tab-btn" data-index="6">月曆大量頁面</button>
+                </div>
+
+                <div class="tab-image-view">
+                  <div class="image-panel active" id="img-panel-1">
+                    <img class="lightbox-trigger" src="/images/products/img_ia_全產品系列頁.jpg" alt="全產品頁優化">
+                  </div>
+                  <div class="image-panel" id="img-panel-2">
+                    <img class="" src="/images/products/img_ia_周邊配件.jpg" alt="周邊配件資訊架構圖">
+                  </div>
+                  <div class="image-panel" id="img-panel-3">
+                    <img src="/images/products/img_ia_個別產品頁.jpg" alt="個別產品頁資訊架構圖">
+                  </div>
+                  <div class="image-panel" id="img-panel-4">
+                    <img src="/images/products/img_ia_產品規格比較.jpg" alt="產品規格比較資訊架構圖">
+                  </div>
+                  <div class="image-panel" id="img-panel-5">
+                    <img src="/images/products/img_ia_售價表.jpg" alt="售價表資訊資訊架構圖">
+                  </div>
+                  <div class="image-panel" id="img-panel-6">
+                    <img src="/images/products/img_ia_月曆系列頁.jpg" alt="月曆系列頁面資訊架構圖">
+                  </div>
+                </div>
 
               </div>
-            </div>
-          <!-- End img2-txt1 全產品頁--> 
+          </div>             
+          <!-- End 資訊架構 --> 
+          <!-- Start UI Design -->
+          <div id="ui-design">
+              <div class="sec-title-container">
+                <h2>UI Design</h2>
+              </div>
 
-          <!-- Start txt1-img2 周邊配件頁-->
+            <div class="container">
+              <!-- Start txt1-img2 User flow -->
+              <div>
+                  <div  class="top-container hero-grid m-1col-2col">
+                    <div class="description-text">
+                      <h2 class="title">統一<span class="text-primary">新版</span>設計風格 </h2>
+                      
+                      <ul class="para">
+                        <li><b>風格更貼近品牌個性</b><br>新版介面採用<strong>柔和配色與簡約排版</strong>，傳遞溫暖、小清新的品牌氣質，營造舒適親和的氛圍。</li><br>
+                        <li><b>分層概念</b><br>使用了卡片式設計，將內容明確區分（如左側側邊欄、作品列表區），讓使用者直覺理解資訊架構。</li><br>
+                        <li><b>簡化視覺</b><br>採用<strong>柔和配色</strong>與<strong>低對比</strong>，<strong>減少過度裝飾</strong>，依內容需求排版，營造舒適且聚焦的閱讀體驗。</li><br>
+                        <li><b>一致性與突出層次</b><br>文字資訊、操作功能描述、圖像區塊明確，資訊層次感提升讓介面更直覺易懂。</li>                          
+                      </ul>
+                    </div>
+                    <img class="image-block lightbox-trigger" src="/images/products/img_ui_統一新版設計.jpg" alt="專案 UI 介面設計圖 01" />
+                  </div>
+                  <!-- End txt1-img2 user flow -->
+              </div>
+          
+          
+          <!-- Satrt img2-txt1 全產品頁-->
+          <div  class="img-txt top-container hero-grid d-2col-1col">
+            <div class="comparison-container">
+              <div class="img-wrapper before">
+                <img src="/images/products/img_ui_全產品頁_old.jpg" alt="Old Design">
+              </div>
+              <div class="img-wrapper after">
+                <img src="/images/products/img_ui_全產品頁_new.jpg" alt="New Design">
+              </div>
+              <input type="range" min="0" max="100" value="50" class="slider">
+              
+              <div class="slider-button"></div>
+            </div>
+            <div class="description-text ">
+                <h2 class="section-header">▍全產品頁</h2>
+                <div class="accordion-group">
+                    <div class="accordion-item active">
+                        <div class="accordion-header">
+                            <h5>導入側邊導航索引，提升檢索效率</h5>
+                            <div class="arrow-icon"></div>
+                        </div>
+                        <div class="accordion-content">
+                            <div class="accordion-inner">
+                                <p class="para">新增左側常駐分類導覽（如：相片書、月曆系列、周邊），讓用戶能一鍵精準跳轉至目標品類，大幅縮短搜尋路徑。</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <div class="accordion-header">
+                            <h5>重構卡片式佈局，降低認知負荷</h5>
+                            <div class="arrow-icon"></div>
+                        </div>
+                        <div class="accordion-content">
+                            <div class="accordion-inner">
+                                <p class="para">改用結構清晰的卡片式設計，並增加留白，讓產品主圖更為突出，方便用戶快速掃描並辨識產品特色。</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <div class="accordion-header">
+                            <h5>強化關鍵決策資訊，加速下單流程</h5>
+                            <div class="arrow-icon"></div>
+                        </div>
+                        <div class="accordion-content">
+                            <div class="accordion-inner">
+                                <p class="para">在頁面頂部顯眼處標示「預計出貨日」與「運費查詢」入口。解決了舊版決策資訊分散的問題，讓有時間壓力的訂製用戶（如送禮需求）在瀏覽初期就能掌握核心時效，有效降低購買前的猶豫期。</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <div class="accordion-header">
+                            <h5>優化行動端動線，大幅縮減滾動深度</h5>
+                            <div class="arrow-icon"></div>
+                        </div>
+                        <div class="accordion-content">
+                            <div class="accordion-inner">
+                                <p class="para">透過分類收合與分頁切換機制，將原本無止盡的垂直頁面轉化為模組化空間，顯著提升了跨裝置的瀏覽流暢度。</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a href="https://www.tintint.com/product" target="_blank" class="btn btn-secondary btn-sm">全產品頁</a>
+
+            </div>
+          </div>
+        <!-- End img2-txt1 全產品頁--> 
+
+        <!-- Start txt1-img2 周邊配件頁-->
+
+        <div class="top-container hero-grid m-1col-2col">
+                  
+            <div class="description-text ">
+                <h2 class="section-header">▍周邊配件頁</h2>
+                <div class="accordion-group">
+                    <div class="accordion-item active">
+                        <div class="accordion-header">
+                            <h5>重構資訊層級，建立視覺焦點</h5>
+                            <div class="arrow-icon"></div>
+                        </div>
+                        <div class="accordion-content">
+                            <div class="accordion-inner">
+                                <p class="para">將品名、規格、價格與適用範圍進行模組化歸納，以「標題 + 圖片 + 說明」的結構，解決舊版文字瑣碎且缺乏權重分配的問題。</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <div class="accordion-header">
+                            <h5>優化規格選取與導購操作</h5>
+                            <div class="arrow-icon"></div>
+                        </div>
+                        <div class="accordion-content">
+                            <div class="accordion-inner">
+                                <p class="para">改採按鈕選單設計，讓用戶能快速且直覺地選取適合規格，並大幅強化「加入購物車」按鈕的視覺對比度，有效縮短操作路徑。</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <div class="accordion-header">
+                            <h5>強化即時回饋與決策輔助</h5>
+                            <div class="arrow-icon"></div>
+                        </div>
+                        <div class="accordion-content">
+                            <div class="accordion-inner">
+                                <p class="para">導入款式切換的即時價格更新機制，並透過 Tooltips 提示與一鍵滾動功能，協助用戶快速確認產品適配性，降低購買錯誤率。</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <div class="accordion-header">
+                            <h5>更合適的行動裝置體驗</h5>
+                            <div class="arrow-icon"></div>
+                        </div>
+                        <div class="accordion-content">
+                            <div class="accordion-inner">
+                                <p class="para">針對手機螢幕調整按鈕尺寸與互動間距，解決舊版條列式規格導致頁面過長的問題，提供流暢的跨裝置下單體驗。</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a href="https://www.tintint.com/accessory/info/gift-package" target="_blank" class="btn btn-secondary btn-sm">禮物包裝配件頁</a>
+
+            </div>
+            <div class="comparison-container">
+              <div class="img-wrapper before">
+                <img src="/images/products/img_ui_周邊配件頁_old.jpg" alt="Old Design">
+              </div>
+              <div class="img-wrapper after">
+                <img src="/images/products/img_ui_周邊配件頁_new.jpg" alt="New Design">
+              </div>
+              <input type="range" min="0" max="100" value="50" class="slider">
+              
+              <div class="slider-button"></div>
+            </div>
+          </div>           
+          <!-- End txt1-img2 周邊配件頁-->
+          <!-- Satrt img2-txt1 個別產品頁-->
+          <div  class="img-txt top-container hero-grid d-2col-1col">
+            <div class="comparison-container">
+              <div class="img-wrapper before">
+                <img src="/images/products/img_ui_個別產品頁_old.jpg" alt="Old Design">
+              </div>
+              <div class="img-wrapper after" >
+                <img src="/images/products/img_ui_個別產品頁_new.jpg" alt="New Design">
+              </div>
+              <input type="range" min="0" max="100" value="50" class="slider">
+              
+              <div class="slider-button"></div>
+            </div>
+            <div class="description-text ">
+                <h2 class="section-header">▍個別產品頁</h2>
+                <div class="accordion-group">
+                    <div class="accordion-item active">
+                        <div class="accordion-header">
+                            <h5>重構首區塊資訊層級，強化決策效率</h5>
+                            <div class="arrow-icon"></div>
+                        </div>
+                        <div class="accordion-content">
+                            <div class="accordion-inner">
+                                <p class="para">將核心規格（如尺寸、張數）與用戶最在意的「出貨時效」直接整合於首區塊，解決舊版決策資訊斷裂的問題，加速用戶下單判斷。</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <div class="accordion-header">
+                            <h5>導入模組化佈局，優化長頁面動線</h5>
+                            <div class="arrow-icon"></div>
+                        </div>
+                        <div class="accordion-content">
+                            <div class="accordion-inner">
+                                <p class="para">將原本未經整理的長圖文拆解為結構化區塊，並重新設計「主題篩選索引」，讓用戶能快速跳轉至感興趣的內容，大幅提升瀏覽效率。</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <div class="accordion-header">
+                            <h5>強化行動裝置互動，配置常駐導購引導</h5>
+                            <div class="arrow-icon"></div>
+                        </div>
+                        <div class="accordion-content">
+                            <div class="accordion-inner">
+                                <p class="para">針對手機版型優化圖文比例，並加入常駐按鈕，確保使用者在滑動時能隨時進入製作流程，提升轉換路徑的流暢度。</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <div class="accordion-header">
+                            <h5>區塊化資訊分類，降低認知負擔</h5>
+                            <div class="arrow-icon"></div>
+                        </div>
+                        <div class="accordion-content">
+                            <div class="accordion-inner">
+                                <p class="para">系統性歸納理性數據與感性訴求（應用情境），明確的資訊分層讓視覺焦點不再跳躍，使用戶能更高效地擷取關鍵產品細節。</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a href="https://www.tintint.com/product/info/fotozine" target="_blank" class="btn btn-secondary btn-sm">雜誌本產品頁</a>
+
+            </div>
+          </div>
+          <!-- End img2-txt1 個別產品頁-->
+          <!-- Start txt1-img2 產品規格比較頁-->
 
           <div class="top-container hero-grid m-1col-2col">
-                    
-              <div class="description-text ">
-                  <h2 class="section-header">▍周邊配件頁</h2>
-                  <div class="accordion-group">
-                      <div class="accordion-item active">
-                          <div class="accordion-header">
-                              <h5>重構資訊層級，建立視覺焦點</h5>
-                              <div class="arrow-icon"></div>
-                          </div>
-                          <div class="accordion-content">
-                              <div class="accordion-inner">
-                                  <p class="para">將品名、規格、價格與適用範圍進行模組化歸納，以「標題 + 圖片 + 說明」的結構，解決舊版文字瑣碎且缺乏權重分配的問題。</p>
-                              </div>
-                          </div>
-                      </div>
+                  
+            <div class="description-text">
+                <h2 class="section-header">▍產品規格比較頁</h2>
+                <div class="accordion-group">
+                    <div class="accordion-item active">
+                        <div class="accordion-header">
+                            <h5>互動式自選與精準決策</h5>
+                            <div class="arrow-icon"></div>
+                        </div>
+                        <div class="accordion-content">
+                            <div class="accordion-inner">
+                                <p class="para">透過「自選卡片」與「重選」功能排除無關資訊干擾，讓使用者能專注於特定品項的精準對照。</p>
+                            </div>
+                        </div>
+                    </div>
 
-                      <div class="accordion-item">
-                          <div class="accordion-header">
-                              <h5>優化規格選取與導購操作</h5>
-                              <div class="arrow-icon"></div>
-                          </div>
-                          <div class="accordion-content">
-                              <div class="accordion-inner">
-                                  <p class="para">改採按鈕選單設計，讓用戶能快速且直覺地選取適合規格，並大幅強化「加入購物車」按鈕的視覺對比度，有效縮短操作路徑。</p>
-                              </div>
-                          </div>
-                      </div>
+                    <div class="accordion-item">
+                        <div class="accordion-header">
+                            <h5>圖像化導航與高效篩選</h5>
+                            <div class="arrow-icon"></div>
+                        </div>
+                        <div class="accordion-content">
+                            <div class="accordion-inner">
+                                <p class="para">頂端整合具備圖示的分類選單，大幅縮短搜尋路徑並支援在不同產品大類間快速切換。</p>
+                            </div>
+                        </div>
+                    </div>
 
-                      <div class="accordion-item">
-                          <div class="accordion-header">
-                              <h5>強化即時回饋與決策輔助</h5>
-                              <div class="arrow-icon"></div>
-                          </div>
-                          <div class="accordion-content">
-                              <div class="accordion-inner">
-                                  <p class="para">導入款式切換的即時價格更新機制，並透過 Tooltips 提示與一鍵滾動功能，協助用戶快速確認產品適配性，降低購買錯誤率。</p>
-                              </div>
-                          </div>
-                      </div>
-                      <div class="accordion-item">
-                          <div class="accordion-header">
-                              <h5>更合適的行動裝置體驗</h5>
-                              <div class="arrow-icon"></div>
-                          </div>
-                          <div class="accordion-content">
-                              <div class="accordion-inner">
-                                  <p class="para">針對手機螢幕調整按鈕尺寸與互動間距，解決舊版條列式規格導致頁面過長的問題，提供流暢的跨裝置下單體驗。</p>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-                  <a href="https://www.tintint.com/accessory/info/gift-package" target="_blank" class="btn btn-secondary btn-sm">禮物包裝配件頁</a>
-
-              </div>
-              <div class="comparison-container">
-                <div class="img-wrapper before">
-                  <img src="/images/products/img_ui_周邊配件頁_old.jpg" alt="Old Design">
+                    <div class="accordion-item">
+                        <div class="accordion-header">
+                            <h5>規格視覺化與減少資訊干擾</h5>
+                            <div class="arrow-icon"></div>
+                        </div>
+                        <div class="accordion-content">
+                            <div class="accordion-inner">
+                                <p class="para">導入統一圖示系統並搭配模組化留白排版，強化資訊「掃讀性」並顯著減輕認知負擔。</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <div class="accordion-header">
+                            <h5>轉換導向的直覺動線</h5>
+                            <div class="arrow-icon"></div>
+                        </div>
+                        <div class="accordion-content">
+                            <div class="accordion-inner">
+                                <p class="para">將「立即製作」按鈕置於卡片底部決策點，符合瀏覽動線並在對比完成時即刻引導轉換。</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="img-wrapper after">
-                  <img src="/images/products/img_ui_周邊配件頁_new.jpg" alt="New Design">
-                </div>
-                <input type="range" min="0" max="100" value="50" class="slider">
-                
-                <div class="slider-button"></div>
-              </div>
-            </div>           
-            <!-- End txt1-img2 周邊配件頁-->
-            <!-- Satrt img2-txt1 個別產品頁-->
-            <div  class="img-txt top-container hero-grid d-2col-1col">
-              <div class="comparison-container">
-                <div class="img-wrapper before">
-                  <img src="/images/products/img_ui_個別產品頁_old.jpg" alt="Old Design">
-                </div>
-                <div class="img-wrapper after" >
-                  <img src="/images/products/img_ui_個別產品頁_new.jpg" alt="New Design">
-                </div>
-                <input type="range" min="0" max="100" value="50" class="slider">
-                
-                <div class="slider-button"></div>
-              </div>
-              <div class="description-text ">
-                  <h2 class="section-header">▍個別產品頁</h2>
-                  <div class="accordion-group">
-                      <div class="accordion-item active">
-                          <div class="accordion-header">
-                              <h5>重構首區塊資訊層級，強化決策效率</h5>
-                              <div class="arrow-icon"></div>
-                          </div>
-                          <div class="accordion-content">
-                              <div class="accordion-inner">
-                                  <p class="para">將核心規格（如尺寸、張數）與用戶最在意的「出貨時效」直接整合於首區塊，解決舊版決策資訊斷裂的問題，加速用戶下單判斷。</p>
-                              </div>
-                          </div>
-                      </div>
+                <a href="https://www.tintint.com/product/comparison" target="_blank" class="btn btn-secondary btn-sm">產品規格比較頁</a>
 
-                      <div class="accordion-item">
-                          <div class="accordion-header">
-                              <h5>導入模組化佈局，優化長頁面動線</h5>
-                              <div class="arrow-icon"></div>
-                          </div>
-                          <div class="accordion-content">
-                              <div class="accordion-inner">
-                                  <p class="para">將原本未經整理的長圖文拆解為結構化區塊，並重新設計「主題篩選索引」，讓用戶能快速跳轉至感興趣的內容，大幅提升瀏覽效率。</p>
-                              </div>
-                          </div>
-                      </div>
-
-                      <div class="accordion-item">
-                          <div class="accordion-header">
-                              <h5>強化行動裝置互動，配置常駐導購引導</h5>
-                              <div class="arrow-icon"></div>
-                          </div>
-                          <div class="accordion-content">
-                              <div class="accordion-inner">
-                                  <p class="para">針對手機版型優化圖文比例，並加入常駐按鈕，確保使用者在滑動時能隨時進入製作流程，提升轉換路徑的流暢度。</p>
-                              </div>
-                          </div>
-                      </div>
-                      <div class="accordion-item">
-                          <div class="accordion-header">
-                              <h5>區塊化資訊分類，降低認知負擔</h5>
-                              <div class="arrow-icon"></div>
-                          </div>
-                          <div class="accordion-content">
-                              <div class="accordion-inner">
-                                  <p class="para">系統性歸納理性數據與感性訴求（應用情境），明確的資訊分層讓視覺焦點不再跳躍，使用戶能更高效地擷取關鍵產品細節。</p>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-                  <a href="https://www.tintint.com/product/info/fotozine" target="_blank" class="btn btn-secondary btn-sm">雜誌本產品頁</a>
-
-              </div>
             </div>
-            <!-- End img2-txt1 個別產品頁-->
-            <!-- Start txt1-img2 產品規格比較頁-->
-
-            <div class="top-container hero-grid m-1col-2col">
-                    
-              <div class="description-text">
-                  <h2 class="section-header">▍產品規格比較頁</h2>
-                  <div class="accordion-group">
-                      <div class="accordion-item active">
-                          <div class="accordion-header">
-                              <h5>互動式自選與精準決策</h5>
-                              <div class="arrow-icon"></div>
-                          </div>
-                          <div class="accordion-content">
-                              <div class="accordion-inner">
-                                  <p class="para">透過「自選卡片」與「重選」功能排除無關資訊干擾，讓使用者能專注於特定品項的精準對照。</p>
-                              </div>
-                          </div>
-                      </div>
-
-                      <div class="accordion-item">
-                          <div class="accordion-header">
-                              <h5>圖像化導航與高效篩選</h5>
-                              <div class="arrow-icon"></div>
-                          </div>
-                          <div class="accordion-content">
-                              <div class="accordion-inner">
-                                  <p class="para">頂端整合具備圖示的分類選單，大幅縮短搜尋路徑並支援在不同產品大類間快速切換。</p>
-                              </div>
-                          </div>
-                      </div>
-
-                      <div class="accordion-item">
-                          <div class="accordion-header">
-                              <h5>規格視覺化與減少資訊干擾</h5>
-                              <div class="arrow-icon"></div>
-                          </div>
-                          <div class="accordion-content">
-                              <div class="accordion-inner">
-                                  <p class="para">導入統一圖示系統並搭配模組化留白排版，強化資訊「掃讀性」並顯著減輕認知負擔。</p>
-                              </div>
-                          </div>
-                      </div>
-                      <div class="accordion-item">
-                          <div class="accordion-header">
-                              <h5>轉換導向的直覺動線</h5>
-                              <div class="arrow-icon"></div>
-                          </div>
-                          <div class="accordion-content">
-                              <div class="accordion-inner">
-                                  <p class="para">將「立即製作」按鈕置於卡片底部決策點，符合瀏覽動線並在對比完成時即刻引導轉換。</p>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-                  <a href="https://www.tintint.com/product/comparison" target="_blank" class="btn btn-secondary btn-sm">產品規格比較頁</a>
-
+            <div class="comparison-container">
+              <div class="img-wrapper before">
+                <img src="/images/products/img_ui_產品規格比較_old.jpg" alt="Old Design">
               </div>
-              <div class="comparison-container">
-                <div class="img-wrapper before">
-                  <img src="/images/products/img_ui_產品規格比較_old.jpg" alt="Old Design">
-                </div>
-                <div class="img-wrapper after" >
-                  <img src="/images/products/img_ui_產品規格比較_new.jpg" alt="New Design">
-                </div>
-                <input type="range" min="0" max="100" value="50" class="slider">
-                
-                <div class="slider-button"></div>
+              <div class="img-wrapper after" >
+                <img src="/images/products/img_ui_產品規格比較_new.jpg" alt="New Design">
               </div>
-            </div>           
-            <!-- End txt1-img2 產品規格比較頁-->
-            <!-- Satrt img2-txt1 售價表頁-->
-            <div class="img-txt top-container hero-grid d-2col-1col">
-              <div class="comparison-container">
-                <div class="img-wrapper before">
-                  <img src="/images/products/img_ui_售價表_old.jpg" alt="Old Design">
-                </div>
-                <div class="img-wrapper after">
-                  <img src="/images/products/img_ui_售價表_new.jpg" alt="New Design">
-                </div>
-                <input type="range" min="0" max="100" value="50" class="slider">
-                
-                <div class="slider-button"></div>
-              </div>
-              <div class="description-text ">
-                  <h2 class="section-header">▍售價表頁</h2>
-                  <div class="accordion-group">
-                      <div class="accordion-item active">
-                          <div class="accordion-header">
-                              <h5>側邊導覽優化切換效率</h5>
-                              <div class="arrow-icon"></div>
-                          </div>
-                          <div class="accordion-content">
-                              <div class="accordion-inner">
-                                  <p class="para">從頂部水平標籤改為「左側垂直導覽列」，讓產品大類一目瞭然，大幅提升大類別間切換的直覺性與操作速度。</p>
-                              </div>
-                          </div>
-                      </div>
-
-                      <div class="accordion-item">
-                          <div class="accordion-header">
-                              <h5>標籤化規格提升介面彈性</h5>
-                              <div class="arrow-icon"></div>
-                          </div>
-                          <div class="accordion-content">
-                              <div class="accordion-inner">
-                                  <p class="para">利用「標籤式選單」取代傳統固定表格，能更靈活地呈現多樣化的尺寸與規格組合，同時保持介面的清爽與易讀性。</p>
-                              </div>
-                          </div>
-                      </div>
-
-                      <div class="accordion-item">
-                          <div class="accordion-header">
-                              <h5>透明加價結構減少溝通成本</h5>
-                              <div class="arrow-icon"></div>
-                          </div>
-                          <div class="accordion-content">
-                              <div class="accordion-inner">
-                                  <p class="para">明確列出各項「加價項目」（如雕刻、腳架或掛軸加價）的細部報價，讓預算評估更透明、精確，有效降低消費者的決策疑慮。</p>
-                              </div>
-                          </div>
-                      </div>
-                      <div class="accordion-item">
-                          <div class="accordion-header">
-                              <h5>功能分流優化導購動線</h5>
-                              <div class="arrow-icon"></div>
-                          </div>
-                          <div class="accordion-content">
-                              <div class="accordion-inner">
-                                  <p class="para">明確區分「售價表」與「產品介紹」的功能定位，並加入相關跳轉連結，精準引導「查價」與「深度了解」的不同使用者進入正確流程。</p>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-                  <a href="https://www.tintint.com/product/pricing" target="_blank" class="btn btn-secondary btn-sm">售價表頁</a>
-
-              </div>
+              <input type="range" min="0" max="100" value="50" class="slider">
+              
+              <div class="slider-button"></div>
             </div>
-            <!-- End img2-txt1 售價表頁-->
-            <!-- Start txt1-img2 月曆系列頁面-->
-
-            <div class="top-container hero-grid m-1col-2col">
-                    
-              <div class="description-text ">
-                  <h2 class="section-header">▍月曆系列頁面</h2>
-                  <div class="accordion-group">
-                      <div class="accordion-item active">
-                          <div class="accordion-header">
-                              <h5>網格化佈局與瀏覽效率提升</h5>
-                              <div class="arrow-icon"></div>
-                          </div>
-                          <div class="accordion-content">
-                              <div class="accordion-inner">
-                                  <p class="para">新版採用「二欄式網格」設計，取代舊版的單欄垂直排列。這項優化增加了單一螢幕畫面中的資訊密度，讓使用者無需頻繁捲動即可快速預覽更多產品類型。</p>
-                              </div>
-                          </div>
-                      </div>
-
-                      <div class="accordion-item">
-                          <div class="accordion-header">
-                              <h5>卡片式視覺降噪與資訊模組化</h5>
-                              <div class="arrow-icon"></div>
-                          </div>
-                          <div class="accordion-content">
-                              <div class="accordion-inner">
-                                  <p class="para">將產品圖、品名、細部規格與按鈕整合進獨立的白色模組化卡片，並搭配適度留白。此設計能有效減少視覺干擾，讓使用者更專注於產品本身的特色，降低資訊讀取的認知負荷。</p>
-                              </div>
-                          </div>
-                      </div>
-
-                      <div class="accordion-item">
-                          <div class="accordion-header">
-                              <h5>色彩美學與質感一致性升級</h5>
-                              <div class="arrow-icon"></div>
-                          </div>
-                          <div class="accordion-content">
-                              <div class="accordion-inner">
-                                  <p class="para">將原先較突兀的鮮橘色調，調整為統一且具品牌高級感的溫和棕色。色彩的優化不僅提升整體頁面的質感，也使品牌風格更具人文氣息且專業。</p>
-                              </div>
-                          </div>
-                      </div>
-                      <div class="accordion-item">
-                          <div class="accordion-header">
-                              <h5>結構化規格與明確導購動線</h5>
-                              <div class="arrow-icon"></div>
-                          </div>
-                          <div class="accordion-content">
-                              <div class="accordion-inner">
-                                  <p class="para">產品重點規格（如尺寸、內頁張數）改以條列式呈現於品名下方，並統一導購按鈕樣式。強化了規格的「掃讀性」，讓使用者能直覺地在不同產品間進行對比。</p>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-                  <a href="https://www.tintint.com/product/info/calendar" target="_blank" class="btn btn-secondary btn-sm">月曆系列頁</a>
-
+          </div>           
+          <!-- End txt1-img2 產品規格比較頁-->
+          <!-- Satrt img2-txt1 售價表頁-->
+          <div class="img-txt top-container hero-grid d-2col-1col">
+            <div class="comparison-container">
+              <div class="img-wrapper before">
+                <img src="/images/products/img_ui_售價表_old.jpg" alt="Old Design">
               </div>
-              <div class="comparison-container">
-                <div class="img-wrapper before">
-                  <img src="/images/products/img_ui_月曆系列頁_old.jpg" alt="Old Design">
-                </div>
-                <div class="img-wrapper after">
-                  <img src="/images/products/img_ui_月曆系列頁_new.jpg" alt="New Design">
-                </div>
-                <input type="range" min="0" max="100" value="50" class="slider">
-                
-                <div class="slider-button"></div>
+              <div class="img-wrapper after">
+                <img src="/images/products/img_ui_售價表_new.jpg" alt="New Design">
               </div>
-            </div>           
-            <!-- End txt1-img2 月曆系列頁面-->
-             
+              <input type="range" min="0" max="100" value="50" class="slider">
+              
+              <div class="slider-button"></div>
+            </div>
+            <div class="description-text ">
+                <h2 class="section-header">▍售價表頁</h2>
+                <div class="accordion-group">
+                    <div class="accordion-item active">
+                        <div class="accordion-header">
+                            <h5>側邊導覽優化切換效率</h5>
+                            <div class="arrow-icon"></div>
+                        </div>
+                        <div class="accordion-content">
+                            <div class="accordion-inner">
+                                <p class="para">從頂部水平標籤改為「左側垂直導覽列」，讓產品大類一目瞭然，大幅提升大類別間切換的直覺性與操作速度。</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <div class="accordion-header">
+                            <h5>標籤化規格提升介面彈性</h5>
+                            <div class="arrow-icon"></div>
+                        </div>
+                        <div class="accordion-content">
+                            <div class="accordion-inner">
+                                <p class="para">利用「標籤式選單」取代傳統固定表格，能更靈活地呈現多樣化的尺寸與規格組合，同時保持介面的清爽與易讀性。</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <div class="accordion-header">
+                            <h5>透明加價結構減少溝通成本</h5>
+                            <div class="arrow-icon"></div>
+                        </div>
+                        <div class="accordion-content">
+                            <div class="accordion-inner">
+                                <p class="para">明確列出各項「加價項目」（如雕刻、腳架或掛軸加價）的細部報價，讓預算評估更透明、精確，有效降低消費者的決策疑慮。</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <div class="accordion-header">
+                            <h5>功能分流優化導購動線</h5>
+                            <div class="arrow-icon"></div>
+                        </div>
+                        <div class="accordion-content">
+                            <div class="accordion-inner">
+                                <p class="para">明確區分「售價表」與「產品介紹」的功能定位，並加入相關跳轉連結，精準引導「查價」與「深度了解」的不同使用者進入正確流程。</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a href="https://www.tintint.com/product/pricing" target="_blank" class="btn btn-secondary btn-sm">售價表頁</a>
+
+            </div>
           </div>
-        <!-- End ui design container -->
-      </div>
-        <!-- End ui design section -->
-        
-        <!-- Start Style-guide -->
-          <div id="style-guide" class="container">
-            <div class="top-container">
-              <div  class="layout-center display-title">Style Guide </div> 
+          <!-- End img2-txt1 售價表頁-->
+          <!-- Start txt1-img2 月曆系列頁面-->
+          <div class="hero-container hero-grid m-1col-2col">
+                  
+            <div class="description-text ">
+                <h2 class="section-header">▍月曆系列頁面</h2>
+                <div class="accordion-group">
+                    <div class="accordion-item active">
+                        <div class="accordion-header">
+                            <h5>網格化佈局與瀏覽效率提升</h5>
+                            <div class="arrow-icon"></div>
+                        </div>
+                        <div class="accordion-content">
+                            <div class="accordion-inner">
+                                <p class="para">新版採用「二欄式網格」設計，取代舊版的單欄垂直排列。這項優化增加了單一螢幕畫面中的資訊密度，讓使用者無需頻繁捲動即可快速預覽更多產品類型。</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <div class="accordion-header">
+                            <h5>卡片式視覺降噪與資訊模組化</h5>
+                            <div class="arrow-icon"></div>
+                        </div>
+                        <div class="accordion-content">
+                            <div class="accordion-inner">
+                                <p class="para">將產品圖、品名、細部規格與按鈕整合進獨立的白色模組化卡片，並搭配適度留白。此設計能有效減少視覺干擾，讓使用者更專注於產品本身的特色，降低資訊讀取的認知負荷。</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <div class="accordion-header">
+                            <h5>色彩美學與質感一致性升級</h5>
+                            <div class="arrow-icon"></div>
+                        </div>
+                        <div class="accordion-content">
+                            <div class="accordion-inner">
+                                <p class="para">將原先較突兀的鮮橘色調，調整為統一且具品牌高級感的溫和棕色。色彩的優化不僅提升整體頁面的質感，也使品牌風格更具人文氣息且專業。</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <div class="accordion-header">
+                            <h5>結構化規格與明確導購動線</h5>
+                            <div class="arrow-icon"></div>
+                        </div>
+                        <div class="accordion-content">
+                            <div class="accordion-inner">
+                                <p class="para">產品重點規格（如尺寸、內頁張數）改以條列式呈現於品名下方，並統一導購按鈕樣式。強化了規格的「掃讀性」，讓使用者能直覺地在不同產品間進行對比。</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a href="https://www.tintint.com/product/info/calendar" target="_blank" class="btn btn-secondary btn-sm">月曆系列頁</a>
+
+            </div>
+            <div class="comparison-container">
+              <div class="img-wrapper before">
+                <img src="/images/products/img_ui_月曆系列頁_old.jpg" alt="Old Design">
+              </div>
+              <div class="img-wrapper after">
+                <img src="/images/products/img_ui_月曆系列頁_new.jpg" alt="New Design">
+              </div>
+              <input type="range" min="0" max="100" value="50" class="slider">
+              
+              <div class="slider-button"></div>
+            </div>
+          </div>           
+          <!-- End txt1-img2 月曆系列頁面-->
+            
+        </div>
+      <!-- End ui design container -->
+          </div>
+          <!-- End UI design -->
+          <!-- Start Style-guide -->
+          <div id="style-guide">
+              <div class="sec-title-container">
+                <h2>Style Guide</h2>
+              </div>
+            <div class="top-container container">
               <div class="three-column-grid">
                 <div class="item item-bg-grey">
                   <h4>區塊間距與空間感提升</h4>
@@ -877,64 +867,67 @@
                   <div  class="top-container">
                     <img src="../images/common/img_taost.jpg" alt="Toast 元件圖片" class="box-img lightbox-trigger">
                   </div>
-                  <div  class="top-container">
+                  <div  class="hero-container">
                     <img src="../images/common/img_badge.jpg" alt="Badge(chip&pill)元件圖片" class="box-img lightbox-trigger">
                   </div>
 
           </div>
-    <!-- End Style Guide -->
-    <!-- Start Takeaway -->
-      
-      <div id="takeaway" class="top-container">
+          <!-- End Style Guide -->
+          <!-- Start Takeaway -->
+          <div id="takeaway">
+          <div class="sec-title-container">
+            <h2>Takeaways</h2>
+          </div>
+          <div class="top-container">
+            <div class="layout-center">
+                <p class="para t-center">
+                  以用戶目標重組資訊架構並透過組件化收合降低理解成本，顯著提升決策效率。重塑行動端佈局並建立通用規範，在確保動線連續的同時極大化開發效能。 
+                </p>
+            </div>
 
-          <div class="layout-center">
-              <div  class="t-center display-title">Takeaways</div> 
-              <p class="para t-center">
-                以用戶目標重組資訊架構並透過組件化收合降低理解成本，顯著提升決策效率。重塑行動端佈局並建立通用規範，在確保動線連續的同時極大化開發效能。 
-              </p>
-          </div>
+          <div class="two-column-grid">
 
-        <div class="two-column-grid">
-
-          <div class="item item-bg-grey">
-          <h4 class="title">資訊結構的模組化策略</h4>
-          <p class="para">透過漸進式揭露重組資訊架構，利用側邊索引與手風琴組件降低認知門檻，確保在龐雜數據下依然能維持高效的產品體驗。</p>
+            <div class="item item-bg-grey">
+            <h4 class="title">資訊結構的模組化策略</h4>
+            <p class="para">透過漸進式揭露重組資訊架構，利用側邊索引與手風琴組件降低認知門檻，確保在龐雜數據下依然能維持高效的產品體驗。</p>
+            </div>
+            <div class="item item-bg-grey">
+            <h4 class="title">以轉化為核心的決策設計</h4>
+            <p class="para">從用戶心理出發，將複雜規格與定價「視覺化」，並前置關鍵決策指標（如出貨日），透過資訊分層引導用戶快速完成從瀏覽到製作的心理轉化。</p>
+            </div>
+            <div class="item item-bg-grey">
+            <h4 class="title">移動端動線的連續性優化</h4>
+            <p class="para">針對行動端場景重塑佈局，在內容多的情況下做資訊的收合，不僅優化視覺空間，更確保了用戶在碎片化操作中，轉化動線始終保持連續。</p>
+            </div>
+            <div class="item item-bg-grey">
+            <h4 class="title">具備擴展性的組件化思維</h4>
+            <p class="para">以「產品體系」高度定義可複用的互動組件規範，在維持全站體驗一致性的同時，顯著降低跨部門溝通與後續功能的開發迭代成本。</p>
+            </div>
           </div>
-          <div class="item item-bg-grey">
-          <h4 class="title">以轉化為核心的決策設計</h4>
-          <p class="para">從用戶心理出發，將複雜規格與定價「視覺化」，並前置關鍵決策指標（如出貨日），透過資訊分層引導用戶快速完成從瀏覽到製作的心理轉化。</p>
           </div>
-          <div class="item item-bg-grey">
-          <h4 class="title">移動端動線的連續性優化</h4>
-          <p class="para">針對行動端場景重塑佈局，在內容多的情況下做資訊的收合，不僅優化視覺空間，更確保了用戶在碎片化操作中，轉化動線始終保持連續。</p>
           </div>
-          <div class="item item-bg-grey">
-          <h4 class="title">具備擴展性的組件化思維</h4>
-          <p class="para">以「產品體系」高度定義可複用的互動組件規範，在維持全站體驗一致性的同時，顯著降低跨部門溝通與後續功能的開發迭代成本。</p>
+          <!-- End Takeaway -->
+          <!-- Start bottom CTA -->
+          <div class="hero-container layout-center">
+            <div class="btn-group-center">
+              <a href="https://chingjungkuan.github.io/products/#ui-design" target="_blank" class="btn btn-primary btn-lg">產品相關頁面</a>
+              <a href="https://chingjungkuan.github.io/#ui-design" target="_blank" class="btn btn-secondary btn-lg">作品集專案列表</a>
+            </div>
           </div>
+          <!-- End bottom CTA -->          
+          <!-- Lightbox 元件 -->
+          <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+              <img id="lightbox-img" src="" alt="放大圖">
+          </div>
+          <!-- 置頂滾動按鈕 -->
+          <button id="scrollToTopBtn" title="回到頂部">⬆</button>     
         </div>
-      </div>
-      <!-- End Takeaway -->
-      <div class="hero-container layout-center">
-        <div class="btn-group-center">
-          <a href="https://chingjungkuan.github.io/products/#ui-design" target="_blank" class="btn btn-primary btn-lg">產品相關頁面</a>
-          <a href="https://chingjungkuan.github.io/#ui-design" target="_blank" class="btn btn-secondary btn-lg">作品集專案列表</a>
-        </div>
-      </div>          
-      <!-- Lightbox 元件 -->
-      <div id="lightbox" class="lightbox" onclick="closeLightbox()">
-          <img id="lightbox-img" src="" alt="放大圖">
-      </div>
-      <!-- 置頂滾動按鈕 -->
-      <button id="scrollToTopBtn" title="回到頂部">⬆</button>     
-    </div>
-  </section>
+      </main>
   <!-- End main -->
 
   <!-- Start footer -->
     <div id="site-footer" data-include="/components/footer.html"></div>
   <!-- End footer -->
-    </div>
 
   <!-- Start java -->
     <script defer src="/js/include.js"></script>
@@ -944,8 +937,7 @@
     <script defer src="/js/tab-content.js"></script>
     <script defer src="/js/img-comparison-slider.js"></script>
     <script defer src="/js/accordion.js"></script>
-
   <!-- End java -->
-    
+
 </body>
 </html>
