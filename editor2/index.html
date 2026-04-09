@@ -13,7 +13,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>    
 </head>
 <body>
-    <div class="wrapper">
     <!-- Start header -->
       <div id="site-header" data-include="/components/header.html"></div>
 		<!-- End header -->
@@ -30,443 +29,375 @@
     </nav>
 
     <!-- Start main -->
-        <section class="main">
-          <!-- Start banner -->
-          <section class="hero-banner-wrapper">
-            <picture>
-                <source srcset="../images/editor2/img_banner-desktop.jpg" media="(min-width: 992px)">
-                <source srcset="../images/editor2/img_banner-pad.jpg" media="(min-width: 768px)">
-                <img class="hero-banner-img" src="../images/editor2/img_banner-mobile.jpg" alt="Editor2 線上編輯器作品集 banner圖片" loading="eager">
-            </picture>
-          </section>
-			    <!-- End banner -->
-          <!-- Start Design Impact -->
-                
-          <div id="impact" class="top-container">
-
-          <div  class="layout-center display-title">Design Impact </div> 
-
-          <div class="three-column-grid">
-
-            <div class="icon-text-wrapper">
-              <div class="icon">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none">
-                    <path d="M48 24.002C48 30.3671 45.4714 36.4716 40.9706 40.9725C36.4697 45.4734 30.3652 48.002 24 48.002C17.6348 48.002 11.5303 45.4734 7.02944 40.9725C2.52856 36.4716 0 30.3671 0 24.002C0 17.6368 2.52856 11.5323 7.02944 7.03139C11.5303 2.53052 17.6348 0.00195313 24 0.00195312C30.3652 0.00195313 36.4697 2.53052 40.9706 7.03139C45.4714 11.5323 48 17.6368 48 24.002V24.002ZM36.09 14.912C35.8757 14.6984 35.6206 14.5303 35.3398 14.4176C35.059 14.3049 34.7584 14.25 34.456 14.2562C34.1535 14.2624 33.8554 14.3294 33.5795 14.4535C33.3035 14.5775 33.0554 14.7559 32.85 14.978L22.431 28.253L16.152 21.971C15.7255 21.5735 15.1613 21.3571 14.5784 21.3674C13.9955 21.3777 13.4394 21.6138 13.0271 22.0261C12.6149 22.4383 12.3788 22.9945 12.3685 23.5774C12.3582 24.1603 12.5746 24.7244 12.972 25.151L20.91 33.092C21.1238 33.3054 21.3785 33.4736 21.6588 33.5865C21.939 33.6994 22.2391 33.7547 22.5412 33.7491C22.8433 33.7435 23.1412 33.6771 23.4171 33.5539C23.693 33.4307 23.9412 33.2532 24.147 33.032L36.123 18.062C36.5313 17.6374 36.7568 17.0698 36.7512 16.4808C36.7456 15.8919 36.5093 15.3286 36.093 14.912H36.09Z" fill="#E4DEDA"/>
-                  </svg>
-              </div>
-              <div class="text">
-                <h4 class="title">操作流程時間縮短</h4>
-                <p class="para">觀察使用者從進入頁面到完成指定任務的時間，操作流程平均時間由 90 秒降至 60 秒。</p>
-              </div>
+      <main class="main">
+        <!-- Start banner -->
+        <section class="hero-banner-wrapper">
+          <picture>
+              <source srcset="../images/editor2/img_banner-desktop.jpg" media="(min-width: 992px)">
+              <source srcset="../images/editor2/img_banner-pad.jpg" media="(min-width: 768px)">
+              <img class="hero-banner-img" src="../images/editor2/img_banner-mobile.jpg" alt="Editor2 線上編輯器作品集 banner圖片" loading="eager">
+          </picture>
+        </section>
+        <!-- End banner -->
+        <!-- Start Design Impact -->
+              
+        <div id="impact" class="top-container">
+        <div class="three-column-grid">
+          <div class="icon-text-wrapper">
+            <div class="icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none">
+                  <path d="M48 24.002C48 30.3671 45.4714 36.4716 40.9706 40.9725C36.4697 45.4734 30.3652 48.002 24 48.002C17.6348 48.002 11.5303 45.4734 7.02944 40.9725C2.52856 36.4716 0 30.3671 0 24.002C0 17.6368 2.52856 11.5323 7.02944 7.03139C11.5303 2.53052 17.6348 0.00195313 24 0.00195312C30.3652 0.00195313 36.4697 2.53052 40.9706 7.03139C45.4714 11.5323 48 17.6368 48 24.002V24.002ZM36.09 14.912C35.8757 14.6984 35.6206 14.5303 35.3398 14.4176C35.059 14.3049 34.7584 14.25 34.456 14.2562C34.1535 14.2624 33.8554 14.3294 33.5795 14.4535C33.3035 14.5775 33.0554 14.7559 32.85 14.978L22.431 28.253L16.152 21.971C15.7255 21.5735 15.1613 21.3571 14.5784 21.3674C13.9955 21.3777 13.4394 21.6138 13.0271 22.0261C12.6149 22.4383 12.3788 22.9945 12.3685 23.5774C12.3582 24.1603 12.5746 24.7244 12.972 25.151L20.91 33.092C21.1238 33.3054 21.3785 33.4736 21.6588 33.5865C21.939 33.6994 22.2391 33.7547 22.5412 33.7491C22.8433 33.7435 23.1412 33.6771 23.4171 33.5539C23.693 33.4307 23.9412 33.2532 24.147 33.032L36.123 18.062C36.5313 17.6374 36.7568 17.0698 36.7512 16.4808C36.7456 15.8919 36.5093 15.3286 36.093 14.912H36.09Z" fill="#E4DEDA"/>
+                </svg>
             </div>
-            <div class="icon-text-wrapper">
-              <div class="icon">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none">
-                    <path d="M48 24.002C48 30.3671 45.4714 36.4716 40.9706 40.9725C36.4697 45.4734 30.3652 48.002 24 48.002C17.6348 48.002 11.5303 45.4734 7.02944 40.9725C2.52856 36.4716 0 30.3671 0 24.002C0 17.6368 2.52856 11.5323 7.02944 7.03139C11.5303 2.53052 17.6348 0.00195313 24 0.00195312C30.3652 0.00195313 36.4697 2.53052 40.9706 7.03139C45.4714 11.5323 48 17.6368 48 24.002V24.002ZM36.09 14.912C35.8757 14.6984 35.6206 14.5303 35.3398 14.4176C35.059 14.3049 34.7584 14.25 34.456 14.2562C34.1535 14.2624 33.8554 14.3294 33.5795 14.4535C33.3035 14.5775 33.0554 14.7559 32.85 14.978L22.431 28.253L16.152 21.971C15.7255 21.5735 15.1613 21.3571 14.5784 21.3674C13.9955 21.3777 13.4394 21.6138 13.0271 22.0261C12.6149 22.4383 12.3788 22.9945 12.3685 23.5774C12.3582 24.1603 12.5746 24.7244 12.972 25.151L20.91 33.092C21.1238 33.3054 21.3785 33.4736 21.6588 33.5865C21.939 33.6994 22.2391 33.7547 22.5412 33.7491C22.8433 33.7435 23.1412 33.6771 23.4171 33.5539C23.693 33.4307 23.9412 33.2532 24.147 33.032L36.123 18.062C36.5313 17.6374 36.7568 17.0698 36.7512 16.4808C36.7456 15.8919 36.5093 15.3286 36.093 14.912H36.09Z" fill="#E4DEDA"/>
-                  </svg>
-              </div>
-              <div class="text">
-                <h4 class="title">任務完成率從 70% 提升至 95%</h4>
-                <p class="para">可用性測試顯示，優化後使用者在相同任務中的完成比例大幅提升。</p>
-              </div>
+            <div class="text">
+              <h4 class="title">操作流程時間縮短</h4>
+              <p class="para">觀察使用者從進入頁面到完成指定任務的時間，操作流程平均時間由 90 秒降至 60 秒。</p>
             </div>
-            <div class="icon-text-wrapper">
-              <div class="icon">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none">
-                    <path d="M48 24.002C48 30.3671 45.4714 36.4716 40.9706 40.9725C36.4697 45.4734 30.3652 48.002 24 48.002C17.6348 48.002 11.5303 45.4734 7.02944 40.9725C2.52856 36.4716 0 30.3671 0 24.002C0 17.6368 2.52856 11.5323 7.02944 7.03139C11.5303 2.53052 17.6348 0.00195313 24 0.00195312C30.3652 0.00195313 36.4697 2.53052 40.9706 7.03139C45.4714 11.5323 48 17.6368 48 24.002V24.002ZM36.09 14.912C35.8757 14.6984 35.6206 14.5303 35.3398 14.4176C35.059 14.3049 34.7584 14.25 34.456 14.2562C34.1535 14.2624 33.8554 14.3294 33.5795 14.4535C33.3035 14.5775 33.0554 14.7559 32.85 14.978L22.431 28.253L16.152 21.971C15.7255 21.5735 15.1613 21.3571 14.5784 21.3674C13.9955 21.3777 13.4394 21.6138 13.0271 22.0261C12.6149 22.4383 12.3788 22.9945 12.3685 23.5774C12.3582 24.1603 12.5746 24.7244 12.972 25.151L20.91 33.092C21.1238 33.3054 21.3785 33.4736 21.6588 33.5865C21.939 33.6994 22.2391 33.7547 22.5412 33.7491C22.8433 33.7435 23.1412 33.6771 23.4171 33.5539C23.693 33.4307 23.9412 33.2532 24.147 33.032L36.123 18.062C36.5313 17.6374 36.7568 17.0698 36.7512 16.4808C36.7456 15.8919 36.5093 15.3286 36.093 14.912H36.09Z" fill="#E4DEDA"/>
-                  </svg>
-              </div>
-              <div class="text">
-                <h4 class="title">重複性操作問題回報量下降</h4>
-                <p class="para">與 CS 團隊合作，分析使用者錯誤回報數據，發現曾經回報的問題幾乎都沒有再次回報。</p>
-              </div>
-            </div>
-            <div class="icon-text-wrapper">
-              <div class="icon">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none">
-                    <path d="M48 24.002C48 30.3671 45.4714 36.4716 40.9706 40.9725C36.4697 45.4734 30.3652 48.002 24 48.002C17.6348 48.002 11.5303 45.4734 7.02944 40.9725C2.52856 36.4716 0 30.3671 0 24.002C0 17.6368 2.52856 11.5323 7.02944 7.03139C11.5303 2.53052 17.6348 0.00195313 24 0.00195312C30.3652 0.00195313 36.4697 2.53052 40.9706 7.03139C45.4714 11.5323 48 17.6368 48 24.002V24.002ZM36.09 14.912C35.8757 14.6984 35.6206 14.5303 35.3398 14.4176C35.059 14.3049 34.7584 14.25 34.456 14.2562C34.1535 14.2624 33.8554 14.3294 33.5795 14.4535C33.3035 14.5775 33.0554 14.7559 32.85 14.978L22.431 28.253L16.152 21.971C15.7255 21.5735 15.1613 21.3571 14.5784 21.3674C13.9955 21.3777 13.4394 21.6138 13.0271 22.0261C12.6149 22.4383 12.3788 22.9945 12.3685 23.5774C12.3582 24.1603 12.5746 24.7244 12.972 25.151L20.91 33.092C21.1238 33.3054 21.3785 33.4736 21.6588 33.5865C21.939 33.6994 22.2391 33.7547 22.5412 33.7491C22.8433 33.7435 23.1412 33.6771 23.4171 33.5539C23.693 33.4307 23.9412 33.2532 24.147 33.032L36.123 18.062C36.5313 17.6374 36.7568 17.0698 36.7512 16.4808C36.7456 15.8919 36.5093 15.3286 36.093 14.912H36.09Z" fill="#E4DEDA"/>
-                  </svg>
-              </div>
-              <div class="text">
-                <h4 class="title">平均停留時間提升 1.5 倍</h4>
-                <p class="para">搭配 GA 工具查看改版前後的數據，發現新版頁面停留率提升，跳出率下降 20%。</p>
-              </div>
-            </div>
-            <div class="icon-text-wrapper">
-              <div class="icon">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none">
-                    <path d="M48 24.002C48 30.3671 45.4714 36.4716 40.9706 40.9725C36.4697 45.4734 30.3652 48.002 24 48.002C17.6348 48.002 11.5303 45.4734 7.02944 40.9725C2.52856 36.4716 0 30.3671 0 24.002C0 17.6368 2.52856 11.5323 7.02944 7.03139C11.5303 2.53052 17.6348 0.00195313 24 0.00195312C30.3652 0.00195313 36.4697 2.53052 40.9706 7.03139C45.4714 11.5323 48 17.6368 48 24.002V24.002ZM36.09 14.912C35.8757 14.6984 35.6206 14.5303 35.3398 14.4176C35.059 14.3049 34.7584 14.25 34.456 14.2562C34.1535 14.2624 33.8554 14.3294 33.5795 14.4535C33.3035 14.5775 33.0554 14.7559 32.85 14.978L22.431 28.253L16.152 21.971C15.7255 21.5735 15.1613 21.3571 14.5784 21.3674C13.9955 21.3777 13.4394 21.6138 13.0271 22.0261C12.6149 22.4383 12.3788 22.9945 12.3685 23.5774C12.3582 24.1603 12.5746 24.7244 12.972 25.151L20.91 33.092C21.1238 33.3054 21.3785 33.4736 21.6588 33.5865C21.939 33.6994 22.2391 33.7547 22.5412 33.7491C22.8433 33.7435 23.1412 33.6771 23.4171 33.5539C23.693 33.4307 23.9412 33.2532 24.147 33.032L36.123 18.062C36.5313 17.6374 36.7568 17.0698 36.7512 16.4808C36.7456 15.8919 36.5093 15.3286 36.093 14.912H36.09Z" fill="#E4DEDA"/>
-                  </svg>
-              </div>
-              <div class="text">
-                <h4 class="title">簡化步驟，操作效率提升 1 倍</h4>
-                <p class="para">從 4 步縮減為 3 步，但將照片上傳整合至編輯頁，大幅減少來回操作讓流程更流暢直覺。</p>
-              </div>
-            </div>
-            <div class="icon-text-wrapper">
-              <div class="icon">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none">
-                    <path d="M48 24.002C48 30.3671 45.4714 36.4716 40.9706 40.9725C36.4697 45.4734 30.3652 48.002 24 48.002C17.6348 48.002 11.5303 45.4734 7.02944 40.9725C2.52856 36.4716 0 30.3671 0 24.002C0 17.6368 2.52856 11.5323 7.02944 7.03139C11.5303 2.53052 17.6348 0.00195313 24 0.00195312C30.3652 0.00195313 36.4697 2.53052 40.9706 7.03139C45.4714 11.5323 48 17.6368 48 24.002V24.002ZM36.09 14.912C35.8757 14.6984 35.6206 14.5303 35.3398 14.4176C35.059 14.3049 34.7584 14.25 34.456 14.2562C34.1535 14.2624 33.8554 14.3294 33.5795 14.4535C33.3035 14.5775 33.0554 14.7559 32.85 14.978L22.431 28.253L16.152 21.971C15.7255 21.5735 15.1613 21.3571 14.5784 21.3674C13.9955 21.3777 13.4394 21.6138 13.0271 22.0261C12.6149 22.4383 12.3788 22.9945 12.3685 23.5774C12.3582 24.1603 12.5746 24.7244 12.972 25.151L20.91 33.092C21.1238 33.3054 21.3785 33.4736 21.6588 33.5865C21.939 33.6994 22.2391 33.7547 22.5412 33.7491C22.8433 33.7435 23.1412 33.6771 23.4171 33.5539C23.693 33.4307 23.9412 33.2532 24.147 33.032L36.123 18.062C36.5313 17.6374 36.7568 17.0698 36.7512 16.4808C36.7456 15.8919 36.5093 15.3286 36.093 14.912H36.09Z" fill="#E4DEDA"/>
-                  </svg>
-              </div>
-              <div class="text">
-                <h4 class="title">9 成回饋提到操作直覺</h4>
-                <p class="para">彙整 CS 回饋與用戶問卷，近 9 成回饋出現「容易使用」、「流程清楚」等關鍵字，驗證優化成效。</p>
-              </div>
-            </div>
-
           </div>
+          <div class="icon-text-wrapper">
+            <div class="icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none">
+                  <path d="M48 24.002C48 30.3671 45.4714 36.4716 40.9706 40.9725C36.4697 45.4734 30.3652 48.002 24 48.002C17.6348 48.002 11.5303 45.4734 7.02944 40.9725C2.52856 36.4716 0 30.3671 0 24.002C0 17.6368 2.52856 11.5323 7.02944 7.03139C11.5303 2.53052 17.6348 0.00195313 24 0.00195312C30.3652 0.00195313 36.4697 2.53052 40.9706 7.03139C45.4714 11.5323 48 17.6368 48 24.002V24.002ZM36.09 14.912C35.8757 14.6984 35.6206 14.5303 35.3398 14.4176C35.059 14.3049 34.7584 14.25 34.456 14.2562C34.1535 14.2624 33.8554 14.3294 33.5795 14.4535C33.3035 14.5775 33.0554 14.7559 32.85 14.978L22.431 28.253L16.152 21.971C15.7255 21.5735 15.1613 21.3571 14.5784 21.3674C13.9955 21.3777 13.4394 21.6138 13.0271 22.0261C12.6149 22.4383 12.3788 22.9945 12.3685 23.5774C12.3582 24.1603 12.5746 24.7244 12.972 25.151L20.91 33.092C21.1238 33.3054 21.3785 33.4736 21.6588 33.5865C21.939 33.6994 22.2391 33.7547 22.5412 33.7491C22.8433 33.7435 23.1412 33.6771 23.4171 33.5539C23.693 33.4307 23.9412 33.2532 24.147 33.032L36.123 18.062C36.5313 17.6374 36.7568 17.0698 36.7512 16.4808C36.7456 15.8919 36.5093 15.3286 36.093 14.912H36.09Z" fill="#E4DEDA"/>
+                </svg>
+            </div>
+            <div class="text">
+              <h4 class="title">任務完成率從 70% 提升至 95%</h4>
+              <p class="para">可用性測試顯示，優化後使用者在相同任務中的完成比例大幅提升。</p>
+            </div>
           </div>
-          <!-- End Design Impact--> 
+          <div class="icon-text-wrapper">
+            <div class="icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none">
+                  <path d="M48 24.002C48 30.3671 45.4714 36.4716 40.9706 40.9725C36.4697 45.4734 30.3652 48.002 24 48.002C17.6348 48.002 11.5303 45.4734 7.02944 40.9725C2.52856 36.4716 0 30.3671 0 24.002C0 17.6368 2.52856 11.5323 7.02944 7.03139C11.5303 2.53052 17.6348 0.00195313 24 0.00195312C30.3652 0.00195313 36.4697 2.53052 40.9706 7.03139C45.4714 11.5323 48 17.6368 48 24.002V24.002ZM36.09 14.912C35.8757 14.6984 35.6206 14.5303 35.3398 14.4176C35.059 14.3049 34.7584 14.25 34.456 14.2562C34.1535 14.2624 33.8554 14.3294 33.5795 14.4535C33.3035 14.5775 33.0554 14.7559 32.85 14.978L22.431 28.253L16.152 21.971C15.7255 21.5735 15.1613 21.3571 14.5784 21.3674C13.9955 21.3777 13.4394 21.6138 13.0271 22.0261C12.6149 22.4383 12.3788 22.9945 12.3685 23.5774C12.3582 24.1603 12.5746 24.7244 12.972 25.151L20.91 33.092C21.1238 33.3054 21.3785 33.4736 21.6588 33.5865C21.939 33.6994 22.2391 33.7547 22.5412 33.7491C22.8433 33.7435 23.1412 33.6771 23.4171 33.5539C23.693 33.4307 23.9412 33.2532 24.147 33.032L36.123 18.062C36.5313 17.6374 36.7568 17.0698 36.7512 16.4808C36.7456 15.8919 36.5093 15.3286 36.093 14.912H36.09Z" fill="#E4DEDA"/>
+                </svg>
+            </div>
+            <div class="text">
+              <h4 class="title">重複性操作問題回報量下降</h4>
+              <p class="para">與 CS 團隊合作，分析使用者錯誤回報數據，發現曾經回報的問題幾乎都沒有再次回報。</p>
+            </div>
+          </div>
+          <div class="icon-text-wrapper">
+            <div class="icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none">
+                  <path d="M48 24.002C48 30.3671 45.4714 36.4716 40.9706 40.9725C36.4697 45.4734 30.3652 48.002 24 48.002C17.6348 48.002 11.5303 45.4734 7.02944 40.9725C2.52856 36.4716 0 30.3671 0 24.002C0 17.6368 2.52856 11.5323 7.02944 7.03139C11.5303 2.53052 17.6348 0.00195313 24 0.00195312C30.3652 0.00195313 36.4697 2.53052 40.9706 7.03139C45.4714 11.5323 48 17.6368 48 24.002V24.002ZM36.09 14.912C35.8757 14.6984 35.6206 14.5303 35.3398 14.4176C35.059 14.3049 34.7584 14.25 34.456 14.2562C34.1535 14.2624 33.8554 14.3294 33.5795 14.4535C33.3035 14.5775 33.0554 14.7559 32.85 14.978L22.431 28.253L16.152 21.971C15.7255 21.5735 15.1613 21.3571 14.5784 21.3674C13.9955 21.3777 13.4394 21.6138 13.0271 22.0261C12.6149 22.4383 12.3788 22.9945 12.3685 23.5774C12.3582 24.1603 12.5746 24.7244 12.972 25.151L20.91 33.092C21.1238 33.3054 21.3785 33.4736 21.6588 33.5865C21.939 33.6994 22.2391 33.7547 22.5412 33.7491C22.8433 33.7435 23.1412 33.6771 23.4171 33.5539C23.693 33.4307 23.9412 33.2532 24.147 33.032L36.123 18.062C36.5313 17.6374 36.7568 17.0698 36.7512 16.4808C36.7456 15.8919 36.5093 15.3286 36.093 14.912H36.09Z" fill="#E4DEDA"/>
+                </svg>
+            </div>
+            <div class="text">
+              <h4 class="title">平均停留時間提升 1.5 倍</h4>
+              <p class="para">搭配 GA 工具查看改版前後的數據，發現新版頁面停留率提升，跳出率下降 20%。</p>
+            </div>
+          </div>
+          <div class="icon-text-wrapper">
+            <div class="icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none">
+                  <path d="M48 24.002C48 30.3671 45.4714 36.4716 40.9706 40.9725C36.4697 45.4734 30.3652 48.002 24 48.002C17.6348 48.002 11.5303 45.4734 7.02944 40.9725C2.52856 36.4716 0 30.3671 0 24.002C0 17.6368 2.52856 11.5323 7.02944 7.03139C11.5303 2.53052 17.6348 0.00195313 24 0.00195312C30.3652 0.00195313 36.4697 2.53052 40.9706 7.03139C45.4714 11.5323 48 17.6368 48 24.002V24.002ZM36.09 14.912C35.8757 14.6984 35.6206 14.5303 35.3398 14.4176C35.059 14.3049 34.7584 14.25 34.456 14.2562C34.1535 14.2624 33.8554 14.3294 33.5795 14.4535C33.3035 14.5775 33.0554 14.7559 32.85 14.978L22.431 28.253L16.152 21.971C15.7255 21.5735 15.1613 21.3571 14.5784 21.3674C13.9955 21.3777 13.4394 21.6138 13.0271 22.0261C12.6149 22.4383 12.3788 22.9945 12.3685 23.5774C12.3582 24.1603 12.5746 24.7244 12.972 25.151L20.91 33.092C21.1238 33.3054 21.3785 33.4736 21.6588 33.5865C21.939 33.6994 22.2391 33.7547 22.5412 33.7491C22.8433 33.7435 23.1412 33.6771 23.4171 33.5539C23.693 33.4307 23.9412 33.2532 24.147 33.032L36.123 18.062C36.5313 17.6374 36.7568 17.0698 36.7512 16.4808C36.7456 15.8919 36.5093 15.3286 36.093 14.912H36.09Z" fill="#E4DEDA"/>
+                </svg>
+            </div>
+            <div class="text">
+              <h4 class="title">簡化步驟，操作效率提升 1 倍</h4>
+              <p class="para">從 4 步縮減為 3 步，但將照片上傳整合至編輯頁，大幅減少來回操作讓流程更流暢直覺。</p>
+            </div>
+          </div>
+          <div class="icon-text-wrapper">
+            <div class="icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none">
+                  <path d="M48 24.002C48 30.3671 45.4714 36.4716 40.9706 40.9725C36.4697 45.4734 30.3652 48.002 24 48.002C17.6348 48.002 11.5303 45.4734 7.02944 40.9725C2.52856 36.4716 0 30.3671 0 24.002C0 17.6368 2.52856 11.5323 7.02944 7.03139C11.5303 2.53052 17.6348 0.00195313 24 0.00195312C30.3652 0.00195313 36.4697 2.53052 40.9706 7.03139C45.4714 11.5323 48 17.6368 48 24.002V24.002ZM36.09 14.912C35.8757 14.6984 35.6206 14.5303 35.3398 14.4176C35.059 14.3049 34.7584 14.25 34.456 14.2562C34.1535 14.2624 33.8554 14.3294 33.5795 14.4535C33.3035 14.5775 33.0554 14.7559 32.85 14.978L22.431 28.253L16.152 21.971C15.7255 21.5735 15.1613 21.3571 14.5784 21.3674C13.9955 21.3777 13.4394 21.6138 13.0271 22.0261C12.6149 22.4383 12.3788 22.9945 12.3685 23.5774C12.3582 24.1603 12.5746 24.7244 12.972 25.151L20.91 33.092C21.1238 33.3054 21.3785 33.4736 21.6588 33.5865C21.939 33.6994 22.2391 33.7547 22.5412 33.7491C22.8433 33.7435 23.1412 33.6771 23.4171 33.5539C23.693 33.4307 23.9412 33.2532 24.147 33.032L36.123 18.062C36.5313 17.6374 36.7568 17.0698 36.7512 16.4808C36.7456 15.8919 36.5093 15.3286 36.093 14.912H36.09Z" fill="#E4DEDA"/>
+                </svg>
+            </div>
+            <div class="text">
+              <h4 class="title">9 成回饋提到操作直覺</h4>
+              <p class="para">彙整 CS 回饋與用戶問卷，近 9 成回饋出現「容易使用」、「流程清楚」等關鍵字，驗證優化成效。</p>
+            </div>
+          </div>
 
-          <!-- Start Overview -->
-            
-            <div id="overview" class="top-container">
-              <div class="overview">
-                <div class="overview-left">
-                  <h2 class="title">概述 <span class="sm-title">Overview</span></h2>
-                  <h3 class="title text-primary">Editor2 - 相片書線上編輯器</h3>
-                  <h5 class="title">#B2C #SaaS #POD（客製化印刷服務）#RWD Website</h5>
-                  <p class="para">
-                    產品服務｜點點印推出的線上編輯器，會員用戶可透過此平台製作各式產品，例如相片書、卡片、邀請卡、婚禮書約與精裝寫真本等，讓使用者能輕鬆完成編輯，並一鍵下單印製專屬作品。
-                  </p>
-                  <div class="team-info">
-                    <p class="para"><strong>Team |</strong> TinTint 點點印<br>
-                    <strong>Role |</strong> UIUX Designer<br>
-                    <strong>Collaborators |</strong> UIUX Designer(1)・PM(1)・FE(1)・BE(1)・CS(3)
-                    </p>
-                  </div>
-                </div>
-                <div class="overview-right">
-                  <p class="para">
-                    因應編輯器需全面更新至<strong>新版設計風格系統</strong>，我們將此專案視為契機，<strong>重新檢視舊版在操作不便與視覺過時上的問題</strong>。
-                  </p>
-                  <p class="para">
-                  作為此專案的 UI UX 設計師，我透過<strong>使用者訪談、競品分析與CS團隊提供的用戶回饋</strong>，建立 Personas 與 User Story Map，<strong>釐清核心需求與痛點</strong>。根據研究結果，<strong>重整資訊架構與操作流程，並制定新版 Wireframe、UI Flow 與設計系統</strong>。最後透過原型測試與易用性驗證，確保新版設計不僅解決舊有問題，也讓整體介面更直覺、現代化。
-                  </p>
-                </div>
+        </div>
+        </div>
+        <!-- End Design Impact--> 
+
+        <!-- Start Overview -->
+        <div id="overview" class="top-container">
+          <div class="overview">
+            <div class="overview-left">
+              <h2 class="title">概述 <span class="sm-title">Overview</span></h2>
+              <h3 class="title text-primary">Editor2 - 相片書線上編輯器</h3>
+              <h5 class="title">#B2C #SaaS #POD（客製化印刷服務）#RWD Website</h5>
+              <p class="para">
+                產品服務｜點點印推出的線上編輯器，會員用戶可透過此平台製作各式產品，例如相片書、卡片、邀請卡、婚禮書約與精裝寫真本等，讓使用者能輕鬆完成編輯，並一鍵下單印製專屬作品。
+              </p>
+              <div class="team-info">
+                <p class="para"><strong>Team |</strong> TinTint 點點印<br>
+                <strong>Role |</strong> UIUX Designer<br>
+                <strong>Collaborators |</strong> UIUX Designer(1)・PM(1)・FE(1)・BE(1)・CS(3)
+                </p>
               </div>
             </div>
-          <!-- End Overview -->
-            <!-- 開始設計流程 -->
-            <div id="flow" class="top-container fade-in scroll-container ">
-                <h2>設計<br>流程</h2>
-                <div class="step">
-                  <div class="number">1</div>
-                  <div class="bg-white flex-v-8">
-                      <h5 class="text-primary">Empathize</h5>
-                      <div class="flex-v-4">
-                        <p class="para">✦ Empathy Map</p>
-                        <p class="para">✦ Personas</p>
-                        <p class="para">✦ User Story Maps</p>
-                        <p class="para">✦ Interview Method</p>
-                        <p class="para">✦ Competitive Audit</p>
-                      </div>
-                  </div>
-                </div>
-                <div class="step">
-                  <div class="number">2</div>
-                  <div class="bg-white flex-v-8">
-                      <h5 class="text-primary">Define</h5>
-                      <div class="flex-v-4"> 
-                        <p class="para">✦ Value Proposition</p>
-                        <p class="para">✦ Information Architecture</p>
-                      </div>
-                  </div>
-                </div>
-                <div class="step">
-                  <div class="number">3</div>
-                  <div class="bg-white flex-v-8">
-                      <h5 class="text-primary">Ideate</h5>
-                      <div class="flex-v-4"> 
-                        <p class="para">✦ Story Board</p>
-                        <p class="para">✦ User Flow</p>
-                      </div>
-                  </div>
-                </div>
-                <div class="step">
-                  <div class="number">4</div>
-                  <div class="bg-white flex-v-8">
-                      <h5 class="text-primary">Wireframe</h5>
-                      <div class="flex-v-4"> 
-                        <p class="para">✦ Wireframe</p>
-                        <p class="para">✦ Lo-Fi Prototype</p>
-                        <p class="para">✦ Usability Test</p>
-                      </div>
-                  </div>
-                </div>
-                <div class="step">
-                  <div class="number">5</div>
-                  <div class="bg-white flex-v-8">
-                      <h5 class="text-primary">UI Design</h5>
-                      <div class="flex-v-4"> 
-                        <p class="para">✦ Visual Design System</p>
-                        <p class="para">✦ UI Kit</p> 
-                      </div>
-                  </div>
-                </div>
-                <div class="step">
-                  <div class="number">6</div>
-                  <div class="bg-white flex-v-8">
-                      <h5 class="text-primary">Prototype</h5>
-                      <div class="flex-v-4"> 
-                        <p class="para">✦ Mockup</p>
-                      </div>
-                  </div>
-                </div>
-                <div class="step">
-                  <div class="number">7</div>
-                  <div class="bg-white flex-v-8">
-                      <h5 class="text-primary">Prototype</h5>
-                      <div class="flex-v-4"> 
-                        <p class="para">✦ Usability Test</p>
-                        <p class="para">✦ QA</p>
-                      </div>
-                  </div>
-                </div>
+            <div class="overview-right">
+              <p class="para">
+                因應編輯器需全面更新至<strong>新版設計風格系統</strong>，我們將此專案視為契機，<strong>重新檢視舊版在操作不便與視覺過時上的問題</strong>。
+              </p>
+              <p class="para">
+              作為此專案的 UI UX 設計師，我透過<strong>使用者訪談、競品分析與CS團隊提供的用戶回饋</strong>，建立 Personas 與 User Story Map，<strong>釐清核心需求與痛點</strong>。根據研究結果，<strong>重整資訊架構與操作流程，並制定新版 Wireframe、UI Flow 與設計系統</strong>。最後透過原型測試與易用性驗證，確保新版設計不僅解決舊有問題，也讓整體介面更直覺、現代化。
+              </p>
             </div>
-            <!-- 設計流程結束 -->
+          </div>
+        </div>
+        <!-- End Overview -->
+        <!-- Start flow -->
+        <div id="flow" class="top-container fade-in scroll-container ">
+            <h2>設計<br>流程</h2>
+            <div class="step">
+              <div class="number">1</div>
+              <div class="bg-white flex-v-8">
+                  <h5 class="text-primary">Empathize</h5>
+                  <div class="flex-v-4">
+                    <p class="para">✦ Empathy Map</p>
+                    <p class="para">✦ Personas</p>
+                    <p class="para">✦ User Story Maps</p>
+                    <p class="para">✦ Interview Method</p>
+                    <p class="para">✦ Competitive Audit</p>
+                  </div>
+              </div>
+            </div>
+            <div class="step">
+              <div class="number">2</div>
+              <div class="bg-white flex-v-8">
+                  <h5 class="text-primary">Define</h5>
+                  <div class="flex-v-4"> 
+                    <p class="para">✦ Value Proposition</p>
+                    <p class="para">✦ Information Architecture</p>
+                  </div>
+              </div>
+            </div>
+            <div class="step">
+              <div class="number">3</div>
+              <div class="bg-white flex-v-8">
+                  <h5 class="text-primary">Ideate</h5>
+                  <div class="flex-v-4"> 
+                    <p class="para">✦ Story Board</p>
+                    <p class="para">✦ User Flow</p>
+                  </div>
+              </div>
+            </div>
+            <div class="step">
+              <div class="number">4</div>
+              <div class="bg-white flex-v-8">
+                  <h5 class="text-primary">Wireframe</h5>
+                  <div class="flex-v-4"> 
+                    <p class="para">✦ Wireframe</p>
+                    <p class="para">✦ Lo-Fi Prototype</p>
+                    <p class="para">✦ Usability Test</p>
+                  </div>
+              </div>
+            </div>
+            <div class="step">
+              <div class="number">5</div>
+              <div class="bg-white flex-v-8">
+                  <h5 class="text-primary">UI Design</h5>
+                  <div class="flex-v-4"> 
+                    <p class="para">✦ Visual Design System</p>
+                    <p class="para">✦ UI Kit</p> 
+                  </div>
+              </div>
+            </div>
+            <div class="step">
+              <div class="number">6</div>
+              <div class="bg-white flex-v-8">
+                  <h5 class="text-primary">Prototype</h5>
+                  <div class="flex-v-4"> 
+                    <p class="para">✦ Mockup</p>
+                  </div>
+              </div>
+            </div>
+            <div class="step">
+              <div class="number">7</div>
+              <div class="bg-white flex-v-8">
+                  <h5 class="text-primary">Prototype</h5>
+                  <div class="flex-v-4"> 
+                    <p class="para">✦ Usability Test</p>
+                    <p class="para">✦ QA</p>
+                  </div>
+              </div>
+            </div>
+        </div>
+        <!-- End flow -->
 
-            <!-- img2-txt1 痛點與觀察 -->
-            <div id="pain-point" class="img-txt top-container hero-grid d-2col-1col">
-              <img class="image-block lightbox-trigger" src="../images/editor2/img_pain-point.jpg" alt="痛點分析圖片描述" loading="lazy"> 
+        <!-- Start img2-txt1 pain-point -->
+        <div id="pain-point" class="img-txt top-container hero-grid d-2col-1col">
+            <img class="image-block lightbox-trigger" src="../images/editor2/img_pain-point.jpg" alt="痛點分析圖片描述" loading="lazy"> 
+            <div class="description-text">
+              <h2 class="title">痛點與觀察 <span class="sm-title">Pain Point & Task</span></h2>
+              <h3 class="title">舊版問題</h3>
+              <ul class="para">
+                <li><b>文字與按鈕間距不足</b> → 降低可讀性，點擊易出錯。</li>
+                <li><b>操作不直覺</b> → 主要按鈕不明顯，使用者需要額外摸索，學習成本高。</li>
+                <li><b>視覺風格過時</b> → 缺乏現代 UI 元素，層次感不足，長時間使用容易造成視覺疲勞。</li>
+                <li><b>資訊架構混亂</b> → 功能分散，使用者必須頻繁移動視線尋找，操作效率低落。</li>
+                <li><b>照片上傳流程不順暢</b> → 點擊「新增照片」需跳轉頁面後再返回當前編輯畫面，且照片池以左右切換呈現，違反常見的下滑操作習慣，增加理解與操作成本。</li>
+              </ul>
+            </div>
+
+        </div>        
+        <!-- End img2-txt1 pain-point-->    
+        <div class="top-container">
+          <p class="para" >
+            我們發現使用者在操作過程中常遇到三大問題：<strong>難以快速找到所需資訊、學習成本高、操作流程不直覺</strong>。為了釐清根源，我們結合 Personas、Empathy Map 與 User Story Map，具體描繪出不同角色在編輯過程中的需求與行為痛點，並透過<strong>用戶訪談與實際操作觀察驗證假設</strong>，例如「照片上傳流程過於繁瑣」與「功能按鈕分散導致視線頻繁切換」。</p>
+        </div>        
+        <!-- Start txt1-img2 解決方案 -->
+        <div id="solution" class="top-container hero-grid m-1col-2col">
+                  
               <div class="description-text">
-                <h2 class="title">痛點與觀察 <span class="sm-title">Pain Point & Task</span></h2>
-                <h3 class="title">舊版問題</h3>
-                <ul class="para">
-                  <li><b>文字與按鈕間距不足</b> → 降低可讀性，點擊易出錯。</li>
-                  <li><b>操作不直覺</b> → 主要按鈕不明顯，使用者需要額外摸索，學習成本高。</li>
-                  <li><b>視覺風格過時</b> → 缺乏現代 UI 元素，層次感不足，長時間使用容易造成視覺疲勞。</li>
-                  <li><b>資訊架構混亂</b> → 功能分散，使用者必須頻繁移動視線尋找，操作效率低落。</li>
-                  <li><b>照片上傳流程不順暢</b> → 點擊「新增照片」需跳轉頁面後再返回當前編輯畫面，且照片池以左右切換呈現，違反常見的下滑操作習慣，增加理解與操作成本。</li>
-                </ul>
+              <h2 class="title">設計優化重點 <span class="sm-title">Solution</span></h2>
+              <p class="para">根據分析結果，我們針對核心功能進行優化：</p>
+              <ul class="para">
+                  <li><strong>統一操作區塊位置</strong><br>將照片池固定於左側，並整合編輯工具列，減少視線與操作的跳轉</li>
+                  <li><strong>優化照片新增流程</strong><br>使用者可直接於編輯區上傳與替換照片，流程更簡潔</li>
+                  <li><strong>重整按鈕與工具排列邏輯</strong><br>依使用場景分類，提升操作直覺性</li>
+                  <li><strong>提升視覺一致性與精緻度</strong><br>使用低飽和色系、加強層次感（圓角、陰影等），打造更現代的介面風格</li>
+                  <li><strong>調整字體與元件間距</strong><br>改善閱讀與點擊體驗，提升整體易用性</li>
+              </ul>
+              <p class="para">這些設計有效降低了使用者的認知負擔，提升操作流暢度，讓編輯流程更直覺，也讓新手能更快上手。</p>
+
+              </div>
+              <img class="image-block lightbox-trigger" src="../images/editor2/img_solution.jpg" alt="新版UI畫面" loading="lazy">
+        </div>
+        <!-- End txt1-img2 解決方案 -->            
+        <!-- Start 資訊架構 -->
+        <div id="ia" class="top-container">
+              <div class="layout-center">
+                  <h2 class="title">資訊架構 <span class="sm-title">Define</span></h2>
+                  <p class="t-center para"> 在視覺設計前，先盤點並統整功能規格，解決不一致處並建立資訊架構，協助團隊快速理解產品結構。透過 UI Flow 視覺化頁面路徑，確保體驗一致與流程順暢。</p>
               </div>
 
-          </div>        
-          <!-- End img2-txt1 -->    
-          <div class="top-container">
-            <p class="para" >
-              我們發現使用者在操作過程中常遇到三大問題：<strong>難以快速找到所需資訊、學習成本高、操作流程不直覺</strong>。為了釐清根源，我們結合 Personas、Empathy Map 與 User Story Map，具體描繪出不同角色在編輯過程中的需求與行為痛點，並透過<strong>用戶訪談與實際操作觀察驗證假設</strong>，例如「照片上傳流程過於繁瑣」與「功能按鈕分散導致視線頻繁切換」。</p>
-          </div>        
-          <!-- Start txt1-img2 解決方案 -->
-            <div id="solution" class="top-container hero-grid m-1col-2col">
-                    
-                <div class="description-text">
-                <h2 class="title">設計優化重點 <span class="sm-title">Solution</span></h2>
-                <p class="para">根據分析結果，我們針對核心功能進行優化：</p>
-                <ul class="para">
-                    <li><strong>統一操作區塊位置</strong><br>將照片池固定於左側，並整合編輯工具列，減少視線與操作的跳轉</li>
-                    <li><strong>優化照片新增流程</strong><br>使用者可直接於編輯區上傳與替換照片，流程更簡潔</li>
-                    <li><strong>重整按鈕與工具排列邏輯</strong><br>依使用場景分類，提升操作直覺性</li>
-                    <li><strong>提升視覺一致性與精緻度</strong><br>使用低飽和色系、加強層次感（圓角、陰影等），打造更現代的介面風格</li>
-                    <li><strong>調整字體與元件間距</strong><br>改善閱讀與點擊體驗，提升整體易用性</li>
-                </ul>
-                <p class="para">這些設計有效降低了使用者的認知負擔，提升操作流暢度，讓編輯流程更直覺，也讓新手能更快上手。</p>
-
-                </div>
-                <img class="image-block lightbox-trigger" src="../images/editor2/img_solution.jpg" alt="新版UI畫面" loading="lazy">
-            </div>
-          <!-- End txt1-img2 解決方案 -->
-            
-            <!-- Start 資訊架構 -->
-            <div id="ia" class="top-container">
-                <div class="layout-center">
-                    <h2 class="title">資訊架構 <span class="sm-title">Define</span></h2>
-                    <p class="t-center para"> 在視覺設計前，先盤點並統整功能規格，解決不一致處並建立資訊架構，協助團隊快速理解產品結構。透過 UI Flow 視覺化頁面路徑，確保體驗一致與流程順暢。</p>
-                </div>
-
-                <div class="bottom">
-                  <img class="image-block lightbox-trigger" src="../images/editor2/img_ia.jpg" alt="資訊架構圖" loading="lazy">
-                </div>
-            </div>
-            <div id="ideate">
-              <!-- Start txt1-img2 User flow -->
-              <div class="top-container hero-grid m-1col-2col">
-                  <div class="description-text">
-                  <h2 class="title">User Flow <span class="sm-title">Ideate</span></h2>
-                  <h3 class="title">以流程優化為核心，提升編輯效率與使用體驗</h3>
-                  <p class="para">
-                  在釐清專案目標後，我繪製優化前後的 User Flow，標示關鍵調整點，協助團隊建立共識。例如在<b>照片新增流程</b>中，將原本繁瑣的操作改為<b>可直接於編輯區上傳與替換</b>，讓流程更直覺精簡。<br><br>
-                  同時依不同產品功能與需求持續微調流程節點，確保設計符合實際情境並提前排除潛在問題。
-                  </p>
-                  </div>
-                  <img class="image-block" src="../images/editor2/img_user-flow.jpg" alt="使用者流程圖" loading="lazy">
+              <div class="bottom">
+                <img class="image-block lightbox-trigger" src="../images/editor2/img_ia.jpg" alt="資訊架構圖" loading="lazy">
               </div>
-              <!-- End txt1-img2 user flow -->            
-              <!-- Start img2-txt1 Wireframe-->
-              <div  class="img-txt top-container hero-grid d-2col-1col">
-                <img class="image-block lightbox-trigger" src="../images/editor2/img_wireframe.jpg" alt="低擬真線框稿截圖"loading="lazy">   
-                  <div class="description-text">
-                      <h2 class="title">Wireframe</h2>
-                      <h3 class="title">標注重點功能 討論更高效率</h3>
-                      <p class="para">為確保 Editor2 的複雜功能能直覺化，我利用 Figma 線框圖標註核心功能模組，將複雜邏輯具象化。透過低保真原型與團隊進行快速迭代，確保在視覺開發前，功能架構已獲得充分討論並達成共識，從而實現高效率的開發協作。</p>
-                  </div>
-              </div>        
-              <!-- End img2-txt1 Wireframe -->              
+        </div>
+        <!-- End 資訊架構 -->
+        <!-- Start ideate --> 
+        <div id="ideate">
+          <!-- Start txt1-img2 User flow -->
+          <div class="top-container hero-grid m-1col-2col">
+              <div class="description-text">
+              <h2 class="title">User Flow <span class="sm-title">Ideate</span></h2>
+              <h3 class="title">以流程優化為核心，提升編輯效率與使用體驗</h3>
+              <p class="para">
+              在釐清專案目標後，我繪製優化前後的 User Flow，標示關鍵調整點，協助團隊建立共識。例如在<b>照片新增流程</b>中，將原本繁瑣的操作改為<b>可直接於編輯區上傳與替換</b>，讓流程更直覺精簡。<br><br>
+              同時依不同產品功能與需求持續微調流程節點，確保設計符合實際情境並提前排除潛在問題。
+              </p>
+              </div>
+              <img class="image-block" src="../images/editor2/img_user-flow.jpg" alt="使用者流程圖" loading="lazy">
+          </div>
+          <!-- End txt1-img2 user flow -->            
+          <!-- Start img2-txt1 Wireframe-->
+          <div  class="img-txt hero-container hero-grid d-2col-1col">
+            <img class="image-block lightbox-trigger" src="../images/editor2/img_wireframe.jpg" alt="低擬真線框稿截圖"loading="lazy">   
+              <div class="description-text">
+                  <h2 class="title">Wireframe</h2>
+                  <h3 class="title">標注重點功能 討論更高效率</h3>
+                  <p class="para">為確保 Editor2 的複雜功能能直覺化，我利用 Figma 線框圖標註核心功能模組，將複雜邏輯具象化。透過低保真原型與團隊進行快速迭代，確保在視覺開發前，功能架構已獲得充分討論並達成共識，從而實現高效率的開發協作。</p>
+              </div>
+          </div>        
+          <!-- End img2-txt1 Wireframe -->              
+        </div>
+        <!-- End ideate -->
+        <!-- Start UI Design -->
+        <div id="ui-design">
+            <div class="sec-title-container">
+              <h2>UI Design</h2>
             </div>
-
-            <!-- Start UI Design -->
-            <div id="ui-design" class="flex-v-24 container">
-              <div class="top-container t-center display-title">UI Design </div>  
+          <div class="flex-v-24 container">
+            <!-- Start txt1-img2 User flow -->
             <div class="container">
-              <!-- Start txt1-img2 User flow -->
-              <div class="container">
-                  <div  class="notop-container hero-grid m-1col-2col">
-                    <div class="description-text">
-                    <h2 class="title">設計風格進化</h2>
-                    
-                    <ul class="para">
-                      <li><strong>分層概念</strong><br>新版採用卡片式設計，將左側照片池與編輯區等內容明確分隔，讓資訊架構更清晰，使用者能直覺理解畫面層次。</li>
-                      <li><strong>簡化視覺</strong><br>透過更溫和的配色與降低對比，讓畫面聚焦於內容本身，避免過度干擾，提供更舒適的編輯體驗。</li>
-                      <li><strong>清晰的點擊區域</strong><br>調整按鈕尺寸與間距，使點擊更容易辨識與操作，不僅提升可讀性，也降低誤觸的可能。</li>
-                      <li><strong>一致性與層次</strong><br>重新規劃標題、選單與圖像區塊的設計，讓資訊層級更分明，整體風格保持一致，提升介面的專業感與易用性。</li>
-                    </ul>
-                    </div>
-                    <img class="image-block lightbox-trigger" src="../images/editor2/img_ui-design01.jpg" alt="UI 設計截圖 01" loading="lazy">
+                <div  class="notop-container hero-grid m-1col-2col">
+                  <div class="description-text">
+                  <h2 class="title">設計風格進化</h2>
+                  
+                  <ul class="para">
+                    <li><strong>分層概念</strong><br>新版採用卡片式設計，將左側照片池與編輯區等內容明確分隔，讓資訊架構更清晰，使用者能直覺理解畫面層次。</li>
+                    <li><strong>簡化視覺</strong><br>透過更溫和的配色與降低對比，讓畫面聚焦於內容本身，避免過度干擾，提供更舒適的編輯體驗。</li>
+                    <li><strong>清晰的點擊區域</strong><br>調整按鈕尺寸與間距，使點擊更容易辨識與操作，不僅提升可讀性，也降低誤觸的可能。</li>
+                    <li><strong>一致性與層次</strong><br>重新規劃標題、選單與圖像區塊的設計，讓資訊層級更分明，整體風格保持一致，提升介面的專業感與易用性。</li>
+                  </ul>
                   </div>
-                  <!-- End txt1-img2 user flow -->
+                  <img class="image-block lightbox-trigger" src="../images/editor2/img_ui-design01.jpg" alt="UI 設計截圖 01" loading="lazy">
+                </div>
+                <!-- End txt1-img2 user flow -->
 
 
-                  <!-- start 簡化編輯流程區塊 -->
-                  <div class="top-container flex-v-24">
-                  <h2 class="t-center">簡化編輯流程｜將<span class="highlight">上傳照片</span>功能整併於編輯內容區</h2>
-                    <section class="flex-v-8">
-                      <div class="editor2-flow-section">
-                        <h4 class="editor2-title editor2-gray">Before</h4>
-                        <div class="editor2-stepper">
-                          <div class="editor2-step-item">
-                            <span class="editor2-badge">Step 1</span>
-                            <p class="editor2-label">基本資訊</p>
-                          </div>
-                          <div class="editor2-step-item">
-                            <span class="editor2-badge">Step 2</span>
-                            <p class="editor2-label">新增相片</p>
-                          </div>
-                          <div class="editor2-step-item">
-                            <span class="editor2-badge">Step 3</span>
-                            <p class="editor2-label">套用主題</p>
-                          </div>
-                          <div class="editor2-step-item">
-                            <span class="editor2-badge">Step 4</span>
-                            <p class="editor2-label">開始編輯</p>
-                          </div>
+                <!-- start 簡化編輯流程區塊 -->
+                <div class="top-container flex-v-24">
+                <h2 class="t-center">簡化編輯流程｜將<span class="highlight">上傳照片</span>功能整併於編輯內容區</h2>
+                  <section class="flex-v-8">
+                    <div class="editor2-flow-section">
+                      <h4 class="editor2-title editor2-gray">Before</h4>
+                      <div class="editor2-stepper">
+                        <div class="editor2-step-item">
+                          <span class="editor2-badge">Step 1</span>
+                          <p class="editor2-label">基本資訊</p>
                         </div>
-                      </div>
-
-                      <div class="editor2-arrow-divider">
-                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                          <path d="M12 5v14M19 12l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                      </div>
-
-                      <div class="editor2-flow-section">
-                        <h4 class="editor2-title editor2-green">After</h4>
-                        <div class="editor2-stepper editor2-after-style">
-                          <div class="editor2-step-item">
-                            <span class="editor2-badge">Step 1</span>
-                            <p class="editor2-label">基本資訊</p>
-                          </div>
-                          <div class="editor2-step-item">
-                            <span class="editor2-badge">Step 2</span>
-                            <p class="editor2-label">套用主題</p>
-                          </div>
-                          <div class="editor2-step-item">
-                            <span class="editor2-badge">Step 3</span>
-                            <div class="editor2-content">
-                              <p class="editor2-label">開始編輯 + 上傳照片</p>
-                              <p class="editor2-subtext">在編輯畫面可直接上傳照片</p>
-                            </div>
-                          </div>
+                        <div class="editor2-step-item">
+                          <span class="editor2-badge">Step 2</span>
+                          <p class="editor2-label">新增相片</p>
                         </div>
-                      </div>
-                    </section>
-                    <img src="../images/editor2/img_ui-design02.jpg" alt="Select 相關元件" class="lightbox-trigger">
-
-
-                  </div>   
-
-            <!-- Start 基本資訊 01 -->
-            <div id="section-step01" class="hero hero-bg-white">
-                <div class="top-container">
-                  <div class="section-header">
-                    <h2 class="text-primary txt-nowrap">基本資訊</h2>
-                    <div class="title-line">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="1020" height="5" viewBox="0 0 1020 5" fill="none">
-                          <path d="M969.986 0.00369453C971.201 -0.0262904 972.918 0.13584 974.352 0.144381C980.359 0.181873 982.585 0.294262 988.021 0.358005C996.08 0.452684 1020 0.239591 1020 1.36597C1020 1.366 1020 1.36602 1020 1.36605C1020 1.3771 1020 1.38827 1019.99 1.39957C1019.91 1.61416 1017.87 1.84842 1017.57 2.0911C1017.27 2.33388 1017.5 3.90119 1014.61 3.9893C1010.42 4.10541 1000.37 3.70355 998.133 3.72135C996.606 3.73363 994.725 3.87611 992.772 3.90141C986.473 3.98295 983.178 3.87875 977.503 4.26579C975.234 4.06183 972.964 3.85787 970.694 3.65391C967.733 3.74848 963.244 3.47949 961.445 3.4943C959.969 3.50649 959.104 3.66777 957.566 3.67527C955.841 3.68459 953.191 3.5105 950.052 3.53672C944.907 3.5789 943.992 3.99965 940.905 4.05308C937.703 4.10837 932.725 3.8797 928.64 4.02775C928.128 4.07404 927.616 4.12032 927.103 4.16661C927.47 4.27128 927.837 4.37596 928.204 4.48063C926.147 4.52936 925.262 4.31484 923.372 4.31096C921.147 4.30627 920.013 4.50965 918.516 4.50871C917.29 4.50776 915.627 4.34468 914.037 4.3549C911.719 4.36896 912.226 4.60442 910.979 4.64848C910.481 4.66559 901.28 4.79553 900.761 4.79741C896.813 4.80669 896.469 4.4844 893.322 4.45622C884.59 4.37936 875.628 4.63978 867.552 4.7382C863.945 4.78223 860.182 4.7635 856.587 4.71196C862.25 3.88711 849.716 3.24518 854.404 4.53587C850.403 4.35225 847.566 4.70068 843.774 4.64177C841.321 4.60334 839.623 4.42437 836.12 4.42906C829.905 4.43852 823.106 4.94722 821.319 4.02775C814.022 4.18984 807.703 3.85631 805.074 4.66801C803.192 4.7176 798.371 4.23412 796.261 4.16844C794.265 4.10657 778.953 3.88826 776.448 3.87608C773.943 3.8639 769.558 3.85064 767.448 3.92186C764.797 4.00997 762.945 4.85176 758.226 3.86753C752.739 3.94718 750.784 3.91901 745.682 3.80467C744.758 3.78399 744.653 3.63787 744.113 3.63774C743.002 3.63774 741.11 3.74572 739.125 3.75889C735.862 3.78045 733.999 3.47299 734.363 3.94261C732.211 4.02134 730.059 4.10008 727.907 4.17881C727.152 4.08818 726.398 3.99754 725.643 3.9069C724.493 4.00568 723.342 4.10445 722.192 4.20323C723.543 3.52366 715.446 3.92469 718.075 4.31462C713.904 4.17403 709.733 4.03345 705.561 3.89286C706.143 3.12052 696.403 3.80373 697.223 4.22368C696.746 4.22306 696.268 4.22245 695.791 4.22184C691.613 4.01656 687.776 4.18446 682.682 4.04667C677.59 3.90889 678.068 3.83368 676.519 3.47843C675.321 3.49878 674.122 3.51912 672.924 3.53947C666.635 4.51338 667.747 2.82719 656.978 3.57426C653.538 2.96216 645.057 3.28368 639.434 3.46928C638.78 3.49084 638.769 3.60965 637.897 3.64628C635.766 3.73438 630.33 3.58166 630.516 3.96489C628.634 3.854 626.752 3.74312 624.87 3.63224C623.332 3.70193 621.793 3.77161 620.255 3.84129C620.263 3.96092 620.271 4.08055 620.279 4.20018C617.181 3.79246 612.314 3.94915 609.913 3.85166C609.435 3.83191 609.332 3.66688 607.847 3.62187C606.111 3.56844 602.876 3.61727 600.808 3.56571C600.004 3.74852 599.2 3.93132 598.396 4.11412C594.697 4.21327 593.396 3.73077 591.224 3.69328C590.833 3.68676 583.698 3.72142 583.314 3.73173C580.167 3.81338 581.058 4.22444 571.956 4.13639C570.335 4.12046 569.024 3.97823 567.559 3.97251C564.971 3.9622 557.173 4.28479 556.56 4.58287C553.42 4.2098 545.022 4.36229 542.548 4.2545C541.801 4.22136 541.633 3.98373 539.338 3.93315C537.477 3.89191 532.686 4.08218 530.326 4.05033C527.822 4.01566 526.927 3.81603 525.805 3.80192C524.745 3.7888 523.767 3.94995 522.323 3.94902C517.813 3.94339 513.728 3.68401 510.163 3.67924C505.008 3.67174 500.454 4.14886 496.14 4.3607C495.07 4.32977 494.018 4.22736 492.895 4.22642C479.009 4.21142 463.345 4.12351 449.417 4.02134C442.951 3.97442 426.873 3.32679 431.164 4.40739C428.917 4.59664 412.58 4.16096 409.472 4.1544C406.365 4.1479 403.902 4.34167 401.46 4.34452C394.091 4.35296 388.902 4.21334 379.932 4.38206C377.615 4.42617 375.132 4.65573 373.76 4.65306C372.108 4.64931 370.329 4.42729 368.189 4.41319C363.085 4.38132 353.575 4.45435 348.679 4.41594C347.785 4.40844 347.471 4.2135 346.193 4.15257C341.214 3.9145 335.633 3.93515 336.621 4.55754C330.24 4.20419 324.336 4.5265 318.423 4.54625C305.919 4.58655 283.141 4.44128 272.248 4.7028C265.38 4.86778 265.555 5.14693 255.443 4.90605C253.198 4.85263 250.963 4.78057 248.241 4.71684C241.859 4.56687 236.004 4.05118 231.14 4.67259C224.052 4.51142 218.407 4.62572 213.148 4.09428C212.528 4.22174 211.908 4.3492 211.288 4.47667C210.419 4.47982 209.55 4.48297 208.681 4.48613C208.41 4.36456 208.139 4.243 207.868 4.12144C201.643 4.08871 193.744 4.58834 188.475 4.5847C179.64 4.57907 156.884 4.38497 148.507 4.22093C144.059 4.13382 143.82 4.39418 141.273 3.85899C140.278 3.89622 139.284 3.93345 138.289 3.97068C137.666 4.08787 137.044 4.20506 136.421 4.32225C130.715 4.32693 123.947 4.14491 118.511 4.14677C108.605 4.15052 93.731 4.47305 83.7838 4.26121C81.2896 4.20779 78.1719 3.96612 75.7294 3.96885C72.1746 3.9726 71.3106 4.37365 66.7996 4.38115C59.0248 4.39333 44.5455 3.92743 37.1969 3.96305C35.0142 3.97337 33.9959 4.1226 32.4888 4.13853C26.1691 4.20696 20.9807 4.19481 14.9209 4.4254C8.41427 4.04108 8.97637 3.54502 6.95992 3.04447C5.43174 2.66669 0.745824 1.79117 0.0806325 1.4603C-0.386624 1.22785 1.35796 0.928821 0.703192 0.672946C8.4987 0.468608 11.7737 0.693558 18.1037 1.0535C29.7936 1.03916 41.4835 1.02482 53.1733 1.01047C54.2369 1.15014 55.3004 1.28981 56.3639 1.42948C56.3639 1.42978 56.3639 1.43009 56.3639 1.43039C60.8532 1.59158 62.7559 1.23189 65.177 1.15024C88.3559 0.368485 133.977 0.980343 159.495 1.06846C164.994 1.0872 182.881 0.898992 186.654 1.12583C187.631 1.1849 187.903 1.40027 188.942 1.40964C198.227 1.28157 207.512 1.1535 216.798 1.02543C235.892 1.36006 255.631 1.08369 274.871 1.03214C326.924 0.892474 378.458 0.722712 429.659 0.774265C439.554 0.784576 452.111 0.623221 461.798 0.727268C465.841 0.770407 467.526 1.11626 472.837 0.858494C472.893 0.951674 472.949 1.04485 473.004 1.13804C477.639 1.02554 480.601 0.813523 485.798 0.791965C490.174 0.774157 501.752 0.760319 505.619 0.795933C507.624 0.81374 506.877 0.987855 508.747 0.986973C511.948 0.984161 518.789 0.743449 523.206 0.743443C527.208 0.743443 533.954 0.94401 537.031 0.914951C548.111 0.811841 560.18 0.514536 571.987 0.594211C575.249 0.616754 579.444 0.842515 580.466 0.836216C582.461 0.823096 583.056 0.60379 584.396 0.575595C591.204 0.433125 601.816 0.693736 608.489 0.704074C630.233 0.73782 653.269 0.642101 674.92 0.682407C688.598 0.707712 711.329 0.669118 723.958 0.83408C726.681 0.869699 725.955 1.10996 728.242 1.10996C730.777 1.10991 732.151 0.947604 733.335 0.934483C741.537 0.842618 759.642 0.678553 767.386 0.844456C768.86 0.876309 769.93 1.06456 770.813 1.06388C771.26 1.06388 772.27 0.935408 773.673 0.922276C786.063 0.806043 795.097 0.880967 807.237 0.925022C830.488 1.00844 857.429 0.769436 881.855 0.898777C887.177 0.926898 890.826 1.29926 891.575 1.29551C893.217 1.288 894.268 1.03755 897.594 0.975682C908.653 0.772339 923.546 1.03959 934.064 0.914036C939.261 0.852177 946.402 0.53425 951.515 0.463901C955.6 0.407666 965.246 0.532379 967.056 0.392795C968.157 0.308464 968.667 0.0376029 969.986 0.00369453ZM832.389 4.22001C833.116 3.78695 825.469 4.14685 828.338 4.37932C828.984 4.43166 832.201 4.33243 832.389 4.22001ZM474.312 3.46806C474.382 3.59176 474.452 3.71545 474.522 3.83915C475.526 3.78768 476.529 3.73621 477.533 3.68473C476.969 3.61037 476.405 3.53601 475.841 3.46165C475.331 3.46379 474.821 3.46592 474.312 3.46806Z" fill="#7B6453"/>
-                        </svg>
-                      </div>
-                  </div>
-              
-                  <!-- 中間：步驟流程 + 描述 -->
-                  <div class="d-horizontal">
-                    <div class="editor2-v-step">
-                      <div class="editor2-v-container editor2-v-active-1">
-                        <div class="editor2-v-row" data-step="1">
-                          <div class="editor2-v-stepper-bg">
-                            <div class="editor2-v-number">1</div>
-                          </div>
-                          <div class="editor2-v-text">基本資訊</div>
+                        <div class="editor2-step-item">
+                          <span class="editor2-badge">Step 3</span>
+                          <p class="editor2-label">套用主題</p>
                         </div>
-
-                        <div class="editor2-v-row" data-step="2">
-                          <div class="editor2-v-stepper-bg">
-                            <div class="editor2-v-number">2</div>
-                          </div>
-                          <div class="editor2-v-text">套用主題</div>
-                        </div>
-
-                        <div class="editor2-v-row" data-step="3">
-                          <div class="editor2-v-stepper-bg">
-                            <div class="editor2-v-number">3</div>
-                          </div>
-                          <div class="editor2-v-text">編輯內容</div>
+                        <div class="editor2-step-item">
+                          <span class="editor2-badge">Step 4</span>
+                          <p class="editor2-label">開始編輯</p>
                         </div>
                       </div>
                     </div>
-                    <div class="description-text">
-                      <h3>強化資訊層次與流程引導</h3>
-                      <p class="para">
-                      <strong>▍步驟式的引導</strong>：首次創建作品的遞進引導，使用者可以清楚知道一步步要怎麼編輯作品。<br>
-                      <strong>▍重整資訊架構</strong>：將關聯性較高的分區，讓使用者可以依序填入對應內容。
+
+                    <div class="editor2-arrow-divider">
+                      <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M12 5v14M19 12l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
                     </div>
-                  </div>
-              
-                  <!-- 底部兩張圖 -->
-                  <div class="hero-grid m-1col">
-                    <img class="image-block lightbox-trigger" src="../images/editor2/img_step1-old.jpg" alt="設計步驟 1 - 舊版截圖" loading="lazy">
-                    <img class="image-block lightbox-trigger" src="../images/editor2/img_step1-new.jpg" alt="設計步驟 1 - 新版截圖" loading="lazy">
-                  </div>
-                </div>
-              </div>
-            <!-- Start txt1-img2 基本資訊 02 -->
 
-            <div id="section-step01" class="top-container hero-grid m-1col-2col">
-                    
-              <div class="description-text">
-                <div class="flex-v-4">
-                <span class="sm-title">基本資訊</span><h3 class="title">基本資訊內容<span class="highlight">可自動匯入作品中</span></h3>
-                </div>
-                <div class="flex-v-4"><b class="para-16">▍輸入已知資訊，系統自動匯入</b>
-                  <p class="para">引導使用者先輸入已知的內容，系統會自動將資訊匯入，讓使用者在進入編輯畫面時，<b>無需逐一點擊輸入框新增或更新資訊</b>，大幅提升操作效率。</p>
-                </div>
-              </div>
-              <img class="image-block" src="../images/editor2/img_ui-design-step1-2.jpg" alt="" loading="lazy">
-            </div>
-            <!-- End txt1-img2 基本資訊02-->  
-            <!-- End基本資訊 -->
+                    <div class="editor2-flow-section">
+                      <h4 class="editor2-title editor2-green">After</h4>
+                      <div class="editor2-stepper editor2-after-style">
+                        <div class="editor2-step-item">
+                          <span class="editor2-badge">Step 1</span>
+                          <p class="editor2-label">基本資訊</p>
+                        </div>
+                        <div class="editor2-step-item">
+                          <span class="editor2-badge">Step 2</span>
+                          <p class="editor2-label">套用主題</p>
+                        </div>
+                        <div class="editor2-step-item">
+                          <span class="editor2-badge">Step 3</span>
+                          <div class="editor2-content">
+                            <p class="editor2-label">開始編輯 + 上傳照片</p>
+                            <p class="editor2-subtext">在編輯畫面可直接上傳照片</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </section>
+                  <img src="../images/editor2/img_ui-design02.jpg" alt="Select 相關元件" class="lightbox-trigger">
 
-            <!-- Start 套用主題01 -->
-            <div id="section-step01" class="hero hero-bg-white">
+
+                </div>   
+
+          <!-- Start 基本資訊 01 -->
+          <div id="section-step01" class="hero hero-bg-white">
               <div class="top-container">
-                <!-- 標題區塊 -->
-                <div class="sec-title">
-                  <h2 class="title">套用主題 <span class="sm-title">Step 02</span></h2>
+                <div class="section-header">
+                  <h2 class="text-primary txt-nowrap">基本資訊</h2>
+                  <div class="title-line">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="1020" height="5" viewBox="0 0 1020 5" fill="none">
+                        <path d="M969.986 0.00369453C971.201 -0.0262904 972.918 0.13584 974.352 0.144381C980.359 0.181873 982.585 0.294262 988.021 0.358005C996.08 0.452684 1020 0.239591 1020 1.36597C1020 1.366 1020 1.36602 1020 1.36605C1020 1.3771 1020 1.38827 1019.99 1.39957C1019.91 1.61416 1017.87 1.84842 1017.57 2.0911C1017.27 2.33388 1017.5 3.90119 1014.61 3.9893C1010.42 4.10541 1000.37 3.70355 998.133 3.72135C996.606 3.73363 994.725 3.87611 992.772 3.90141C986.473 3.98295 983.178 3.87875 977.503 4.26579C975.234 4.06183 972.964 3.85787 970.694 3.65391C967.733 3.74848 963.244 3.47949 961.445 3.4943C959.969 3.50649 959.104 3.66777 957.566 3.67527C955.841 3.68459 953.191 3.5105 950.052 3.53672C944.907 3.5789 943.992 3.99965 940.905 4.05308C937.703 4.10837 932.725 3.8797 928.64 4.02775C928.128 4.07404 927.616 4.12032 927.103 4.16661C927.47 4.27128 927.837 4.37596 928.204 4.48063C926.147 4.52936 925.262 4.31484 923.372 4.31096C921.147 4.30627 920.013 4.50965 918.516 4.50871C917.29 4.50776 915.627 4.34468 914.037 4.3549C911.719 4.36896 912.226 4.60442 910.979 4.64848C910.481 4.66559 901.28 4.79553 900.761 4.79741C896.813 4.80669 896.469 4.4844 893.322 4.45622C884.59 4.37936 875.628 4.63978 867.552 4.7382C863.945 4.78223 860.182 4.7635 856.587 4.71196C862.25 3.88711 849.716 3.24518 854.404 4.53587C850.403 4.35225 847.566 4.70068 843.774 4.64177C841.321 4.60334 839.623 4.42437 836.12 4.42906C829.905 4.43852 823.106 4.94722 821.319 4.02775C814.022 4.18984 807.703 3.85631 805.074 4.66801C803.192 4.7176 798.371 4.23412 796.261 4.16844C794.265 4.10657 778.953 3.88826 776.448 3.87608C773.943 3.8639 769.558 3.85064 767.448 3.92186C764.797 4.00997 762.945 4.85176 758.226 3.86753C752.739 3.94718 750.784 3.91901 745.682 3.80467C744.758 3.78399 744.653 3.63787 744.113 3.63774C743.002 3.63774 741.11 3.74572 739.125 3.75889C735.862 3.78045 733.999 3.47299 734.363 3.94261C732.211 4.02134 730.059 4.10008 727.907 4.17881C727.152 4.08818 726.398 3.99754 725.643 3.9069C724.493 4.00568 723.342 4.10445 722.192 4.20323C723.543 3.52366 715.446 3.92469 718.075 4.31462C713.904 4.17403 709.733 4.03345 705.561 3.89286C706.143 3.12052 696.403 3.80373 697.223 4.22368C696.746 4.22306 696.268 4.22245 695.791 4.22184C691.613 4.01656 687.776 4.18446 682.682 4.04667C677.59 3.90889 678.068 3.83368 676.519 3.47843C675.321 3.49878 674.122 3.51912 672.924 3.53947C666.635 4.51338 667.747 2.82719 656.978 3.57426C653.538 2.96216 645.057 3.28368 639.434 3.46928C638.78 3.49084 638.769 3.60965 637.897 3.64628C635.766 3.73438 630.33 3.58166 630.516 3.96489C628.634 3.854 626.752 3.74312 624.87 3.63224C623.332 3.70193 621.793 3.77161 620.255 3.84129C620.263 3.96092 620.271 4.08055 620.279 4.20018C617.181 3.79246 612.314 3.94915 609.913 3.85166C609.435 3.83191 609.332 3.66688 607.847 3.62187C606.111 3.56844 602.876 3.61727 600.808 3.56571C600.004 3.74852 599.2 3.93132 598.396 4.11412C594.697 4.21327 593.396 3.73077 591.224 3.69328C590.833 3.68676 583.698 3.72142 583.314 3.73173C580.167 3.81338 581.058 4.22444 571.956 4.13639C570.335 4.12046 569.024 3.97823 567.559 3.97251C564.971 3.9622 557.173 4.28479 556.56 4.58287C553.42 4.2098 545.022 4.36229 542.548 4.2545C541.801 4.22136 541.633 3.98373 539.338 3.93315C537.477 3.89191 532.686 4.08218 530.326 4.05033C527.822 4.01566 526.927 3.81603 525.805 3.80192C524.745 3.7888 523.767 3.94995 522.323 3.94902C517.813 3.94339 513.728 3.68401 510.163 3.67924C505.008 3.67174 500.454 4.14886 496.14 4.3607C495.07 4.32977 494.018 4.22736 492.895 4.22642C479.009 4.21142 463.345 4.12351 449.417 4.02134C442.951 3.97442 426.873 3.32679 431.164 4.40739C428.917 4.59664 412.58 4.16096 409.472 4.1544C406.365 4.1479 403.902 4.34167 401.46 4.34452C394.091 4.35296 388.902 4.21334 379.932 4.38206C377.615 4.42617 375.132 4.65573 373.76 4.65306C372.108 4.64931 370.329 4.42729 368.189 4.41319C363.085 4.38132 353.575 4.45435 348.679 4.41594C347.785 4.40844 347.471 4.2135 346.193 4.15257C341.214 3.9145 335.633 3.93515 336.621 4.55754C330.24 4.20419 324.336 4.5265 318.423 4.54625C305.919 4.58655 283.141 4.44128 272.248 4.7028C265.38 4.86778 265.555 5.14693 255.443 4.90605C253.198 4.85263 250.963 4.78057 248.241 4.71684C241.859 4.56687 236.004 4.05118 231.14 4.67259C224.052 4.51142 218.407 4.62572 213.148 4.09428C212.528 4.22174 211.908 4.3492 211.288 4.47667C210.419 4.47982 209.55 4.48297 208.681 4.48613C208.41 4.36456 208.139 4.243 207.868 4.12144C201.643 4.08871 193.744 4.58834 188.475 4.5847C179.64 4.57907 156.884 4.38497 148.507 4.22093C144.059 4.13382 143.82 4.39418 141.273 3.85899C140.278 3.89622 139.284 3.93345 138.289 3.97068C137.666 4.08787 137.044 4.20506 136.421 4.32225C130.715 4.32693 123.947 4.14491 118.511 4.14677C108.605 4.15052 93.731 4.47305 83.7838 4.26121C81.2896 4.20779 78.1719 3.96612 75.7294 3.96885C72.1746 3.9726 71.3106 4.37365 66.7996 4.38115C59.0248 4.39333 44.5455 3.92743 37.1969 3.96305C35.0142 3.97337 33.9959 4.1226 32.4888 4.13853C26.1691 4.20696 20.9807 4.19481 14.9209 4.4254C8.41427 4.04108 8.97637 3.54502 6.95992 3.04447C5.43174 2.66669 0.745824 1.79117 0.0806325 1.4603C-0.386624 1.22785 1.35796 0.928821 0.703192 0.672946C8.4987 0.468608 11.7737 0.693558 18.1037 1.0535C29.7936 1.03916 41.4835 1.02482 53.1733 1.01047C54.2369 1.15014 55.3004 1.28981 56.3639 1.42948C56.3639 1.42978 56.3639 1.43009 56.3639 1.43039C60.8532 1.59158 62.7559 1.23189 65.177 1.15024C88.3559 0.368485 133.977 0.980343 159.495 1.06846C164.994 1.0872 182.881 0.898992 186.654 1.12583C187.631 1.1849 187.903 1.40027 188.942 1.40964C198.227 1.28157 207.512 1.1535 216.798 1.02543C235.892 1.36006 255.631 1.08369 274.871 1.03214C326.924 0.892474 378.458 0.722712 429.659 0.774265C439.554 0.784576 452.111 0.623221 461.798 0.727268C465.841 0.770407 467.526 1.11626 472.837 0.858494C472.893 0.951674 472.949 1.04485 473.004 1.13804C477.639 1.02554 480.601 0.813523 485.798 0.791965C490.174 0.774157 501.752 0.760319 505.619 0.795933C507.624 0.81374 506.877 0.987855 508.747 0.986973C511.948 0.984161 518.789 0.743449 523.206 0.743443C527.208 0.743443 533.954 0.94401 537.031 0.914951C548.111 0.811841 560.18 0.514536 571.987 0.594211C575.249 0.616754 579.444 0.842515 580.466 0.836216C582.461 0.823096 583.056 0.60379 584.396 0.575595C591.204 0.433125 601.816 0.693736 608.489 0.704074C630.233 0.73782 653.269 0.642101 674.92 0.682407C688.598 0.707712 711.329 0.669118 723.958 0.83408C726.681 0.869699 725.955 1.10996 728.242 1.10996C730.777 1.10991 732.151 0.947604 733.335 0.934483C741.537 0.842618 759.642 0.678553 767.386 0.844456C768.86 0.876309 769.93 1.06456 770.813 1.06388C771.26 1.06388 772.27 0.935408 773.673 0.922276C786.063 0.806043 795.097 0.880967 807.237 0.925022C830.488 1.00844 857.429 0.769436 881.855 0.898777C887.177 0.926898 890.826 1.29926 891.575 1.29551C893.217 1.288 894.268 1.03755 897.594 0.975682C908.653 0.772339 923.546 1.03959 934.064 0.914036C939.261 0.852177 946.402 0.53425 951.515 0.463901C955.6 0.407666 965.246 0.532379 967.056 0.392795C968.157 0.308464 968.667 0.0376029 969.986 0.00369453ZM832.389 4.22001C833.116 3.78695 825.469 4.14685 828.338 4.37932C828.984 4.43166 832.201 4.33243 832.389 4.22001ZM474.312 3.46806C474.382 3.59176 474.452 3.71545 474.522 3.83915C475.526 3.78768 476.529 3.73621 477.533 3.68473C476.969 3.61037 476.405 3.53601 475.841 3.46165C475.331 3.46379 474.821 3.46592 474.312 3.46806Z" fill="#7B6453"/>
+                      </svg>
+                    </div>
                 </div>
             
-                <!-- 中間：圖片 + 描述 -->
+                <!-- 中間：步驟流程 + 描述 -->
                 <div class="d-horizontal">
                   <div class="editor2-v-step">
-                    <div class="editor2-v-container editor2-v-active-2">
+                    <div class="editor2-v-container editor2-v-active-1">
                       <div class="editor2-v-row" data-step="1">
                         <div class="editor2-v-stepper-bg">
                           <div class="editor2-v-number">1</div>
@@ -490,207 +421,49 @@
                     </div>
                   </div>
                   <div class="description-text">
-                    <h3><span class="highlight">聚焦選擇主題</span>並正確套用</h3>
-                    <div class="flex-v-4"><b class="para-16">▍簡化頁面內容，凸顯主次層級</b>
-                      <p class="para">調整按鈕配置，使畫面聚焦在「下一步：編輯內容」，<b>移除原本的「繼續編輯」及 Header 中的「完稿並購買」</b>，統一至編輯內容頁面後才能進行最終確認與購買，提高操作一致性與流暢度。</p>
-                    </div>
+                    <h3>強化資訊層次與流程引導</h3>
+                    <p class="para">
+                    <strong>▍步驟式的引導</strong>：首次創建作品的遞進引導，使用者可以清楚知道一步步要怎麼編輯作品。<br>
+                    <strong>▍重整資訊架構</strong>：將關聯性較高的分區，讓使用者可以依序填入對應內容。
                   </div>
                 </div>
             
                 <!-- 底部兩張圖 -->
                 <div class="hero-grid m-1col">
-                  <img class="image-block lightbox-trigger" src="../images/editor2/img_theme-old.jpg" alt="舊版主題設定介面截圖" loading="lazy">
-                  <img class="image-block lightbox-trigger" src="../images/editor2/img_theme-new.jpg" alt="新版主題設定介面截圖" loading="lazy">
+                  <img class="image-block lightbox-trigger" src="../images/editor2/img_step1-old.jpg" alt="設計步驟 1 - 舊版截圖" loading="lazy">
+                  <img class="image-block lightbox-trigger" src="../images/editor2/img_step1-new.jpg" alt="設計步驟 1 - 新版截圖" loading="lazy">
                 </div>
               </div>
             </div>
+          <!-- Start txt1-img2 基本資訊 02 -->
 
-                <!-- Satrt img2-txt1 套用主題02-->
-                <div  class="img-txt top-container hero-grid d-2col-1col">
-                  <img class="image-block lightbox-trigger" src="../images/editor2/img_theme-confirmed.jpg" alt="主題確認頁面截圖" loading="lazy">    
-                  <div class="description-text">
-                    <div class="flex-v-4"><span class="sm-title">套用主題</span><h3 class="title"><span class="highlight">主題變更確認機制</span>，避免誤套錯誤版型</h3></div>
-                    <div class="flex-v-4"><b class="para-16">▍降低版型變更風險</b>
-                    <p class="para">首次套用或切換主題時，系統皆會跳出確認視窗，提醒使用者再次確認是否套用或變更版型，避免誤套錯誤版型並減少內容誤改，讓操作更安心。</p></div>  
-                  </div>
-                
-                </div>
-                <!-- End img2-txt1 套用主題02-->        
-          
-          <!-- End 套用主題 -->
-
-          <!-- Start 編輯內容01 -->
-          <div id="section-step01" class="hero hero-bg-white">
-            <div class="top-container">
-              <!-- 標題區塊 -->
-              <div class="sec-title">
-                <h2 class="title">編輯內容 <span class="sm-title">Step 03</span></h2>
-              </div>
-          
-              <!-- 中間：圖片 + 描述 -->
-              <div class="d-horizontal">
-                <div class="editor2-v-step">
-                  <div class="editor2-v-container editor2-v-active-3">
-                    <div class="editor2-v-row" data-step="1">
-                      <div class="editor2-v-stepper-bg">
-                        <div class="editor2-v-number">1</div>
-                      </div>
-                      <div class="editor2-v-text">基本資訊</div>
-                    </div>
-
-                    <div class="editor2-v-row" data-step="2">
-                      <div class="editor2-v-stepper-bg">
-                        <div class="editor2-v-number">2</div>
-                      </div>
-                      <div class="editor2-v-text">套用主題</div>
-                    </div>
-
-                    <div class="editor2-v-row" data-step="3">
-                      <div class="editor2-v-stepper-bg">
-                        <div class="editor2-v-number">3</div>
-                      </div>
-                      <div class="editor2-v-text">編輯內容</div>
-                    </div>
-                  </div>
-                </div>
-                <div class="description-text">
-                  <h3>打造現代化介面：提升可讀性、視覺層次與操作直覺性</h3>
-                  <ul class="para">
-                    <li>資訊架構更直覺，視線動線更流暢 → 照片池統一放左側，減少視線移動。</li>
-                    <li>配色更現代、柔和且高級感提升 → 低飽和度色彩，減少視覺疲勞。</li>
-                    <li>字體與間距優化 → 提升可讀性與點擊舒適度。</li>
-                    <li>細節更精緻 → 圓角、陰影、視覺層次感增強。</li>
-                    <li>功能設計更直覺，操作更流暢 → 按鈕與工具排列更有邏輯，減少學習成本。</li>
-                  </ul>
+          <div id="section-step01" class="top-container hero-grid m-1col-2col">
                   
-                </div>
-                <img src="../images/editor2/img_ui-design-step3.jpg" alt="編輯內容頁面轉變示意圖" class="lightbox-trigger">
-              </div>
-            </div>
-          </div>
-
-          <!-- Start txt1-img2 編輯內容02 -->
-
-          <div class="top-container hero-grid m-1col-2col">
-                    
             <div class="description-text">
-              <div class="flex-v-4"><span class="sm-title">編輯內容</span><h3 class="title">優化操作區，提升一致性</h3></div>
-            <div class="container hero-grid ">
-              <p class="para"><b>[Before]</b><br>
-                功能依產品類型分散在上下區域，使用者需頻繁移動視線。排列方式偏向技術邏輯，缺乏任務導向，增加理解難度。 
-              </p>  
-              <p class="para"><b>[After]</b><br>  
-                以編輯情境為核心重新分群，相關功能集中於編輯區上方。任務導向的整合方式讓操作更直覺，減少混淆與誤操作。
-              </p>
-            
-            <div class="team-info">
-              <b class="para">分類邏輯</b>
-              <ul class="para">
-                <li><strong>頁面編輯相關</strong>：多頁編輯、頁面管理、頁數設定、單頁/跨頁。</li>
-                <li><strong>視圖調整工具</strong>：鎖定畫面、預覽、放大/縮小。</li>
-                <li><strong>內容操作與控制工具</strong>：選取物件、編輯區塊縮放、回復預設畫面。</li>
-              </ul>
-
-            </div>
-          </div>
-          <!-- container結束 -->
-            </div>
-            <img class="image-block" src="../images/editor2/img_ui-design-step3-2.jpg" alt="編輯作品頁面操作區塊分組強調示意圖" loading="lazy">
-          </div>
-          <!-- End txt1-img2 -->
-          <!-- Satrt img2-txt1 -->
-            <div class="img-txt top-container hero-grid d-2col-1col">
-              <img class="image-block lightbox-trigger">   
-                  <div class="description-text ">
-                    <h3>情境式操作引導</h3>
-                    <div class="accordion-group">
-                        <div class="accordion-item active" data-img="/images/editor2/img_coach-mark.jpg">
-                          <div class="accordion-header">
-                            <h5>▍Coach Mark — 新功能的主動導覽</h5>
-                            <div class="arrow-icon"></div>
-                          </div>
-                          <div class="accordion-content">
-                            <div class="accordion-inner">
-                              <p class="para">使用者進入編輯畫面時，即可看到圖文並茂的教學提示，協助快速理解新功能或關鍵操作。提示內容會依產品性質動態調整，提供最相關的引導資訊。</p>
-                            </div>
-                          </div>
-                        </div>
-
-                        <div class="accordion-item" data-img="/images/editor2/img_persistent-toast.jpg">
-                          <div class="accordion-header">
-                            <h5>▍Persistent Toast — 任務過程的常駐提示</h5>
-                            <div class="arrow-icon"></div>
-                          </div>
-                          <div class="accordion-content">
-                            <div class="accordion-inner">
-                              <p class="para">在需要額外輔助說明的頁面，右下角會出現提示框於畫面最上層，提醒使用者關鍵操作或注意事項，並可在閱讀後自由關閉。</p>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="accordion-item" data-img="/images/editor2/img_tooltips.jpg">
-                            <div class="accordion-header">
-                                <h5>▍Interactive Tooltips — 區塊性的即時指引</h5>
-                                <div class="arrow-icon"></div>
-                            </div>
-                            <div class="accordion-content">
-                            <div class="accordion-inner">
-                              <p class="para">針對操作較複雜的功能，透過 Tooltip 提供用途與操作方式的提示，並附上「知道了」按鈕，方便使用者自行關閉。</p>
-                            </div>
-                          </div>
-
-                        </div>
-
-                    </div>
-
-                </div>
-            </div>
-          <!-- End img2-txt1 -->
-
-          <!-- Start toolbar & modal -->
-          <div class="top-container hero-grid m-1col-2col">
-            <img class="image-block lightbox-trigger">   
-                <div class="description-text">
-                  <h3>重整 Toolbar 和 Modal 元件</h3>
-                  <div class="accordion-group">
-                      <div class="accordion-item active" data-img="/images/editor2/img_toolbar-modal1.jpg">
-                        <div class="accordion-header">
-                          <h5>▍統一現代視覺風格</h5>
-                          <div class="arrow-icon"></div>
-                        </div>
-                        <div class="accordion-content">
-                          <div class="accordion-inner">
-                            <p class="para">統一文字框、QR Code、相片框等各類 Toolbar 與 Modal 元件，建立一致的視覺語言，強化介面整體性。</p>
-                          </div>
-                        </div>
-                      </div>
-
-                      <div class="accordion-item" data-img="/images/editor2/img_toolbar-modal2.jpg">
-                        <div class="accordion-header">
-                          <h5>▍新增雙擊文字框的進階編輯 Modal</h5>
-                          <div class="arrow-icon"></div>
-                        </div>
-                        <div class="accordion-content">
-                          <div class="accordion-inner">
-                            <p class="para">使用者可於同一視窗調整文字、顏色、對齊與字型等設定，補足原需分步操作的限制，提升操作效率與彈性。</p>
-                          </div>
-                        </div>
-                      </div>
-                  </div>
+              <div class="flex-v-4">
+              <span class="sm-title">基本資訊</span><h3 class="title">基本資訊內容<span class="highlight">可自動匯入作品中</span></h3>
               </div>
+              <div class="flex-v-4"><b class="para-16">▍輸入已知資訊，系統自動匯入</b>
+                <p class="para">引導使用者先輸入已知的內容，系統會自動將資訊匯入，讓使用者在進入編輯畫面時，<b>無需逐一點擊輸入框新增或更新資訊</b>，大幅提升操作效率。</p>
+              </div>
+            </div>
+            <img class="image-block" src="../images/editor2/img_ui-design-step1-2.jpg" alt="" loading="lazy">
           </div>
-          <!-- End txt1-img2 -->
-          <!-- start 上傳照片 -->
+          <!-- End txt1-img2 基本資訊02-->  
+          <!-- End基本資訊 -->
+
+          <!-- Start 套用主題01 -->
           <div id="section-step01" class="hero hero-bg-white">
             <div class="top-container">
               <!-- 標題區塊 -->
               <div class="sec-title">
-                <h2 class="title">上傳照片 <span class="sm-title">Step 03</span></h2>
+                <h2 class="title">套用主題 <span class="sm-title">Step 02</span></h2>
               </div>
           
               <!-- 中間：圖片 + 描述 -->
               <div class="d-horizontal">
                 <div class="editor2-v-step">
-                  <div class="editor2-v-container editor2-v-active-3">
+                  <div class="editor2-v-container editor2-v-active-2">
                     <div class="editor2-v-row" data-step="1">
                       <div class="editor2-v-stepper-bg">
                         <div class="editor2-v-number">1</div>
@@ -714,129 +487,355 @@
                   </div>
                 </div>
                 <div class="description-text">
-                  <h3>上傳照片功能<span class="highlight">整合至編輯內容畫面</span></h3>
-                  <div class="flex-v-4">
-                    <b class="para-16">▍整合式左側照片管理與瀏覽體驗優化</b>
-                    <p class="para">將照片管理功能固定於左側邊欄，解決舊版底部配置分散且佔空間的問題。透過直列排列顯示更多照片，並能同時查看上傳進度，不僅降低了使用者的搜尋成本，也讓小螢幕的操作空間更整潔、瀏覽體驗更直覺流暢。</p>
-                  </div>                  
+                  <h3><span class="highlight">聚焦選擇主題</span>並正確套用</h3>
+                  <div class="flex-v-4"><b class="para-16">▍簡化頁面內容，凸顯主次層級</b>
+                    <p class="para">調整按鈕配置，使畫面聚焦在「下一步：編輯內容」，<b>移除原本的「繼續編輯」及 Header 中的「完稿並購買」</b>，統一至編輯內容頁面後才能進行最終確認與購買，提高操作一致性與流暢度。</p>
+                  </div>
                 </div>
               </div>
-              <img src="../images/editor2/img_ui_upload-img.jpg" alt="上傳照片調整前後示意圖 Banner" class="box-img">
-
-            </div>
-            <div  class="notop-container">
+          
+              <!-- 底部兩張圖 -->
+              <div class="hero-grid m-1col">
+                <img class="image-block lightbox-trigger" src="../images/editor2/img_theme-old.jpg" alt="舊版主題設定介面截圖" loading="lazy">
+                <img class="image-block lightbox-trigger" src="../images/editor2/img_theme-new.jpg" alt="新版主題設定介面截圖" loading="lazy">
+              </div>
             </div>
           </div>
-          <!-- End 上傳照片 -->
-          <!-- Satrt img2-txt1 -->
-          <div class="top-container hero-grid m-1col-2col">
-            <img class="image-block lightbox-trigger">   
+
+              <!-- Satrt img2-txt1 套用主題02-->
+              <div  class="img-txt top-container hero-grid d-2col-1col">
+                <img class="image-block lightbox-trigger" src="../images/editor2/img_theme-confirmed.jpg" alt="主題確認頁面截圖" loading="lazy">    
                 <div class="description-text">
-                  <h3>照片池提高<span class="highlight">排版彈性與可擴充性</span></h3>
+                  <div class="flex-v-4"><span class="sm-title">套用主題</span><h3 class="title"><span class="highlight">主題變更確認機制</span>，避免誤套錯誤版型</h3></div>
+                  <div class="flex-v-4"><b class="para-16">▍降低版型變更風險</b>
+                  <p class="para">首次套用或切換主題時，系統皆會跳出確認視窗，提醒使用者再次確認是否套用或變更版型，避免誤套錯誤版型並減少內容誤改，讓操作更安心。</p></div>  
+                </div>
+              
+              </div>
+              <!-- End img2-txt1 套用主題02-->        
+        
+        <!-- End 套用主題 -->
+
+        <!-- Start 編輯內容01 -->
+        <div id="section-step01" class="hero hero-bg-white">
+          <div class="top-container">
+            <!-- 標題區塊 -->
+            <div class="sec-title">
+              <h2 class="title">編輯內容 <span class="sm-title">Step 03</span></h2>
+            </div>
+        
+            <!-- 中間：圖片 + 描述 -->
+            <div class="d-horizontal">
+              <div class="editor2-v-step">
+                <div class="editor2-v-container editor2-v-active-3">
+                  <div class="editor2-v-row" data-step="1">
+                    <div class="editor2-v-stepper-bg">
+                      <div class="editor2-v-number">1</div>
+                    </div>
+                    <div class="editor2-v-text">基本資訊</div>
+                  </div>
+
+                  <div class="editor2-v-row" data-step="2">
+                    <div class="editor2-v-stepper-bg">
+                      <div class="editor2-v-number">2</div>
+                    </div>
+                    <div class="editor2-v-text">套用主題</div>
+                  </div>
+
+                  <div class="editor2-v-row" data-step="3">
+                    <div class="editor2-v-stepper-bg">
+                      <div class="editor2-v-number">3</div>
+                    </div>
+                    <div class="editor2-v-text">編輯內容</div>
+                  </div>
+                </div>
+              </div>
+              <div class="description-text">
+                <h3>打造現代化介面：提升可讀性、視覺層次與操作直覺性</h3>
+                <ul class="para">
+                  <li>資訊架構更直覺，視線動線更流暢 → 照片池統一放左側，減少視線移動。</li>
+                  <li>配色更現代、柔和且高級感提升 → 低飽和度色彩，減少視覺疲勞。</li>
+                  <li>字體與間距優化 → 提升可讀性與點擊舒適度。</li>
+                  <li>細節更精緻 → 圓角、陰影、視覺層次感增強。</li>
+                  <li>功能設計更直覺，操作更流暢 → 按鈕與工具排列更有邏輯，減少學習成本。</li>
+                </ul>
+                
+              </div>
+              <img src="../images/editor2/img_ui-design-step3.jpg" alt="編輯內容頁面轉變示意圖" class="lightbox-trigger">
+            </div>
+          </div>
+        </div>
+
+        <!-- Start txt1-img2 編輯內容02 -->
+
+        <div class="top-container hero-grid m-1col-2col">
+                  
+          <div class="description-text">
+            <div class="flex-v-4"><span class="sm-title">編輯內容</span><h3 class="title">優化操作區，提升一致性</h3></div>
+          <div class="container hero-grid ">
+            <p class="para"><b>[Before]</b><br>
+              功能依產品類型分散在上下區域，使用者需頻繁移動視線。排列方式偏向技術邏輯，缺乏任務導向，增加理解難度。 
+            </p>  
+            <p class="para"><b>[After]</b><br>  
+              以編輯情境為核心重新分群，相關功能集中於編輯區上方。任務導向的整合方式讓操作更直覺，減少混淆與誤操作。
+            </p>
+          
+          <div class="team-info">
+            <b class="para">分類邏輯</b>
+            <ul class="para">
+              <li><strong>頁面編輯相關</strong>：多頁編輯、頁面管理、頁數設定、單頁/跨頁。</li>
+              <li><strong>視圖調整工具</strong>：鎖定畫面、預覽、放大/縮小。</li>
+              <li><strong>內容操作與控制工具</strong>：選取物件、編輯區塊縮放、回復預設畫面。</li>
+            </ul>
+
+          </div>
+        </div>
+        <!-- container結束 -->
+          </div>
+          <img class="image-block" src="../images/editor2/img_ui-design-step3-2.jpg" alt="編輯作品頁面操作區塊分組強調示意圖" loading="lazy">
+        </div>
+        <!-- End txt1-img2 -->
+        <!-- Satrt img2-txt1 -->
+          <div class="img-txt top-container hero-grid d-2col-1col">
+            <img class="image-block lightbox-trigger">   
+                <div class="description-text ">
+                  <h3>情境式操作引導</h3>
                   <div class="accordion-group">
-                      <div class="accordion-item active" data-img="/images/editor2/img_img-pool01.jpg">
+                      <div class="accordion-item active" data-img="/images/editor2/img_coach-mark.jpg">
                         <div class="accordion-header">
-                          <h5>▍照片池更多操作空間</h5>
+                          <h5>▍Coach Mark — 新功能的主動導覽</h5>
                           <div class="arrow-icon"></div>
                         </div>
                         <div class="accordion-content">
                           <div class="accordion-inner">
-                            <ul class="para">
-                              <li>調整前：照片池位於底部，空間受限且僅能瀏覽與單張刪除，易干擾編輯畫面。</li>
-                              <li>調整後：照片池移至左側欄，操作更集中，新增排序、篩選與多選刪除功能，管理更高效且具擴充彈性。</li>
-                            </ul>
+                            <p class="para">使用者進入編輯畫面時，即可看到圖文並茂的教學提示，協助快速理解新功能或關鍵操作。提示內容會依產品性質動態調整，提供最相關的引導資訊。</p>
                           </div>
                         </div>
                       </div>
 
-                      <div class="accordion-item" data-img="/images/editor2/img_img-pool02.jpg">
+                      <div class="accordion-item" data-img="/images/editor2/img_persistent-toast.jpg">
                         <div class="accordion-header">
-                          <h5>▍側邊欄彈性收合設計</h5>
+                          <h5>▍Persistent Toast — 任務過程的常駐提示</h5>
                           <div class="arrow-icon"></div>
                         </div>
                         <div class="accordion-content">
                           <div class="accordion-inner">
-                            <ul class="para">
-                              <li>調整前：底部照片池遮擋編輯區，操作不便。</li>
-                              <li>調整後：改為可收合的左側欄，避免遮擋並可依需求調整空間，小螢幕操作更靈活、視線更集中。</li>
-                            </ul>
+                            <p class="para">在需要額外輔助說明的頁面，右下角會出現提示框於畫面最上層，提醒使用者關鍵操作或注意事項，並可在閱讀後自由關閉。</p>
                           </div>
                         </div>
                       </div>
+                      <div class="accordion-item" data-img="/images/editor2/img_tooltips.jpg">
+                          <div class="accordion-header">
+                              <h5>▍Interactive Tooltips — 區塊性的即時指引</h5>
+                              <div class="arrow-icon"></div>
+                          </div>
+                          <div class="accordion-content">
+                          <div class="accordion-inner">
+                            <p class="para">針對操作較複雜的功能，透過 Tooltip 提供用途與操作方式的提示，並附上「知道了」按鈕，方便使用者自行關閉。</p>
+                          </div>
+                        </div>
+
+                      </div>
+
                   </div>
 
               </div>
           </div>
-          <!-- End txt1-img2 -->
-          <!-- Satrt img2-txt1 -->
-            <div class="img-txt hero-container hero-grid d-2col-1col">
-              <img class="image-block lightbox-trigger">   
-                  <div class="description-text ">
-                    <h3>提升行動裝置操作直覺性與流暢度</h3>
-                    <div class="accordion-group">
-                        <div class="accordion-item active" data-img="/images/editor2/img_rwd01.jpg">
-                          <div class="accordion-header">
-                            <h5>▍跨裝置響應式介面優化</h5>
-                            <div class="arrow-icon"></div>
-                          </div>
-                          <div class="accordion-content">
-                            <div class="accordion-inner">
-                              <ul class="para">
-                                <li>重新設計跨裝置介面架構，解決手機與平板上按鈕大小不一、介面擁擠的問題。</li>
-                                <li>改善前： 手機與平板介面擁擠、操作混亂，使用者容易誤觸且需頻繁縮放，導致整體體驗不佳。</li>
-                                <li>改善後： 調整按鈕大小與間距，新增平板中斷點與手勢支援，操作更為直覺流暢。</li>
-                              </ul>
-                            </div>
-                          </div>
-                        </div>
+        <!-- End img2-txt1 -->
 
-                        <div class="accordion-item" data-img="/images/editor2/img_rwd02.jpg">
-                          <div class="accordion-header">
-                            <h5>▍功能分組邏輯重整</h5>
-                            <div class="arrow-icon"></div>
-                          </div>
-                          <div class="accordion-content">
-                            <div class="accordion-inner">
-                              <ul class="para">
-                                <li>以使用者實際編輯情境為核心重新分群功能，提升手機版介面的操作邏輯。</li>
-                                <li>改善前：功能排列未經情境化分組，使用者在小螢幕上尋找功能較為費時，不符合行動裝置習慣。</li>
-                                <li>改善後：重整畫面分組，將內容操作與視圖工具邏輯化，讓編輯流程更直覺，大幅降低認知負擔。</li>
-                              </ul>
-                            </div>
-                          </div>
+        <!-- Start toolbar & modal -->
+        <div class="top-container hero-grid m-1col-2col">
+          <img class="image-block lightbox-trigger">   
+              <div class="description-text">
+                <h3>重整 Toolbar 和 Modal 元件</h3>
+                <div class="accordion-group">
+                    <div class="accordion-item active" data-img="/images/editor2/img_toolbar-modal1.jpg">
+                      <div class="accordion-header">
+                        <h5>▍統一現代視覺風格</h5>
+                        <div class="arrow-icon"></div>
+                      </div>
+                      <div class="accordion-content">
+                        <div class="accordion-inner">
+                          <p class="para">統一文字框、QR Code、相片框等各類 Toolbar 與 Modal 元件，建立一致的視覺語言，強化介面整體性。</p>
                         </div>
-                        <div class="accordion-item" data-img="/images/editor2/img_rwd03.jpg">
-                            <div class="accordion-header">
-                                <h5>▍觸控與操作空間優化</h5>
-                                <div class="arrow-icon"></div>
-                            </div>
-                            <div class="accordion-content">
-                            <div class="accordion-inner">
-                              <ul class="para">
-                                <li>優化操作區塊的元件尺寸與間距，並新增照片篩選等功能以提升操作順手度。</li>
-                                <li>改善前： 操作空間擁擠，按鈕因過小或過密而產生「難點」問題，導致觸控反應不靈敏且易出錯。</li>
-                                <li>改善後： 調整元件比例與熱區間距，新增照片篩選功能讓操作更精準，提升整體觸控的滑順感。</li>
-                              </ul>
-                            </div>
-                          </div>
-
-                        </div>
-
+                      </div>
                     </div>
 
+                    <div class="accordion-item" data-img="/images/editor2/img_toolbar-modal2.jpg">
+                      <div class="accordion-header">
+                        <h5>▍新增雙擊文字框的進階編輯 Modal</h5>
+                        <div class="arrow-icon"></div>
+                      </div>
+                      <div class="accordion-content">
+                        <div class="accordion-inner">
+                          <p class="para">使用者可於同一視窗調整文字、顏色、對齊與字型等設定，補足原需分步操作的限制，提升操作效率與彈性。</p>
+                        </div>
+                      </div>
+                    </div>
                 </div>
             </div>
-        <!-- End 編輯內容 -->
         </div>
-      </div>
-        <!-- End ui design container -->
-      </div>
-      <!-- End ui design section -->
+        <!-- End txt1-img2 -->
+        <!-- start 上傳照片 -->
+        <div id="section-step01" class="hero hero-bg-white">
+          <div class="top-container">
+            <!-- 標題區塊 -->
+            <div class="sec-title">
+              <h2 class="title">上傳照片 <span class="sm-title">Step 03</span></h2>
+            </div>
         
-      <!-- Start Style-guide -->
-        <div id="style-guide" class="top-container">
-          <div class="layout-center display-title">Style Guide </div>  
-            <div class="container two-column-grid">
+            <!-- 中間：圖片 + 描述 -->
+            <div class="d-horizontal">
+              <div class="editor2-v-step">
+                <div class="editor2-v-container editor2-v-active-3">
+                  <div class="editor2-v-row" data-step="1">
+                    <div class="editor2-v-stepper-bg">
+                      <div class="editor2-v-number">1</div>
+                    </div>
+                    <div class="editor2-v-text">基本資訊</div>
+                  </div>
+
+                  <div class="editor2-v-row" data-step="2">
+                    <div class="editor2-v-stepper-bg">
+                      <div class="editor2-v-number">2</div>
+                    </div>
+                    <div class="editor2-v-text">套用主題</div>
+                  </div>
+
+                  <div class="editor2-v-row" data-step="3">
+                    <div class="editor2-v-stepper-bg">
+                      <div class="editor2-v-number">3</div>
+                    </div>
+                    <div class="editor2-v-text">編輯內容</div>
+                  </div>
+                </div>
+              </div>
+              <div class="description-text">
+                <h3>上傳照片功能<span class="highlight">整合至編輯內容畫面</span></h3>
+                <div class="flex-v-4">
+                  <b class="para-16">▍整合式左側照片管理與瀏覽體驗優化</b>
+                  <p class="para">將照片管理功能固定於左側邊欄，解決舊版底部配置分散且佔空間的問題。透過直列排列顯示更多照片，並能同時查看上傳進度，不僅降低了使用者的搜尋成本，也讓小螢幕的操作空間更整潔、瀏覽體驗更直覺流暢。</p>
+                </div>                  
+              </div>
+            </div>
+            <img src="../images/editor2/img_ui_upload-img.jpg" alt="上傳照片調整前後示意圖 Banner" class="box-img">
+
+          </div>
+          <div  class="notop-container">
+          </div>
+        </div>
+        <!-- End 上傳照片 -->
+        <!-- Satrt img2-txt1 -->
+        <div class="top-container hero-grid m-1col-2col">
+          <img class="image-block lightbox-trigger">   
+              <div class="description-text">
+                <h3>照片池提高<span class="highlight">排版彈性與可擴充性</span></h3>
+                <div class="accordion-group">
+                    <div class="accordion-item active" data-img="/images/editor2/img_img-pool01.jpg">
+                      <div class="accordion-header">
+                        <h5>▍照片池更多操作空間</h5>
+                        <div class="arrow-icon"></div>
+                      </div>
+                      <div class="accordion-content">
+                        <div class="accordion-inner">
+                          <ul class="para">
+                            <li>調整前：照片池位於底部，空間受限且僅能瀏覽與單張刪除，易干擾編輯畫面。</li>
+                            <li>調整後：照片池移至左側欄，操作更集中，新增排序、篩選與多選刪除功能，管理更高效且具擴充彈性。</li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="accordion-item" data-img="/images/editor2/img_img-pool02.jpg">
+                      <div class="accordion-header">
+                        <h5>▍側邊欄彈性收合設計</h5>
+                        <div class="arrow-icon"></div>
+                      </div>
+                      <div class="accordion-content">
+                        <div class="accordion-inner">
+                          <ul class="para">
+                            <li>調整前：底部照片池遮擋編輯區，操作不便。</li>
+                            <li>調整後：改為可收合的左側欄，避免遮擋並可依需求調整空間，小螢幕操作更靈活、視線更集中。</li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <!-- End txt1-img2 -->
+        <!-- Satrt img2-txt1 -->
+          <div class="img-txt hero-container hero-grid d-2col-1col">
+            <img class="image-block lightbox-trigger">   
+                <div class="description-text ">
+                  <h3>提升行動裝置操作直覺性與流暢度</h3>
+                  <div class="accordion-group">
+                      <div class="accordion-item active" data-img="/images/editor2/img_rwd01.jpg">
+                        <div class="accordion-header">
+                          <h5>▍跨裝置響應式介面優化</h5>
+                          <div class="arrow-icon"></div>
+                        </div>
+                        <div class="accordion-content">
+                          <div class="accordion-inner">
+                            <ul class="para">
+                              <li>重新設計跨裝置介面架構，解決手機與平板上按鈕大小不一、介面擁擠的問題。</li>
+                              <li>改善前： 手機與平板介面擁擠、操作混亂，使用者容易誤觸且需頻繁縮放，導致整體體驗不佳。</li>
+                              <li>改善後： 調整按鈕大小與間距，新增平板中斷點與手勢支援，操作更為直覺流暢。</li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="accordion-item" data-img="/images/editor2/img_rwd02.jpg">
+                        <div class="accordion-header">
+                          <h5>▍功能分組邏輯重整</h5>
+                          <div class="arrow-icon"></div>
+                        </div>
+                        <div class="accordion-content">
+                          <div class="accordion-inner">
+                            <ul class="para">
+                              <li>以使用者實際編輯情境為核心重新分群功能，提升手機版介面的操作邏輯。</li>
+                              <li>改善前：功能排列未經情境化分組，使用者在小螢幕上尋找功能較為費時，不符合行動裝置習慣。</li>
+                              <li>改善後：重整畫面分組，將內容操作與視圖工具邏輯化，讓編輯流程更直覺，大幅降低認知負擔。</li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="accordion-item" data-img="/images/editor2/img_rwd03.jpg">
+                          <div class="accordion-header">
+                              <h5>▍觸控與操作空間優化</h5>
+                              <div class="arrow-icon"></div>
+                          </div>
+                          <div class="accordion-content">
+                          <div class="accordion-inner">
+                            <ul class="para">
+                              <li>優化操作區塊的元件尺寸與間距，並新增照片篩選等功能以提升操作順手度。</li>
+                              <li>改善前： 操作空間擁擠，按鈕因過小或過密而產生「難點」問題，導致觸控反應不靈敏且易出錯。</li>
+                              <li>改善後： 調整元件比例與熱區間距，新增照片篩選功能讓操作更精準，提升整體觸控的滑順感。</li>
+                            </ul>
+                          </div>
+                        </div>
+
+                      </div>
+
+                  </div>
+
+              </div>
+          </div>
+      <!-- End 編輯內容 -->
+      </div>
+    </div>
+      <!-- End ui design container -->
+        </div>
+        <!-- End UI design -->
+      
+        <!-- Start Style-guide -->
+        <div id="style-guide">
+          <div class="sec-title-container">
+            <h2>Style Guide</h2>
+          </div>
+            <div class="top-container container two-column-grid">
               <div class="item item-bg-grey">
                 <div class="content-header">
                     <span class="vertical-decorator"></span>
@@ -920,87 +919,76 @@
 
             </div>
 
-                  <!-- only img -->
-                  <div  class="notop-container">
-                    <img src="../images/common/img_color.jpg" alt="Banner" class="lightbox-trigger">
-                  </div>
-                  <div  class="flex-v-24">
-                    <img src="../images/common/img_typography.jpg" alt="Banner" class="lightbox-trigger">
-                  </div>
-                  <div class="top-container layout-center">
-                    <h2 class="title">UI Kit</h2>
-                    <h3 class="title">清晰的視覺元素，明確定義設計元件</h3>
-                    <p class="t-center para">先將各類可能會發生的情境列出，並設計不同情境下的元件樣式。</p>
-                  </div>
-                  <div  class="flex-v-24">
-                    <img src="../images/common/img_input-textfield.jpg" alt="Text Field 設計元件" class="lightbox-trigger">
-                    <img src="../images/common/img_input-textarea.jpg" alt="Textarea 設計元件" class="lightbox-trigger">
-                  </div>
-                  <div  class="flex-v-24">
-                    <img src="../images/common/img_button.jpg" alt="Button 設計元件" class="lightbox-trigger">
-                  </div>
-                  <div  class="flex-v-24">
-                    <img src="../images/common/img_select-checkbox-radio.jpg" alt="Select 相關元件" class="lightbox-trigger">
-                  </div>
-                  <div  class="flex-v-24">
-                    <img src="../images/common/img_tab-switch-pagination.jpg" alt="Tab 設計元件" class="lightbox-trigger">
-                  </div>
-                  <div  class="flex-v-24">
-                    <img src="../images/common/img_taost.jpg" alt="Toast 設計元件" class="lightbox-trigger">
-                  </div>
-                  <div  class="flex-v-24">
-                    <img src="../images/common/img_badge.jpg" alt="Badge(tag&pill)設計元件" class="lightbox-trigger">
-                  </div>
+            <!-- only img -->
+            <div class="top-container flex-v-24">
+              <img src="../images/common/img_color.jpg" alt="Banner" class="lightbox-trigger">
+              <img src="../images/common/img_typography.jpg" alt="Banner" class="lightbox-trigger">
+            </div>
+            <div class="top-container layout-center">
+              <h2 class="title">UI Kit</h2>
+              <h3 class="title">清晰的視覺元素，明確定義設計元件</h3>
+              <p class="t-center para">先將各類可能會發生的情境列出，並設計不同情境下的元件樣式。</p>
+            </div>
+            <div  class="hero-container flex-v-24">
+              <img src="../images/common/img_input-textfield.jpg" alt="Text Field 設計元件" class="lightbox-trigger">
+              <img src="../images/common/img_input-textarea.jpg" alt="Textarea 設計元件" class="lightbox-trigger">
+              <img src="../images/common/img_button.jpg" alt="Button 設計元件" class="lightbox-trigger">
+              <img src="../images/common/img_select-checkbox-radio.jpg" alt="Select 相關元件" class="lightbox-trigger">
+              <img src="../images/common/img_tab-switch-pagination.jpg" alt="Tab 設計元件" class="lightbox-trigger">
+              <img src="../images/common/img_taost.jpg" alt="Toast 設計元件" class="lightbox-trigger">
+              <img src="../images/common/img_badge.jpg" alt="Badge(tag&pill)設計元件" class="lightbox-trigger">
+            </div>
 
         </div>
-    <!-- End Style Guide -->
-    <!-- Start Takeaway -->
-      
-      <div id="takeaway" class="top-container">
-        <div class="layout-center">
-          <div class="display-title">Takeaways</div> 
-            <p class="t-center para">
-              這次改版讓我體會到 UX 的核心在於解決痛點而非僅美化介面。我針對資訊架構與操作不順，重整照片區域、優化視覺層次與配色，並調整功能列以降低認知負擔。
-            </p>
-        </div>
+        <!-- End Style Guide -->
+        <!-- Start Takeaway -->
+        <div id="takeaway">
+          <div class="sec-title-container">
+            <h2>Takeaways</h2>
+          </div>
+          <div class="top-container">
+          <div class="layout-center">
+              <p class="t-center para">
+                這次改版讓我體會到 UX 的核心在於解決痛點而非僅美化介面。我針對資訊架構與操作不順，重整照片區域、優化視覺層次與配色，並調整功能列以降低認知負擔。
+              </p>
+          </div>
 
-        <div class="two-column-grid">
+          <div class="two-column-grid">
 
-          <div class="item item-bg-grey">
-            <h4 class="title">透過精準提問，挖掘用戶的真實需求與痛點</h4>
-            <p class="para">與使用者訪談時，我學到關鍵不僅在詢問需求，而是透過開放式提問挖掘真實痛點。像部分用戶覺得介面「不好用」，實際原因是照片管理分散，需頻繁切換視窗。</p>
+            <div class="item item-bg-grey">
+              <h4 class="title">透過精準提問，挖掘用戶的真實需求與痛點</h4>
+              <p class="para">與使用者訪談時，我學到關鍵不僅在詢問需求，而是透過開放式提問挖掘真實痛點。像部分用戶覺得介面「不好用」，實際原因是照片管理分散，需頻繁切換視窗。</p>
+            </div>
+            <div class="item item-bg-grey">
+              <h4 class="title">如何建立清晰的資訊架構，讓內容有層次且易讀</h4>
+              <p class="para">在優化介面過程中，我體會到資訊架構對使用行為的影響。新版統一照片管理區域位置，減少視線移動，並透過色彩與間距強調主要功能，讓操作更順暢直覺。</p>
+            </div>
+            <div class="item item-bg-grey">
+              <h4 class="title">反思使用者操作行為，分析背後的設計問題</h4>
+              <p class="para">除了操作不順外，我也思考使用者為何會誤操作或忽略步驟。像舊版按鈕間距過小導致誤點，問題不在用戶而是設計需優化，讓我更關注降低認知負擔與提升操作直覺性。</p>
+            </div>
+            <div class="item item-bg-grey">
+            <h4 class="title">跨部門溝通與協作，提升效率並精準傳達設計思維</h4>
+            <p class="para">與開發與產品團隊合作時，我學會以明確邏輯表達設計需求，確保開發能準確實作。以「拖拉照片排序」為例，我運用流程圖與互動示意協助團隊快速對齊，降低溝通與修改成本。</p>
+            </div>
           </div>
-          <div class="item item-bg-grey">
-            <h4 class="title">如何建立清晰的資訊架構，讓內容有層次且易讀</h4>
-            <p class="para">在優化介面過程中，我體會到資訊架構對使用行為的影響。新版統一照片管理區域位置，減少視線移動，並透過色彩與間距強調主要功能，讓操作更順暢直覺。</p>
-          </div>
-          <div class="item item-bg-grey">
-            <h4 class="title">反思使用者操作行為，分析背後的設計問題</h4>
-            <p class="para">除了操作不順外，我也思考使用者為何會誤操作或忽略步驟。像舊版按鈕間距過小導致誤點，問題不在用戶而是設計需優化，讓我更關注降低認知負擔與提升操作直覺性。</p>
-          </div>
-          <div class="item item-bg-grey">
-          <h4 class="title">跨部門溝通與協作，提升效率並精準傳達設計思維</h4>
-          <p class="para">與開發與產品團隊合作時，我學會以明確邏輯表達設計需求，確保開發能準確實作。以「拖拉照片排序」為例，我運用流程圖與互動示意協助團隊快速對齊，降低溝通與修改成本。</p>
           </div>
         </div>
-      </div>
-      <!-- End Takeaway -->
-      <div class="hero-container layout-center">
-        <div class="btn-group-center">
-          <a href="https://chingjungkuan.github.io/single" target="_blank" class="btn btn-primary btn-lg">Single 線上編輯器</a>
-          <a href="https://chingjungkuan.github.io/#ui-design" class="btn btn-secondary btn-lg">作品集專案列表</a>
+        <!-- End Takeaway -->
+        <div class="hero-container layout-center">
+          <div class="btn-group-center">
+            <a href="https://chingjungkuan.github.io/single" target="_blank" class="btn btn-primary btn-lg">Single 線上編輯器</a>
+            <a href="https://chingjungkuan.github.io/#ui-design" class="btn btn-secondary btn-lg">作品集專案列表</a>
+          </div>
+        </div>             
+        <!-- Lightbox 元件 -->
+        <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+            <img id="lightbox-img" src="" alt="放大圖">
         </div>
-      </div>             
-      <!-- Lightbox 元件 -->
-      <div id="lightbox" class="lightbox" onclick="closeLightbox()">
-          <img id="lightbox-img" src="" alt="放大圖">
-      </div>
-      <!-- 置頂滾動按鈕 -->
-      <button id="scrollToTopBtn" title="回到頂部">⬆</button>     
-
-    </div>
-  </section>
-  <!-- End main -->
+        <!-- 置頂滾動按鈕 -->
+        <button id="scrollToTopBtn" title="回到頂部">⬆</button>     
+      </main>
+    <!-- End main -->
 
   <!-- Start footer -->
     <div id="site-footer" data-include="/components/footer.html"></div>
