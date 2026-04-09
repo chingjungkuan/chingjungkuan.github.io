@@ -16,7 +16,14 @@ body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
-
+:root {
+    --brand-red: #ff4d00;
+    --brand-peach: #fceae0;
+    --border-black: #121212;
+    --bg-grey: #DFE2E4;
+    --text-main: #333333;
+    --text-muted: #888888;
+}
 h1,h2,h3,h4,h5,h6 {
     margin: 0;
     line-height: 1.4;
@@ -558,7 +565,8 @@ p {
     order: 1;
 }
 
-.img-txt .image-block {
+.img-txt .image-block,
+.img-txt .comparison-container {
     order: 2;
 }
 
@@ -567,7 +575,8 @@ p {
         order: 2;
     }
 
-    .img-txt .image-block {
+    .img-txt .image-block,
+    .img-txt .comparison-container {
         order: 1;
     }
 }
@@ -1507,6 +1516,10 @@ img {
 .overview-left {
     display: grid;
     gap: 16px;
+}
+
+.overview-right ul {
+    margin-left: 24px;
 }
 
 @media (min-width: 768px) {
