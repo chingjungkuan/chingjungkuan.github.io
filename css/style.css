@@ -16,6 +16,7 @@ body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
+
 :root {
     --brand-red: #ff4d00;
     --brand-peach: #fceae0;
@@ -24,7 +25,13 @@ body {
     --text-main: #333333;
     --text-muted: #888888;
 }
-h1,h2,h3,h4,h5,h6 {
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     margin: 0;
     line-height: 1.4;
     font-weight: bold;
@@ -263,6 +270,7 @@ p {
         padding: 80px 16px 0 16px;
     }
 }
+
 /* ==========================
    Layout Center 置中容器
 ========================== */
@@ -280,6 +288,7 @@ p {
 .align-end-items {
     align-items: end !important;
 }
+
 /* ==========================
    滿版線條區塊（Takeaway、UI Design）
 ========================== */
@@ -319,12 +328,27 @@ p {
 }
 
 @media (min-width: 768px) {
-    .display-title { font-size: 64px; }
-    .sec-title-container { padding: 12px; }
-    .sec-title-container h2 { font-size: 48px; }
-    .sec-subtitle-container { padding: 12px; }
-    .sec-subtitle-container h3 { font-size: 36px; }
+    .display-title {
+        font-size: 64px;
+    }
+
+    .sec-title-container {
+        padding: 12px;
+    }
+
+    .sec-title-container h2 {
+        font-size: 48px;
+    }
+
+    .sec-subtitle-container {
+        padding: 12px;
+    }
+
+    .sec-subtitle-container h3 {
+        font-size: 36px;
+    }
 }
+
 /* ==========================
    專案用文字區塊
 ========================== */
@@ -514,6 +538,7 @@ p {
     justify-content: center;
     align-items: center;
 }
+
 .ic-32 {
     width: 32px;
     height: 32px;
@@ -1416,6 +1441,7 @@ img {
     from {
         opacity: 0;
     }
+
     to {
         opacity: 1;
     }
@@ -1534,4 +1560,32 @@ img {
     .overview {
         grid-template-columns: 1fr 1fr;
     }
+}
+
+/* ==========================
+   Tooltips
+========================== */
+.click-zoom-tooltip {
+    position: absolute;
+    bottom: -14px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #8c8c8c;
+    color: #fff;
+    padding: 6px 12px;
+    border-radius: 4px;
+    font-size: 14px;
+    pointer-events: none;
+    z-index: 10;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+.click-zoom-tooltip::before {
+    content: "";
+    position: absolute;
+    top: -6px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 0 6px 6px 6px;
+    border-style: solid;
+    border-color: transparent transparent #8c8c8c transparent;
 }
