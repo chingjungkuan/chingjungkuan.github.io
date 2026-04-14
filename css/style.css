@@ -657,6 +657,7 @@ p {
     border: 1px solid #fff;
     color: #fff;
     border-radius: 4px;
+    white-space: nowrap;
     transition: all 0.3s;
 }
 
@@ -1577,8 +1578,9 @@ img {
     font-size: 14px;
     pointer-events: none;
     z-index: 10;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
+
 .click-zoom-tooltip::before {
     content: "";
     position: absolute;
