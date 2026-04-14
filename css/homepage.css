@@ -642,6 +642,7 @@ Component (通用組件與塗鴉線條)
 .info-item {
     display: flex;
     align-items: flex-start;
+    flex-wrap: wrap;
     gap: 8px;
 }
 
