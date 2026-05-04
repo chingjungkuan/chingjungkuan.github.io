@@ -1,0 +1,524 @@
+@charset "utf-8";
+
+/* ==========================================================================
+   1. Global Settings & Variables
+   ========================================================================== */
+
+:root {
+    --brand-brown: #7B6453;
+    --brand-brown-light: #EDE5DE;
+    --brand-brown-dark: #4A3B2E;
+    --bg-light-brown: #F9F5F2;
+    --border-black: #121212;
+    --text-main: #333333;
+    --text-muted: #888888;
+    --transition-smooth: 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn.btn-secondary {
+    background-color: white;
+    border: 1px solid var(--brand-brown);
+    color: var(--brand-brown);
+}
+.btn.btn-secondary:hover {
+    background-color: var(--brand-brown);
+    color: #fff;
+}
+
+/* ==========================================================================
+   2. Header Banner
+   ========================================================================== */
+
+.header-blue {
+    background-color: var(--brand-brown);
+    color: #fff;
+}
+
+.blue-dot {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: var(--brand-brown);
+    margin-right: 8px;
+}
+
+.bg-light-blue {
+    background-color: var(--bg-light-brown);
+}
+
+.text-primary-blue {
+    color: var(--brand-brown);
+}
+
+/* ==========================================================================
+   3. Section Title
+   ========================================================================== */
+
+.sec-title-en {
+    font-size: 16px;
+    font-weight: 400;
+    color: #fff;
+    margin-left: 8px;
+}
+
+/* ==========================================================================
+   4. Design Token Flow
+   ========================================================================== */
+
+.ds-token-flow {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+@media (min-width: 768px) {
+    .ds-token-flow {
+        flex-direction: row;
+        align-items: flex-start;
+        flex-wrap: wrap;
+    }
+}
+
+.ds-token-step {
+    flex: 1;
+    min-width: 160px;
+    background: #fff;
+    border: 1px solid var(--brand-brown-light);
+    border-radius: 12px;
+    padding: 20px 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.ds-token-badge {
+    display: inline-block;
+    background-color: var(--brand-brown);
+    color: #fff;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 4px 10px;
+    border-radius: 20px;
+    width: fit-content;
+}
+
+.ds-token-label {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text-main);
+    margin: 0;
+}
+
+.ds-token-example {
+    font-size: 12px;
+    color: var(--text-muted);
+    margin: 0;
+    line-height: 1.6;
+}
+
+.ds-token-example code {
+    font-size: 11px;
+    background: var(--bg-light-brown);
+    padding: 2px 6px;
+    border-radius: 4px;
+    color: var(--brand-brown-dark);
+}
+
+.ds-token-star {
+    font-size: 12px;
+    color: var(--brand-brown);
+    font-weight: 600;
+    margin: 0;
+}
+
+.ds-token-arrow {
+    font-size: 20px;
+    color: var(--brand-brown);
+    transform: rotate(90deg);
+    align-self: center;
+    flex-shrink: 0;
+}
+
+@media (min-width: 768px) {
+    .ds-token-arrow {
+        transform: none;
+        padding-top: 24px;
+    }
+}
+
+/* ==========================================================================
+   5. Semantic Naming Examples
+   ========================================================================== */
+
+.ds-naming-examples {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.ds-naming-item {
+    background: var(--bg-light-brown);
+    border-radius: 8px;
+    padding: 12px 16px;
+}
+
+.ds-naming-item code {
+    display: block;
+    font-size: 13px;
+    color: var(--brand-brown-dark);
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.ds-naming-item p {
+    font-size: 13px;
+    color: var(--text-muted);
+    margin: 0;
+}
+
+/* ==========================================================================
+   6. Component Props Table
+   ========================================================================== */
+
+.ds-props-table {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin: 8px 0;
+}
+
+.ds-props-row {
+    display: flex;
+    gap: 12px;
+    align-items: baseline;
+    font-size: 14px;
+}
+
+.ds-prop-key {
+    flex-shrink: 0;
+    width: 80px;
+    font-weight: 600;
+    color: var(--brand-brown-dark);
+}
+
+.ds-prop-val {
+    color: var(--text-muted);
+    line-height: 1.5;
+}
+
+/* ==========================================================================
+   7. Project Tags（實戰延伸專案標籤）
+   ========================================================================== */
+
+.ds-project-tags-container {
+    display: flex;
+    gap: 12px;
+    padding: 20px 24px;
+    flex-wrap: wrap;
+}
+
+.ds-project-tag {
+    border: 1.5px solid var(--border-black);
+    background: #fff;
+    color: var(--border-black);
+    font-size: 14px;
+    font-weight: 600;
+    padding: 8px 20px;
+    border-radius: 2px;
+    letter-spacing: 0.02em;
+}
+
+@media (min-width: 768px) {
+    .ds-project-tags-container {
+        padding: 24px 48px;
+    }
+}
+
+/* ==========================================================================
+   8b. DS Context Cards（前情提要簡介）
+   ========================================================================== */
+
+.ds-context-title {
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--text-main);
+    text-align: center;
+}
+
+.ds-context-cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+}
+
+@media (min-width: 768px) {
+    .ds-context-cards {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.ds-context-card {
+    background: var(--bg-light-brown);
+    border: 1px solid var(--brand-brown-light);
+    border-radius: 12px;
+    padding: 20px 20px 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.ds-context-card h4 {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--brand-brown-dark);
+    margin: 0;
+}
+
+.ds-context-card p {
+    font-size: 13px;
+    color: var(--text-muted);
+    line-height: 1.7;
+    margin: 0;
+}
+
+/* ==========================================================================
+   8. Result Gallery
+   ========================================================================== */
+
+.ds-result-gallery {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+    margin-top: 16px;
+}
+
+@media (min-width: 768px) {
+    .ds-result-gallery {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.ds-result-gallery img {
+    width: 100%;
+    border-radius: 8px;
+    object-fit: cover;
+    cursor: zoom-in;
+}
+
+/* ==========================================================================
+   9. Slots Diagram
+   ========================================================================== */
+
+.ds-slots-diagram {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-self: start;
+}
+
+.ds-slots-card {
+    border: 1px solid var(--brand-brown-light);
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.ds-slots-label {
+    background: var(--brand-brown-light);
+    color: var(--brand-brown-dark);
+    font-size: 12px;
+    font-weight: 600;
+    padding: 6px 14px;
+}
+
+.ds-slots-skeleton {
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    background: #fff;
+}
+
+.ds-slot-zone {
+    border: 2px dashed var(--brand-brown);
+    border-radius: 8px;
+    padding: 12px;
+    text-align: center;
+    font-size: 12px;
+    color: var(--brand-brown);
+    font-weight: 600;
+}
+
+.ds-slots-fixed-row {
+    display: flex;
+    gap: 8px;
+}
+
+.ds-slots-fixed-block {
+    flex: 1;
+    height: 20px;
+    background: var(--bg-light-brown);
+    border-radius: 4px;
+}
+
+.ds-slots-benefit {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px 24px;
+}
+
+.ds-slots-benefit-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 13px;
+    color: var(--text-main);
+}
+
+.ds-slots-icon {
+    width: 24px;
+    height: 24px;
+    background: var(--brand-brown);
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    flex-shrink: 0;
+}
+
+/* ==========================================================================
+   10. Color Role 60/20/10/10
+   ========================================================================== */
+
+.ds-color-roles {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    margin-bottom: 16px;
+}
+
+.ds-color-role-item {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.ds-color-role-bar {
+    height: 36px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    padding: 0 12px;
+    width: 100%;
+    border: 1px solid rgba(0,0,0,0.06);
+}
+
+.ds-color-role-pct {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--text-main);
+    white-space: nowrap;
+}
+
+.ds-color-role-info {
+    font-size: 14px;
+    line-height: 1.6;
+    flex: 1;
+}
+
+.ds-color-role-info b {
+    display: block;
+    color: var(--brand-brown-dark);
+    margin-bottom: 2px;
+}
+
+.ds-color-role-info p {
+    color: var(--text-muted);
+    margin: 0;
+}
+
+.ds-color-role-rule {
+    background: var(--bg-light-brown);
+    border-left: 3px solid var(--brand-brown);
+    padding: 12px 16px;
+    border-radius: 0 8px 8px 0;
+    font-size: 14px;
+    color: var(--text-main);
+    line-height: 1.6;
+}
+
+/* ==========================================================================
+   11. DS Impact Table
+   ========================================================================== */
+
+.ds-impact-table {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--brand-brown-light);
+    border-radius: 12px;
+    overflow: hidden;
+    margin-top: 8px;
+}
+
+.ds-impact-row {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 4px;
+    padding: 12px 20px;
+    border-bottom: 1px solid var(--brand-brown-light);
+    font-size: 14px;
+    line-height: 1.5;
+    align-items: center;
+}
+
+@media (min-width: 768px) {
+    .ds-impact-row {
+        grid-template-columns: 2fr 2fr 1.5fr;
+        gap: 16px;
+    }
+}
+
+.ds-impact-row:last-child {
+    border-bottom: none;
+}
+
+.ds-impact-header {
+    background: var(--bg-light-brown);
+    font-weight: 600;
+    font-size: 13px;
+    color: var(--brand-brown-dark);
+}
+
+.ds-impact-row code {
+    font-size: 11px;
+    background: var(--brand-brown-light);
+    color: var(--brand-brown-dark);
+    padding: 2px 6px;
+    border-radius: 4px;
+    word-break: break-all;
+}
+
+/* ==========================================================================
+   12. Overview Layout（繼承 account 模式）
+   ========================================================================== */
+
+.border-container {
+    margin: 0 auto;
+    padding: 40px 0;
+    display: grid;
+    gap: 24px;
+    border-bottom: 1px solid var(--border-black);
+}
+
+@media (min-width: 768px) {
+    .border-container {
+        padding: 60px 16px;
+    }
+    .overview {
+        grid-template-columns: 5fr 7fr;
+    }
+}
