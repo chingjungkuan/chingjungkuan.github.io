@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="../css/normalize.css">
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/design-system.css">
+    <link rel="stylesheet" href="/css/accordion.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 </head>
@@ -26,6 +27,7 @@
         <li><a href="#component">Component</a></li>
         <li><a href="#theme">DS 實戰延伸</a></li>
         <li><a href="#result">套用成果</a></li>
+        <li><a href="#takeaway">Takeaway</a></li>
       </ul>
     </nav>
 
@@ -48,8 +50,8 @@
           <div class="overview">
             <div class="overview-left">
               <h2 class="title">概述 <span class="sm-title">Overview</span></h2>
-              <h3 class="title">點點印｜<span class="text-primary-brown">從零建立可擴張的品牌設計系統</span></h3>
-              <h5 class="title">#B2B #Design System #Figma</h5>
+              <h3 class="title"><span class="text-primary-brown">從零建立可擴張的品牌設計系統</span></h3>
+              <h5 class="title">#點點印 #TinTint #Design System #Figma</h5>
 
               <div class="team-info">
                 <p class="para"><strong>Team |</strong> TinTint 點點印</p>
@@ -58,31 +60,17 @@
                 <p class="para"><strong>Deliverables |</strong> DS + Token + Guideline</p>
               </div>
             </div>
-
-            <div class="project-sections-container flex-v-8 js-block-text-only">
-              <div class="tab-content-container">
-                <div class="tab-panel active">
-                  <ul>
-                    <li class="para"><strong>背景：</strong>點點印服務橫跨官網與 Editor 2 兩大設計場景，過去缺乏統一的元件規範，導致跨頁面的視覺不一致與開發落差。</li>
-                    <li class="para"><strong>目標：</strong>從零建立一套可長期維護的品牌設計系統，涵蓋 Design Token 四層架構、Component Library，以及支援多主題與深淺色模式的擴充機制。</li>
-                    <li class="para"><strong>成果：</strong>此作品集分為兩階段——DS 基礎建立，以及透過主題募集 2.0 專案進行的實戰延伸驗證。</li>
-                  </ul>
-                </div>
-              </div>
+            <div class="overview-right">
+              <ul>
+                <li class="para"><strong>背景：</strong>點點印服務橫跨官網與 Editor 2 兩大設計場景，過去缺乏統一的元件規範，導致跨頁面的視覺不一致與開發落差。</li>
+                <li class="para"><strong>目標：</strong>從零建立一套可長期維護的品牌設計系統，涵蓋 Design Token 四層架構、Component Library，以及支援多主題與深淺色模式的擴充機制。</li>
+                <li class="para"><strong>成果：</strong>此作品集分為兩階段——DS 基礎建立，以及透過主題募集 2.0 專案進行的實戰延伸驗證。</li>
+              </ul>
             </div>
           </div>
         </div>
       </div>
       <!-- End Overview -->
-
-      <!-- Start DS Overview Image -->
-      <div class="top-container">
-        <div class="project-sections-container flex-v-24 js-block-image-text">
-          <h2 class="title">設計系統全貌 <span class="sm-title">System Overview</span></h2>
-          <img class="lightbox-trigger box-img" src="/images/design-system/img_overview.jpg" alt="Design System 全貌架構圖">
-        </div>
-      </div>
-      <!-- End DS Overview Image -->
 
       <!-- ============================================================ -->
       <!-- Start Foundation -->
@@ -102,7 +90,7 @@
                 <p>整套色彩系統以品牌主色 <code>#7B6453</code> 為錨點，搭配 CTA 橘 <code>#EB9164</code> 作為行動呼籲色，並以 Basic 灰階（0–100）作為文字、背景、分隔線的基礎。Success / Info / Warning / Danger 語意色則確保狀態反饋語義一致。</p>
               </div>
               <div class="flex-v-4 para">
-                <b class="para-16">為什麼這樣選？</b>
+                <b class="para-16">選擇策略</b>
                 <ul>
                   <li>主品牌色選用溫暖大地棕，呼應點點印印刷質感與親和力定位。</li>
                   <li>CTA 橘與主色同色調但彩度更高，製造視覺對比又維持品牌一致性。</li>
@@ -111,12 +99,12 @@
               </div>
             </div>
           </div>
-          <img class="image-block lightbox-trigger" src="/images/design-system/img_foundation_color.jpg" alt="色彩系統規範">
+          <img class="image-block lightbox-trigger" src="/images/design-system/img_color.jpg" alt="色彩系統規範">
         </div>
 
         <!-- 字型規範 -->
         <div class="img-txt top-container hero-grid d-2col-1col">
-          <img class="image-block lightbox-trigger" src="/images/design-system/img_foundation_typography.jpg" alt="字型排版規範">
+          <img class="image-block lightbox-trigger" src="/images/design-system/img_typography.jpg" alt="字型排版規範">
           <div class="description-text">
             <h2 class="title">字型排版 <span class="sm-title">Typography</span></h2>
             <div class="flex-v-16">
@@ -133,7 +121,7 @@
         </div>
 
         <!-- Spacing / 圓角 / 陰影 -->
-        <div class="top-container hero-grid m-1col-2col">
+        <div class="hero-container hero-grid m-1col-2col">
           <div class="description-text">
             <h2 class="title">Spacing・圓角・陰影</h2>
             <div class="flex-v-16">
@@ -151,7 +139,7 @@
               </div>
             </div>
           </div>
-          <img class="image-block lightbox-trigger" src="/images/design-system/img_foundation_spacing.jpg" alt="間距圓角陰影規範">
+          <img class="image-block lightbox-trigger" src="/images/design-system/img_spacing.jpg" alt="間距圓角陰影規範">
         </div>
 
       </div>
@@ -180,7 +168,7 @@
                 </ul>
               </div>
             </div>
-            <img class="image-block lightbox-trigger" src="/images/design-system/img_token_architecture.jpg" alt="Design Token 四層架構圖">
+            <img class="image-block lightbox-trigger" src="/images/design-system/img_design-token.jpg" alt="Design Token 四層架構圖">
           </div>
           <div class="project-sections-container flex-v-24">
 
@@ -195,10 +183,12 @@
               </div>
               <div class="ds-token-arrow">→</div>
               <div class="ds-token-step">
-                <div class="ds-token-badge">Theme / Brand</div>
+                <div class="ds-token-header">
+                  <div class="ds-token-badge">Theme / Brand</div>
+                  <p class="ds-token-star">換主題色只動這層</p>
+                </div>
                 <p class="ds-token-label">主題層・多主題切換</p>
                 <p class="ds-token-example"><code>primary50</code><br>← defaultX 或 purpleX</p>
-                <p class="ds-token-star">★ 換主題色只動這層</p>
               </div>
               <div class="ds-token-arrow">→</div>
               <div class="ds-token-step">
@@ -210,13 +200,13 @@
               <div class="ds-token-step">
                 <div class="ds-token-badge">元件</div>
                 <p class="ds-token-label">套用 Token</p>
-                <p class="ds-token-example">Button / Field / Badge…</p>
+                <p class="ds-token-example"><code>Button</code><br>各類元件名稱，如：Field / Badge…</p>
               </div>
             </div>
 
             <!-- Semantic 命名邏輯 -->
             <div class="img-txt hero-grid d-2col-1col">
-              <img class="image-block lightbox-trigger" src="/images/design-system/img_token_semantic.jpg" alt="Semantic 命名邏輯截圖">
+              <img class="image-block lightbox-trigger" src="/images/design-system/img_semantic.jpg" alt="Semantic 命名邏輯截圖">
               <div class="description-text">
                 <h3 class="title">Semantic 命名邏輯</h3>
                 <div class="flex-v-8 para">
@@ -298,7 +288,7 @@
         </div>
 
         <div class="img-txt top-container hero-grid d-2col-1col">
-          <img class="image-block lightbox-trigger" src="/images/design-system/img_component_button.jpg" alt="Button 元件變體與狀態">
+          <img class="image-block lightbox-trigger" src="/images/design-system/img_button.jpg" alt="Button 元件變體與狀態">
           <div class="description-text">
             <h3 class="title">Button</h3>
             <div class="flex-v-8 para">
@@ -308,7 +298,7 @@
                 <div class="ds-props-row"><span class="ds-prop-key">Size</span><span class="ds-prop-val">Large・Medium・Small・XSmall</span></div>
                 <div class="ds-props-row"><span class="ds-prop-key">Color</span><span class="ds-prop-val">Primary・CTA・Light・Basic・Grey</span></div>
                 <div class="ds-props-row"><span class="ds-prop-key">State</span><span class="ds-prop-val">Normal・Hovered・Active・Disabled</span></div>
-                <div class="ds-props-row"><span class="ds-prop-key">Icon</span><span class="ds-prop-val">Left / Right / Only（Boolean）</span></div>
+                <div class="ds-props-row"><span class="ds-prop-key">Icon</span><span class="ds-prop-val">Left・Right・Icon Only</span></div>
               </div>
               <p>Icon Left / Right 以 Boolean 獨立控制，不因圖示有無而產生額外 Variants，有效減少元件總數。</p>
             </div>
@@ -322,20 +312,73 @@
             <div class="flex-v-8 para">
               <p>分為原子層（Tab-Item，11 Variants）與分子層（tab-group，14 Variants）兩層——原子層定義樣式，分子層只負責排列邏輯。修改 Tab-Item 時，tab-group 自動同步更新，無需手動調整。</p>
               <div class="ds-props-table">
-                <div class="ds-props-row"><span class="ds-prop-key">Size</span><span class="ds-prop-val">S / M</span></div>
+                <div class="ds-props-row"><span class="ds-prop-key">Size</span><span class="ds-prop-val">S・M</span></div>
                 <div class="ds-props-row"><span class="ds-prop-key">Status</span><span class="ds-prop-val">Normal・Disabled・Hovered・Active</span></div>
-                <div class="ds-props-row"><span class="ds-prop-key">Direction</span><span class="ds-prop-val">Horizontal / Vertical</span></div>
-                <div class="ds-props-row"><span class="ds-prop-key">Badge / Icon</span><span class="ds-prop-val">Boolean 開關</span></div>
+                <div class="ds-props-row"><span class="ds-prop-key">Direction</span><span class="ds-prop-val">Horizontal・Vertical</span></div>
+                <div class="ds-props-row"><span class="ds-prop-key">Badge</span><span class="ds-prop-val">Boolean</span></div>
+                <div class="ds-props-row"><span class="ds-prop-key">Icon</span><span class="ds-prop-val">Boolean</span></div>
                 <div class="ds-props-row"><span class="ds-prop-key">Quantity</span><span class="ds-prop-val">2–12 個項目</span></div>
               </div>
             </div>
           </div>
-          <img class="image-block lightbox-trigger" src="/images/design-system/img_component_tab.jpg" alt="Tab 元件變體與狀態">
+          <img class="image-block lightbox-trigger" src="/images/design-system/img_tab.jpg" alt="Tab 元件變體與狀態">
         </div>
 
-        <!-- Figma 組件庫截圖 -->
-        <div class="hero-container">
-          <img class="lightbox-trigger box-img" src="/images/design-system/img_component_library.jpg" alt="Figma 組件庫面板截圖">
+        <!-- 精選元件：Text Field -->
+        <div class="img-txt top-container hero-grid d-2col-1col">
+          <img class="image-block lightbox-trigger" src="/images/design-system/img_text-field.jpg" alt="Text Field 元件狀態展示">
+          <div class="description-text">
+            <h3 class="title">Text Field</h3>
+            <div class="flex-v-8 para">
+              <p>完整定義五種互動狀態，搭配 Boolean 開關控制 lead icon、hint、必填標示與 invalidation——不同配置之間無需另開 Variant，保持元件庫的精簡。</p>
+              <div class="ds-props-table">
+                <div class="ds-props-row"><span class="ds-prop-key">Size</span><span class="ds-prop-val">S（14px）・M（16px）</span></div>
+                <div class="ds-props-row"><span class="ds-prop-key">Status</span><span class="ds-prop-val">Default・Active・Focused・Filled・Disabled</span></div>
+                <div class="ds-props-row"><span class="ds-prop-key">必填</span><span class="ds-prop-val">Boolean</span></div>
+                <div class="ds-props-row"><span class="ds-prop-key">Lead Icon</span><span class="ds-prop-val">Boolean</span></div>
+                <div class="ds-props-row"><span class="ds-prop-key">行動按鈕</span><span class="ds-prop-val">Boolean</span></div>
+                <div class="ds-props-row"><span class="ds-prop-key">Hint</span><span class="ds-prop-val">Boolean</span></div>
+                <div class="ds-props-row"><span class="ds-prop-key">Invalidation</span><span class="ds-prop-val">Boolean</span></div>
+              </div>
+              <p>Invalidation 狀態直接套用 Danger Semantic Token，語意色系在互動回饋中的對應一目了然。</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 精選元件：Select -->
+        <div class="top-container hero-grid m-1col-2col">
+          <div class="description-text">
+            <h3 class="title">Select</h3>
+            <div class="flex-v-8 para">
+              <p>下拉選單與 Text Field 共用同一套 Status 邏輯，並以 Boolean 統一控制標題、提示與驗證錯誤的顯示，讓不同表單元件在視覺語言上保持一致。</p>
+              <div class="ds-props-table">
+                <div class="ds-props-row"><span class="ds-prop-key">Status</span><span class="ds-prop-val">Default・Focused・Filled・Disabled</span></div>
+                <div class="ds-props-row"><span class="ds-prop-key">Title</span><span class="ds-prop-val">Boolean</span></div>
+                <div class="ds-props-row"><span class="ds-prop-key">必填</span><span class="ds-prop-val">Boolean</span></div>
+                <div class="ds-props-row"><span class="ds-prop-key">Hint</span><span class="ds-prop-val">Boolean</span></div>
+                <div class="ds-props-row"><span class="ds-prop-key">Invalidation</span><span class="ds-prop-val">Boolean</span></div>
+              </div>
+              <p>表單元件群（Text Field・Textarea・Input Number・Select・Radio・Checkbox）共享同一套 Hint / Invalidation 子元件，修改底層一次，全部表單同步更新。</p>
+            </div>
+          </div>
+          <img class="image-block lightbox-trigger" src="/images/design-system/img_select.jpg" alt="Select 元件狀態展示">
+        </div>
+
+        <!-- 精選元件：Badge -->
+        <div class="img-txt hero-container hero-grid d-2col-1col">
+          <img class="image-block lightbox-trigger" src="/images/design-system/img_badge.jpg" alt="Badge 元件色彩與形狀展示">
+          <div class="description-text">
+            <h3 class="title">Badge</h3>
+            <div class="flex-v-8 para">
+              <p>一個 Badge 元件涵蓋全部語意色角色——用顏色說明狀態，而非另開元件。Tag / Pill / Dot 三種形狀對應不同資訊密度的場景，Outline 版則用於需要降低視覺重量的情境。</p>
+              <div class="ds-props-table">
+                <div class="ds-props-row"><span class="ds-prop-key">Type</span><span class="ds-prop-val">Tag・Tag-Outline・Pill・Pill-Outline・Dot・Pill-Number</span></div>
+                <div class="ds-props-row"><span class="ds-prop-key">Size</span><span class="ds-prop-val">XSmall・Small・Medium・Large</span></div>
+                <div class="ds-props-row"><span class="ds-prop-key">Color</span><span class="ds-prop-val">Primary・Basic・Success・Info・Warning・Danger・Promo</span></div>
+              </div>
+              <p>7 種語意色直接對應 Semantic Token（如 Success → successBgNormal），換主題時 Badge 色系自動跟進，無需逐一調整。</p>
+            </div>
+          </div>
         </div>
 
         <!-- Slots：解決一致性 vs 彈性的拉鋸 -->
@@ -347,20 +390,7 @@
         <div class="hero-container hero-grid m-1col-2col">
           <div class="description-text">
             <h3 class="title">解決「一致性 vs 彈性」的拉鋸</h3>
-            <div class="flex-v-16 para">
-              <div class="flex-v-4">
-                <b class="para-16">發現問題，也找到解法</b>
-                <p>Figma 工具的架構限制，導致新增元件時往往需要堆疊大量 Variants，讓 DS 元件結構越來越肥大。Figma 推出 Slots 新功能後，剛好解決了這個卡點。因此從最常被 detach 的元件下手——Dialog、Modal、Card、Panel，讓這些元件大幅減少 Variant 需求，Library 也得以保持乾淨可維護。</p>
-              </div>
-              <div class="flex-v-4">
-                <b class="para-16">Slots：骨架固定，內容可換</b>
-                <p>透過 Figma Slots 將元件拆為「不變的結構骨架」與「可替換的內容區域」，全程不需 detach。概念等同前端的 Vue <code>&lt;slot&gt;</code> 或 React <code>children</code>，讓設計端的結構真正對齊開發端。</p>
-              </div>
-              <div class="flex-v-4">
-                <b class="para-16">最優先套用的元件</b>
-                <p>從最常被 detach 的元件下手——Dialog、Modal、Card、Panel，這些地方 Slots 能立刻大幅減少 Variant 需求，讓 Library 保持乾淨可維護。</p>
-              </div>
-            </div>
+            <p class="para">Figma 工具的架構限制，導致新增元件時往往需要堆疊大量 Variants，讓 DS 元件結構越來越肥大。Figma 推出 Slots 新功能後，剛好解決了這個卡點。因此從最常被 detach 的元件下手——Dialog、Modal、Card、Panel，讓這些元件大幅減少 Variant 需求，Library 也得以保持乾淨可維護。</p>
           </div>
           <div class="ds-slots-diagram">
             <div class="ds-slots-card">
@@ -436,17 +466,37 @@
           <img class="image-block lightbox-trigger" src="/images/design-system/img_theme_decision.jpg" alt="主題募集 2.0 設計決策說明">
         </div>
 
+        <!-- Light / Dark 並排驗證 -->
+        <div class="img-txt top-container hero-grid d-2col-1col">
+          <img class="image-block lightbox-trigger" src="/images/design-system/img_theme_lightdark.jpg" alt="主題募集 2.0 Light / Dark Mode 並排對比">
+          <div class="description-text">
+            <h3 class="title">同一份稿，切換 mode 全頁自動對應</h3>
+            <div class="flex-v-8 para">
+              <p>左圖 Light、右圖 Dark——兩個畫面共用完全相同的元件實例，背景色、文字色、按鈕色全部由同一組 Semantic Token 驅動，只需在 root 切換 mode，無需複製或手動改色。</p>
+              <div class="flex-v-4">
+                <b class="para-16">Token 實際運作</b>
+                <p>以頁面底色為例：<code>bgPageNormal</code> 這個 Semantic Token 在 Light mode 對應 <code>#FFFFFF</code>、在 Dark mode 對應 <code>#121212</code>——切換的工作完全由變數層處理，元件本身沒有任何修改。</p>
+              </div>
+              <div class="flex-v-4">
+                <b class="para-16">Header・Navbar・Card・Footer 全部同步</b>
+                <p>頁面上的所有元件——導覽列、標籤列、產品卡、頁尾——都套用 Semantic Token，不寫死任何色碼。這使得「新增一個深色主題」的成本，從重複整份設計稿，降低到只需確認一次 Token mapping 是否正確。</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
         <!-- 色彩角色系統 60/20/10/10 -->
         <div class="top-container">
           <h2 class="title">色彩角色比例 <span class="sm-title">60 / 20 / 10 / 10</span></h2>
-          <p class="para" style="margin-bottom: 24px;">多主題系統除了 Token 架構，還需要一套「頁面配色比例規則」來確保換了主題之後視覺不失控。OCC 2.0 實戰確立了四個色彩角色的職責與用量。</p>
+          <p class="para">多主題系統除了 Token 架構，還需要一套「頁面配色比例規則」來確保換了主題之後視覺不失控。OCC 2.0 實戰確立了四個色彩角色的職責與用量。</p>
           <div class="ds-color-roles">
             <div class="ds-color-role-item">
               <div class="ds-color-role-info">
                 <b>Neutral 中性色</b>
                 <p>頁面基底色，確保閱讀舒適度。Body Background、Card Background、內文。</p>
               </div>
-              <div class="ds-color-role-bar" style="width: 60%; background: #CCCCCC;">
+              <div class="ds-color-role-bar-row">
+                <div class="ds-color-role-bar" style="width: 60%; background: #CCCCCC;"></div>
                 <span class="ds-color-role-pct">60%</span>
               </div>
             </div>
@@ -455,8 +505,9 @@
                 <b>Primary 主色</b>
                 <p>活動主題色，代表當前活動氛圍。Header/Nav、主要按鈕、Outline 框線。</p>
               </div>
-              <div class="ds-color-role-bar" style="width: 20%; background: #7B6453;">
-                <span class="ds-color-role-pct" style="color:#fff;">20%</span>
+              <div class="ds-color-role-bar-row">
+                <div class="ds-color-role-bar" style="width: 20%; background: #7B6453;"></div>
+                <span class="ds-color-role-pct">20%</span>
               </div>
             </div>
             <div class="ds-color-role-item">
@@ -464,7 +515,8 @@
                 <b>Secondary 輔助色</b>
                 <p>主色同色系的協調陪襯色，豐富畫面層次但不搶戲。區塊背景、Coupon 小圖示。</p>
               </div>
-              <div class="ds-color-role-bar" style="width: 10%; background: #EDE5DE;">
+              <div class="ds-color-role-bar-row">
+                <div class="ds-color-role-bar" style="width: 10%; background: #EDE5DE;"></div>
                 <span class="ds-color-role-pct">10%</span>
               </div>
             </div>
@@ -473,7 +525,8 @@
                 <b>Highlight 點綴色</b>
                 <p>高飽和、高對比，用於打破畫面平衡抓取注意力。CTA、促銷標籤、Heading 強調字。</p>
               </div>
-              <div class="ds-color-role-bar" style="width: 10%; background: #EB9164;">
+              <div class="ds-color-role-bar-row">
+                <div class="ds-color-role-bar" style="width: 10%; background: #EB9164;"></div>
                 <span class="ds-color-role-pct">10%</span>
               </div>
             </div>
@@ -483,26 +536,58 @@
           </div>
         </div>
 
-        <!-- Theme 面板截圖 -->
-        <div class="img-txt top-container hero-grid d-2col-1col">
-          <img class="image-block lightbox-trigger" src="/images/design-system/img_theme_panel.jpg" alt="Theme 面板：Default 黃 vs 客製色並排">
+        <!-- OCC 2.0：Atomic 第 5 層實戰落地 -->
+        <div class="top-container hero-grid m-1col-2col">
           <div class="description-text">
-            <h3 class="title">截圖建議：三欄並排驗證</h3>
+            <div>
+              <span class="sm-title">Occasion 2.0</span>
+              <h3 class="title">Atomic 第 5 層的實戰落地</h3>
+            </div>
             <div class="flex-v-8 para">
-              <p>最能說服面試官的呈現方式：</p>
-              <ul>
-                <li><b>Primitive 面板</b> → <b>Theme 面板（含 mode 欄）</b> → <b>Semantic 面板</b>，三欄並排，直接展示單向引用關係。</li>
-                <li><b>同畫面並排：</b>同一個 UI 在 Light / Dark 兩個 mode 下的視覺對比，讓 Semantic 層的自動適配效果一目了然。</li>
-              </ul>
-              <p>這套規範已整併回 DS 主庫，成為後續專案的正式規格基礎。</p>
+              <p>Occasion 2.0 主題情境頁是第五層最直接的體現——Navbar、Hero、Card、Coupon Ball、Bookshelf 等下層元件依導購策略組合，構成目的明確的解決方案頁面。</p>
+              <div class="flex-v-4">
+                <b class="para-16">▍9 個區塊，每一層都有導購邏輯</b>
+                <p>Hero（分流入口）→ 情境引導（Scenario）→ 主題應用（Application）→ 產品比較 → 作品書架（靈感）→ Coupon → 製作流程 → 品牌特色 → FAQ，從吸引注意到協助決策，層層遞進。</p>
+              </div>
+              <div class="flex-v-4">
+                <b class="para-16">▍元件跨裝置一致性驗證</b>
+                <p>各裝置區間皆明確定義元件的呈現方式，Announcement Bar、Navbar、Sticky Coupon Ball 等核心元件在四個斷點全部對應，無需為不同裝置重新設計元件。</p>
+              </div>
             </div>
           </div>
+          <img class="image-block lightbox-trigger" src="/images/design-system/img_occ2_responsive.jpg" alt="Occasion 2.0 聖誕節主題 響應式四斷點">
         </div>
 
-        <!-- Light / Dark 並排展示 -->
-        <div class="top-container">
-          <h3>▍同一 UI，Light / Dark Mode 自動切換</h3>
-          <img class="lightbox-trigger box-img" src="/images/design-system/img_theme_lightdark.jpg" alt="Light Dark Mode 並排對比">
+        <!-- Theme Variable 面板 -->
+        <div class="img-txt hero-container hero-grid d-2col-1col">
+          <img class="image-block lightbox-trigger" alt="Figma Variable 面板">
+          <div class="description-text">
+            <h3 class="title">Variable 面板：三層單向引用</h3>
+            <div class="accordion-group">
+              <div class="accordion-item active" data-img="/images/design-system/img_variables1.jpg">
+                <div class="accordion-header">
+                  <h5>層層連動，不會反向污染</h5>
+                  <div class="arrow-icon"></div>
+                </div>
+                <div class="accordion-content">
+                  <div class="accordion-inner">
+                    <p class="para">Primitive → Theme / Brand → Semantic 三個 Collection 單向引用，Semantic 層只取 Theme 層的值，Theme 層只取 Primitive 層的值——任何一層的修改都不影響上層結構。</p>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item" data-img="/images/design-system/img_variables2.jpg">
+                <div class="accordion-header">
+                  <h5>實戰驗證後整併回主庫</h5>
+                  <div class="arrow-icon"></div>
+                </div>
+                <div class="accordion-content">
+                  <div class="accordion-inner">
+                    <p class="para">這套規範經過主題募集 2.0 與 OCC 2.0 實戰驗證後，整併回 DS 主庫，成為後續專案的正式基礎。</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
 
       </div>
@@ -517,39 +602,49 @@
         </div>
 
         <!-- Before / After -->
-        <div class="top-container hero-grid m-1col-2col">
+        <div class="img-txt top-container hero-grid d-2col-1col">
+          <img class="image-block lightbox-trigger" alt="Before After 對比圖">
           <div class="description-text">
             <h2 class="title">一致性的可維護設計決策</h2>
-            <div class="flex-v-16 para">
-              <div class="flex-v-4">
-                <b class="para-16">Outcome</b>
-                <p>系統讓跨頁面、跨主題的品牌一致性成為可維護的設計決策——設計師思考的是語意，而不是色碼。</p>
+            <div class="accordion-group">
+              <div class="accordion-item active" data-img="/images/design-system/img_result_after.jpg">
+                <div class="accordion-header">
+                  <h5>After：DS 套用後</h5>
+                  <div class="arrow-icon"></div>
+                </div>
+                <div class="accordion-content">
+                  <div class="accordion-inner">
+                    <ul class="para">
+                      <li>主題切換只改 Theme 層一個 mode，全站自動更新。</li>
+                      <li>Light / Dark 由 Semantic 層自動處理，無需額外工作。</li>
+                      <li>這套規範已整併回 DS 主庫，作為下一版本的基礎。</li>
+                    </ul>
+                  </div>
+                </div>
               </div>
-              <div class="flex-v-4">
-                <b class="para-16">Before：假設無 DS</b>
-                <ul>
-                  <li>各頁面元件各自為政，同一個按鈕出現三種不同色值。</li>
-                  <li>Dark Mode 需手動為每個元件另寫一組樣式。</li>
-                  <li>換主題等於重畫整個設計稿。</li>
-                </ul>
-              </div>
-              <div class="flex-v-4">
-                <b class="para-16">After：DS 套用後</b>
-                <ul>
-                  <li>主題切換只改 Theme 層一個 mode，全站自動更新。</li>
-                  <li>Light / Dark 由 Semantic 層自動處理，無需額外工作。</li>
-                  <li>這套規範已整併回 DS 主庫，作為下一版本的基礎。</li>
-                </ul>
+              <div class="accordion-item" data-img="/images/design-system/img_result_before.jpg">
+                <div class="accordion-header">
+                  <h5>Before：假設無 DS</h5>
+                  <div class="arrow-icon"></div>
+                </div>
+                <div class="accordion-content">
+                  <div class="accordion-inner">
+                    <ul class="para">
+                      <li>各頁面元件各自為政，同一個按鈕出現三種不同色值。</li>
+                      <li>Dark Mode 需手動為每個元件另寫一組樣式。</li>
+                      <li>換主題等於重畫整個設計稿。</li>
+                    </ul>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
-          <img class="image-block lightbox-trigger" src="/images/design-system/img_result_comparison.jpg" alt="Before After 對比圖">
         </div>
 
         <!-- DS 影響力：從一致性到轉化率 -->
-        <div class="top-container">
+        <div class="hero-container">
           <h2 class="title">DS 讓設計師專注更上層的問題</h2>
-          <p class="para" style="margin-bottom: 24px;">當 DS 把「元件應該長什麼樣」變成既定規則，設計師的注意力才能放在「這個元件應該在哪裡出現、為什麼出現」。以 OCC 2.0 為例，DS 建立後設計端可以直接聚焦在導購邏輯與轉化率設計：</p>
+          <p class="para">把「元件應該長什麼樣」變成既定規則，作為設計師的注意力即可放在「這個元件應該在哪裡出現、為什麼出現」。<br>以 OCC 2.0 為例，DS 建立後設計端可以直接聚焦在導購邏輯與轉化率設計</p>
           <div class="ds-impact-table">
             <div class="ds-impact-row ds-impact-header">
               <span>設計決策</span><span>追蹤的問題</span><span>對應指標</span>
@@ -576,22 +671,17 @@
             </div>
           </div>
         </div>
-
-        <!-- 實際產品畫面 -->
-        <div class="top-container">
-          <h3>▍主題募集 2.0 實際產品畫面</h3>
-          <div class="ds-result-gallery">
-            <img class="lightbox-trigger" src="/images/design-system/img_result_screen01.jpg" alt="實際產品畫面 01">
-            <img class="lightbox-trigger" src="/images/design-system/img_result_screen02.jpg" alt="實際產品畫面 02">
-            <img class="lightbox-trigger" src="/images/design-system/img_result_screen03.jpg" alt="實際產品畫面 03">
-          </div>
+      </div>
+      <!-- End 套用成果 -->
+      <!-- Takeaway -->
+      <div id="takeaway">
+        <div class="sec-title-container">
+          <h2>Takeaway</h2>
         </div>
-
-        <!-- Takeaway -->
-        <div id="takeaway" class="top-container two-column-grid">
+        <div class="top-container two-column-grid">
           <div class="item item-bg-grey">
-            <h4 class="title">設計師的職責不只是畫稿</h4>
-            <p class="para">這次建立 DS 讓我深刻體會：設計師在交付畫面之前，更重要的是建立「讓畫面可以被系統性維護」的底層結構。Token 架構設計得好，未來每一次迭代都能省下大量的溝通成本。</p>
+            <h4 class="title">設計師的職責：從維護畫面到創造價值</h4>
+            <p class="para">建立 DS 之前，每次改版都在修「按鈕顏色又跑掉了」這類問題；建立之後，設計端才有空間思考「這個按鈕放在這裡，能不能提升轉化率」。Token 架構設計得好，不只省下溝通成本，更讓設計師的注意力回到真正應該聚焦的事——讓畫面可以被系統性維護的底層結構，才是交付畫面之前更重要的工作。</p>
           </div>
           <div class="item item-bg-grey">
             <h4 class="title">解耦思維：改一處，動全局</h4>
@@ -605,18 +695,18 @@
             <h4 class="title">真實專案才是最好的壓力測試</h4>
             <p class="para">主題募集 2.0 讓我在真實的專案中驗證了 DS——當需求提出「要支援紫色主題」時，只新增一個 Theme mode 就搞定了。這證明架構設計的假設是正確的，而不只是理論上可行。</p>
           </div>
-          <div class="item item-bg-grey">
-            <h4 class="title">系統穩了，才能思考轉化</h4>
-            <p class="para">DS 建立前，每次改版都在修「按鈕顏色又跑掉了」這類問題。DS 建立後，設計端才有空間去思考「這個按鈕放在這裡，能不能提升轉化率」——這才是設計真正應該聚焦的事。</p>
-          </div>
         </div>
-
+        <div class="notop-container ds-result-gallery">
+          <img class="lightbox-trigger" src="/images/design-system/img_result_screen01.jpg" alt="實際產品畫面 01">
+          <img class="lightbox-trigger" src="/images/design-system/img_result_screen02.jpg" alt="實際產品畫面 02">
+          <img class="lightbox-trigger" src="/images/design-system/img_result_screen03.jpg" alt="實際產品畫面 03">
+        </div>
       </div>
-      <!-- End 套用成果 -->
+      <!-- End Takeaway -->
 
       <div class="hero-container layout-center">
         <div class="btn-group-center">
-          <a href="https://chingjungkuan.github.io/#ui-design" class="btn btn-secondary btn-lg">作品集專案列表</a>
+          <a href="https://chingjungkuan.github.io/#ui-design" class="btn btn-primary btn-lg">作品集專案列表</a>
         </div>
       </div>
 
