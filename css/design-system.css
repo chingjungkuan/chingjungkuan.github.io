@@ -92,6 +92,12 @@
     gap: 8px;
 }
 
+.ds-token-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
 .ds-token-badge {
     display: inline-block;
     background-color: var(--brand-brown);
@@ -100,6 +106,9 @@
     font-weight: 600;
     padding: 4px 10px;
     border-radius: 20px;
+    white-space: nowrap;
+    flex-shrink: 0;
+    align-self: flex-start;
     width: fit-content;
 }
 
@@ -197,7 +206,7 @@
 
 .ds-prop-key {
     flex-shrink: 0;
-    width: 80px;
+    width: 68px;
     font-weight: 600;
     color: var(--brand-brown-dark);
 }
@@ -408,13 +417,16 @@
 }
 
 .ds-color-role-bar {
-    height: 36px;
+    height: 20px;
     border-radius: 8px;
+    border: 1px solid rgba(0,0,0,0.06);
+    min-width: 4px;
+}
+
+.ds-color-role-bar-row {
     display: flex;
     align-items: center;
-    padding: 0 12px;
-    width: 100%;
-    border: 1px solid rgba(0,0,0,0.06);
+    gap: 8px;
 }
 
 .ds-color-role-pct {
@@ -422,6 +434,7 @@
     font-weight: 700;
     color: var(--text-main);
     white-space: nowrap;
+    flex-shrink: 0;
 }
 
 .ds-color-role-info {
@@ -455,42 +468,79 @@
    11. DS Impact Table
    ========================================================================== */
 
+/* Mobile：卡片模式 */
 .ds-impact-table {
     display: flex;
     flex-direction: column;
-    border: 1px solid var(--brand-brown-light);
-    border-radius: 12px;
-    overflow: hidden;
+    gap: 8px;
     margin-top: 8px;
 }
 
 .ds-impact-row {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 4px;
-    padding: 12px 20px;
-    border-bottom: 1px solid var(--brand-brown-light);
+    gap: 8px;
+    padding: 12px 16px;
     font-size: 14px;
     line-height: 1.5;
-    align-items: center;
+    border-radius: 8px;
+    background: #fff;
+    border: 1px solid var(--brand-brown-light);
 }
 
+/* 手機版隱藏 header（雙 class 提高 specificity，避免被 .ds-impact-row 的 display:grid 蓋掉） */
+.ds-impact-row.ds-impact-header {
+    display: none;
+}
+
+/* 手機版欄位標籤：僅資料列，排除 header */
+.ds-impact-row:not(.ds-impact-header) span:nth-child(1)::before { content: "設計決策"; }
+.ds-impact-row:not(.ds-impact-header) span:nth-child(2)::before { content: "追蹤的問題"; }
+.ds-impact-row:not(.ds-impact-header) span:nth-child(3)::before { content: "對應指標"; }
+
+.ds-impact-row:not(.ds-impact-header) span::before {
+    display: block;
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--brand-brown-dark);
+    margin-bottom: 2px;
+}
+
+/* Desktop：還原表格樣式 */
 @media (min-width: 768px) {
+    .ds-impact-table {
+        gap: 0;
+        border: 1px solid var(--brand-brown-light);
+        border-radius: 12px;
+        overflow: hidden;
+    }
+
     .ds-impact-row {
         grid-template-columns: 2fr 2fr 1.5fr;
         gap: 16px;
+        padding: 12px 20px;
+        border-radius: 0;
+        background: transparent;
+        border: none;
+        border-bottom: 1px solid var(--brand-brown-light);
     }
-}
 
-.ds-impact-row:last-child {
-    border-bottom: none;
-}
+    .ds-impact-row:last-child {
+        border-bottom: none;
+    }
 
-.ds-impact-header {
-    background: var(--bg-light-brown);
-    font-weight: 600;
-    font-size: 13px;
-    color: var(--brand-brown-dark);
+    .ds-impact-row.ds-impact-header {
+        display: grid;
+        background: var(--bg-light-brown);
+        font-weight: 600;
+        font-size: 13px;
+        color: var(--brand-brown-dark);
+    }
+
+    /* 桌機隱藏 ::before 欄位標籤 */
+    .ds-impact-row:not(.ds-impact-header) span::before {
+        display: none;
+    }
 }
 
 .ds-impact-row code {
