@@ -62,9 +62,9 @@
             </div>
             <div class="overview-right">
               <ul>
-                <li class="para"><strong>背景：</strong>點點印服務橫跨官網與 Editor 2 兩大設計場景，過去缺乏統一的元件規範，導致跨頁面的視覺不一致與開發落差。</li>
+                <li class="para"><strong>背景：</strong>橫跨官網頁面與編輯器兩大設計場景，過去缺乏統一的元件規範，導致跨頁面的視覺不一致與開發落差。</li>
                 <li class="para"><strong>目標：</strong>從零建立一套可長期維護的品牌設計系統，涵蓋 Design Token 四層架構、Component Library，以及支援多主題與深淺色模式的擴充機制。</li>
-                <li class="para"><strong>成果：</strong>此作品集分為兩階段——DS 基礎建立，以及透過主題募集 2.0 專案進行的實戰延伸驗證。</li>
+                <li class="para"><strong>成果：</strong>此作品集分為兩階段——DS 基礎建立，以及透過全官網頁面統一和主題募集 2.0 專案等進行的實戰延伸驗證。</li>
               </ul>
             </div>
           </div>
@@ -83,18 +83,16 @@
         <!-- 色彩系統 -->
         <div class="top-container hero-grid m-1col-2col">
           <div class="description-text">
-            <h2 class="title">色彩系統 <span class="sm-title">Color</span></h2>
+            <h2 class="title">色彩系統定義 <span class="sm-title">Color</span></h2>
             <div class="flex-v-16">
               <div class="flex-v-4 para">
-                <b class="para-16">主色 / 輔助色 / 中性色 / 語意色</b>
-                <p>整套色彩系統以品牌主色 <code>#7B6453</code> 為錨點，搭配 CTA 橘 <code>#EB9164</code> 作為行動呼籲色，並以 Basic 灰階（0–100）作為文字、背景、分隔線的基礎。Success / Info / Warning / Danger 語意色則確保狀態反饋語義一致。</p>
+                <p>以品牌主色 <code>#7B6453</code> 為視覺錨點，構建完整的色彩層級體系。中性色階（Basic 0–100）負責支撐全站文本、容器與佈局節奏；語意色則嚴格遵循行業標準，確保系統狀態反饋的視覺語義（Semantic Clarity）高度一致。</p>
               </div>
               <div class="flex-v-4 para">
-                <b class="para-16">選擇策略</b>
                 <ul>
-                  <li>主品牌色選用溫暖大地棕，呼應點點印印刷質感與親和力定位。</li>
-                  <li>CTA 橘與主色同色調但彩度更高，製造視覺對比又維持品牌一致性。</li>
-                  <li>Danger 文字色獨立設定為深紅 <code>#90341A</code>，確保在白底上的對比度符合無障礙標準。</li>
+                  <li><b>品牌親和力：</b>選用溫暖大地棕，呼應點點印具溫度的印刷質感與親和力定位。</li>
+                  <li><b>視覺權重優化：</b>CTA 橘在維持品牌色調一致的前提下，透過高彩度對比強化行動呼籲的導購權重。</li>
+                  <li><b>系統性擴展：</b>不同狀態色基於品牌色系進行階層化處理，在維持整體視覺和諧的同時，兼顧優異的辨識度與 Accessibility 考量。</li>
                 </ul>
               </div>
             </div>
@@ -109,7 +107,7 @@
             <h2 class="title">字型排版 <span class="sm-title">Typography</span></h2>
             <div class="flex-v-16">
               <div class="flex-v-4 para">
-                <b class="para-16">字級規範與資訊階層</b>
+                <b class="para-16">字級與資訊階層</b>
                 <p>字級範圍嚴格控制在 8px - 36px 之間。排除決策干擾，任何非標準尺寸（如 17px）均視為 Design Smell，需回歸規範審視其必要性，以維持介面高度的一致性。</p>
               </div>
               <div class="flex-v-4 para">
@@ -166,7 +164,7 @@
                 <p>這套 Token 架構共分四個 Collection，每一層職責明確、單向引用。主題切換、深淺模式切換，皆透過變數層級自動驅動，不需手動改元件。</p>
                 <ul>
                   <li><b>Primitive Color</b>：儲存品牌色的完整色階（10–90），只定義「色彩是什麼」，禁止直接套用於 UI 元件或程式碼。</li>
-                  <li><b>Theme / Brand</b>：整套架構最核心的設計決策。將 Primitive Color 對應到 Primary 色階，並以 Mode 支援多主題切換——換主題只改這層。</li>
+                  <li><b>Theme / Brand</b>：整套架構最核心的設計決策。將 Primitive Color 對應到 Primary 色階，並以 Mode 支援多主題切換。</li>
                   <li><b>Semantic</b>：賦予顏色使用情境的語意，分為 background、text、divider、solid btn、outline btn 等群組。同時定義 Light / Dark 兩個 Mode，是開發端唯一需接觸的層級。</li>
                   <li><b>元件</b>：直接套用 Semantic Token，不寫死任何色碼。</li>
                 </ul>
@@ -198,7 +196,7 @@
               <div class="ds-token-step">
                 <div class="ds-token-badge">Semantic</div>
                 <p class="ds-token-label">語意 / 應用層</p>
-                <p class="ds-token-example"><code>solidBtnBgPrimaryNormal</code><br>Light &amp; Dark 同時定義</p>
+                <p class="ds-token-example"><code>solidBtnBgPrimaryNormal</code><br>Light &amp; Dark Mode 同時定義</p>
               </div>
               <div class="ds-token-arrow">→</div>
               <div class="ds-token-step">
@@ -215,7 +213,7 @@
                 <h3 class="title">Semantic 命名邏輯</h3>
                 <div class="flex-v-8 para">
                   <p>採用無間斷的 CamelCase，結構為：</p>
-                  <b><code>[目標] + [屬性] + [變體] + [狀態]</code></b>
+                  <b><code>[組件] + [屬性] + [層級/意圖] + [狀態]</code></b>
                   <div class="ds-naming-examples">
                     <div class="ds-naming-item">
                       <code>solidBtnBgPrimaryHovered</code>
@@ -400,7 +398,7 @@
         <div class="hero-container hero-grid m-1col-2col">
           <div class="description-text">
             <h3 class="title">解決「一致性 vs 彈性」的拉鋸</h3>
-            <p class="para">導入 Figma Slots 機制，有效解決了以往元件庫因堆疊過量 Variants 而導致的維護負擔。優先針對 Dialog、Modal 與 Card 等高頻被取消關聯 (Detach) 的組件進行架構重整，在賦予設計極大自定義彈性的同時，也確保 Library 保持極簡且高效的品質。</p>
+            <p class="para">導入 Slots 機制，有效解決了以往元件庫因堆疊過量 Variants 而導致的維護負擔。優先針對 Dialog、Modal 與 Card 等高頻被取消關聯 (Detach) 的組件進行架構重整，在賦予設計極大自定義彈性的同時，也確保 Library 保持極簡且高效的品質。</p>
           </div>
           <div class="ds-slots-diagram">
             <div class="ds-slots-card">
@@ -512,7 +510,7 @@
         <!-- 色彩角色系統 60/20/10/10 -->
         <div class="top-container">
           <h2 class="title">色彩角色比例 <span class="sm-title">60 / 20 / 10 / 10</span></h2>
-          <p class="para">多主題系統除了 Token 架構，還需要一套「頁面配色比例規則」來確保換了主題之後視覺不失控。OCC 2.0 實戰確立了四個色彩角色的職責與用量。</p>
+          <p class="para">多主題系統除了 Token 架構，還需要一套「頁面配色比例規則」來確保換了主題之後視覺不失控。Occasion 2.0 實戰確立了四個色彩角色的職責與用量。</p>
           <div class="ds-color-roles">
             <div class="ds-color-role-item">
               <div class="ds-color-role-info">
@@ -612,13 +610,13 @@
           <div class="description-text">
             <h2 class="title">一致性的可維護設計</h2>
             <div class="flex-v-16 para">
-              <p>這套規範經過官網相關頁面、主題募集 2.0 與 Occassion 2.0 實戰驗證後，整併回 DS 主庫，成為後續專案的正式基礎。</p>
+              <p>這套規範經過官網相關頁面、主題募集 2.0 與 Occasion 2.0 後，整併回 DS 主庫，成為後續專案的正式基礎。</p>
               <div class="flex-v-4">
-                <b class="para-16">▍實戰驗證後整併回主庫</b>
+                <b class="para-16">▍DS 持續調整優化</b>
                 <ul>
                   <li>主題切換只改 Theme 層一個 Mode，全站自動更新。</li>
                   <li>Light / Dark 由 Semantic 層自動處理，無需額外工作。</li>
-                  <li>這套規範已整併回 DS 主庫，作為下一版本的基礎。</li>
+                  <li>DS 內容持續調整優化，以適應不斷變化的設計需求。</li>
                 </ul>
               </div>
               <div class="flex-v-4">
@@ -637,7 +635,7 @@
         <!-- DS 影響力：從一致性到轉化率 -->
         <div class="hero-container">
           <h2 class="title">DS 讓設計師專注更上層的問題</h2>
-          <p class="para">把「元件應該長什麼樣」變成既定規則，作為設計師的注意力即可放在「這個元件應該在哪裡出現、為什麼出現」。<br>以 Occassion 2.0 專案為例，DS 建立後設計端可以直接聚焦在導購邏輯與轉化率設計。</p>
+          <p class="para">把「元件應該長什麼樣」變成既定規則，作為設計師的注意力即可放在「這個元件應該在哪裡出現、為什麼出現」。<br>以 Occasion 2.0 專案為例，DS 建立後設計端可以直接聚焦在導購邏輯與轉化率設計。</p>
           <div class="ds-impact-table">
             <div class="ds-impact-row ds-impact-header">
               <span>設計決策</span><span>追蹤的問題</span><span>對應指標</span>
