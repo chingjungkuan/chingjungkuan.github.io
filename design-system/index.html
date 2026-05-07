@@ -161,7 +161,7 @@
             <div class="description-text">
               <h2 class="title">解耦（Decoupling）是核心</h2>
               <div class="flex-v-8 para">
-                <p>這套 Token 架構共分四個 Collection，每一層職責明確、單向引用。主題切換、深淺模式切換，皆透過變數層級自動驅動，不需手動改元件。</p>
+                <p>這套 Token 架構共分四層，每層職責明確、單向引用。主題切換、深淺模式切換，皆透過變數層級自動驅動。</p>
                 <ul>
                   <li><b>Primitive Color</b>：儲存品牌色的完整色階（10–90），只定義「色彩是什麼」，禁止直接套用於 UI 元件或程式碼。</li>
                   <li><b>Theme / Brand</b>：整套架構最核心的設計決策。將 Primitive Color 對應到 Primary 色階，並以 Mode 支援多主題切換。</li>
@@ -427,15 +427,12 @@
       <!-- Start DS 實戰延伸 -->
       <!-- ============================================================ -->
       <div id="theme">
-
-        <!-- 黑色大標 -->
         <div class="sec-title-container">
           <h2>DS 實戰延伸</h2>
         </div>
-
         <!-- 前情提要簡介 -->
         <div class="top-container">
-          <h2 class="ds-context-title">頁面前情提要簡介</h2>
+          <h2 class="ds-context-title">官網頁面簡介</h2>
           <div class="ds-context-cards">
             <div class="ds-context-card">
               <h4>主題募集 2.0</h4>
@@ -446,7 +443,7 @@
               <p>整合原 Idea 頁與 Occasion 頁面，解決定位不明問題，重新定調為「情境式引導主題專區」。以對象、情境、預算為軸引導導購決策，涵蓋母親節、婚禮、情人節等多類情境，並預留領券功能版位。</p>
             </div>
             <div class="ds-context-card">
-              <h4>官網頁面</h4>
+              <h4>全站頁面</h4>
               <p>配合品牌視覺升級，官網重新定調為現代清新文青風格，品牌色系隨之重塑。元件設計以色彩與規格的彈性延伸為前提，確保跨頁面的視覺一致性與長期可維護性。</p>
             </div>
           </div>
@@ -721,7 +718,6 @@
     <script defer src="/js/sub-nav.js"></script>
     <script defer src="/js/lightbox.js"></script>
     <script defer src="/js/scroll-to-top.js"></script>
-    <script defer src="/js/tab-content.js"></script>
     <script defer src="/js/modal.js"></script>
     <script defer src="/js/accordion.js"></script>
   <!-- End java -->
