@@ -50,7 +50,7 @@
           <div class="overview">
             <div class="overview-left">
               <h2 class="title">概述 <span class="sm-title">Overview</span></h2>
-              <h3 class="title"><span class="text-primary-brown">從零建立可擴張的品牌設計系統</span></h3>
+              <h3 class="title"><span class="text-primary">從零建立可擴張</span>的品牌設計系統</h3>
               <h5 class="title">#點點印 #TinTint #Design System #Figma</h5>
 
               <div class="team-info">
@@ -360,6 +360,7 @@
             <div class="flex-v-8 para">
               <p>下拉選單與 Text Field 共用同一套 Status 邏輯，並以 Boolean 統一控制標題、提示與驗證錯誤的顯示，讓不同表單元件在視覺語言上保持一致。</p>
               <div class="ds-props-table">
+                <div class="ds-props-row"><span class="ds-prop-key">Size</span><span class="ds-prop-val">S（14px）・M（16px）</span></div>
                 <div class="ds-props-row"><span class="ds-prop-key">Status</span><span class="ds-prop-val">Default・Focused・Filled・Disabled</span></div>
                 <div class="ds-props-row"><span class="ds-prop-key">Title</span><span class="ds-prop-val">Boolean</span></div>
                 <div class="ds-props-row"><span class="ds-prop-key">必填</span><span class="ds-prop-val">Boolean</span></div>
@@ -382,7 +383,7 @@
               <div class="ds-props-table">
                 <div class="ds-props-row"><span class="ds-prop-key">Type</span><span class="ds-prop-val">Tag・Tag-Outline・Pill・Pill-Outline・Dot・Pill-Number</span></div>
                 <div class="ds-props-row"><span class="ds-prop-key">Size</span><span class="ds-prop-val">XSmall・Small・Medium・Large</span></div>
-                <div class="ds-props-row"><span class="ds-prop-key">Color</span><span class="ds-prop-val">Primary・Basic・Success・Info・Warning・Danger・Promo</span></div>
+                <div class="ds-props-row"><span class="ds-prop-key">Color</span><span class="ds-prop-val">Primary・Basic・Success・Info・Warning・Danger</span></div>
               </div>
               <p>7 種語意色直接對應 Semantic Token（如 Success → successBgNormal），換主題時 Badge 色系自動跟進，無需逐一調整。</p>
             </div>
@@ -454,17 +455,14 @@
           <div class="description-text">
             <h2 class="title">設計決策</h2>
             <div class="flex-v-16 para">
-              <div class="flex-v-4">
-                <b class="para-16">為什麼需要多主題 + 深淺色？</b>
-                <p>主題募集 2.0 需要同時支援「預設黃色系」與「客製色」兩套主題，以及 Light / Dark Mode 切換——這正是四層架構的最大壓力測試。</p>
-              </div>
+              <p>主題募集 2.0 這個專案需要同時支援 變換主題色 以及 Light / Dark Mode 切換，這正是四層架構的最大壓力測試。</p>
               <div class="flex-v-4">
                 <b class="para-16">Theme / Brand 層的設計決策</b>
-                <p>新增 Mode 即完成主題替換，完全不動 Semantic 層或元件。未來新增節慶主題，只需在 Theme 層加一組 Mapping，整套系統自動跟進。</p>
+                <p>新增 Mode 即完成主題替換，完全不動 Semantic 層或元件。未來新增不同主題，只需在 Theme 層加一組 Mapping，整套系統自動跟進。</p>
               </div>
               <div class="flex-v-4">
                 <b class="para-16">Semantic 層的 Light / Dark</b>
-                <p>每個語意 Token 同時定義兩個 Mode 的對應值。設計師寫 <code>solidBtnBgPrimaryNormal</code>，不需為深色另寫一組——切換工作交由底層 Root 覆蓋。</p>
+                <p>每個語意 Token 同時定義兩個 Mode 的對應值，不需為深色另寫一組，切換工作交由底層 Root 覆蓋。</p>
               </div>
             </div>
           </div>
@@ -485,7 +483,7 @@
                 </div>
                 <div class="accordion-content">
                   <div class="accordion-inner">
-                    <p class="para">以頁面底色為例：<code>backgroundPage</code> 這個 Semantic Token 在 Light Mode 對應 <code>#FFFFFF</code>、在 Dark Mode 對應 <code>#121212</code>，切換的工作完全由變數層處理，元件本身沒有任何修改。</p>
+                    <p class="para">以頁面底色為例：<code>backgroundPage</code> 這個 Semantic Token 在 Light Mode 對應 <code>#FFFFFF</code>、在 Dark Mode 對應 <code>#121212</code>，切換完全由變數層處理，元件本身無需修改。</p>
                   </div>
                 </div>
               </div>
@@ -507,11 +505,11 @@
         <!-- 色彩角色系統 60/20/10/10 -->
         <div class="top-container">
           <h2 class="title">色彩角色比例 <span class="sm-title">60 / 20 / 10 / 10</span></h2>
-          <p class="para">多主題系統除了 Token 架構，還需要一套「頁面配色比例規則」來確保換了主題之後視覺不失控。Occasion 2.0 實戰確立了四個色彩角色的職責與用量。</p>
+          <p class="para">多主題系統除了 Token 架構，也定義了「頁面配色比例規則」來確保換了主題之後視覺不失控。Occasion 2.0 專案實戰確立了四個色彩角色的職責與用量。</p>
           <div class="ds-color-roles">
             <div class="ds-color-role-item">
               <div class="ds-color-role-info">
-                <b>Neutral 中性色</b>
+                <b class="para-16">Neutral 中性色</b>
                 <p>頁面基底色，確保閱讀舒適度。Body Background、Card Background、內文。</p>
               </div>
               <div class="ds-color-role-bar-row">
@@ -521,7 +519,7 @@
             </div>
             <div class="ds-color-role-item">
               <div class="ds-color-role-info">
-                <b>Primary 主色</b>
+                <b class="para-16">Primary 主色</b>
                 <p>活動主題色，代表當前活動氛圍。Header/Nav、主要按鈕、Outline 框線。</p>
               </div>
               <div class="ds-color-role-bar-row">
@@ -531,7 +529,7 @@
             </div>
             <div class="ds-color-role-item">
               <div class="ds-color-role-info">
-                <b>Secondary 輔助色</b>
+                <b class="para-16">Secondary 輔助色</b>
                 <p>主色同色系的協調陪襯色，豐富畫面層次但不搶戲。區塊背景、Coupon 小圖示。</p>
               </div>
               <div class="ds-color-role-bar-row">
@@ -541,7 +539,7 @@
             </div>
             <div class="ds-color-role-item">
               <div class="ds-color-role-info">
-                <b>Highlight 點綴色</b>
+                <b class="para-16" >Highlight 點綴色</b>
                 <p>高飽和、高對比，用於打破畫面平衡抓取注意力。CTA、促銷標籤、Heading 強調字。</p>
               </div>
               <div class="ds-color-role-bar-row">
@@ -585,7 +583,7 @@
             <div class="flex-v-8 para">
               <div class="flex-v-4">
                 <b class="para-16">▍Primitive → Theme → Semantic 不會反向污染</b>
-                <p>三個 Collection 單向引用，Semantic 層只取 Theme 層的值，Theme 層只取 Primitive 層的值——任何一層的修改，都不會影響上層結構。</p>
+                <p>三個 Collection 單向引用，Semantic 層只取 Theme 層的值，Theme 層只取 Primitive 層的值，任何一層的修改，都不會影響上層結構。</p>
               </div>
             </div>
           </div>
@@ -607,7 +605,7 @@
           <div class="description-text">
             <h2 class="title">一致性的可維護設計</h2>
             <div class="flex-v-16 para">
-              <p>這套規範經過官網相關頁面、主題募集 2.0 與 Occasion 2.0 後，整併回 DS 主庫，成為後續專案的正式基礎。</p>
+              <p>這套規範經過官網相關頁面、主題募集 2.0 與 Occasion 2.0 後，整併回 DS 主庫，成為未來專案基礎。</p>
               <div class="flex-v-4">
                 <b class="para-16">▍DS 持續調整優化</b>
                 <ul>
@@ -669,7 +667,7 @@
         <div class="top-container two-column-grid">
           <div class="item item-bg-grey">
             <h4 class="title">設計師的職責：從維護畫面到創造價值</h4>
-            <p class="para">建立 DS 之前，每次改版都在修「按鈕顏色又跑掉了」這類問題；建立之後，設計端才有空間思考「這個按鈕放在這裡，能不能提升轉化率」。Token 架構設計得好，不只省下溝通成本，更讓設計師的注意力回到真正應該聚焦的事——讓畫面可以被系統性維護的底層結構，才是交付畫面之前更重要的工作。</p>
+            <p class="para">導入設計系統的核心價值，讓我可以更專注於邏輯決策而非反覆微調。當 Token 架構穩固了系統底層，可以消弭開發落差，將心力投注於提升產品轉化。確保介面具備系統性的維護能力，是比單純產出畫面更具戰略意義的交付工作。</p>
           </div>
           <div class="item item-bg-grey">
             <h4 class="title">解耦思維：改一處，動全局</h4>
@@ -681,7 +679,7 @@
           </div>
           <div class="item item-bg-grey">
             <h4 class="title">真實專案才是最好的壓力測試</h4>
-            <p class="para">主題募集 2.0 讓我在真實的專案中驗證了 DS——當需求提出「要支援紫色主題」時，只新增一個 Theme Mode 就搞定了。這證明架構設計的假設是正確的，而不只是理論上可行。</p>
+            <p class="para">主題募集 2.0 讓我在真實的專案中驗證了 DS，當需求提出「要支援紫色主題」時，只新增一個 Theme Mode 就搞定了。這證明架構設計的假設是正確的，而不只是理論上可行。</p>
           </div>
         </div>
         <div class="notop-container ds-result-gallery">
