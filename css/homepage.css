@@ -817,7 +817,7 @@ Component (通用組件與塗鴉線條)
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    box-shadow: 0 4px 15px rgba(24, 90, 219, 0.2);
+    box-shadow: 0 4px 12px rgba(24, 90, 219, 0.35), 0 8px 32px rgba(24, 90, 219, 0.2);
     font-size: 24px;
 }
 
