@@ -1528,6 +1528,32 @@ img {
 }
 
 /* ==========================
+   Section Header 標題列
+========================== */
+.section-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+}
+
+.title-line {
+    flex-grow: 1;
+    height: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.title-line svg {
+    width: 100%;
+    height: 5px;
+}
+
+.txt-nowrap {
+    white-space: nowrap;
+}
+
+/* ==========================
    Overview 概述區塊
 ========================== */
 .overview {
