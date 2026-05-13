@@ -1559,7 +1559,7 @@ img {
 
 @media (min-width: 768px) {
     .overview {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 5fr 7fr;
     }
 }
 
