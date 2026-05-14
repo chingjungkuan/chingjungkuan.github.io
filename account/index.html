@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="../css/normalize.css">
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/account.css">
+    <link rel="stylesheet" href="/css/accordion.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 </head>
@@ -19,8 +20,9 @@
     <!-- 浮動釘選導覽列 -->
     <nav id="sub-nav" class="sub-nav">
       <ul>
-        <li><a href="#impact,overview,flow,pain-point,solution">前情提要</a></li>
+        <li><a href="#overview,flow,pain-point,solution">前情提要</a></li>
         <li><a href="#ia">資訊架構</a></li>
+        <li><a href="#ideate">Ideate</a></li>
         <li><a href="#ui-design">UI Design</a></li>
         <li><a href="#style-guide">Style Guide</a></li>
         <li><a href="#takeaway">Takeaway</a></li>
@@ -242,13 +244,16 @@
                   </div>
 
                 </div>
-                <div class="tab-image-view">
-                  <div class="image-panel active" id="img-panel-1">
-                    <img class="lightbox-trigger" src="/images/account/img_pain-point_login.jpg" alt="登入註冊畫面優化圖">
+                <div style="position: relative; width: 100%;">
+                  <div class="tab-image-view">
+                    <div class="image-panel active" id="img-panel-1">
+                      <img class="lightbox-trigger" src="/images/account/img_pain-point_login.jpg" alt="登入註冊畫面優化圖">
+                    </div>
+                    <div class="image-panel" id="img-panel-2">
+                      <img class="lightbox-trigger" src="/images/account/img_pain-point_setting.jpg" alt="帳號設定畫面優化圖">
+                    </div>
                   </div>
-                  <div class="image-panel" id="img-panel-2">
-                    <img class="lightbox-trigger" src="/images/account/img_pain-point_setting.jpg" alt="帳號設定畫面優化圖">
-                  </div>
+                  <div class="click-zoom-tooltip">點擊圖片可放大</div>
                 </div>
             </div>
           </div>
@@ -339,7 +344,7 @@
             <!-- End 資訊架構 -->   
 
             <!-- Start img2-txt1 Wireframe-->
-            <div class="img-txt hero-container hero-grid d-2col-1col">
+            <div id="ideate" class="img-txt hero-container hero-grid d-2col-1col">
               <img class="image-block lightbox-trigger" src="/images/account/img_userflow_signup.jpg" alt="User Flow 流程圖">
                   <div class="description-text ">
                     <h2 class="title">User Flow+Wireframe</h2>
@@ -353,16 +358,16 @@
                                 <div class="accordion-inner">    
                                   <div class="flex-v-16">
                                     <div class="flex-v-4">
-                                      <p class="para"><b>解決營運痛點</b></p>
-                                      <p class="para">從源頭杜絕無效帳號，改善訂單資訊錯誤與活動洗讚等數據問題。</p>
+                                      <p class="para"><b>驗證節點的策略插入</b></p>
+                                      <p class="para">在「基本資訊填寫完成」後插入分流節點，讓用戶根據當下情境選擇驗證方式，避免強制線性路徑造成流失。</p>
                                     </div>
                                     <div class="flex-v-4">
-                                      <p class="para"><b>兼顧操作彈性</b></p>
-                                      <p class="para">雖然增加了驗證環節，但提供「稍後驗證」選項，確保註冊過程依然順暢。</p>
+                                      <p class="para"><b>三條路徑的分流邏輯</b></p>
+                                      <p class="para">流程圖中明確標示 Email 驗證、SMS 驗證與稍後驗證的觸發條件與收斂點，確保設計與開發對流程邏輯有一致共識。</p>
                                     </div>
                                     <div class="flex-v-4">
-                                      <p class="para"><b>提升操作效率</b></p>
-                                      <p class="para">移除舊版冗餘資訊並導入品牌延伸色，讓用戶能專注於當前動作，快速完成流程。</p>
+                                      <p class="para"><b>路徑收斂設計</b></p>
+                                      <p class="para">無論選擇哪條驗證路徑，最終皆收斂至「返回原頁面」，確保用戶的原始目標不因驗證中斷。</p>
                                     </div>
 
                                   </div>
@@ -536,18 +541,17 @@
                     <h3 class="title">驗證流程優化與安全防護</h3>
                     <div class="container flex-v-8">
                         <div class="flex-v-4 para">
-                          <b class="para-16">雙軌制驗證與體驗優化</b>
+                          <b class="para-16">驗證選項的介面呈現</b>
                           <ul>
-                            <li>改採<b> Email 連結與 SMS 六位數驗證</b>，提供情境自選並大幅提升註冊成功率。</li>
-                            <li>強制<b>通訊驗證</b>從源頭杜絕無效帳號，解決訂單資訊錯誤與洗讚等營運痛點。</li>
-                            <li>實施「<b>稍後驗證</b>」維持註冊流暢感，於下單或高價值行為前設下門檻，平衡安全與轉換率。</li>
+                            <li>將 Email 連結與 SMS 驗證以<b>並排選項</b>呈現，讓用戶一眼掌握可用路徑，降低選擇時的決策摩擦。</li>
+                            <li>「稍後驗證」以次要視覺權重呈現，引導用戶優先完成驗證，同時保留彈性出口，不造成強迫感。</li>
                           </ul>
                         </div>
                         <div class="flex-v-4 para">
-                          <b class="para-16">全方位安全防禦</b>
+                          <b class="para-16">安全機制的透明化設計</b>
                           <ul>
-                            <li>導入<b>reCAPTCHA</b> 隱形攔截機制，在不干擾真人的前提下杜絕暴力破解。</li>
-                            <li>配合錯誤次數限制與 IP 行為偵測，根除自動化腳本註冊，確保平台帳號品質。</li>
+                            <li>reCAPTCHA 採<b>隱形模式</b>整合於表單提交動作中，用戶感知不到防護機制的存在，確保流程不被打斷。</li>
+                            <li>錯誤狀態以 Danger Semantic Token 即時標示欄位，讓用戶能精準定位問題所在，減少重試成本。</li>
                           </ul>
                         </div>
 
@@ -647,25 +651,16 @@
  
               <div class="three-column-grid">
                 <div class="item item-bg-grey">
-                  <h4>區塊間距與空間感提升</h4>
-                  <p class="para">  <b>[Before]</b><br>
-                  區塊間距不足，內容過於緊湊，降低閱讀舒適度。<br>
-                  <b>[After]</b> <br>
-                  重新定義標題層級與留白比例，提升排版呼吸感。同時<strong>整合操作相關功能</strong>至同一區塊，優化瀏覽動線與資訊架構。</p>
+                  <h4>Spacing 規範</h4>
+                  <p class="para">以 8px 為基礎單位建立間距系統，標題層級與區塊留白皆遵循同一比例規則，確保跨頁面的排版節奏一致，避免開發端產生自由心證。</p>
                 </div>
                 <div class="item item-bg-grey">
-                  <h4>統一圓角與陰影，強化介面質感</h4>
-                  <p class="para"><b>[Before]</b> <br>
-                    版面分隔生硬、缺乏層次，與品牌期望傳遞的溫潤調性不符。<br>
-                    <b>[After]</b> <br>
-                    運用圓角與留白展現親和力，結合陰影設計強化層次，讓視覺體驗更加立體聚焦。</p>
+                  <h4>圓角與陰影規範</h4>
+                  <p class="para">統一採用 8px 圓角搭配輕量陰影定義卡片邊界，呼應品牌溫潤調性。陰影層級對應資訊權重（卡片 → 浮層），非裝飾性使用。</p>
                 </div>
                 <div class="item item-bg-grey">
-                  <h4>視覺層次更清晰，資訊組織更有條理</h4>
-                  <p class="para"> <b>[Before]</b> <br>
-                    元素密集、配色偏重，缺乏明確的視覺引導，使用者需反覆搜尋資訊，增加認知負擔。<br>
-                    <b>[After]</b><br>
-                    強化卡片與背景對比，運用色彩引導關鍵操作，讓資訊層級一目了然，提升閱讀效率。</p>
+                  <h4>色彩語意規範</h4>
+                  <p class="para">遵循 Semantic Color 定義，以品牌橘色為 CTA 主色、咖啡色系為輔助框線，Danger Color 嚴格限定於錯誤狀態，避免語意誤用造成用戶焦慮。</p>
                 </div>
               </div>
             </div>
