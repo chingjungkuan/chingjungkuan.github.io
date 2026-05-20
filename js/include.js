@@ -29,4 +29,7 @@
   document.addEventListener('dragstart', event => {
     if (event.target.tagName === 'IMG') event.preventDefault();
   });
+
+  // 4. 通知其他模組：header/footer 已載入完畢
+  document.dispatchEvent(new CustomEvent('includesLoaded'));
 })();
