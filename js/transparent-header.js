@@ -1,6 +1,6 @@
 // 透明 Header：捲過 hero banner 後切換為白底黑字
 document.addEventListener('includesLoaded', () => {
-  const hero = document.querySelector('.hero-banner-wrapper, .hero-banner-container');
+  const hero = document.querySelector('.hero-banner-wrapper, .hero-banner-container, .hero-bg-blue');
   if (!hero) return;
 
   const observer = new IntersectionObserver(
