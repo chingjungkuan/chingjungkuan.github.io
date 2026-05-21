@@ -1617,3 +1617,47 @@ img {
     border-style: solid;
     border-color: transparent transparent #8c8c8c transparent;
 }
+
+/* ==========================
+   Transparent Header（專案頁）
+========================== */
+
+/* 白字版：透明背景，白色文字 */
+body.transparent-header .navbar {
+    background-color: transparent;
+    border-radius: 0;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* 黑字版：透明背景，深色文字（account 頁） */
+body.transparent-header-dark .navbar {
+    background-color: transparent;
+    border-radius: 0;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+body.transparent-header-dark .navbar .brand {
+    background-image: url('../images/common/logo_name.png');
+}
+body.transparent-header-dark .navbar .nav .nav-link {
+    color: #191919;
+}
+body.transparent-header-dark .navbar .menu-toggle span {
+    background-color: #191919;
+}
+
+/* 捲動過 hero banner 後：白底黑字（兩版共用）*/
+body.transparent-header.header-scrolled .navbar,
+body.transparent-header-dark.header-scrolled .navbar {
+    background-color: #fff;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+}
+body.transparent-header.header-scrolled .navbar .brand,
+body.transparent-header-dark.header-scrolled .navbar .brand {
+    background-image: url('../images/common/logo_name.png');
+}
+body.transparent-header.header-scrolled .navbar .nav .nav-link {
+    color: #191919;
+}
+body.transparent-header.header-scrolled .navbar .menu-toggle span {
+    background-color: #191919;
+}
