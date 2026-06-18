@@ -5,7 +5,7 @@
   const overlay = modal.querySelector('.hire-modal-overlay');
   const closeBtn = modal.querySelector('.hire-modal-close');
   const form = document.getElementById('hire-form');
-  const successPanel = document.getElementById('hire-form-success');
+  const toast = document.getElementById('hire-toast');
   const openBtns = document.querySelectorAll('[data-hire-modal]');
 
   // GA4 漏斗事件
@@ -74,14 +74,14 @@
       })
         .then(function (res) {
           if (!res.ok) throw new Error();
-          form.hidden = true;
-          if (successPanel) successPanel.hidden = false;
-          setTimeout(closeModal, 3000);
+          closeModal();
+          showToast();
         })
         .catch(function () {
           submitBtn.disabled = false;
           submitBtn.textContent = '送出需求';
-          alert('送出時發生錯誤，請直接寄信至 rf61128@gmail.com');
+          closeModal();
+          showToast('danger');
         });
     });
 
@@ -91,8 +91,31 @@
         form.hidden = false;
         form.reset();
         started = false;
-        if (successPanel) successPanel.hidden = true;
+        const submitBtn = form.querySelector('.hire-submit');
+        if (submitBtn) { submitBtn.disabled = false; submitBtn.textContent = '送出需求'; }
       }
     });
+  }
+  function showToast(type) {
+    if (!toast) return;
+    const isDanger = type === 'danger';
+    toast.querySelector('p').textContent = isDanger
+      ? '送出失敗，請直接寄信至 rf61128@gmail.com'
+      : '收到了！我會在 2 個工作天內回覆你。';
+    toast.querySelector('.hire-toast-icon').textContent = isDanger ? '✕' : '✦';
+    toast.classList.toggle('hire-toast--danger', isDanger);
+    toast.hidden = false;
+    requestAnimationFrame(function () {
+      requestAnimationFrame(function () {
+        toast.classList.add('show');
+      });
+    });
+    setTimeout(function () {
+      toast.classList.remove('show');
+      toast.addEventListener('transitionend', function hide() {
+        toast.hidden = true;
+        toast.removeEventListener('transitionend', hide);
+      });
+    }, 4000);
   }
 })();
