@@ -1,0 +1,373 @@
+:root {
+    --transition-smooth: 0.3s ease;
+}
+
+/* ---- Hero ---- */
+.hire-hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 120px 16px 80px;
+    background-color: #f9f8f6;
+}
+
+.hire-hero-inner {
+    max-width: 600px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    text-align: center;
+}
+
+.hire-hero .btn {
+    align-self: center;
+}
+
+.hire-section-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.hire-badge {
+    display: inline-flex;
+    align-items: center;
+    font-size: 13px;
+    font-weight: 700;
+    color: #fff;
+    background-color: #191919;
+    padding: 5px 14px;
+    border-radius: 20px;
+    letter-spacing: 0.03em;
+}
+
+.hire-hero h1 {
+    font-size: 52px;
+    font-weight: 900;
+    color: #191919;
+    line-height: 1.15;
+}
+
+.hire-subtitle {
+    font-size: 18px;
+    color: #666;
+    margin: 0;
+}
+
+.hire-desc {
+    font-size: 14px;
+    line-height: 1.8;
+    color: #555;
+    margin: 0;
+}
+
+@media (min-width: 768px) {
+    .hire-hero h1 {
+        font-size: 80px;
+    }
+
+    .hire-subtitle {
+        font-size: 22px;
+    }
+}
+
+/* ---- Pricing Table ---- */
+.hire-pricing-wrapper {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.hire-pricing-table {
+    min-width: 480px;
+    width: 100%;
+    border: 1px solid #e5e5e5;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.hire-pricing-row {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.hire-pricing-row:last-child {
+    border-bottom: none;
+}
+
+.hire-pricing-head {
+    background-color: #191919;
+}
+
+.hire-pricing-cell {
+    padding: 14px 16px;
+    font-size: 14px;
+    color: #414141;
+}
+
+.hire-pricing-cell + .hire-pricing-cell {
+    border-left: 1px solid #e5e5e5;
+}
+
+.hire-pricing-head .hire-pricing-cell {
+    color: #fff;
+    font-weight: 700;
+    font-size: 13px;
+}
+
+.hire-pricing-head .hire-pricing-cell + .hire-pricing-cell {
+    border-left-color: #333;
+}
+
+/* ---- Process Steps ---- */
+.hire-process {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.hire-step {
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+}
+
+.hire-step-num {
+    font-size: 28px;
+    font-weight: 900;
+    color: #191919;
+    line-height: 1.2;
+    flex-shrink: 0;
+    width: 48px;
+}
+
+.hire-step-body {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding-top: 4px;
+}
+
+.hire-step-body h4 {
+    font-size: 16px;
+    font-weight: 700;
+    color: #191919;
+}
+
+@media (min-width: 768px) {
+    .hire-process {
+        flex-direction: row;
+        gap: 0;
+        align-items: flex-start;
+    }
+
+    .hire-step {
+        flex-direction: column;
+        gap: 12px;
+        flex: 1;
+        padding: 0 20px;
+        border-right: 1px solid #e5e5e5;
+    }
+
+    .hire-step:first-child {
+        padding-left: 0;
+    }
+
+    .hire-step:last-child {
+        border-right: none;
+        padding-right: 0;
+    }
+
+    .hire-step-num {
+        width: auto;
+    }
+}
+
+/* ---- Modal ---- */
+.hire-modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+}
+
+.hire-modal.active {
+    display: flex;
+}
+
+.hire-modal-overlay {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(2px);
+}
+
+.hire-modal-content {
+    position: relative;
+    background-color: #fff;
+    border-radius: 12px;
+    padding: 32px 24px;
+    max-width: 560px;
+    width: 100%;
+    max-height: 90vh;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    z-index: 1;
+}
+
+@media (min-width: 768px) {
+    .hire-modal-content {
+        padding: 40px;
+    }
+}
+
+.hire-modal-header {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.hire-modal-close {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    background: none;
+    border: none;
+    font-size: 18px;
+    color: #999;
+    cursor: pointer;
+    line-height: 1;
+    padding: 4px 6px;
+}
+
+.hire-modal-close:hover {
+    color: #191919;
+}
+
+/* ---- Form ---- */
+.hire-form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.hire-form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.hire-form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+.hire-label {
+    font-size: 13px;
+    font-weight: 700;
+    color: #191919;
+}
+
+.hire-required {
+    color: #E53E3E;
+    margin-left: 2px;
+}
+
+.hire-input,
+.hire-textarea {
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding: 10px 12px;
+    font-size: 14px;
+    color: #414141;
+    font-family: inherit;
+    outline: none;
+    transition: border-color 0.2s;
+    width: 100%;
+    background-color: #fafafa;
+    box-sizing: border-box;
+}
+
+.hire-input:focus,
+.hire-textarea:focus {
+    border-color: #191919;
+    background-color: #fff;
+}
+
+.hire-textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.hire-checkbox-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.hire-checkbox-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 13px;
+    color: #414141;
+    cursor: pointer;
+    padding: 6px 12px;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    transition: background-color 0.15s, border-color 0.15s, color 0.15s;
+    user-select: none;
+}
+
+.hire-checkbox-item:has(input:checked) {
+    background-color: #191919;
+    border-color: #191919;
+    color: #fff;
+}
+
+.hire-checkbox-item input {
+    display: none;
+}
+
+.hire-submit {
+    align-self: flex-end;
+    margin-top: 4px;
+}
+
+/* ---- Form Success State ---- */
+.hire-form-success {
+    text-align: center;
+    padding: 24px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+
+.hire-form-success[hidden] {
+    display: none;
+}
+
+.hire-success-icon {
+    font-size: 32px;
+    margin: 0;
+}
+
+/* ---- Contact ---- */
+.hire-mail-link {
+    color: #185ADB;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+.hire-mail-link:hover {
+    color: #0040BD;
+}
