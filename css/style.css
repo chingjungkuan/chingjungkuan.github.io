@@ -114,6 +114,18 @@ p {
     font-weight: bold;
 }
 
+/* 螢光筆底線效果 */
+.marker {
+    background: linear-gradient(
+        108deg,
+        transparent 40%,
+        #FFF176AA 42%,
+        #FFF176AA 98%,
+        transparent 100%
+    );
+    padding: 0 3px;
+}
+
 .para-16 {
     color: #414141;
     font-size: 16px;
