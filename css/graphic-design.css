@@ -16,6 +16,54 @@
 .green-dot { width: 8px; height: 8px; background-color: var(--brand-iw); border-radius: 50%; }
 .orange-dot { width: 8px; height: 8px; background-color: var(--brand-jobar); border-radius: 50%; }
 
+/* --- 首區塊：讓 wrapper 支援絕對定位 --- */
+.hero-banner-wrapper {
+    position: relative;
+}
+
+/* --- 首區塊文字容器（疊在 banner 圖片上） --- */
+.gd-page-hero {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    padding: 80px 24px 48px;
+    background: linear-gradient(to top, rgba(0,0,0,0.6) 0%, transparent 100%);
+}
+
+.gd-page-hero__year {
+    font-size: 13px;
+    font-weight: 500;
+    color: rgba(255,255,255,0.7);
+    letter-spacing: 0.1em;
+    margin: 0 0 10px;
+}
+
+.gd-page-hero__title {
+    font-size: 52px;
+    font-weight: 900;
+    line-height: 1.1;
+    color: #fff;
+    margin: 0 0 16px;
+}
+
+.gd-page-hero__tags {
+    font-size: 15px;
+    color: rgba(255,255,255,0.85);
+    margin: 0;
+}
+
+@media (min-width: 768px) {
+    .gd-page-hero {
+        padding: 120px 24px 60px;
+    }
+
+    .gd-page-hero__title {
+        font-size: 80px;
+    }
+}
+
 /* --- 黑底大標題 --- */
 .sec-title-container {
     width: 100%;
