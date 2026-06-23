@@ -534,6 +534,58 @@ Component (通用組件與塗鴉線條)
 /* ==========================================================================
    5. UI Design Section
    ========================================================================== */
+
+/* 大專案卡片框線樣式 */
+.project-card {
+    border: 1px solid #efefef;
+    border-radius: 12px;
+    padding: 24px;
+    box-sizing: border-box;
+    background: var(--bg);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, .04);
+}
+
+/* Editor2 + Single 並排 2 欄 */
+.project-card-grid-2col {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+}
+
+.project-card-grid-2col .project-card {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.project-card-grid-2col .card-img-full {
+    width: 100%;
+    margin-top: auto;
+}
+
+.card-title-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 16px;
+}
+
+.card-title-row > div {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.card-title-row .btn {
+    flex-shrink: 0;
+}
+
+@media (min-width: 768px) {
+    .project-card-grid-2col {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
 .ui-txt-card {
     display: flex;
     gap: 24px;
@@ -563,8 +615,8 @@ Component (通用組件與塗鴉線條)
 
 @media screen and (min-width: 992px) {
     .card {
-        flex: 1 1 calc(33.333% - 16px);
-        min-width: 280px;
+        flex: 1 1 calc(50% - 12px);
+        min-width: 0;
     }
 }
 
@@ -620,15 +672,20 @@ Component (通用組件與塗鴉線條)
     gap: 12px;
 }
 
-/* 手機版：文字佔滿剩餘寬度，按鈕按內容 */
+/* 手機版：垂直排列，文字在上，按鈕在下 */
 @media screen and (max-width: 767px) {
     .contact-col-txt-btn {
         width: 100%;
+        flex-direction: column;
+        align-items: flex-start;
     }
+}
 
-    .contact-col-txt-btn .para {
-        flex: 1;
-    }
+.contact-btn-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    flex-shrink: 0;
 }
 
 .contact-col-txt-btn .para {
