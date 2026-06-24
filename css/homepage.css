@@ -117,10 +117,29 @@ Component (通用組件與塗鴉線條)
    3. Hero Section (首頁 Hero)
    ========================================================================== */
 .jumbotron {
+    position: relative;
     padding-top: 80px;
-    padding-bottom: 80px;
+    padding-bottom: 0;
+    height: 360px;
     background-size: cover;
     background-attachment: fixed;
+}
+
+/* container 撐滿 jumbotron 高度，讓 center 可以貼底（mobile + desktop 共用） */
+.jumbotron > .container {
+    height: 100%;
+    display: flex;
+    align-items: stretch;
+}
+
+.jumbotron .center {
+    align-items: flex-end;
+}
+
+@media screen and (min-width: 768px) {
+    .jumbotron {
+        height: 480px;
+    }
 }
 
 .center {
@@ -128,7 +147,6 @@ Component (通用組件與塗鴉線條)
     position: relative;
     display: flex;
     justify-content: flex-end;
-    /* 修正 right 為標準語法 flex-end */
     align-items: baseline;
 }
 
@@ -209,7 +227,7 @@ Component (通用組件與塗鴉線條)
 
 .tag-uiux {
     background-color: #252627;
-    bottom: 61%;
+    bottom: 54%;
     right: -2%;
     animation-delay: 0.9s;
     transform-origin: left bottom;
@@ -228,9 +246,9 @@ Component (通用組件與塗鴉線條)
     position: relative;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-end;
     width: 340px;
-    height: 160px;
+    height: auto;
     margin: 0 auto;
 }
 
@@ -251,7 +269,7 @@ Component (通用組件與塗鴉線條)
     border-radius: 50%;
     z-index: 1;
     filter: blur(12px);
-    background: linear-gradient(270deg, #fff6ee60, #f7d51367);
+    background: linear-gradient(270deg, rgba(255,255,255,0.35), rgba(240,246,255,0.2));
     background-size: 200% 200%;
     animation: animateGlow 10s ease infinite;
 }

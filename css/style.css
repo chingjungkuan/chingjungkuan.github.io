@@ -186,6 +186,7 @@ p {
 
 .hero-bg-grey {
     background-color: #efefef;
+    box-shadow: inset 0 10px 40px rgba(0, 0, 0, 0.05);
 }
 
 .item-bg-grey {
@@ -197,12 +198,67 @@ p {
 }
 
 .hero-bg-blue {
-    background-color: #185ADB;
+    background-color: #080E24;
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
+    overflow: hidden;
+}
+
+/* 首頁 Hero 暗角（vignette） */
+.hero-bg-blue::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    box-shadow: inset 0 0 140px rgba(0, 0, 0, 0.35);
+    pointer-events: none;
+    z-index: 10;
+}
+
+/* 共用：流動漸層色塊基礎樣式與動畫 */
+.glow-blob {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(90px);
+}
+
+@keyframes blobDrift {
+    0%, 100% { transform: translate(0, 0) scale(1); }
+    25%  { transform: translate(35px, -25px) scale(1.07); }
+    50%  { transform: translate(15px, 35px) scale(0.93); }
+    75%  { transform: translate(-25px, 12px) scale(1.04); }
+}
+
+/* 首頁 jumbotron 漸層色塊 */
+.blob-home-1 {
+    width: 70%;
+    height: 140%;
+    top: -30%;
+    left: -20%;
+    background: rgba(24, 80, 210, 0.65);
+    animation: blobDrift 18s ease-in-out infinite;
+}
+
+.blob-home-2 {
+    width: 55%;
+    height: 110%;
+    top: -10%;
+    right: -15%;
+    background: rgba(90, 50, 210, 0.45);
+    animation: blobDrift 22s ease-in-out infinite reverse;
+    animation-delay: -7s;
+}
+
+.blob-home-3 {
+    width: 45%;
+    height: 90%;
+    bottom: -20%;
+    left: 30%;
+    background: rgba(30, 120, 220, 0.35);
+    animation: blobDrift 15s ease-in-out infinite;
+    animation-delay: -4s;
 }
 
 /* 文字相關 */
