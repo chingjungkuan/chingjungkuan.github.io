@@ -118,6 +118,7 @@ Component (通用組件與塗鴉線條)
    ========================================================================== */
 .jumbotron {
     position: relative;
+    overflow: hidden;
     padding-top: 80px;
     padding-bottom: 0;
     height: 360px;
