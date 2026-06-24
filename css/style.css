@@ -1188,19 +1188,9 @@ p {
     }
 }
 
-/* 區塊出現動畫 */
+/* 區塊出現動畫（初始隱藏，由 GSAP 控制動畫） */
 .animate-on-scroll {
     opacity: 0;
-    transform: translateY(80px);
-    /* 向下移動80px */
-    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-    /* 定義動畫效果和時間 */
-}
-
-/* 區塊出現動畫最終狀態|元素可見且回到原始位置 */
-.animate-on-scroll.is-visible {
-    opacity: 1;
-    transform: translateY(0);
 }
 
 /* hero-banner 適用專案頁面（mobile-first） */

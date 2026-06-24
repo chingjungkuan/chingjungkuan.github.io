@@ -67,7 +67,7 @@ Component (通用組件與塗鴉線條)
     pointer-events: none;
 }
 
-/* 塗鴉線條本體 */
+/* 塗鴉線條本體（動畫由 GSAP 控制） */
 .doodle-svg path {
     fill: none;
     stroke: #FC0;
@@ -75,13 +75,6 @@ Component (通用組件與塗鴉線條)
     stroke-linecap: round;
     stroke-dasharray: 1000;
     stroke-dashoffset: 1000;
-    transition: stroke-dashoffset 2s ease-in-out;
-    will-change: stroke-dashoffset;
-}
-
-/* 滾動觸發後的狀態 */
-.animate-trigger.is-active .doodle-svg path {
-    stroke-dashoffset: 0;
 }
 
 /* 工作技能摘要打勾列 */
