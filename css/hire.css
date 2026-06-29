@@ -44,44 +44,45 @@
 }
 
 
+/* 左上角 — 亮天空藍 */
 .hire-glow-bg .blob-blue {
-    width: 65%;
-    height: 130%;
+    width: 70%;
+    height: 120%;
     top: -30%;
-    left: -15%;
-    background: rgba(20, 70, 200, 0.68);
+    left: -20%;
+    background: rgba(60, 155, 225, 0.82);
     animation: blobDrift 16s ease-in-out infinite;
 }
 
-/* 科技感藍紫（去紅、偏冷） */
+/* 中央 — 深紫羅蘭 */
 .hire-glow-bg .blob-purple {
     width: 55%;
     height: 110%;
-    top: 5%;
-    left: 25%;
-    background: rgba(50, 35, 160, 0.42);
+    top: -5%;
+    left: 28%;
+    background: rgba(35, 8, 100, 0.96);
     animation: blobDrift 20s ease-in-out infinite reverse;
     animation-delay: -6s;
 }
 
-/* 暖色調（偏米色，製造右側過渡） */
+/* 右側 — 暖橘琥珀 */
 .hire-glow-bg .blob-warm {
-    width: 45%;
-    height: 90%;
-    bottom: -10%;
-    right: 5%;
-    background: rgba(185, 158, 120, 0.32);
+    width: 48%;
+    height: 100%;
+    top: -5%;
+    right: 0%;
+    background: rgba(215, 120, 40, 0.78);
     animation: blobDrift 18s ease-in-out infinite;
     animation-delay: -10s;
 }
 
-/* 右側/角落的白灰過渡光 */
+/* 右邊緣 — 奶油過渡光 */
 .hire-glow-bg .blob-light {
-    width: 50%;
+    width: 38%;
     height: 110%;
     top: -10%;
-    right: -20%;
-    background: rgba(220, 210, 200, 0.55);
+    right: -12%;
+    background: rgba(240, 218, 190, 0.62);
     filter: blur(110px);
     animation: blobDrift 14s ease-in-out infinite;
     animation-delay: -3s;
@@ -135,7 +136,8 @@
     .hire-hero-text {
         align-items: flex-start;
         align-self: center;
-        max-width: 520px;
+        flex: 1;
+        max-width: none;
         margin-bottom: 0;
     }
 }
@@ -193,7 +195,8 @@
     .hire-hero-strip {
         display: flex;
         align-items: flex-end;
-        width: 340px;
+        flex: 2;
+        width: auto;
         margin-left: 0;
         align-self: flex-end;
         overflow: visible;
@@ -215,7 +218,7 @@
 @media (min-width: 768px) {
     .hire-strip-inner {
         flex-direction: column;
-        width: 320px;
+        width: 100%;
         border-radius: 16px;
         gap: 8px;
         box-shadow: -4px 0 40px rgba(0, 0, 0, 0.2);
@@ -307,7 +310,7 @@
 }
 
 .hire-subtitle {
-    font-size: 18px;
+    font-size: 16px;
     color: rgba(255, 255, 255, 0.72);
     margin: 0;
 }
@@ -325,7 +328,7 @@
     }
 
     .hire-subtitle {
-        font-size: 22px;
+        font-size: 16px;
     }
 }
 
