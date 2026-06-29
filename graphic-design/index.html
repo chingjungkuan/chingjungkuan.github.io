@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="../css/normalize.css">
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/graphic-design.css">
+    <link rel="stylesheet" href="/css/hire.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <!-- Google tag (gtag.js) -->
@@ -44,20 +45,40 @@
     <!-- Start main -->
     <section class="main">
         <!-- Start banner -->
-          <section class="hero-banner-wrapper">
-              <picture>
-                  <source srcset="../images/graphic-design/img_banner-desktop.jpg" media="(min-width: 992px)">
-                  <source srcset="../images/graphic-design/img_banner-pad.jpg" media="(min-width: 768px)">
-                  <img class="hero-banner-img" src="../images/graphic-design/img_banner-mobile.jpg" alt="平面設計相關專案 banner 圖片" loading="eager">
-              </picture>
-              <!-- Hero text overlay -->
-              <div class="gd-page-hero">
-                  <p class="gd-page-hero__year">2021–2023</p>
-                  <h1 class="gd-page-hero__title">Graphic Design</h1>
-                  <p class="gd-page-hero__tags">Illustration ｜ Social Media Post ｜ Banner ｜ YT Thumbnail</p>
+        <section class="hero-banner-container hire-hero">
+          <div class="hire-glow-bg" aria-hidden="true">
+            <div class="glow-blob blob-blue"></div>
+            <div class="glow-blob blob-purple"></div>
+            <div class="glow-blob blob-warm"></div>
+            <div class="glow-blob blob-light"></div>
+          </div>
+          <span class="hire-hero-deco hire-hero-deco--spark" aria-hidden="true">✦</span>
+          <span class="hire-hero-deco hire-hero-deco--heart" aria-hidden="true">♡</span>
+          <div class="hire-hero-inner">
+            <div class="hire-hero-text">
+              <span class="hire-badge">2021–2023</span>
+              <h1>Graphic Design</h1>
+              <p class="hire-subtitle" style="color:#fff">Illustration ｜ Social Media Post ｜ Banner ｜ YT Thumbnail</p>
+            </div>
+            <div class="hire-hero-strip" aria-hidden="true">
+              <div class="hire-strip-inner">
+                <div class="hire-strip-frame" data-strip-frame>
+                  <img src="/images/graphic-design/img_graphic01.jpg" alt="">
+                </div>
+                <div class="hire-strip-frame" data-strip-frame>
+                  <img src="/images/graphic-design/img_graphic02.jpg" alt="">
+                </div>
+                <div class="hire-strip-frame" data-strip-frame>
+                  <img src="/images/graphic-design/img_graphic03.jpg" alt="">
+                </div>
+                <div class="hire-strip-frame" data-strip-frame>
+                  <img src="/images/graphic-design/img_graphic04.jpg" alt="">
+                </div>
               </div>
-          </section>
-		<!-- End banner -->
+            </div>
+          </div>
+        </section>
+        <!-- End banner -->
     <!-- Start 概述 -->
     <div id="overview" class="top-container two-column-grid flex-v-24">
         <div class="item item-bg-grey">
@@ -201,6 +222,7 @@
     </div>
 
   <!-- Start java -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
     <script defer src="/js/include.js"></script>
     <script defer src="/js/sub-nav.js"></script>
     <script defer src="/js/lightbox.js"></script>
@@ -208,5 +230,6 @@
   <!-- End java -->
     
   <script defer src="/js/transparent-header.js"></script>
+  <script defer src="/js/hire-stack.js"></script>
 </body>
 </html>
