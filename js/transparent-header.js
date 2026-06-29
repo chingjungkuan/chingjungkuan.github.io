@@ -10,5 +10,6 @@ document.addEventListener('includesLoaded', () => {
   }
 
   window.addEventListener('scroll', updateHeader, { passive: true });
+  window.addEventListener('load', updateHeader);
   updateHeader(); // 初始化時也執行一次（處理重新整理後已捲動的情況）
 });

@@ -1,5 +1,4 @@
 (function () {
-    if (window.innerWidth < 768) return;
 
     const frames = Array.from(document.querySelectorAll('[data-strip-frame]'));
     if (frames.length < 2) return;
