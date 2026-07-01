@@ -57,8 +57,8 @@
 
             if (firstTarget) {
                 window.scrollTo({
-                    // 減去 80px 作為 Header 或 Navigation 的高度偏移
-                    top: firstTarget.offsetTop - 80,
+                    // 用 getBoundingClientRect + scrollY 取得絕對位置，避免 offsetParent 偏差
+                    top: firstTarget.getBoundingClientRect().top + window.scrollY - 80,
                     behavior: 'smooth'
                 });
             }
@@ -68,11 +68,12 @@
     // 當頁面滾動時
     window.addEventListener('scroll', () => {
 
-        // 讓 sub-nav 浮動 (當首區塊滾動離開視窗時)
-        if (firstBlock) {
-            const firstBlockBottom = firstBlock.getBoundingClientRect().bottom;
-            // 考慮 header 的高度，當 banner 底部超過 80px 時視為離開
-            subNav.classList.toggle('active', firstBlockBottom <= 80);
+        // 讓 sub-nav 浮動：當第一個 sub-nav 區塊進入視窗頂部時出現
+        const firstNavTarget = sections.length > 0 && sections[0].targets[0];
+        const trigger = firstNavTarget || firstBlock;
+        if (trigger) {
+            const triggerTop = trigger.getBoundingClientRect().top;
+            subNav.classList.toggle('active', triggerTop <= 80);
         }
 
         const scrollY = window.scrollY;
