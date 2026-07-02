@@ -19,19 +19,24 @@
     // 1. 點擊圖片觸發 Lightbox
     document.querySelectorAll('.lightbox-trigger').forEach(el => {
         el.addEventListener('click', function () {
-            
+
             // 檢查點擊的元素是否是 <img> 標籤
             if (this.tagName.toLowerCase() === 'img') {
                 lightboxImg.src = this.src;
             } else {
-                // 如果 .lightbox-trigger 是一個父容器 (例如 <div>)，
-                // 您可能需要從內部查找圖片的 src。這裡假設 src 是直接在 <img> 上。
                 const img = this.querySelector('img');
                 if (img) {
                     lightboxImg.src = img.src;
                 }
             }
-            
+
+            // GA4 追蹤：取檔名作為 image_name
+            if (typeof gtag === 'function') {
+                const src = this.tagName.toLowerCase() === 'img' ? this.src : (this.querySelector('img') || {}).src || '';
+                const imageName = src.split('/').pop().replace(/\.[^.]+$/, '');
+                gtag('event', 'click_image_lightbox', { image_name: imageName });
+            }
+
             // 顯示 Lightbox
             lightbox.classList.add('active');
         });
