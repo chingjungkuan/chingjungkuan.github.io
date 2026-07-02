@@ -1,5 +1,6 @@
 // 透明 Header：捲過 hero banner 後切換為白底黑字
-document.addEventListener('includesLoaded', () => {
+// hero 元素在頁面 HTML 中，不需等待 includesLoaded，defer 執行即可
+(function () {
   const hero = document.querySelector('.hero-banner-wrapper, .hero-banner-container, .hero-bg-blue');
   if (!hero) return;
 
@@ -12,4 +13,4 @@ document.addEventListener('includesLoaded', () => {
   window.addEventListener('scroll', updateHeader, { passive: true });
   window.addEventListener('load', updateHeader);
   updateHeader(); // 初始化時也執行一次（處理重新整理後已捲動的情況）
-});
+})();
