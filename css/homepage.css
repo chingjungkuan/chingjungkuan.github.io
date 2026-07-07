@@ -102,14 +102,16 @@ Component (通用組件與塗鴉線條)
 }
 
 @media (min-width: 768px) {
-    .checklist-container {
-        flex-direction: row;
-        flex-wrap: wrap;
-        gap: 16px;
-    }
-
     .check-item {
         font-size: 14px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .checklist-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 16px 24px;
     }
 }
 

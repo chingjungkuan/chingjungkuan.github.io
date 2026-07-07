@@ -129,7 +129,7 @@
 							<path d="M8 12L11 15L16 9" stroke="white" stroke-width="2" stroke-linecap="round"
 								stroke-linejoin="round" />
 						</svg>
-						整合 <button class="modal-trigger" data-html-modal="ai-workflow-content" style="background:none;border:none;padding:0;cursor:pointer;color:#0040BD;font-weight:bold;text-decoration:underline;font-size:inherit;">AI 工具於工作流</button>，加速設計迭代
+						整合 <button class="modal-trigger" data-html-modal="ai-workflow-content" data-modal-title="整合 AI 工具於工作流，加速設計迭代" style="background:none;border:none;padding:0;cursor:pointer;color:#0040BD;font-weight:bold;font-size:inherit;">AI 工具於工作流</button>，加速設計迭代
 					</div>
 				</div>
 			</div>
@@ -423,19 +423,21 @@
 	<div id="html-modal" class="html-modal">
 		<div class="html-modal-overlay"></div>
 		<div class="html-modal-box">
-			<button class="html-modal-close" aria-label="關閉">×</button>
+			<div class="html-modal-header">
+				<h3 id="html-modal-title" class="html-modal-title"></h3>
+				<button class="html-modal-close" aria-label="關閉">×</button>
+			</div>
 			<div id="html-modal-body"></div>
 		</div>
 	</div>
 
 	<!-- AI Workflow Modal Content Template -->
 	<template id="ai-workflow-content">
-		<h3 class="html-modal-title">整合 AI 工具於工作流，加速設計迭代</h3>
 		<div class="html-modal-grid">
 			<div class="item item-bg-grey">
 				<div class="content-header">
 					<span class="vertical-decorator"></span>
-					<h4>個人 PARA 知識庫 × Claude Agent</h4>
+					<h5>個人 PARA 知識庫 × Claude Agent</h5>
 				</div>
 				<div class="flex-v-16 para">
 					<div class="flex-v-4">
@@ -456,7 +458,7 @@
 			<div class="item item-bg-grey">
 				<div class="content-header">
 					<span class="vertical-decorator"></span>
-					<h4>競品 Agent × 功能矩陣自動產出</h4>
+					<h5>競品 Agent × 功能矩陣自動產出</h5>
 				</div>
 				<div class="flex-v-16 para">
 					<div class="flex-v-4">
@@ -476,7 +478,7 @@
 			<div class="item item-bg-grey">
 				<div class="content-header">
 					<span class="vertical-decorator"></span>
-					<h4>品牌設計系統知識庫 × AI 快速原型</h4>
+					<h5>品牌設計系統知識庫 × AI 快速原型</h5>
 				</div>
 				<div class="flex-v-16 para">
 					<div class="flex-v-4">
@@ -497,7 +499,7 @@
 			<div class="item item-bg-grey">
 				<div class="content-header">
 					<span class="vertical-decorator"></span>
-					<h4>Analytics Spec Skill × 追蹤規格書產出</h4>
+					<h5>Analytics Spec Skill × 追蹤規格書產出</h5>
 				</div>
 				<div class="flex-v-16 para">
 					<div class="flex-v-4">

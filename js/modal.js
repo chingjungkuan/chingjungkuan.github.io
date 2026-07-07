@@ -12,6 +12,8 @@ document.addEventListener('DOMContentLoaded', () => {
       const template = document.getElementById(templateId);
       const htmlModal = document.getElementById('html-modal');
       if (!template || !htmlModal) return;
+      const titleEl = document.getElementById('html-modal-title');
+      if (titleEl) titleEl.textContent = trigger.getAttribute('data-modal-title') || '';
       document.getElementById('html-modal-body').innerHTML = template.innerHTML;
       htmlModal.classList.add('active');
       document.body.style.overflow = 'hidden';
