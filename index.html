@@ -129,7 +129,7 @@
 							<path d="M8 12L11 15L16 9" stroke="white" stroke-width="2" stroke-linecap="round"
 								stroke-linejoin="round" />
 						</svg>
-						整合 AI 工具於工作流，加速設計迭代
+						整合 <button class="modal-trigger" data-html-modal="ai-workflow-content" style="background:none;border:none;padding:0;cursor:pointer;color:#0040BD;font-weight:bold;text-decoration:underline;font-size:inherit;">AI 工具於工作流</button>，加速設計迭代
 					</div>
 				</div>
 			</div>
@@ -419,6 +419,104 @@
 	<div id="site-footer" data-include="/components/footer.html"></div>
 	<!-- End footer -->
 
+	<!-- AI Workflow Modal -->
+	<div id="html-modal" class="html-modal">
+		<div class="html-modal-overlay"></div>
+		<div class="html-modal-box">
+			<button class="html-modal-close" aria-label="關閉">×</button>
+			<div id="html-modal-body"></div>
+		</div>
+	</div>
+
+	<!-- AI Workflow Modal Content Template -->
+	<template id="ai-workflow-content">
+		<h3 class="html-modal-title">整合 AI 工具於工作流，加速設計迭代</h3>
+		<div class="html-modal-grid">
+			<div class="item item-bg-grey">
+				<div class="content-header">
+					<span class="vertical-decorator"></span>
+					<h4>個人 PARA 知識庫 × Claude Agent</h4>
+				</div>
+				<div class="flex-v-16 para">
+					<div class="flex-v-4">
+						<p><b>工具｜</b>Claude Code、Obsidian、GitHub</p>
+						<p><b>架構｜</b>PARA（Projects / Areas / Resources / Archive）</p>
+					</div>
+					<p>用 Claude Agent 建立一套自動化知識管理流程：每日靈感自動爬取並分類、設計靈感整理進 Obsidian 知識庫、重要筆記同步備份至 GitHub。透過客製化 Skill 指令，可直接呼叫 AI 搜尋、新增、歸檔筆記。</p>
+					<div class="flex-v-4">
+						<b class="para-16">Key Outcomes</b>
+						<ul>
+							<li><b>自動化靈感收集｜</b>每日定時爬取設計靈感，自動歸入知識庫。</li>
+							<li><b>快速筆記存取｜</b>用自然語言指令搜尋、新增、整理筆記。</li>
+							<li><b>跨裝置同步｜</b>透過 GitHub 備份，隨時在任何裝置取用。</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="item item-bg-grey">
+				<div class="content-header">
+					<span class="vertical-decorator"></span>
+					<h4>競品 Agent × 功能矩陣自動產出</h4>
+				</div>
+				<div class="flex-v-16 para">
+					<div class="flex-v-4">
+						<p><b>工具｜</b>Claude Agent、Skill（competitor-analysis）</p>
+					</div>
+					<p>輸入競品名稱，AI 自動產出功能清單、UX 模式整理與對比矩陣。原本需要 2–3 小時的競品整理，縮短至 30 分鐘內完成初稿，設計師只需專注在判斷與補充。</p>
+					<div class="flex-v-4">
+						<b class="para-16">Key Outcomes</b>
+						<ul>
+							<li><b>結構化輸出｜</b>功能清單、UX 模式、對比矩陣一次產出。</li>
+							<li><b>大幅縮短前期研究時間｜</b>初稿從 2–3 小時縮至 30 分鐘。</li>
+							<li><b>客製化 Skill｜</b>可針對不同產品類型調整分析框架。</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="item item-bg-grey">
+				<div class="content-header">
+					<span class="vertical-decorator"></span>
+					<h4>品牌設計系統知識庫 × AI 快速原型</h4>
+				</div>
+				<div class="flex-v-16 para">
+					<div class="flex-v-4">
+						<p><b>工具｜</b>Claude Code、Skill（tintint-design-system）</p>
+						<p><b>應用｜</b>點點印 Editor2、Single 等產品頁面原型</p>
+					</div>
+					<p>為點點印建立品牌設計系統知識庫，搭配客製化 Skill，讓 AI 在協作原型設計時自動套用品牌規範——不需每次重新說明設計語彙，大幅縮短從需求到可驗證原型的時間。</p>
+					<div class="flex-v-4">
+						<b class="para-16">Key Outcomes</b>
+						<ul>
+							<li><b>AI 有了設計記憶｜</b>不需每次重新說明色彩、元件、排版規範。</li>
+							<li><b>品牌一致性自動保障｜</b>AI 產出的原型直接符合設計系統規範。</li>
+							<li><b>快速可驗證原型｜</b>從需求描述到可互動 prototype，大幅縮短時間。</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="item item-bg-grey">
+				<div class="content-header">
+					<span class="vertical-decorator"></span>
+					<h4>Analytics Spec Skill × 追蹤規格書產出</h4>
+				</div>
+				<div class="flex-v-16 para">
+					<div class="flex-v-4">
+						<p><b>工具｜</b>Claude Agent、GA4、Skill（generate-analytics-spec）</p>
+					</div>
+					<p>設計師通常不熟悉埋點規格的撰寫格式，透過客製化的 Analytics Spec Skill，輸入頁面互動需求，AI 自動產出事件名稱、參數定義與 QA 驗收清單，降低設計與工程的溝通門檻。</p>
+					<div class="flex-v-4">
+						<b class="para-16">Key Outcomes</b>
+						<ul>
+							<li><b>規格標準化｜</b>每次輸出格式一致，減少溝通誤差。</li>
+							<li><b>設計師也能主導埋點｜</b>不需等工程師定義，設計端即可產出草稿。</li>
+							<li><b>與 GA4 直接對應｜</b>輸出的事件定義可直接對應 GA4 自訂維度。</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</template>
+
 	<!-- Start JS -->
 	<script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/ScrollTrigger.min.js"></script>
@@ -427,6 +525,7 @@
 	<script src="/js/doodle-title-line.js"></script>
 	<script src="/js/stacked-cards.js"></script>
 	<script src="/js/faq.js"></script>
+	<script src="/js/modal.js"></script>
 	<script src="/js/scroll-restore.js"></script>
 	<script src="/js/cursor.js"></script>
 	<script defer src="/js/transparent-header.js"></script>

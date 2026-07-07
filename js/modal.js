@@ -1,10 +1,23 @@
 document.addEventListener('DOMContentLoaded', () => {
   // 使用事件代理，監聽全文件的點擊事件
   document.addEventListener('click', (e) => {
-    
+
     // 1. 處理開啟邏輯：尋找點擊目標
     const trigger = e.target.closest(".modal-trigger");
-    
+
+    // 1a. 富 HTML 內容 modal（data-html-modal）
+    if (trigger && trigger.hasAttribute('data-html-modal')) {
+      e.preventDefault();
+      const templateId = trigger.getAttribute('data-html-modal');
+      const template = document.getElementById(templateId);
+      const htmlModal = document.getElementById('html-modal');
+      if (!template || !htmlModal) return;
+      document.getElementById('html-modal-body').innerHTML = template.innerHTML;
+      htmlModal.classList.add('active');
+      document.body.style.overflow = 'hidden';
+      return;
+    }
+
     if (trigger) {
       const modal = document.getElementById("commonModal");
       if (!modal) return;
@@ -45,22 +58,39 @@ document.addEventListener('DOMContentLoaded', () => {
       document.body.style.overflow = 'hidden'; // 禁止背景捲動
     }
 
-    // 2. 處理關閉邏輯：點擊叉叉、背景
+    // 2. 處理關閉邏輯：html-modal
+    const htmlModal = document.getElementById('html-modal');
+    if (htmlModal && htmlModal.classList.contains('active')) {
+      if (e.target.classList.contains('html-modal-close') || e.target === htmlModal) {
+        htmlModal.classList.remove('active');
+        document.body.style.overflow = 'auto';
+      }
+    }
+
+    // 3. 處理關閉邏輯：commonModal（點擊叉叉、背景）
     const modal = document.getElementById("commonModal");
     if (modal && modal.style.display === "flex") {
       if (e.target.classList.contains('close-btn') || e.target === modal) {
         modal.style.display = "none";
-        document.body.style.overflow = 'auto'; // 恢復背景捲動
+        document.body.style.overflow = 'auto';
       }
     }
   });
 
-  // 3. 鍵盤 Esc 關閉支援
+  // 4. 鍵盤 Esc 關閉支援
   window.addEventListener('keydown', (e) => {
-    const modal = document.getElementById("commonModal");
-    if (e.key === 'Escape' && modal && modal.style.display === "flex") {
-      modal.style.display = "none";
-      document.body.style.overflow = 'auto';
+    if (e.key === 'Escape') {
+      const htmlModal = document.getElementById('html-modal');
+      if (htmlModal && htmlModal.classList.contains('active')) {
+        htmlModal.classList.remove('active');
+        document.body.style.overflow = 'auto';
+        return;
+      }
+      const modal = document.getElementById("commonModal");
+      if (modal && modal.style.display === "flex") {
+        modal.style.display = "none";
+        document.body.style.overflow = 'auto';
+      }
     }
   });
 });
