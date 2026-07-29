@@ -433,90 +433,141 @@
 
 	<!-- AI Workflow Modal Content Template -->
 	<template id="ai-workflow-content">
-		<div class="html-modal-grid">
-			<div class="item item-bg-grey">
-				<div class="content-header">
-					<span class="vertical-decorator"></span>
-					<h5>個人 PARA 知識庫 × Claude Agent</h5>
-				</div>
-				<div class="flex-v-16 para">
-					<div class="flex-v-4">
-						<p><b>工具｜</b>Claude Code、Obsidian、GitHub</p>
-						<p><b>架構｜</b>PARA（Projects / Areas / Resources / Archive）</p>
+	<div class="project-sections-container ai-workflow-tabs flex-v-8">
+		<div class="mobile-selector-wrapper">
+			<select class="tab-dropdown" id="ai-workflow-tab-selector">
+				<option value="1">知識庫管理</option>
+				<option value="2">競品分析</option>
+				<option value="3">快速原型</option>
+				<option value="4">埋點規格</option>
+				<option value="5">規格文件協作</option>
+			</select>
+		</div>
+
+		<div class="desktop-tab-labels">
+			<button class="tab-btn active" data-index="1">知識庫管理</button>
+			<button class="tab-btn" data-index="2">競品分析</button>
+			<button class="tab-btn" data-index="3">快速原型</button>
+			<button class="tab-btn" data-index="4">埋點規格</button>
+			<button class="tab-btn" data-index="5">規格文件協作</button>
+		</div>
+
+		<div class="tab-content-container">
+			<div class="tab-panel active" id="ai-workflow-panel-1">
+				<div class="item item-bg-grey">
+					<div class="content-header">
+						<span class="vertical-decorator"></span>
+						<h5>個人 PARA 知識庫 × Claude Agent</h5>
 					</div>
-					<p>用 Claude Agent 建立一套自動化知識管理流程：每日靈感自動爬取並分類、設計靈感整理進 Obsidian 知識庫、重要筆記同步備份至 GitHub。透過客製化 Skill 指令，可直接呼叫 AI 搜尋、新增、歸檔筆記。</p>
-					<div class="flex-v-4">
-						<b class="para-16">Key Outcomes</b>
-						<ul>
-							<li><b>自動化靈感收集｜</b>每日定時爬取設計靈感，自動歸入知識庫。</li>
-							<li><b>快速筆記存取｜</b>用自然語言指令搜尋、新增、整理筆記。</li>
-							<li><b>跨裝置同步｜</b>透過 GitHub 備份，隨時在任何裝置取用。</li>
-						</ul>
-					</div>
-				</div>
-			</div>
-			<div class="item item-bg-grey">
-				<div class="content-header">
-					<span class="vertical-decorator"></span>
-					<h5>競品 Agent × 功能矩陣自動產出</h5>
-				</div>
-				<div class="flex-v-16 para">
-					<div class="flex-v-4">
-						<p><b>工具｜</b>Claude Agent、Skill（competitor-analysis）</p>
-					</div>
-					<p>輸入競品名稱，AI 自動產出功能清單、UX 模式整理與對比矩陣。原本需要 2–3 小時的競品整理，縮短至 30 分鐘內完成初稿，設計師只需專注在判斷與補充。</p>
-					<div class="flex-v-4">
-						<b class="para-16">Key Outcomes</b>
-						<ul>
-							<li><b>結構化輸出｜</b>功能清單、UX 模式、對比矩陣一次產出。</li>
-							<li><b>大幅縮短前期研究時間｜</b>初稿從 2–3 小時縮至 30 分鐘。</li>
-							<li><b>客製化 Skill｜</b>可針對不同產品類型調整分析框架。</li>
-						</ul>
-					</div>
-				</div>
-			</div>
-			<div class="item item-bg-grey">
-				<div class="content-header">
-					<span class="vertical-decorator"></span>
-					<h5>品牌設計系統知識庫 × AI 快速原型</h5>
-				</div>
-				<div class="flex-v-16 para">
-					<div class="flex-v-4">
-						<p><b>工具｜</b>Claude Code、Skill（tintint-design-system）</p>
-						<p><b>應用｜</b>點點印 Editor2、Single 等產品頁面原型</p>
-					</div>
-					<p>為點點印建立品牌設計系統知識庫，搭配客製化 Skill，讓 AI 在協作原型設計時自動套用品牌規範——不需每次重新說明設計語彙，大幅縮短從需求到可驗證原型的時間。</p>
-					<div class="flex-v-4">
-						<b class="para-16">Key Outcomes</b>
-						<ul>
-							<li><b>AI 有了設計記憶｜</b>不需每次重新說明色彩、元件、排版規範。</li>
-							<li><b>品牌一致性自動保障｜</b>AI 產出的原型直接符合設計系統規範。</li>
-							<li><b>快速可驗證原型｜</b>從需求描述到可互動 prototype，大幅縮短時間。</li>
-						</ul>
+					<div class="flex-v-24 para">
+						<div class="flex-v-4">
+							<p><b>工具｜</b>Claude Code、Obsidian、GitHub</p>
+							<p><b>架構｜</b>PARA（Projects / Areas / Resources / Archive）</p>
+						</div>
+						<p>用 Claude Agent 建立一套自動化知識管理流程：每日靈感自動爬取並分類、設計靈感整理進 Obsidian 知識庫、重要筆記同步備份至 GitHub。透過客製化 Skill 指令，可直接呼叫 AI 搜尋、新增、歸檔筆記。</p>
+						<div class="flex-v-4">
+							<b class="para-16">Key Outcomes</b>
+							<ul>
+								<li><b>自動化靈感收集｜</b>每日定時爬取設計靈感，自動歸入知識庫。</li>
+								<li><b>快速筆記存取｜</b>用自然語言指令搜尋、新增、整理筆記。</li>
+								<li><b>跨裝置同步｜</b>透過 GitHub 備份，隨時在任何裝置取用。</li>
+							</ul>
+						</div>
 					</div>
 				</div>
 			</div>
-			<div class="item item-bg-grey">
-				<div class="content-header">
-					<span class="vertical-decorator"></span>
-					<h5>Analytics Spec Skill × 追蹤規格書產出</h5>
-				</div>
-				<div class="flex-v-16 para">
-					<div class="flex-v-4">
-						<p><b>工具｜</b>Claude Agent、GA4、Skill（generate-analytics-spec）</p>
+			<div class="tab-panel" id="ai-workflow-panel-2">
+				<div class="item item-bg-grey">
+					<div class="content-header">
+						<span class="vertical-decorator"></span>
+						<h5>競品 Agent × 功能矩陣自動產出</h5>
 					</div>
-					<p>設計師通常不熟悉埋點規格的撰寫格式，透過客製化的 Analytics Spec Skill，輸入頁面互動需求，AI 自動產出事件名稱、參數定義與 QA 驗收清單，降低設計與工程的溝通門檻。</p>
-					<div class="flex-v-4">
-						<b class="para-16">Key Outcomes</b>
-						<ul>
-							<li><b>規格標準化｜</b>每次輸出格式一致，減少溝通誤差。</li>
-							<li><b>設計師也能主導埋點｜</b>不需等工程師定義，設計端即可產出草稿。</li>
-							<li><b>與 GA4 直接對應｜</b>輸出的事件定義可直接對應 GA4 自訂維度。</li>
-						</ul>
+					<div class="flex-v-24 para">
+						<div class="flex-v-4">
+							<p><b>工具｜</b>Claude Agent、Skill（competitor-analysis）</p>
+						</div>
+						<p>輸入競品名稱，AI 自動產出功能清單、UX 模式整理與對比矩陣。原本需要 2–3 小時的競品整理，縮短至 30 分鐘內完成初稿，設計師只需專注在判斷與補充。</p>
+						<div class="flex-v-4">
+							<b class="para-16">Key Outcomes</b>
+							<ul>
+								<li><b>結構化輸出｜</b>功能清單、UX 模式、對比矩陣一次產出。</li>
+								<li><b>大幅縮短前期研究時間｜</b>初稿從 2–3 小時縮至 30 分鐘。</li>
+								<li><b>客製化 Skill｜</b>可針對不同產品類型調整分析框架。</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="tab-panel" id="ai-workflow-panel-3">
+				<div class="item item-bg-grey">
+					<div class="content-header">
+						<span class="vertical-decorator"></span>
+						<h5>品牌設計系統知識庫 × AI 快速原型</h5>
+					</div>
+					<div class="flex-v-24 para">
+						<div class="flex-v-4">
+							<p><b>工具｜</b>Claude Code、Skill（tintint-design-system）</p>
+							<p><b>應用｜</b>點點印 Editor2、Single 等產品頁面原型</p>
+						</div>
+						<p>為點點印建立品牌設計系統知識庫，搭配客製化 Skill，讓 AI 在協作原型設計時自動套用品牌規範。像是在製作新功能提案時，不需每次重新說明設計樣式，大幅縮短從需求到可驗證原型的時間，加速提案效率。</p>
+						<div class="flex-v-4">
+							<b class="para-16">Key Outcomes</b>
+							<ul>
+								<li><b>AI 有了設計記憶｜</b>不需每次重新說明色彩、元件、排版規範。</li>
+								<li><b>品牌一致性自動保障｜</b>AI 產出的原型直接符合設計系統規範。</li>
+								<li><b>快速可驗證原型｜</b>從需求描述到可互動 prototype，大幅縮短時間。</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="tab-panel" id="ai-workflow-panel-4">
+				<div class="item item-bg-grey">
+					<div class="content-header">
+						<span class="vertical-decorator"></span>
+						<h5>Analytics Spec Skill × 追蹤規格書產出</h5>
+					</div>
+					<div class="flex-v-24 para">
+						<div class="flex-v-4">
+							<p><b>工具｜</b>Claude Agent、GA4、Skill（generate-analytics-spec）</p>
+						</div>
+						<p>設計師通常不熟悉埋點規格的撰寫格式，透過客製化的 Analytics Spec Skill，輸入頁面互動需求，AI 自動產出事件名稱、參數定義與 QA 驗收清單，降低設計與工程的溝通門檻。</p>
+						<div class="flex-v-4">
+							<b class="para-16">Key Outcomes</b>
+							<ul>
+								<li><b>規格標準化｜</b>每次輸出格式一致，減少溝通誤差。</li>
+								<li><b>設計師也能主導埋點｜</b>不需等工程師定義，設計端即可產出草稿。</li>
+								<li><b>與 GA4 直接對應｜</b>輸出的事件定義可直接對應 GA4 自訂維度。</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="tab-panel" id="ai-workflow-panel-5">
+				<div class="item item-bg-grey">
+					<div class="content-header">
+						<span class="vertical-decorator"></span>
+						<h5>功能規格書協作 × AI 快速產出文件</h5>
+					</div>
+					<div class="flex-v-24 para">
+						<div class="flex-v-4">
+							<p><b>工具｜</b>Claude Code、Obsidian、Mermaid</p>
+							<p><b>應用｜</b>點點印 單後修訂／暫停印製 功能規格</p>
+						</div>
+						<p>我透過快速使用原先已建立好的元件與口語描述定義畫面邏輯與規格內容，AI 即時整理成結構化規格文件（User Flow、UI 畫面規格、流程圖、邊界情境），讓工程、客服等團隊成員能在會議前就對齊需求，減少頻繁逐頁口頭說明。</p>
+						<div class="flex-v-4">
+							<b class="para-16">Key Outcomes</b>
+							<ul>
+								<li><b>結構化規格產出｜</b>從截圖與口語描述直接產出含 User Flow、UI 規格、邊界情境的完整文件。</li>
+								<li><b>流程圖即時視覺化｜</b>用 Mermaid 語法快速產出流程圖，需求異動可立即更新。</li>
+								<li><b>版本可追溯｜</b>規格文件透過 GitHub 版本控制管理，需求調整過程清楚留存。</li>
+							</ul>
+						</div>
 					</div>
 				</div>
 			</div>
 		</div>
+	</div>
 	</template>
 
 	<!-- Start JS -->
@@ -528,6 +579,7 @@
 	<script src="/js/stacked-cards.js"></script>
 	<script src="/js/faq.js"></script>
 	<script src="/js/modal.js"></script>
+	<script src="/js/tab-content.js"></script>
 	<script src="/js/scroll-restore.js"></script>
 	<script src="/js/cursor.js"></script>
 	<script defer src="/js/transparent-header.js"></script>

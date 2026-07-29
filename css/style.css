@@ -1469,6 +1469,40 @@ img {
     }
 }
 
+/* AI 工作流 Modal 的 Tab（首頁專用配色：灰底 + 品牌藍，Tab 選項移出容器外） */
+.ai-workflow-tabs {
+    background-color: transparent;
+    padding: 0;
+}
+
+.ai-workflow-tabs .tab-content-container {
+    background-color: #EFEFEF;
+    padding: 24px;
+    border-radius: 12px;
+}
+
+.ai-workflow-tabs .item-bg-grey {
+    background-color: transparent;
+}
+
+.ai-workflow-tabs .item {
+    padding: 0;
+}
+
+.ai-workflow-tabs .tab-btn.active {
+    background-color: #185ADB;
+    border-color: #185ADB;
+    color: #ffffff;
+}
+
+.ai-workflow-tabs .vertical-decorator {
+    background-color: #185ADB;
+}
+
+.ai-workflow-tabs .tab-panel p {
+    margin: 0;
+}
+
 /* Tab 切換的圖片展示容器 */
 .tab-image-view {
     width: 100%;
