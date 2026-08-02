@@ -81,15 +81,21 @@
       <!-- Task & Solution -->
       <div class="top-container">
         <div class="two-column-grid">
-          <div class="flex-v-16">
-            <h3 class="title">Task</h3>
+          <div class="item item-bg-grey">
+            <div class="content-header">
+              <span class="vertical-decorator"></span>
+              <h3 class="title">Task</h3>
+            </div>
             <ul class="para">
               <li><strong>建構具擴充性的設計系統</strong><br>針對 B2B Dropshipping（一件代發）業務中「跨平台整合」與「高密度數據」的特性，盤點並重構既有介面。制定標準化且嚴謹的 UI 元件庫，以確保未來供應鏈模組擴充時，能維持高度的視覺與互動一致性。</li>
-              <li><strong>降低營運與學習成本</strong><br>解決 Dropshipping 模式下繁雜的零庫存履約流程。針對複雜的 SaaS 後台架構，透過直覺的互動設計優化核心工作流（如：多商店串接、自動化儲值設定），大幅降低用戶處理跨境電商業務時的認知負荷與操作錯誤率。</li>
+              <li><strong>降低營運與學習成本</strong><br>解決 Dropshipping 模式下繁雜的零庫存出貨流程。針對複雜的 SaaS 後台架構，透過直覺的互動設計優化核心工作流（如：多商店串接、自動化儲值設定），大幅降低用戶處理跨境電商業務時的認知負荷與操作錯誤率。</li>
             </ul>
           </div>
-          <div class="flex-v-16">
-            <h3 class="title">Solution</h3>
+          <div class="item item-bg-grey">
+            <div class="content-header">
+              <span class="vertical-decorator"></span>
+              <h3 class="title">Solution</h3>
+            </div>
             <ul class="para">
               <li><strong>建立高信任感的視覺語彙</strong><br>提取品牌核心「紫色」結合俐落的介面風格，建立符合 B2B 商業調性與高信任感的視覺識別，同時提升長時間處理數據的視覺舒適度。</li>
               <li><strong>強化資訊層級與系統化 UI</strong><br>重新定義元件規範並導入系統化圖示，強化高密度數據表單中的資訊架構，加速管理者掃視關鍵數據與決策的速度。</li>
@@ -116,7 +122,7 @@
               <span class="vertical-decorator"></span>
               <h4>Color Palette</h4>
             </div>
-            <p class="para">以品牌紫色（#6C54A7）為主色調，搭配亮紫（#7166F9）、粉紫（#E17CFD）作為層次延伸，引入青色（#27AB9F）與藍色（#4CD7F6）作為功能性輔助色；深色底（#010D16）搭配 5 組漸層，整體呈現科技感與高端形象。</p>
+            <p class="para">以品牌紫色（#6C54A7）為主色調，搭配亮紫（#7166F9）、粉紫（#E17CFD）作為層次延伸，引入水藍色（#4CD7F6）作為功能性輔助色；搭配 5 組漸層，整體呈現科技感與高端形象。</p>
           </div>
           <div class="item item-bg-grey">
             <div class="content-header">
@@ -157,7 +163,7 @@
             </div>
             <ul class="para">
               <li><strong>資訊層級優化</strong><br>將使用者登入後最關心的核心營運指標（帳戶餘額、已付款訂單、分潤、待處理工單）置於首屏視覺焦點。打造直覺的視覺層級，幫助用戶快速判讀數據，提升管理效率。</li>
-              <li><strong>非干擾性的防呆提醒</strong><br>將通知中心獨立收攏於右側面板。確保關鍵警示（例如：餘額不足導致自動履約中斷）能第一時間抓住眼球，但又不會阻斷主畫面的數據閱讀與操作動線。</li>
+              <li><strong>非干擾性的防呆提醒</strong><br>將通知中心獨立收攏於右側面板。確保關鍵警示（例如：餘額不足導致自動化出貨處理中斷）能第一時間抓住眼球，但又不會阻斷主畫面的數據閱讀與操作動線。</li>
               <li><strong>高效佈達管道</strong><br>頂部橫幅區塊，作為高曝光度的溝通版位，用於引導新功能或重要公告，有效降低客服詢問成本。</li>
             </ul>
           </div>
@@ -177,9 +183,9 @@
             </div>
             <div class="tag-grid">
               <span class="tag-pill">Awaiting Processing</span>
-              <span class="tag-pill">Awaiting Confirm</span>
+              <span class="tag-pill">Awaiting Confirmation</span>
               <span class="tag-pill">Awaiting STTM Processing</span>
-              <span class="tag-pill">Awaiting STTM Confirm</span>
+              <span class="tag-pill">Awaiting STTM Confirmation</span>
               <span class="tag-pill">Processed</span>
             </div>
             <p class="para">客服工單服務負責處理使用者關於收貨與訂單的任何問題。客服工單包含 5 種狀態，分別為：等待 STTM 確認、等待 STTM 處理、等待處理、等待確認以及已處理。</p>
@@ -193,7 +199,7 @@
                   <span class="flow-badge">A</span>
                   <div class="flow-step">
                     <span class="flow-pill flow-pill--filled">Users</span>
-                    <p>Select the order that you have any problem</p>
+                    <p>Select the order in question</p>
                   </div>
                   <span class="flow-arrow">→</span>
                   <div class="flow-step">
@@ -220,7 +226,7 @@
                   <span class="flow-arrow">→</span>
                   <div class="flow-step">
                     <span class="flow-pill">Users</span>
-                    <p>Recieve and respond the ticket</p>
+                    <p>Receive and respond to the ticket</p>
                   </div>
                   <span class="flow-arrow">→</span>
                   <span class="flow-process-btn">PROCESS</span>
@@ -275,7 +281,7 @@
             </div>
             <ul class="para">
               <li><strong>系統主動通報</strong><br>系統會針對缺貨、訂單資訊有誤等 6 大預設核心情境，主動向用戶建立並發送工單。將客服模式由被動等待轉為主動介入，幫助用戶在影響最終消費者前，及早發現並排除訂單異常。</li>
-              <li><strong>一站式問題解決</strong><br>針對上述異常狀況，STTM 團隊會透過工單接手後續的排解作業並提供完整支援。打造閉合式的服務迴圈，大幅減輕商家在面對複雜履約問題時的營運壓力與溝通成本。</li>
+              <li><strong>一站式問題解決</strong><br>針對上述異常狀況，STTM 團隊會透過工單接手後續的排解作業並提供完整支援。打造閉合式的服務迴圈，大幅減輕商家在面對複雜出貨問題時的營運壓力與溝通成本。</li>
             </ul>
           </div>
           <img class="image-block lightbox-trigger" src="../images/sttm/img_ticket-result-auto.jpg" alt="Support Ticket 自動化進度追蹤">
@@ -326,7 +332,7 @@
               <h4 class="title">整合多元支付，帳務透明零阻力</h4>
             </div>
             <ul class="para">
-              <li><strong>透明的交易紀錄</strong><br>系統集中展示「儲值紀錄」與「支出紀錄」，提供清晰的帳務明細，幫助商家一目了然地追蹤現金流與核對履約成本，藉由高度的財務透明度建立系統信任感，並降低對帳的作業成本。</li>
+              <li><strong>透明的交易紀錄</strong><br>系統集中展示「儲值紀錄」與「支出紀錄」，提供清晰的帳務明細，幫助商家一目了然地追蹤現金流與核對出貨成本，藉由高度的財務透明度建立系統信任感，並降低對帳的作業成本。</li>
               <li><strong>零阻力的全球支付</strong><br>系統支援 Payoneer、信用卡、PayPal 與銀行轉帳等 4 種主流支付方式，滿足不同國家商家的多元金流習慣，打造零阻力的充值體驗，確保整體供應鏈的運作不會因為支付瓶頸而發生中斷。</li>
             </ul>
           </div>
@@ -356,8 +362,8 @@
             </div>
             <ul class="para">
               <li><strong>直覺的狀態導覽</strong><br>訂單管理的列表透過頁籤（Tab）清楚區分訂單的不同狀態，將繁雜的數據以直覺的方式分類呈現，大幅降低用戶尋找特定訂單的搜尋成本與時間。</li>
-              <li><strong>行動導向的數據表格</strong><br>將訂單明細、財務結構與履約追蹤整合至單一視圖，並結合情境化的快捷操作按鈕，讓用戶能在檢視數據的脈絡下直接執行關鍵任務，減少頁面跳轉並提升營運速度。</li>
-              <li><strong>高可及性的自動化設計</strong><br>於主要訂單面板直接整合「自動履約」快捷開關，透過無間斷的訂單處理機制推動作業流程自動化，有效減少商家在擴張規模時面臨的重複性手動操作。</li>
+              <li><strong>行動導向的數據表格</strong><br>將訂單明細、財務結構與出貨追蹤整合至單一視圖，並結合情境化的快捷操作按鈕，讓用戶能在檢視數據的脈絡下直接執行關鍵任務，減少頁面跳轉並提升營運速度。</li>
+              <li><strong>全方位的任務自動化與批次處理</strong><br>於主要訂單列表同步整合「自動化出貨處理」快捷開關與「全局操作（Action）」選單。除了能透過無間斷機制推動自動化出貨，用戶也能針對單一或多筆訂單直接批次執行指令。透過雙管齊下的設計減少頁面跳轉，大幅降低商家在擴張規模時的重複性手動操作。</li>
             </ul>
           </div>
         </div>
@@ -398,6 +404,7 @@
               </div>
               <h3 class="title">Settings</h3>
             </div>
+            <h4 class="title">集中偏好設定，打造標準化自動流程</h4>
             <div class="tag-grid">
               <span class="tag-pill tag-pill--solid">Account</span>
               <span class="tag-pill tag-pill--solid">Email</span>
@@ -409,7 +416,7 @@
           </div>
           <div class="description-text">
             <ul class="para">
-              <li><strong>自動化履約控制</strong><br>提供專屬介面以配置自動化履約規則，賦能商家自動化處理重複性的訂單作業，大幅降低手動工作量並加速整體出貨週期。</li>
+              <li><strong>自動化出貨處理（Auto Fulfillment）</strong><br>提供專屬介面以配置出貨相關規則，賦能商家自動化處理重複性的訂單作業，大幅降低手動工作量並加速整體出貨週期。</li>
               <li><strong>預設物流最佳化</strong><br>允許用戶預先設定常用的物流與配送偏好，透過將預設參數自動套用於後續訂單，有效降低使用者的認知負荷與人為操作錯誤，建立標準化且高效的作業流程。</li>
               <li><strong>集中式偏好管理</strong><br>用戶可於單一介面集中管理基本帳號資訊與信用卡等支付設定，透過整合帳戶管理功能來降低介面導覽的阻力，確保用戶能直覺、快速地更新關鍵營運資料。</li>
             </ul>
@@ -432,16 +439,16 @@
           <div class="item item-bg-grey">
             <div class="content-header">
               <span class="vertical-decorator"></span>
-              <h4>系統性設計思維</h4>
+              <h4>系統化設計與擴充性</h4>
             </div>
-            <p class="para">面對功能複雜的 B2B 後台系統，從建立元件規範出發，確保每個模組在視覺語言上保持一致，讓整體介面在擴充功能時仍維持可預期性。</p>
+            <p class="para">處理 B2B 供應鏈系統的高密度資訊時，不能僅靠單一頁面的短視角思考。透過建立嚴謹的 UI 元件庫與設計規範，不僅確保了跨模組的視覺一致性，更為未來系統擴充（如：新增銷售渠道或進階數據報表）打下具備高度「擴充性」與「可預期性」的底層架構。</p>
           </div>
           <div class="item item-bg-grey">
             <div class="content-header">
               <span class="vertical-decorator"></span>
-              <h4>在技術條件內找到最佳解</h4>
+              <h4>在技術約束下最大化設計價值</h4>
             </div>
-            <p class="para">在既有程式架構的限制下，優先針對核心操作流程與高頻功能進行體驗優化，學會在約束條件下做出對用戶最有價值的設計決策。</p>
+            <p class="para">在既有開發框架的限制下，設計不能流於理想。我學會精準評估設計決策的實作成本與影響力，將資源集中優化「訂單狀態管理」與「自動化出貨處理」等高頻核心流程。在技術可行性與使用者體驗之間取得平衡，交付出最具商業價值的解決方案。</p>
           </div>
         </div>
         </div>

@@ -9,7 +9,7 @@
 }
 
 .vertical-decorator {
-  background-color: #6C54A7;
+  background-color: #675DE4;
 }
 
 /* -------------------------- *\
@@ -48,7 +48,7 @@
   display: inline-flex;
   align-items: center;
   white-space: nowrap;
-  padding: 10px 20px;
+  padding: 4px 12px;
   border-radius: 8px;
   background: #9D8FFF;
   color: #fff;
