@@ -1,48 +1,64 @@
 @charset "utf-8";
 
 /* -------------------------- *\
-	Support Ticket 圖解元件
+	STTM 品牌色（覆蓋全站 text-primary 棕色）
 \* -------------------------- */
 
-.ticket-intro-icon {
+.text-brand {
+  color: #675DE4;
+}
+
+.vertical-decorator {
+  background-color: #6C54A7;
+}
+
+/* -------------------------- *\
+	圖解區塊共用元件（icon 標題 + 標籤群組）
+\* -------------------------- */
+
+.intro-icon {
   width: 48px;
   height: 48px;
   border-radius: 12px;
-  background: #6C54A7;
+  background: #7B61FF;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
 }
 
-.ticket-intro-icon svg {
+.intro-icon svg {
   width: 24px;
   height: 24px;
 }
 
-.ticket-para-en {
-  font-size: 13px;
-  color: #888;
-  line-height: 1.6;
-  margin: 0;
+.section-heading {
+  display: flex;
+  align-items: center;
+  gap: 12px;
 }
 
-.ticket-status-grid {
+.tag-grid {
   display: flex;
   flex-wrap: wrap;
   gap: 12px;
 }
 
-.ticket-status-pill {
+.tag-pill {
   display: inline-flex;
   align-items: center;
   white-space: nowrap;
   padding: 10px 20px;
   border-radius: 8px;
-  background: #ECE8F7;
-  color: #6C54A7;
+  background: #9D8FFF;
+  color: #fff;
   font-weight: 700;
   font-size: 14px;
+}
+
+.tag-pill--solid {
+  background: #9D8FFF;
+  color: #fff;
 }
 
 /* -------------------------- *\
@@ -58,7 +74,7 @@
 }
 
 .flow-card-header {
-  background: #6C54A7;
+  background: #7B61FF;
   color: #fff;
   font-size: 17px;
   font-weight: 700;
@@ -88,7 +104,7 @@
   width: 28px;
   height: 28px;
   border-radius: 50%;
-  background: #6C54A7;
+  background: #E17CFD;
   color: #fff;
   font-weight: 700;
   font-size: 13px;
@@ -118,15 +134,15 @@
   border-radius: 999px;
   font-size: 12px;
   font-weight: 700;
-  border: 1.5px solid #6C54A7;
-  color: #6C54A7;
+  border: 1.5px solid #7B61FF;
+  color: #7B61FF;
   background: #fff;
 }
 
 .flow-pill--filled {
-  background: #6C54A7;
+  background: #7B61FF;
   color: #fff;
-  border-color: #6C54A7;
+  border-color: #7B61FF;
 }
 
 .flow-pill--outline-gray {
@@ -143,7 +159,7 @@
 
 .flow-arrow {
   align-self: center;
-  color: #6C54A7;
+  color: #7B61FF;
   font-size: 18px;
   line-height: 1;
   transform: rotate(90deg);
@@ -156,7 +172,7 @@
 }
 
 .flow-arrow-down {
-  color: #6C54A7;
+  color: #7B61FF;
   font-size: 18px;
   line-height: 1;
 }
@@ -167,7 +183,7 @@
   align-self: flex-start;
   padding: 8px 26px;
   border-radius: 999px;
-  background: #6C54A7;
+  background: #9D8FFF;
   color: #fff;
   font-weight: 700;
   font-size: 13px;
