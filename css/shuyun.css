@@ -1,0 +1,94 @@
+/* ==============================================
+   shuyun.css — 舒運 App 專案頁面專用樣式
+   ============================================== */
+
+/* -------------------------- *\
+	Global Overrides for 舒運
+\* -------------------------- */
+.text-primary {
+  color: #2DB87A;
+}
+
+/* --- Design Process Horizontal Stepper --- */
+/* 結構與 LUCY.css 相同，顏色改為品牌綠 #2DB87A */
+
+.lucy-design-process {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: 100%;
+  padding-top: 10px;
+  max-width: 1176px;
+  min-width: 900px;
+  margin: 0 auto;
+}
+
+.dp-stepper-container {
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.dp-stepper-container .dp-line {
+  position: absolute;
+  top: 15px;
+  left: 20px;
+  width: 95%;
+  height: 4px;
+  background-color: #2DB87A;
+  border-radius: 4px;
+  z-index: 1;
+}
+
+.dp-stepper-container .dp-step {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 28px;
+  width: calc(100% / 7);
+  z-index: 2;
+  padding-right: 12px;
+}
+
+.dp-stepper-container .dp-step .dp-number {
+  background-color: #2DB87A;
+  color: #ffffff;
+  width: 34px;
+  height: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  font-family: 'Verdana', sans-serif;
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 1;
+}
+
+.dp-stepper-container .dp-step .dp-content {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.dp-stepper-container .dp-step .dp-title {
+  color: var(--text-primary);
+  font-family: 'Verdana', sans-serif;
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 1;
+  margin-bottom: 0;
+}
+
+.dp-stepper-container .dp-step .dp-list {
+  color: rgba(25, 25, 25, 0.6);
+  font-family: 'Verdana', sans-serif;
+  font-size: 12.25px;
+  line-height: 1.4;
+}
+
+.dp-stepper-container .dp-step .dp-list p {
+  margin-bottom: 0;
+}
