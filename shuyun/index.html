@@ -50,10 +50,11 @@
       <main class="main">
           <!-- Start banner -->
           <section class="hero-banner-wrapper">
-              <img class="hero-banner-img"
-                   src="https://cdn.myportfolio.com/98a328f6-5fd2-474e-b9d0-801133413b12/e36f753f-53f3-4b3b-8ce8-541a48ba424d_rw_1920.png?h=4fa37717df6fadb0f6ecc405e1a10932"
-                   alt="舒運 App banner 圖片"
-                   loading="eager">
+              <picture>
+                <source srcset="../images/shuyun/img_banner-desktop.jpg" media="(min-width: 992px)">
+                <source srcset="../images/shuyun/img_banner-pad.jpg" media="(min-width: 768px)">
+                <img class="hero-banner-img" src="../images/shuyun/img_banner-mobile.jpg" alt="舒運 App banner 圖片" loading="eager">
+              </picture>
           </section>
           <!-- End banner -->
 
@@ -321,34 +322,45 @@
 
           <!-- Start Solution -->
           <div id="solution" class="top-container">
-            <div class="layout-center">
-              <h2 class="title">設計決策 <span class="sm-title">Solution</span></h2>
-              <p class="para t-center">針對訪談揭露的三大斷點，設計重心放在「讓使用者在每一步都知道自己在做什麼、下一步要去哪裡」。</p>
-            </div>
-            <div class="notop-container three-column-grid">
-              <div class="item item-bg-grey">
-                <h4 class="title">強化資訊層級</h4>
-                <p class="para">班次列表將時間與價格放大顯示，剩餘座位以警示色提示，使用者不需逐行掃描就能快速判斷。</p>
+            <div class="hero-grid m-1col-2col">
+              <!-- 左側：Prototype 影片（單層外框，border 而非 padding；瀏海緊貼邊框，只微幅疊入畫面） -->
+              <div class="sy-phone-frame">
+                <div class="sy-phone-notch"></div>
+                <video class="sy-prototype-video" src="../images/shuyun/video_prototype.mp4" autoplay muted loop playsinline></video>
               </div>
-              <div class="item item-bg-grey">
-                <h4 class="title">線性步驟引導</h4>
-                <p class="para">搜尋→選位→填資料→付款→確認，每個步驟獨立成頁並附帶進度指示，清楚告知目前位置。</p>
+
+              <!-- 右側：標題 + 卡片區（固定範圍，水平捲動） -->
+              <div class="flex-v-16">
+                <div class="flex-v-8">
+                  <h2 class="title">設計決策 <span class="sm-title">Solution</span></h2>
+                  <p class="para">針對訪談揭露的三大斷點，設計重心放在「讓使用者在每一步都知道自己在做什麼、下一步要去哪裡」。</p>
+                </div>
+                <div class="sy-solution-scroll">
+                <div class="item item-bg-grey">
+                  <h4 class="title">強化資訊層級</h4>
+                  <p class="para">班次列表將時間與價格放大顯示，剩餘座位以警示色提示，使用者不需逐行掃描就能快速判斷。</p>
+                </div>
+                <div class="item item-bg-grey">
+                  <h4 class="title">線性步驟引導</h4>
+                  <p class="para">搜尋→選位→填資料→付款→確認，每個步驟獨立成頁並附帶進度指示，清楚告知目前位置。</p>
+                </div>
+                <div class="item item-bg-grey">
+                  <h4 class="title">選位視覺化</h4>
+                  <p class="para">以色塊區分可選・已選・已售出・商務艙四種狀態，操作即時回饋，不產生歧義。</p>
+                </div>
+                <div class="item item-bg-grey">
+                  <h4 class="title">付款完成即展示票券</h4>
+                  <p class="para">確認頁直接呈現路線、座位、登車月台與 QR Code，不需再進入訂單頁查找。</p>
+                </div>
+                <div class="item item-bg-grey">
+                  <h4 class="title">目標用戶</h4>
+                  <p class="para">18–35 歲、定期搭乘客運的通勤族與旅遊族。重視效率與操作簡便，多以手機完成訂票。</p>
+                </div>
+                <div class="item item-bg-grey">
+                  <h4 class="title">設計核心原則</h4>
+                  <p class="para">資訊層級清楚傳達給用戶、明確引導使用者完成每一步。所有設計決策回扣訪談洞察，不做假設。</p>
+                </div>
               </div>
-              <div class="item item-bg-grey">
-                <h4 class="title">選位視覺化</h4>
-                <p class="para">以色塊區分可選・已選・已售出・商務艙四種狀態，操作即時回饋，不產生歧義。</p>
-              </div>
-              <div class="item item-bg-grey">
-                <h4 class="title">付款完成即展示票券</h4>
-                <p class="para">確認頁直接呈現路線、座位、登車月台與 QR Code，不需再進入訂單頁查找。</p>
-              </div>
-              <div class="item item-bg-grey">
-                <h4 class="title">目標用戶</h4>
-                <p class="para">18–35 歲、定期搭乘客運的通勤族與旅遊族。重視效率與操作簡便，多以手機完成訂票。</p>
-              </div>
-              <div class="item item-bg-grey">
-                <h4 class="title">設計核心原則</h4>
-                <p class="para">資訊層級清楚傳達給用戶、明確引導使用者完成每一步。所有設計決策回扣訪談洞察，不做假設。</p>
               </div>
             </div>
           </div>
@@ -428,7 +440,7 @@
             <!-- 註冊 -->
             <div class="img-txt top-container hero-grid d-2col-1col">
               <img class="image-block lightbox-trigger"
-                   src="https://cdn.myportfolio.com/98a328f6-5fd2-474e-b9d0-801133413b12/560c4656-7355-4dda-a2e4-7b2940ad2966_rw_1920.png?h=e1c289e0ee5a4186b656ab7c157cbb7e"
+                   src="../images/shuyun/img_sign-up.jpg"
                    alt="舒運 App 註冊流程畫面" />
               <div class="description-text">
                 <h3 class="title">▍註冊</h3>
@@ -449,7 +461,7 @@
                 </div>
               </div>
               <img class="image-block lightbox-trigger"
-                   src="https://cdn.myportfolio.com/98a328f6-5fd2-474e-b9d0-801133413b12/f312083d-0d08-476c-bca8-6258a862b666_rw_1920.png?h=70464826f891e8cd3d3619860e8f4233"
+                   src="../images/shuyun/img_buy-ticket1.jpg"
                    alt="舒運 App 訂票流程畫面" />
             </div>
 
@@ -476,7 +488,7 @@
                 </div>
               </div>
               <img class="image-block lightbox-trigger"
-                   src="https://cdn.myportfolio.com/98a328f6-5fd2-474e-b9d0-801133413b12/55452048-56f2-4ee6-8d6b-128a768ebd55_rw_1920.png?h=0ea40ec77a66eb634be8c2ad5fea6fb6"
+                   src="../images/shuyun/img_search.jpg"
                    alt="舒運 App 查詢畫面" />
             </div>
 
