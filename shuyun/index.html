@@ -38,11 +38,11 @@
     <!-- 浮動釘選導覽列 -->
     <nav id="sub-nav" class="sub-nav">
       <ul>
-        <li><a href="#overview,flow,research,pain-point,solution">前情提要</a></li>
+        <li><a href="#overview,flow,research,pain-point,problem,solution">前情提要</a></li>
         <li><a href="#ia">資訊架構</a></li>
         <li><a href="#ideate">Ideate</a></li>
         <li><a href="#ui-design">UI Design</a></li>
-        <li><a href="#takeaway">Takeaway</a></li>
+        <li><a href="#validation,takeaway">Takeaway</a></li>
       </ul>
     </nav>
 
@@ -320,6 +320,42 @@
           </div>
           <!-- End Pain Point -->
 
+          <!-- Start Problem -->
+          <div id="problem" class="top-container">
+            <div class="layout-center">
+              <h2 class="title">想解決的問題 <span class="sm-title">Problem</span></h2>
+              <h3>把六個痛點收斂成三個核心斷點</h3>
+              <p class="para t-center">問題不在「功能不足」，而在「有功能卻用不下去」。關鍵動作藏在多層頁面、資訊沒有層級、流程沒有引導，使用者往往在完成訂票前就先放棄，退回打電話或現場購票。</p>
+            </div>
+            <div class="notop-container three-column-grid">
+              <div class="item item-bg-grey">
+                <h4 class="title">① 選不出來｜決策階段</h4>
+                <div class="flex-v-8">
+                  <p class="para">時刻、價格、剩餘座位以相同視覺權重並列，使用者必須逐行掃描才能判斷哪一班適合自己，決策成本高。</p>
+                  <p class="para"><b>對應設計決策｜</b>強化資訊層級</p>
+                </div>
+              </div>
+              <div class="item item-bg-grey">
+                <h4 class="title">② 不會操作｜執行階段</h4>
+                <div class="flex-v-8">
+                  <p class="para">從搜尋到付款沒有步驟提示，使用者不清楚自己在哪個環節；選位畫面也分不出哪些能點，容易誤觸或中途放棄。</p>
+                  <p class="para"><b>對應設計決策｜</b>線性步驟引導・選位視覺化</p>
+                </div>
+              </div>
+              <div class="item item-bg-grey">
+                <h4 class="title">③ 不敢相信｜信任階段</h4>
+                <div class="flex-v-8">
+                  <p class="para">付款完成後缺乏明確結果，使用者必須自行進入訂單頁確認票券是否存在，削弱對 App 的信任感。</p>
+                  <p class="para"><b>對應設計決策｜</b>付款完成即展示票券</p>
+                </div>
+              </div>
+            </div>
+            <div class="notop-container layout-center">
+              <p class="para t-center"><b>設計目標｜</b>把訂票從「一個要摸索的介面」變成「一條清楚的路」——每一步都知道自己在做什麼、下一步要去哪裡、做完了沒有。</p>
+            </div>
+          </div>
+          <!-- End Problem -->
+
           <!-- Start Solution -->
           <div id="solution" class="top-container">
             <div class="hero-grid m-1col-2col">
@@ -520,6 +556,100 @@
 
           </div>
           <!-- End UI Design -->
+
+          <!-- Start Validation -->
+          <div id="validation" class="top-container">
+            <div class="layout-center">
+              <h2 class="title">如何驗證成功 <span class="sm-title">Success Metrics</span></h2>
+              <h3>為每個設計決策定義可量測的驗證方式</h3>
+              <p class="para t-center">設計不能只停在「看起來比較好」。我針對前述三個核心斷點各自定義對應指標，作為 Prototype 可用性測試與未來上線後追蹤的依據。</p>
+            </div>
+
+            <!-- A. Prototype 階段 -->
+            <div class="notop-container">
+              <h3 class="title">▍Prototype 階段：可用性測試</h3>
+            </div>
+            <div class="notop-container three-column-grid">
+              <div class="item item-bg-grey">
+                <h4 class="title">任務完成率</h4>
+                <div class="flex-v-8">
+                  <p class="para">給定情境（訂 6/7 台北→高雄 2 張票），全程不提供提示，觀察能否獨立完成。</p>
+                  <p class="para"><b>目標｜</b>≥ 90% 獨立完成</p>
+                </div>
+              </div>
+              <div class="item item-bg-grey">
+                <h4 class="title">完成時間</h4>
+                <div class="flex-v-8">
+                  <p class="para">從進入首頁到取得票券的總耗時，驗證資訊層級是否真的加快了決策。</p>
+                  <p class="para"><b>目標｜</b>≤ 90 秒　<b>驗證｜</b>斷點 ①</p>
+                </div>
+              </div>
+              <div class="item item-bg-grey">
+                <h4 class="title">錯誤與返回次數</h4>
+                <div class="flex-v-8">
+                  <p class="para">記錄誤觸、走錯路徑、按上一步的次數，驗證步驟引導與選位視覺化是否有效。</p>
+                  <p class="para"><b>目標｜</b>平均 ≤ 2 次　<b>驗證｜</b>斷點 ②</p>
+                </div>
+              </div>
+              <div class="item item-bg-grey">
+                <h4 class="title">卡關點分佈</h4>
+                <div class="flex-v-8">
+                  <p class="para">記錄各步驟的停頓時間，找出仍需優化的環節，確認流程沒有單點瓶頸。</p>
+                  <p class="para"><b>目標｜</b>無單一步驟 &gt; 25 秒　<b>驗證｜</b>斷點 ②</p>
+                </div>
+              </div>
+              <div class="item item-bg-grey">
+                <h4 class="title">付款後信心度</h4>
+                <div class="flex-v-8">
+                  <p class="para">付款完成當下詢問「你確定訂票成功了嗎？」，直接驗證訪談中最關鍵的信任洞察。</p>
+                  <p class="para"><b>目標｜</b>100% 明確回答確定　<b>驗證｜</b>斷點 ③</p>
+                </div>
+              </div>
+              <div class="item item-bg-grey">
+                <h4 class="title">SUS 易用性量表</h4>
+                <div class="flex-v-8">
+                  <p class="para">測試後填寫 10 題標準量表，取得可與業界基準比較的整體主觀評分。</p>
+                  <p class="para"><b>目標｜</b>≥ 75 分（業界平均 68）</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- B. 上線後 -->
+            <div class="notop-container">
+              <h3 class="title">▍上線後：產品指標</h3>
+            </div>
+            <div class="notop-container three-column-grid">
+              <div class="item item-bg-grey">
+                <h4 class="title">訂票漏斗轉換率</h4>
+                <p class="para">追蹤搜尋→選班次→選位→填資料→付款各步驟的留存，直接看出流失發生在哪一步。</p>
+              </div>
+              <div class="item item-bg-grey">
+                <h4 class="title">中途放棄率</h4>
+                <p class="para">進入訂票流程但未完成付款的比例，對應「使用者頻繁迷失或放棄」這個核心問題。</p>
+              </div>
+              <div class="item item-bg-grey">
+                <h4 class="title">首次訂票成功率</h4>
+                <p class="para">新用戶第一次使用就完成訂票的比例，對應「下載後因操作困難而退卻」的痛點。</p>
+              </div>
+              <div class="item item-bg-grey">
+                <h4 class="title">付款相關客服量</h4>
+                <p class="para">詢問「有沒有付款成功／票在哪裡」的比例，驗證信任問題是否真的被解決。</p>
+              </div>
+              <div class="item item-bg-grey">
+                <h4 class="title">7 日／30 日留存</h4>
+                <p class="para">首次訂票後的回訪比例，觀察 App 是否從一次性使用轉為習慣性使用。</p>
+              </div>
+              <div class="item item-bg-grey">
+                <h4 class="title">重複訂票率</h4>
+                <p class="para">同一用戶 3 個月內訂票 ≥ 2 次的比例，對應行程固定的通勤型使用者。</p>
+              </div>
+            </div>
+
+            <div class="notop-container layout-center">
+              <p class="para t-center">※ 本專案為個人 Side Project，上述為驗證方式與目標值的規劃。Prototype 已具備完整可測試條件，後續將實際執行可用性測試並回填結果。</p>
+            </div>
+          </div>
+          <!-- End Validation -->
 
           <!-- Start Takeaway -->
           <div id="takeaway">
