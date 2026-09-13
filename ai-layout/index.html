@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <link href="../images/favicon.ico" rel="shortcut icon"/>
+    <title>AI 自動排版｜關靖蓉 Portfolio</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta name="description" content="TinTint 點點印 iOS App 相片書編輯器的 AI 自動排版設計：從整本排版到單頁微調，定義 AI 與使用者的權責邊界。">
+    <link rel="stylesheet" href="/css/normalize.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-EGELH8NDC6"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-EGELH8NDC6');
+    </script>
+    <!-- Microsoft Clarity -->
+    <script type="text/javascript">
+        (function(c,l,a,r,i,t,y){
+            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+        })(window, document, "clarity", "script", "x8ekiirpo7");
+    </script>
+</head>
+<body class="transparent-header-dark">
+  <div class="wrapper">
+    <!-- Start header -->
+    <div id="site-header" data-include="/components/header.html"></div>
+    <!-- End header -->
+
+    <!-- 浮動釘選導覽列 -->
+    <nav id="sub-nav" class="sub-nav">
+      <ul>
+        <li><a href="#overview,pain-point,define,constraints">前情提要</a></li>
+        <li><a href="#solution">設計決策</a></li>
+        <li><a href="#ui-design">互動設計</a></li>
+        <li><a href="#measurement">成效驗證</a></li>
+        <li><a href="#trade-off,takeaway">Takeaway</a></li>
+      </ul>
+    </nav>
+
+    <!-- Start main -->
+    <main class="main">
+
+      <!-- Start banner -->
+      <section class="hero-banner-wrapper">
+        <picture>
+          <source srcset="../images/ai-layout/img_banner-desktop.jpg" media="(min-width: 992px)">
+          <source srcset="../images/ai-layout/img_banner-pad.jpg" media="(min-width: 768px)">
+          <img class="hero-banner-img" src="../images/ai-layout/img_banner-mobile.jpg" alt="AI 自動排版 banner" loading="eager">
+        </picture>
+      </section>
+      <!-- End banner -->
+
+      <!-- Start Overview -->
+      <div id="overview" class="top-container">
+        <div class="overview">
+          <div class="overview-left">
+            <h2 class="title">概述 <span class="sm-title">Overview</span></h2>
+            <h3 class="title text-primary">AI 自動排版</h3>
+            <h5 class="title">#B2C #iOS App #AI Feature</h5>
+            <div class="team-info">
+              <p class="para"><strong>Team |</strong> TinTint 點點印</p>
+              <p class="para"><strong>Role |</strong> UI/UX Designer</p>
+              <p class="para"><strong>協作 |</strong> PM、iOS 工程師</p>
+              <p class="para"><strong>Year |</strong> 2026</p>
+            </div>
+          </div>
+          <div class="overview-right para">
+            <ul>
+              <li><b>產品服務｜</b>點點印 iOS App 相片書編輯器的 AI 自動排版功能，涵蓋建立作品流程 → 分頁編輯（整本排版）→ 編輯器內的多頁與單頁排版。</li>
+              <li><b>專案挑戰｜</b>使用者選完照片後，要自己決定總共幾頁、哪些照片放在同一頁、每一頁怎麼排。這段距離長到很多人中途放棄，留下大量未完成的草稿。</li>
+              <li><b>設計策略｜</b>把 AI 放進既有流程的既有步驟，不另開一條路；並將「分群」與「版面」切開，讓昂貴的排版運算只需執行一次。</li>
+              <li><b>權責邊界｜</b>AI 只負責提供起點，任何會覆蓋既有手動調整的動作，都必須由使用者主動要求才會發生。</li>
+              <li><b>跨平台｜</b>與 web 版共用多數規則，控制項則依裝置特性分別設計。</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- End Overview -->
+
+      <!-- Start Pain Point -->
+      <div id="pain-point" class="top-container">
+        <div class="layout-center">
+          <h2 class="title">痛點 <span class="sm-title">Pain Point</span></h2>
+          <h3>兩個不同層次的問題</h3>
+        </div>
+        <div class="notop-container two-column-grid">
+          <div class="item item-bg-grey">
+            <div class="content-header">
+              <span class="vertical-decorator"></span>
+              <h4>整本：從一堆照片到一本作品，距離太長</h4>
+            </div>
+            <p class="para">使用者選完照片之後，要決定總共幾頁、哪些照片放在同一頁、每一頁怎麼排。這段距離長到很多人中途放棄，留下大量未完成的草稿。</p>
+          </div>
+          <div class="item item-bg-grey">
+            <div class="content-header">
+              <span class="vertical-decorator"></span>
+              <h4>單頁：版型是固定的，照片卻是千變萬化的</h4>
+            </div>
+            <p class="para">同一個版型套在不同照片上效果天差地遠，使用者只能靠肉眼一個一個試，常見結果是人臉或主體被裁掉。而且這是個<b>使用者不知道自己有問題的問題</b>——多數人不會意識到「本來可以排得更好」，只是默默接受了裁切不理想的成品。</p>
+          </div>
+        </div>
+        <div class="notop-container layout-center">
+          <p class="para t-center"><b>兩者要的東西不一樣｜</b>整本要的是「有人幫我把整件事做完」，單頁要的是「這一頁我想再好一點」。同一個使用者在不同時刻會要不同的東西：剛建立作品時想快，進編輯器逐頁看時想細。</p>
+        </div>
+      </div>
+      <!-- End Pain Point -->
+
+      <!-- Start Define -->
+      <div id="define" class="top-container">
+        <div class="layout-center">
+          <h2 class="title">功能定位 <span class="sm-title">Define</span></h2>
+          <h3>整本給起點，單頁給收尾</h3>
+        </div>
+        <div class="notop-container two-column-grid">
+          <div class="item item-bg-grey">
+            <h4 class="title">整本 AI 排版（分頁編輯）</h4>
+            <div class="flex-v-8">
+              <p class="para"><b>解決什麼｜</b>不想花時間整理，要一個好的起點。</p>
+              <p class="para"><b>使用時機｜</b>建立作品時，或編輯中想整本重來。</p>
+            </div>
+          </div>
+          <div class="item item-bg-grey">
+            <h4 class="title">單頁 AI 排版</h4>
+            <div class="flex-v-8">
+              <p class="para"><b>解決什麼｜</b>願意花時間，但缺乏判斷工具。</p>
+              <p class="para"><b>使用時機｜</b>進編輯器後逐頁檢查、個別頁面不滿意時。</p>
+            </div>
+          </div>
+        </div>
+        <div class="notop-container layout-center">
+          <p class="para t-center">兩者不是替代關係，而是同一個人在不同階段的需求。</p>
+        </div>
+      </div>
+      <!-- End Define -->
+
+      <!-- Start Constraints -->
+      <div id="constraints" class="top-container">
+        <div class="layout-center">
+          <h2 class="title">設計限制 <span class="sm-title">Constraints</span></h2>
+          <h3>先確認技術與情境的邊界，再決定介面怎麼長</h3>
+        </div>
+        <div class="notop-container three-column-grid">
+          <div class="item item-bg-grey">
+            <h4 class="title">API 只負責排版，不決定照片分頁</h4>
+            <p class="para">「哪些照片放同一頁」必須由 client 決定，分頁編輯這個介面因此存在。</p>
+          </div>
+          <div class="item item-bg-grey">
+            <h4 class="title">分群與版面是兩件事</h4>
+            <p class="para">分頁編輯只呈現分群結果，不精算框位、bleed 與裁切。</p>
+          </div>
+          <div class="item item-bg-grey">
+            <h4 class="title">排版運算昂貴</h4>
+            <p class="para">分頁編輯階段完全不打排版 API，集中在「確認套用」時一次執行。</p>
+          </div>
+          <div class="item item-bg-grey">
+            <h4 class="title">兩個不同的每頁上限</h4>
+            <p class="para">分頁編輯 4 張、編輯器內 6 張。情境不同，所以刻意不共用。</p>
+          </div>
+          <div class="item item-bg-grey">
+            <h4 class="title">手機螢幕小</h4>
+            <p class="para">開關、進度、候選切換收進單一浮動 Chip，而不是散開的控制項。</p>
+          </div>
+        </div>
+      </div>
+      <!-- End Constraints -->
+
+      <!-- Start Solution -->
+      <div id="solution" class="top-container">
+        <div class="layout-center">
+          <h2 class="title">設計決策 <span class="sm-title">Solution</span></h2>
+          <h3>三個結構性決策</h3>
+          <p class="para t-center">這三個決策決定了整個功能的骨架：AI 從哪裡進來、介面負責回答什麼問題、以及不同規模之間如何共用同一套操作邏輯。</p>
+        </div>
+
+        <!-- 決策一 -->
+        <div class="top-container hero-grid m-1col-2col">
+          <div class="description-text">
+            <div class="flex-v-8">
+              <h3 class="title">▍AI 不是新的一條路，是既有步驟裡的一個選項</h3>
+              <p class="para">建立作品的流程只有一條：建立作品（選頁數）→ 選照片 → 套用主題 → 進編輯器。AI 自動排版放在「套用主題」這一步，與主題版型並列擇一。</p>
+              <p class="para"><b>沒有新增步驟｜</b>使用者原本就要選頁數與主題，AI 只是多了一個選擇。</p>
+              <p class="para"><b>初次建立與再次編輯共用同一套介面｜</b>建立作品時選 AI，跟作品完成後回到套用主題選 AI，走的是同一個畫面、同一組行為——原本規劃的兩條 Flow 因此取消。</p>
+              <p class="para">兩者的差異只是起點不同，不是能不能調整。AI 排完進編輯器照樣可以逐頁改，主題版型也可以；差別在於使用者是從一本已排好的成品開始改，還是從空版型開始放照片。</p>
+            </div>
+          </div>
+          <img class="image-block lightbox-trigger" src="../images/ai-layout/img_theme-apply.jpg" alt="套用主題畫面：AI 自動排版與主題版型並列">
+        </div>
+
+        <!-- 決策二 -->
+        <div class="img-txt top-container hero-grid d-2col-1col">
+          <img class="image-block lightbox-trigger" src="../images/ai-layout/img_page-editor.jpg" alt="分頁編輯主畫面：頁面卡片網格與照片池">
+          <div class="description-text">
+            <div class="flex-v-8">
+              <h3 class="title">▍分頁編輯是「整本整理台」，不是排版預覽</h3>
+              <p class="para">它回答的問題是「哪些照片被放在同一頁」，不是「這一頁長什麼樣」。因此不精算框位幾何、bleed、裁切與模板細節，那些等進編輯器才產生。</p>
+              <p class="para">這個切分帶來一個具體好處：<b>不論在分頁編輯調整幾次分群、換幾次樣式，排版運算都只執行一次</b>——在使用者按下「確認套用」的時候。</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 決策三 -->
+        <div class="top-container layout-center">
+          <h3 class="title">▍三種規模，同一套心智模型</h3>
+          <p class="para t-center">整本（分頁編輯）、多頁（編輯器列表）、單頁（編輯器 Pager），三層都能加照片、移照片、重排。多頁與單頁共用同一套拖曳機制，唯一差異是單頁會另外顯示版型選單。</p>
+        </div>
+        <div class="notop-container three-column-grid">
+          <div class="item item-bg-grey">
+            <h4 class="title">整本｜分頁編輯</h4>
+            <p class="para">決定哪些照片放在同一頁，一次處理整本的分群結構。</p>
+          </div>
+          <div class="item item-bg-grey">
+            <h4 class="title">多頁｜編輯器列表</h4>
+            <p class="para">在頁面之間搬移照片，調整跨頁的內容分配。</p>
+          </div>
+          <div class="item item-bg-grey">
+            <h4 class="title">單頁｜編輯器 Pager</h4>
+            <p class="para">同一套拖曳機制，額外提供版型選單微調單頁呈現。</p>
+          </div>
+        </div>
+      </div>
+      <!-- End Solution -->
+
+      <!-- Start UI Design -->
+      <div id="ui-design">
+        <div class="sec-title-container">
+          <h2>互動設計</h2>
+        </div>
+
+        <!-- 紫色流程 -->
+        <div class="top-container hero-grid m-1col-2col">
+          <div class="description-text">
+            <div class="flex-v-8">
+              <h3 class="title">▍紫色代表的是一整段流程，不是單一動作</h3>
+              <p class="para">紫色用於 AI 功能的入口與 AI 流程內的所有動作，棕色用於一般流程。判斷依據是「這顆按鈕在哪一段流程裡」，不是「按下去會不會觸發 AI 運算」——引導 Modal 的 CTA 不觸發運算，但它在 AI 流程裡，所以是紫色。</p>
+              <p class="para"><b>唯一的例外是共用元件｜</b>照片匯入畫面可以從編輯器或分頁編輯進入，依流程決定顏色會讓同一個元件隨入口變色，所以一律固定棕色。</p>
+              <p class="para">另外，兩個區塊不能用同一個 icon——AI 區塊用紫色 icon，主題版型用中性的版型 icon，否則主題版型會被誤認成 AI 功能。</p>
+            </div>
+          </div>
+          <img class="image-block lightbox-trigger" src="../images/ai-layout/img_guide-modal.jpg" alt="進入分頁編輯前的引導 Modal">
+        </div>
+
+        <!-- 引導 Modal -->
+        <div class="top-container layout-center">
+          <h3 class="title">▍先說明這個畫面在做什麼，再讓人進去</h3>
+          <p class="para t-center">進入分頁編輯前有一次引導 Modal，說明這裡是在分組照片、可以做哪些事。附「下次不再提醒」（預設不勾），設定存在使用者層級、跨作品有效，登出後重置。</p>
+        </div>
+
+        <!-- 分群可視化 -->
+        <div class="img-txt top-container hero-grid d-2col-1col">
+          <img class="image-block lightbox-trigger" src="../images/ai-layout/img_drag-states.jpg" alt="分頁編輯的頁面卡片：顯示拍攝日期與地點">
+          <div class="description-text">
+            <div class="flex-v-8">
+              <h3 class="title">▍把「為什麼這幾張在同一頁」畫出來</h3>
+              <p class="para">分頁編輯的頁面卡片上放拍攝日期與地點，那是 AI 分群依據（時間、地點、相似度）的可視化。使用者看得到理由，才有辦法判斷這個分群對不對。</p>
+              <p class="para">細節上有三個克制的地方：沒有 GPS 的照片就不顯示地點、沒有日期的頁面就不顯示日期、<b>使用者自己手動放進去的照片不帶日期地點</b>——那不是 AI 的判斷，不該假裝是。</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 增減頁數 -->
+        <div class="top-container layout-center">
+          <h3 class="title">▍增減頁數不重排：容量的調整不是分群的調整</h3>
+          <p class="para t-center">既有頁面的內容完全不動，變動只發生在尾端。背後是整份規格的核心原則：<b>手動調整不會被 AI 的下一次運算抹掉。</b></p>
+        </div>
+        <div class="notop-container two-column-grid">
+          <div class="item item-bg-grey">
+            <h4 class="title">頁數減少、照片放不下</h4>
+            <p class="para">時間軸後段的照片退回照片池，前面已排好的頁面不受影響。</p>
+          </div>
+          <div class="item item-bg-grey">
+            <h4 class="title">頁數增加、照片不足</h4>
+            <p class="para">尾端出現空白頁，既有頁面的分群結果維持原樣。</p>
+          </div>
+        </div>
+
+        <!-- 覆蓋確認 -->
+        <div class="top-container hero-grid m-1col-2col">
+          <div class="description-text">
+            <div class="flex-v-8">
+              <h3 class="title">▍覆蓋只在使用者主動要求時才發生</h3>
+              <p class="para">「重排整本」會覆蓋既有的手動調整，所以執行前一定要確認。分工很清楚：AI 負責提供一個好的起點，最終的分群歸屬由使用者決定。</p>
+            </div>
+          </div>
+          <img class="image-block lightbox-trigger" src="../images/ai-layout/img_multi-page-bar.jpg" alt="多頁列表的 AI-Layout Bar 與整本重排確認 Modal">
+        </div>
+
+        <!-- 入口一致性 -->
+        <div class="img-txt top-container hero-grid d-2col-1col">
+          <img class="image-block lightbox-trigger" src="../images/ai-layout/img_import-options.jpg" alt="新增照片的三個去向：整本重排、自動匯入空白頁、僅匯入照片池">
+          <div class="description-text">
+            <div class="flex-v-8">
+              <h3 class="title">▍相同功能在不同入口，要給相同的選項</h3>
+              <p class="para">新增照片時，三個去向並列讓使用者選：整本重排・自動匯入空白頁・僅匯入照片池。不論從編輯器還是分頁編輯進來，看到的都是同一組選項。</p>
+              <p class="para">三個裡面<b>只有「整本重排」會叫 AI 動手</b>。「自動匯入空白頁」是線上版本來就有的功能，依使用者選的順序把照片依序填進空白頁，跟 AI 無關；「僅匯入照片池」則什麼頁面都不動。</p>
+              <p class="para"><b>真正的分界線是照片的來源｜</b>照片從外部進來，三選一；操作的是已經在作品內的內容，直達不再問——因為使用者按下去的時候已經知道要做什麼。</p>
+              <p class="para"><b>選項一致，但起點跟著入口走｜</b>從新增照片流程或照片池進來，自第一個空白頁開始填；從某一頁的「新增照片」進來，就從那一頁開始填。</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 拖曳回饋 -->
+        <div class="top-container layout-center">
+          <h3 class="title">▍拖曳時的兩個文字介面，各自回答不同的問題</h3>
+          <p class="para t-center">拖曳時畫面頂端有固定的 Tooltip，來源相框旁還有跟著游標移動的動作列。兩者同時存在、各自變化。</p>
+        </div>
+        <div class="notop-container two-column-grid">
+          <div class="item item-bg-grey">
+            <div class="content-header">
+              <span class="vertical-decorator"></span>
+              <h4>全域提示：哪裡可以放</h4>
+            </div>
+            <p class="para">固定在畫面頂端，說明當前拖曳狀態下的可放置範圍。</p>
+          </div>
+          <div class="item item-bg-grey">
+            <div class="content-header">
+              <span class="vertical-decorator"></span>
+              <h4>目標回饋：現在會放進哪一頁</h4>
+            </div>
+            <p class="para">跟著游標移動，即時說明會放進哪一頁、或為什麼不能放。</p>
+          </div>
+        </div>
+        <div class="notop-container layout-center">
+          <p class="para t-center"><b>頁面已滿就擋下，不自動往後推擠｜</b>拖到已滿的頁面時顯示「頁面已滿無法加入排版」，照片退回原位。不採用把照片往後頁推的做法——那會連帶改動其他分頁，使用者沒有要求的改動不該發生。</p>
+        </div>
+
+        <!-- 排版執行 -->
+        <div class="top-container hero-grid m-1col-2col">
+          <div class="description-text">
+            <div class="flex-v-8">
+              <h3 class="title">▍運算集中在一次，所以要把過程說清楚</h3>
+              <p class="para">分頁編輯階段完全不打排版 API，所有調整都在本地完成。使用者按下「確認套用」後才一次執行整本排版，此時以 HUD 呈現進度，讓等待有明確的起點與終點。</p>
+            </div>
+          </div>
+          <img class="image-block lightbox-trigger" src="../images/ai-layout/img_layout-hud.jpg" alt="整本排版執行中的 HUD 進度提示">
+        </div>
+
+        <!-- 單頁 Bar -->
+        <div class="img-txt top-container hero-grid d-2col-1col">
+          <img class="image-block lightbox-trigger" src="../images/ai-layout/img_single-page-bar.jpg" alt="單頁 AI-Layout Bar 各狀態與候選面板">
+          <div class="description-text">
+            <div class="flex-v-8">
+              <h3 class="title">▍單頁控制項收進單一浮動 Chip</h3>
+              <p class="para">手機螢幕放不下散開的控制項，因此把開關、分析進度、候選版型切換整合進同一個浮動 Chip，並依 idle・分析中・候選・錯誤四種狀態切換呈現。</p>
+              <p class="para">使用者在逐頁檢查時，視線不需離開頁面本身就能完成「開啟 AI → 看結果 → 換一個候選」的循環。</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 三個動作 -->
+        <div class="top-container layout-center">
+          <h3 class="title">▍三個聽起來很像的動作，作用對象其實不同</h3>
+          <p class="para t-center">清空、刪除框、刪除照片，字面上都像「拿掉」，但一個動照片、一個動版面、一個動素材庫。分不清楚的後果是使用者以為只是換張照片，結果把原圖從相片池刪掉了。</p>
+        </div>
+        <div class="notop-container three-column-grid">
+          <div class="item item-bg-grey">
+            <h4 class="title">清空照片框</h4>
+            <div class="flex-v-8">
+              <p class="para"><b>動到｜</b>框裡的照片</p>
+              <p class="para"><b>結果｜</b>照片退回相片池，框留著，不重排。</p>
+            </div>
+          </div>
+          <div class="item item-bg-grey">
+            <h4 class="title">刪除照片框</h4>
+            <div class="flex-v-8">
+              <p class="para"><b>動到｜</b>頁面上的框</p>
+              <p class="para"><b>結果｜</b>連框一起消失，觸發重排。</p>
+            </div>
+          </div>
+          <div class="item item-bg-grey">
+            <h4 class="title">刪除照片</h4>
+            <div class="flex-v-8">
+              <p class="para"><b>動到｜</b>相片池裡的照片本體</p>
+              <p class="para"><b>結果｜</b>照片整個不見，頁面上用到它的框被清空。</p>
+            </div>
+          </div>
+        </div>
+        <div class="notop-container layout-center">
+          <p class="para t-center"><b>多做一個動作，是為了讓使用者能換照片而不動版面｜</b>原始需求只有兩個動作，而且效果相同（都退回相片池並重排）。多出來的「清空但不重排」，是為了讓「我只是想換張照片」不必付出整頁重排的代價。刪除框則只在 AI 開啟時可用——關閉時版面由固定版型決定，框的數量不能變。</p>
+        </div>
+
+        <!-- 封面折口 -->
+        <div class="top-container hero-grid m-1col-2col">
+          <div class="description-text">
+            <div class="flex-v-8">
+              <h3 class="title">▍可以拖曳，不等於納入 AI 分群</h3>
+              <p class="para">封面自動填入，折口留空。折口可以讓使用者手動拖照片進去，但不參與 AI 自動分群，並在列表中標示「不納入排版」。</p>
+              <p class="para">能不能操作，跟系統會不會自動處理，是兩件事。</p>
+            </div>
+          </div>
+          <img class="image-block lightbox-trigger" src="../images/ai-layout/img_cover-flap.jpg" alt="封面與折口的「不納入排版」標示">
+        </div>
+
+        <!-- 跨平台 -->
+        <div class="top-container layout-center">
+          <h3 class="title">▍iOS 與 web：同一套規則，不同的控制項</h3>
+          <p class="para t-center">規則層共用，操作層依裝置特性分開設計。</p>
+        </div>
+        <div class="notop-container three-column-grid">
+          <div class="item item-bg-grey">
+            <h4 class="title">單頁控制項</h4>
+            <div class="flex-v-8">
+              <p class="para"><b>iOS｜</b>開關、進度、候選切換整合為單一浮動 Chip。</p>
+              <p class="para"><b>web｜</b>拆成 toggle 與獨立的隨機按鈕。</p>
+            </div>
+          </div>
+          <div class="item item-bg-grey">
+            <h4 class="title">拖曳啟動</h4>
+            <div class="flex-v-8">
+              <p class="para"><b>iOS｜</b>長按進入拖曳。</p>
+              <p class="para"><b>web｜</b>按下滑鼠直接開始。</p>
+            </div>
+          </div>
+          <div class="item item-bg-grey">
+            <h4 class="title">螢幕限制</h4>
+            <div class="flex-v-8">
+              <p class="para"><b>iOS｜</b>需考量 SE 等小螢幕、放大檢視下的拖曳。</p>
+              <p class="para"><b>web｜</b>首發僅支援 768px 以上。</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <!-- End UI Design -->
+
+      <!-- Start Measurement -->
+      <div id="measurement" class="top-container">
+        <div class="layout-center">
+          <h2 class="title">成效驗證 <span class="sm-title">Measurement</span></h2>
+          <h3>兩個問題要用不同方式驗證</h3>
+          <p class="para t-center">整本要解的是「距離太長、中途放棄」，該驗證作品有沒有真的做完；單頁要解的是「重要內容被裁掉」，該驗證成品品質有沒有變好。</p>
+        </div>
+
+        <div class="notop-container layout-center">
+          <p class="para t-center"><b>行為追蹤天生量不到單頁的價值｜</b>追蹤能回答「多少人用了、用得順不順」，但單頁要解的問題是使用者原本就不知道的——他不知道照片被裁壞了，行為上就不會出現「困難被解除」的訊號。要看的是成品，不是操作軌跡。</p>
+        </div>
+
+        <div class="notop-container three-column-grid">
+          <div class="item item-bg-grey">
+            <div class="content-header">
+              <span class="vertical-decorator"></span>
+              <h4>問題有沒有被解決</h4>
+            </div>
+            <div class="flex-v-8">
+              <p class="para"><b>怎麼量｜</b>完成下單率</p>
+              <p class="para">用了 AI 的作品最後下單的比例，是否高於沒用的。</p>
+            </div>
+          </div>
+          <div class="item item-bg-grey">
+            <div class="content-header">
+              <span class="vertical-decorator"></span>
+              <h4>使用者接不接受</h4>
+            </div>
+            <div class="flex-v-8">
+              <p class="para"><b>怎麼量｜</b>作品內 AI 佔比</p>
+              <p class="para">換版型會清掉 AI 標記，最後仍標著 AI 的頁面是「試了而且留著」的。</p>
+            </div>
+          </div>
+          <div class="item item-bg-grey">
+            <div class="content-header">
+              <span class="vertical-decorator"></span>
+              <h4>裁切準不準</h4>
+            </div>
+            <div class="flex-v-8">
+              <p class="para"><b>怎麼量｜</b>套用後是否還手動調整照片位置</p>
+              <p class="para">還要自己喬，代表顯著區域分析沒發揮作用。</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="top-container two-column-grid">
+          <div class="item item-bg-grey">
+            <h4 class="title">沒有對照組時怎麼辦</h4>
+            <p class="para">功能全量開放，沒有同期對照組。替代方式是<b>差異中的差異</b>：用有 AI 的產品線與沒有 AI 的產品線各自的前後變化相減，自動扣掉季節性與行銷活動的影響。</p>
+          </div>
+          <div class="item item-bg-grey">
+            <h4 class="title">baseline 過了就補不回來</h4>
+            <p class="para">上線前必須先記錄現況的完成下單率、建立到下單的時長、未完成草稿比例。埋點漏了可以補上再等資料，baseline 是時間點，錯過就沒有了。</p>
+          </div>
+        </div>
+
+        <div class="notop-container layout-center">
+          <p class="para t-center"><b>兩個指標要交叉看｜</b>佔比高只證明功能被接受，不證明「做不完」的問題被解決——使用者可以整本都用 AI，然後照樣沒下單。佔比高且下單率提升，功能才算有效；佔比高但下單率沒動，代表瓶頸不在排版；佔比低卻下單率提升，則效果可能來自其他改動，需要追查。</p>
+        </div>
+      </div>
+      <!-- End Measurement -->
+
+      <!-- Start Trade-off -->
+      <div id="trade-off" class="top-container">
+        <div class="layout-center">
+          <h2 class="title">首發邊界 <span class="sm-title">Trade-offs</span></h2>
+          <h3>先確定哪些不做，範圍才守得住</h3>
+        </div>
+        <div class="notop-container two-column-grid">
+          <div class="item item-bg-grey">
+            <h4 class="title">分頁編輯是示意排列</h4>
+            <p class="para">不精算 bleed、裁切與模板細節，那些等進編輯器才產生。</p>
+          </div>
+          <div class="item item-bg-grey">
+            <h4 class="title">AI 排版只搭配自有樣式</h4>
+            <p class="para">僅支援留白與滿版，無法套用授權款的視覺；想要授權款設計得走主題版型自行安排照片。</p>
+          </div>
+          <div class="item item-bg-grey">
+            <h4 class="title">每頁 4 張為固定值</h4>
+            <p class="para">分頁編輯的每頁上限暫不依商品設定調整，屬未來擴充。</p>
+          </div>
+          <div class="item item-bg-grey">
+            <h4 class="title">自動觸發尚未定案</h4>
+            <p class="para">「即使 AI 沒開也自動觸發並開啟」會改變開關的語意——從「使用者選擇使用 AI」變成「系統判斷要不要用」，因此暫緩。</p>
+          </div>
+        </div>
+      </div>
+      <!-- End Trade-off -->
+
+      <!-- Start Takeaway -->
+      <div id="takeaway">
+        <div class="sec-title-container">
+          <h2>Takeaway</h2>
+        </div>
+        <div class="top-container">
+          <div class="layout-center">
+            <p class="para t-center">這個專案的設計重點不在 AI 本身，而在 <b>AI 與使用者的權責邊界</b>：系統什麼時候可以自己動手，什麼時候必須等使用者開口。</p>
+          </div>
+          <div class="three-column-grid">
+            <div class="item item-bg-grey">
+              <div class="content-header">
+                <span class="vertical-decorator"></span>
+                <h4>把新功能放進既有步驟</h4>
+              </div>
+              <p class="para">AI 不是另開一條路，而是既有流程裡的一個選項。沒有新增步驟，初次建立與再次編輯也共用同一套介面。</p>
+            </div>
+            <div class="item item-bg-grey">
+              <div class="content-header">
+                <span class="vertical-decorator"></span>
+                <h4>把「分群」與「版面」切開</h4>
+              </div>
+              <p class="para">這是功能能成立的關鍵決策。切開之後，介面各自回答一個問題，也讓昂貴的排版運算只需執行一次。</p>
+            </div>
+            <div class="item item-bg-grey">
+              <div class="content-header">
+                <span class="vertical-decorator"></span>
+                <h4>自動化的介入邊界</h4>
+              </div>
+              <p class="para">AI 給起點，覆蓋只在使用者主動要求時發生；增減頁數只動尾端、頁面已滿就擋下，讓變動範圍可預期。</p>
+            </div>
+            <div class="item item-bg-grey">
+              <div class="content-header">
+                <span class="vertical-decorator"></span>
+                <h4>同功能不同入口，選項要一致</h4>
+              </div>
+              <p class="para">差別只能來自照片的來源，不能來自入口的位置。從外部進來的照片給三選一，動已在作品內的內容則直達。</p>
+            </div>
+            <div class="item item-bg-grey">
+              <div class="content-header">
+                <span class="vertical-decorator"></span>
+                <h4>為「看不見的問題」設計驗證</h4>
+              </div>
+              <p class="para">行為追蹤測不到成品品質。使用者不知道照片被裁壞了，就不會出現困難被解除的訊號，得從成品與訂單資料回推。</p>
+            </div>
+            <div class="item item-bg-grey">
+              <div class="content-header">
+                <span class="vertical-decorator"></span>
+                <h4>文案命名要跟著行為分層</h4>
+              </div>
+              <p class="para">清空・刪除框・刪除照片，一個動照片、一個動版面、一個動素材庫。分不清楚，使用者會誤把原圖刪掉。</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End Takeaway -->
+
+      <!-- Start Bottom CTA -->
+      <div class="hero-container layout-center">
+        <div class="btn-group-center">
+          <a href="https://chingjungkuan.github.io/editor2" class="btn btn-primary btn-lg">Editor2 線上編輯器</a>
+          <a href="https://chingjungkuan.github.io/#ui-design" class="btn btn-secondary btn-lg">作品集專案列表</a>
+        </div>
+      </div>
+      <!-- End Bottom CTA -->
+
+      <!-- Lightbox 元件 -->
+      <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+        <img id="lightbox-img" src="" alt="放大圖">
+      </div>
+      <!-- 置頂滾動按鈕 -->
+      <button id="scrollToTopBtn" title="回到頂部">⬆</button>
+
+    </main>
+    <!-- End main -->
+
+    <!-- Start footer -->
+    <div id="site-footer" data-include="/components/footer.html"></div>
+    <!-- End footer -->
+
+  </div>
+
+  <script defer src="/js/include.js"></script>
+  <script defer src="/js/sub-nav.js"></script>
+  <script defer src="/js/lightbox.js"></script>
+  <script defer src="/js/scroll-to-top.js"></script>
+  <script defer src="/js/transparent-header.js"></script>
+</body>
+</html>

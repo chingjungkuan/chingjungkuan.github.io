@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <link href="../images/favicon.ico" rel="shortcut icon"/>
+    <title>AI 挑照片｜關靖蓉 Portfolio</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta name="description" content="TinTint 點點印 iOS App 的 AI 挑照片設計：同一套判斷、兩個入口，由使用者的目的決定流程在哪裡結束。">
+    <link rel="stylesheet" href="/css/normalize.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-EGELH8NDC6"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-EGELH8NDC6');
+    </script>
+    <!-- Microsoft Clarity -->
+    <script type="text/javascript">
+        (function(c,l,a,r,i,t,y){
+            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+        })(window, document, "clarity", "script", "x8ekiirpo7");
+    </script>
+</head>
+<body class="transparent-header-dark">
+  <div class="wrapper">
+    <!-- Start header -->
+    <div id="site-header" data-include="/components/header.html"></div>
+    <!-- End header -->
+
+    <!-- 浮動釘選導覽列 -->
+    <nav id="sub-nav" class="sub-nav">
+      <ul>
+        <li><a href="#overview,pain-point,define,constraints">前情提要</a></li>
+        <li><a href="#solution">設計決策</a></li>
+        <li><a href="#ui-design">互動設計</a></li>
+        <li><a href="#measurement">成效驗證</a></li>
+        <li><a href="#trade-off,takeaway">Takeaway</a></li>
+      </ul>
+    </nav>
+
+    <!-- Start main -->
+    <main class="main">
+
+      <!-- Start banner -->
+      <section class="hero-banner-wrapper">
+        <picture>
+          <source srcset="../images/ai-photo-picks/img_banner-desktop.jpg" media="(min-width: 992px)">
+          <source srcset="../images/ai-photo-picks/img_banner-pad.jpg" media="(min-width: 768px)">
+          <img class="hero-banner-img" src="../images/ai-photo-picks/img_banner-mobile.jpg" alt="AI 挑照片 banner" loading="eager">
+        </picture>
+      </section>
+      <!-- End banner -->
+
+      <!-- Start Overview -->
+      <div id="overview" class="top-container">
+        <div class="overview">
+          <div class="overview-left">
+            <h2 class="title">概述 <span class="sm-title">Overview</span></h2>
+            <h3 class="title text-primary">AI 挑照片</h3>
+            <h5 class="title">#B2C #iOS App #AI Feature</h5>
+            <div class="team-info">
+              <p class="para"><strong>Team |</strong> TinTint 點點印</p>
+              <p class="para"><strong>Role |</strong> UI/UX Designer</p>
+              <p class="para"><strong>協作 |</strong> PM、iOS 工程師</p>
+              <p class="para"><strong>Year |</strong> 2026</p>
+            </div>
+          </div>
+          <div class="overview-right para">
+            <ul>
+              <li><b>產品服務｜</b>點點印 iOS App 的 AI 挑照片功能，自動偵測模糊、閉眼與近似的照片，分成首頁與編輯器兩個入口。</li>
+              <li><b>專案挑戰｜</b>同一套判斷要服務兩種使用者：還沒開始做作品、只想先整理照片庫的人，以及已經在做作品、卡在「哪張比較好」的人。</li>
+              <li><b>設計策略｜</b>兩條流程共用同一套分析與結果頁，只在進入點與結束點分開設計——流程該在哪裡停，由使用者的目的決定。</li>
+              <li><b>嵌入方式｜</b>不另開新結構，把 AI 放進使用者本來就會經過的地方：首頁浮動按鈕、編輯器工具列、選照片的畫面。</li>
+              <li><b>技術特性｜</b>分析全程在裝置內完成，使用 iOS 系統內建的影像分析能力。</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- End Overview -->
+
+      <!-- Start Pain Point -->
+      <div id="pain-point" class="top-container">
+        <div class="layout-center">
+          <h2 class="title">痛點 <span class="sm-title">Pain Point</span></h2>
+          <h3>兩個時刻，兩種「不知道從哪開始」</h3>
+        </div>
+        <div class="notop-container two-column-grid">
+          <div class="item item-bg-grey">
+            <div class="content-header">
+              <span class="vertical-decorator"></span>
+              <h4>還沒開始做作品：照片庫太亂</h4>
+            </div>
+            <p class="para">幾百張旅遊照片躺在相簿裡，想整理卻不知道從哪一張下手。這個時刻還沒有具體目標，只是覺得「該整理了」。<b>缺的是一個起點。</b></p>
+          </div>
+          <div class="item item-bg-grey">
+            <div class="content-header">
+              <span class="vertical-decorator"></span>
+              <h4>已經在做作品：卡在判斷</h4>
+            </div>
+            <p class="para">正在做文庫本，相片池裡已經有幾十張，但不確定哪些比較好。卡住的是「哪張比較清楚、神情比較好」這種需要逐張比對才知道的事。<b>缺的是一個判斷依據。</b></p>
+          </div>
+        </div>
+        <div class="notop-container layout-center">
+          <p class="para t-center"><b>這個差異決定了兩條流程要分開設計｜</b>如果只做一個入口，就得選一邊放棄。放在首頁，正在編輯的人得退出作品才能用；放在編輯器裡，還沒開始做作品的人永遠找不到。</p>
+        </div>
+      </div>
+      <!-- End Pain Point -->
+
+      <!-- Start Define -->
+      <div id="define" class="top-container">
+        <div class="layout-center">
+          <h2 class="title">功能定位 <span class="sm-title">Define</span></h2>
+          <h3>同一套判斷，兩個不同的終點</h3>
+        </div>
+        <div class="notop-container two-column-grid">
+          <div class="item item-bg-grey">
+            <h4 class="title">首頁入口</h4>
+            <div class="flex-v-8">
+              <p class="para"><b>從哪進｜</b>首頁底部的浮動按鈕。</p>
+              <p class="para"><b>解決什麼｜</b>照片庫太亂，想先整理起來。</p>
+              <p class="para"><b>結果去哪｜</b>存入手機相簿。</p>
+            </div>
+          </div>
+          <div class="item item-bg-grey">
+            <h4 class="title">編輯器入口</h4>
+            <div class="flex-v-8">
+              <p class="para"><b>從哪進｜</b>相片工具列的 ✦ 按鈕。</p>
+              <p class="para"><b>解決什麼｜</b>已經在做作品，不確定哪些照片比較好。</p>
+              <p class="para"><b>結果去哪｜</b>直接匯入當前作品的相片池。</p>
+            </div>
+          </div>
+        </div>
+        <div class="notop-container layout-center">
+          <p class="para t-center">兩條流程共用同一套分析、相同的判斷項目（模糊・閉眼・近似）與相同的結果頁。<b>差別只有兩件事：從哪裡進來，以及流程在哪裡結束。</b></p>
+        </div>
+      </div>
+      <!-- End Define -->
+
+      <!-- Start Constraints -->
+      <div id="constraints" class="top-container">
+        <div class="layout-center">
+          <h2 class="title">設計限制 <span class="sm-title">Constraints</span></h2>
+          <h3>先確認技術與情境的邊界，再決定介面怎麼長</h3>
+        </div>
+        <div class="notop-container three-column-grid">
+          <div class="item item-bg-grey">
+            <h4 class="title">分析在裝置端執行</h4>
+            <p class="para">判斷項目取決於系統版本，較新的系統多一項美感分析。同一個功能在不同手機上的推薦品質不完全相同。</p>
+          </div>
+          <div class="item item-bg-grey">
+            <h4 class="title">相片權限有三種狀態</h4>
+            <p class="para">完整・限制存取・無權限，每一種都要有對應的畫面，不能只處理「有」跟「沒有」。</p>
+          </div>
+          <div class="item item-bg-grey">
+            <h4 class="title">整理好的照片存在手機相簿</h4>
+            <p class="para">照片不在 App 裡。之後回到 App 選照片時，得有辦法讓使用者認出這些相簿。</p>
+          </div>
+          <div class="item item-bg-grey">
+            <h4 class="title">編輯器已有相片額度</h4>
+            <p class="para">新入口必須沿用既有的額度規則，不能自己另立一套。</p>
+          </div>
+          <div class="item item-bg-grey">
+            <h4 class="title">手機螢幕小</h4>
+            <p class="para">結果頁要在一個畫面內同時容納「保留」「排除」與操作按鈕。</p>
+          </div>
+        </div>
+      </div>
+      <!-- End Constraints -->
+
+      <!-- Start Solution -->
+      <div id="solution" class="top-container">
+        <div class="layout-center">
+          <h2 class="title">設計決策 <span class="sm-title">Solution</span></h2>
+          <h3>三個結構性決策</h3>
+          <p class="para t-center">這三個決策決定了功能的骨架：兩條流程在哪裡分開、AI 在介面上站在什麼位置，以及怎麼放進使用者已經熟悉的畫面。</p>
+        </div>
+
+        <!-- 決策一 -->
+        <div class="top-container hero-grid m-1col-2col">
+          <div class="description-text">
+            <div class="flex-v-8">
+              <h3 class="title">▍流程該在哪裡停，由使用者的目的決定</h3>
+              <p class="para">兩條流程走的是同一串畫面：功能介紹 → 照片權限 → 選取照片 → 分析中 → 結果頁。分歧只發生在結果頁之後。</p>
+              <p class="para"><b>首頁入口｜</b>接著進入完成頁，選擇新建或加入現有相簿，把精選照片存回手機。</p>
+              <p class="para"><b>編輯器入口｜</b>不走完成頁。結果頁底部換成一條操作列，確認後直接關閉，照片進入相片池。</p>
+              <p class="para">編輯器裡的使用者已經有目的地——要回到自己的作品。多一頁「完成」只是延後拿到想要的東西。<b>同一個分析結果，用兩種方式收尾。</b></p>
+            </div>
+          </div>
+          <img class="image-block lightbox-trigger" src="../images/ai-photo-picks/img_flow-compare.jpg" alt="首頁入口的完成頁，與編輯器入口結果頁底部操作列的對照">
+        </div>
+
+        <!-- 決策二 -->
+        <div class="img-txt top-container hero-grid d-2col-1col">
+          <img class="image-block lightbox-trigger" src="../images/ai-photo-picks/img_empty-state.jpg" alt="相片池有照片時的工具列，與相片池為空時以 AI 為主要按鈕的畫面">
+          <div class="description-text">
+            <div class="flex-v-8">
+              <h3 class="title">▍AI 的主次會隨使用者的處境翻轉</h3>
+              <p class="para"><b>相片池已有照片｜</b>✦ 按鈕待在工具列裡，與排序、新增並列，是工具之一。</p>
+              <p class="para"><b>相片池完全是空的｜</b>工具列整個隱藏，改成空狀態畫面：「AI Magic Pick」變成主要按鈕，原本的「新增照片」退為次要。</p>
+              <p class="para">空的相片池是使用者最沒有方向的時刻。有照片時知道自己要做什麼，AI 只是選項之一；沒照片時最需要一個起點，AI 就該站到最前面。<b>主次不是固定的，是跟著使用者的處境走的。</b></p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 決策三 -->
+        <div class="top-container hero-grid m-1col-2col">
+          <div class="description-text">
+            <div class="flex-v-8">
+              <h3 class="title">▍在熟悉的畫面裡做記號，不另外蓋新分區</h3>
+              <p class="para">首頁入口整理好的照片存回手機相簿。之後在 App 裡選照片時，要讓使用者找得到這些相簿，做法只有兩件事：排到裝置相簿區的最前面、右下角加一個紫色 sparkle 標記。<b>沒有新增分區。</b></p>
+              <p class="para">大可新增一個「AI 相簿」分區讓它更醒目，但那會改變使用者已經熟悉的結構，等於要重新認識一次這個畫面。排序加標記則是在既有結構裡做事——<b>要被找到，不一定要蓋一個新的房間。</b></p>
+              <p class="para">這個標示在所有選照片的入口一致生效，包括編輯器與掃碼上傳。</p>
+            </div>
+          </div>
+          <img class="image-block lightbox-trigger" src="../images/ai-photo-picks/img_photopicker-badge.jpg" alt="選照片畫面中，AI 整理的相簿排在最前方並帶紫色標記">
+        </div>
+      </div>
+      <!-- End Solution -->
+
+      <!-- Start UI Design -->
+      <div id="ui-design">
+        <div class="sec-title-container">
+          <h2>互動設計</h2>
+        </div>
+
+        <!-- 數量不用時間窗口 -->
+        <div class="top-container layout-center">
+          <h3 class="title">▍標示範圍用數量控制，不用時間窗口</h3>
+          <p class="para t-center">選照片畫面只標示最近 4 個相簿。「最近 7 天內建立的相簿」聽起來更直覺，但它假設了使用者會在一週內做完作品。</p>
+        </div>
+        <div class="notop-container two-column-grid">
+          <div class="item item-bg-grey">
+            <div class="content-header">
+              <span class="vertical-decorator"></span>
+              <h4>為什麼是 4 個</h4>
+            </div>
+            <p class="para">兩欄排列剛好兩排，視覺整齊；也涵蓋使用者同時進行 1～3 個作品的常見情境。</p>
+          </div>
+          <div class="item item-bg-grey">
+            <div class="content-header">
+              <span class="vertical-decorator"></span>
+              <h4>為什麼不用時間窗口</h4>
+            </div>
+            <p class="para">作品的編輯週期從 2 天到 1 年都有，固定的時間門檻會在使用者還在編輯時，就讓標示先消失。</p>
+          </div>
+        </div>
+        <div class="notop-container layout-center">
+          <p class="para t-center"><b>改用數量，就不需要對使用者的節奏做假設。</b></p>
+        </div>
+
+        <!-- 保留／排除 -->
+        <div class="img-txt top-container hero-grid d-2col-1col">
+          <img class="image-block lightbox-trigger" src="../images/ai-photo-picks/img_result-tabs.jpg" alt="結果頁的保留與排除雙 Tab">
+          <div class="description-text">
+            <div class="flex-v-8">
+              <h3 class="title">▍結果頁只分兩堆：保留與排除</h3>
+              <p class="para">結果頁用雙 Tab 分成「保留」與「排除」，每一張都可以手動加回或移除，也能點開全螢幕預覽，縮放、左右翻頁。</p>
+              <p class="para">手機上要的是快速確認「這批對不對」，分成兩堆最快——看保留的有沒有漏，看排除的有沒有誤判。</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 跨平台對照 -->
+        <div class="top-container layout-center">
+          <h3 class="title">▍同一個功能，iOS 與 Web 刻意長得不一樣</h3>
+          <p class="para t-center">兩個平台共用同一套判斷能力，結果頁的呈現方式卻分開設計（Web 版目前開發中）。</p>
+        </div>
+        <div class="notop-container three-column-grid">
+          <div class="item item-bg-grey">
+            <h4 class="title">結果頁結構</h4>
+            <div class="flex-v-8">
+              <p class="para"><b>iOS｜</b>雙 Tab：保留・排除。</p>
+              <p class="para"><b>Web｜</b>單一捲動列表：通過・相似・模糊。</p>
+            </div>
+          </div>
+          <div class="item item-bg-grey">
+            <h4 class="title">使用者看到的</h4>
+            <div class="flex-v-8">
+              <p class="para"><b>iOS｜</b>系統的結論。</p>
+              <p class="para"><b>Web｜</b>系統的判斷依據。</p>
+            </div>
+          </div>
+          <div class="item item-bg-grey">
+            <h4 class="title">適合的情境</h4>
+            <div class="flex-v-8">
+              <p class="para"><b>iOS｜</b>在手機上快速確認一整批。</p>
+              <p class="para"><b>Web｜</b>在桌機上逐組比較相似的照片。</p>
+            </div>
+          </div>
+        </div>
+        <div class="notop-container layout-center">
+          <p class="para t-center">手機上分成兩堆最快；桌機上照理由分區塊，把相似的照片攤開排在一起比較。<b>同一個功能在不同平台可以長得不一樣，但差異必須說得出理由。</b></p>
+        </div>
+
+        <!-- 即時排除計數 -->
+        <div class="top-container hero-grid m-1col-2col">
+          <div class="description-text">
+            <div class="flex-v-8">
+              <h3 class="title">▍等待的時候，不要只給時間</h3>
+              <p class="para">分析畫面是深色背景加圓形進度條，同時即時顯示排除計數：模糊 N 張・閉眼 N 張・近似 N 張，數字隨著分析往前跳。</p>
+              <p class="para">進度條只回答「還要等多久」，排除計數回答的是「系統正在做什麼、目前找到了什麼」。等全部結束才一次揭曉，那段等待就是純粹的空白。<b>過程本身也是資訊。</b></p>
+            </div>
+          </div>
+          <img class="image-block lightbox-trigger" src="../images/ai-photo-picks/img_analyzing.jpg" alt="分析中畫面：圓形進度條與即時排除計數">
+        </div>
+
+        <!-- 跳過留回頭路 -->
+        <div class="img-txt top-container hero-grid d-2col-1col">
+          <img class="image-block lightbox-trigger" src="../images/ai-photo-picks/img_album-sheet.jpg" alt="同時存入手機相簿的首次引導 Sheet">
+          <div class="description-text">
+            <div class="flex-v-8">
+              <h3 class="title">▍跳過了，也要留一條回頭的路</h3>
+              <p class="para">「同時存入手機相簿」是編輯器入口的次要功能，用首次引導 Sheet 呈現，同一個作品只出現一次，不打斷主流程。</p>
+              <p class="para">Sheet 是一次性的邀請，結果頁的勾選框則是持續存在的入口。一次拒絕就把功能整個收起來，使用者改變主意時會找不到。</p>
+            </div>
+          </div>
+        </div>
+        <div class="notop-container two-column-grid">
+          <div class="item item-bg-grey">
+            <h4 class="title">引導時選「確定」</h4>
+            <p class="para">結果頁的勾選框預設勾選，並顯示相簿名稱。</p>
+          </div>
+          <div class="item item-bg-grey">
+            <h4 class="title">引導時選「跳過」</h4>
+            <p class="para">勾選框預設不勾，<b>但仍然顯示</b>，保留補救的機會。</p>
+          </div>
+        </div>
+
+        <!-- 不留無效狀態 -->
+        <div class="top-container layout-center">
+          <h3 class="title">▍不要留下說不通的狀態</h3>
+          <p class="para t-center">勾了「同時存入手機相簿」卻還沒選相簿時，系統會自動開啟相簿選擇。「要存入相簿，但沒有相簿」是一個不成立的狀態——與其讓它存在、等按下匯入才報錯，不如在它出現的當下就補完。</p>
+        </div>
+
+        <!-- 狀態跟著內容走 -->
+        <div class="top-container hero-grid m-1col-2col">
+          <div class="description-text">
+            <div class="flex-v-8">
+              <h3 class="title">▍改了選取，就不能再說「已存入」</h3>
+              <p class="para">系統會記住存過的相簿，避免同一批照片重複存入。但只要使用者返回結果頁改了選取，這筆記錄就會被清除。</p>
+              <p class="para">那個「已存入」的勾記是對舊的選取成立的，內容換了之後就不再是真的；留著它，會讓使用者以為新選的照片也存過了。<b>狀態要跟著內容走，不能只跟著動作走。</b></p>
+              <p class="para"><b>完成頁的其他細節｜</b>新建相簿時先預覽照片再命名；偵測到同名相簿會先確認再建立；存入成功或失敗都即時提示。</p>
+            </div>
+          </div>
+          <img class="image-block lightbox-trigger" src="../images/ai-photo-picks/img_save-album.jpg" alt="完成頁：新建相簿或加入現有相簿">
+        </div>
+
+        <!-- 額度只提示 -->
+        <div class="img-txt top-container hero-grid d-2col-1col">
+          <img class="image-block lightbox-trigger" src="../images/ai-photo-picks/img_editor-bottom-bar.jpg" alt="編輯器入口結果頁的底部操作列：額度提示、勾選框與匯入按鈕">
+          <div class="description-text">
+            <div class="flex-v-8">
+              <h3 class="title">▍額度只提示，不截斷</h3>
+              <p class="para">編輯器入口的結果頁底部會顯示「此作品還可匯入 N 張」，但不阻止使用者選超過，超額的處理交給編輯器既有的匯入規則。</p>
+              <p class="para"><b>告訴使用者界線在哪，但不替使用者停下來。</b>這條原則在 Web 版也一致。</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 四種權限狀態 -->
+        <div class="top-container hero-grid m-1col-2col">
+          <div class="description-text">
+            <div class="flex-v-8">
+              <h3 class="title">▍四種權限狀態，四種畫面</h3>
+              <p class="para">限制存取時每次都顯示功能介紹，因為這個狀態隨時會變：上次可能只給了 10 張，這次願意給更多。看過的介紹可以跳過，但「現在只給了部分照片」這件事每次都值得再說一次。</p>
+              <p class="para">無權限時則拿掉精選照片的預覽卡片——<b>沒有存取權，就沒有使用者自己的照片可以預覽。</b></p>
+            </div>
+          </div>
+          <img class="image-block lightbox-trigger" src="../images/ai-photo-picks/img_intro.jpg" alt="功能介紹頁與精選照片輪播預覽">
+        </div>
+        <div class="notop-container two-column-grid">
+          <div class="item item-bg-grey">
+            <h4 class="title">完整權限＋第一次開啟</h4>
+            <p class="para">顯示功能介紹，附精選照片的輪播預覽。</p>
+          </div>
+          <div class="item item-bg-grey">
+            <h4 class="title">完整權限＋已看過</h4>
+            <p class="para">跳過介紹，直接進入選取照片。</p>
+          </div>
+          <div class="item item-bg-grey">
+            <h4 class="title">無權限</h4>
+            <p class="para">顯示介紹，只放權限說明，不放精選照片卡片。</p>
+          </div>
+          <div class="item item-bg-grey">
+            <h4 class="title">限制存取</h4>
+            <p class="para"><b>每次都顯示</b>，提示選取更多照片或前往設定。</p>
+          </div>
+        </div>
+
+        <!-- 兩種找法 -->
+        <div class="img-txt top-container hero-grid d-2col-1col">
+          <img class="image-block lightbox-trigger" src="../images/ai-photo-picks/img_select-photos.jpg" alt="選取照片頁：時間軸與相簿清單兩種模式">
+          <div class="description-text">
+            <div class="flex-v-8">
+              <h3 class="title">▍找照片有兩種找法</h3>
+              <p class="para">選取照片頁提供依日期分組的時間軸，與相簿清單兩種模式，另外提供旅遊、人像等情境分組。</p>
+              <p class="para">找照片的方式跟記得事情的方式有關：記得「去年沖繩」的人用時間找，記得「存在某個相簿」的人用相簿找。<b>兩種都給，不要求使用者換一套記憶方式。</b></p>
+              <p class="para">限制存取時頁面上方有提示列，可以直接選取更多照片或前往設定；權限一變更，照片清單就自動重新載入。</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <!-- End UI Design -->
+
+      <!-- Start Measurement -->
+      <div id="measurement" class="top-container">
+        <div class="layout-center">
+          <h2 class="title">成效驗證 <span class="sm-title">Measurement</span></h2>
+          <h3>兩個入口要分開看</h3>
+          <p class="para t-center">首頁入口與編輯器入口解的是不同的問題，混在一起只會得到一個沒有意義的總使用量。以下是用來判斷功能有沒有真的幫上忙的驗證規劃。</p>
+        </div>
+
+        <div class="notop-container two-column-grid">
+          <div class="item item-bg-grey">
+            <div class="content-header">
+              <span class="vertical-decorator"></span>
+              <h4>排除標準準不準</h4>
+            </div>
+            <div class="flex-v-8">
+              <p class="para"><b>怎麼量｜</b>從「排除」手動加回來的比例</p>
+              <p class="para">常被加回來，代表門檻太嚴、誤判太多。</p>
+            </div>
+          </div>
+          <div class="item item-bg-grey">
+            <div class="content-header">
+              <span class="vertical-decorator"></span>
+              <h4>挑得準不準</h4>
+            </div>
+            <div class="flex-v-8">
+              <p class="para"><b>怎麼量｜</b>編輯器入口匯入的照片，最後真的用進作品的比例</p>
+              <p class="para">匯入了卻沒用上，代表推薦沒對上使用者的判斷。</p>
+            </div>
+          </div>
+          <div class="item item-bg-grey">
+            <div class="content-header">
+              <span class="vertical-decorator"></span>
+              <h4>引導時機對不對</h4>
+            </div>
+            <div class="flex-v-8">
+              <p class="para"><b>怎麼量｜</b>首次引導的「確定」率，對比勾選框實際被勾選的比例</p>
+              <p class="para">兩個數字差很多，代表引導出現的時機不對。</p>
+            </div>
+          </div>
+          <div class="item item-bg-grey">
+            <div class="content-header">
+              <span class="vertical-decorator"></span>
+              <h4>首頁入口有沒有價值</h4>
+            </div>
+            <div class="flex-v-8">
+              <p class="para"><b>怎麼量｜</b>用過之後，有沒有接著開始做作品</p>
+              <p class="para">整理照片本身不會產生訂單，要看的是後續轉換。</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="top-container two-column-grid">
+          <div class="item item-bg-grey">
+            <h4 class="title">首頁入口要證明的不只是「有人用」</h4>
+            <p class="para">首頁浮動按鈕是產品的黃金版位。如果使用者整理完就結束，這個入口佔著最好的位置，卻沒有把人帶進主流程，位置就需要重新討論。<b>這是入口的設計問題，不是功能好不好用的問題</b>，兩件事要分開量。</p>
+          </div>
+          <div class="item item-bg-grey">
+            <h4 class="title">沒有對照組時怎麼辦</h4>
+            <p class="para">功能沒有分階段開放，也就沒有同期對照組。可用的替代是<b>差異中的差異</b>：iOS 已上線、Web 版尚未推出，用兩個平台各自在上線前後的變化相減，扣掉季節性與行銷活動這類兩邊都會受到的影響。</p>
+          </div>
+        </div>
+      </div>
+      <!-- End Measurement -->
+
+      <!-- Start Trade-off -->
+      <div id="trade-off" class="top-container">
+        <div class="layout-center">
+          <h2 class="title">目前的邊界 <span class="sm-title">Trade-offs</span></h2>
+          <h3>先確定哪些不做，範圍才守得住</h3>
+        </div>
+        <div class="notop-container two-column-grid">
+          <div class="item item-bg-grey">
+            <h4 class="title">首頁入口整理完就結束</h4>
+            <p class="para">照片存回手機相簿，不直接接續建立作品。要把整理好的照片做成作品，得自己再走一次建立流程。</p>
+          </div>
+          <div class="item item-bg-grey">
+            <h4 class="title">推薦品質隨系統版本不同</h4>
+            <p class="para">較新的系統多一項美感分析，介面上沒有說明這件事，同一個功能在不同手機上的結果會有落差。</p>
+          </div>
+          <div class="item item-bg-grey">
+            <h4 class="title">只標示最近 4 個相簿</h4>
+            <p class="para">同時進行超過 4 個作品的使用者，較舊的相簿會失去標示。</p>
+          </div>
+          <div class="item item-bg-grey">
+            <h4 class="title">相簿選擇的記憶有上限</h4>
+            <p class="para">只記最近 10 個作品，回到更早的作品時要重新選擇相簿。</p>
+          </div>
+          <div class="item item-bg-grey">
+            <h4 class="title">首次引導每個作品只出現一次</h4>
+            <p class="para">跳過之後，只剩結果頁的勾選框這個相對不顯眼的入口。</p>
+          </div>
+          <div class="item item-bg-grey">
+            <h4 class="title">沒有分階段開放</h4>
+            <p class="para">全量上線代表無法邊開放邊驗證，出問題只能整體回退。</p>
+          </div>
+        </div>
+      </div>
+      <!-- End Trade-off -->
+
+      <!-- Start Takeaway -->
+      <div id="takeaway">
+        <div class="sec-title-container">
+          <h2>Takeaway</h2>
+        </div>
+        <div class="top-container">
+          <div class="layout-center">
+            <p class="para t-center">這個專案的重點不在 AI 有多準，而在<b>同一套能力該怎麼長出兩種形狀</b>。首頁浮動按鈕、編輯器工具列、選照片的畫面，都是使用者本來就會經過的地方——AI 是既有流程裡多出來的一個選項，不是另外開一條路。</p>
+          </div>
+          <div class="three-column-grid">
+            <div class="item item-bg-grey">
+              <div class="content-header">
+                <span class="vertical-decorator"></span>
+                <h4>流程在哪裡結束，由目的決定</h4>
+              </div>
+              <p class="para">編輯器入口拿掉完成頁，因為那裡的使用者已經有目的地，多一頁只是擋在使用者與作品之間。</p>
+            </div>
+            <div class="item item-bg-grey">
+              <div class="content-header">
+                <span class="vertical-decorator"></span>
+                <h4>功能的主次不是固定的</h4>
+              </div>
+              <p class="para">空的相片池與有照片的相片池，AI 該站的位置不一樣。處境變了，主次就跟著翻轉。</p>
+            </div>
+            <div class="item item-bg-grey">
+              <div class="content-header">
+                <span class="vertical-decorator"></span>
+                <h4>在熟悉的畫面裡做記號</h4>
+              </div>
+              <p class="para">排序加標記，不新增分區，不要求使用者重新認識一個已經熟悉的畫面。</p>
+            </div>
+            <div class="item item-bg-grey">
+              <div class="content-header">
+                <span class="vertical-decorator"></span>
+                <h4>等待時給的不只是時間</h4>
+              </div>
+              <p class="para">即時排除計數讓等待本身變成資訊，而不是一段對著進度條的空白。</p>
+            </div>
+            <div class="item item-bg-grey">
+              <div class="content-header">
+                <span class="vertical-decorator"></span>
+                <h4>一次性的引導，要留下持續的入口</h4>
+              </div>
+              <p class="para">跳過不等於永遠不要。勾選框讓使用者改變主意時，還找得到回來的路。</p>
+            </div>
+            <div class="item item-bg-grey">
+              <div class="content-header">
+                <span class="vertical-decorator"></span>
+                <h4>狀態要跟著內容走</h4>
+              </div>
+              <p class="para">使用者改了選取，之前的「已存入」就該失效，不讓過期的勾記說錯話。</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End Takeaway -->
+
+      <!-- Start Bottom CTA -->
+      <div class="hero-container layout-center">
+        <div class="btn-group-center">
+          <a href="https://chingjungkuan.github.io/editor2" class="btn btn-primary btn-lg">Editor2 線上編輯器</a>
+          <a href="https://chingjungkuan.github.io/#ui-design" class="btn btn-secondary btn-lg">作品集專案列表</a>
+        </div>
+      </div>
+      <!-- End Bottom CTA -->
+
+      <!-- Lightbox 元件 -->
+      <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+        <img id="lightbox-img" src="" alt="放大圖">
+      </div>
+      <!-- 置頂滾動按鈕 -->
+      <button id="scrollToTopBtn" title="回到頂部">⬆</button>
+
+    </main>
+    <!-- End main -->
+
+    <!-- Start footer -->
+    <div id="site-footer" data-include="/components/footer.html"></div>
+    <!-- End footer -->
+
+  </div>
+
+  <script defer src="/js/include.js"></script>
+  <script defer src="/js/sub-nav.js"></script>
+  <script defer src="/js/lightbox.js"></script>
+  <script defer src="/js/scroll-to-top.js"></script>
+  <script defer src="/js/transparent-header.js"></script>
+</body>
+</html>
