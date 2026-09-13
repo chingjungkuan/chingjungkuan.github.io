@@ -40,7 +40,7 @@
         <li><a href="#solution">設計決策</a></li>
         <li><a href="#ui-design">互動設計</a></li>
         <li><a href="#measurement">成效驗證</a></li>
-        <li><a href="#trade-off,takeaway">Takeaway</a></li>
+        <li><a href="#takeaway">Takeaway</a></li>
       </ul>
     </nav>
 
@@ -413,49 +413,58 @@
       <div id="measurement" class="top-container">
         <div class="layout-center">
           <h2 class="title">成效驗證 <span class="sm-title">Measurement</span></h2>
-          <h3>兩個入口要分開看</h3>
-          <p class="para t-center">首頁入口與編輯器入口解的是不同的問題，混在一起只會得到一個沒有意義的總使用量。以下是用來判斷功能有沒有真的幫上忙的驗證規劃。</p>
+          <h3>每個設計決策，都要有對應的驗證方式</h3>
+          <p class="para t-center">與工程共同定義追蹤規劃，分成兩層：<b>事件漏斗</b>（GA4）找出使用者卡在哪一步，<b>Session 錄影</b>（Clarity）找出為什麼卡住。每個事件都標記入口，首頁與編輯器兩條流程分開計算。</p>
         </div>
 
+        <!-- 漏斗 -->
+        <div class="notop-container layout-center">
+          <div class="flex-v-8">
+            <p class="para t-center"><b>開啟功能 → 開始分析 → 分析完成 → 確認採用</b>（首頁入口之後再多一步：存入相簿）</p>
+            <p class="para t-center">每一步也記錄使用者在哪裡按下離開，才分得出<b>主動放棄</b>和<b>直接關掉 App</b>：前者要回頭檢查流程設計，後者要查等待時間與穩定性。</p>
+          </div>
+        </div>
+
+        <!-- 設計決策 × 驗證指標 -->
         <div class="notop-container two-column-grid">
           <div class="item item-bg-grey">
             <div class="content-header">
               <span class="vertical-decorator"></span>
-              <h4>排除標準準不準</h4>
+              <h4>流程該在哪裡停</h4>
             </div>
             <div class="flex-v-8">
-              <p class="para"><b>怎麼量｜</b>從「排除」手動加回來的比例</p>
-              <p class="para">常被加回來，代表門檻太嚴、誤判太多。</p>
+              <p class="para"><b>驗證指標｜</b>編輯器入口的匯入完成率、首頁入口的相簿存入率</p>
+              <p class="para">兩條流程的終點不同，要分開計算，混在一起會互相稀釋。</p>
             </div>
           </div>
           <div class="item item-bg-grey">
             <div class="content-header">
               <span class="vertical-decorator"></span>
-              <h4>挑得準不準</h4>
+              <h4>等待時顯示即時排除計數</h4>
             </div>
             <div class="flex-v-8">
-              <p class="para"><b>怎麼量｜</b>編輯器入口匯入的照片，最後真的用進作品的比例</p>
-              <p class="para">匯入了卻沒用上，代表推薦沒對上使用者的判斷。</p>
+              <p class="para"><b>驗證指標｜</b>分析完成率，以及中途取消時停在幾 %</p>
+              <p class="para">取消集中在剛開始，是還沒看到進展就放棄；集中在後段，則是等太久。</p>
             </div>
           </div>
           <div class="item item-bg-grey">
             <div class="content-header">
               <span class="vertical-decorator"></span>
-              <h4>引導時機對不對</h4>
+              <h4>結果頁只分保留與排除</h4>
             </div>
             <div class="flex-v-8">
-              <p class="para"><b>怎麼量｜</b>首次引導的「確定」率，對比勾選框實際被勾選的比例</p>
-              <p class="para">兩個數字差很多，代表引導出現的時機不對。</p>
+              <p class="para"><b>驗證指標｜</b>結果確認率：分析完成後，按下匯入或存入的比例</p>
+              <p class="para">這是整個功能的核心轉換——看完 AI 的結果，使用者願不願意採用。</p>
             </div>
           </div>
           <div class="item item-bg-grey">
             <div class="content-header">
               <span class="vertical-decorator"></span>
-              <h4>首頁入口有沒有價值</h4>
+              <h4>AI 的判斷準不準</h4>
             </div>
             <div class="flex-v-8">
-              <p class="para"><b>怎麼量｜</b>用過之後，有沒有接著開始做作品</p>
-              <p class="para">整理照片本身不會產生訂單，要看的是後續轉換。</p>
+              <p class="para"><b>驗證指標｜</b>AI 通過率 × 使用者調整率，交叉看</p>
+              <p class="para">通過率低、調整率高，是濾太兇，使用者一直把照片加回來；通過率高、調整率也高，是幾乎沒篩，使用者自己在刪。</p>
             </div>
           </div>
         </div>
@@ -463,7 +472,7 @@
         <div class="top-container two-column-grid">
           <div class="item item-bg-grey">
             <h4 class="title">首頁入口要證明的不只是「有人用」</h4>
-            <p class="para">首頁浮動按鈕是產品的黃金版位。如果使用者整理完就結束，這個入口佔著最好的位置，卻沒有把人帶進主流程，位置就需要重新討論。<b>這是入口的設計問題，不是功能好不好用的問題</b>，兩件事要分開量。</p>
+            <p class="para">首頁浮動按鈕是產品的黃金版位，啟動率只能說明有人點。要看的是用完之後有沒有接著建立作品、會不會再回來用。如果使用者整理完就結束，這個入口佔著最好的位置，卻沒有把人帶進主流程，位置就需要重新討論。<b>這是入口的設計問題，不是功能好不好用的問題</b>，兩件事要分開量。</p>
           </div>
           <div class="item item-bg-grey">
             <h4 class="title">沒有對照組時怎麼辦</h4>
@@ -472,41 +481,6 @@
         </div>
       </div>
       <!-- End Measurement -->
-
-      <!-- Start Trade-off -->
-      <div id="trade-off" class="top-container">
-        <div class="layout-center">
-          <h2 class="title">目前的邊界 <span class="sm-title">Trade-offs</span></h2>
-          <h3>先確定哪些不做，範圍才守得住</h3>
-        </div>
-        <div class="notop-container two-column-grid">
-          <div class="item item-bg-grey">
-            <h4 class="title">首頁入口整理完就結束</h4>
-            <p class="para">照片存回手機相簿，不直接接續建立作品。要把整理好的照片做成作品，得自己再走一次建立流程。</p>
-          </div>
-          <div class="item item-bg-grey">
-            <h4 class="title">推薦品質隨系統版本不同</h4>
-            <p class="para">較新的系統多一項美感分析，介面上沒有說明這件事，同一個功能在不同手機上的結果會有落差。</p>
-          </div>
-          <div class="item item-bg-grey">
-            <h4 class="title">只標示最近 4 個相簿</h4>
-            <p class="para">同時進行超過 4 個作品的使用者，較舊的相簿會失去標示。</p>
-          </div>
-          <div class="item item-bg-grey">
-            <h4 class="title">相簿選擇的記憶有上限</h4>
-            <p class="para">只記最近 10 個作品，回到更早的作品時要重新選擇相簿。</p>
-          </div>
-          <div class="item item-bg-grey">
-            <h4 class="title">首次引導每個作品只出現一次</h4>
-            <p class="para">跳過之後，只剩結果頁的勾選框這個相對不顯眼的入口。</p>
-          </div>
-          <div class="item item-bg-grey">
-            <h4 class="title">沒有分階段開放</h4>
-            <p class="para">全量上線代表無法邊開放邊驗證，出問題只能整體回退。</p>
-          </div>
-        </div>
-      </div>
-      <!-- End Trade-off -->
 
       <!-- Start Takeaway -->
       <div id="takeaway">
