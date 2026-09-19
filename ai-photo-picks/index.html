@@ -441,11 +441,23 @@
             <p class="para">11 階色票，數值與既有的 <code>brand</code> 色階完全相同，但在 Design System 中獨立成一組命名。同一個紫色分成兩組 token，「AI 作用中」的語意之後要調整時，不會牽動品牌色。</p>
           </div>
         </div>
-        <div class="notop-container two-column-grid">
+        <div class="notop-container hero-grid m-1col-2col">
           <div class="item item-bg-grey">
             <div class="content-header">
               <span class="vertical-decorator"></span>
-              <h4>只新增一種語意色</h4>
+              <h4>gradient-01｜AI 的主要按鈕</h4>
+            </div>
+            <div class="swatch-gradient"></div>
+            <p class="para"><code>linear-gradient(142deg, #8B6A9C 21.92%, #5A4FAA 60.94%, #2B1FA0 99.95%)</code></p>
+            <p class="para">起點正好是色階的第 50 階，再往鄰近色相延伸——<b>這是雙色相的漸層，不是同一個紫的深淺兩階</b>，按鈕上因此看得出流動感，而不只是變暗。</p>
+            <p class="para">搭配 <code>white-50</code> 的細邊框與 <code>radius-btn</code> 的圓角，讓按鈕在深色底上邊緣仍然清楚。</p>
+            <p class="para"><b>用在哪｜</b>AI 的主要按鈕，例如相片池空狀態的「AI 挑照片」，以及選擇照片頁的 AI 入口卡片。一般流程的按鈕維持既有的棕色實色。</p>
+          </div>
+          <div class="flex-v-24">
+            <div class="item item-bg-grey">
+              <div class="content-header">
+                <span class="vertical-decorator"></span>
+                <h4>只新增一種語意色</h4>
             </div>
             <p class="para">AI 專屬的紫色是這次唯一新增的語意色。提示、警示與錯誤沿用既有的 <code>info</code>（藍）、<code>warning</code>（黃）、<code>danger</code>（紅），與頁面其他功能共用同一套色。</p>
             <p class="para"><b>既有行為維持既有的顏色，使用者不會因為新功能上線而需要重學舊操作。</b></p>
@@ -457,6 +469,7 @@
             </div>
             <p class="para">色階之上對應 18 個 Semantic token：<code>bg/ai-layout*</code>、<code>text/ai-layout*</code>、<code>border/ai-layout*</code>、<code>icon/ai-layout*</code>、<code>btn/ai-layout-*</code>。</p>
             <p class="para">元件引用 token 而不是色碼，改色時只動一層。</p>
+            </div>
           </div>
         </div>
       </div>

@@ -1911,3 +1911,19 @@ body.transparent-header.header-scrolled .navbar .menu-toggle span {
 .swatch-ai-100 {
     background-color: #000000;
 }
+
+.swatch-gradient {
+    height: 96px;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    background: linear-gradient(142deg, #8B6A9C 21.92%, #5A4FAA 60.94%, #2B1FA0 99.95%);
+}
+
+/* Style Guide 兩欄等高：右欄的卡片撐滿左欄高度 */
+#style-guide .hero-grid {
+    align-items: stretch;
+}
+
+#style-guide .flex-v-24 > .item {
+    flex: 1;
+}
