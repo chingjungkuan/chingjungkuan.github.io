@@ -1845,3 +1845,69 @@ body.transparent-header.header-scrolled .navbar .menu-toggle span {
         color: #191919;
     }
 }
+
+
+/* -------------------------- *\
+	Style Guide 色票
+\* -------------------------- */
+
+.swatch-scale {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.swatch {
+    flex: 1 1 64px;
+    min-width: 64px;
+}
+
+.swatch-chip {
+    height: 48px;
+    border-radius: 8px;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.swatch-step {
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.swatch-hex {
+    font-size: 12px;
+    color: #8A8A8A;
+}
+
+.swatch-ai-0 {
+    background-color: #FFFFFF;
+}
+.swatch-ai-10 {
+    background-color: #E8E1EB;
+}
+.swatch-ai-20 {
+    background-color: #D1C3D7;
+}
+.swatch-ai-30 {
+    background-color: #B9A6C4;
+}
+.swatch-ai-40 {
+    background-color: #A288B0;
+}
+.swatch-ai-50 {
+    background-color: #8B6A9C;
+}
+.swatch-ai-60 {
+    background-color: #6F557D;
+}
+.swatch-ai-70 {
+    background-color: #53405E;
+}
+.swatch-ai-80 {
+    background-color: #382A3E;
+}
+.swatch-ai-90 {
+    background-color: #1C151F;
+}
+.swatch-ai-100 {
+    background-color: #000000;
+}

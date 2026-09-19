@@ -39,6 +39,7 @@
         <li><a href="#overview,pain-point,define,constraints">前情提要</a></li>
         <li><a href="#solution">設計決策</a></li>
         <li><a href="#ui-design">互動設計</a></li>
+        <li><a href="#style-guide,ui-component">視覺系統</a></li>
         <li><a href="#measurement">成效驗證</a></li>
         <li><a href="#takeaway">Takeaway</a></li>
       </ul>
@@ -67,7 +68,7 @@
             <div class="team-info">
               <p class="para"><strong>Team |</strong> TinTint 點點印</p>
               <p class="para"><strong>Role |</strong> UI/UX Designer</p>
-              <p class="para"><strong>協作 |</strong> PM、iOS 工程師</p>
+              <p class="para"><strong>Collaborators |</strong> PM、iOS 工程師</p>
               <p class="para"><strong>Year |</strong> 2026</p>
             </div>
           </div>
@@ -144,27 +145,27 @@
       <div id="constraints" class="top-container">
         <div class="layout-center">
           <h2 class="title">設計限制 <span class="sm-title">Constraints</span></h2>
-          <h3>先確認技術與情境的邊界，再決定介面怎麼長</h3>
+          <p class="para-16">先確認技術與情境的邊界，再決定介面怎麼長</p>
         </div>
         <div class="notop-container three-column-grid">
           <div class="item item-bg-grey">
-            <h4 class="title">API 只負責排版，不決定照片分頁</h4>
+            <h4 class="title">▍API 只負責排版，不決定照片分頁</h4>
             <p class="para">「哪些照片放同一頁」必須由 client 決定，分頁編輯這個介面因此存在。</p>
           </div>
           <div class="item item-bg-grey">
-            <h4 class="title">分群與版面是兩件事</h4>
+            <h4 class="title">▍分群與版面是兩件事</h4>
             <p class="para">分頁編輯只呈現分群結果，不精算框位、bleed 與裁切。</p>
           </div>
           <div class="item item-bg-grey">
-            <h4 class="title">排版運算昂貴</h4>
+            <h4 class="title">▍排版運算昂貴</h4>
             <p class="para">分頁編輯階段完全不打排版 API，集中在「確認套用」時一次執行。</p>
           </div>
           <div class="item item-bg-grey">
-            <h4 class="title">兩個不同的每頁上限</h4>
+            <h4 class="title">▍兩個不同的每頁上限</h4>
             <p class="para">分頁編輯 4 張、編輯器內 6 張。情境不同，所以刻意不共用。</p>
           </div>
           <div class="item item-bg-grey">
-            <h4 class="title">手機螢幕小</h4>
+            <h4 class="title">▍手機螢幕小</h4>
             <p class="para">開關、進度、候選切換收進單一浮動 Chip，而不是散開的控制項。</p>
           </div>
         </div>
@@ -175,15 +176,13 @@
       <div id="solution" class="top-container">
         <div class="layout-center">
           <h2 class="title">設計決策 <span class="sm-title">Solution</span></h2>
-          <h3>三個結構性決策</h3>
-          <p class="para t-center">這三個決策決定了整個功能的骨架：AI 從哪裡進來、介面負責回答什麼問題、以及不同規模之間如何共用同一套操作邏輯。</p>
         </div>
 
         <!-- 決策一 -->
         <div class="top-container hero-grid m-1col-2col">
           <div class="description-text">
             <div class="flex-v-8">
-              <h3 class="title">▍AI 不是新的一條路，是既有步驟裡的一個選項</h3>
+              <h3 class="title">AI 不是新的一條路，是既有步驟裡的一個選項</h3>
               <p class="para">建立作品的流程只有一條：建立作品（選頁數）→ 選照片 → 套用主題 → 進編輯器。AI 自動排版放在「套用主題」這一步，與主題版型並列擇一。</p>
               <p class="para"><b>沒有新增步驟｜</b>使用者原本就要選頁數與主題，AI 只是多了一個選擇。</p>
               <p class="para"><b>初次建立與再次編輯共用同一套介面｜</b>建立作品時選 AI，跟作品完成後回到套用主題選 AI，走的是同一個畫面、同一組行為——原本規劃的兩條 Flow 因此取消。</p>
@@ -198,7 +197,7 @@
           <img class="image-block lightbox-trigger" src="../images/ai-layout/img_page-editor.jpg" alt="分頁編輯主畫面：頁面卡片網格與照片池">
           <div class="description-text">
             <div class="flex-v-8">
-              <h3 class="title">▍分頁編輯是「整本整理台」，不是排版預覽</h3>
+              <h3 class="title">分頁編輯是「整本整理台」，不是排版預覽</h3>
               <p class="para">它回答的問題是「哪些照片被放在同一頁」，不是「這一頁長什麼樣」。因此不精算框位幾何、bleed、裁切與模板細節，那些等進編輯器才產生。</p>
               <p class="para">這個切分帶來一個具體好處：<b>不論在分頁編輯調整幾次分群、換幾次樣式，排版運算都只執行一次</b>——在使用者按下「確認套用」的時候。</p>
             </div>
@@ -207,7 +206,7 @@
 
         <!-- 決策三 -->
         <div class="top-container layout-center">
-          <h3 class="title">▍三種規模，同一套心智模型</h3>
+          <h3 class="title">三種規模，同一套心智模型</h3>
           <p class="para t-center">整本（分頁編輯）、多頁（編輯器列表）、單頁（編輯器 Pager），三層都能加照片、移照片、重排。多頁與單頁共用同一套拖曳機制，唯一差異是單頁會另外顯示版型選單。</p>
         </div>
         <div class="notop-container three-column-grid">
@@ -237,7 +236,7 @@
         <div class="top-container hero-grid m-1col-2col">
           <div class="description-text">
             <div class="flex-v-8">
-              <h3 class="title">▍紫色代表的是一整段流程，不是單一動作</h3>
+              <h3 class="title">紫色代表的是一整段流程，不是單一動作</h3>
               <p class="para">紫色用於 AI 功能的入口與 AI 流程內的所有動作，棕色用於一般流程。判斷依據是「這顆按鈕在哪一段流程裡」，不是「按下去會不會觸發 AI 運算」——引導 Modal 的 CTA 不觸發運算，但它在 AI 流程裡，所以是紫色。</p>
               <p class="para"><b>唯一的例外是共用元件｜</b>照片匯入畫面可以從編輯器或分頁編輯進入，依流程決定顏色會讓同一個元件隨入口變色，所以一律固定棕色。</p>
               <p class="para">另外，兩個區塊不能用同一個 icon——AI 區塊用紫色 icon，主題版型用中性的版型 icon，否則主題版型會被誤認成 AI 功能。</p>
@@ -248,7 +247,7 @@
 
         <!-- 引導 Modal -->
         <div class="top-container layout-center">
-          <h3 class="title">▍先說明這個畫面在做什麼，再讓人進去</h3>
+          <h3 class="title">先說明這個畫面在做什麼，再讓人進去</h3>
           <p class="para t-center">進入分頁編輯前有一次引導 Modal，說明這裡是在分組照片、可以做哪些事。附「下次不再提醒」（預設不勾），設定存在使用者層級、跨作品有效，登出後重置。</p>
         </div>
 
@@ -257,7 +256,7 @@
           <img class="image-block lightbox-trigger" src="../images/ai-layout/img_drag-states.jpg" alt="分頁編輯的頁面卡片：顯示拍攝日期與地點">
           <div class="description-text">
             <div class="flex-v-8">
-              <h3 class="title">▍把「為什麼這幾張在同一頁」畫出來</h3>
+              <h3 class="title">把「為什麼這幾張在同一頁」畫出來</h3>
               <p class="para">分頁編輯的頁面卡片上放拍攝日期與地點，那是 AI 分群依據（時間、地點、相似度）的可視化。使用者看得到理由，才有辦法判斷這個分群對不對。</p>
               <p class="para">細節上有三個克制的地方：沒有 GPS 的照片就不顯示地點、沒有日期的頁面就不顯示日期、<b>使用者自己手動放進去的照片不帶日期地點</b>——那不是 AI 的判斷，不該假裝是。</p>
             </div>
@@ -266,7 +265,7 @@
 
         <!-- 增減頁數 -->
         <div class="top-container layout-center">
-          <h3 class="title">▍增減頁數不重排：容量的調整不是分群的調整</h3>
+          <h3 class="title">增減頁數不重排：容量的調整不是分群的調整</h3>
           <p class="para t-center">既有頁面的內容完全不動，變動只發生在尾端。背後是整份規格的核心原則：<b>手動調整不會被 AI 的下一次運算抹掉。</b></p>
         </div>
         <div class="notop-container two-column-grid">
@@ -284,7 +283,7 @@
         <div class="top-container hero-grid m-1col-2col">
           <div class="description-text">
             <div class="flex-v-8">
-              <h3 class="title">▍覆蓋只在使用者主動要求時才發生</h3>
+              <h3 class="title">覆蓋只在使用者主動要求時才發生</h3>
               <p class="para">「重排整本」會覆蓋既有的手動調整，所以執行前一定要確認。分工很清楚：AI 負責提供一個好的起點，最終的分群歸屬由使用者決定。</p>
             </div>
           </div>
@@ -296,7 +295,7 @@
           <img class="image-block lightbox-trigger" src="../images/ai-layout/img_import-options.jpg" alt="新增照片的三個去向：整本重排、自動匯入空白頁、僅匯入照片池">
           <div class="description-text">
             <div class="flex-v-8">
-              <h3 class="title">▍相同功能在不同入口，要給相同的選項</h3>
+              <h3 class="title">相同功能在不同入口，要給相同的選項</h3>
               <p class="para">新增照片時，三個去向並列讓使用者選：整本重排・自動匯入空白頁・僅匯入照片池。不論從編輯器還是分頁編輯進來，看到的都是同一組選項。</p>
               <p class="para">三個裡面<b>只有「整本重排」會叫 AI 動手</b>。「自動匯入空白頁」是線上版本來就有的功能，依使用者選的順序把照片依序填進空白頁，跟 AI 無關；「僅匯入照片池」則什麼頁面都不動。</p>
               <p class="para"><b>真正的分界線是照片的來源｜</b>照片從外部進來，三選一；操作的是已經在作品內的內容，直達不再問——因為使用者按下去的時候已經知道要做什麼。</p>
@@ -307,7 +306,7 @@
 
         <!-- 拖曳回饋 -->
         <div class="top-container layout-center">
-          <h3 class="title">▍拖曳時的兩個文字介面，各自回答不同的問題</h3>
+          <h3 class="title">拖曳時的兩個文字介面，各自回答不同的問題</h3>
           <p class="para t-center">拖曳時畫面頂端有固定的 Tooltip，來源相框旁還有跟著游標移動的動作列。兩者同時存在、各自變化。</p>
         </div>
         <div class="notop-container two-column-grid">
@@ -334,7 +333,7 @@
         <div class="top-container hero-grid m-1col-2col">
           <div class="description-text">
             <div class="flex-v-8">
-              <h3 class="title">▍運算集中在一次，所以要把過程說清楚</h3>
+              <h3 class="title">運算集中在一次，所以要把過程說清楚</h3>
               <p class="para">分頁編輯階段完全不打排版 API，所有調整都在本地完成。使用者按下「確認套用」後才一次執行整本排版，此時以 HUD 呈現進度，讓等待有明確的起點與終點。</p>
             </div>
           </div>
@@ -346,7 +345,7 @@
           <img class="image-block lightbox-trigger" src="../images/ai-layout/img_single-page-bar.jpg" alt="單頁 AI-Layout Bar 各狀態與候選面板">
           <div class="description-text">
             <div class="flex-v-8">
-              <h3 class="title">▍單頁控制項收進單一浮動 Chip</h3>
+              <h3 class="title">單頁控制項收進單一浮動 Chip</h3>
               <p class="para">手機螢幕放不下散開的控制項，因此把開關、分析進度、候選版型切換整合進同一個浮動 Chip，並依 idle・分析中・候選・錯誤四種狀態切換呈現。</p>
               <p class="para">使用者在逐頁檢查時，視線不需離開頁面本身就能完成「開啟 AI → 看結果 → 換一個候選」的循環。</p>
             </div>
@@ -355,7 +354,7 @@
 
         <!-- 三個動作 -->
         <div class="top-container layout-center">
-          <h3 class="title">▍三個聽起來很像的動作，作用對象其實不同</h3>
+          <h3 class="title">三個聽起來很像的動作，作用對象其實不同</h3>
           <p class="para t-center">清空、刪除框、刪除照片，字面上都像「拿掉」，但一個動照片、一個動版面、一個動素材庫。分不清楚的後果是使用者以為只是換張照片，結果把原圖從相片池刪掉了。</p>
         </div>
         <div class="notop-container three-column-grid">
@@ -389,7 +388,7 @@
         <div class="top-container hero-grid m-1col-2col">
           <div class="description-text">
             <div class="flex-v-8">
-              <h3 class="title">▍可以拖曳，不等於納入 AI 分群</h3>
+              <h3 class="title">可以拖曳，不等於納入 AI 分群</h3>
               <p class="para">封面自動填入，折口留空。折口可以讓使用者手動拖照片進去，但不參與 AI 自動分群，並在列表中標示「不納入排版」。</p>
               <p class="para">能不能操作，跟系統會不會自動處理，是兩件事。</p>
             </div>
@@ -399,7 +398,7 @@
 
         <!-- 跨平台 -->
         <div class="top-container layout-center">
-          <h3 class="title">▍iOS 與 web：同一套規則，不同的控制項</h3>
+          <h3 class="title">iOS 與 web：同一套規則，不同的控制項</h3>
           <p class="para t-center">規則層共用，操作層依裝置特性分開設計。</p>
         </div>
         <div class="notop-container three-column-grid">
@@ -428,6 +427,140 @@
 
       </div>
       <!-- End UI Design -->
+
+      <!-- Start Style Guide -->
+      <div id="style-guide" class="top-container">
+        <div class="layout-center">
+          <h2 class="title">Style Guide <span class="sm-title">Visual System</span></h2>
+          <h3>紫色代表 AI，其餘沿用既有的語意色</h3>
+        </div>
+        <div class="notop-container">
+          <div class="item item-bg-grey">
+            <div class="content-header">
+              <span class="vertical-decorator"></span>
+              <h4>ai-layout 色階</h4>
+            </div>
+            <div class="swatch-scale">
+              <div class="swatch">
+                <div class="swatch-chip swatch-ai-0"></div>
+                <p class="swatch-step">0</p>
+                <p class="swatch-hex">#FFFFFF</p>
+              </div>
+              <div class="swatch">
+                <div class="swatch-chip swatch-ai-10"></div>
+                <p class="swatch-step">10</p>
+                <p class="swatch-hex">#E8E1EB</p>
+              </div>
+              <div class="swatch">
+                <div class="swatch-chip swatch-ai-20"></div>
+                <p class="swatch-step">20</p>
+                <p class="swatch-hex">#D1C3D7</p>
+              </div>
+              <div class="swatch">
+                <div class="swatch-chip swatch-ai-30"></div>
+                <p class="swatch-step">30</p>
+                <p class="swatch-hex">#B9A6C4</p>
+              </div>
+              <div class="swatch">
+                <div class="swatch-chip swatch-ai-40"></div>
+                <p class="swatch-step">40</p>
+                <p class="swatch-hex">#A288B0</p>
+              </div>
+              <div class="swatch">
+                <div class="swatch-chip swatch-ai-50"></div>
+                <p class="swatch-step">50</p>
+                <p class="swatch-hex">#8B6A9C</p>
+              </div>
+              <div class="swatch">
+                <div class="swatch-chip swatch-ai-60"></div>
+                <p class="swatch-step">60</p>
+                <p class="swatch-hex">#6F557D</p>
+              </div>
+              <div class="swatch">
+                <div class="swatch-chip swatch-ai-70"></div>
+                <p class="swatch-step">70</p>
+                <p class="swatch-hex">#53405E</p>
+              </div>
+              <div class="swatch">
+                <div class="swatch-chip swatch-ai-80"></div>
+                <p class="swatch-step">80</p>
+                <p class="swatch-hex">#382A3E</p>
+              </div>
+              <div class="swatch">
+                <div class="swatch-chip swatch-ai-90"></div>
+                <p class="swatch-step">90</p>
+                <p class="swatch-hex">#1C151F</p>
+              </div>
+              <div class="swatch">
+                <div class="swatch-chip swatch-ai-100"></div>
+                <p class="swatch-step">100</p>
+                <p class="swatch-hex">#000000</p>
+              </div>
+            </div>
+            <p class="para">11 階色票，數值與既有的 <code>brand</code> 色階完全相同，但在 Design System 中獨立成一組命名。同一個紫色分成兩組 token，「AI 作用中」的語意之後要調整時，不會牽動品牌色。</p>
+          </div>
+        </div>
+        <div class="notop-container two-column-grid">
+          <div class="item item-bg-grey">
+            <div class="content-header">
+              <span class="vertical-decorator"></span>
+              <h4>紫色代表的是一整段流程</h4>
+            </div>
+            <p class="para">紫色用於 AI 功能的入口與 AI 流程內的所有動作，棕色用於一般流程。判斷依據是按鈕在哪一段流程裡，不是按下去會不會觸發 AI 運算。</p>
+            <p class="para"><b>共用元件固定棕色</b>，避免同一個元件因為入口不同而變色。</p>
+          </div>
+          <div class="item item-bg-grey">
+            <div class="content-header">
+              <span class="vertical-decorator"></span>
+              <h4>Semantic token 分五類</h4>
+            </div>
+            <p class="para">色階之上對應 18 個 Semantic token：<code>bg/ai-layout*</code>、<code>text/ai-layout*</code>、<code>border/ai-layout*</code>、<code>icon/ai-layout*</code>、<code>btn/ai-layout-*</code>。</p>
+            <p class="para">元件引用 token 而不是色碼，改色時只動一層。</p>
+          </div>
+        </div>
+      </div>
+      <!-- End Style Guide -->
+
+      <!-- Start UI Component -->
+      <div id="ui-component" class="top-container">
+        <div class="layout-center">
+          <h2 class="title">UI Component <span class="sm-title">Components</span></h2>
+          <h3>這次新增與調整的元件</h3>
+        </div>
+        <div class="notop-container three-column-grid">
+          <div class="item item-bg-grey">
+            <img class="image-block lightbox-trigger" src="../images/ai-layout/img_ui-ai-bar.jpg" alt="AI 排版開關與隨機按鈕元件">
+            <h4 class="title">AI 排版開關列</h4>
+            <p class="para">NEW badge、AI 排版 toggle 與隨機按鈕並排。toggle 控制全書，隨機按鈕依當前頁的候選狀態決定能不能按。</p>
+          </div>
+          <div class="item item-bg-grey">
+            <img class="image-block lightbox-trigger" src="../images/ai-layout/img_ui-candidates.jpg" alt="AI 版型候選縮圖元件">
+            <h4 class="title">候選縮圖</h4>
+            <p class="para">每頁最多 3 個，縮圖即時渲染實際排版位置而非樣板圖示，選中狀態另作標示。</p>
+          </div>
+          <div class="item item-bg-grey">
+            <img class="image-block lightbox-trigger" src="../images/ai-layout/img_ui-layout-panel.jpg" alt="版型面板的一般與 AI 版型兩個 tab">
+            <h4 class="title">版型面板 Tab</h4>
+            <p class="para">頂層收斂為「一般」與「AI 版型」兩個 tab，傳統分類移進下拉選單，兩邊用詞不再重疊。</p>
+          </div>
+          <div class="item item-bg-grey">
+            <img class="image-block lightbox-trigger" src="../images/ai-layout/img_ui-drag-tooltip.jpg" alt="拖曳 Tooltip 的各種狀態">
+            <h4 class="title">拖曳 Tooltip</h4>
+            <p class="para">畫布頂端的固定膠囊，依懸停目標切換文案與顏色；只有觸發 AI 運算的落點用紫色漸層。</p>
+          </div>
+          <div class="item item-bg-grey">
+            <img class="image-block lightbox-trigger" src="../images/ai-layout/img_ui-page-card.jpg" alt="分頁編輯的頁面卡片元件">
+            <h4 class="title">分頁編輯頁面卡</h4>
+            <p class="para">卡片上標拍攝日期與地點，是 AI 分群依據的可視化；缺資訊時該標籤不顯示。</p>
+          </div>
+          <div class="item item-bg-grey">
+            <img class="image-block lightbox-trigger" src="../images/ai-layout/img_ui-hud.jpg" alt="整本排版執行中的 HUD">
+            <h4 class="title">排版運算 HUD</h4>
+            <p class="para">整本排版集中在確認套用時一次執行，期間以全螢幕 HUD 遮蓋，不可操作。</p>
+          </div>
+        </div>
+      </div>
+      <!-- End UI Component -->
 
       <!-- Start Measurement -->
       <div id="measurement" class="top-container">
