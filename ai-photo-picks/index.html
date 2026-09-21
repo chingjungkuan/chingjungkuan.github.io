@@ -8,6 +8,7 @@
     <meta name="description" content="TinTint 點點印 iOS App 的 AI 挑照片設計：同一套判斷、兩個入口，由使用者的目的決定流程在哪裡結束。">
     <link rel="stylesheet" href="/css/normalize.css">
     <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/accordion.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <!-- Google tag (gtag.js) -->
@@ -119,26 +120,43 @@
           <h2 class="title">功能定位 <span class="sm-title">Define</span></h2>
           <h3>同一套判斷，兩個不同的終點</h3>
         </div>
-        <div class="notop-container two-column-grid">
-          <div class="item item-bg-grey">
-            <h4 class="title">首頁入口</h4>
-            <div class="flex-v-8">
-              <p class="para"><b>從哪進｜</b>首頁底部的浮動按鈕。</p>
-              <p class="para"><b>解決什麼｜</b>照片庫太亂，想先整理起來。</p>
-              <p class="para"><b>結果去哪｜</b>存入手機相簿。</p>
+        <div class="notop-container hero-grid m-1col-2col">
+          <div class="description-text">
+          <p class="para">兩條流程共用同一套分析、相同的判斷項目（模糊・閉眼・近似）與相同的結果頁。<b>差別只有兩件事：從哪裡進來，以及流程在哪裡結束。</b></p>
+          <div class="accordion-group">
+            <div class="accordion-item active" data-img="../images/ai-photo-picks/img_entry-home.jpg">
+              <div class="accordion-header">
+                <h5>▍首頁入口</h5>
+                <div class="arrow-icon"></div>
+              </div>
+              <div class="accordion-content">
+                <div class="accordion-inner">
+                  <div class="flex-v-8">
+                    <p class="para"><b>從哪進｜</b>首頁底部的浮動按鈕。</p>
+                    <p class="para"><b>解決什麼｜</b>照片庫太亂，想先整理起來。</p>
+                    <p class="para"><b>結果去哪｜</b>存入手機相簿。</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item" data-img="../images/ai-photo-picks/img_photopool_add.jpg">
+              <div class="accordion-header">
+                <h5>▍編輯器入口</h5>
+                <div class="arrow-icon"></div>
+              </div>
+              <div class="accordion-content">
+                <div class="accordion-inner">
+                  <div class="flex-v-8">
+                    <p class="para"><b>從哪進｜</b>相片工具列的 ✦ 按鈕。</p>
+                    <p class="para"><b>解決什麼｜</b>已經在做作品，不確定哪些照片比較好。</p>
+                    <p class="para"><b>結果去哪｜</b>直接匯入當前作品的相片池。</p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
-          <div class="item item-bg-grey">
-            <h4 class="title">編輯器入口</h4>
-            <div class="flex-v-8">
-              <p class="para"><b>從哪進｜</b>相片工具列的 ✦ 按鈕。</p>
-              <p class="para"><b>解決什麼｜</b>已經在做作品，不確定哪些照片比較好。</p>
-              <p class="para"><b>結果去哪｜</b>直接匯入當前作品的相片池。</p>
-            </div>
           </div>
-        </div>
-        <div class="notop-container layout-center">
-          <p class="para t-center">兩條流程共用同一套分析、相同的判斷項目（模糊・閉眼・近似）與相同的結果頁。<b>差別只有兩件事：從哪裡進來，以及流程在哪裡結束。</b></p>
+          <img class="image-block lightbox-trigger" src="../images/ai-photo-picks/img_entry-home.jpg" alt="兩個入口的畫面：首頁底部的浮動按鈕，與編輯器相片工具列的 AI 按鈕">
         </div>
       </div>
       <!-- End Define -->
@@ -675,6 +693,7 @@
   <script defer src="/js/sub-nav.js"></script>
   <script defer src="/js/lightbox.js"></script>
   <script defer src="/js/scroll-to-top.js"></script>
+  <script defer src="/js/accordion.js"></script>
   <script defer src="/js/transparent-header.js"></script>
 </body>
 </html>
