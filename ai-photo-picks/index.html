@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="/css/normalize.css">
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/accordion.css">
+    <link rel="stylesheet" href="/css/ai-photo-picks.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <!-- Google tag (gtag.js) -->
@@ -28,7 +29,7 @@
         })(window, document, "clarity", "script", "x8ekiirpo7");
     </script>
 </head>
-<body class="transparent-header-dark">
+<body class="transparent-header">
   <div class="wrapper">
     <!-- Start header -->
     <div id="site-header" data-include="/components/header.html"></div>
@@ -64,7 +65,7 @@
         <div class="overview">
           <div class="overview-left">
             <h2 class="title">概述 <span class="sm-title">Overview</span></h2>
-            <h3 class="title text-primary">AI 挑照片</h3>
+            <h3 class="title text-brand">AI 挑照片｜Ai Photo Picks</h3>
             <h5 class="title">#B2C #iOS App #AI Feature</h5>
             <div class="team-info">
               <p class="para"><strong>Team |</strong> TinTint 點點印</p>
@@ -86,41 +87,48 @@
       <!-- End Overview -->
 
       <!-- Start Pain Point -->
-      <div id="pain-point" class="top-container">
-        <div class="layout-center">
-          <h2 class="title">痛點 <span class="sm-title">Pain Point</span></h2>
-          <p class="para-16">兩個時刻，兩種「不知道從哪開始」</p>
-        </div>
-        <div class="notop-container two-column-grid">
-          <div class="item item-bg-grey">
-            <div class="content-header">
-              <span class="vertical-decorator"></span>
-              <h4>還沒開始做作品：照片庫太亂</h4>
-            </div>
-            <p class="para">幾百張旅遊照片躺在相簿裡，想整理卻不知道從哪一張下手。這個時刻還沒有具體目標，只是覺得「該整理了」。<b>缺的是一個起點。</b></p>
-          </div>
-          <div class="item item-bg-grey">
-            <div class="content-header">
-              <span class="vertical-decorator"></span>
-              <h4>已經在做作品：卡在判斷</h4>
-            </div>
-            <p class="para">正在做文庫本，相片池裡已經有幾十張，但不確定哪些比較好。卡住的是「哪張比較清楚、神情比較好」這種需要逐張比對才知道的事。<b>缺的是一個判斷依據。</b></p>
+      <div id="pain-point" class="top-container hero-grid m-1col-2col">
+        <div class="description-text">
+          <div class="flex-v-8">
+            <h2 class="title">痛點分析 <span class="sm-title">Pain Point</span><br>兩種「無從下手」的情境</h2>
+            <p class="para"><b>設計決策：雙入口分流</b></p>
+            <p class="para">需求差異決定了流程必須分開設計。若僅設單一入口，必定會犧牲其中一方的體驗：</p>
+            <ul class="para">
+              <li><b>放在首頁：</b>正在編輯作品的使用者，必須被迫中斷流程並退出才能使用。</li>
+              <li><b>放在編輯器：</b>尚未開始製作作品的使用者，將永遠無法發現此功能。</li>
+            </ul>
           </div>
         </div>
-        <div class="notop-container layout-center">
-          <p class="para t-center"><b>這個差異決定了兩條流程要分開設計｜</b>如果只做一個入口，就得選一邊放棄。放在首頁，正在編輯的人得退出作品才能用；放在編輯器裡，還沒開始做作品的人永遠找不到。</p>
+        <div class="flex-v-24">
+          <div class="item item-bg-grey item-illus">
+            <div class="illus-slot"><!-- 插圖：情境一 --></div>
+            <div class="illus-body">
+              <div class="content-header">
+                <span class="vertical-decorator"></span>
+                <h4>情境一｜尚未開始：照片庫太亂</h4>
+              </div>
+              <p class="para">面對數百張照片毫無頭緒，僅有模糊的整理動機。痛點：缺乏明確的「起點」。</p>
+            </div>
+          </div>
+          <div class="item item-bg-grey item-illus">
+            <div class="illus-slot"><!-- 插圖：情境二 --></div>
+            <div class="illus-body">
+              <div class="content-header">
+                <span class="vertical-decorator"></span>
+                <h4>情境二｜編輯途中：卡在選片判斷</h4>
+              </div>
+              <p class="para">面對數十張候選照片，難以快速比對畫質與人物神情。痛點：缺乏客觀的「判斷依據」。</p>
+            </div>
+          </div>
         </div>
       </div>
       <!-- End Pain Point -->
 
       <!-- Start Define -->
-      <div id="define" class="top-container">
-        <div class="layout-center">
+      <div id="define" class="img-txt top-container hero-grid d-2col-1col">
+        <img class="image-block lightbox-trigger" src="../images/ai-photo-picks/img_entry-home.jpg" alt="兩個入口的畫面：首頁底部的浮動按鈕，與編輯器相片工具列的 AI 按鈕">
+        <div class="description-text">
           <h2 class="title">功能定位 <span class="sm-title">Define</span></h2>
-          <p class="para-16">同一套判斷，兩個不同的終點</p>
-        </div>
-        <div class="notop-container hero-grid m-1col-2col">
-          <div class="description-text">
           <p class="para">兩條流程共用同一套分析、相同的判斷項目（模糊・閉眼・近似）與相同的結果頁。<b>差別只有兩件事：從哪裡進來，以及流程在哪裡結束。</b></p>
           <div class="accordion-group">
             <div class="accordion-item active" data-img="../images/ai-photo-picks/img_entry-home.jpg">
@@ -154,8 +162,6 @@
               </div>
             </div>
           </div>
-          </div>
-          <img class="image-block lightbox-trigger" src="../images/ai-photo-picks/img_entry-home.jpg" alt="兩個入口的畫面：首頁底部的浮動按鈕，與編輯器相片工具列的 AI 按鈕">
         </div>
       </div>
       <!-- End Define -->
@@ -347,13 +353,13 @@
         <div class="top-container hero-grid m-1col-2col">
           <div class="description-text">
             <div class="flex-v-8">
-              <h3 class="title">等待體驗優化：過程本身即是資訊</h3>
-              <p class="para">捨棄單一的時間提示，將系統處理的過程轉化為透明資訊，消除等待時的空白感：</p>
+              <h3 class="title">等待體驗優化：過程即資訊</h3>
+              <p class="para">捨棄單調的讀取提示，將處理過程轉化為透明資訊，消除等待時的空白感：</p>
               <ul class="para">
-                <li><b>即時動態回饋：</b>深色畫面中央設置圓形進度環，同步顯示百分比與處理張數。下方輔以打字效果的動態文字，精準說明系統當下的運作狀態。</li>
-                <li><b>進度透明化：</b>畫面即時累計「通過、近似、模糊、閉眼」四項分類跳動的數字。進度環解答「還要等多久」，分類計數則展示系統「正在做什麼」與「找到了什麼」。</li>
-                <li><b>任務拆分顯示：</b>獨立標示 iCloud 同步下載張數，不與相片分析混淆。將下載與分析兩項任務脫鉤，若進度卡關，使用者能直覺判斷問題癥結。</li>
-                <li><b>無縫流暢收尾：</b>完成後不跳轉頁面，進度環直接轉為完成勾號。分類統計保留原位並標示同步完成，底部隨即出現「查看結果」按鈕，且使用者在全程皆可隨時點擊取消分析。</li>
+                <li><b>即時動態回饋：</b>畫面中央設置圓形進度環，同步顯示百分比與處理張數；下方輔以打字機特效文字，精準說明系統當下運作狀態。</li>
+                <li><b>進度高度透明：</b>即時累計「通過、近似、模糊、閉眼」四項分類跳動數字。進度環解答「還要等多久」，分類計數則展現系統「正在做什麼」與「找到了什麼」。</li>
+                <li><b>任務拆分顯示：</b>獨立標示 iCloud 下載張數，與相片分析任務脫鉤。若進度停滯，使用者能直覺判斷問題癥結。</li>
+                <li><b>無縫流暢收尾：</b>完成後不跳轉頁面，進度環直接轉為完成勾號。分類統計保留原位並提示同步完成，底部隨即浮現「查看結果」按鈕，且全程提供隨時取消分析的選項。</li>
               </ul>
             </div>
           </div>
@@ -427,12 +433,12 @@
           <div class="description-text">
             <div class="flex-v-8">
               <h3 class="title">選取照片頁：時間軸與相簿雙模式</h3>
-              <p class="para">選取待整理照片頁分成「時間軸」與「相簿」兩種模式：時間軸依日期排列，相簿則在使用者既有的相簿之上，最上方放置自動分群的智慧相簿。</p>
+              <p class="para">提供「時間軸」與「相簿」雙軌瀏覽，順應使用者以「時間點」或「特定分類」尋找照片的直覺，無須改變既有記憶習慣。</p>
               <ul class="para">
-                <li><b>選取狀態一眼可辨：</b>相簿卡片標示該相簿的照片總數，只要裡面有照片被選取，卡片就多一個紫色圓點，不必逐個點進去就知道自己在哪些相簿選過。</li>
-                <li><b>權限受限也能繼續：</b>限制存取時頁面上方顯示提示列，可直接選取更多照片或前往設定；權限一變更，照片清單就自動重新載入。</li>
+                <li><b>雙模式檢視：</b>時間軸依日期排序；相簿模式則將智慧相簿置頂於既有相簿之上。</li>
+                <li><b>選取狀態視覺化：</b>相簿卡片顯示照片總數，並以紫色圓點標記內含已選取照片的相簿，無須點擊進入即可一目了然。</li>
+                <li><b>無縫權限引導：</b>存取受限時，頂部顯示提示列供快速設定或加選照片；權限變更後清單即時自動重載，確保操作不中斷。</li>
               </ul>
-              <p class="para">提供兩種模式，是因為找照片的方式跟記得事情的方式有關：記得「去年沖繩」的人用時間找，記得「存在某個相簿」的人用相簿找。<b>不要求使用者換一套記憶方式。</b></p>
             </div>
           </div>
           <img class="image-block lightbox-trigger" src="../images/ai-photo-picks/img_select-photos.jpg" alt="選取待整理照片頁：時間軸與相簿兩種模式，相簿含智慧分群的最近時刻與旅行">
