@@ -140,6 +140,10 @@ p {
     line-height: 150%;
 }
 
+.para-12 {
+    font-size: 12px;
+}
+
 .text-mute {
     color: #666;
 }
@@ -327,6 +331,11 @@ p {
     padding: 60px 16px 0 16px;
     display: grid;
     gap: 24px;
+}
+
+/* container 巢狀在 grid 父層時，margin: 0 auto 會讓它縮成內容寬，加這個撐滿 */
+.full-width {
+    width: 100%;
 }
 
 @media (min-width: 768px) {
@@ -1926,4 +1935,131 @@ body.transparent-header.header-scrolled .navbar .menu-toggle span {
 
 #style-guide .flex-v-24 > .item {
     flex: 1;
+}
+
+/* ==========================
+   Flow Stepper 流程步驟條
+   共用元件：橫向步驟流程，手機版自動轉為直向
+========================== */
+
+.flow-stepper-section {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    background-color: #f9f9f9;
+    border-radius: 4px;
+    padding: 20px 24px;
+}
+
+.flow-stepper-title {
+    font-size: 20px;
+    text-align: left;
+    margin: 0;
+}
+
+.flow-stepper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 40px;
+    position: relative;
+}
+
+/* 連接線：手機版為垂直 */
+.flow-stepper::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 20px;
+    width: 2px;
+    background-color: #e0e0e0;
+    z-index: 1;
+}
+
+.flow-step-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 16px;
+    text-align: left;
+    position: relative;
+    z-index: 2;
+}
+
+.flow-step-item:last-child {
+    margin-bottom: 0;
+}
+
+.flow-step-badge {
+    background-color: #e0e0e0;
+    color: #666;
+    padding: 4px 16px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: bold;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+.flow-step-label {
+    font-weight: bold;
+    color: #333;
+    margin: 0;
+}
+
+.flow-step-subtext {
+    font-size: 12px;
+    color: #888;
+    margin: 4px 0 0;
+}
+
+.flow-arrow-divider {
+    display: flex;
+    justify-content: center;
+    color: #999;
+    padding: 4px 0;
+}
+
+/* 強調樣式：用於分歧後的路徑 */
+.flow-stepper-accent::before {
+    background-color: #D1C3D7;
+}
+
+.flow-stepper-accent .flow-step-badge {
+    background-color: #E8E1EB;
+    color: #8B6A9C;
+}
+
+@media (min-width: 640px) {
+    .flow-stepper {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+        padding-left: 0;
+    }
+
+    /* 連接線：桌機版轉為水平 */
+    .flow-stepper::before {
+        top: 12px;
+        left: 0;
+        right: 0;
+        bottom: auto;
+        width: 100%;
+        height: 2px;
+    }
+
+    .flow-step-item {
+        flex: 1;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 0;
+        text-align: center;
+        gap: 0;
+    }
+
+    .flow-step-badge {
+        margin-bottom: 8px;
+    }
 }
