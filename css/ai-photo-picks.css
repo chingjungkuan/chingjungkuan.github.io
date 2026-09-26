@@ -55,6 +55,13 @@
   }
 }
 
+/* 三欄卡片：列間距跟欄間距一樣（全站預設是 row-gap 48px） */
+@media (min-width: 768px) {
+  .three-column-grid {
+    row-gap: 24px;
+  }
+}
+
 /* 欄寬變窄時，英文副標整組換行，不要斷成 Pain / Point */
 .sm-title {
   white-space: nowrap;
