@@ -77,7 +77,7 @@
           <div class="overview-right para">
             <ul>
               <li><b>產品服務：</b>點點印 iOS App「AI 挑照片」功能。可自動偵測模糊、閉眼與近似照片，並提供首頁與編輯器雙入口。</li>
-              <li><b>專案挑戰：</b>需以單一 AI 判斷機制滿足兩種情境的使用者：一是尚未開始製作、僅需整理照片庫；二是製作途中、陷入選片障礙。</li>
+              <li><b>專案挑戰：</b>需以單一 AI 判斷機制滿足兩種情境的使用者：一是尚未開始製作、僅需整理照片庫；二是製作途中、陷入選照片障礙。</li>
               <li><b>設計策略：</b>採用「底層共用、出入口分流」策略。兩條流程共用核心分析與結果頁，但依據使用者目的，客製化不同的起點與終點。</li>
               <li><b>嵌入方式：</b>無縫融入既有操作。不額外新增結構，將 AI 功能自然配置於使用者必經之處（如：首頁浮動按鈕、編輯器工具列、選擇照片頁）。</li>
             </ul>
@@ -115,7 +115,7 @@
             <div class="illus-body">
               <div class="content-header">
                 <span class="vertical-decorator"></span>
-                <h4>情境二｜編輯途中：卡在選片判斷</h4>
+                <h4>情境二｜編輯途中：卡在選照片判斷</h4>
               </div>
               <p class="para">面對數十張候選照片，難以快速比對畫質與人物神情。痛點：缺乏客觀的「判斷依據」。</p>
             </div>
@@ -181,37 +181,37 @@
           <div class="item item-bg-grey">
             <div class="content-header">
               <span class="vertical-decorator"></span>
-              <h4>分析在裝置端執行</h4>
+              <h4>分析於裝置端執行</h4>
             </div>
-            <p class="para">判斷項目取決於系統版本，較新的系統多一項美感分析。同一個功能在不同手機上的推薦品質不完全相同。</p>
+            <p class="para">判斷基準受限於作業系統版本（例如較新系統支援額外的「美感分析」），導致不同裝置間的推薦品質存在差異。</p>
           </div>
           <div class="item item-bg-grey">
             <div class="content-header">
               <span class="vertical-decorator"></span>
-              <h4>相片權限有三種狀態</h4>
+              <h4>三種相片權限狀態</h4>
             </div>
-            <p class="para">完整・限制存取・無權限，每一種都要有對應的畫面，不能只處理「有」跟「沒有」。</p>
+            <p class="para">必須完整涵蓋「完整、限制存取、無權限」三種情境的對應畫面，無法僅以「有／無」二分法簡單處理。</p>
           </div>
           <div class="item item-bg-grey">
             <div class="content-header">
               <span class="vertical-decorator"></span>
-              <h4>整理好的照片存在手機相簿</h4>
+              <h4>產出結果存於本機相簿</h4>
             </div>
-            <p class="para">照片不在 App 裡。之後回到 App 選照片時，得有辦法讓使用者認出這些相簿。</p>
+            <p class="para">整理後的照片不留存於 App 內。因此當使用者返回 App 選照片時，必須建立明確的視覺標示以利辨識。</p>
           </div>
           <div class="item item-bg-grey">
             <div class="content-header">
               <span class="vertical-decorator"></span>
-              <h4>編輯器已有相片額度</h4>
+              <h4>受限於既有相片額度</h4>
             </div>
-            <p class="para">新入口必須沿用既有的額度規則，不能自己另立一套。</p>
+            <p class="para">新功能入口必須嚴格沿用編輯器原有的額度規範，不可獨立另創規則。</p>
           </div>
           <div class="item item-bg-grey">
             <div class="content-header">
               <span class="vertical-decorator"></span>
-              <h4>手機螢幕小</h4>
+              <h4>手機螢幕空間受限</h4>
             </div>
-            <p class="para">結果頁要在一個畫面內同時容納四個分類、照片清單與操作按鈕。</p>
+            <p class="para">結果頁必須在有限的單一畫面內，高密度且流暢地同時容納四個分類、照片清單及核心操作按鈕。</p>
           </div>
         </div>
       </div>
@@ -576,32 +576,32 @@
         <div class="hero-container">
           <div class="notop-container three-column-grid">
             <div class="item item-bg-grey">
-              <img class="image-block lightbox-trigger" src="../images/ai-photo-picks/img_ui-progress-ring.jpg" alt="分析進度環元件">
+              <img class="image-block lightbox-trigger" src="../images/ai-photo-picks/img_ui-progress-ring.svg" alt="分析進度環元件">
               <h4 class="title">分析進度環</h4>
               <p class="para">兩種狀態：<b>分析中</b>顯示百分比與「已處理／總張數」，中央為 AI sparkle；<b>完成</b>時環填滿、中央換成勾號。下方動態文字隨階段替換。</p>
             </div>
             <div class="item item-bg-grey">
-              <img class="image-block lightbox-trigger" src="../images/ai-photo-picks/img_ui-result-tabs.jpg" alt="結果頁四分類 Tab 元件">
+              <img class="image-block lightbox-trigger" src="../images/ai-photo-picks/img_ui-result-tabs.svg" alt="結果頁四分類 Tab 元件">
               <h4 class="title">四分類 Tab</h4>
               <p class="para">固定四項且順序不變，每項後方附該類張數。兩種狀態：<b>選中</b>為紫色底，<b>未選</b>為透明底。</p>
             </div>
             <div class="item item-bg-grey">
-              <img class="image-block lightbox-trigger" src="../images/ai-photo-picks/img_ui-photo-check.jpg" alt="照片縮圖的勾選圈元件">
+              <img class="image-block lightbox-trigger" src="../images/ai-photo-picks/img_ui-photo-check.svg" alt="照片縮圖的勾選圈元件">
               <h4 class="title">照片勾選圈</h4>
               <p class="para">固定於縮圖右上角。三種狀態：<b>未選</b>為空心圈、<b>已選</b>為紫色勾號、<b>系統預挑</b>加註星號（僅出現在近似組）。群組內各張可獨立切換。</p>
             </div>
             <div class="item item-bg-grey">
-              <img class="image-block lightbox-trigger" src="../images/ai-photo-picks/img_ui-album-card.jpg" alt="相簿卡元件">
+              <img class="image-block lightbox-trigger" src="../images/ai-photo-picks/img_ui-album-card.svg" alt="相簿卡元件">
               <h4 class="title">相簿卡</h4>
               <p class="para">基本內容為相簿名稱與照片總數。兩個標記可同時出現：<b>最近使用</b>加紫色時鐘圖示、<b>內含已選取照片</b>於右側加紫點。</p>
             </div>
             <div class="item item-bg-grey">
-              <img class="image-block lightbox-trigger" src="../images/ai-photo-picks/img_ui-ai-entry-card.jpg" alt="AI 挑照片入口卡片元件">
+              <img class="image-block lightbox-trigger" src="../images/ai-photo-picks/img_ui-ai-entry-card.svg" alt="AI 挑照片入口卡片元件">
               <h4 class="title">AI 入口卡片</h4>
               <p class="para">標題、一行說明與 <code>gradient-01</code> 主要按鈕。用於兩處：相片池<b>空狀態</b>與<b>選擇照片頁</b>，同一組元件、不同層級。</p>
             </div>
             <div class="item item-bg-grey">
-              <img class="image-block lightbox-trigger" src="../images/ai-photo-picks/img_ui-bottom-bar.jpg" alt="底部固定操作列元件">
+              <img class="image-block lightbox-trigger" src="../images/ai-photo-picks/img_ui-bottom-bar.svg" alt="底部固定操作列元件">
               <h4 class="title">底部固定操作列</h4>
               <p class="para">左側預覽按鈕，右側主要 CTA 並顯示當前選取張數。<b>0 張時 CTA 停用</b>；有選取時啟用，並出現「清除全部」。</p>
             </div>

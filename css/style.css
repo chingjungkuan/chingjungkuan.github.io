@@ -2063,3 +2063,13 @@ body.transparent-header.header-scrolled .navbar .menu-toggle span {
         margin-bottom: 8px;
     }
 }
+
+/* UI Component 卡片：說明至少三行，讓同一列的圖片起始高度一致 */
+#ui-component .para {
+    min-height: 4.5em;
+}
+
+/* 圖片貼齊卡片底部，同一列不論文字幾行都對齊 */
+#ui-component .item img {
+    margin-top: auto;
+}
