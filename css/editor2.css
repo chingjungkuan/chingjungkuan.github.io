@@ -266,3 +266,290 @@
     padding-bottom: 12px;
   }
 }
+
+/* -------------------------- *\
+	Banner（切版）
+\* -------------------------- */
+/* 數字直接對應 Figma 的 img_banner-mobile / pad / desktop
+   --card-w：設計稿卡片寬；--u：設計稿上的 1px 換算成目前卡片寬度
+   卡片變寬變窄時，裡面的元素一起等比縮放，不會被裁切 */
+
+.hero-banner-wrapper.editor2-banner-wrapper {
+  height: auto;
+  padding-top: 75px;
+}
+
+.editor2-banner {
+  --card-w: 320;
+  --u: calc(100cqw / var(--card-w));
+  --cut-color: #fff;
+  --glow: 235 145 100;
+  container-type: inline-size;
+  width: calc(100% - 32px);
+  margin: 0 auto;
+}
+
+.editor2-banner-card {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  aspect-ratio: 320 / 402;
+  /* 左上角被白色標題區塊蓋住，不做圓角，避免邊緣透出一條棕色細線 */
+  --card-r: calc(16 * var(--u));
+  border-radius: 0 var(--card-r) var(--card-r);
+  background-color: #322a24;
+  background-image:
+    radial-gradient(61% 43% at 86% 28.5%, rgb(var(--glow) / 0.2), rgb(var(--glow) / 0)),
+    radial-gradient(100% 39% at 32% 14%, rgb(var(--glow) / 0.1), rgb(var(--glow) / 0)),
+    radial-gradient(45% 18% at 8% 22%, rgb(var(--glow) / 0.09), rgb(var(--glow) / 0));
+}
+
+/* 紙紋 */
+.editor2-banner-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: url("../images/editor2/img_banner-texture.webp") 0 0 / 158px 158px;
+}
+
+/* 卡片內陰影（平板、桌機才有） */
+.editor2-banner-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+}
+
+/* 左上白色標題區塊：放在卡片外層，往左上多蓋 1px，遮住卡片邊緣半透明的像素 */
+.editor2-banner-title {
+  --title-w: calc(155 * var(--u));
+  --title-h: calc(39 * var(--u));
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: calc(var(--title-w) + 1px);
+  height: calc(var(--title-h) + 1px);
+  background-color: var(--cut-color);
+  border-bottom-right-radius: calc(12 * var(--u));
+  font-family: "Rubik One", sans-serif;
+  font-weight: 400;
+  font-size: calc(28 * var(--u));
+  line-height: 1;
+  color: #493c33;
+}
+
+/* 標題區塊與卡片交界的兩個反向圓角 */
+.editor2-banner-title::before,
+.editor2-banner-title::after {
+  content: "";
+  position: absolute;
+  background: radial-gradient(circle at 100% 100%, transparent calc(var(--r) - 0.5px), var(--cut-color) var(--r));
+}
+
+/* 反向圓角往標題區塊內多疊 1px，接縫才不會透出細線 */
+.editor2-banner-title::before {
+  --r: calc(21 * var(--u));
+  top: calc(100% - 1px);
+  left: 0;
+  width: calc(var(--r) + 1px);
+  height: calc(var(--r) + 1px);
+}
+
+.editor2-banner-title::after {
+  --r: calc(14 * var(--u));
+  top: 0;
+  left: calc(100% - 1px);
+  width: calc(var(--r) + 1px);
+  height: calc(var(--r) + 1px);
+}
+
+.editor2-banner-subtitle {
+  position: absolute;
+  top: calc(6 * var(--u));
+  left: calc(170 * var(--u));
+  z-index: 3;
+  margin: 0;
+  font-family: "Rubik Doodle Shadow", sans-serif;
+  font-size: calc(28 * var(--u));
+  line-height: 1;
+  color: #fff;
+  white-space: nowrap;
+}
+
+.editor2-banner-logo {
+  position: absolute;
+  top: calc(379 * var(--u));
+  left: calc(20 * var(--u));
+  z-index: 3;
+  width: calc(41.41 * var(--u));
+}
+
+.editor2-banner-year {
+  position: absolute;
+  top: calc(378 * var(--u));
+  left: calc(244.44 * var(--u));
+  z-index: 3;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  font-size: calc(10 * var(--u));
+  line-height: 1;
+  color: #fff;
+  white-space: nowrap;
+}
+
+.editor2-banner-year strong {
+  margin-right: 0.25em;
+  font-weight: 600;
+}
+
+/* 手機：手機畫面；平板、桌機：編輯器截圖
+   style.css 的 * 有 position: relative，picture 要改回 static，截圖才會以卡片定位 */
+.editor2-banner-card picture {
+  position: static;
+}
+
+.editor2-banner-screen {
+  position: absolute;
+  top: calc(53 * var(--u));
+  left: 50%;
+  z-index: 1;
+  width: calc(155.17 * var(--u));
+  transform: translateX(-50%);
+  border-radius: calc(8 * var(--u));
+  box-shadow: 0 calc(6.3 * var(--u)) calc(12.6 * var(--u)) rgb(0 0 0 / 0.08);
+}
+
+@media (min-width: 768px) {
+  .hero-banner-wrapper.editor2-banner-wrapper {
+    padding-top: 108px;
+  }
+
+  .editor2-banner {
+    --card-w: 761;
+    width: min(100% - 64px, 761px);
+  }
+
+  .editor2-banner-card {
+    aspect-ratio: 761 / 530;
+    --card-r: calc(36.825 * var(--u));
+    background-image:
+      radial-gradient(49% 61% at 103% 78%, rgb(var(--glow) / 0.2), rgb(var(--glow) / 0)),
+      radial-gradient(66% 63% at -23% 22%, rgb(var(--glow) / 0.1), rgb(var(--glow) / 0));
+  }
+
+  .editor2-banner-card::before {
+    opacity: 0.6;
+  }
+
+  .editor2-banner-card::after {
+    box-shadow: inset 0 -2px 22px rgb(0 0 0 / 0.25);
+  }
+
+  .editor2-banner-title {
+    --title-w: calc(364 * var(--u));
+    --title-h: calc(75 * var(--u));
+    justify-content: flex-end;
+    padding-right: calc(24 * var(--u));
+    border-bottom-right-radius: calc(28 * var(--u));
+    font-size: calc(60 * var(--u));
+  }
+
+  .editor2-banner-title::before {
+    --r: calc(39 * var(--u));
+  }
+
+  .editor2-banner-title::after {
+    --r: calc(29 * var(--u));
+  }
+
+  .editor2-banner-subtitle {
+    top: calc(14 * var(--u));
+    left: calc(475.48 * var(--u));
+    font-size: calc(48 * var(--u));
+  }
+
+  .editor2-banner-logo {
+    top: calc(22.26 * var(--u));
+    left: calc(405 * var(--u));
+    width: calc(55.98 * var(--u));
+  }
+
+  .editor2-banner-year {
+    top: calc(42.55 * var(--u));
+    left: calc(405 * var(--u));
+    font-size: calc(11.196 * var(--u));
+  }
+
+  .editor2-banner-screen {
+    top: calc(130 * var(--u));
+    width: calc(686.95 * var(--u));
+    /* 截圖本身是直角，用 CSS 補圓角（依 Figma 截圖外框換算） */
+    border-radius: calc(11 * var(--u));
+    box-shadow: none;
+  }
+}
+
+@media (min-width: 992px) {
+  .hero-banner-wrapper.editor2-banner-wrapper {
+    padding-top: 75px;
+  }
+
+  .editor2-banner {
+    --card-w: 1130;
+    width: min(100% - 80px, 1130px);
+  }
+
+  .editor2-banner-card {
+    aspect-ratio: 1130 / 559;
+    --card-r: calc(48 * var(--u));
+    background-image:
+      radial-gradient(67% 88% at 74% 61%, rgb(var(--glow) / 0.2), rgb(var(--glow) / 0)),
+      radial-gradient(82% 73% at -71% 5%, rgb(var(--glow) / 0.1), rgb(var(--glow) / 0));
+  }
+
+  .editor2-banner-title {
+    --title-w: calc(557 * var(--u));
+    --title-h: calc(90 * var(--u));
+    padding-right: calc(48 * var(--u));
+    border-bottom-right-radius: calc(37 * var(--u));
+    font-size: calc(82 * var(--u));
+  }
+
+  .editor2-banner-title::before {
+    --r: calc(55 * var(--u));
+  }
+
+  .editor2-banner-title::after {
+    --r: calc(39 * var(--u));
+  }
+
+  .editor2-banner-subtitle {
+    top: calc(21 * var(--u));
+    left: calc(703 * var(--u));
+    font-size: calc(70 * var(--u));
+  }
+
+  .editor2-banner-logo {
+    top: calc(34 * var(--u));
+    left: calc(602 * var(--u));
+    width: calc(80 * var(--u));
+  }
+
+  .editor2-banner-year {
+    top: calc(63 * var(--u));
+    left: calc(602 * var(--u));
+    font-size: calc(16 * var(--u));
+  }
+
+  .editor2-banner-screen {
+    top: calc(116 * var(--u));
+    width: calc(993 * var(--u));
+    border-radius: calc(16 * var(--u));
+  }
+}
