@@ -6,15 +6,31 @@
    ========================================================================== */
 
 .accordion-group { border-top: 1px solid #eee; }
-.accordion-item { border-bottom: 1px solid #eee; }
+
+.accordion-item {
+    border-bottom: 1px solid #eee;
+    background-color: #fff;
+    transition: background-color var(--transition-smooth);
+}
+
+/* 展開中的項目以灰底標示目前位置，底色與圓角沿用 .item item-bg-grey */
+.accordion-item.active {
+    background-color: #f9f9f9;
+    border-radius: 4px;
+    border-bottom-color: transparent;
+}
 
 .accordion-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 16px;
     cursor: pointer;
-    padding: 20px 0;
+    padding: 16px;
 }
+
+/* 展開後標題與描述之間收為 8px，留白改由描述區的下內距負責 */
+.accordion-item.active .accordion-header { padding-bottom: 8px; }
 
 /* 箭頭動畫樣式 */
 .arrow-icon {
@@ -35,8 +51,18 @@
     border-radius: 1px;
 }
 
-.arrow-icon::before { left: 1px; transform: rotate(30deg); transform-origin: right center; }
-.arrow-icon::after { right: 1px; transform: rotate(-30deg); transform-origin: left center; }
+/* 兩道筆畫都以圖示正中央為支點，接點才會密合 */
+.arrow-icon::before {
+    left: 0;
+    transform-origin: right center;
+    transform: translateY(-50%) rotate(30deg);
+}
+
+.arrow-icon::after {
+    right: 0;
+    transform-origin: left center;
+    transform: translateY(-50%) rotate(-30deg);
+}
 
 .accordion-item.active .arrow-icon { transform: rotate(180deg); }
 
@@ -52,6 +78,7 @@
 
 .accordion-inner {
     min-height: 0;
+    padding: 0 16px;
     visibility: hidden;
     opacity: 0;
     transition: opacity 0.3s, visibility 0.3s;
@@ -60,5 +87,5 @@
 .accordion-item.active .accordion-inner {
     visibility: visible;
     opacity: 1;
-    padding-bottom: 24px;
+    padding-bottom: 16px;
 }

@@ -2109,8 +2109,3 @@ body.transparent-header.header-scrolled .navbar .menu-toggle span {
 #ui-component .item img {
     margin-top: auto;
 }
-
-/* 功能定位：兩欄卡片填滿容器寬度（.notop-container 的 margin:auto 會讓 grid item 縮成內容寬） */
-#define .two-column-grid {
-    width: 100%;
-}
