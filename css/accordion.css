@@ -35,6 +35,7 @@
 /* 箭頭動畫樣式 */
 .arrow-icon {
     position: relative;
+    flex-shrink: 0;
     width: 20px;
     height: 10px;
     transition: transform var(--transition-smooth);
