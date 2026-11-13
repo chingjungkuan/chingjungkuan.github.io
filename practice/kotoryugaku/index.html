@@ -1,0 +1,552 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>古留學雜誌 KotoRyugaku｜Premium Global Education</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Manrope:wght@400;500;600&family=Noto+Serif+TC:wght@400;500;600;700&family=Pinyon+Script&display=swap" rel="stylesheet">
+<style>
+/* ==========================================================
+   設計變數：想調整風格，先改這一區就好
+   色票取自 moodboard：Hero Blue／Antique Gold／Aged Parchment／Dusty Rose／Walnut Brown
+   ========================================================== */
+:root {
+  --blue: #1E4693;               /* Hero Blue：主色、按鈕、學校介紹區底色 */
+  --blue-deep: #16366F;          /* 主色 hover */
+  --gold: #C9A066;               /* Antique Gold：小標、大字浮水印、引言 */
+  --gold-soft: #DCC39C;          /* 淡金：大字浮水印 */
+  --parchment: #FAF7F0;          /* Aged Parchment：卡片底 */
+  --paper: #F4EFE5;              /* 頁面底色：舊紙 */
+  --rose: #B98880;               /* Dusty Rose：FAQ 分類小字 */
+  --walnut: #3E3128;             /* Walnut Brown：深色文字點綴 */
+  --footer: #24201D;             /* Footer 深底 */
+  --seal: #B5452F;               /* 封蠟紅：Hero 左下角色塊 */
+  --ink: #2A2623;                /* 主文字 */
+  --mute: #77716A;               /* 次要文字 */
+  --line: rgba(42, 38, 35, .18); /* 細分隔線 */
+
+  --serif-en: "Cormorant Garamond", "Noto Serif TC", serif;  /* 英文標題、小標 */
+  --serif-zh: "Noto Serif TC", serif;                         /* 中文標題與內文 */
+  --sans: "Manrope", "Noto Serif TC", sans-serif;             /* 英文內文；中文會落到 Noto Serif TC */
+  --script: "Pinyon Script", cursive;                         /* Hero「Premium」手寫字 */
+
+  --margin: 40px;                /* 頁面左右邊界 */
+  --gutter: 24px;                /* 欄與欄的間距 */
+  --max: 1440px;                 /* 內容最大寬度；大字 clamp() 上限都設在 1440 寬時的大小，1440 以上畫面不再放大 */
+  --section-space: 120px;        /* 區塊上下留白 */
+}
+
+/* ---------- 基礎 ---------- */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--sans);
+  font-size: 15px;
+  line-height: 1.8;
+  -webkit-font-smoothing: antialiased;
+}
+a { color: inherit; text-decoration: none; }
+button { font: inherit; color: inherit; background: none; border: 0; cursor: pointer; }
+.num { font-feature-settings: "lnum", "tnum"; }
+
+.wrap { max-width: var(--max); margin: 0 auto; padding: 0 var(--margin); position: relative; }
+.grid { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); column-gap: var(--gutter); }
+
+/* 英文小標：字距拉開的襯線大寫 */
+.eyebrow {
+  font-family: var(--serif-en);
+  font-size: 13px; font-weight: 600;
+  letter-spacing: .28em; text-transform: uppercase;
+  color: var(--gold);
+}
+.h2-zh {
+  font-family: var(--serif-zh);
+  font-size: clamp(26px, 2.6vw, 37px);
+  font-weight: 600; line-height: 1.35; letter-spacing: .04em;
+}
+.sec-note { font-family: var(--serif-en); font-style: italic; font-size: 16px; color: var(--mute); }
+
+/* 大字浮水印：區塊背景的英文大標 */
+.watermark {
+  position: absolute; z-index: 0; pointer-events: none;
+  font-family: var(--serif-en); font-weight: 500;
+  text-transform: uppercase; letter-spacing: .03em; line-height: 1;
+  white-space: nowrap; color: var(--gold-soft);
+}
+
+/* ---------- 按鈕 ---------- */
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+  height: 46px; padding: 0 24px;
+  font-family: var(--serif-zh); font-size: 15px; font-weight: 500; letter-spacing: .08em;
+  border: 1px solid var(--blue);
+  transition: background .25s, color .25s, border-color .25s;
+}
+.btn-blue { background: var(--blue); color: #fff; }
+.btn-blue:hover { background: var(--blue-deep); border-color: var(--blue-deep); }
+.btn-ghost { color: var(--ink); border-color: var(--ink); }
+.btn-ghost:hover { background: var(--ink); color: var(--parchment); }
+.btn-sm { height: 38px; padding: 0 18px; font-size: 14px; }
+.btn-block { width: 100%; }
+
+/* ---------- 照片位置：放入 images/ 裡同名檔案就會顯示 ---------- */
+.photo {
+  position: relative; overflow: hidden;
+  background:
+    repeating-linear-gradient(45deg, rgba(255, 255, 255, .05) 0 2px, transparent 2px 14px),
+    var(--ph, linear-gradient(150deg, #CDBEA5, #9C8768));
+}
+.photo::before {
+  content: "照片｜" attr(data-label) "\A images/" attr(data-file);
+  white-space: pre; position: absolute; top: 14px; left: 16px; z-index: 0;
+  font: 500 11px/1.6 var(--sans); letter-spacing: .04em; color: rgba(255, 255, 255, .82);
+}
+.photo img { position: absolute; inset: 0; z-index: 1; width: 100%; height: 100%; object-fit: cover; transition: transform .8s cubic-bezier(.2, .7, .2, 1); }
+
+/* ---------- 導覽列 ---------- */
+.nav { position: sticky; top: 0; z-index: 30; background: rgba(244, 239, 229, .96); backdrop-filter: blur(6px); border-bottom: 1px solid var(--line); }
+.nav-in { display: flex; align-items: center; justify-content: space-between; height: 68px; }
+.logo { font-family: var(--serif-en); font-size: 22px; font-weight: 600; letter-spacing: .08em; font-variant-caps: small-caps; }
+.menu { display: flex; gap: 44px; font-family: var(--serif-zh); font-size: 14px; letter-spacing: .08em; }
+.menu a { position: relative; padding: 4px 0; }
+.menu a::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 1px; background: var(--gold); transform: scaleX(0); transition: transform .3s; }
+.menu a:hover::after { transform: scaleX(1); }
+.nav-cta { display: flex; align-items: center; gap: 12px; }
+.menu-toggle { display: none; font-family: var(--serif-zh); font-size: 14px; letter-spacing: .1em; padding: 6px 2px; border-bottom: 1px solid var(--ink); }
+
+/* ---------- Hero ---------- */
+.hero { position: relative; height: clamp(440px, 41vw, 590px); color: #fff; }
+.hero .photo { position: absolute; inset: 0; --ph: linear-gradient(165deg, #7A6650 0%, #4B3D2E 55%, #2A221A 100%); }
+.hero-shade { position: absolute; inset: 0; z-index: 2; background: linear-gradient(180deg, rgba(20, 15, 10, 0) 35%, rgba(20, 15, 10, .5) 100%); }
+.hero-title {
+  position: absolute; z-index: 3; left: 0; right: 0; bottom: clamp(20px, 2.4vw, 34px);
+  display: flex; flex-direction: column; align-items: center; text-align: center;
+  font-weight: 400; text-shadow: 0 2px 24px rgba(0, 0, 0, .25);
+}
+.hero-title .script {
+  font-family: var(--script);
+  font-size: clamp(44px, 6.6vw, 95px); line-height: 1;
+  margin: 0 0 -.32em -14%; transform: rotate(-4deg);
+  position: relative; z-index: 1;
+}
+.hero-title .main {
+  font-family: var(--serif-en); font-weight: 500;
+  font-size: clamp(46px, 9.4vw, 135px); line-height: 1; letter-spacing: -.005em;
+}
+.hero-seal { position: absolute; left: 0; bottom: -46px; width: 46px; height: 46px; background: var(--seal); z-index: 3; }
+
+/* ---------- 品牌理念 ---------- */
+.philo { position: relative; padding: calc(var(--section-space) - 8px) 0 calc(var(--section-space) + 8px); text-align: center; }
+.philo-in { grid-column: 3 / 11; }
+.philo .eyebrow { color: var(--rose); margin-bottom: 14px; }
+.philo .h2-zh { margin-bottom: 32px; }
+.philo-text { font-family: var(--serif-zh); font-size: 16px; line-height: 2.05; color: #4A4540; max-width: 40em; margin: 0 auto 36px; }
+.philo-quote { font-family: var(--serif-en); font-style: italic; font-size: clamp(22px, 2.2vw, 31px); color: var(--blue); line-height: 1.4; }
+.rule-block { position: absolute; left: 0; right: 0; bottom: 0; height: 1px; background: var(--line); }
+.rule-block::after { content: ""; position: absolute; right: 0; bottom: 0; width: clamp(64px, 8.3vw, 119px); height: clamp(24px, 3vw, 43px); background: var(--blue); }
+
+/* ---------- 數字 ---------- */
+.stats { padding: 60px 0 64px; border-bottom: 1px solid var(--line); }
+.stat { grid-column: span 3; text-align: center; }
+.stat-num { font-family: var(--serif-en); font-size: clamp(32px, 3vw, 43px); font-weight: 500; line-height: 1.1; margin-bottom: 12px; }
+.stat-num small { font-family: var(--serif-zh); font-size: .66em; font-weight: 500; margin-left: .18em; }
+.stat-en { font-family: var(--serif-en); font-size: 11px; font-weight: 600; letter-spacing: .24em; text-transform: uppercase; color: var(--ink); }
+.stat-zh { font-family: var(--serif-zh); font-size: 12px; color: var(--gold); letter-spacing: .06em; }
+
+/* ---------- 特選留學故事 ---------- */
+.stories { padding: 12px 0 var(--section-space); overflow: hidden; }
+.stories .sec-head { padding-top: clamp(56px, 6.4vw, 92px); }
+.sec-head { position: relative; display: flex; align-items: flex-end; justify-content: space-between; gap: 24px; padding-top: 40px; margin-bottom: 48px; }
+.sec-head > :not(.watermark) { position: relative; z-index: 1; }
+.wm-right { top: 0; right: calc(var(--margin) * -1 + 8px); font-size: clamp(30px, 6.6vw, 95px); }
+.story-grid { align-items: start; }
+.story { grid-column: span 4; }
+.story:nth-child(2) { margin-top: 84px; }
+.story .photo { aspect-ratio: 1 / 1; margin-bottom: 20px; }
+.story:hover .photo img { transform: scale(1.04); }
+.story .eyebrow { color: var(--blue); font-size: 12px; margin-bottom: 6px; }
+.story h3 { font-family: var(--serif-zh); font-size: 18px; font-weight: 600; line-height: 1.5; margin-bottom: 8px; }
+.story p.desc { font-family: var(--serif-zh); font-size: 13px; line-height: 1.9; color: var(--mute); }
+
+/* ---------- 全球學校介紹 ---------- */
+.dest { background: var(--blue); color: #fff; padding: 72px 0 var(--section-space); overflow: hidden; }
+.dest .watermark { position: relative; display: block; text-align: center; color: rgba(255, 255, 255, .13); font-size: clamp(18px, 5.3vw, 76px); margin-bottom: -.32em; }
+.dest-title { display: flex; align-items: center; gap: 28px; margin-bottom: 48px; position: relative; z-index: 1; }
+.dest-title span { flex: 1; height: 1px; background: rgba(255, 255, 255, .3); }
+.dest-title .h2-zh { color: #fff; white-space: nowrap; }
+.dest-grid { row-gap: var(--gutter); }
+.dest-card { grid-column: span 4; position: relative; display: block; aspect-ratio: 10 / 7; overflow: hidden; }
+.dest-card .photo { position: absolute; inset: 0; --ph: linear-gradient(160deg, #5C6F93 0%, #2C3F66 60%, #1B2C4F 100%); }
+.dest-card::after { content: ""; position: absolute; inset: 0; z-index: 2; background: linear-gradient(180deg, rgba(20, 45, 100, .05) 30%, rgba(16, 36, 82, .78) 100%); transition: opacity .4s; }
+.dest-card:hover .photo img { transform: scale(1.05); }
+.dest-card:hover::after { opacity: .85; }
+.dest-text { position: absolute; left: 22px; right: 22px; bottom: 18px; z-index: 3; }
+.dest-text h3 { font-family: var(--serif-zh); font-size: clamp(22px, 1.9vw, 27px); font-weight: 600; letter-spacing: .08em; line-height: 1.3; }
+.dest-en { font-family: var(--serif-en); font-size: 11px; font-weight: 600; letter-spacing: .26em; text-transform: uppercase; opacity: .75; margin-bottom: 2px; }
+.dest-desc { font-family: var(--serif-zh); font-size: 12px; opacity: .9; }
+
+/* ---------- 常見問題 ---------- */
+.faq { padding: 40px 0 72px; overflow: hidden; }
+.faq-head { border-bottom: 1px solid var(--line); padding: 56px 0 22px; margin-bottom: 40px; }
+.wm-left { left: calc(var(--margin) * -1 + 4px); top: -8px; font-size: clamp(56px, 6.9vw, 99px); }
+.faq-head .h2-zh { margin-left: 32px; }
+.faq-body { align-items: start; }
+.faq-card { grid-column: 1 / 4; border: 1px solid var(--ink); background: var(--parchment); padding: 28px 24px 24px; margin-left: 32px; }
+.faq-card h3 { font-family: var(--serif-zh); font-size: 18px; font-weight: 600; line-height: 1.6; margin-bottom: 14px; }
+.faq-card p { font-family: var(--serif-zh); font-size: 13px; line-height: 1.9; color: var(--mute); margin-bottom: 22px; }
+.faq-list { grid-column: 5 / 13; }
+.faq-item { border-bottom: 1px solid var(--line); }
+.faq-item summary {
+  list-style: none; cursor: pointer;
+  display: grid; grid-template-columns: 116px 1fr 24px; align-items: center; gap: 16px;
+  padding: 22px 0;
+}
+.faq-item summary::-webkit-details-marker { display: none; }
+.faq-cat { font-family: var(--serif-en); font-size: 11px; font-weight: 600; letter-spacing: .22em; text-transform: uppercase; color: var(--rose); }
+.faq-q { font-family: var(--serif-zh); font-size: 16px; font-weight: 500; line-height: 1.6; transition: color .2s; }
+.faq-item summary:hover .faq-q { color: var(--blue); }
+.faq-icon { width: 22px; height: 22px; border: 1px solid var(--gold); border-radius: 50%; position: relative; color: var(--gold); transition: border-color .2s, color .2s; }
+.faq-icon::before, .faq-icon::after { content: ""; position: absolute; left: 50%; top: 50%; width: 9px; height: 1px; background: currentColor; transform: translate(-50%, -50%); }
+.faq-icon::after { transform: translate(-50%, -50%) rotate(90deg); transition: transform .25s; }
+.faq-item[open] .faq-icon { border-color: var(--blue); color: var(--blue); }
+.faq-item[open] .faq-icon::after { transform: translate(-50%, -50%) rotate(0deg); }
+.faq-a { padding: 0 40px 24px 132px; font-family: var(--serif-zh); font-size: 13px; line-height: 2; color: var(--mute); }
+.faq-foot { display: flex; align-items: center; justify-content: space-between; margin-top: 56px; }
+.faq-quote { font-family: var(--serif-en); font-style: italic; font-size: 15px; color: var(--gold); }
+.faq-foot .dash { width: clamp(64px, 8vw, 115px); height: 3px; background: var(--blue); }
+
+/* ---------- Footer ---------- */
+.footer { background: var(--footer); color: #E9E3D8; padding: 72px 0 0; }
+.foot-brand { grid-column: 1 / 6; }
+.foot-brand .logo { font-size: 22px; }
+.foot-sub { font-family: var(--serif-en); font-size: 10px; font-weight: 600; letter-spacing: .3em; text-transform: uppercase; color: #8F877B; margin-bottom: 14px; }
+.foot-tag { font-family: var(--serif-zh); font-size: 13px; line-height: 1.9; color: #B9B1A5; max-width: 22em; }
+.foot-col { display: flex; flex-direction: column; gap: 6px; font-family: var(--serif-zh); font-size: 13px; color: #B9B1A5; }
+.foot-col:nth-of-type(1) { grid-column: 7 / 9; }
+.foot-col:nth-of-type(2) { grid-column: 9 / 11; }
+.foot-col:nth-of-type(3) { grid-column: 11 / 13; }
+.foot-col .foot-h { color: #F4EFE5; font-weight: 600; letter-spacing: .08em; margin-bottom: 6px; }
+.foot-col a:hover { color: var(--gold); }
+.foot-bottom { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; margin-top: 64px; padding: 24px 0; border-top: 1px solid rgba(255, 255, 255, .1); font-size: 12px; color: #8F877B; }
+.foot-bottom nav { display: flex; gap: 24px; }
+.foot-bottom a:hover { color: var(--gold); }
+.foot-note { padding-bottom: 28px; font-size: 11px; color: #6E675E; }
+
+/* ---------- 格線疊圖（按 G 開關） ---------- */
+.grid-overlay { position: fixed; inset: 0; pointer-events: none; z-index: 50; display: none; }
+.grid-overlay .grid { height: 100%; }
+.grid-overlay span { background: rgba(30, 70, 147, .07); border-left: 1px solid rgba(30, 70, 147, .25); border-right: 1px solid rgba(30, 70, 147, .25); }
+body.show-grid .grid-overlay { display: block; }
+.grid-toggle { position: fixed; right: 16px; bottom: 16px; z-index: 60; background: var(--ink); color: var(--parchment); font-size: 12px; font-weight: 600; letter-spacing: .04em; padding: 8px 12px; }
+body.show-grid .grid-toggle { background: var(--blue); }
+
+/* ---------- 平板 ---------- */
+@media (max-width: 1080px) {
+  :root { --margin: 28px; --section-space: 96px; }
+  .menu { gap: 28px; }
+  .philo-in { grid-column: 2 / 12; }
+  .story:nth-child(2) { margin-top: 56px; }
+  .dest-card { grid-column: span 6; }
+  .faq-card { grid-column: 1 / 6; margin-left: 0; }
+  .faq-list { grid-column: 6 / 13; }
+  .faq-head .h2-zh { margin-left: 0; }
+  .faq-item summary { grid-template-columns: 1fr 24px; row-gap: 2px; }
+  .faq-cat { grid-column: 1 / -1; }
+  .faq-a { padding: 0 32px 22px 0; }
+}
+
+/* ---------- 窄平板：選單收起 ---------- */
+@media (max-width: 960px) {
+  .menu-toggle { display: inline-block; }
+  .menu {
+    display: none; position: absolute; top: 68px; left: 0; right: 0;
+    flex-direction: column; gap: 0; padding: 8px var(--margin) 20px;
+    background: var(--paper); border-bottom: 1px solid var(--line);
+  }
+  .menu a { padding: 14px 0; border-bottom: 1px solid var(--line); }
+  .nav.open .menu { display: flex; }
+  .faq-card { grid-column: 1 / -1; margin-bottom: 32px; }
+  .faq-list { grid-column: 1 / -1; }
+}
+
+/* ---------- 手機 ---------- */
+@media (max-width: 760px) {
+  :root { --margin: 16px; --gutter: 12px; --section-space: 72px; }
+  .grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  .grid-overlay span:nth-child(n + 5) { display: none; }
+  .nav-in { height: 60px; }
+  .menu { top: 60px; }
+  .nav-cta .btn { display: none; }
+  .hero { height: 460px; }
+  .hero-title .script { margin-left: -24%; }
+  .hero-seal { width: 32px; height: 32px; bottom: -32px; }
+  .philo-in { grid-column: 1 / -1; }
+  .philo-text { text-align: left; }
+  .rule-block::after { width: 56px; height: 20px; }
+  .stats { padding: 44px 0; }
+  .stat { grid-column: span 2; margin-bottom: 28px; }
+  .sec-head { flex-direction: column; align-items: flex-start; gap: 6px; padding-top: 44px; }
+  .wm-right { right: auto; left: 0; top: 0; }
+  .story { grid-column: 1 / -1; margin-bottom: 40px; }
+  .story:nth-child(2) { margin-top: 0; }
+  .dest { padding-top: 56px; }
+  .dest-title { gap: 16px; margin-bottom: 32px; }
+  .dest-card { grid-column: span 2; aspect-ratio: 4 / 5; }
+  .dest-text { left: 14px; right: 14px; bottom: 12px; }
+  .dest-desc { display: none; }
+  .faq-head { flex-direction: column; align-items: flex-start; padding-top: 64px; }
+  .wm-left { left: 0; }
+  .faq-a { padding-right: 0; }
+  .faq-foot { flex-direction: column; align-items: flex-start; gap: 20px; }
+  .foot-brand { grid-column: 1 / -1; margin-bottom: 36px; }
+  .foot-col:nth-of-type(n) { grid-column: span 2; margin-bottom: 28px; }
+  .foot-col:nth-of-type(3) { grid-column: 1 / -1; }
+  .foot-bottom { margin-top: 12px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .photo img { transition: none; }
+}
+</style>
+</head>
+<body>
+
+<!-- ============ 導覽列 ============ -->
+<header class="nav">
+  <div class="wrap nav-in">
+    <a class="logo" href="#" aria-label="古留學雜誌 首頁">Education</a>
+    <nav class="menu" id="menu" aria-label="主選單">
+      <a href="#philosophy">品牌理念</a>
+      <a href="#stories">特選專題</a>
+      <a href="#destinations">留學國家</a>
+      <a href="#faq">專業服務</a>
+      <a href="#stories">日常誌</a>
+    </nav>
+    <div class="nav-cta">
+      <a class="btn btn-blue btn-sm" href="#faq">預約諮詢</a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="menu">選單</button>
+    </div>
+  </div>
+</header>
+
+<main>
+
+<!-- ============ Hero ============ -->
+<section class="hero">
+  <div class="photo" data-file="hero.jpg" data-label="古典學院中庭前的學生合照">
+    <img src="images/hero.jpg" alt="一群留學生在古典學院中庭前合照" onerror="this.remove()">
+  </div>
+  <div class="hero-shade"></div>
+  <h1 class="hero-title"><span class="script">Premium</span><span class="main">Global Education</span></h1>
+  <span class="hero-seal" aria-hidden="true"></span>
+</section>
+
+<!-- ============ 品牌理念 ============ -->
+<section class="philo" id="philosophy">
+  <div class="wrap grid">
+    <div class="philo-in">
+      <p class="eyebrow">Philosophy</p>
+      <h2 class="h2-zh">一場自我與文化的深度對話</h2>
+      <p class="philo-text">留學不只是一張機票與一紙入學許可，而是一場關於自我、文化與未來的深度對話。在古留學雜誌，我們將世界視為一本經典，陪您在探索中落筆，寫下屬於您的高雅篇章。</p>
+      <p class="philo-quote">“A voyage of self-discovery, culture, and future visions.”</p>
+    </div>
+  </div>
+  <div class="rule-block" aria-hidden="true"></div>
+</section>
+
+<!-- ============ 數字 ============ -->
+<section class="stats" aria-label="品牌數據">
+  <div class="wrap grid">
+    <div class="stat"><p class="stat-num num">15+<small>年</small></p><p class="stat-en">Brand Heritage</p><p class="stat-zh">專業留學輔導經驗</p></div>
+    <div class="stat"><p class="stat-num num">2,000+</p><p class="stat-en">Success Cases</p><p class="stat-zh">陪伴學生進入理想學府</p></div>
+    <div class="stat"><p class="stat-num num">98%</p><p class="stat-en">Admission Rate</p><p class="stat-zh">申請錄取率</p></div>
+    <div class="stat"><p class="stat-num num">50+<small>所</small></p><p class="stat-en">Cooperative Academies</p><p class="stat-zh">全球合作學院</p></div>
+  </div>
+</section>
+
+<!-- ============ 特選留學故事 ============ -->
+<section class="stories" id="stories">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="watermark wm-right" aria-hidden="true">Cover Story</p>
+      <h2 class="h2-zh">特選留學故事</h2>
+      <p class="sec-note">Selected Narratives of Global Seekers</p>
+    </div>
+
+    <div class="grid story-grid">
+      <article class="story">
+        <div class="photo" data-file="story-london.jpg" data-label="石板老街上的留學生" style="--ph: linear-gradient(160deg, #B3A084, #6E5B45);">
+          <img src="images/story-london.jpg" alt="留學生走在歐洲石板老街上" onerror="this.remove()">
+        </div>
+        <p class="eyebrow">London, UK</p>
+        <h3>在倫敦霧中找到自己的聲音</h3>
+        <p class="desc">從喧囂的大英博物館，到蘇活區的獨立藝廊，探索空間與自我創作的全新邊界。</p>
+      </article>
+
+      <article class="story">
+        <div class="photo" data-file="story-tokyo-berlin.jpg" data-label="咖啡與法式甜點" style="--ph: linear-gradient(160deg, #D2C6B4, #8E7E69);">
+          <img src="images/story-tokyo-berlin.jpg" alt="桌上的咖啡與甜點" onerror="this.remove()">
+        </div>
+        <p class="eyebrow">Tokyo · Berlin</p>
+        <h3>從東京到柏林：一場味覺的留學</h3>
+        <p class="desc">以甜點與咖啡為線索，在兩座城市的街角，重新認識文化與生活的樣貌。</p>
+      </article>
+
+      <article class="story">
+        <div class="photo" data-file="story-boston.jpg" data-label="秋日校園長椅上閱讀的學生" style="--ph: linear-gradient(160deg, #A68259, #5A4630);">
+          <img src="images/story-boston.jpg" alt="學生在秋天的校園長椅上閱讀" onerror="this.remove()">
+        </div>
+        <p class="eyebrow">Boston, USA</p>
+        <h3>哈佛圖書館裡的那個秋天</h3>
+        <p class="desc">在落葉與書頁之間，找到屬於自己的研究方向與生活節奏。</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 全球學校介紹 ============ -->
+<section class="dest" id="destinations">
+  <div class="wrap">
+    <p class="watermark" aria-hidden="true">Curated Destinations</p>
+    <div class="dest-title"><span></span><h2 class="h2-zh">全球學校介紹</h2><span></span></div>
+
+    <div class="grid dest-grid">
+      <a class="dest-card" href="#faq">
+        <div class="photo" data-file="dest-uk.jpg" data-label="古典石造拱門"><img src="images/dest-uk.jpg" alt="英國的古典石造拱門" onerror="this.remove()"></div>
+        <div class="dest-text"><h3>英國</h3><p class="dest-en">United Kingdom</p><p class="dest-desc">古典人文與百年學術傳統</p></div>
+      </a>
+      <a class="dest-card" href="#faq">
+        <div class="photo" data-file="dest-japan.jpg" data-label="日式建築細節"><img src="images/dest-japan.jpg" alt="日本的建築細節" onerror="this.remove()"></div>
+        <div class="dest-text"><h3>日本</h3><p class="dest-en">Japan</p><p class="dest-desc">職人精神與現代美學的交會</p></div>
+      </a>
+      <a class="dest-card" href="#faq">
+        <div class="photo" data-file="dest-usa.jpg" data-label="城市天際線"><img src="images/dest-usa.jpg" alt="美國的城市天際線" onerror="this.remove()"></div>
+        <div class="dest-text"><h3>美國</h3><p class="dest-en">United States</p><p class="dest-desc">多元文化與創新研究的視野</p></div>
+      </a>
+      <a class="dest-card" href="#faq">
+        <div class="photo" data-file="dest-germany.jpg" data-label="現代主義建築"><img src="images/dest-germany.jpg" alt="德國的現代主義建築" onerror="this.remove()"></div>
+        <div class="dest-text"><h3>德國</h3><p class="dest-en">Germany</p><p class="dest-desc">嚴謹工藝與理性思辨的搖籃</p></div>
+      </a>
+      <a class="dest-card" href="#faq">
+        <div class="photo" data-file="dest-france.jpg" data-label="巴黎鐵塔與城市"><img src="images/dest-france.jpg" alt="法國巴黎的城市景觀" onerror="this.remove()"></div>
+        <div class="dest-text"><h3>法國</h3><p class="dest-en">France</p><p class="dest-desc">藝術、時尚與人文思潮的匯聚</p></div>
+      </a>
+      <a class="dest-card" href="#faq">
+        <div class="photo" data-file="dest-australia.jpg" data-label="港灣城市景觀"><img src="images/dest-australia.jpg" alt="澳洲的港灣城市" onerror="this.remove()"></div>
+        <div class="dest-text"><h3>澳洲</h3><p class="dest-en">Australia</p><p class="dest-desc">自然環境與多元文化的生活</p></div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 常見問題 ============ -->
+<section class="faq" id="faq">
+  <div class="wrap">
+    <div class="sec-head faq-head">
+      <p class="watermark wm-left" aria-hidden="true">FAQ</p>
+      <h2 class="h2-zh">常見問題</h2>
+      <p class="sec-note">Answering your doubts on the path to elite global education</p>
+    </div>
+
+    <div class="grid faq-body">
+      <aside class="faq-card">
+        <h3>落筆前，我們先為您解讀世界這本經典。</h3>
+        <p>每個人想出國的理由都不一樣。如果您還在猶豫方向，或不確定從哪裡開始，歡迎預約一對一諮詢，我們陪您把問題一個一個釐清。</p>
+        <a class="btn btn-blue btn-block" href="#">一對一專屬諮詢</a>
+      </aside>
+
+      <div class="faq-list">
+        <details class="faq-item" open>
+          <summary><span class="faq-cat">Timeline</span><span class="faq-q">理想的留學申請時程應該如何規劃？</span><span class="faq-icon" aria-hidden="true"></span></summary>
+          <p class="faq-a">建議在預計入學前 12 至 18 個月開始準備。前半段先完成語言與學術考試（如 TOEFL、IELTS、GRE／GMAT）和選校規劃；接著準備個人陳述（SOP）與推薦信並送出申請；最後階段則是面試、簽證與住宿安排。實際時程依國家與學校的截止日調整。</p>
+        </details>
+        <details class="faq-item">
+          <summary><span class="faq-cat">Language</span><span class="faq-q">各國頂尖大學的語言檢定要求大概落在什麼標準？</span><span class="faq-icon" aria-hidden="true"></span></summary>
+          <p class="faq-a">各國、各校的要求差異很大，同一所學校的不同科系也可能不同。我們會依您的目標學校，整理官方公布的最新門檻，再回推考試與加強計畫。</p>
+        </details>
+        <details class="faq-item">
+          <summary><span class="faq-cat">Financials</span><span class="faq-q">留學預算與學費大約需要準備多少？有獎學金機會嗎？</span><span class="faq-icon" aria-hidden="true"></span></summary>
+          <p class="faq-a">費用會因國家、城市、學制與生活方式而有很大差異。諮詢時我們會依您的目標清單做出預算表，並一起篩選學校與各國政府提供的獎學金機會。</p>
+        </details>
+        <details class="faq-item">
+          <summary><span class="faq-cat">Visa &amp; Docs</span><span class="faq-q">簽證辦理手續會很複雜嗎？你們會提供哪些協助？</span><span class="faq-icon" aria-hidden="true"></span></summary>
+          <p class="faq-a">各國簽證規定不同，也會隨時調整。我們會依官方最新規定提供文件清單與時程提醒，陪您逐項準備，最終審核仍以各國主管機關為準。</p>
+        </details>
+        <details class="faq-item">
+          <summary><span class="faq-cat">Services</span><span class="faq-q">「高端訂製服務」與一般的留學代辦有何不同？</span><span class="faq-icon" aria-hidden="true"></span></summary>
+          <p class="faq-a">一般代辦多以送件為主；訂製服務從自我探索開始，陪您釐清方向、打磨文書與作品，一路到入學後的生活適應，每一步都由同一位顧問陪伴。</p>
+        </details>
+      </div>
+    </div>
+
+    <div class="faq-foot">
+      <p class="faq-quote">“Knowledge is the compass of the elegant soul.”</p>
+      <span class="dash" aria-hidden="true"></span>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ============ Footer ============ -->
+<footer class="footer">
+  <div class="wrap">
+    <div class="grid">
+      <div class="foot-brand">
+        <p class="logo">Education</p>
+        <p class="foot-sub">KotoRyugaku Magazine</p>
+        <p class="foot-tag">將世界視為一本經典名著，陪您寫下屬於自己的留學篇章。</p>
+      </div>
+      <nav class="foot-col" aria-label="資訊專欄">
+        <p class="foot-h">資訊專欄</p>
+        <a href="#">品牌故事</a><a href="#stories">特選留學專題</a><a href="#">留學日常誌</a><a href="#">聯絡我們</a>
+      </nav>
+      <nav class="foot-col" aria-label="留學服務">
+        <p class="foot-h">留學服務</p>
+        <a href="#">全方位升學規劃</a><a href="#">作品集指導</a><a href="#">文書撰寫與面試</a><a href="#">研究所申請</a>
+      </nav>
+      <nav class="foot-col" aria-label="追蹤我們">
+        <p class="foot-h">追蹤我們</p>
+        <a href="#">Instagram</a><a href="#">Facebook</a><a href="#">Medium</a><a href="#">LINE Official</a>
+      </nav>
+    </div>
+    <div class="foot-bottom">
+      <span>Copyright © 2025–2026 KotoRyugaku Magazine／古留學雜誌. All rights reserved.</span>
+      <nav aria-label="法律資訊"><a href="#">隱私權政策</a><a href="#">服務條款</a></nav>
+    </div>
+    <p class="foot-note">本頁為 Lucy Kuan 的 UI 設計練習，品牌與內容皆為虛構。</p>
+  </div>
+</footer>
+
+<!-- 格線疊圖 -->
+<div class="grid-overlay" aria-hidden="true">
+  <div class="wrap grid"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+</div>
+<button class="grid-toggle" type="button">格線 G</button>
+
+<script>
+// 手機選單開關
+var nav = document.querySelector('.nav'), toggle = document.querySelector('.menu-toggle');
+toggle.addEventListener('click', function () {
+  var open = nav.classList.toggle('open');
+  toggle.setAttribute('aria-expanded', open);
+  toggle.textContent = open ? '關閉' : '選單';
+});
+document.querySelectorAll('.menu a').forEach(function (a) {
+  a.addEventListener('click', function () { nav.classList.remove('open'); toggle.setAttribute('aria-expanded', false); toggle.textContent = '選單'; });
+});
+
+// 格線開關：點按鈕或按 G
+function toggleGrid() { document.body.classList.toggle('show-grid'); }
+document.querySelector('.grid-toggle').addEventListener('click', toggleGrid);
+document.addEventListener('keydown', function (e) {
+  if ((e.key === 'g' || e.key === 'G') && !/INPUT|TEXTAREA/.test(document.activeElement.tagName)) toggleGrid();
+});
+</script>
+</body>
+</html>
