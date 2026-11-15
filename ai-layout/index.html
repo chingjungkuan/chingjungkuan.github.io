@@ -99,7 +99,7 @@
             </div>
             <p class="para">觀察發現，許多點點印使用者在編輯過程中面臨多重阻礙。本專案並非僅是優化既有介面，而是基於這些痛點從零規劃的全新功能。我們將問題收斂為「進入編輯器前」與「逐頁編輯時」兩個層次：</p>
             <div class="accordion-group">
-              <div class="accordion-item active" data-img="/images/ai-layout/img_pain-01.jpg">
+              <div class="accordion-item active" data-img="/images/ai-layout/img_pain-01.svg">
                 <div class="accordion-header">
                   <h5>▍整本：從「散落照片」到「完整作品」的門檻過高</h5>
                   <div class="arrow-icon"></div>
@@ -110,7 +110,7 @@
                   </div>
                 </div>
               </div>
-              <div class="accordion-item" data-img="/images/ai-layout/img_pain-02.jpg">
+              <div class="accordion-item" data-img="/images/ai-layout/img_pain-02.svg">
                 <div class="accordion-header">
                   <h5>▍單頁：固定版型與多變照片的衝突</h5>
                   <div class="arrow-icon"></div>
@@ -124,7 +124,7 @@
             </div>
           </div>
         </div>
-        <img class="image-block lightbox-trigger" src="/images/ai-layout/img_pain-01.jpg" alt="整本痛點：從一堆照片到一本作品的距離">
+        <img class="image-block lightbox-trigger" src="/images/ai-layout/img_pain-01.svg" alt="整本痛點：從一堆照片到一本作品的距離">
       </div>
       <!-- End Pain Point -->
 
@@ -246,62 +246,78 @@
         <div class="sec-title-container">
           <h2>易用性測試</h2>
         </div>
-        <div class="top-container">
-        <div class="layout-center">
+        <div class="top-container layout-center">
           <h3>兩種觸發方式的驗證：行為先於偏好</h3>
           <p class="para t-center">上線前進行兩輪測試。第一輪比較兩種觸發方式，第二輪針對勝出的版本調整觸發範圍與引導。</p>
         </div>
 
         <!-- 第一輪 -->
-        <div class="notop-container">
-          <div class="flex-v-8">
-            <h3 class="title">▍第一輪：觸發目標的選擇</h3>
-            <p class="para">共 5 位受測者，包含熟悉原編輯器的同事，以及數位完全不熟悉的使用者。兩個版本的差異不在視覺，而在於使用者是否需要先認識一個新的目標物。</p>
+        <div class="top-container hero-grid m-1col-2col">
+          <div class="description-text">
+            <div class="flex-v-16">
+              <div class="flex-v-8">
+                <h3 class="title">第一輪：觸發目標的選擇</h3>
+                <p class="para">共 5 位受測者，包含熟悉原編輯器的同事，以及數位完全不熟悉的使用者。兩個版本的差異不在視覺，而在於使用者是否需要先認識一個新的目標物。</p>
+              </div>
+              <div class="accordion-group">
+                <div class="accordion-item active">
+                  <div class="accordion-header">
+                    <h5>A 版｜拖入專屬的 AI Layout Bar</h5>
+                    <div class="arrow-icon"></div>
+                  </div>
+                  <div class="accordion-content">
+                    <div class="accordion-inner">
+                      <ul class="para">
+                        <li>畫面上另設一條 Bar 作為放置目標，拖曳時 Bar 上顯示「拖曳至此處」。</li>
+                        <li><b>結果｜</b>提示確實存在，但同一畫面上的照片框與功能按鈕同時競爭注意力，部分受測者因而忽略了這條 Bar。</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <div class="accordion-header">
+                    <h5>B 版｜直接拖至頁面上</h5>
+                    <div class="arrow-icon"></div>
+                  </div>
+                  <div class="accordion-content">
+                    <div class="accordion-inner">
+                      <ul class="para">
+                        <li>不另設目標物。照片進入頁面範圍時，既有相框執行讓位動畫，並以 Tooltip 說明後續行為。</li>
+                        <li><b>結果｜</b>多數受測者反映較為好用：照片拖出的當下畫面即有回應，無須先找到特定的落點。</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
+          <img class="image-block lightbox-trigger" src="/images/ai-layout/img_test-round1.jpg" alt="第一輪測試：A 版 AI Layout Bar 與 B 版直接拖至頁面的對照">
         </div>
-        <div class="notop-container two-column-grid">
-          <div class="item item-bg-grey">
-            <div class="content-header">
-              <span class="vertical-decorator"></span>
-              <h4>A 版｜拖入專屬的 AI Layout Bar</h4>
-            </div>
-            <div class="flex-v-8">
-              <p class="para">畫面上另設一條 Bar 作為放置目標，拖曳時 Bar 上顯示「拖曳至此處」。</p>
-              <p class="para"><b>結果｜</b>提示確實存在，但同一畫面上的照片框與功能按鈕同時競爭注意力，部分受測者因而忽略了這條 Bar。</p>
-            </div>
-          </div>
-          <div class="item item-bg-grey">
-            <div class="content-header">
-              <span class="vertical-decorator"></span>
-              <h4>B 版｜直接拖至頁面上</h4>
-            </div>
-            <div class="flex-v-8">
-              <p class="para">不另設目標物。照片進入頁面範圍時，既有相框執行讓位動畫，並以 Tooltip 說明後續行為。</p>
-              <p class="para"><b>結果｜</b>多數受測者反映較為好用：照片拖出的當下畫面即有回應，無須先找到特定的落點。</p>
-            </div>
-          </div>
-        </div>
-        <div class="notop-container layout-center">
-          <p class="para t-center"><b>採用 B 版的關鍵並非評分｜</b>測試 A 版的過程中，觀察到受測者會下意識將照片拖至頁面上，即使該處當下並無任何回應。B 版並非較為好用，而是使用者原本即具備的直覺動作。A 版的問題也不在於那條 Bar 不夠明顯，而在於它要求使用者先認識一個原本不存在的目標物。</p>
+
+        <div class="top-container layout-center">
+          <h3 class="title">採用 B 版的關鍵並非評分</h3>
+          <p class="para t-center">測試 A 版的過程中，觀察到受測者會下意識將照片拖至頁面上，即使該處當下並無任何回應。B 版並非較為好用，而是使用者原本即具備的直覺動作。A 版的問題也不在於那條 Bar 不夠明顯，而在於它要求使用者先認識一個原本不存在的目標物。</p>
         </div>
 
         <!-- 第二輪 -->
-        <div class="top-container">
-          <div class="flex-v-8">
-            <h3 class="title">▍第二輪：同一個動作，兩種意圖</h3>
-            <p class="para">改採 B 版後浮現新的問題。拖至頁面上這個動作本身即具備另一層意義，使用者可能僅是想替換某個相框內的照片，而非要求 AI 重排整頁。同一個手勢、同一塊區域、兩種意圖，<b>觸發範圍的界線因此成為此版本最關鍵的設計</b>。另邀請約 5 位使用者進行第二輪測試，其中部分使用過點點印，部分則鮮少使用。</p>
+        <div class="img-txt top-container hero-grid d-2col-1col">
+          <img class="image-block lightbox-trigger" src="/images/ai-layout/img_test-round2.jpg" alt="第二輪測試：觸發範圍放寬至頁面周圍的灰色底">
+          <div class="description-text">
+            <div class="flex-v-16">
+              <div class="flex-v-8">
+                <h3 class="title">▍第二輪：同一個動作，兩種意圖</h3>
+                <p class="para">改採 B 版後浮現新的問題。拖至頁面上這個動作本身即具備另一層意義，使用者可能僅是想替換某個相框內的照片，而非要求 AI 重排整頁。同一個手勢、同一塊區域、兩種意圖，<b>觸發範圍的界線因此成為此版本最關鍵的設計</b>。另邀請約 5 位使用者進行第二輪測試，其中部分使用過點點印，部分則鮮少使用。</p>
+              </div>
+              <div class="item item-bg-grey">
+                <h4 class="title">觸發範圍歷經數輪調整才定案</h4>
+                <p class="para">初期僅頁面內的空白處構成觸發，實測中偏移率偏高，照片常落在相框邊緣。最終將範圍放寬至頁面周圍的灰色底，使「交由 AI 排版」的意圖更容易被正確接收；相框本身維持既有的填入行為，兩種意圖各自對應明確的落點。</p>
+              </div>
+              <div class="item item-bg-grey">
+                <h4 class="title">更早期的操作習慣造成干擾</h4>
+                <p class="para">部分受測者仍停留在更早的版本：替換照片採點擊操作，點選相框後再挑選照片。面對 B 版時會先產生遲疑，不確定是否應改用拖曳。此問題無法藉由調整觸發範圍解決，後續補上引導教學，明確告知使用者相框內的照片可透過拖曳替換。</p>
+              </div>
+            </div>
           </div>
-        </div>
-        <div class="notop-container two-column-grid">
-          <div class="item item-bg-grey">
-            <h4 class="title">觸發範圍歷經數輪調整才定案</h4>
-            <p class="para">初期僅頁面內的空白處構成觸發，實測中偏移率偏高，照片常落在相框邊緣。最終將範圍放寬至頁面周圍的灰色底，使「交由 AI 排版」的意圖更容易被正確接收；相框本身維持既有的填入行為，兩種意圖各自對應明確的落點。</p>
-          </div>
-          <div class="item item-bg-grey">
-            <h4 class="title">更早期的操作習慣造成干擾</h4>
-            <p class="para">部分受測者仍停留在更早的版本：替換照片採點擊操作，點選相框後再挑選照片。面對 B 版時會先產生遲疑，不確定是否應改用拖曳。此問題無法藉由調整觸發範圍解決，後續補上引導教學，明確告知使用者相框內的照片可透過拖曳替換。</p>
-          </div>
-        </div>
         </div>
       </div>
       <!-- End Usability -->
@@ -357,28 +373,41 @@
         </div>
 
         <!-- 頁數調整 -->
-        <div class="top-container layout-center">
-          <h3 class="title">改頁數時，重新分組是預設，但可以取消</h3>
-          <p class="para t-center">點選頁數旁的編輯圖示開啟 sheet，頁數選項與產品頁「開始製作」一致，每一項皆標示頁數與金額。sheet 內設有「AI 依照新頁數重新分組照片」勾選框，<b>預設為勾選</b>。</p>
-        </div>
-        <div class="notop-container two-column-grid">
-          <div class="item item-bg-grey">
-            <div class="content-header">
-              <span class="vertical-decorator"></span>
-              <h4>勾選：依新頁數重新分組</h4>
+        <div class="img-txt top-container hero-grid d-2col-1col">
+          <img class="image-block lightbox-trigger" src="/images/ai-layout/img_page-count.jpg" alt="頁數調整 sheet：頁數選項與重新分組勾選框">
+          <div class="description-text">
+            <div class="flex-v-16">
+              <div class="flex-v-8">
+                <h3 class="title">改頁數時，重新分組是預設，但可以取消</h3>
+                <p class="para">點選頁數旁的編輯圖示開啟 sheet，頁數選項與產品頁「開始製作」一致，每一項皆標示頁數與金額。sheet 內設有「AI 依照新頁數重新分組照片」勾選框，<b>預設為勾選</b>。</p>
+                <p class="para"><b>覆蓋仍須經過使用者｜</b>重新分組會覆寫手動調整的結果，因此以一個可見且可取消的勾選框呈現，而非在頁數變更後逕行執行。</p>
+              </div>
+              <div class="accordion-group">
+                <div class="accordion-item active">
+                  <div class="accordion-header">
+                    <h5>勾選：依新頁數重新分組</h5>
+                    <div class="arrow-icon"></div>
+                  </div>
+                  <div class="accordion-content">
+                    <div class="accordion-inner">
+                      <p class="para">整本依新的容量重新分配照片，等同重新執行一次 AI 分組。</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <div class="accordion-header">
+                    <h5>不勾選：既有頁面維持原狀</h5>
+                    <div class="arrow-icon"></div>
+                  </div>
+                  <div class="accordion-content">
+                    <div class="accordion-inner">
+                      <p class="para">已排妥的頁面維持原狀，增減僅發生於尾端。頁數減少而照片無法容納時，時間軸後段的照片退回照片池。</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
-            <p class="para">整本依新的容量重新分配照片，等同重新執行一次 AI 分組。</p>
           </div>
-          <div class="item item-bg-grey">
-            <div class="content-header">
-              <span class="vertical-decorator"></span>
-              <h4>不勾選：既有頁面維持原狀</h4>
-            </div>
-            <p class="para">已排妥的頁面維持原狀，增減僅發生於尾端。頁數減少而照片無法容納時，時間軸後段的照片退回照片池。</p>
-          </div>
-        </div>
-        <div class="notop-container layout-center">
-          <p class="para t-center"><b>覆蓋仍須經過使用者｜</b>重新分組會覆寫手動調整的結果，因此以一個可見且可取消的勾選框呈現，而非在頁數變更後逕行執行。</p>
         </div>
 
         <!-- 覆蓋確認 -->
@@ -431,30 +460,60 @@
 
         <!-- 拖曳回饋 -->
         <div class="top-container layout-center">
-          <h3 class="title">拖曳中的兩層文字回饋，各自承擔不同職責</h3>
-          <p class="para t-center">拖曳時畫面頂端設有固定的 Tooltip，來源相框旁另有隨游標移動的動作列。兩者同時存在，各自變化。</p>
+          <h3 class="title">拖曳中的雙層文字回饋</h3>
+          <p class="para t-center">設計兩種層級的即時提示，各自獨立變化，引導使用者的拖曳操作：</p>
         </div>
         <div class="notop-container two-column-grid">
           <div class="item item-bg-grey">
-            <div class="content-header">
-              <span class="vertical-decorator"></span>
-              <h4>全域提示：可放置的範圍</h4>
-            </div>
-            <p class="para">固定於畫面頂端，說明當前拖曳狀態下的可放置範圍。</p>
+            <h4 class="title">▍全域提示（可放置範圍）</h4>
+            <p class="para">固定於畫面頂端，清楚標示當前拖曳狀態下允許放置的區域。</p>
+            <img class="image-block lightbox-trigger" src="/images/ai-layout/img_drag-global.jpg" alt="全域提示：畫面頂端的固定 Tooltip">
           </div>
           <div class="item item-bg-grey">
-            <div class="content-header">
-              <span class="vertical-decorator"></span>
-              <h4>目標回饋：將放入哪一頁</h4>
-            </div>
-            <p class="para">隨游標移動，即時說明將放入哪一頁，或無法放入的原因。</p>
+            <h4 class="title">▍目標回饋（預覽落點狀態）</h4>
+            <p class="para">隨游標移動，即時顯示照片將落入的頁面，或明確說明無法放入的原因。</p>
+            <img class="image-block lightbox-trigger" src="/images/ai-layout/img_drag-target.jpg" alt="目標回饋：隨游標移動的動作列">
           </div>
         </div>
-        <div class="notop-container layout-center">
-          <p class="para t-center"><b>頁面已滿即予攔阻，不自動向後推擠｜</b>拖至已滿的頁面時顯示「頁面已滿無法加入排版」，照片退回原位。不採用將照片推至後頁的作法，因為那會連帶更動其他分頁；使用者未要求的改動不應發生。</p>
-        </div>
-        <div class="notop-container layout-center">
-          <p class="para t-center"><b>判斷分為兩段｜</b>拖曳開始時，每一頁即以虛線空位顯示尚可容納的張數，懸停時僅依張數判定，可即時回答該頁是否仍可接收；放開後才呼叫 AI Layout 確認該頁實際是否排得下，無法排入則將照片退回原處。低成本的判斷負責即時回饋，高成本的運算留待結果確定時執行。</p>
+
+        <!-- 防呆與兩段式判斷 -->
+        <div class="img-txt top-container hero-grid d-2col-1col">
+          <img class="image-block lightbox-trigger" src="/images/ai-layout/img_drag-guard.jpg" alt="拖曳防呆：頁面已滿的攔阻提示與虛線空位">
+          <div class="description-text">
+            <div class="flex-v-16">
+              <div class="flex-v-8">
+                <h3 class="title">防呆機制與兩段式效能優化</h3>
+                <p class="para">在拖曳行為背後，透過系統邏輯確保排版穩定與操作流暢：</p>
+              </div>
+              <div class="accordion-group">
+                <div class="accordion-item active">
+                  <div class="accordion-header">
+                    <h5>滿載即攔阻，不自動推擠</h5>
+                    <div class="arrow-icon"></div>
+                  </div>
+                  <div class="accordion-content">
+                    <div class="accordion-inner">
+                      <p class="para">若目標頁面已滿，直接攔阻並將照片退回原位。捨棄自動推擠至後頁的做法，避免引發使用者未預期的連鎖版面更動。</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <div class="accordion-header">
+                    <h5>兩段式判斷，兼顧流暢與精準</h5>
+                    <div class="arrow-icon"></div>
+                  </div>
+                  <div class="accordion-content">
+                    <div class="accordion-inner">
+                      <ul class="para">
+                        <li><b>低成本即時回饋｜</b>拖曳懸停時，僅依「剩餘張數」進行初步判定，維持畫面的流暢度。</li>
+                        <li><b>高成本精準運算｜</b>放開游標確定落點後，才呼叫 AI Layout 確認實際排版；若空間不足則退回原處，將高效能消耗的運算留到最後一刻執行。</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
 
         <!-- 排版執行 -->
@@ -557,9 +616,12 @@
       <!-- End UI Design -->
 
       <!-- Start Style Guide -->
-      <div id="style-guide" class="top-container">
+      <div id="style-guide">
+        <div class="sec-title-container">
+          <h2>Style Guide</h2>
+        </div>
+        <div class="top-container">
         <div class="layout-center">
-          <h2 class="title">Style Guide <span class="sm-title">Visual System</span></h2>
           <h3>紫色代表 AI，其餘沿用既有的語意色</h3>
         </div>
         <div class="notop-container">
@@ -659,13 +721,13 @@
             </div>
           </div>
         </div>
+        </div>
       </div>
       <!-- End Style Guide -->
 
       <!-- Start UI Component -->
       <div id="ui-component" class="top-container">
         <div class="layout-center">
-          <h2 class="title">UI Component <span class="sm-title">Components</span></h2>
           <h3>這次新增與調整的元件</h3>
         </div>
         <div class="notop-container three-column-grid">
@@ -704,9 +766,12 @@
       <!-- End UI Component -->
 
       <!-- Start Measurement -->
-      <div id="measurement" class="top-container">
+      <div id="measurement">
+        <div class="sec-title-container">
+          <h2>成效驗證</h2>
+        </div>
+        <div class="top-container">
         <div class="layout-center">
-          <h2 class="title">成效驗證 <span class="sm-title">Measurement</span></h2>
           <h3>兩個問題要用不同方式驗證</h3>
           <p class="para t-center">整本要解決的是「距離過長、中途放棄」，應驗證作品的實際完成率；單頁要解決的是「重要內容遭裁切」，應驗證成品品質是否提升。</p>
         </div>
@@ -761,6 +826,7 @@
 
         <div class="notop-container layout-center">
           <p class="para t-center"><b>兩項指標須交叉檢視｜</b>佔比高僅能證明功能被接受，無法證明「無法完成」的問題已被解決；使用者可能整本皆使用 AI，但仍未完成下單。佔比高且下單率提升，功能才算有效；佔比高但下單率未變動，顯示瓶頸不在排版環節；佔比低而下單率提升，則效果可能來自其他改動，需要追查。</p>
+        </div>
         </div>
       </div>
       <!-- End Measurement -->

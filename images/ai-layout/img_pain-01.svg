@@ -1,0 +1,38 @@
+<svg width="300" height="200" viewBox="0 0 300 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- 整本：從散落照片到完成作品，中間隔著過高的門檻 -->
+  <path d="M18 178 H282" stroke="#E8E1EB" stroke-width="3" stroke-linecap="round"/>
+
+  <!-- 左：散落的照片 -->
+  <g transform="rotate(-13 58 122)">
+    <rect x="28" y="102" width="60" height="44" rx="6" fill="#F7F3F9" stroke="#CBBAD5" stroke-width="3"/>
+  </g>
+  <g transform="rotate(9 54 78)">
+    <rect x="24" y="58" width="60" height="44" rx="6" fill="#F1EAF4" stroke="#B9A6C4" stroke-width="3"/>
+  </g>
+  <g transform="rotate(16 96 142)">
+    <rect x="66" y="122" width="60" height="44" rx="6" fill="#F7F3F9" stroke="#C3B0CE" stroke-width="3"/>
+  </g>
+  <g transform="rotate(-5 94 86)">
+    <rect x="64" y="64" width="60" height="44" rx="6" fill="#FFFFFF" stroke="#8B6A9C" stroke-width="3.5"/>
+    <circle cx="80" cy="78" r="6" fill="#D9C8E0"/>
+    <path d="M70 98 L86 82 L98 94 L108 86 L118 98" stroke="#8B6A9C" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  </g>
+
+  <!-- 中：過高的門檻 -->
+  <rect x="148" y="56" width="28" height="122" rx="6" fill="#F1EAF4" stroke="#B9A6C4" stroke-width="3"/>
+
+  <!-- 跨越門檻的路徑：長而且斷斷續續 -->
+  <path d="M128 152 C134 92 150 34 178 34 C200 34 208 72 212 98"
+        stroke="#8B6A9C" stroke-width="3" stroke-linecap="round"
+        stroke-dasharray="7 9" fill="none"/>
+  <path d="M205 90 L212 101 L220 92" stroke="#8B6A9C" stroke-width="3"
+        stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+
+  <!-- 右：完成的作品 -->
+  <rect x="206" y="120" width="72" height="54" rx="6" fill="#F1EAF4" stroke="#B9A6C4" stroke-width="3"/>
+  <rect x="198" y="112" width="72" height="54" rx="6" fill="#FFFFFF" stroke="#8B6A9C" stroke-width="3.5"/>
+  <path d="M234 112 V166" stroke="#8B6A9C" stroke-width="3"/>
+  <circle cx="212" cy="127" r="4.5" fill="#D9C8E0"/>
+  <path d="M203 154 L216 141 L225 150" stroke="#8B6A9C" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  <path d="M242 154 L254 142 L265 153" stroke="#8B6A9C" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+</svg>
